@@ -1,0 +1,13 @@
+{
+  "modid": "ERN",
+  "name": "ERN-jykun",
+  "author_list": [
+    "jykun"
+  ],
+  "description": "Test Now.",
+  "dependencies": [
+    "basemod"
+  ],
+  "version": "0.0.1",
+  "sts_version": "05-06-2026"
+}
