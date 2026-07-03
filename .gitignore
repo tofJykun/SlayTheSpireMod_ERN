@@ -37,3 +37,18 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### origin src code ###
+origin-code/
+
+### Local tools ###
+tools/
+mods/
+mods.lnk
+
+### Slay the Spire local runtime files ###
+sendToDevs/
+preferences/
+
+### Codex generated manuals ###
+codex-manual/

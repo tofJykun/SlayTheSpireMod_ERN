@@ -1,0 +1,128 @@
+{
+  "MagicCocktail": {
+    "NAME": "Magic Cocktail",
+    "FLAVOR": "Recluse's character skill.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add a #yBed #yOf #yMagic to your hand."
+    ]
+  },
+  "HiddenMagicCocktail": {
+    "NAME": "Hidden Magic Cocktail",
+    "FLAVOR": "Recluse's deeply hidden character skill.",
+    "DESCRIPTIONS": [
+      "Replaces #rMagic #rCocktail. At the start of each combat, add a #yBed #yOf #yMagic+ to your hand."
+    ]
+  },
+  "BedOfChaos": {
+    "NAME": "Bed Of Chaos",
+    "FLAVOR": "A seedbed born from magic mixed beyond control.",
+    "DESCRIPTIONS": [
+      "Replaces #rMagic #rCocktail. At the start of each turn, gain a #yBed #yOf #yMagic effect for a random number of Attack and Skill cards."
+    ]
+  },
+  "BequestOfSeath": {
+    "NAME": "Bequest Of Seath",
+    "FLAVOR": "A cold, pale inheritance from a blind seeker of immortality.",
+    "DESCRIPTIONS": [
+      "The first time you play a Magic card each turn, gain [E] ."
+    ]
+  },
+  "ScrollOfLogan": {
+    "NAME": "Scroll Of Logan",
+    "FLAVOR": "A scroll left by Big Hat Logan's tireless study.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a random Crystal card to your hand."
+    ]
+  },
+  "OolacileIvoryCatalyst": {
+    "NAME": "Oolacile Ivory Catalyst",
+    "FLAVOR": "An ivory branch once used to weave old light into sorcery.",
+    "DESCRIPTIONS": [
+      "Whenever you play *Bed *Of *Magic, gain 6 Block and draw 1 card."
+    ]
+  },
+  "SixthSense": {
+    "NAME": "Sixth Sense",
+    "FLAVOR": "Wylder's character skill.",
+    "DESCRIPTIONS": [
+      "Every 2 Skill cards played, gain 6 Block."
+    ]
+  },
+  "HonorOfPinionfolk": {
+    "NAME": "Honor Of Pinionfolk",
+    "FLAVOR": "Guardian's character skill.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain 2 #yHover."
+    ]
+  },
+  "Marking": {
+    "NAME": "Marking",
+    "FLAVOR": "Ironeye's character skill.",
+    "DESCRIPTIONS": [
+      "Every 2 Skill cards played, gain 6 Block."
+    ]
+  },
+  "FighterResolve": {
+    "NAME": "Fighter Resolve",
+    "FLAVOR": "Raider's character skill.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #yUnyielding."
+    ]
+  },
+  "BorrowedLife": {
+    "NAME": "Borrowed Life",
+    "FLAVOR": "A victory claimed before the debt is paid.",
+    "DESCRIPTIONS": [
+      "#yGrey #yHealth and #yGrey #yHealth+ do not cause HP loss at the end of combat."
+    ]
+  },
+  "DebtToBond": {
+    "NAME": "Debt To Bond",
+    "FLAVOR": "Pain refinanced into motion.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if you have #yGrey #yHealth or #yGrey #yHealth+, gain [E] ."
+    ]
+  },
+  "FighterDestined": {
+    "NAME": "Fighter Destined",
+    "FLAVOR": "Replaces Fighter Resolve. Victory is decided before the wound is paid.",
+    "DESCRIPTIONS": [
+      "Replaces #rFighter #rResolve. At the start of each combat, gain #yUnyielding+."
+    ]
+  },
+  "Restage": {
+    "NAME": "Restage",
+    "FLAVOR": "Duchess' character skill.",
+    "DESCRIPTIONS": [
+      "Every 2 Skill cards played, gain 6 Block."
+    ]
+  },
+  "Suncatcher": {
+    "NAME": "Suncatcher",
+    "FLAVOR": "Executor's character skill.",
+    "DESCRIPTIONS": [
+      "Every 2 Skill cards played, gain 6 Block."
+    ]
+  },
+  "SummonSpirit": {
+    "NAME": "Summon Spirit",
+    "FLAVOR": "Revenant's character skill.",
+    "DESCRIPTIONS": [
+      "At the start of your first 3 turns, summon Summon: Helen, Summon: Frederick, and Summon: Sebastian in order."
+    ]
+  },
+  "Bagcraft": {
+    "NAME": "Bagcraft",
+    "FLAVOR": "Scholar's knowledge of carrying supplies.",
+    "DESCRIPTIONS": [
+      "Gain #b3 Potion slots containing random potions."
+    ]
+  },
+  "Trance": {
+    "NAME": "Trance",
+    "FLAVOR": "Undertaker's character skill.",
+    "DESCRIPTIONS": [
+      "Every 2 Skill cards played, gain 6 Block."
+    ]
+  }
+}

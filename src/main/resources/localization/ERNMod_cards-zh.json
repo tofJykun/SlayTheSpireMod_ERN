@@ -1,0 +1,371 @@
+{
+  "Strike_Recluse": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Defend_Recluse": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "Strike_Wylder": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Defend_Wylder": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "ClawShot": {
+    "NAME": "钩爪射击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 失去1点 敏捷 。 NL 在你的回合结束时，获得1点 敏捷 。"
+  },
+  "SmallShield": {
+    "NAME": "小盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得1层 弹反 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得2层 弹反 。"
+  },
+  "CrismonParma": {
+    "NAME": "红圆盾",
+    "DESCRIPTION": "获得与你当前弃牌堆中牌数相等的 格挡 值。 NL （获得 !B! 点 格挡 。） NL 获得1层 弹反 。"
+  },
+  "BlueWhiteWoodenShield": {
+    "NAME": "蓝白木盾",
+    "DESCRIPTION": "获得与你当前抽牌堆中牌数相等的 格挡 值。 NL （获得 !B! 点 格挡 。） NL 获得1层 弹反 。"
+  },
+  "GrassCrestShield": {
+    "NAME": "草纹盾",
+    "DESCRIPTION": "你每有一张手牌，获得1点 敏捷 。 NL 消耗 。"
+  },
+  "TransientCurse": {
+    "NAME": "暂时诅咒",
+    "DESCRIPTION": "失去3点 敏捷 。 NL 获得 !M! 点 力量 。 NL 在你的回合结束时，获得3点 敏捷 ，失去 !M! 点 力量 。"
+  },
+  "Strike_Guardian": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Defend_Guardian": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "Whirlwind": {
+    "NAME": "旋风",
+    "DESCRIPTION": "造成 !D! 点伤害3次。"
+  },
+  "WarmingStone": {
+    "NAME": "温热石",
+    "DESCRIPTION": "在你的下3个回合开始时，获得 !M! 点 活力 。"
+  },
+  "ChargeForth": {
+    "NAME": "突击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 如果你有 活力 ，这张牌耗能变为0。"
+  },
+  "Strike_Ironeye": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Defend_Ironeye": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "Strike_Raider": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Defend_Raider": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "Strike_Duchess": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Defend_Duchess": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "Strike_Executor": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Defend_Executor": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "DestinedDeath": {
+    "NAME": "命定之死",
+    "DESCRIPTION": "给予 !M! 层 骤死 。 NL 如果回合结束时仍在你的手牌中，给予你2层 骤死 。"
+  },
+  "BlackFlame": {
+    "NAME": "黑焰",
+    "DESCRIPTION": "给予 !M! 层 燃命 。"
+  },
+  "BlackFlameTornado": {
+    "NAME": "黑焰漩涡",
+    "DESCRIPTION": "给予所有敌人 !M! 层 燃命 。 当前每有一名敌人生命值高于或等于50%，额外打出一次。 NL 消耗 。"
+  },
+  "BlackFlameRitual": {
+    "NAME": "黑焰仪式",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 你在这个回合每受到一次攻击，都给予攻击者3层 燃命 。"
+  },
+  "BlackFlameBlade": {
+    "NAME": "黑焰刀刃",
+    "DESCRIPTION": "每有一次攻击造成未被格挡的伤害，就给予 !M! 层 燃命 。"
+  },
+  "LetFeastBegin": {
+    "NAME": "大啖食粮",
+    "DESCRIPTION": "如果目标敌人的最大生命小于等于你的最大生命，则将其生命值变为0。 NL 斩杀 时，永久获得 !M! 点最大生命。"
+  },
+  "Strike_Revenant": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Defend_Revenant": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "Strike_Scholar": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Defend_Scholar": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "PotionCoveredAshes": {
+    "NAME": "沾药骨灰",
+    "DESCRIPTION": "获得一瓶随机 散装 药水"
+  },
+  "AntspurRapier": {
+    "NAME": "蚁刺细剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 猩红腐败 。 NL 如果你有 活力 ，则额外打出1次。"
+  },
+  "Tyranny": {
+    "NAME": "暴政",
+    "DESCRIPTION": "在你的回合开始时，抽1张牌， 消耗 1张手牌",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时，抽1张牌， 消耗 1张手牌"
+  },
+  "PenglaiWorship": {
+    "NAME": "蓬莱崇拜",
+    "DESCRIPTION": "获得一瓶 长生不老药 。 如果回合结束时仍在你的手牌中，失去 !M! 金币。 NL 消耗 。"
+  },
+  "Strike_Undertaker": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Defend_Undertaker": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "Delirium": {
+    "NAME": "谵妄",
+    "DESCRIPTION": "在下一回合开始时，随机打出手牌中2张牌。"
+  },
+  "GlitstonePebble": {
+    "NAME": "辉石魔砾",
+    "DESCRIPTION": "造成 !D! 点魔法伤害。"
+  },
+  "FallControl": {
+    "NAME": "控制坠落",
+    "DESCRIPTION": "抽2张牌。 NL 失去 !M! 点 智力 。 NL 在你的回合结束时，获得 !M! 点 智力 。"
+  },
+  "SoulFlash": {
+    "NAME": "灵魂一闪",
+    "DESCRIPTION": "造成 !D! 点魔法伤害。 NL 抽 !M! 张牌。"
+  },
+  "SoulBolt": {
+    "NAME": "灵魂闪光",
+    "DESCRIPTION": "造成 !D! 点魔法伤害。 NL 抽2张牌。 NL 你在本场战斗中每打出一张能力牌，耗能就减少1 [B] 。 NL 这张牌每被打出一次，耗能就增加1 [B] 。"
+  },
+  "SoulGeyser": {
+    "NAME": "灵魂洪流",
+    "DESCRIPTION": "造成 !D! 点魔法伤害2次。 NL 如果本场战斗中打出的上3张牌都是技能牌，抽3张牌。"
+  },
+  "SwiftGlintstoneShard": {
+    "NAME": "迅捷辉石魔砾",
+    "DESCRIPTION": "造成 !D! 点魔法伤害。 NL 抽1张牌。 NL 如果本场战斗中打出的上一张牌不是攻击牌，这张牌耗能变为0。"
+  },
+  "FistfulOfAsh": {
+    "NAME": "灰烬团",
+    "DESCRIPTION": "消耗 手牌中所有 *魔法余烬 ，每张获得 !B! 点 格挡 。"
+  },
+  "MagicShield": {
+    "NAME": "魔力盾牌",
+    "DESCRIPTION": "获得 !B! 点魔法格挡。"
+  },
+  "StrongMagicShield": {
+    "NAME": "强力魔力盾牌",
+    "DESCRIPTION": "获得 !B! 点魔法格挡，在本回合获得 !M! 点 智力 。"
+  },
+  "Dispelling": {
+    "NAME": "周天祛魔",
+    "DESCRIPTION": "失去1点 智力 。 NL 获得 !M! 点 敏捷 。"
+  },
+  "StoneClutch": {
+    "NAME": "石怪手",
+    "DESCRIPTION": "失去1点 智力 。 NL 获得 !M! 点 力量 。"
+  },
+  "FoundingRainOfStars": {
+    "NAME": "创星雨",
+    "DESCRIPTION": "对所有敌人造成 !D! 点魔法伤害 !M! 次。"
+  },
+  "DarkOrb": {
+    "NAME": "黑暗弹",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 增加1张 *魔法余烬 到你的手牌。"
+  },
+  "DarkFog": {
+    "NAME": "黑暗雾",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害2次。 NL 增加1张 *魔法余烬 到你的手牌。"
+  },
+  "DarkBead": {
+    "NAME": "黑暗飞沫",
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害3次， !M! 点魔法伤害3次。 NL 用 *魔法余烬 填满你的手牌。"
+  },
+  "CometAzur": {
+    "NAME": "彗星亚兹勒",
+    "DESCRIPTION": "造成 !D! 点魔法伤害 X 次。"
+  },
+  "GreatSoulDregs": {
+    "NAME": "大块灵魂沉淀物",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 增加3张 *魔法余烬 到你的手牌。"
+  },
+  "HomingCrystalSoulmass": {
+    "NAME": "追踪灵魂结晶块",
+    "DESCRIPTION": "随机对敌人造成 !D! 点魔法伤害4次。 NL 消耗 。"
+  },
+  "CrystalScroll": {
+    "NAME": "结晶卷轴",
+    "DESCRIPTION": "在本回合获得 !M! 点 智力 。 NL 消耗 。"
+  },
+  "ElementalDefense": {
+    "NAME": "驾驭元素",
+    "DESCRIPTION": " 魔法 卡牌耗能降低1。"
+  },
+  "SoulbloodSong": {
+    "NAME": "血魂歌",
+    "DESCRIPTION": "你在本回合内，获得与造成的未被格挡的伤害相等的 格挡 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 你在本回合内，获得与造成的未被格挡的伤害相等的 格挡 。"
+  },
+  "Eagle": {
+    "NAME": "鹰~",
+    "DESCRIPTION": "获得 !M! 层 振翼 。"
+  },
+  "WhiteLightning": {
+    "NAME": "白雷",
+    "DESCRIPTION": "给予自己 !M! 层 易伤 。 NL 在3回合结束后，对所有敌人造成 !D! 点魔法伤害。 NL 消耗 。"
+  },
+  "PrimalGlintstone": {
+    "NAME": "源辉石",
+    "DESCRIPTION": "获得 !M! 点 智力 。"
+  },
+  "ReignitedCinder": {
+    "NAME": "柴薪复燃",
+    "DESCRIPTION": "你每打出一张 *魔法余烬 ，将一张 *魔法余烬 放入你的手牌。"
+  },
+  "LawOfRegression": {
+    "NAME": "回归性原理",
+    "DESCRIPTION": "用 *消逝源辉石 填满你的手牌。 NL 消耗 。"
+  },
+  "FadingPrimalGlintstone": {
+    "NAME": "消逝源辉石",
+    "DESCRIPTION": "在本回合获得 !M! 点 智力 。"
+  },
+  "MagicEmber": {
+    "NAME": "魔法余烬",
+    "DESCRIPTION": " 消耗 。"
+  },
+  "BedOfMagic": {
+    "NAME": "魔法温床",
+    "DESCRIPTION": " 保留 。",
+    "EXTENDED_DESCRIPTION": [
+      " 保留 。",
+      "无",
+      "攻击",
+      "技能",
+      "能力",
+      "状态",
+      "诅咒",
+      "，",
+      "在这个回合，你打出的下3张技能牌耗能减1",
+      "在这个回合，你打出的下3张能力牌时， NL 抽1张牌，增加1张 *魔法余烬 到你的手牌",
+      "增加1张 *消逝源辉石 到你的手牌",
+      "在这个回合，你打出的下3张攻击牌耗能减1",
+      "将弃牌堆中所有能力牌和状态牌放入你的手牌",
+      "获得 [W] [W] [W]",
+      "在本回合 保留 你的手牌",
+      " 消耗 手牌中所有 *魔法余烬 ， NL 增加相同数量的 *消逝源辉石 到你的手牌",
+      "在这个回合，你打出的下1张 *魔法温床 会打出两次",
+      "在下一回合多抽3张牌",
+      "对自己和所有敌人造成13点伤害",
+      " 消耗 一张手牌",
+      "每回合第一次打出时耗能为0。"
+    ]
+  },
+  "CrystalSoulSpear": {
+    "NAME": "灵魂结晶枪",
+    "DESCRIPTION": "造成 !D! 点魔法伤害。 NL 消耗 。"
+  },
+  "MorionBlade": {
+    "NAME": "摩利安刃剑",
+    "DESCRIPTION": "只有血量等于或低于一半时可以打出。 NL 造成 !D! 点伤害。 NL 将你的 智力 翻倍。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "只有血量等于或低于一半时可以打出。 NL 造成 !D! 点伤害。 NL 将你的 智力 翻倍。",
+    "EXTENDED_DESCRIPTION": [
+      "只有血量等于或低于一半时可以打出。"
+    ]
+  },
+  "DynastFinesse": {
+    "NAME": "王朝剑技",
+    "DESCRIPTION": "获得1层 振翼 。 NL 造成 !D! 点伤害。"
+  },
+  "CarianSlicer": {
+    "NAME": "卡利亚迅剑",
+    "DESCRIPTION": "对所有敌人造成 !D! 点魔法伤害。"
+  },
+  "HiddenBody": {
+    "NAME": "隐形身躯",
+    "DESCRIPTION": "下一回合，给予所有敌人2层 虚弱 。"
+  },
+  "CarianPiercer": {
+    "NAME": "卡利亚式奉还",
+    "DESCRIPTION": "增加1张 *消逝源辉石 到你的手牌。 NL 获得2层 弹反 。"
+  },
+  "Yearn": {
+    "NAME": "思乡",
+    "DESCRIPTION": "交换弃牌堆中1张牌和抽牌堆中相同数量的牌。",
+    "UPGRADE_DESCRIPTION": "交换弃牌堆中任意张牌和抽牌堆中相同数量的牌。"
+  },
+  "Dodge": {
+    "NAME": "闪身",
+    "DESCRIPTION": "抽1张牌。",
+    "UPGRADE_DESCRIPTION": "抽1张牌。 NL 获得1点 活力 。"
+  },
+  "MagicBarrier": {
+    "NAME": "法术力场",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 在下一回合内获得 !M! 点 智力 。"
+  },
+  "WingsOfSalvation": {
+    "NAME": "救世展翼",
+    "DESCRIPTION": "获得 !M! 层 展翼 。"
+  },
+  "PhantomHelen": {
+    "NAME": "幻影海伦",
+    "DESCRIPTION": "海伦造成 !M! 点伤害。 NL 只有当 召唤：海伦 时可以打出。 NL 消耗 。 NL 虚无 。",
+    "EXTENDED_DESCRIPTION": [
+      "只有当 召唤：海伦 时可以打出。"
+    ]
+  },
+  "PhantomFrederick": {
+    "NAME": "幻影弗雷德利克",
+    "DESCRIPTION": "弗雷德利克造成 !M! 点伤害， NL 获得 !M! 点 格挡 。 NL 只有当 召唤：弗雷德利克 时可以打出。 NL 消耗 。 NL 虚无 。",
+    "EXTENDED_DESCRIPTION": [
+      "只有当 召唤：弗雷德利克 时可以打出。"
+    ]
+  },
+  "PhantomSebastian": {
+    "NAME": "幻影塞巴斯蒂安",
+    "DESCRIPTION": "塞巴斯蒂安造成 !M! 点伤害3次。 NL 只有当 召唤：塞巴斯蒂安 时可以打出。 NL 消耗 。 NL 虚无 。",
+    "EXTENDED_DESCRIPTION": [
+      "只有当 召唤：塞巴斯蒂安 时可以打出。"
+    ]
+  }
+}

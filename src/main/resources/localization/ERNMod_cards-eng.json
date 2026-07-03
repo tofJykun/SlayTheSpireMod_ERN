@@ -1,0 +1,371 @@
+{
+  "Strike_Recluse": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "Defend_Recluse": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "Strike_Wylder": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "Defend_Wylder": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "ClawShot": {
+    "NAME": "Claw Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Lose 1 Dexterity. NL At the end of your turn, gain 1 Dexterity."
+  },
+  "SmallShield": {
+    "NAME": "Small Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Gain 1 Parry.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain 2 Parry."
+  },
+  "CrismonParma": {
+    "NAME": "Crismon Parma",
+    "DESCRIPTION": "Gain Block equal to the number of cards in your discard pile. NL (Gain !B! Block.) NL Gain 1 Parry."
+  },
+  "BlueWhiteWoodenShield": {
+    "NAME": "Blue-White Wooden Shield",
+    "DESCRIPTION": "Gain Block equal to the number of cards in your draw pile. NL (Gain !B! Block.) NL Gain 1 Parry."
+  },
+  "GrassCrestShield": {
+    "NAME": "Grass Crest Shield",
+    "DESCRIPTION": "For each card in your hand, gain 1 Dexterity. NL Exhaust."
+  },
+  "TransientCurse": {
+    "NAME": "Transient Curse",
+    "DESCRIPTION": "Lose 3 Dexterity. NL Gain !M! Strength. NL At the end of your turn, gain 3 Dexterity and lose !M! Strength."
+  },
+  "Strike_Guardian": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "Defend_Guardian": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "Whirlwind": {
+    "NAME": "Whirlwind",
+    "DESCRIPTION": "Deal !D! damage 3 times."
+  },
+  "WarmingStone": {
+    "NAME": "Warming Stone",
+    "DESCRIPTION": "At the start of your next 3 turns, gain !M! Vigor."
+  },
+  "ChargeForth": {
+    "NAME": "Charge Forth",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card(s). NL If you have Vigor, this card costs 0."
+  },
+  "Strike_Ironeye": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "Defend_Ironeye": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "Strike_Raider": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "Defend_Raider": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "Strike_Duchess": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "Defend_Duchess": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "Strike_Executor": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "Defend_Executor": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "DestinedDeath": {
+    "NAME": "Destined Death",
+    "DESCRIPTION": "Apply !M! Deathblight. NL If this card is still in your hand at end of turn, apply 2 Deathblight to yourself."
+  },
+  "BlackFlame": {
+    "NAME": "Black Flame",
+    "DESCRIPTION": "Apply !M! Bloodburn."
+  },
+  "BlackFlameTornado": {
+    "NAME": "Black Flame Tornado",
+    "DESCRIPTION": "Apply !M! Bloodburn to ALL enemies. For each enemy currently at or above 50% HP, play this an additional time. NL Exhaust."
+  },
+  "BlackFlameRitual": {
+    "NAME": "Black Flame Ritual",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply 3 Bloodburn to the attacker."
+  },
+  "BlackFlameBlade": {
+    "NAME": "Black Flame Blade",
+    "DESCRIPTION": "Whenever an attack deals unblocked damage, apply !M! Bloodburn."
+  },
+  "LetFeastBegin": {
+    "NAME": "Let Feast Begin",
+    "DESCRIPTION": "If the target enemy's Max HP is less than or equal to your Max HP, set its HP to 0. NL Fatal. Permanently gain !M! Max HP."
+  },
+  "Strike_Revenant": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "Defend_Revenant": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "Strike_Scholar": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "Defend_Scholar": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "PotionCoveredAshes": {
+    "NAME": "Potion Covered Ashes",
+    "DESCRIPTION": "Gain a random Bulk Potion."
+  },
+  "AntspurRapier": {
+    "NAME": "Antspur Rapier",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Scarlet Rot. NL If you have Vigor, play this an additional time."
+  },
+  "Tyranny": {
+    "NAME": "Tyranny",
+    "DESCRIPTION": "At the start of your turn, draw 1 card and Exhaust 1 card from your hand.",
+    "UPGRADE_DESCRIPTION": " Innate. NL At the start of your turn, draw 1 card and Exhaust 1 card from your hand."
+  },
+  "PenglaiWorship": {
+    "NAME": "Penglai Worship",
+    "DESCRIPTION": "Gain an Elixir of Life. If this card is still in your hand at the end of your turn, lose !M! Gold. NL Exhaust."
+  },
+  "Strike_Undertaker": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "Defend_Undertaker": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "Delirium": {
+    "NAME": "Delirium",
+    "DESCRIPTION": "At the start of your next turn, play 2 random cards from your hand."
+  },
+  "GlitstonePebble": {
+    "NAME": "Glitstone Pebble",
+    "DESCRIPTION": "Deal !D! magic damage."
+  },
+  "FallControl": {
+    "NAME": "Fall Control",
+    "DESCRIPTION": "Draw 2 cards. NL Lose !M! Intelligence. NL At the end of your turn, gain !M! Intelligence."
+  },
+  "SoulFlash": {
+    "NAME": "Soul Flash",
+    "DESCRIPTION": "Deal !D! magic damage. NL Draw !M! card."
+  },
+  "SoulBolt": {
+    "NAME": "Soul Bolt",
+    "DESCRIPTION": "Deal !D! magic damage. NL Draw 2 cards. NL Whenever you play a Power card this combat, this costs 1 less [B] . NL Whenever this card is played, this costs 1 more [B] ."
+  },
+  "SoulGeyser": {
+    "NAME": "Soul Geyser",
+    "DESCRIPTION": "Deal !D! magic damage 2 times. NL If the last 3 cards played this combat were Skills, draw 3 cards."
+  },
+  "SwiftGlintstoneShard": {
+    "NAME": "Swift Glintstone Shard",
+    "DESCRIPTION": "Deal !D! magic damage. NL Draw 1 card. NL If the last card played this combat was not an Attack, this card costs 0."
+  },
+  "FistfulOfAsh": {
+    "NAME": "Fistful Of Ash",
+    "DESCRIPTION": "Exhaust all *Magic *Embers in your hand. Gain !B! Block for each."
+  },
+  "MagicShield": {
+    "NAME": "Magic Shield",
+    "DESCRIPTION": "Gain !B! magic Block."
+  },
+  "StrongMagicShield": {
+    "NAME": "Strong Magic Shield",
+    "DESCRIPTION": "Gain !B! magic Block. Gain !M! Intelligence this turn."
+  },
+  "Dispelling": {
+    "NAME": "Dispelling",
+    "DESCRIPTION": "Lose 1 Intelligence. NL Gain !M! Dexterity."
+  },
+  "StoneClutch": {
+    "NAME": "Stone Clutch",
+    "DESCRIPTION": "Lose 1 Intelligence. NL Gain !M! Strength."
+  },
+  "FoundingRainOfStars": {
+    "NAME": "Founding Rain Of Stars",
+    "DESCRIPTION": "Deal !D! magic damage to ALL enemies !M! times."
+  },
+  "DarkOrb": {
+    "NAME": "Dark Orb",
+    "DESCRIPTION": "Deal !D! damage. NL Add 1 *Magic *Ember to your hand."
+  },
+  "DarkFog": {
+    "NAME": "Dark Fog",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies 2 times. NL Add 1 *Magic *Ember to your hand."
+  },
+  "DarkBead": {
+    "NAME": "Dark Bead",
+    "DESCRIPTION": "Deal !D! damage to random enemies 3 times, and !M! magic damage 3 times. NL Fill your hand with *Magic *Embers."
+  },
+  "CometAzur": {
+    "NAME": "Comet Azur",
+    "DESCRIPTION": "Deal !D! magic damage X times."
+  },
+  "GreatSoulDregs": {
+    "NAME": "Great Soul Dregs",
+    "DESCRIPTION": "Deal !D! damage. NL Add 3 *Magic *Embers to your hand."
+  },
+  "HomingCrystalSoulmass": {
+    "NAME": "Homing Crystal Soulmass",
+    "DESCRIPTION": "Deal !D! magic damage to random enemies 4 times. NL Exhaust."
+  },
+  "CrystalScroll": {
+    "NAME": "Crystal Scroll",
+    "DESCRIPTION": "Gain !M! Intelligence this turn. NL Exhaust."
+  },
+  "ElementalDefense": {
+    "NAME": "Elemental Defense",
+    "DESCRIPTION": "Magic cards cost 1 less."
+  },
+  "SoulbloodSong": {
+    "NAME": "Soulblood Song",
+    "DESCRIPTION": "This turn, gain Block equal to the unblocked damage you deal.",
+    "UPGRADE_DESCRIPTION": " Retain. NL This turn, gain Block equal to the unblocked damage you deal."
+  },
+  "Eagle": {
+    "NAME": "Eagle~",
+    "DESCRIPTION": "Gain !M! Hover."
+  },
+  "WhiteLightning": {
+    "NAME": "White Lightning",
+    "DESCRIPTION": "Apply !M! Vulnerable to yourself. NL At the end of 3 turns, deal !D! magic damage to ALL enemies. NL Exhaust."
+  },
+  "PrimalGlintstone": {
+    "NAME": "Primal Glintstone",
+    "DESCRIPTION": "Gain !M! Intelligence."
+  },
+  "ReignitedCinder": {
+    "NAME": "Reignited Cinder",
+    "DESCRIPTION": "Whenever you play a *Magic *Ember, add a *Magic *Ember to your hand."
+  },
+  "LawOfRegression": {
+    "NAME": "Law Of Regression",
+    "DESCRIPTION": "Fill your hand with *Fading *Primal *Glintstone. NL Exhaust."
+  },
+  "FadingPrimalGlintstone": {
+    "NAME": "Fading Primal Glintstone",
+    "DESCRIPTION": "Gain !M! Intelligence this turn."
+  },
+  "MagicEmber": {
+    "NAME": "Magic Ember",
+    "DESCRIPTION": "Exhaust."
+  },
+  "BedOfMagic": {
+    "NAME": "Bed Of Magic",
+    "DESCRIPTION": "Retain.",
+    "EXTENDED_DESCRIPTION": [
+      "Retain.",
+      "None",
+      "Attack",
+      "Skill",
+      "Power",
+      "Status",
+      "Curse",
+      ", ",
+      "This turn, the next 3 Skill cards you play cost 1 less.",
+      "This turn, whenever you play the next 3 Power cards, NL draw 1 card and add 1 *Magic *Ember to your hand.",
+      "Add 1 *Fading *Primal *Glintstone to your hand.",
+      "This turn, the next 3 Attack cards you play cost 1 less.",
+      "Put all Power and Status cards from your discard pile into your hand.",
+      "Gain [W] [W] [W].",
+      "Retain your hand this turn.",
+      "Exhaust all *Magic *Embers in your hand. NL Add that many *Fading *Primal *Glintstones to your hand.",
+      "This turn, the next *Bed *Of *Magic you play is played twice.",
+      "Draw 3 additional cards next turn.",
+      "Deal 13 damage to yourself and ALL enemies.",
+      "Exhaust a card in your hand.",
+      "The first time you play this each turn, it costs 0."
+    ]
+  },
+  "CrystalSoulSpear": {
+    "NAME": "Crystal Soul Spear",
+    "DESCRIPTION": "Deal !D! magic damage. NL Exhaust."
+  },
+  "MorionBlade": {
+    "NAME": "Morion Blade",
+    "DESCRIPTION": "Can only be played if your HP is at or below half. NL Deal !D! damage. NL Double your Intelligence. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Can only be played if your HP is at or below half. NL Deal !D! damage. NL Double your Intelligence.",
+    "EXTENDED_DESCRIPTION": [
+      "Can only be played if your HP is at or below half."
+    ]
+  },
+  "DynastFinesse": {
+    "NAME": "Dynast Finesse",
+    "DESCRIPTION": "Gain 1 Hover. NL Deal !D! damage."
+  },
+  "CarianSlicer": {
+    "NAME": "Carian Slicer",
+    "DESCRIPTION": "Deal !D! magic damage to ALL enemies."
+  },
+  "HiddenBody": {
+    "NAME": "Hidden Body",
+    "DESCRIPTION": "Next turn, apply 2 Weak to ALL enemies."
+  },
+  "CarianPiercer": {
+    "NAME": "Carian Piercer",
+    "DESCRIPTION": "Add 1 *Fading *Primal *Glintstone to your hand. NL Gain 2 Parry."
+  },
+  "Yearn": {
+    "NAME": "Yearn",
+    "DESCRIPTION": "Swap 1 card in your discard pile with the same number of cards in your draw pile.",
+    "UPGRADE_DESCRIPTION": "Swap any number of cards in your discard pile with the same number of cards in your draw pile."
+  },
+  "Dodge": {
+    "NAME": "Dodge",
+    "DESCRIPTION": "Draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Draw 1 card. NL Gain 1 Vigor."
+  },
+  "MagicBarrier": {
+    "NAME": "Magic Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain !M! Temporary Intelligence."
+  },
+  "WingsOfSalvation": {
+    "NAME": "Wings Of Salvation",
+    "DESCRIPTION": "Gain !M! Soar."
+  },
+  "PhantomHelen": {
+    "NAME": "Phantom Helen",
+    "DESCRIPTION": "Helen deals !M! damage. NL Can only be played while Summon: Helen. NL Exhaust. NL Ethereal.",
+    "EXTENDED_DESCRIPTION": [
+      "Can only be played while Summon: Helen."
+    ]
+  },
+  "PhantomFrederick": {
+    "NAME": "Phantom Frederick",
+    "DESCRIPTION": "Frederick deals !M! damage, NL gain !M! Block. NL Can only be played while Summon: Frederick. NL Exhaust. NL Ethereal.",
+    "EXTENDED_DESCRIPTION": [
+      "Can only be played while Summon: Frederick."
+    ]
+  },
+  "PhantomSebastian": {
+    "NAME": "Phantom Sebastian",
+    "DESCRIPTION": "Sebastian deals !M! damage 3 times. NL Can only be played while Summon: Sebastian. NL Exhaust. NL Ethereal.",
+    "EXTENDED_DESCRIPTION": [
+      "Can only be played while Summon: Sebastian."
+    ]
+  }
+}

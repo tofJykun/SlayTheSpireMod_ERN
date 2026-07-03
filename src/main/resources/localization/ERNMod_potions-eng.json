@@ -1,0 +1,73 @@
+{
+  "BulkFirePotion": {
+    "NAME": "Bulk Fire Potion",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " damage.",
+      " NL Vanishes at the end of combat."
+    ]
+  },
+  "BulkEnergyPotion": {
+    "NAME": "Bulk Energy Potion",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " [E] .",
+      " NL Vanishes at the end of combat."
+    ]
+  },
+  "BulkAttackPotion": {
+    "NAME": "Bulk Attack Potion",
+    "DESCRIPTIONS": [
+      "Choose 1 of 3 random Attack cards to add to your hand. It costs 0 this turn.",
+      "Choose 2 of 4 random Attack cards to add to your hand. They cost 0 this turn.",
+      " NL Vanishes at the end of combat."
+    ]
+  },
+  "BulkBlockPotion": {
+    "NAME": "Bulk Block Potion",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Block.",
+      " NL Vanishes at the end of combat."
+    ]
+  },
+  "BulkExplosivePotion": {
+    "NAME": "Bulk Explosive Potion",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " damage to ALL enemies.",
+      " NL Vanishes at the end of combat."
+    ]
+  },
+  "BulkSwiftPotion": {
+    "NAME": "Bulk Swift Potion",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " cards.",
+      " NL Vanishes at the end of combat."
+    ]
+  },
+  "BulkFearPotion": {
+    "NAME": "Bulk Fear Potion",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " Vulnerable.",
+      " NL Vanishes at the end of combat."
+    ]
+  },
+  "BulkWeakenPotion": {
+    "NAME": "Bulk Weak Potion",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " Weak.",
+      " NL Vanishes at the end of combat."
+    ]
+  },
+  "ElixirOfLife": {
+    "NAME": "Elixir of Life",
+    "DESCRIPTIONS": [
+      "When you would die, survive and heal to #b",
+      "% of your Max HP, then discard this potion. At the end of your turn, lose 10 Gold. If you have 0 Gold, discard this potion."
+    ]
+  }
+}

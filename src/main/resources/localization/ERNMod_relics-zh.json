@@ -1,0 +1,128 @@
+{
+  "MagicCocktail": {
+    "NAME": "混合魔法",
+    "FLAVOR": "隐士的技艺。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，将一张 #y魔法温床 放入你的手牌。"
+    ]
+  },
+  "HiddenMagicCocktail": {
+    "NAME": "秘密混合魔法",
+    "FLAVOR": "隐士隐藏至深的技艺。",
+    "DESCRIPTIONS": [
+      "替换 #r混合魔法 。在每场战斗开始时，将一张 #y魔法温床+ 放入你的手牌。"
+    ]
+  },
+  "BedOfChaos": {
+    "NAME": "混沌的温床",
+    "FLAVOR": "混合魔法失控后生成的温床。",
+    "DESCRIPTIONS": [
+      "替换 #r混合魔法 。在每回合开始时，获得等同于随机数量攻击牌和技能牌的 #y魔法温床 的效果。"
+    ]
+  },
+  "BequestOfSeath": {
+    "NAME": "希斯馈赠",
+    "FLAVOR": "来自盲目追寻不朽者的冰冷苍白遗赠。",
+    "DESCRIPTIONS": [
+      "你在每回合第一次打出 魔法 卡牌时，获得 [E] 。"
+    ]
+  },
+  "ScrollOfLogan": {
+    "NAME": "罗根卷轴",
+    "FLAVOR": "来自大帽子罗根不懈研习的卷轴。",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，增加一张随机 结晶 卡牌到你的手牌。"
+    ]
+  },
+  "OolacileIvoryCatalyst": {
+    "NAME": "乌拉席露的白枝",
+    "FLAVOR": "曾用于将古老光芒编织成魔法的白色树枝。",
+    "DESCRIPTIONS": [
+      "在打出 *魔法温床 时，获得6点格挡，抽1张牌。"
+    ]
+  },
+  "SixthSense": {
+    "NAME": "第六感",
+    "FLAVOR": "追踪者的技艺。",
+    "DESCRIPTIONS": [
+      "每打出 2 张技能牌，获得 6 点格挡。"
+    ]
+  },
+  "HonorOfPinionfolk": {
+    "NAME": "羽翼之证",
+    "FLAVOR": "守护者的技艺。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，获得2层 #y振翼 。"
+    ]
+  },
+  "Marking": {
+    "NAME": "标记",
+    "FLAVOR": "铁之眼的技艺。",
+    "DESCRIPTIONS": [
+      "每打出 2 张技能牌，获得 6 点格挡。"
+    ]
+  },
+  "FighterResolve": {
+    "NAME": "好胜心",
+    "FLAVOR": "无赖的技艺。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，获得 #y不屈 。"
+    ]
+  },
+  "BorrowedLife": {
+    "NAME": "预借生命",
+    "FLAVOR": "在偿还代价之前夺取胜利。",
+    "DESCRIPTIONS": [
+      "#y虚血 和 #y虚血+ 在战斗结束时不造成生命值损伤。"
+    ]
+  },
+  "DebtToBond": {
+    "NAME": "以券化债",
+    "FLAVOR": "将痛楚重新定价为行动。",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，如果有 #y虚血 或 #y虚血+ ，获得 [E] 。"
+    ]
+  },
+  "FighterDestined": {
+    "NAME": "命定之胜",
+    "FLAVOR": "替换好胜心。胜利在偿还伤势之前已经决定。",
+    "DESCRIPTIONS": [
+      "替换 #r好胜心 。在每场战斗开始时，获得 #y不屈+ 。"
+    ]
+  },
+  "Restage": {
+    "NAME": "重演",
+    "FLAVOR": "女爵的技艺。",
+    "DESCRIPTIONS": [
+      "每打出 2 张技能牌，获得 6 点格挡。"
+    ]
+  },
+  "Suncatcher": {
+    "NAME": "捕日者",
+    "FLAVOR": "执行者的技艺。",
+    "DESCRIPTIONS": [
+      "每打出 2 张技能牌，获得 6 点格挡。"
+    ]
+  },
+  "SummonSpirit": {
+    "NAME": "召唤灵魂",
+    "FLAVOR": "复仇者的技艺。",
+    "DESCRIPTIONS": [
+      "在你的前3个回合开始时，依次 召唤：海伦 ， 召唤：弗雷德利克 ， 召唤：塞巴斯蒂安 。"
+    ]
+  },
+  "Bagcraft": {
+    "NAME": "携物知识",
+    "FLAVOR": "学者的携物知识。",
+    "DESCRIPTIONS": [
+      "获得 #b3 个装有随机药水的药水栏位。"
+    ]
+  },
+  "Trance": {
+    "NAME": "入神",
+    "FLAVOR": "送葬者的技艺。",
+    "DESCRIPTIONS": [
+      "每打出 2 张技能牌，获得 6 点格挡。"
+    ]
+  }
+}

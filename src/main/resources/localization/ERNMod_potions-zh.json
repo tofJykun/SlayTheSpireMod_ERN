@@ -1,0 +1,73 @@
+{
+  "BulkFirePotion": {
+    "NAME": "散装火焰药水",
+    "DESCRIPTIONS": [
+      "造成 #b",
+      " 点伤害。",
+      " NL 在战斗结束时消失。"
+    ]
+  },
+  "BulkEnergyPotion": {
+    "NAME": "散装能量药水",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      " 点能量。",
+      " NL 在战斗结束时消失。"
+    ]
+  },
+  "BulkAttackPotion": {
+    "NAME": "散装攻击药水",
+    "DESCRIPTIONS": [
+      "从 #b3 张随机攻击牌中选择 #b1 张加入你的手牌。它在本回合耗能为 #b0 。",
+      "从 #b4 张随机攻击牌中选择 #b2 张加入你的手牌。它们在本回合耗能为 #b0 。",
+      " NL 在战斗结束时消失。"
+    ]
+  },
+  "BulkBlockPotion": {
+    "NAME": "散装格挡药水",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      " 点 格挡 。",
+      " NL 在战斗结束时消失。"
+    ]
+  },
+  "BulkExplosivePotion": {
+    "NAME": "散装爆炸药水",
+    "DESCRIPTIONS": [
+      "对所有敌人造成 #b",
+      " 点伤害。",
+      " NL 在战斗结束时消失。"
+    ]
+  },
+  "BulkSwiftPotion": {
+    "NAME": "散装迅捷药水",
+    "DESCRIPTIONS": [
+      "抽 #b",
+      " 张牌。",
+      " NL 在战斗结束时消失。"
+    ]
+  },
+  "BulkFearPotion": {
+    "NAME": "散装恐惧药水",
+    "DESCRIPTIONS": [
+      "给予 #b",
+      " 层 易伤 。",
+      " NL 在战斗结束时消失。"
+    ]
+  },
+  "BulkWeakenPotion": {
+    "NAME": "散装虚弱药水",
+    "DESCRIPTIONS": [
+      "给予 #b",
+      " 层 虚弱 。",
+      " NL 在战斗结束时消失。"
+    ]
+  },
+  "ElixirOfLife": {
+    "NAME": "长生不老药",
+    "DESCRIPTIONS": [
+      "当你要被杀死时，免死并回复到最大生命值的 #b",
+      "% ，丢弃这瓶药水。在你的回合结束时，失去10金币。如果金币为0，丢弃这瓶药水。"
+    ]
+  }
+}

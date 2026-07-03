@@ -1,0 +1,257 @@
+{
+  "ElementalDefensePower": {
+    "NAME": "Elemental Defense",
+    "DESCRIPTIONS": [
+      "Magic cards cost #b",
+      " less."
+    ]
+  },
+  "IntelligencePower": {
+    "NAME": "Intelligence",
+    "DESCRIPTIONS": [
+      "Magic cards gain #b",
+      "Magic cards lose #b",
+      " additional value."
+    ]
+  },
+  "FadingIntelligencePower": {
+    "NAME": "Temporary Intelligence",
+    "DESCRIPTIONS": [
+      "At end of turn, lose #b",
+      " intelligence."
+    ]
+  },
+  "FallControlPower": {
+    "NAME": "Fall Control",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b",
+      " Intelligence."
+    ]
+  },
+  "SoarPower": {
+    "NAME": "Soar",
+    "DESCRIPTIONS": [
+      "Reduces damage taken by 50% for the next #b",
+      " instances of damage.",
+      " NL Lose #b1 stack whenever you take unblocked attack damage."
+    ]
+  },
+  "DeathblightPower": {
+    "NAME": "Deathblight",
+    "DESCRIPTIONS": [
+      "At end of turn, if this reaches #b",
+      ", this enemy dies.",
+      ", you lose #b",
+      " HP."
+    ]
+  },
+  "WhiteLightningPower": {
+    "NAME": "White Lightning",
+    "DESCRIPTIONS": [
+      "At the end of #b%d turns, deal #b%d damage to ALL enemies.",
+      "At the end of this turn, deal #b%d damage to ALL enemies."
+    ]
+  },
+  "BedOfMagicCostReductionPower": {
+    "NAME": "Bed Of Magic",
+    "DESCRIPTIONS": [
+      "This turn, the next #b",
+      " Attack cards ",
+      " Skill cards ",
+      "cost 1 less."
+    ]
+  },
+  "BedOfMagicPowerTriggerPower": {
+    "NAME": "Bed Of Magic",
+    "DESCRIPTIONS": [
+      "This turn, the next #b Power cards draw 1 card and add 1 *Magic *Ember to your hand.",
+      ""
+    ]
+  },
+  "BedOfMagicDoublePower": {
+    "NAME": "Bed Of Magic",
+    "DESCRIPTIONS": [
+      "This turn, the next #b *Bed *Of *Magic is played twice.",
+      ""
+    ]
+  },
+  "HiddenBodyPower": {
+    "NAME": "Hidden Body",
+    "DESCRIPTIONS": [
+      "At the start of next turn, apply #b",
+      " Weak to ALL enemies."
+    ]
+  },
+  "NextTurnIntelligencePower": {
+    "NAME": "Magic Barrier",
+    "DESCRIPTIONS": [
+      "At the start of next turn, gain #b",
+      " Temporary Intelligence."
+    ]
+  },
+  "ReignitedCinderPower": {
+    "NAME": "Reignited Cinder",
+    "DESCRIPTIONS": [
+      "Whenever you play a *Magic *Ember, add #b",
+      " *Magic *Ember to your hand."
+    ]
+  },
+  "HoverPower": {
+    "NAME": "Hover",
+    "DESCRIPTIONS": [
+      "Reduces damage taken by 50% for the next #b",
+      " instances of damage.",
+      " NL Lose #b1 stack whenever you take attack damage."
+    ]
+  },
+  "PerfectGuardPower": {
+    "NAME": "Perfect Guard",
+    "DESCRIPTIONS": [
+      "Lasts #b",
+      " turn(s). Whenever enemy attack damage exactly breaks your Block, gain #b",
+      " Vigor."
+    ]
+  },
+  "ParryPower": {
+    "NAME": "Parry",
+    "DESCRIPTIONS": [
+      "Lasts #b",
+      " turn(s). Whenever enemy attack damage exactly breaks your Block, the enemy is Stunned after 1 turn."
+    ]
+  },
+  "DelayedStunPower": {
+    "NAME": "Parry",
+    "DESCRIPTIONS": [
+      "This enemy will be Stunned next turn."
+    ]
+  },
+  "StunPower": {
+    "NAME": "Stun",
+    "DESCRIPTIONS": [
+      "This enemy is stunned for #b",
+      " turn(s). Its current intent is delayed."
+    ]
+  },
+  "GainDexterityAtEndOfTurnPower": {
+    "NAME": "Claw Shot",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b",
+      " Dexterity."
+    ]
+  },
+  "TransientCursePower": {
+    "NAME": "Transient Curse",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b",
+      " Dexterity and lose #b",
+      " Strength."
+    ]
+  },
+  "UnyieldingPower": {
+    "NAME": "Unyielding",
+    "DESCRIPTIONS": [
+      "Prevent HP loss and gain #yGrey #yHealth equal to the HP loss prevented. NL This effect does not affect HP loss caused by #yGrey #yHealth."
+    ]
+  },
+  "GreyHealthPower": {
+    "NAME": "Grey Health",
+    "DESCRIPTIONS": [
+      "Whenever you play an Attack, reduce this by #b1. NL At the end of your turn, lose HP equal to your #yGrey #yHealth. NL At the end of combat, lose HP equal to your #yGrey #yHealth."
+    ]
+  },
+  "UnyieldingPlusPower": {
+    "NAME": "Unyielding+",
+    "DESCRIPTIONS": [
+      "Prevent HP loss and gain #yGrey #yHealth+ equal to the HP loss prevented. NL This effect does not affect HP loss caused by #yGrey #yHealth+."
+    ]
+  },
+  "GreyHealthPlusPower": {
+    "NAME": "Grey Health+",
+    "DESCRIPTIONS": [
+      "Whenever you play an Attack, reduce this by #b2. NL At the end of your turn, lose HP equal to your #yGrey #yHealth+. NL At the end of combat, lose HP equal to your #yGrey #yHealth+."
+    ]
+  },
+  "ScarletRotPower": {
+    "NAME": "Scarlet Rot",
+    "DESCRIPTIONS": [
+      "At the start of turn, lose #b",
+      " HP twice and lose 1 Scarlet Rot each time.",
+      "At the start of turn, this enemy loses #b"
+    ]
+  },
+  "BloodburnPower": {
+    "NAME": "Bloodburn",
+    "DESCRIPTIONS": [
+      "At the start of turn, lose #b",
+      " HP and the same amount of Max HP, then lose 1 Bloodburn.",
+      "At the start of turn, this enemy loses #b"
+    ]
+  },
+  "BlackFlameRitualPower": {
+    "NAME": "Black Flame Ritual",
+    "DESCRIPTIONS": [
+      "Whenever you are attacked, apply #b",
+      " Bloodburn to the attacker."
+    ]
+  },
+  "BlackFlameBladePower": {
+    "NAME": "Black Flame Blade",
+    "DESCRIPTIONS": [
+      "Whenever your attack deals unblocked damage, apply #b",
+      " Bloodburn."
+    ]
+  },
+  "SoulbloodSongPower": {
+    "NAME": "Soulblood Song",
+    "DESCRIPTIONS": [
+      "This turn, whenever you deal unblocked damage, gain that much Block."
+    ]
+  },
+  "WarmingStonePower": {
+    "NAME": "Warming Stone",
+    "DESCRIPTIONS": [
+      "At the start of your next #b",
+      " turns, gain #b",
+      " Vigor."
+    ]
+  },
+  "TyrannyPower": {
+    "NAME": "Tyranny",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw #b",
+      " card(s) and Exhaust #b",
+      " card(s) from your hand."
+    ]
+  },
+  "DeliriumPower": {
+    "NAME": "Delirium",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, play #b",
+      " random card(s) from your hand."
+    ]
+  },
+  "SummonHelen": {
+    "NAME": "Summon: Helen",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Block. NL Add 1 ",
+      " to your hand. NL Vanishes when your Block is gone."
+    ]
+  },
+  "SummonFrederick": {
+    "NAME": "Summon: Frederick",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Block. NL Add 1 ",
+      " to your hand. NL Vanishes when your Block is gone."
+    ]
+  },
+  "SummonSebastian": {
+    "NAME": "Summon: Sebastian",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Block. NL Add 1 ",
+      " to your hand. NL Vanishes when your Block is gone."
+    ]
+  }
+}
