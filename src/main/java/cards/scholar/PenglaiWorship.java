@@ -14,7 +14,7 @@ import potions.ElixirOfLife;
 
 public class PenglaiWorship extends CustomCard {
     public static final String ID = "PenglaiWorship";
-    private static final String IMG_PATH = "img/cards/scholar/Defend.png";
+    private static final String IMG_PATH = "img/cards/scholar/PenglaiWorship.png";
     private static final int COST = 1;
     private static final int GOLD_LOSS = 20;
     private static final int UPGRADE_GOLD_LOSS = -10;

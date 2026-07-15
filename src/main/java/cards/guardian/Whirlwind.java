@@ -13,7 +13,7 @@ import patches.AbstractCardEnum;
 
 public class Whirlwind extends CustomCard {
     public static final String ID = "Whirlwind";
-    private static final String IMG_PATH = "img/cards/guardian/Strike.png";
+    private static final String IMG_PATH = "img/cards/guardian/Whirlwind.png";
     private static final int COST = 0;
     private static final int ATTACK_DMG = 1;
     private static final int UPGRADE_PLUS_DMG = 1;

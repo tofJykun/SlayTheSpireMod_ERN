@@ -12,8 +12,8 @@ import powers.UnyieldingPlusPower;
 
 public class FighterDestined extends CustomRelic {
     public static final String ID = "FighterDestined";
-    private static final String IMG = "img/relics/raider/Retaliate.png";
-    private static final String IMG_OTL = "img/relics/raider/outline/Retaliate.png";
+    private static final String IMG = "img/relics/raider/FighterDestined.png";
+    private static final String IMG_OTL = "img/relics/raider/outline/FighterDestined.png";
 
     public FighterDestined() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),

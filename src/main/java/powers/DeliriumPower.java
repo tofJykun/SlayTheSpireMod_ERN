@@ -22,7 +22,7 @@ public class DeliriumPower extends AbstractPower {
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
         updateDescription();
-        loadRegion("mayhem");
+        PowerIconHelper.load(this, POWER_ID);
     }
 
     @Override
@@ -39,3 +39,4 @@ public class DeliriumPower extends AbstractPower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }
+

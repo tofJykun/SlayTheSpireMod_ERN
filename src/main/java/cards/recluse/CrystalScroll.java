@@ -15,7 +15,7 @@ import powers.IntelligencePower;
 
 public class CrystalScroll extends CustomCard {
     public static final String ID = "CrystalScroll";
-    private static final String IMG_PATH = "img/cards/recluse/PrimalGlintstone.png";
+    private static final String IMG_PATH = "img/cards/recluse/CrystalScroll.png";
     private static final int COST = 2;
     private static final int INTELLIGENCE = 5;
     private static final int UPGRADE_PLUS_INTELLIGENCE = 3;

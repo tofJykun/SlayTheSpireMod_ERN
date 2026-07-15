@@ -14,7 +14,7 @@ import powers.DeliriumPower;
 
 public class Delirium extends CustomCard {
     public static final String ID = "Delirium";
-    private static final String IMG_PATH = "img/cards/undertaker/Defend.png";
+    private static final String IMG_PATH = "img/cards/undertaker/Delirium.png";
     private static final int COST = 1;
     private static final int CARDS_TO_PLAY = 2;
 

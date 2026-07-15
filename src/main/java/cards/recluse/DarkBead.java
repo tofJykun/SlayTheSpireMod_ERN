@@ -21,7 +21,7 @@ import powers.IntelligencePower;
 
 public class DarkBead extends CustomCard {
     public static final String ID = "DarkBead";
-    private static final String IMG_PATH = "img/cards/recluse/CrystalSoulSpear.png";
+    private static final String IMG_PATH = "img/cards/recluse/DarkBead.png";
     private static final int COST = 3;
     private static final int UPGRADED_COST = 2;
     private static final int ATTACK_DMG = 3;
@@ -35,6 +35,7 @@ public class DarkBead extends CustomCard {
         this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber = MAGIC_DMG;
         this.magicNumber = this.baseMagicNumber;
+        this.cardsToPreview = new MagicEmber();
     }
 
     private static CardStrings getCardStrings() {

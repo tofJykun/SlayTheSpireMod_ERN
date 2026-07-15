@@ -16,7 +16,7 @@ import powers.IntelligencePower;
 
 public class FallControl extends CustomCard {
     public static final String ID = "FallControl";
-    private static final String IMG_PATH = "img/cards/recluse/Defend.png";
+    private static final String IMG_PATH = "img/cards/recluse/FallControl.png";
     private static final int COST = 0;
     private static final int DRAW = 2;
     private static final int INTELLIGENCE_LOSS = 2;

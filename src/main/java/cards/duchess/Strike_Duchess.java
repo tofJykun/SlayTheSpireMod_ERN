@@ -14,7 +14,7 @@ import patches.AbstractCardEnum;
 
 public class Strike_Duchess extends CustomCard {
     public static final String ID = "Strike_Duchess";
-    private static final String IMG_PATH = "img/cards/duchess/Strike.png";
+    private static final String IMG_PATH = "img/cards/duchess/Strike_Duchess.png";
     private static final int COST = 1;
     private static final int ATTACK_DMG = 6;
     private static final int UPGRADE_PLUS_DMG = 3;

@@ -27,7 +27,7 @@ public class WhiteLightningPower extends AbstractPower {
         this.amount = turns;
         this.damage = damage;
         this.type = PowerType.BUFF;
-        loadRegion("the_bomb");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -53,3 +53,4 @@ public class WhiteLightningPower extends AbstractPower {
         }
     }
 }
+

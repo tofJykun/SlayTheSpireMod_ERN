@@ -15,7 +15,7 @@ import powers.ParryPower;
 
 public class SmallShield extends CustomCard {
     public static final String ID = "SmallShield";
-    private static final String IMG_PATH = "img/cards/wylder/Defend.png";
+    private static final String IMG_PATH = "img/cards/wylder/SmallShield.png";
     private static final int COST = 2;
     private static final int BLOCK_AMT = 6;
     private static final int PARRY = 1;

@@ -50,5 +50,8 @@ mods.lnk
 sendToDevs/
 preferences/
 
+### Local asset rollback backups ###
+**/backup_pre_hsv_recolor/
+
 ### Codex generated manuals ###
 codex-manual/

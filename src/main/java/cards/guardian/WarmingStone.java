@@ -14,7 +14,7 @@ import powers.WarmingStonePower;
 
 public class WarmingStone extends CustomCard {
     public static final String ID = "WarmingStone";
-    private static final String IMG_PATH = "img/cards/guardian/WingsOfSalvation.png";
+    private static final String IMG_PATH = "img/cards/guardian/WarmingStone.png";
     private static final int COST = 1;
     private static final int VIGOR = 2;
     private static final int UPGRADE_PLUS_VIGOR = 1;

@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class PlayRandomHandCardAction extends AbstractGameAction {
+    private boolean choosing = false;
+
     public PlayRandomHandCardAction() {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.CARD_MANIPULATION;
@@ -21,30 +23,54 @@ public class PlayRandomHandCardAction extends AbstractGameAction {
                 return;
             }
 
-            AbstractCard card = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
-            AbstractDungeon.player.hand.group.remove(card);
-            AbstractDungeon.player.limbo.addToBottom(card);
-            card.current_x = card.hb.cX;
-            card.current_y = card.hb.cY;
-            card.target_x = Settings.WIDTH / 2.0F;
-            card.target_y = Settings.HEIGHT / 2.0F;
-            card.targetAngle = 0.0F;
-            card.lighten(false);
-            card.drawScale = 0.12F;
-            card.targetDrawScale = 0.75F;
-            card.freeToPlayOnce = true;
-            card.applyPowers();
-
-            boolean randomTarget = card.target == AbstractCard.CardTarget.ENEMY
-                    || card.target == AbstractCard.CardTarget.SELF_AND_ENEMY;
-            if (randomTarget) {
-                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, true,
-                        EnergyPanel.getCurrentEnergy(), true, true), true);
-            } else {
-                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, null,
-                        EnergyPanel.getCurrentEnergy(), true, true), true);
+            if (RandomPlayHelper.shouldChooseRandomPlay(AbstractDungeon.player)) {
+                String prompt = RandomPlayHelper.consumeInsightPrompt(AbstractDungeon.player);
+                AbstractDungeon.handCardSelectScreen.open(prompt, 1, false, false, false, false);
+                this.choosing = true;
+                tickDuration();
+                return;
             }
+
+            AbstractCard card = AbstractDungeon.player.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+            queueCard(card);
+            tickDuration();
+            return;
         }
+
+        if (this.choosing && !AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
+            if (!AbstractDungeon.handCardSelectScreen.selectedCards.group.isEmpty()) {
+                AbstractCard card = AbstractDungeon.handCardSelectScreen.selectedCards.getBottomCard();
+                AbstractDungeon.handCardSelectScreen.selectedCards.group.remove(card);
+                queueCard(card);
+            }
+            AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
+            AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
+            this.isDone = true;
+            return;
+        }
+
         tickDuration();
+    }
+
+    private void queueCard(AbstractCard card) {
+        if (card == null) {
+            return;
+        }
+        if (AbstractDungeon.player.hand.group.contains(card)) {
+            AbstractDungeon.player.hand.group.remove(card);
+        }
+        AbstractDungeon.player.limbo.addToBottom(card);
+        RandomPlayHelper.prepareRandomPlayedCard(card);
+
+        boolean randomTarget = card.target == AbstractCard.CardTarget.ENEMY
+                || card.target == AbstractCard.CardTarget.SELF_AND_ENEMY;
+        if (randomTarget) {
+            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, true,
+                    EnergyPanel.getCurrentEnergy(), true, true), true);
+        } else {
+            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, null,
+                    EnergyPanel.getCurrentEnergy(), true, true), true);
+        }
+        RandomPlayHelper.notifyRandomCardPlayed();
     }
 }

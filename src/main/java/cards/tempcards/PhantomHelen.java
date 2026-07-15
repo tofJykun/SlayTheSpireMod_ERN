@@ -1,6 +1,5 @@
 package cards.tempcards;
 
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -8,13 +7,17 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import powers.AbstractSummonPower;
+import powers.SpiritPower;
 import powers.SummonHelen;
+import summons.SummonAnimationManager;
 
-public class PhantomHelen extends CustomCard {
+public class PhantomHelen extends AbstractPhantomCard {
     public static final String ID = "PhantomHelen";
-    private static final String IMG_PATH = "img/cards/tempcards/FadingPrimalGlintstone.png";
+    private static final String IMG_PATH = "img/cards/tempcards/PhantomHelen.png";
     private static final int COST = 1;
     private static final int DAMAGE = 9;
     private static final int UPGRADE_PLUS_DAMAGE = 3;
@@ -38,7 +41,7 @@ public class PhantomHelen extends CustomCard {
         if (!canUse) {
             return false;
         }
-        if (!p.hasPower(SummonHelen.POWER_ID)) {
+        if (!AbstractSummonPower.isActiveSummon((AbstractCreature)p, SummonHelen.POWER_ID)) {
             this.cantUseMessage = getCardStrings().EXTENDED_DESCRIPTION[0];
             return false;
         }
@@ -46,10 +49,32 @@ public class PhantomHelen extends CustomCard {
     }
 
     @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDungeon.player != null
+                && AbstractSummonPower.isActiveSummon((AbstractCreature)AbstractDungeon.player, SummonHelen.POWER_ID)
+                ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy()
+                : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+    }
+
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        SpiritPower.applyPhantomNumber(this);
+        SummonAnimationManager.triggerAttack(SummonHelen.SUMMON_KEY);
         addToBot((AbstractGameAction)new DamageAction((AbstractCreature)m,
                 new DamageInfo((AbstractCreature)p, this.magicNumber, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        SpiritPower.applyPhantomNumber(this);
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        super.calculateCardDamage(mo);
+        SpiritPower.applyPhantomNumber(this);
     }
 
     @Override

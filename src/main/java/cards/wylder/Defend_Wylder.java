@@ -12,7 +12,7 @@ import patches.AbstractCardEnum;
 
 public class Defend_Wylder extends CustomCard {
     public static final String ID = "Defend_Wylder";
-    private static final String IMG_PATH = "img/cards/wylder/Defend.png";
+    private static final String IMG_PATH = "img/cards/wylder/Defend_Wylder.png";
     private static final int COST = 1;
     private static final int BLOCK_AMT = 5;
     private static final int UPGRADE_PLUS_BLOCK = 3;

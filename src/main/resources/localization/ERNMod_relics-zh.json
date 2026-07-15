@@ -3,21 +3,21 @@
     "NAME": "混合魔法",
     "FLAVOR": "隐士的技艺。",
     "DESCRIPTIONS": [
-      "在每场战斗开始时，将一张 #y魔法温床 放入你的手牌。"
+      "在每场战斗开始时，将 #b1 张 #y魔法温床 放入你的手牌。"
     ]
   },
   "HiddenMagicCocktail": {
     "NAME": "秘密混合魔法",
     "FLAVOR": "隐士隐藏至深的技艺。",
     "DESCRIPTIONS": [
-      "替换 #r混合魔法 。在每场战斗开始时，将一张 #y魔法温床+ 放入你的手牌。"
+      "替换 #y混合魔法 。在每场战斗开始时，将 #b1 张 #y魔法温床+ 放入你的手牌。"
     ]
   },
   "BedOfChaos": {
     "NAME": "混沌的温床",
     "FLAVOR": "混合魔法失控后生成的温床。",
     "DESCRIPTIONS": [
-      "替换 #r混合魔法 。在每回合开始时，获得等同于随机数量攻击牌和技能牌的 #y魔法温床 的效果。"
+      "替换 #y混合魔法 。在每回合开始时，获得等同于随机数量攻击牌和技能牌的 #y魔法温床 的效果。"
     ]
   },
   "BequestOfSeath": {
@@ -31,35 +31,56 @@
     "NAME": "罗根卷轴",
     "FLAVOR": "来自大帽子罗根不懈研习的卷轴。",
     "DESCRIPTIONS": [
-      "在你的回合开始时，增加一张随机 结晶 卡牌到你的手牌。"
+      "在你的回合开始时，增加 #b1 张随机 结晶 卡牌到你的手牌。"
     ]
   },
   "OolacileIvoryCatalyst": {
     "NAME": "乌拉席露的白枝",
     "FLAVOR": "曾用于将古老光芒编织成魔法的白色树枝。",
     "DESCRIPTIONS": [
-      "在打出 *魔法温床 时，获得6点格挡，抽1张牌。"
+      "在打出 #y魔法温床 时，获得 #b6 点 #y格挡 ，抽 #b1 张牌。"
+    ]
+  },
+  "CinderellaRosette": {
+    "NAME": "辛德瑞拉发饰",
+    "FLAVOR": "一枚小小发饰，来自过早结束的魔法。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，获得 #b1 点 #y智力 。"
     ]
   },
   "SixthSense": {
     "NAME": "第六感",
     "FLAVOR": "追踪者的技艺。",
     "DESCRIPTIONS": [
-      "每打出 2 张技能牌，获得 6 点格挡。"
+      "你在每场战斗中第一次损伤生命时，在下 #b1 回合获得 #b10 点 #y格挡 。"
+    ]
+  },
+  "ToastyMittens": {
+    "NAME": "烘焙手套",
+    "FLAVOR": "暖到足以握住新鲜面饼，也不至于放下刀刃。",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，增加 #b1 张 #y皮塔饼 到你的手牌。"
+    ]
+  },
+  "JosephForesight": {
+    "NAME": "上感应",
+    "FLAVOR": "第六感抵达更高处后的余响。",
+    "DESCRIPTIONS": [
+      "你在每场战斗中第一次损伤生命时，在下 #b1 回合获得 #b1 层 #y无实体 。"
     ]
   },
   "HonorOfPinionfolk": {
     "NAME": "羽翼之证",
     "FLAVOR": "守护者的技艺。",
     "DESCRIPTIONS": [
-      "在每场战斗开始时，获得2层 #y振翼 。"
+      "在每场战斗开始时，获得 #b2 层 #y振翼 。"
     ]
   },
   "Marking": {
     "NAME": "标记",
     "FLAVOR": "铁之眼的技艺。",
     "DESCRIPTIONS": [
-      "每打出 2 张技能牌，获得 6 点格挡。"
+      "每打出 #b2 张 #y技能牌 ，获得 #b6 点 #y格挡 。"
     ]
   },
   "FighterResolve": {
@@ -87,28 +108,63 @@
     "NAME": "命定之胜",
     "FLAVOR": "替换好胜心。胜利在偿还伤势之前已经决定。",
     "DESCRIPTIONS": [
-      "替换 #r好胜心 。在每场战斗开始时，获得 #y不屈+ 。"
+      "替换 #y好胜心 。在每场战斗开始时，获得 #y不屈+ 。"
     ]
   },
-  "Restage": {
-    "NAME": "重演",
+  "OldGreataxe": {
+    "NAME": "老旧巨斧",
+    "FLAVOR": "一柄迟钝、沉重，却依旧可靠的旧斧。",
+    "DESCRIPTIONS": [
+      "每当你打出 #b1 张耗能大于等于 #b2 的 #y攻击牌，给予被攻击敌人 #b1 层 #y削韧 。"
+    ]
+  },
+  "MagnificentPoise": {
+    "NAME": "优雅身段",
     "FLAVOR": "女爵的技艺。",
     "DESCRIPTIONS": [
-      "每打出 2 张技能牌，获得 6 点格挡。"
+      "每打出 #b3 张牌，获得 #b3 点 #y格挡 。"
     ]
   },
   "Suncatcher": {
     "NAME": "捕日者",
     "FLAVOR": "执行者的技艺。",
     "DESCRIPTIONS": [
-      "每打出 2 张技能牌，获得 6 点格挡。"
+      "每打出 #b2 张 #y技能牌 ，获得 #b6 点 #y格挡 。"
+    ]
+  },
+  "SeedbedCurse": {
+    "NAME": "温床的诅咒",
+    "FLAVOR": "诅咒从异变的裂隙里生根。",
+    "DESCRIPTIONS": [
+      "你每给予 #b10 层 异变 ，随机给予敌人 #b1 层 骤死 。"
+    ]
+  },
+  "CrucibleCodex": {
+    "NAME": "熔炉法典",
+    "FLAVOR": "第十条以后，文字开始灼烧。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，将 #b1 张 *法规X 加入你的手牌。"
     ]
   },
   "SummonSpirit": {
     "NAME": "召唤灵魂",
     "FLAVOR": "复仇者的技艺。",
     "DESCRIPTIONS": [
-      "在你的前3个回合开始时，依次 召唤：海伦 ， 召唤：弗雷德利克 ， 召唤：塞巴斯蒂安 。"
+      "在你的前 #b3 个回合开始时，依次 #y召唤：海伦 ， #y召唤：弗雷德利克 ， #y召唤：塞巴斯蒂安 。"
+    ]
+  },
+  "SoulForge": {
+    "NAME": "灵魂熔炉",
+    "FLAVOR": "把幽魂的余烬重新锻成力量。",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，如果有 #y召唤 ，获得 [E] 。"
+    ]
+  },
+  "YearsEntwined": {
+    "NAME": "愿岁并谢",
+    "FLAVOR": "愿岁月同归，灵魂并谢。",
+    "DESCRIPTIONS": [
+      "替换 #y召唤灵魂 。在你的回合开始时，随机 #y基础召唤 。"
     ]
   },
   "Bagcraft": {
@@ -122,7 +178,28 @@
     "NAME": "入神",
     "FLAVOR": "送葬者的技艺。",
     "DESCRIPTIONS": [
-      "每打出 2 张技能牌，获得 6 点格挡。"
+      "每打出 #b2 张 #y技能牌 ，获得 #b6 点 #y格挡 。"
+    ]
+  },
+  "SacredTimber": {
+    "NAME": "金石誓木",
+    "FLAVOR": "沉默的木质圣物，像石头一样冰冷。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，获得 #b1 点 #y灵力 。"
+    ]
+  },
+  "PrescientGlintEye": {
+    "NAME": "先启辉眼",
+    "FLAVOR": "在葬礼之前，先看见终末的微光。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，获得 #b1 点 #y灵视 。"
+    ]
+  },
+  "WhisperingEarring": {
+    "NAME": "低语耳环",
+    "FLAVOR": "耳边的声音会替你挑选墓碑。",
+    "DESCRIPTIONS": [
+      "每回合开始获得 [E] 。每回合的第一张指向性牌变为随机打出。"
     ]
   }
 }

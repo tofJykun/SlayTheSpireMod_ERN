@@ -14,7 +14,7 @@ import powers.BloodburnPower;
 
 public class BlackFlame extends CustomCard {
     public static final String ID = "BlackFlame";
-    private static final String IMG_PATH = "img/cards/executor/DestinedDeath.png";
+    private static final String IMG_PATH = "img/cards/executor/BlackFlame.png";
     private static final int COST = 1;
     private static final int BLOODBURN = 5;
     private static final int UPGRADE_PLUS_BLOODBURN = 2;

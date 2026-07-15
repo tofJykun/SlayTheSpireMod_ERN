@@ -13,7 +13,7 @@ import patches.AbstractCardEnum;
 
 public class PotionCoveredAshes extends CustomCard {
     public static final String ID = "PotionCoveredAshes";
-    private static final String IMG_PATH = "img/cards/scholar/Defend.png";
+    private static final String IMG_PATH = "img/cards/scholar/PotionCoveredAshes.png";
     private static final int COST = 1;
 
     public PotionCoveredAshes() {

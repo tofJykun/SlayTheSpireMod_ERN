@@ -15,7 +15,7 @@ import powers.TyrannyPower;
 
 public class Tyranny extends CustomCard {
     public static final String ID = "Tyranny";
-    private static final String IMG_PATH = "img/cards/scholar/Defend.png";
+    private static final String IMG_PATH = "img/cards/scholar/Tyranny.png";
     private static final int COST = 1;
 
     public Tyranny() {

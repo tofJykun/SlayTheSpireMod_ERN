@@ -12,7 +12,7 @@ import patches.AbstractCardEnum;
 
 public class Yearn extends CustomCard {
     public static final String ID = "Yearn";
-    private static final String IMG_PATH = "img/cards/recluse/HiddenBody.png";
+    private static final String IMG_PATH = "img/cards/recluse/Yearn.png";
     private static final int COST = 1;
 
     public Yearn() {

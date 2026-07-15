@@ -13,8 +13,8 @@ import powers.GreyHealthPower;
 
 public class DebtToBond extends CustomRelic {
     public static final String ID = "DebtToBond";
-    private static final String IMG = "img/relics/raider/Retaliate.png";
-    private static final String IMG_OTL = "img/relics/raider/outline/Retaliate.png";
+    private static final String IMG = "img/relics/raider/DebtToBond.png";
+    private static final String IMG_OTL = "img/relics/raider/outline/DebtToBond.png";
     private static final int ENERGY = 1;
 
     public DebtToBond() {

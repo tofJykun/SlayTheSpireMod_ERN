@@ -1,6 +1,7 @@
 package cards.recluse;
 
 import basemod.abstracts.CustomCard;
+import cards.status.MagicEmber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +15,7 @@ import powers.ReignitedCinderPower;
 
 public class ReignitedCinder extends CustomCard {
     public static final String ID = "ReignitedCinder";
-    private static final String IMG_PATH = "img/cards/recluse/PrimalGlintstone.png";
+    private static final String IMG_PATH = "img/cards/recluse/ReignitedCinder.png";
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
     private static final int POWER_AMOUNT = 1;
@@ -22,6 +23,7 @@ public class ReignitedCinder extends CustomCard {
     public ReignitedCinder() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.Recluse_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.cardsToPreview = new MagicEmber();
     }
 
     private static CardStrings getCardStrings() {

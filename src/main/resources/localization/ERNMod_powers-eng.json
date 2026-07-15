@@ -21,6 +21,14 @@
       " intelligence."
     ]
   },
+  "FaithPower": {
+    "NAME": "Faith",
+    "DESCRIPTIONS": [
+      "Thaumaturgy cards gain #b",
+      "Thaumaturgy cards lose #b",
+      " additional value."
+    ]
+  },
   "FallControlPower": {
     "NAME": "Fall Control",
     "DESCRIPTIONS": [
@@ -87,6 +95,13 @@
     "DESCRIPTIONS": [
       "At the start of next turn, gain #b",
       " Temporary Intelligence."
+    ]
+  },
+  "NextTurnIntangiblePower": {
+    "NAME": "Next Turn Intangible",
+    "DESCRIPTIONS": [
+      "At the start of next turn, gain #b",
+      " Intangible."
     ]
   },
   "ReignitedCinderPower": {
@@ -230,6 +245,28 @@
       " random card(s) from your hand."
     ]
   },
+  "OuterBoonPower": {
+    "NAME": "Outer Boon",
+    "DESCRIPTIONS": [
+      "Whenever you play a random card, gain #b",
+      " Block."
+    ]
+  },
+  "ZealotryPower": {
+    "NAME": "Zealotry",
+    "DESCRIPTIONS": [
+      "Whenever you play a random card, gain #b",
+      " Faith."
+    ]
+  },
+  "InsightPower": {
+    "NAME": "Insight",
+    "DESCRIPTIONS": [
+      "For the first #b",
+      " random plays each turn, choose a card and play it for free instead. This still counts as a random play.",
+      "Choose a card to play for free."
+    ]
+  },
   "SummonHelen": {
     "NAME": "Summon: Helen",
     "DESCRIPTIONS": [
@@ -252,6 +289,129 @@
       "Gain #b",
       " Block. NL Add 1 ",
       " to your hand. NL Vanishes when your Block is gone."
+    ]
+  },
+  "SummonDoggo": {
+    "NAME": "Summon: Doggo",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Block. NL Add 1 ",
+      " to your hand. NL Vanishes when your Block is gone."
+    ]
+  },
+  "PumpkinHelmPower": {
+    "NAME": "Pumpkin Helm",
+    "DESCRIPTIONS": [
+      "If you have Summon: Frederick, Block is not removed at the start of your turn."
+    ]
+  },
+  "RepeatingCrossbowPower": {
+    "NAME": "Repeating Crossbow",
+    "DESCRIPTIONS": [
+      "If you have Summon: Helen, played *Phantom *Helen is played 2 additional times."
+    ]
+  },
+  "BlackButlerPower": {
+    "NAME": "Black Butler",
+    "DESCRIPTIONS": [
+      "If you have Summon: Sebastian, Retain your hand this turn."
+    ]
+  },
+  "UndeathPower": {
+    "NAME": "Undeath",
+    "DESCRIPTIONS": [
+      "At the start of your turn, retain up to #b",
+      " Block."
+    ]
+  },
+  "SpiritPower": {
+    "NAME": "Spirit",
+    "DESCRIPTIONS": [
+      "All card text numbers on Phantom cards are increased by #b",
+      "."
+    ]
+  },
+  "FrostbitePower": {
+    "NAME": "Frostbite",
+    "DESCRIPTIONS": [
+      "For each stack of #yFrostbite, take #b20% more damage from #yAttacks. At the start of turn, reduce #yFrostbite by #b1."
+    ]
+  },
+  "SleepPower": {
+    "NAME": "Sleep",
+    "DESCRIPTIONS": [
+      "For each stack of #ySleep, this is equivalent to losing #b1 #yStrength. At the end of turn, reduce #ySleep by #b1."
+    ]
+  },
+  "MadnessPower": {
+    "NAME": "Madness",
+    "DESCRIPTIONS": [
+      "When you gain #b10 #yMadness, take damage equal to #b10% of your Max HP. If this is an enemy, it is also #yStunned this turn."
+    ]
+  },
+  "BloodlossPower": {
+    "NAME": "Bloodloss",
+    "DESCRIPTIONS": [
+      "When you gain #b10 #yBloodloss, take damage equal to #b30% of your current HP. If this is an enemy, it also loses Max HP equal to #b30% of its current HP."
+    ]
+  },
+  "PoiseBreakPower": {
+    "NAME": "Poise Break",
+    "DESCRIPTIONS": [
+      "When this reaches #b10 #yPoise #yBreak, become #yStunned this turn.",
+      "When this reaches #b10 #yPoise #yBreak, end your turn."
+    ]
+  },
+  "PaintWorldPower": {
+    "NAME": "Paint World",
+    "DESCRIPTIONS": [
+      "Whenever you apply #yAberration, apply #b",
+      " of each of the 3 #yAnomaly types to ALL enemies."
+    ]
+  },
+  "BlendingPower": {
+    "NAME": "Blending",
+    "DESCRIPTIONS": [
+      "Whenever you apply #yAnomaly, also apply the other two #yAnomaly types for the same amount."
+    ]
+  },
+  "LingeringDragoncrestPower": {
+    "NAME": "Lingering Dragoncrest",
+    "DESCRIPTIONS": [
+      "Whenever you gain Intelligence, draw 1 card.",
+      "Whenever you gain Intelligence, draw #b",
+      " cards."
+    ]
+  },
+  "RedHairIconPower": {
+    "NAME": "Red Hair Icon",
+    "DESCRIPTIONS": [
+      "Whenever you #ySummon , draw 1 card.",
+      "Whenever you #ySummon , draw #b",
+      " cards."
+    ]
+  },
+  "BellowingDragoncrestPower": {
+    "NAME": "Bellowing Dragoncrest",
+    "DESCRIPTIONS": [
+      "Whenever you gain Intelligence, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "SlumberingDragoncrestPower": {
+    "NAME": "Slumbering Dragoncrest",
+    "DESCRIPTIONS": [
+      "Whenever you gain Intelligence, apply #b",
+      " Weak to a random enemy.",
+      "Whenever you gain Intelligence, apply #b",
+      " Weak to ALL enemies."
+    ]
+  },
+  "ImpatientBallPower": {
+    "NAME": "Impatient Ball",
+    "DESCRIPTIONS": [
+      "At the start of each turn, lose #b",
+      " Spirit."
     ]
   }
 }

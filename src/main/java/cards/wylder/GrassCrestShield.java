@@ -15,7 +15,7 @@ import patches.AbstractCardEnum;
 
 public class GrassCrestShield extends CustomCard {
     public static final String ID = "GrassCrestShield";
-    private static final String IMG_PATH = "img/cards/wylder/Defend.png";
+    private static final String IMG_PATH = "img/cards/wylder/GrassCrestShield.png";
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
 

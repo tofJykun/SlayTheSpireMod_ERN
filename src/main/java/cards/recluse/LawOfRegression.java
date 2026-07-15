@@ -13,7 +13,7 @@ import patches.AbstractCardEnum;
 
 public class LawOfRegression extends CustomCard {
     public static final String ID = "LawOfRegression";
-    private static final String IMG_PATH = "img/cards/recluse/PrimalGlintstone.png";
+    private static final String IMG_PATH = "img/cards/recluse/LawOfRegression.png";
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
     private static final int HAND_SIZE = 10;
@@ -22,6 +22,7 @@ public class LawOfRegression extends CustomCard {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.Recluse_COLOR, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
+        this.cardsToPreview = new FadingPrimalGlintstone();
     }
 
     private static CardStrings getCardStrings() {

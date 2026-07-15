@@ -20,7 +20,7 @@ public class TyrannyPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         updateDescription();
-        loadRegion("brutality");
+        PowerIconHelper.load(this, POWER_ID);
     }
 
     @Override
@@ -35,3 +35,4 @@ public class TyrannyPower extends AbstractPower {
         addToBot((AbstractGameAction)new ExhaustAction(this.amount, false));
     }
 }
+

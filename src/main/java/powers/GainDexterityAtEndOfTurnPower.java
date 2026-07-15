@@ -22,7 +22,7 @@ public class GainDexterityAtEndOfTurnPower extends AbstractPower {
         this.amount = amount;
         this.type = PowerType.BUFF;
         this.canGoNegative = false;
-        loadRegion("dexterity");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -39,3 +39,4 @@ public class GainDexterityAtEndOfTurnPower extends AbstractPower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }
+

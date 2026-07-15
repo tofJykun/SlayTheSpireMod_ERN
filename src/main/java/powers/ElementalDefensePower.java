@@ -34,7 +34,7 @@ public class ElementalDefensePower extends AbstractPower {
         this.amount = amount;
         this.type = PowerType.BUFF;
         this.canGoNegative = false;
-        loadRegion("focus");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -134,7 +134,7 @@ public class ElementalDefensePower extends AbstractPower {
 
     private static boolean containsMagicText(String text) {
         String lowerText = text.toLowerCase(Locale.ROOT);
-        return lowerText.contains("magic") || text.contains("魔法");
+        return lowerText.contains("magic") || text.contains("榄旀硶");
     }
 
     private static Set<String> getEnglishMagicCardIds() {
@@ -157,3 +157,4 @@ public class ElementalDefensePower extends AbstractPower {
         return englishMagicCardIds;
     }
 }
+

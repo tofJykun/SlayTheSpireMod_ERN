@@ -16,8 +16,8 @@ import powers.BedOfMagicPowerTriggerPower;
 
 public class BedOfChaos extends CustomRelic {
     public static final String ID = "BedOfChaos";
-    private static final String IMG = "img/relics/recluse/HiddenMagicCocktail.png";
-    private static final String IMG_OTL = "img/relics/recluse/outline/HiddenMagicCocktail.png";
+    private static final String IMG = "img/relics/recluse/BedOfChaos.png";
+    private static final String IMG_OTL = "img/relics/recluse/outline/BedOfChaos.png";
     private static final int EFFECT_COUNT = 3;
 
     public BedOfChaos() {

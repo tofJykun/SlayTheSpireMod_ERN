@@ -17,7 +17,7 @@ import patches.AbstractCardEnum;
 
 public class ChargeForth extends CustomCard {
     public static final String ID = "ChargeForth";
-    private static final String IMG_PATH = "img/cards/guardian/Strike.png";
+    private static final String IMG_PATH = "img/cards/guardian/ChargeForth.png";
     private static final int COST = 1;
     private static final int ATTACK_DMG = 6;
     private static final int DRAW = 1;

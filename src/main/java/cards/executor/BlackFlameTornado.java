@@ -17,7 +17,7 @@ import powers.BloodburnPower;
 
 public class BlackFlameTornado extends CustomCard {
     public static final String ID = "BlackFlameTornado";
-    private static final String IMG_PATH = "img/cards/executor/DestinedDeath.png";
+    private static final String IMG_PATH = "img/cards/executor/BlackFlameTornado.png";
     private static final int COST = 2;
     private static final int BLOODBURN = 5;
     private static final int UPGRADE_PLUS_BLOODBURN = 2;
@@ -52,13 +52,23 @@ public class BlackFlameTornado extends CustomCard {
     }
 
     private int countHighHealthEnemies() {
+        if (AbstractDungeon.getCurrRoom() == null || AbstractDungeon.getCurrRoom().monsters == null) {
+            return 0;
+        }
         int count = 0;
-        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+        for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!monster.isDeadOrEscaped() && monster.currentHealth >= monster.maxHealth * 0.5F) {
                 count++;
             }
         }
         return count;
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = countHighHealthEnemies() > 0
+                ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy()
+                : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 
     private void queueExtraPlay() {

@@ -22,7 +22,7 @@ public class BlackFlameRitualPower extends AbstractPower {
         this.owner = owner;
         this.amount = bloodburnAmount;
         updateDescription();
-        loadRegion("flameBarrier");
+        PowerIconHelper.load(this, POWER_ID);
     }
 
     @Override
@@ -48,3 +48,4 @@ public class BlackFlameRitualPower extends AbstractPower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }
+

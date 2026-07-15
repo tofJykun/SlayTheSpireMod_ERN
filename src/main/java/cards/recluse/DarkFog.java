@@ -19,7 +19,7 @@ import patches.AbstractCardEnum;
 
 public class DarkFog extends CustomCard {
     public static final String ID = "DarkFog";
-    private static final String IMG_PATH = "img/cards/recluse/FoundingRainOfStars.png";
+    private static final String IMG_PATH = "img/cards/recluse/DarkFog.png";
     private static final int COST = 1;
     private static final int ATTACK_DMG = 3;
     private static final int UPGRADE_PLUS_DMG = 2;
@@ -31,6 +31,7 @@ public class DarkFog extends CustomCard {
                 AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.isMultiDamage = true;
+        this.cardsToPreview = new MagicEmber();
     }
 
     private static CardStrings getCardStrings() {

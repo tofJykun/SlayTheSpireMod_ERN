@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import ernmod.ERNMod;
+import general.ERNEnergyOrb;
 import patches.AbstractCardEnum;
 import patches.ERNModClassEnum;
 import relics.HonorOfPinionfolk;
@@ -47,16 +47,19 @@ public class Guardian extends CustomPlayer {
     };
 
     public Guardian(String name) {
-        super(name, ERNModClassEnum.Guardian_CLASS, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, null, null);
+        super(name, ERNModClassEnum.Guardian_CLASS, ERNEnergyOrb.blue("guardian"), null, null);
         this.dialogX = this.drawX;
         this.dialogY = this.drawY + 220.0F * Settings.scale;
-        initializeClass(STAND, SHOULDER_2, SHOULDER_1, CORPSE, getLoadout(),
+        initializeClass(null, SHOULDER_2, SHOULDER_1, CORPSE, getLoadout(),
                 0.0F, 5.0F, 240.0F, 300.0F, new EnergyManager(ENERGY_PER_TURN));
+        loadAnimation("img/char_Guardian/idle/skeleton.atlas", "img/char_Guardian/idle/skeleton.json", 1.0F);
+        this.state.setAnimation(0, "Idle", true).setTimeScale(0.9F);
     }
 
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
+        retVal.add(Strike_Guardian.ID);
         retVal.add(Strike_Guardian.ID);
         retVal.add(Strike_Guardian.ID);
         retVal.add(Strike_Guardian.ID);
@@ -72,7 +75,6 @@ public class Guardian extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(HonorOfPinionfolk.ID);
-        UnlockTracker.markRelicAsSeen(HonorOfPinionfolk.ID);
         return retVal;
     }
 

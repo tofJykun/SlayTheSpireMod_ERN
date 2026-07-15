@@ -16,7 +16,7 @@ import patches.AbstractCardEnum;
 
 public class SwiftGlintstoneShard extends CustomCard {
     public static final String ID = "SwiftGlintstoneShard";
-    private static final String IMG_PATH = "img/cards/recluse/GlitstonePebble.png";
+    private static final String IMG_PATH = "img/cards/recluse/SwiftGlintstoneShard.png";
     private static final int COST = 1;
     private static final int ATTACK_DMG = 6;
     private static final int UPGRADE_PLUS_DMG = 3;

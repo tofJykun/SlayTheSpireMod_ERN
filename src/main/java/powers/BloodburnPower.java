@@ -3,7 +3,6 @@ package powers;
 import actions.BloodburnLoseHpAction;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -33,7 +32,7 @@ public class BloodburnPower extends AbstractPower {
         }
         this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
-        loadRegion("poison");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -75,15 +74,12 @@ public class BloodburnPower extends AbstractPower {
         color.a = c.a;
         sb.setColor(color);
         if (Settings.isMobile) {
-            sb.draw((TextureRegion)this.region48, x - this.region48.packedWidth / 2.0F,
-                    y - this.region48.packedHeight / 2.0F, this.region48.packedWidth / 2.0F,
-                    this.region48.packedHeight / 2.0F, this.region48.packedWidth, this.region48.packedHeight,
-                    Settings.scale * 1.17F, Settings.scale * 1.17F, 0.0F);
+            sb.draw(this.img, x - 12.0F, y - 12.0F, 16.0F, 16.0F, 32.0F, 32.0F,
+                    Settings.scale * 1.75F, Settings.scale * 1.75F, 0.0F, 0, 0, 32, 32, false, false);
         } else {
-            sb.draw((TextureRegion)this.region48, x - this.region48.packedWidth / 2.0F,
-                    y - this.region48.packedHeight / 2.0F, this.region48.packedWidth / 2.0F,
-                    this.region48.packedHeight / 2.0F, this.region48.packedWidth, this.region48.packedHeight,
-                    Settings.scale, Settings.scale, 0.0F);
+            sb.draw(this.img, x - 12.0F, y - 12.0F, 16.0F, 16.0F, 32.0F, 32.0F,
+                    Settings.scale * 1.5F, Settings.scale * 1.5F, 0.0F, 0, 0, 32, 32, false, false);
         }
     }
 }
+

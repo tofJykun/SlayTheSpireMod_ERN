@@ -16,7 +16,7 @@ import powers.ParryPower;
 
 public class BlueWhiteWoodenShield extends CustomCard {
     public static final String ID = "BlueWhiteWoodenShield";
-    private static final String IMG_PATH = "img/cards/wylder/Defend.png";
+    private static final String IMG_PATH = "img/cards/wylder/BlueWhiteWoodenShield.png";
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
     private static final int PARRY = 1;

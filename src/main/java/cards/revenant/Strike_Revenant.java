@@ -14,7 +14,7 @@ import patches.AbstractCardEnum;
 
 public class Strike_Revenant extends CustomCard {
     public static final String ID = "Strike_Revenant";
-    private static final String IMG_PATH = "img/cards/revenant/Strike.png";
+    private static final String IMG_PATH = "img/cards/revenant/Strike_Revenant.png";
     private static final int COST = 1;
     private static final int ATTACK_DMG = 6;
     private static final int UPGRADE_PLUS_DMG = 3;

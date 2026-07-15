@@ -14,7 +14,7 @@ import patches.AbstractCardEnum;
 
 public class Strike_Executor extends CustomCard {
     public static final String ID = "Strike_Executor";
-    private static final String IMG_PATH = "img/cards/executor/Strike.png";
+    private static final String IMG_PATH = "img/cards/executor/Strike_Executor.png";
     private static final int COST = 1;
     private static final int ATTACK_DMG = 6;
     private static final int UPGRADE_PLUS_DMG = 3;

@@ -23,7 +23,7 @@ public class DelayedStunPower extends AbstractPower {
         this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
         this.canGoNegative = false;
-        loadRegion("confusion");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -48,3 +48,4 @@ public class DelayedStunPower extends AbstractPower {
         this.description = DESCRIPTIONS[0];
     }
 }
+

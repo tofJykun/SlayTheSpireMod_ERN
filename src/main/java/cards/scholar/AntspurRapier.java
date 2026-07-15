@@ -19,7 +19,7 @@ import powers.ScarletRotPower;
 
 public class AntspurRapier extends CustomCard {
     public static final String ID = "AntspurRapier";
-    private static final String IMG_PATH = "img/cards/scholar/Strike.png";
+    private static final String IMG_PATH = "img/cards/scholar/AntspurRapier.png";
     private static final int COST = 1;
     private static final int DAMAGE = 6;
     private static final int SCARLET_ROT = 6;
@@ -60,6 +60,13 @@ public class AntspurRapier extends CustomCard {
         }
         copy.purgeOnUse = true;
         AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(copy, m, this.energyOnUse, true, true), true);
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDungeon.player != null && AbstractDungeon.player.hasPower(VigorPower.POWER_ID)
+                ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy()
+                : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 
     @Override

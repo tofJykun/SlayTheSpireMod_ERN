@@ -22,7 +22,7 @@ public class SoarPower extends AbstractPower {
         this.type = PowerType.BUFF;
         this.canGoNegative = false;
         this.priority = 50;
-        loadRegion("flight");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -52,3 +52,4 @@ public class SoarPower extends AbstractPower {
         return this.amount > 0 && type != DamageInfo.DamageType.HP_LOSS && type != DamageInfo.DamageType.THORNS;
     }
 }
+

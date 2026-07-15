@@ -27,7 +27,7 @@ public class ParryPower extends AbstractPower {
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
         this.canGoNegative = false;
-        loadRegion("blur");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -72,3 +72,4 @@ public class ParryPower extends AbstractPower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }
+

@@ -16,7 +16,7 @@ import patches.AbstractCardEnum;
 
 public class SoulBolt extends CustomCard {
     public static final String ID = "SoulBolt";
-    private static final String IMG_PATH = "img/cards/recluse/GlitstonePebble.png";
+    private static final String IMG_PATH = "img/cards/recluse/SoulBolt.png";
     private static final int COST = 1;
     private static final int ATTACK_DMG = 6;
     private static final int UPGRADE_PLUS_DMG = 3;

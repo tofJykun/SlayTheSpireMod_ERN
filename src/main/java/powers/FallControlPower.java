@@ -21,7 +21,7 @@ public class FallControlPower extends AbstractPower {
         this.amount = amount;
         this.type = PowerType.BUFF;
         this.canGoNegative = false;
-        loadRegion("flex");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -47,3 +47,4 @@ public class FallControlPower extends AbstractPower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }
+

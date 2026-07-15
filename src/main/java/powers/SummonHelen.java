@@ -9,9 +9,9 @@ public class SummonHelen extends AbstractSummonPower {
     public static final String POWER_ID = "SummonHelen";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final int BLOCK = 3;
-    private static final String IMAGE = "img/summons/Helen.png";
+    public static final String SUMMON_KEY = "Helen";
 
     public SummonHelen(AbstractCreature owner) {
-        super(owner, POWER_ID, powerStrings.NAME, powerStrings.DESCRIPTIONS, BLOCK, new PhantomHelen(), IMAGE);
+        super(owner, POWER_ID, powerStrings.NAME, powerStrings.DESCRIPTIONS, BLOCK, new PhantomHelen(), SUMMON_KEY);
     }
 }

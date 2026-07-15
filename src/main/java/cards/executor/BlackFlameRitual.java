@@ -15,7 +15,7 @@ import powers.BlackFlameRitualPower;
 
 public class BlackFlameRitual extends CustomCard {
     public static final String ID = "BlackFlameRitual";
-    private static final String IMG_PATH = "img/cards/executor/DestinedDeath.png";
+    private static final String IMG_PATH = "img/cards/executor/BlackFlameRitual.png";
     private static final int COST = 2;
     private static final int BLOCK = 12;
     private static final int UPGRADE_PLUS_BLOCK = 4;

@@ -24,7 +24,7 @@ public class SoulbloodSongPower extends AbstractPower {
         this.amount = -1;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
-        loadRegion("talk_to_hand");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -59,3 +59,4 @@ public class SoulbloodSongPower extends AbstractPower {
         this.description = DESCRIPTIONS[0];
     }
 }
+

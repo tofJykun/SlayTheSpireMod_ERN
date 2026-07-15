@@ -12,7 +12,7 @@ import patches.AbstractCardEnum;
 
 public class Defend_Revenant extends CustomCard {
     public static final String ID = "Defend_Revenant";
-    private static final String IMG_PATH = "img/cards/revenant/Defend.png";
+    private static final String IMG_PATH = "img/cards/revenant/Defend_Revenant.png";
     private static final int COST = 1;
     private static final int BLOCK_AMT = 5;
     private static final int UPGRADE_PLUS_BLOCK = 3;

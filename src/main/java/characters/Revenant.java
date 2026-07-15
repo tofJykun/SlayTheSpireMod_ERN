@@ -2,6 +2,8 @@ package characters;
 
 import basemod.abstracts.CustomPlayer;
 import cards.revenant.Defend_Revenant;
+import cards.revenant.Invoke;
+import cards.revenant.PhantomSlash;
 import cards.revenant.Strike_Revenant;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -13,8 +15,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import ernmod.ERNMod;
+import general.ERNEnergyOrb;
 import patches.AbstractCardEnum;
 import patches.ERNModClassEnum;
 import relics.SummonSpirit;
@@ -47,11 +49,13 @@ public class Revenant extends CustomPlayer {
     };
 
     public Revenant(String name) {
-        super(name, ERNModClassEnum.Revenant_CLASS, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, null, null);
+        super(name, ERNModClassEnum.Revenant_CLASS, ERNEnergyOrb.green("revenant"), null, null);
         this.dialogX = this.drawX;
         this.dialogY = this.drawY + 220.0F * Settings.scale;
-        initializeClass(STAND, SHOULDER_2, SHOULDER_1, CORPSE, getLoadout(),
+        initializeClass(null, SHOULDER_2, SHOULDER_1, CORPSE, getLoadout(),
                 0.0F, 5.0F, 240.0F, 300.0F, new EnergyManager(ENERGY_PER_TURN));
+        loadAnimation("img/char_Revenant/idle/skeleton.atlas", "img/char_Revenant/idle/skeleton.json", 1.0F);
+        this.state.setAnimation(0, "Idle", true).setTimeScale(0.9F);
     }
 
     @Override
@@ -60,10 +64,13 @@ public class Revenant extends CustomPlayer {
         retVal.add(Strike_Revenant.ID);
         retVal.add(Strike_Revenant.ID);
         retVal.add(Strike_Revenant.ID);
+        retVal.add(Strike_Revenant.ID);
         retVal.add(Defend_Revenant.ID);
         retVal.add(Defend_Revenant.ID);
         retVal.add(Defend_Revenant.ID);
         retVal.add(Defend_Revenant.ID);
+        retVal.add(PhantomSlash.ID);
+        retVal.add(Invoke.ID);
         return retVal;
     }
 
@@ -71,7 +78,6 @@ public class Revenant extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(SummonSpirit.ID);
-        UnlockTracker.markRelicAsSeen(SummonSpirit.ID);
         return retVal;
     }
 

@@ -26,7 +26,7 @@ public class WarmingStonePower extends AbstractPower {
         this.turnsLeft = TRIGGER_TURNS;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
-        loadRegion("energized_blue");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -61,3 +61,4 @@ public class WarmingStonePower extends AbstractPower {
         this.description = DESCRIPTIONS[0] + this.turnsLeft + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
     }
 }
+

@@ -18,7 +18,7 @@ import powers.GainDexterityAtEndOfTurnPower;
 
 public class ClawShot extends CustomCard {
     public static final String ID = "ClawShot";
-    private static final String IMG_PATH = "img/cards/wylder/Strike.png";
+    private static final String IMG_PATH = "img/cards/wylder/ClawShot.png";
     private static final int COST = 0;
     private static final int ATTACK_DMG = 3;
     private static final int BLOCK_AMT = 3;

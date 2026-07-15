@@ -9,9 +9,9 @@ public class SummonSebastian extends AbstractSummonPower {
     public static final String POWER_ID = "SummonSebastian";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final int BLOCK = 5;
-    private static final String IMAGE = "img/summons/Sebastian.png";
+    public static final String SUMMON_KEY = "Sebastian";
 
     public SummonSebastian(AbstractCreature owner) {
-        super(owner, POWER_ID, powerStrings.NAME, powerStrings.DESCRIPTIONS, BLOCK, new PhantomSebastian(), IMAGE);
+        super(owner, POWER_ID, powerStrings.NAME, powerStrings.DESCRIPTIONS, BLOCK, new PhantomSebastian(), SUMMON_KEY);
     }
 }

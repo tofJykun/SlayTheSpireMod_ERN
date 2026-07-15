@@ -20,7 +20,7 @@ public class FadingIntelligencePower extends AbstractPower {
         this.amount = amount;
         this.type = PowerType.BUFF;
         this.canGoNegative = false;
-        loadRegion("doubleTap");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -44,3 +44,4 @@ public class FadingIntelligencePower extends AbstractPower {
         addToBot((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
     }
 }
+

@@ -28,7 +28,7 @@ public class IntelligencePower extends AbstractPower {
             this.amount = -999;
         }
         updateDescription();
-        loadRegion("focus");
+        PowerIconHelper.load(this, POWER_ID);
         this.canGoNegative = true;
     }
 
@@ -111,3 +111,4 @@ public class IntelligencePower extends AbstractPower {
         card.isMagicNumberModified = card.magicNumber != card.baseMagicNumber;
     }
 }
+

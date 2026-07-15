@@ -15,7 +15,7 @@ import patches.AbstractCardEnum;
 
 public class Dodge extends CustomCard {
     public static final String ID = "Dodge";
-    private static final String IMG_PATH = "img/cards/recluse/HiddenBody.png";
+    private static final String IMG_PATH = "img/cards/recluse/Dodge.png";
     private static final int COST = 0;
     private static final int DRAW = 1;
     private static final int VIGOR = 1;

@@ -51,6 +51,13 @@ public class MorionBlade extends CustomCard {
     }
 
     @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDungeon.player != null && AbstractDungeon.player.isBloodied
+                ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy()
+                : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+    }
+
+    @Override
     public AbstractCard makeCopy() {
         return (AbstractCard)new MorionBlade();
     }

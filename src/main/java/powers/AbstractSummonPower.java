@@ -1,5 +1,6 @@
 package powers;
 
+import cards.tempcards.AbstractPhantomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -14,11 +15,11 @@ import java.util.ArrayList;
 public abstract class AbstractSummonPower extends AbstractPower {
     protected final String[] descriptions;
     private final int blockAmount;
-    private final AbstractCard phantomCard;
-    private final String summonImagePath;
+    private final AbstractPhantomCard phantomCard;
+    private final String summonKey;
 
     protected AbstractSummonPower(AbstractCreature owner, String powerId, String name, String[] descriptions,
-                                  int blockAmount, AbstractCard phantomCard, String summonImagePath) {
+                                  int blockAmount, AbstractPhantomCard phantomCard, String summonKey) {
         this.ID = powerId;
         this.name = name;
         this.owner = owner;
@@ -28,8 +29,8 @@ public abstract class AbstractSummonPower extends AbstractPower {
         this.descriptions = descriptions;
         this.blockAmount = blockAmount;
         this.phantomCard = phantomCard;
-        this.summonImagePath = summonImagePath;
-        loadRegion("blur");
+        this.summonKey = summonKey;
+        PowerIconHelper.load(this, this.ID);
         updateDescription();
     }
 
@@ -46,8 +47,8 @@ public abstract class AbstractSummonPower extends AbstractPower {
         triggerSummonEffect();
     }
 
-    public String getSummonImagePath() {
-        return this.summonImagePath;
+    public String getSummonKey() {
+        return this.summonKey;
     }
 
     public static AbstractSummonPower getActiveSummon(AbstractCreature creature) {
@@ -56,11 +57,29 @@ public abstract class AbstractSummonPower extends AbstractPower {
         }
         AbstractSummonPower active = null;
         for (AbstractPower power : creature.powers) {
-            if (power instanceof AbstractSummonPower) {
+            if (isSummonPower(power)) {
                 active = (AbstractSummonPower)power;
             }
         }
         return active;
+    }
+
+    public static boolean hasSummonPower(AbstractCreature creature) {
+        return getActiveSummon(creature) != null;
+    }
+
+    public static boolean isActiveSummon(AbstractCreature creature, String powerId) {
+        AbstractSummonPower active = getActiveSummon(creature);
+        return active != null && active.ID.equals(powerId);
+    }
+
+    public static boolean isSummonPower(AbstractPower power) {
+        return power instanceof AbstractSummonPower;
+    }
+
+    public static AbstractCard makeActiveSummonPhantomCard(AbstractCreature creature) {
+        AbstractSummonPower active = getActiveSummon(creature);
+        return active == null ? null : active.makePhantomCardCopy();
     }
 
     public static void removeIfBlockGone(AbstractCreature creature) {
@@ -77,7 +96,7 @@ public abstract class AbstractSummonPower extends AbstractPower {
     private void removeOtherSummons() {
         ArrayList<AbstractPower> toRemove = new ArrayList<>();
         for (AbstractPower power : this.owner.powers) {
-            if (power instanceof AbstractSummonPower && power != this) {
+            if (isSummonPower(power) && power != this) {
                 toRemove.add(power);
             }
         }
@@ -92,6 +111,10 @@ public abstract class AbstractSummonPower extends AbstractPower {
         addToBot((AbstractGameAction)new MakeTempCardInHandAction(this.phantomCard.makeStatEquivalentCopy(), 1));
     }
 
+    private AbstractCard makePhantomCardCopy() {
+        return this.phantomCard.makeStatEquivalentCopy();
+    }
+
     @Override
     public void atStartOfTurn() {
         removeIfBlockGone(this.owner);
@@ -103,3 +126,4 @@ public abstract class AbstractSummonPower extends AbstractPower {
                 + this.phantomCard.name + this.descriptions[2];
     }
 }
+

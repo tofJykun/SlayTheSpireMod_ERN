@@ -40,6 +40,58 @@
     "NAME": "Transient Curse",
     "DESCRIPTION": "Lose 3 Dexterity. NL Gain !M! Strength. NL At the end of your turn, gain 3 Dexterity and lose !M! Strength."
   },
+  "NoxFlowingShieldTypeP": {
+    "NAME": "Nox Flowing Shield Type P",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. Add 1 *Nox *Flowing *Shield *Type *I to your hand. NL Lose !M! Dexterity. NL At the end of your turn, gain !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. Add 1 *Nox *Flowing *Shield *Type *I+ to your hand. NL Lose !M! Dexterity. NL At the end of your turn, gain !M! Dexterity."
+  },
+  "NoxFlowingShieldTypeI": {
+    "NAME": "Nox Flowing Shield Type I",
+    "DESCRIPTION": "Gain !B! Block. Add 1 *Nox *Flowing *Shield *Type *P to your hand. NL Lose 1 Dexterity. NL At the end of your turn, gain 1 Dexterity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. Add 1 *Nox *Flowing *Shield *Type *P+ to your hand. NL Exhaust."
+  },
+  "OnslaughtStake": {
+    "NAME": "Onslaught Stake",
+    "DESCRIPTION": "Deal !D! damage. NL Stun the enemy for 1 turn.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Deal !D! damage. NL Stun the enemy for 1 turn."
+  },
+  "PitaBread": {
+    "NAME": "Pita Bread",
+    "DESCRIPTION": "Gain !M! Dexterity. NL At the end of your turn, lose !M! Dexterity. NL Exhaust."
+  },
+  "RemoveArmor": {
+    "NAME": "Remove Armor",
+    "DESCRIPTION": "Gain 2 Vulnerable. NL Apply 5 Vulnerable. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Gain 2 Vulnerable. NL Apply 5 Vulnerable. NL Exhaust."
+  },
+  "Barehanded": {
+    "NAME": "Barehanded",
+    "DESCRIPTION": "Gain 2 Weak. NL Apply 5 Weak. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Gain 2 Weak. NL Apply 5 Weak. NL Exhaust."
+  },
+  "BloodVeil": {
+    "NAME": "Blood Veil",
+    "DESCRIPTION": "Gain 2 Frail. NL Apply 5 Vulnerable. NL Apply 5 Weak. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Gain 2 Frail. NL Apply 5 Vulnerable. NL Apply 5 Weak. NL Exhaust."
+  },
+  "CrowQuills": {
+    "NAME": "Crow Quills",
+    "DESCRIPTION": "Lose 2 Dexterity. At the end of your turn, gain 2 Dexterity. NL Return this card to your hand.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Lose 2 Dexterity. At the end of your turn, gain 2 Dexterity. NL Return this card to your hand."
+  },
+  "SymbolOfAvarice": {
+    "NAME": "Symbol of Avarice",
+    "DESCRIPTION": "Take 8 damage. Gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Take 8 damage. Gain [E] [E] [E] ."
+  },
+  "Ubadachi": {
+    "NAME": "Ubadachi",
+    "DESCRIPTION": "If the difference between enemy total damage and your current Block is a prime number less than or equal to !M!, gain that much Block."
+  },
+  "Onikiri": {
+    "NAME": "Onikiri",
+    "DESCRIPTION": "If the difference between enemy total damage and your current Block is an even number less than or equal to !M!, NL deal damage equal to the smallest prime number greater than or equal to half that value and gain that much Block."
+  },
   "Strike_Guardian": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -60,6 +112,10 @@
     "NAME": "Charge Forth",
     "DESCRIPTION": "Deal !D! damage. NL Draw !M! card(s). NL If you have Vigor, this card costs 0."
   },
+  "Bonewheel": {
+    "NAME": "Bonewheel",
+    "DESCRIPTION": "Deal !D! damage !M! times."
+  },
   "Strike_Ironeye": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -67,6 +123,15 @@
   "Defend_Ironeye": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "CobCannon": {
+    "NAME": "Cob Cannon",
+    "DESCRIPTION": "For each Cob Cannon you have in combat, this card costs 1 [E] less. NL Deal !D! damage. NL Draw 1 card."
+  },
+  "Imitater": {
+    "NAME": "Imitater",
+    "DESCRIPTION": "Copy 1 card in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Copy 1 card in your hand. NL Exhaust."
   },
   "Strike_Raider": {
     "NAME": "Strike",
@@ -76,6 +141,27 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "BloodWall": {
+    "NAME": "Blood Wall",
+    "DESCRIPTION": "Gain 3 Grey Health. NL Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "Gain 3 Grey Health+. NL Gain !B! Block."
+    ]
+  },
+  "BloodDebt": {
+    "NAME": "Blood Debt",
+    "DESCRIPTION": "Gain [E] [E] . NL Gain 4 Grey Health.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] . NL Gain 4 Grey Health.",
+    "EXTENDED_DESCRIPTION": [
+      "Gain [E] [E] . NL Gain 4 Grey Health+.",
+      "Gain [E] [E] [E] . NL Gain 4 Grey Health+."
+    ]
+  },
+  "BloodTax": {
+    "NAME": "Blood Tax",
+    "DESCRIPTION": "Lose all Grey Health and Grey Health+. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Lose all Grey Health and Grey Health+. NL Exhaust."
+  },
   "Strike_Duchess": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -83,6 +169,19 @@
   "Defend_Duchess": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "Restage": {
+    "NAME": "Restage",
+    "DESCRIPTION": "Play the last 1 card you played this combat 1 more time.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Play the last 1 card you played this combat 1 more time."
+  },
+  "WaterfowlDance": {
+    "NAME": "Waterfowl Dance",
+    "DESCRIPTION": "For each card you have played this turn, deal !D! damage 1 additional time. NL (Deal damage !M! times.)"
+  },
+  "Mortgage": {
+    "NAME": "Mortgage",
+    "DESCRIPTION": "Gain !M! Gold. NL Lose 1 Strength, NL Lose 1 Dexterity."
   },
   "Strike_Executor": {
     "NAME": "Strike",
@@ -116,6 +215,25 @@
     "NAME": "Let Feast Begin",
     "DESCRIPTION": "If the target enemy's Max HP is less than or equal to your Max HP, set its HP to 0. NL Fatal. Permanently gain !M! Max HP."
   },
+  "PaintWorld": {
+    "NAME": "Paint World",
+    "DESCRIPTION": "Whenever you apply Aberration, apply !M! of each of the 3 Anomaly types to ALL enemies."
+  },
+  "Blending": {
+    "NAME": "Blending",
+    "DESCRIPTION": "Whenever you apply Anomaly, also apply the other two Anomaly types for the same amount.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Whenever you apply Anomaly, also apply the other two Anomaly types for the same amount."
+  },
+  "AspectsOfCrucible": {
+    "NAME": "Aspects of Crucible",
+    "DESCRIPTION": "Transform your Frostbite into Strength, Sleep into Dexterity, Madness into Retain Cards, and Bloodloss into Metallicize. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Transform your Frostbite into Strength, Sleep into Dexterity, Madness into Retain Cards, and Bloodloss into Metallicize. NL Exhaust."
+  },
+  "Numbness": {
+    "NAME": "Numbness",
+    "DESCRIPTION": "Transform your Frostbite into Vulnerable, Sleep into Frail, and Madness and Bloodloss into Weak.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Transform your Frostbite into Vulnerable, Sleep into Frail, and Madness and Bloodloss into Weak."
+  },
   "Strike_Revenant": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -123,6 +241,29 @@
   "Defend_Revenant": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "PhantomSlash": {
+    "NAME": "Phantom Slash",
+    "DESCRIPTION": "Add the current Summon's Slash to your hand."
+  },
+  "Invoke": {
+    "NAME": "Invoke",
+    "DESCRIPTION": "Randomly Basic Summon."
+  },
+  "Dirge": {
+    "NAME": "Dirge",
+    "DESCRIPTION": "Can only be played while you have Summon. NL Gain [E] [E] . NL Lose Summon.",
+    "UPGRADE_DESCRIPTION": "Can only be played while you have Summon. NL Gain [E] [E] [E] . NL Lose Summon.",
+    "EXTENDED_DESCRIPTION": [
+      "Can only be played while you have Summon."
+    ]
+  },
+  "PartingFlame": {
+    "NAME": "Parting Flame",
+    "DESCRIPTION": "Can only be played while you have Summon. NL Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "Can only be played while you have Summon."
+    ]
   },
   "Strike_Scholar": {
     "NAME": "Strike",
@@ -161,6 +302,27 @@
     "NAME": "Delirium",
     "DESCRIPTION": "At the start of your next turn, play 2 random cards from your hand."
   },
+  "OuterBoon": {
+    "NAME": "Outer Boon",
+    "DESCRIPTION": "Whenever you play a random card, gain !M! Block."
+  },
+  "EyesWithin": {
+    "NAME": "Eyes Within",
+    "DESCRIPTION": "Gain !M! Insight."
+  },
+  "GreatSwampTome": {
+    "NAME": "Great Swamp Tome",
+    "DESCRIPTION": "Gain !M! Faith."
+  },
+  "ForbiddenSun": {
+    "NAME": "Forbidden Sun",
+    "DESCRIPTION": "Deal !D! Thaumaturgy damage to ALL enemies. NL Exhaust 1 random card in your hand."
+  },
+  "Zealotry": {
+    "NAME": "Zealotry",
+    "DESCRIPTION": "Whenever you play 1 random card, gain 1 Faith.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Whenever you play 1 random card, gain 1 Faith."
+  },
   "GlitstonePebble": {
     "NAME": "Glitstone Pebble",
     "DESCRIPTION": "Deal !D! magic damage."
@@ -175,11 +337,23 @@
   },
   "SoulBolt": {
     "NAME": "Soul Bolt",
-    "DESCRIPTION": "Deal !D! magic damage. NL Draw 2 cards. NL Whenever you play a Power card this combat, this costs 1 less [B] . NL Whenever this card is played, this costs 1 more [B] ."
+    "DESCRIPTION": "Deal !D! magic damage. NL Draw 2 cards. NL Whenever you play a Power card this combat, this costs 1 less [E] . NL Whenever this card is played, this costs 1 more [E] ."
+  },
+  "ResonantSoul": {
+    "NAME": "Resonant Soul",
+    "DESCRIPTION": "Draw 2 cards. NL Shuffle 1 *Magic *Ember into your discard pile."
   },
   "SoulGeyser": {
     "NAME": "Soul Geyser",
     "DESCRIPTION": "Deal !D! magic damage 2 times. NL If the last 3 cards played this combat were Skills, draw 3 cards."
+  },
+  "SoulVortex": {
+    "NAME": "Soul Vortex",
+    "DESCRIPTION": "Deal !D! magic damage 2 times. NL This turn, the next !M! Skill card(s) you play cost 1 less."
+  },
+  "GreatResonantSoul": {
+    "NAME": "Great Resonant Soul",
+    "DESCRIPTION": "Draw !M! cards. NL Shuffle 1 *Magic *Ember into your draw pile."
   },
   "SwiftGlintstoneShard": {
     "NAME": "Swift Glintstone Shard",
@@ -237,6 +411,10 @@
     "NAME": "Crystal Scroll",
     "DESCRIPTION": "Gain !M! Intelligence this turn. NL Exhaust."
   },
+  "CrystalRingShield": {
+    "NAME": "Crystal Ring Shield",
+    "DESCRIPTION": "Gain !B! magic Block. NL Exhaust."
+  },
   "ElementalDefense": {
     "NAME": "Elemental Defense",
     "DESCRIPTION": "Magic cards cost 1 less."
@@ -291,7 +469,7 @@
       "Add 1 *Fading *Primal *Glintstone to your hand.",
       "This turn, the next 3 Attack cards you play cost 1 less.",
       "Put all Power and Status cards from your discard pile into your hand.",
-      "Gain [W] [W] [W].",
+      "Gain [E] [E] [E].",
       "Retain your hand this turn.",
       "Exhaust all *Magic *Embers in your hand. NL Add that many *Fading *Primal *Glintstones to your hand.",
       "This turn, the next *Bed *Of *Magic you play is played twice.",
@@ -363,9 +541,75 @@
   },
   "PhantomSebastian": {
     "NAME": "Phantom Sebastian",
-    "DESCRIPTION": "Sebastian deals !M! damage 3 times. NL Can only be played while Summon: Sebastian. NL Exhaust. NL Ethereal.",
+    "DESCRIPTION": "Sebastian deals !M! damage to random enemies 3 times. NL Can only be played while Summon: Sebastian. NL Exhaust. NL Ethereal.",
     "EXTENDED_DESCRIPTION": [
       "Can only be played while Summon: Sebastian."
     ]
+  },
+  "PhantomDoggo": {
+    "NAME": "Phantom Doggo",
+    "DESCRIPTION": "Doggo deals !M! damage to all enemies, NL all enemies lose !M! Strength for 1 turn. NL Can only be played while Summon: Doggo. NL Exhaust. NL Ethereal.",
+    "EXTENDED_DESCRIPTION": [
+      "Can only be played while Summon: Doggo."
+    ]
+  },
+  "Grovewort": {
+    "NAME": "Grovewort",
+    "DESCRIPTION": "Gain !M! Spirit."
+  },
+  "PumpkinHelm": {
+    "NAME": "Pumpkin Helm",
+    "DESCRIPTION": "Gain Pumpkin Helm."
+  },
+  "RepeatingCrossbow": {
+    "NAME": "Repeating Crossbow",
+    "DESCRIPTION": "Gain Repeating Crossbow."
+  },
+  "BlackButler": {
+    "NAME": "Black Butler",
+    "DESCRIPTION": "Gain Black Butler."
+  },
+  "Seance": {
+    "NAME": "Seance",
+    "DESCRIPTION": "Exhaust all Slash cards in your hand. NL For each card Exhausted, deal !D! damage to ALL enemies."
+  },
+  "Undeath": {
+    "NAME": "Undeath",
+    "DESCRIPTION": "At the start of your turn, retain up to 10 Block."
+  },
+  "PowerWithin": {
+    "NAME": "Power Within",
+    "DESCRIPTION": "Gain 2 Vulnerable. NL Gain !M! Spirit. NL Exhaust."
+  },
+  "LingeringDragoncrest": {
+    "NAME": "Lingering Dragoncrest",
+    "DESCRIPTION": "Whenever you gain Intelligence, draw 1 card."
+  },
+  "RedHairIcon": {
+    "NAME": "Red Hair Icon",
+    "DESCRIPTION": "Whenever you Summon, draw 1 card."
+  },
+  "BellowingDragoncrest": {
+    "NAME": "Bellowing Dragoncrest",
+    "DESCRIPTION": "Whenever you gain Intelligence, deal !D! damage to a random enemy."
+  },
+  "SlumberingDragoncrest": {
+    "NAME": "Slumbering Dragoncrest",
+    "DESCRIPTION": "Whenever you gain Intelligence, apply 1 Weak to a random enemy.",
+    "UPGRADE_DESCRIPTION": "Whenever you gain Intelligence, apply 1 Weak to ALL enemies."
+  },
+  "ImpatientBall": {
+    "NAME": "Impatient Ball",
+    "DESCRIPTION": "Gain 6 Spirit. NL At the start of each turn, lose 1 Spirit.",
+    "UPGRADE_DESCRIPTION": "Gain 6 Spirit. NL At the start of each turn, lose 1 Spirit. NL Draw 2 cards."
+  },
+  "DoggoXD": {
+    "NAME": "Doggo XD",
+    "DESCRIPTION": " Summon: Doggo."
+  },
+  "CodeX": {
+    "NAME": "Code X",
+    "DESCRIPTION": "Deal !D! damage, gain !B! Block. NL Apply !MP! Poison. NL Apply !MR! Scarlet Rot. NL Apply !MD! Bloodburn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, gain !B! Block. NL Apply !MP! Poison. NL Apply !MR! Scarlet Rot. NL Apply !MD! Bloodburn."
   }
 }

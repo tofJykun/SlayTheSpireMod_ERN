@@ -16,7 +16,7 @@ import patches.AbstractCardEnum;
 
 public class DarkOrb extends CustomCard {
     public static final String ID = "DarkOrb";
-    private static final String IMG_PATH = "img/cards/recluse/GlitstonePebble.png";
+    private static final String IMG_PATH = "img/cards/recluse/DarkOrb.png";
     private static final int COST = 0;
     private static final int ATTACK_DMG = 6;
     private static final int UPGRADE_PLUS_DMG = 3;
@@ -26,6 +26,7 @@ public class DarkOrb extends CustomCard {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
+        this.cardsToPreview = new MagicEmber();
     }
 
     private static CardStrings getCardStrings() {

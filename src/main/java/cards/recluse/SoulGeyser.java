@@ -16,7 +16,7 @@ import patches.AbstractCardEnum;
 
 public class SoulGeyser extends CustomCard {
     public static final String ID = "SoulGeyser";
-    private static final String IMG_PATH = "img/cards/recluse/CrystalSoulSpear.png";
+    private static final String IMG_PATH = "img/cards/recluse/SoulGeyser.png";
     private static final int COST = 1;
     private static final int ATTACK_DMG = 6;
     private static final int UPGRADE_PLUS_DMG = 2;
@@ -66,6 +66,13 @@ public class SoulGeyser extends CustomCard {
             }
         }
         return true;
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = lastThreeCardsAreSkills()
+                ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy()
+                : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 
     @Override

@@ -27,7 +27,7 @@ public class GreyHealthPower extends AbstractPower {
         this.amount = amount;
         this.type = PowerType.DEBUFF;
         this.canGoNegative = false;
-        loadRegion("painfulStabs");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -84,3 +84,4 @@ public class GreyHealthPower extends AbstractPower {
         this.description = DESCRIPTIONS[0];
     }
 }
+

@@ -25,7 +25,7 @@ public class DeathblightPower extends AbstractPower {
         this.amount = amount;
         this.type = PowerType.DEBUFF;
         this.canGoNegative = false;
-        loadRegion("poison");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -54,3 +54,4 @@ public class DeathblightPower extends AbstractPower {
         }
     }
 }
+

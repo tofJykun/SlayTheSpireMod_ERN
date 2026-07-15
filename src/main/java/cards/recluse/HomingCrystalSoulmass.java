@@ -13,7 +13,7 @@ import patches.AbstractCardEnum;
 
 public class HomingCrystalSoulmass extends CustomCard {
     public static final String ID = "HomingCrystalSoulmass";
-    private static final String IMG_PATH = "img/cards/recluse/CrystalSoulSpear.png";
+    private static final String IMG_PATH = "img/cards/recluse/HomingCrystalSoulmass.png";
     private static final int COST = 2;
     private static final int ATTACK_DMG = 6;
     private static final int UPGRADE_PLUS_DMG = 2;

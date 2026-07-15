@@ -15,7 +15,7 @@ import powers.SoulbloodSongPower;
 
 public class SoulbloodSong extends CustomCard {
     public static final String ID = "SoulbloodSong";
-    private static final String IMG_PATH = "img/cards/recluse/ElementalDefense.png";
+    private static final String IMG_PATH = "img/cards/recluse/SoulbloodSong.png";
     private static final int COST = 1;
 
     public SoulbloodSong() {

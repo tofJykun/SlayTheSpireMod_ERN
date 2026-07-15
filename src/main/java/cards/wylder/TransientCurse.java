@@ -16,7 +16,7 @@ import powers.TransientCursePower;
 
 public class TransientCurse extends CustomCard {
     public static final String ID = "TransientCurse";
-    private static final String IMG_PATH = "img/cards/wylder/Defend.png";
+    private static final String IMG_PATH = "img/cards/wylder/TransientCurse.png";
     private static final int COST = 0;
     private static final int DEXTERITY_LOSS = 3;
     private static final int STRENGTH_GAIN = 4;

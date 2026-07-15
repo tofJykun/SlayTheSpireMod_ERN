@@ -26,7 +26,7 @@ public class TransientCursePower extends AbstractPower {
         this.dexterityReturn = dexterityReturn;
         this.type = PowerType.BUFF;
         this.canGoNegative = false;
-        loadRegion("flex");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -56,3 +56,4 @@ public class TransientCursePower extends AbstractPower {
                 + this.amount + DESCRIPTIONS[2];
     }
 }
+

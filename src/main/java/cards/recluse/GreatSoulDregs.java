@@ -16,7 +16,7 @@ import patches.AbstractCardEnum;
 
 public class GreatSoulDregs extends CustomCard {
     public static final String ID = "GreatSoulDregs";
-    private static final String IMG_PATH = "img/cards/recluse/CrystalSoulSpear.png";
+    private static final String IMG_PATH = "img/cards/recluse/GreatSoulDregs.png";
     private static final int COST = 2;
     private static final int ATTACK_DMG = 20;
     private static final int UPGRADE_PLUS_DMG = 6;
@@ -26,6 +26,7 @@ public class GreatSoulDregs extends CustomCard {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.Recluse_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
+        this.cardsToPreview = new MagicEmber();
     }
 
     private static CardStrings getCardStrings() {

@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import ernmod.ERNMod;
+import general.ERNEnergyOrb;
 import patches.AbstractCardEnum;
 import patches.ERNModClassEnum;
 import relics.FighterResolve;
@@ -47,16 +47,19 @@ public class Raider extends CustomPlayer {
     };
 
     public Raider(String name) {
-        super(name, ERNModClassEnum.Raider_CLASS, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, null, null);
+        super(name, ERNModClassEnum.Raider_CLASS, ERNEnergyOrb.red("raider"), null, null);
         this.dialogX = this.drawX;
         this.dialogY = this.drawY + 220.0F * Settings.scale;
-        initializeClass(STAND, SHOULDER_2, SHOULDER_1, CORPSE, getLoadout(),
+        initializeClass(null, SHOULDER_2, SHOULDER_1, CORPSE, getLoadout(),
                 0.0F, 5.0F, 240.0F, 300.0F, new EnergyManager(ENERGY_PER_TURN));
+        loadAnimation("img/char_Raider/idle/skeleton.atlas", "img/char_Raider/idle/skeleton.json", 1.0F);
+        this.state.setAnimation(0, "Idle", true).setTimeScale(0.6F);
     }
 
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
+        retVal.add(Strike_Raider.ID);
         retVal.add(Strike_Raider.ID);
         retVal.add(Strike_Raider.ID);
         retVal.add(Strike_Raider.ID);
@@ -71,7 +74,6 @@ public class Raider extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(FighterResolve.ID);
-        UnlockTracker.markRelicAsSeen(FighterResolve.ID);
         return retVal;
     }
 

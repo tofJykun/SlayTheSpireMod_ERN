@@ -3,6 +3,7 @@ package cards.recluse;
 import actions.BedOfMagicDiscardToHandAction;
 import actions.BedOfMagicEmberToGlintstoneAction;
 import basemod.abstracts.CustomCard;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import cards.status.MagicEmber;
 import cards.tempcards.FadingPrimalGlintstone;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -105,6 +106,9 @@ public class BedOfMagic extends CustomCard {
     public void triggerOnGlowCheck() {
         updateDynamicDescription();
         updateBedCost();
+        this.glowColor = getCombo().hasThreeCards
+                ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy()
+                : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 
     @Override
@@ -199,48 +203,72 @@ public class BedOfMagic extends CustomCard {
         return builder.toString();
     }
 
-    private static String getEffectText(String[] ext) {
+    private String getEffectText(String[] ext) {
         Combo combo = getCombo();
         if (!combo.hasThreeCards) {
+            setCardPreviews();
             return "";
         }
         if (combo.cursesAndStatuses == 3) {
+            setCardPreviews();
             return ext[19];
         }
         if (combo.cursesAndStatuses > 0) {
+            setCardPreviews();
             return ext[18];
         }
         if (combo.attacks == 3) {
+            setCardPreviews();
             return ext[8];
         }
         if (combo.attacks == 2 && combo.skills == 1) {
+            setCardPreviews(new MagicEmber());
             return ext[9];
         }
         if (combo.attacks == 1 && combo.skills == 2) {
+            setCardPreviews(new FadingPrimalGlintstone());
             return ext[10];
         }
         if (combo.skills == 3) {
+            setCardPreviews();
             return ext[11];
         }
         if (combo.attacks == 2 && combo.powers == 1) {
+            setCardPreviews();
             return ext[12];
         }
         if (combo.attacks == 1 && combo.skills == 1 && combo.powers == 1) {
+            setCardPreviews();
             return ext[13];
         }
         if (combo.skills == 2 && combo.powers == 1) {
+            setCardPreviews();
             return ext[14];
         }
         if (combo.attacks == 1 && combo.powers == 2) {
+            setCardPreviews(new MagicEmber(), new FadingPrimalGlintstone());
             return ext[15];
         }
         if (combo.skills == 1 && combo.powers == 2) {
+            setCardPreviews();
             return ext[16];
         }
         if (combo.powers == 3) {
+            setCardPreviews();
             return ext[17];
         }
+        setCardPreviews();
         return "";
+    }
+
+    private void setCardPreviews(AbstractCard... previews) {
+        this.cardsToPreview = null;
+        MultiCardPreview.clear(this);
+        if (previews.length == 1) {
+            this.cardsToPreview = previews[0];
+        } else if (previews.length > 1) {
+            MultiCardPreview.add(this, true, previews);
+        }
     }
 
     private static Combo getCombo() {

@@ -21,7 +21,7 @@ public class BlackFlameBladePower extends AbstractPower {
         this.amount = bloodburnAmount;
         this.type = PowerType.BUFF;
         updateDescription();
-        loadRegion("envenom");
+        PowerIconHelper.load(this, POWER_ID);
     }
 
     @Override
@@ -39,3 +39,4 @@ public class BlackFlameBladePower extends AbstractPower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }
+

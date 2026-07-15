@@ -9,12 +9,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-public class Restage extends CustomRelic {
-    public static final String ID = "Restage";
-    private static final String IMG = "img/relics/duchess/Restage.png";
-    private static final String IMG_OTL = "img/relics/duchess/outline/Restage.png";
+public class MagnificentPoise extends CustomRelic {
+    public static final String ID = "MagnificentPoise";
+    private static final String IMG = "img/relics/duchess/MagnificentPoise.png";
+    private static final String IMG_OTL = "img/relics/duchess/outline/MagnificentPoise.png";
 
-    public Restage() {
+    public MagnificentPoise() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
                 RelicTier.STARTER, AbstractRelic.LandingSound.CLINK);
     }
@@ -26,16 +26,14 @@ public class Restage extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.SKILL) {
-            this.counter++;
-            if (this.counter % 2 == 0) {
-                this.counter = 0;
-                flash();
-                AbstractDungeon.actionManager.addToBottom(
-                        new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                AbstractDungeon.actionManager.addToBottom(
-                        new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 6));
-            }
+        this.counter++;
+        if (this.counter == 3) {
+            this.counter = 0;
+            flash();
+            AbstractDungeon.actionManager.addToBottom(
+                    new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            AbstractDungeon.actionManager.addToBottom(
+                    new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
         }
     }
 
@@ -51,6 +49,6 @@ public class Restage extends CustomRelic {
 
     @Override
     public AbstractRelic makeCopy() {
-        return new Restage();
+        return new MagnificentPoise();
     }
 }

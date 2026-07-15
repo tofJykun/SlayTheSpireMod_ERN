@@ -10,14 +10,14 @@
     "NAME": "Hidden Magic Cocktail",
     "FLAVOR": "Recluse's deeply hidden character skill.",
     "DESCRIPTIONS": [
-      "Replaces #rMagic #rCocktail. At the start of each combat, add a #yBed #yOf #yMagic+ to your hand."
+      "Replaces #yMagic #yCocktail. At the start of each combat, add a #yBed #yOf #yMagic+ to your hand."
     ]
   },
   "BedOfChaos": {
     "NAME": "Bed Of Chaos",
     "FLAVOR": "A seedbed born from magic mixed beyond control.",
     "DESCRIPTIONS": [
-      "Replaces #rMagic #rCocktail. At the start of each turn, gain a #yBed #yOf #yMagic effect for a random number of Attack and Skill cards."
+      "Replaces #yMagic #yCocktail. At the start of each turn, gain a #yBed #yOf #yMagic effect for a random number of Attack and Skill cards."
     ]
   },
   "BequestOfSeath": {
@@ -38,28 +38,49 @@
     "NAME": "Oolacile Ivory Catalyst",
     "FLAVOR": "An ivory branch once used to weave old light into sorcery.",
     "DESCRIPTIONS": [
-      "Whenever you play *Bed *Of *Magic, gain 6 Block and draw 1 card."
+      "Whenever you play #yBed #yOf #yMagic, gain #b6 #yBlock and draw #b1 card."
+    ]
+  },
+  "CinderellaRosette": {
+    "NAME": "Cinderella Rosette",
+    "FLAVOR": "A small ornament left from a spell that ended too soon.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b1 #yIntelligence."
     ]
   },
   "SixthSense": {
     "NAME": "Sixth Sense",
     "FLAVOR": "Wylder's character skill.",
     "DESCRIPTIONS": [
-      "Every 2 Skill cards played, gain 6 Block."
+      "The first time you lose HP each combat, gain #b10 #yBlock next turn."
+    ]
+  },
+  "ToastyMittens": {
+    "NAME": "Toasty Mittens",
+    "FLAVOR": "Warm enough to hold fresh bread without dropping the blade.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a #yPita #yBread to your hand."
+    ]
+  },
+  "JosephForesight": {
+    "NAME": "Joseph Foresight",
+    "FLAVOR": "An echo of Sixth Sense reaching higher ground.",
+    "DESCRIPTIONS": [
+      "The first time you lose HP each combat, gain #b1 #yIntangible next turn."
     ]
   },
   "HonorOfPinionfolk": {
     "NAME": "Honor Of Pinionfolk",
     "FLAVOR": "Guardian's character skill.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain 2 #yHover."
+      "At the start of each combat, gain #b2 #yHover."
     ]
   },
   "Marking": {
     "NAME": "Marking",
     "FLAVOR": "Ironeye's character skill.",
     "DESCRIPTIONS": [
-      "Every 2 Skill cards played, gain 6 Block."
+      "Every #b2 #ySkill cards played, gain #b6 #yBlock."
     ]
   },
   "FighterResolve": {
@@ -87,28 +108,63 @@
     "NAME": "Fighter Destined",
     "FLAVOR": "Replaces Fighter Resolve. Victory is decided before the wound is paid.",
     "DESCRIPTIONS": [
-      "Replaces #rFighter #rResolve. At the start of each combat, gain #yUnyielding+."
+      "Replaces #yFighter #yResolve. At the start of each combat, gain #yUnyielding+."
     ]
   },
-  "Restage": {
-    "NAME": "Restage",
+  "OldGreataxe": {
+    "NAME": "Old Greataxe",
+    "FLAVOR": "A dull, heavy old axe that still knows how to break poise.",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yAttack that costs #b2 or more, apply #b1 #yPoise #yBreak to attacked enemies."
+    ]
+  },
+  "MagnificentPoise": {
+    "NAME": "Magnificent Poise",
     "FLAVOR": "Duchess' character skill.",
     "DESCRIPTIONS": [
-      "Every 2 Skill cards played, gain 6 Block."
+      "Every #b3 cards played, gain #b3 #yBlock."
     ]
   },
   "Suncatcher": {
     "NAME": "Suncatcher",
     "FLAVOR": "Executor's character skill.",
     "DESCRIPTIONS": [
-      "Every 2 Skill cards played, gain 6 Block."
+      "Every #b2 #ySkill cards played, gain #b6 #yBlock."
+    ]
+  },
+  "SeedbedCurse": {
+    "NAME": "Seedbed Curse",
+    "FLAVOR": "A curse takes root in the fracture of aberration.",
+    "DESCRIPTIONS": [
+      "Every time you apply #b10 #yAberration, apply #b1 #yDeathblight to a random enemy."
+    ]
+  },
+  "CrucibleCodex": {
+    "NAME": "Crucible Codex",
+    "FLAVOR": "After the tenth article, the words begin to burn.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add #b1 #yCode #yX to your hand."
     ]
   },
   "SummonSpirit": {
     "NAME": "Summon Spirit",
     "FLAVOR": "Revenant's character skill.",
     "DESCRIPTIONS": [
-      "At the start of your first 3 turns, summon Summon: Helen, Summon: Frederick, and Summon: Sebastian in order."
+      "At the start of your first #b3 turns, summon #ySummon: #yHelen, #ySummon: #yFrederick, and #ySummon: #ySebastian in order."
+    ]
+  },
+  "SoulForge": {
+    "NAME": "Soul Forge",
+    "FLAVOR": "The ember of a spirit reforged into strength.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if you have #ySummon , gain [E] ."
+    ]
+  },
+  "YearsEntwined": {
+    "NAME": "Years Entwined",
+    "FLAVOR": "May the years fade together, and the spirits with them.",
+    "DESCRIPTIONS": [
+      "Replaces #ySummon #ySpirit. At the start of your turn, randomly #yBasic #ySummon ."
     ]
   },
   "Bagcraft": {
@@ -122,7 +178,28 @@
     "NAME": "Trance",
     "FLAVOR": "Undertaker's character skill.",
     "DESCRIPTIONS": [
-      "Every 2 Skill cards played, gain 6 Block."
+      "Every #b2 #ySkill cards played, gain #b6 #yBlock."
+    ]
+  },
+  "SacredTimber": {
+    "NAME": "Sacred Timber",
+    "FLAVOR": "A silent wooden relic, cold as stone.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b1 #ySpirit ."
+    ]
+  },
+  "PrescientGlintEye": {
+    "NAME": "Prescient Glint Eye",
+    "FLAVOR": "Before the rite, it glimpses the final glint.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b1 #yInsight ."
+    ]
+  },
+  "WhisperingEarring": {
+    "NAME": "Whispering Earring",
+    "FLAVOR": "The voice beside your ear chooses the grave for you.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain [E] . The first targeted card each turn is played randomly."
     ]
   }
 }

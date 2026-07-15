@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import powers.FaithPower;
 import powers.IntelligencePower;
 
 public class IntelligenceMagicNumberPatch {
@@ -12,6 +13,7 @@ public class IntelligenceMagicNumberPatch {
         @SpirePostfixPatch
         public static void postfix(AbstractCard __instance) {
             IntelligencePower.applyMagicNumber(__instance);
+            FaithPower.applyMagicNumber(__instance);
         }
     }
 
@@ -20,6 +22,7 @@ public class IntelligenceMagicNumberPatch {
         @SpirePostfixPatch
         public static void postfix(AbstractCard __instance, AbstractMonster mo) {
             IntelligencePower.applyMagicNumber(__instance);
+            FaithPower.applyMagicNumber(__instance);
         }
     }
 }

@@ -14,8 +14,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import ernmod.ERNMod;
+import general.ERNEnergyOrb;
 import patches.AbstractCardEnum;
 import patches.ERNModClassEnum;
 import relics.Bagcraft;
@@ -48,16 +48,19 @@ public class Scholar extends CustomPlayer {
     };
 
     public Scholar(String name) {
-        super(name, ERNModClassEnum.Scholar_CLASS, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, null, null);
+        super(name, ERNModClassEnum.Scholar_CLASS, ERNEnergyOrb.blue("scholar"), null, null);
         this.dialogX = this.drawX;
         this.dialogY = this.drawY + 220.0F * Settings.scale;
-        initializeClass(STAND, SHOULDER_2, SHOULDER_1, CORPSE, getLoadout(),
+        initializeClass(null, SHOULDER_2, SHOULDER_1, CORPSE, getLoadout(),
                 0.0F, 5.0F, 240.0F, 300.0F, new EnergyManager(ENERGY_PER_TURN));
+        loadAnimation("img/char_Scholar/idle/skeleton.atlas", "img/char_Scholar/idle/skeleton.json", 1.0F);
+        this.state.setAnimation(0, "Idle", true).setTimeScale(0.9F);
     }
 
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
+        retVal.add(Strike_Scholar.ID);
         retVal.add(Strike_Scholar.ID);
         retVal.add(Strike_Scholar.ID);
         retVal.add(Strike_Scholar.ID);
@@ -73,7 +76,6 @@ public class Scholar extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(Bagcraft.ID);
-        UnlockTracker.markRelicAsSeen(Bagcraft.ID);
         return retVal;
     }
 

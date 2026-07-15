@@ -33,7 +33,7 @@ public class BedOfMagicCostReductionPower extends AbstractPower {
         this.amount = amount;
         this.type = PowerType.BUFF;
         this.canGoNegative = false;
-        loadRegion("confusion");
+        PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
@@ -148,3 +148,4 @@ public class BedOfMagicCostReductionPower extends AbstractPower {
         }
     }
 }
+

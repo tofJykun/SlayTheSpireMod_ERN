@@ -12,8 +12,8 @@ import powers.HoverPower;
 
 public class HonorOfPinionfolk extends CustomRelic {
     public static final String ID = "HonorOfPinionfolk";
-    private static final String IMG = "img/relics/guardian/Whirlwind.png";
-    private static final String IMG_OTL = "img/relics/guardian/outline/Whirlwind.png";
+    private static final String IMG = "img/relics/guardian/HonorOfPinionfolk.png";
+    private static final String IMG_OTL = "img/relics/guardian/outline/HonorOfPinionfolk.png";
     private static final int HOVER = 2;
 
     public HonorOfPinionfolk() {
