@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import general.CombatState;
 import powers.NextTurnIntangiblePower;
 
 public class JosephForesight extends CustomRelic {
@@ -44,8 +44,7 @@ public class JosephForesight extends CustomRelic {
     public void wasHPLost(int damageAmount) {
         if (this.counter == 0
                 && damageAmount > 0
-                && AbstractDungeon.getCurrRoom() != null
-                && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+                && CombatState.isInCombat()) {
             this.counter = 1;
             flash();
             AbstractDungeon.actionManager.addToBottom(

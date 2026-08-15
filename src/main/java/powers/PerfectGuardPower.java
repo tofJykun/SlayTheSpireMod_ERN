@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -40,10 +39,8 @@ public class PerfectGuardPower extends AbstractPower {
         updateDescription();
     }
 
-    public static void triggerIfPerfectGuard(AbstractPlayer player, DamageInfo info, int damageAmount) {
-        if (player == null || info == null || !player.hasPower(POWER_ID)
-                || !(info.owner instanceof AbstractMonster) || info.type != DamageInfo.DamageType.NORMAL
-                || damageAmount <= 0 || player.currentBlock != damageAmount) {
+    public static void triggerIfPerfectGuard(AbstractPlayer player, AbstractMonster attacker) {
+        if (player == null || !player.hasPower(POWER_ID) || player.currentBlock < 15) {
             return;
         }
 
@@ -53,6 +50,14 @@ public class PerfectGuardPower extends AbstractPower {
         }
         AbstractDungeon.actionManager.addToTop((AbstractGameAction)new ApplyPowerAction((AbstractCreature)player, (AbstractCreature)player,
                 new VigorPower((AbstractCreature)player, VIGOR), VIGOR));
+        notifyBarricadeShield(player, attacker);
+    }
+
+    private static void notifyBarricadeShield(AbstractPlayer player, AbstractMonster attacker) {
+        AbstractPower barricadeShield = player.getPower(BarricadeShieldPower.POWER_ID);
+        if (barricadeShield instanceof BarricadeShieldPower) {
+            ((BarricadeShieldPower)barricadeShield).onPerfectGuard(attacker);
+        }
     }
 
     @Override

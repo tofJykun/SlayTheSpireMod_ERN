@@ -1,6 +1,8 @@
 package relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.CardPowerTip;
+import cards.recluse.BedOfMagic;
 import cards.tempcards.FadingPrimalGlintstone;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -23,6 +25,7 @@ public class BedOfChaos extends CustomRelic {
     public BedOfChaos() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
                 RelicTier.BOSS, AbstractRelic.LandingSound.MAGICAL);
+        this.tips.add(new CardPowerTip(new BedOfMagic()));
     }
 
     @Override

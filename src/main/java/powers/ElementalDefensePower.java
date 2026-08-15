@@ -25,6 +25,8 @@ public class ElementalDefensePower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private static Set<String> englishMagicCardIds;
+    private static Set<String> englishMagicDamageCardIds;
+    private static Set<String> englishMagicBlockCardIds;
     private final Set<UUID> reducedCardUuids = new HashSet<>();
 
     public ElementalDefensePower(AbstractCreature owner, int amount) {
@@ -125,6 +127,9 @@ public class ElementalDefensePower extends AbstractPower {
     }
 
     public static boolean isMagicCard(AbstractCard card) {
+        if (card == null) {
+            return false;
+        }
         if (card.rawDescription != null
                 && containsMagicText(card.rawDescription)) {
             return true;
@@ -132,9 +137,40 @@ public class ElementalDefensePower extends AbstractPower {
         return getEnglishMagicCardIds().contains(card.cardID);
     }
 
+    public static boolean hasMagicDamage(AbstractCard card) {
+        if (card == null) {
+            return false;
+        }
+        if (card.rawDescription != null && containsMagicDamageText(card.rawDescription)) {
+            return true;
+        }
+        return getEnglishMagicDamageCardIds().contains(card.cardID);
+    }
+
+    public static boolean hasMagicBlock(AbstractCard card) {
+        if (card == null) {
+            return false;
+        }
+        if (card.rawDescription != null && containsMagicBlockText(card.rawDescription)) {
+            return true;
+        }
+        return getEnglishMagicBlockCardIds().contains(card.cardID);
+    }
+
     private static boolean containsMagicText(String text) {
         String lowerText = text.toLowerCase(Locale.ROOT);
-        return lowerText.contains("magic") || text.contains("榄旀硶");
+        return lowerText.contains("magic") || text.contains("魔法") || text.contains("榄旀硶");
+    }
+
+    private static boolean containsMagicDamageText(String text) {
+        String lowerText = text.toLowerCase(Locale.ROOT);
+        return lowerText.contains("magic damage") || text.contains("魔法伤害") || text.contains("榄旀硶浼ゅ害");
+    }
+
+    private static boolean containsMagicBlockText(String text) {
+        String lowerText = text.toLowerCase(Locale.ROOT);
+        return lowerText.contains("magic block") || text.contains("魔法格挡") || text.contains("魔法 格挡")
+                || text.contains("榄旀硶鏍兼尅") || text.contains("榄旀硶 鏍兼尅");
     }
 
     private static Set<String> getEnglishMagicCardIds() {
@@ -155,6 +191,46 @@ public class ElementalDefensePower extends AbstractPower {
             }
         }
         return englishMagicCardIds;
+    }
+
+    private static Set<String> getEnglishMagicDamageCardIds() {
+        if (englishMagicDamageCardIds == null) {
+            englishMagicDamageCardIds = new HashSet<>();
+            try {
+                String json = Gdx.files.internal("localization/ERNMod_cards-eng.json")
+                        .readString(String.valueOf(StandardCharsets.UTF_8));
+                JsonObject root = new JsonParser().parse(json).getAsJsonObject();
+                for (Map.Entry<String, JsonElement> entry : root.entrySet()) {
+                    JsonObject cardStrings = entry.getValue().getAsJsonObject();
+                    JsonElement description = cardStrings.get("DESCRIPTION");
+                    if (description != null && containsMagicDamageText(description.getAsString())) {
+                        englishMagicDamageCardIds.add(entry.getKey());
+                    }
+                }
+            } catch (Exception ignored) {
+            }
+        }
+        return englishMagicDamageCardIds;
+    }
+
+    private static Set<String> getEnglishMagicBlockCardIds() {
+        if (englishMagicBlockCardIds == null) {
+            englishMagicBlockCardIds = new HashSet<>();
+            try {
+                String json = Gdx.files.internal("localization/ERNMod_cards-eng.json")
+                        .readString(String.valueOf(StandardCharsets.UTF_8));
+                JsonObject root = new JsonParser().parse(json).getAsJsonObject();
+                for (Map.Entry<String, JsonElement> entry : root.entrySet()) {
+                    JsonObject cardStrings = entry.getValue().getAsJsonObject();
+                    JsonElement description = cardStrings.get("DESCRIPTION");
+                    if (description != null && containsMagicBlockText(description.getAsString())) {
+                        englishMagicBlockCardIds.add(entry.getKey());
+                    }
+                }
+            } catch (Exception ignored) {
+            }
+        }
+        return englishMagicBlockCardIds;
     }
 }
 

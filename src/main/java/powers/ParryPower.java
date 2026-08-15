@@ -55,6 +55,10 @@ public class ParryPower extends AbstractPower {
             AbstractDungeon.actionManager.addToTop((AbstractGameAction)new ApplyPowerAction(
                     (AbstractCreature)monster, (AbstractCreature)player,
                     new DelayedStunPower(monster, 1), 1));
+            AbstractPower ceruleanDagger = player.getPower(CeruleanDaggerPower.POWER_ID);
+            if (ceruleanDagger instanceof CeruleanDaggerPower) {
+                ((CeruleanDaggerPower)ceruleanDagger).onSuccessfulParry();
+            }
         }
     }
 

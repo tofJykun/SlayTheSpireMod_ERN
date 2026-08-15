@@ -1,6 +1,7 @@
 package characters;
 
 import basemod.abstracts.CustomPlayer;
+import cards.raider.CraftmanHammer;
 import cards.raider.Defend_Raider;
 import cards.raider.Strike_Raider;
 import com.badlogic.gdx.graphics.Color;
@@ -67,6 +68,7 @@ public class Raider extends CustomPlayer {
         retVal.add(Defend_Raider.ID);
         retVal.add(Defend_Raider.ID);
         retVal.add(Defend_Raider.ID);
+        retVal.add(CraftmanHammer.ID);
         return retVal;
     }
 
@@ -156,7 +158,14 @@ public class Raider extends CustomPlayer {
 
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[0];
+        return new AbstractGameAction.AttackEffect[] {
+                AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+                AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY
+        };
     }
 
     @Override

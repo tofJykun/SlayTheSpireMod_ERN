@@ -19,7 +19,7 @@ public class FistfulOfAsh extends CustomCard {
 
     public FistfulOfAsh() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Recluse_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = BLOCK_PER_EMBER;
         this.cardsToPreview = new MagicEmber();
     }

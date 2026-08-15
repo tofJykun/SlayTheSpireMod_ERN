@@ -17,7 +17,7 @@ public class BlackFlameBlade extends CustomCard {
     public static final String ID = "BlackFlameBlade";
     private static final String IMG_PATH = "img/cards/executor/BlackFlameBlade.png";
     private static final int COST = 2;
-    private static final int BLOODBURN = 1;
+    private static final int BLOODBURN = 2;
     private static final int UPGRADE_PLUS_BLOODBURN = 1;
 
     public BlackFlameBlade() {

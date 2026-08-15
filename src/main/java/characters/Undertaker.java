@@ -156,7 +156,14 @@ public class Undertaker extends CustomPlayer {
 
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[0];
+        return new AbstractGameAction.AttackEffect[] {
+                AbstractGameAction.AttackEffect.BLUNT_LIGHT,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+                AbstractGameAction.AttackEffect.BLUNT_LIGHT,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+                AbstractGameAction.AttackEffect.BLUNT_LIGHT
+        };
     }
 
     @Override

@@ -17,25 +17,25 @@
     "NAME": "Bed Of Chaos",
     "FLAVOR": "A seedbed born from magic mixed beyond control.",
     "DESCRIPTIONS": [
-      "Replaces #yMagic #yCocktail. At the start of each turn, gain a #yBed #yOf #yMagic effect for a random number of Attack and Skill cards."
+      "Replaces #yMagic #yCocktail. At the start of each turn, gain a #yBed #yOf #yMagic effect for a random number of #yAttack and #ySkill cards."
     ]
   },
   "BequestOfSeath": {
     "NAME": "Bequest Of Seath",
     "FLAVOR": "A cold, pale inheritance from a blind seeker of immortality.",
     "DESCRIPTIONS": [
-      "The first time you play a Magic card each turn, gain [E] ."
+      "The first time you play a #yMagic card each turn, gain [E] ."
     ]
   },
   "ScrollOfLogan": {
     "NAME": "Scroll Of Logan",
     "FLAVOR": "A scroll left by Big Hat Logan's tireless study.",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random Crystal card to your hand."
+      "At the start of your turn, add #b1 random #yCrystal card to your hand."
     ]
   },
-  "OolacileIvoryCatalyst": {
-    "NAME": "Oolacile Ivory Catalyst",
+  "DeepWoodBranch": {
+    "NAME": "Deep Wood Branch",
     "FLAVOR": "An ivory branch once used to weave old light into sorcery.",
     "DESCRIPTIONS": [
       "Whenever you play #yBed #yOf #yMagic, gain #b6 #yBlock and draw #b1 card."
@@ -46,6 +46,27 @@
     "FLAVOR": "A small ornament left from a spell that ended too soon.",
     "DESCRIPTIONS": [
       "At the start of each combat, gain #b1 #yIntelligence."
+    ]
+  },
+  "RitualBand": {
+    "NAME": "Ritual Band",
+    "FLAVOR": "A ceremonial ring used to guide fading glintstone embers.",
+    "DESCRIPTIONS": [
+      "All *Fading *Primal *Glintstones temporarily added during combat are #yUpgraded."
+    ]
+  },
+  "WheelCatalyst": {
+    "NAME": "Wheel Catalyst",
+    "FLAVOR": "As its ring turns, three kinds of light show through the wood.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, you may choose #b1 of #b3 random #yAttack , #ySkill , and #yPower cards to add to your hand."
+    ]
+  },
+  "NightShard": {
+    "NAME": "Night Shard",
+    "FLAVOR": "A black shard that grows only when wounds close.",
+    "DESCRIPTIONS": [
+      "Whenever you heal, increase your Max HP by #b1."
     ]
   },
   "SixthSense": {
@@ -76,11 +97,11 @@
       "At the start of each combat, gain #b2 #yHover."
     ]
   },
-  "Marking": {
-    "NAME": "Marking",
+  "EagleEye": {
+    "NAME": "Eagle Eye",
     "FLAVOR": "Ironeye's character skill.",
     "DESCRIPTIONS": [
-      "Every #b2 #ySkill cards played, gain #b6 #yBlock."
+      "At the start of each combat, gain #b4 #yArcane."
     ]
   },
   "FighterResolve": {
@@ -118,6 +139,13 @@
       "Whenever you play an #yAttack that costs #b2 or more, apply #b1 #yPoise #yBreak to attacked enemies."
     ]
   },
+  "PetrifiedDragonBone": {
+    "NAME": "Petrified Dragon Bone",
+    "FLAVOR": "A fossilized remnant of old craft.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, you may choose #b1 of #b3 random #ySmithing material cards to add to your hand."
+    ]
+  },
   "MagnificentPoise": {
     "NAME": "Magnificent Poise",
     "FLAVOR": "Duchess' character skill.",
@@ -125,11 +153,11 @@
       "Every #b3 cards played, gain #b3 #yBlock."
     ]
   },
-  "Suncatcher": {
-    "NAME": "Suncatcher",
+  "CalamityWard": {
+    "NAME": "Calamity Ward",
     "FLAVOR": "Executor's character skill.",
     "DESCRIPTIONS": [
-      "Every #b2 #ySkill cards played, gain #b6 #yBlock."
+      "At the start of your second turn, gain #b1 #yArtifact."
     ]
   },
   "SeedbedCurse": {
@@ -143,7 +171,7 @@
     "NAME": "Crucible Codex",
     "FLAVOR": "After the tenth article, the words begin to burn.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add #b1 #yCode #yX to your hand."
+      "At the start of each combat, add #b1 #yCrucible #yToken to your hand."
     ]
   },
   "SummonSpirit": {
@@ -174,11 +202,25 @@
       "Gain #b3 Potion slots containing random potions."
     ]
   },
+  "KleinBottle": {
+    "NAME": "Klein Bottle",
+    "FLAVOR": "Inside and outside curve through the same place.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b1 random #yBulk Potion."
+    ]
+  },
+  "LooksLens": {
+    "NAME": "Look's Lens",
+    "FLAVOR": "Through it, the other side of the reward comes into view.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b1 #yArcane ."
+    ]
+  },
   "Trance": {
     "NAME": "Trance",
     "FLAVOR": "Undertaker's character skill.",
     "DESCRIPTIONS": [
-      "Every #b2 #ySkill cards played, gain #b6 #yBlock."
+      "The first #yAttack card you play each combat deals #b2 times damage."
     ]
   },
   "SacredTimber": {

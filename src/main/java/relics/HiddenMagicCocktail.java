@@ -1,6 +1,7 @@
 package relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.CardPowerTip;
 import cards.recluse.BedOfMagic;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -16,6 +17,9 @@ public class HiddenMagicCocktail extends CustomRelic {
     public HiddenMagicCocktail() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
                 RelicTier.BOSS, AbstractRelic.LandingSound.CLINK);
+        BedOfMagic preview = new BedOfMagic();
+        preview.upgrade();
+        this.tips.add(new CardPowerTip(preview));
     }
 
     @Override

@@ -157,7 +157,14 @@ public class Guardian extends CustomPlayer {
 
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[0];
+        return new AbstractGameAction.AttackEffect[] {
+                AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL,
+                AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+        };
     }
 
     @Override

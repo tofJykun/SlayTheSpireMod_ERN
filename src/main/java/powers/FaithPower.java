@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -26,6 +25,8 @@ public class FaithPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private static Set<String> englishThaumaturgyCardIds;
+    private static Set<String> englishThaumaturgyDamageCardIds;
+    private static Set<String> englishThaumaturgyBlockCardIds;
 
     public FaithPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -89,7 +90,7 @@ public class FaithPower extends AbstractPower {
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        if (type == DamageInfo.DamageType.NORMAL && isThaumaturgyCard(card)) {
+        if (type == DamageInfo.DamageType.NORMAL && hasThaumaturgyDamage(card)) {
             return damage + this.amount;
         }
         return damage;
@@ -97,35 +98,13 @@ public class FaithPower extends AbstractPower {
 
     @Override
     public float modifyBlock(float blockAmount, AbstractCard card) {
-        if (isThaumaturgyCard(card)) {
+        if (hasThaumaturgyBlock(card)) {
             blockAmount += this.amount;
             if (blockAmount < 0.0F) {
                 return 0.0F;
             }
         }
         return blockAmount;
-    }
-
-    public static void applyMagicNumber(AbstractCard card) {
-        if (AbstractDungeon.player == null || card.baseMagicNumber < 0 || !isThaumaturgyCard(card)) {
-            return;
-        }
-
-        int value = card.baseMagicNumber;
-        AbstractPower intelligencePower = AbstractDungeon.player.getPower(IntelligencePower.POWER_ID);
-        if (ElementalDefensePower.isMagicCard(card) && intelligencePower != null) {
-            value += intelligencePower.amount;
-        }
-
-        AbstractPower faithPower = AbstractDungeon.player.getPower(POWER_ID);
-        if (faithPower != null) {
-            value += faithPower.amount;
-        }
-        if (value < 0) {
-            value = 0;
-        }
-        card.magicNumber = value;
-        card.isMagicNumberModified = card.magicNumber != card.baseMagicNumber;
     }
 
     public static boolean isThaumaturgyCard(AbstractCard card) {
@@ -138,9 +117,40 @@ public class FaithPower extends AbstractPower {
         return getEnglishThaumaturgyCardIds().contains(card.cardID);
     }
 
+    public static boolean hasThaumaturgyDamage(AbstractCard card) {
+        if (card == null) {
+            return false;
+        }
+        if (card.rawDescription != null && containsThaumaturgyDamageText(card.rawDescription)) {
+            return true;
+        }
+        return getEnglishThaumaturgyDamageCardIds().contains(card.cardID);
+    }
+
+    public static boolean hasThaumaturgyBlock(AbstractCard card) {
+        if (card == null) {
+            return false;
+        }
+        if (card.rawDescription != null && containsThaumaturgyBlockText(card.rawDescription)) {
+            return true;
+        }
+        return getEnglishThaumaturgyBlockCardIds().contains(card.cardID);
+    }
+
     private static boolean containsThaumaturgyText(String text) {
         String lowerText = text.toLowerCase(Locale.ROOT);
-        return lowerText.contains("thaumaturgy") || text.contains("濂囨湳");
+        return lowerText.contains("thaumaturgy") || text.contains("奇术") || text.contains("濂囨湳");
+    }
+
+    private static boolean containsThaumaturgyDamageText(String text) {
+        String lowerText = text.toLowerCase(Locale.ROOT);
+        return lowerText.contains("thaumaturgy damage") || text.contains("奇术伤害") || text.contains("濂囨湳浼ゅ害");
+    }
+
+    private static boolean containsThaumaturgyBlockText(String text) {
+        String lowerText = text.toLowerCase(Locale.ROOT);
+        return lowerText.contains("thaumaturgy block") || text.contains("奇术格挡") || text.contains("奇术 格挡")
+                || text.contains("濂囨湳鏍兼尅") || text.contains("濂囨湳 鏍兼尅");
     }
 
     private static Set<String> getEnglishThaumaturgyCardIds() {
@@ -161,6 +171,46 @@ public class FaithPower extends AbstractPower {
             }
         }
         return englishThaumaturgyCardIds;
+    }
+
+    private static Set<String> getEnglishThaumaturgyDamageCardIds() {
+        if (englishThaumaturgyDamageCardIds == null) {
+            englishThaumaturgyDamageCardIds = new HashSet<>();
+            try {
+                String json = Gdx.files.internal("localization/ERNMod_cards-eng.json")
+                        .readString(String.valueOf(StandardCharsets.UTF_8));
+                JsonObject root = new JsonParser().parse(json).getAsJsonObject();
+                for (Map.Entry<String, JsonElement> entry : root.entrySet()) {
+                    JsonObject cardStrings = entry.getValue().getAsJsonObject();
+                    JsonElement description = cardStrings.get("DESCRIPTION");
+                    if (description != null && containsThaumaturgyDamageText(description.getAsString())) {
+                        englishThaumaturgyDamageCardIds.add(entry.getKey());
+                    }
+                }
+            } catch (Exception ignored) {
+            }
+        }
+        return englishThaumaturgyDamageCardIds;
+    }
+
+    private static Set<String> getEnglishThaumaturgyBlockCardIds() {
+        if (englishThaumaturgyBlockCardIds == null) {
+            englishThaumaturgyBlockCardIds = new HashSet<>();
+            try {
+                String json = Gdx.files.internal("localization/ERNMod_cards-eng.json")
+                        .readString(String.valueOf(StandardCharsets.UTF_8));
+                JsonObject root = new JsonParser().parse(json).getAsJsonObject();
+                for (Map.Entry<String, JsonElement> entry : root.entrySet()) {
+                    JsonObject cardStrings = entry.getValue().getAsJsonObject();
+                    JsonElement description = cardStrings.get("DESCRIPTION");
+                    if (description != null && containsThaumaturgyBlockText(description.getAsString())) {
+                        englishThaumaturgyBlockCardIds.add(entry.getKey());
+                    }
+                }
+            } catch (Exception ignored) {
+            }
+        }
+        return englishThaumaturgyBlockCardIds;
     }
 }
 

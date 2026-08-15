@@ -156,7 +156,14 @@ public class Duchess extends CustomPlayer {
 
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[0];
+        return new AbstractGameAction.AttackEffect[] {
+                AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.POISON,
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL,
+                AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.POISON,
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+        };
     }
 
     @Override

@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -78,7 +77,7 @@ public class IntelligencePower extends AbstractPower {
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        if (type == DamageInfo.DamageType.NORMAL && ElementalDefensePower.isMagicCard(card)) {
+        if (type == DamageInfo.DamageType.NORMAL && ElementalDefensePower.hasMagicDamage(card)) {
             return damage + this.amount;
         }
         return damage;
@@ -86,7 +85,7 @@ public class IntelligencePower extends AbstractPower {
 
     @Override
     public float modifyBlock(float blockAmount, AbstractCard card) {
-        if (ElementalDefensePower.isMagicCard(card)) {
+        if (ElementalDefensePower.hasMagicBlock(card)) {
             blockAmount += this.amount;
             if (blockAmount < 0.0F) {
                 return 0.0F;
@@ -95,20 +94,5 @@ public class IntelligencePower extends AbstractPower {
         return blockAmount;
     }
 
-    public static void applyMagicNumber(AbstractCard card) {
-        if (AbstractDungeon.player == null || card.baseMagicNumber < 0
-                || !ElementalDefensePower.isMagicCard(card)) {
-            return;
-        }
-
-        AbstractPower power = AbstractDungeon.player.getPower(POWER_ID);
-        int intelligence = power == null ? 0 : power.amount;
-        int newMagicNumber = card.baseMagicNumber + intelligence;
-        if (newMagicNumber < 0) {
-            newMagicNumber = 0;
-        }
-        card.magicNumber = newMagicNumber;
-        card.isMagicNumberModified = card.magicNumber != card.baseMagicNumber;
-    }
 }
 

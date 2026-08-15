@@ -19,13 +19,13 @@ public class FoundingRainOfStars extends CustomCard {
     public static final String ID = "FoundingRainOfStars";
     private static final String IMG_PATH = "img/cards/recluse/FoundingRainOfStars.png";
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 2;
-    private static final int HIT_COUNT = 3;
+    private static final int ATTACK_DMG = 3;
+    private static final int HIT_COUNT = 4;
     private static final int UPGRADE_PLUS_HIT_COUNT = 1;
 
     public FoundingRainOfStars() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+                AbstractCardEnum.Recluse_COLOR, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber = HIT_COUNT;
         this.magicNumber = this.baseMagicNumber;

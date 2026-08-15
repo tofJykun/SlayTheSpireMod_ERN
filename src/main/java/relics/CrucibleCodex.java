@@ -1,7 +1,7 @@
 package relics;
 
 import basemod.abstracts.CustomRelic;
-import cards.tempcards.CodeX;
+import cards.tempcards.CrucibleToken;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,7 +22,7 @@ public class CrucibleCodex extends CustomRelic {
     public void atBattleStartPreDraw() {
         flash();
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(CodeX.createRandom(), 1, false));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(CrucibleToken.createRandom(), 1, false));
     }
 
     @Override

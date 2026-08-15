@@ -2,8 +2,9 @@ package cards.wylder;
 
 import basemod.ReflectionHacks;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import general.CombatState;
 
 class WylderIntentHelper {
     private WylderIntentHelper() {}
@@ -13,12 +14,13 @@ class WylderIntentHelper {
     }
 
     static int totalIncomingAttackDamage(AbstractPlayer player) {
-        if (AbstractDungeon.getCurrRoom() == null || AbstractDungeon.getCurrRoom().monsters == null) {
+        AbstractRoom room = CombatState.currentRoom();
+        if (room == null || room.monsters == null) {
             return 0;
         }
 
         int total = 0;
-        for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
+        for (AbstractMonster monster : room.monsters.monsters) {
             if (monster == null || monster.isDeadOrEscaped() || !isAttackIntent(monster.intent)) {
                 continue;
             }

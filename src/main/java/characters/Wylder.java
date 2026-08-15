@@ -159,7 +159,14 @@ public class Wylder extends CustomPlayer {
 
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[0];
+        return new AbstractGameAction.AttackEffect[] {
+                AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+                AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY
+        };
     }
 
     @Override

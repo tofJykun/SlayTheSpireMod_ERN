@@ -37,10 +37,18 @@ public class BulkPotionQueue {
     }
 
     public static AbstractPotion getRandomBulkPotion() {
-        refreshRoomKey();
-        String potionId = BULK_POTION_IDS.get(roomRng().random(BULK_POTION_IDS.size() - 1));
-        index++;
+        String potionId = BULK_POTION_IDS.get(randomIndex(BULK_POTION_IDS.size()));
         return getBulkPotion(potionId);
+    }
+
+    public static int randomIndex(int size) {
+        if (size <= 0) {
+            return 0;
+        }
+        refreshRoomKey();
+        int result = roomRng().random(size - 1);
+        index++;
+        return result;
     }
 
     public static AbstractPotion getBulkPotion(String potionId) {

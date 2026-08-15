@@ -19,12 +19,12 @@ public class StrongMagicShield extends CustomCard {
     private static final String IMG_PATH = "img/cards/recluse/StrongMagicShield.png";
     private static final int COST = 2;
     private static final int BLOCK_AMT = 16;
-    private static final int INTELLIGENCE = 1;
+    private static final int INTELLIGENCE = 2;
     private static final int UPGRADE_PLUS_INTELLIGENCE = 1;
 
     public StrongMagicShield() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Recluse_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = BLOCK_AMT;
         this.baseMagicNumber = INTELLIGENCE;
         this.magicNumber = this.baseMagicNumber;

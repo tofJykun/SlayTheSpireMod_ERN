@@ -17,7 +17,7 @@ import ernmod.ERNMod;
 import general.ERNEnergyOrb;
 import patches.AbstractCardEnum;
 import patches.ERNModClassEnum;
-import relics.Marking;
+import relics.EagleEye;
 
 import java.util.ArrayList;
 
@@ -73,7 +73,7 @@ public class Ironeye extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(Marking.ID);
+        retVal.add(EagleEye.ID);
         return retVal;
     }
 
@@ -156,7 +156,14 @@ public class Ironeye extends CustomPlayer {
 
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[0];
+        return new AbstractGameAction.AttackEffect[] {
+                AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+                AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY
+        };
     }
 
     @Override

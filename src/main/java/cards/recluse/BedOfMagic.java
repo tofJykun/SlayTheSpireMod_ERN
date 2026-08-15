@@ -38,10 +38,16 @@ public class BedOfMagic extends CustomCard {
     private static final LinkedList<PlayedType> PLAYED_TYPES = new LinkedList<>();
     private static AbstractCard lastRecordedCard = null;
     private static boolean playedThisTurn = false;
+    private final boolean allowSelfPreview;
 
     public BedOfMagic() {
+        this(true);
+    }
+
+    private BedOfMagic(boolean allowSelfPreview) {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.SKILL,
                 CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ALL);
+        this.allowSelfPreview = allowSelfPreview;
         this.selfRetain = true;
         updateDynamicDescription();
     }
@@ -250,7 +256,11 @@ public class BedOfMagic extends CustomCard {
             return ext[15];
         }
         if (combo.skills == 1 && combo.powers == 2) {
-            setCardPreviews();
+            if (this.allowSelfPreview) {
+                setCardPreviews(new BedOfMagic(false));
+            } else {
+                setCardPreviews();
+            }
             return ext[16];
         }
         if (combo.powers == 3) {

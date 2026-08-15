@@ -22,7 +22,7 @@ public class GlitstonePebble extends CustomCard {
 
     public GlitstonePebble() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
+                AbstractCardEnum.Recluse_COLOR, CardRarity.BASIC, CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
     }
 

@@ -23,7 +23,7 @@ public class WhiteLightning extends CustomCard {
     private static final int DELAY_TURNS = 3;
 
     public WhiteLightning() {
-        super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.ATTACK,
+        super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.Recluse_COLOR, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber = VULNERABLE;

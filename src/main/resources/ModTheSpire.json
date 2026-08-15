@@ -4,10 +4,10 @@
   "author_list": [
     "jykun"
   ],
-  "description": "Test Now.",
+  "description": "ELDEN RING NIGHTREIGN mod for Slay the Spire. Not finished now.",
   "dependencies": [
     "basemod"
   ],
-  "version": "0.0.1",
+  "version": "0.1.0",
   "sts_version": "05-06-2026"
 }

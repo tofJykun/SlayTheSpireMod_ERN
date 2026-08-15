@@ -18,7 +18,7 @@ public class MagicBarrier extends CustomCard {
     private static final String IMG_PATH = "img/cards/recluse/MagicBarrier.png";
     private static final int COST = 1;
     private static final int BLOCK_AMT = 8;
-    private static final int INTELLIGENCE = 1;
+    private static final int INTELLIGENCE = 2;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public MagicBarrier() {
@@ -38,6 +38,23 @@ public class MagicBarrier extends CustomCard {
         addToBot(new GainBlockAction((AbstractCreature)p, (AbstractCreature)p, this.block));
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p,
                 new NextTurnIntelligencePower((AbstractCreature)p, this.magicNumber), this.magicNumber));
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        resetIntelligenceAmount();
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        super.calculateCardDamage(mo);
+        resetIntelligenceAmount();
+    }
+
+    private void resetIntelligenceAmount() {
+        this.magicNumber = this.baseMagicNumber;
+        this.isMagicNumberModified = false;
     }
 
     @Override

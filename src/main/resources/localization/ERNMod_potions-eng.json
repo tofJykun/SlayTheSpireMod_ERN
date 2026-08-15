@@ -63,11 +63,47 @@
       " NL Vanishes at the end of combat."
     ]
   },
+  "DredgeMossClump": {
+    "NAME": "Dredge Moss Clump",
+    "DESCRIPTIONS": [
+      "Lose #b",
+      "% of your #yGrey #yHealth and #yGrey #yHealth+ , rounded up."
+    ]
+  },
+  "DuskHerbDew": {
+    "NAME": "Dusk Herb Dew",
+    "DESCRIPTIONS": [
+      "Whenever you play #b1 Power or Status card, gain #b",
+      " Block."
+    ]
+  },
+  "IntelligencePotion": {
+    "NAME": "Intelligence Potion",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yIntelligence."
+    ]
+  },
+  "CrimsonPotion": {
+    "NAME": "Crimson Potion",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yRegen. Gain #b",
+      " Energy."
+    ]
+  },
   "ElixirOfLife": {
     "NAME": "Elixir of Life",
     "DESCRIPTIONS": [
       "When you would die, survive and heal to #b",
-      "% of your Max HP, then discard this potion. At the end of your turn, lose 10 Gold. If you have 0 Gold, discard this potion."
+      "% of your Max HP, then discard this potion. At the end of your turn, lose #b",
+      " Gold. If you have 0 Gold, discard this potion."
+    ]
+  },
+  "HaligtreeBalm": {
+    "NAME": "Haligtree Balm",
+    "DESCRIPTIONS": [
+      "For this combat, potion effects are doubled."
     ]
   }
 }

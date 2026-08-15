@@ -1,5 +1,6 @@
 package summons;
 
+import basemod.ReflectionHacks;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -20,6 +21,7 @@ import java.util.Map;
 
 public class SummonAnimationManager {
     private static final float SUMMON_ALPHA = 0.5F;
+    private static final String ASIMI_KEY = "Asimi";
     private static final Map<String, SummonAnimation> ANIMATIONS = new HashMap<>();
 
     private SummonAnimationManager() {
@@ -51,6 +53,9 @@ public class SummonAnimationManager {
     }
 
     private static SummonAnimation create(String summonKey) {
+        if (ASIMI_KEY.equals(summonKey)) {
+            return new PlayerSummonAnimation();
+        }
         if ("Helen".equals(summonKey)) {
             return new SummonAnimation(
                     "img/summons/Helen/flying.atlas",
@@ -102,15 +107,18 @@ public class SummonAnimationManager {
         private static final float ATTACK_DURATION = 0.35F;
         private static final float ATTACK_DISTANCE = 70.0F;
 
-        private final Skeleton skeleton;
-        private final AnimationStateData stateData;
-        private final AnimationState state;
-        private final String idleAnimation;
-        private final String attackAnimation;
-        private final float xOffset;
-        private final float yOffset;
-        private final boolean fallbackAttackMove;
+        private Skeleton skeleton;
+        private AnimationStateData stateData;
+        private AnimationState state;
+        private String idleAnimation;
+        private String attackAnimation;
+        private float xOffset;
+        private float yOffset;
+        private boolean fallbackAttackMove;
         private float attackTimer = 0.0F;
+
+        protected SummonAnimation() {
+        }
 
         private SummonAnimation(String atlasPath, String skeletonPath, String idleAnimation, String attackAnimation,
                                 float scale, float xOffset, float yOffset, boolean fallbackAttackMove) {
@@ -133,7 +141,7 @@ public class SummonAnimationManager {
             }
         }
 
-        private void triggerAttack() {
+        protected void triggerAttack() {
             if (this.attackAnimation != null) {
                 this.state.setAnimation(0, this.attackAnimation, false);
                 this.state.addAnimation(0, this.idleAnimation, true, 0.0F);
@@ -143,7 +151,7 @@ public class SummonAnimationManager {
             }
         }
 
-        private void render(AbstractPlayer player, SpriteBatch sb) {
+        protected void render(AbstractPlayer player, SpriteBatch sb) {
             float delta = Gdx.graphics.getDeltaTime();
             this.state.update(delta);
             this.state.apply(this.skeleton);
@@ -169,6 +177,67 @@ public class SummonAnimationManager {
             AbstractCreature.sr.draw(CardCrawlGame.psb, this.skeleton);
             CardCrawlGame.psb.end();
             sb.begin();
+        }
+    }
+
+    private static class PlayerSummonAnimation extends SummonAnimation {
+        private static final float ATTACK_DURATION = 0.35F;
+        private static final float ATTACK_DISTANCE = 70.0F;
+        private float attackTimer = 0.0F;
+
+        private PlayerSummonAnimation() {
+            super();
+        }
+
+        @Override
+        protected void triggerAttack() {
+            this.attackTimer = ATTACK_DURATION;
+        }
+
+        @Override
+        protected void render(AbstractPlayer player, SpriteBatch sb) {
+            float delta = Gdx.graphics.getDeltaTime();
+            float attackOffset = 0.0F;
+            if (this.attackTimer > 0.0F) {
+                float progress = 1.0F - this.attackTimer / ATTACK_DURATION;
+                attackOffset = MathUtils.sin(progress * MathUtils.PI) * ATTACK_DISTANCE * Settings.scale;
+                this.attackTimer -= delta;
+                if (this.attackTimer < 0.0F) {
+                    this.attackTimer = 0.0F;
+                }
+            }
+
+            Skeleton playerSkeleton = ReflectionHacks.getPrivate(player, AbstractCreature.class, "skeleton");
+            TextureAtlas playerAtlas = ReflectionHacks.getPrivate(player, AbstractCreature.class, "atlas");
+            float xOffset = -player.hb.width * 0.1F + attackOffset;
+            if (playerAtlas != null && playerSkeleton != null) {
+                player.state.apply(playerSkeleton);
+                playerSkeleton.updateWorldTransform();
+                playerSkeleton.setPosition(player.drawX + player.animX + xOffset, player.drawY + player.animY);
+                playerSkeleton.setColor(new Color(1.0F, 1.0F, 1.0F, SUMMON_ALPHA));
+                playerSkeleton.setFlip(player.flipHorizontal, player.flipVertical);
+
+                sb.end();
+                CardCrawlGame.psb.begin();
+                AbstractCreature.sr.draw(CardCrawlGame.psb, playerSkeleton);
+                CardCrawlGame.psb.end();
+                sb.begin();
+            } else if (player.img != null) {
+                Color oldColor = sb.getColor().cpy();
+                sb.setColor(1.0F, 1.0F, 1.0F, SUMMON_ALPHA);
+                sb.draw(player.img,
+                        player.drawX - player.img.getWidth() * Settings.scale / 2.0F + player.animX + xOffset,
+                        player.drawY,
+                        player.img.getWidth() * Settings.scale,
+                        player.img.getHeight() * Settings.scale,
+                        0,
+                        0,
+                        player.img.getWidth(),
+                        player.img.getHeight(),
+                        player.flipHorizontal,
+                        player.flipVertical);
+                sb.setColor(oldColor);
+            }
         }
     }
 }

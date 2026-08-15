@@ -1,8 +1,8 @@
 package characters;
 
 import basemod.abstracts.CustomPlayer;
-import cards.recluse.CarianSlicer;
 import cards.recluse.Defend_Recluse;
+import cards.recluse.GlitstonePebble;
 import cards.recluse.MagicBarrier;
 import cards.recluse.Strike_Recluse;
 import com.badlogic.gdx.graphics.Color;
@@ -69,7 +69,7 @@ public class Recluse extends CustomPlayer {
         retVal.add(Defend_Recluse.ID);
         retVal.add(Defend_Recluse.ID);
         retVal.add(Defend_Recluse.ID);
-        retVal.add(CarianSlicer.ID);
+        retVal.add(GlitstonePebble.ID);
         retVal.add(MagicBarrier.ID);
         return retVal;
     }
@@ -160,7 +160,14 @@ public class Recluse extends CustomPlayer {
 
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[0];
+        return new AbstractGameAction.AttackEffect[] {
+                AbstractGameAction.AttackEffect.BLUNT_LIGHT,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+                AbstractGameAction.AttackEffect.BLUNT_LIGHT,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+                AbstractGameAction.AttackEffect.BLUNT_LIGHT
+        };
     }
 
     @Override

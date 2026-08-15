@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import general.CombatState;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -137,8 +137,7 @@ public class WhisperingEarring extends CustomRelic {
     }
 
     private static boolean isInCombat() {
-        return AbstractDungeon.getCurrRoom() != null
-                && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT;
+        return CombatState.isInCombat();
     }
 
     @Override

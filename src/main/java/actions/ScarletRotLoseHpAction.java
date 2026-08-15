@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import general.CombatState;
 import powers.ScarletRotPower;
 
 public class ScarletRotLoseHpAction extends AbstractGameAction {
@@ -23,7 +24,8 @@ public class ScarletRotLoseHpAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT) {
+        AbstractRoom room = CombatState.currentRoom();
+        if (room == null || room.phase != AbstractRoom.RoomPhase.COMBAT) {
             this.isDone = true;
             return;
         }
@@ -56,7 +58,7 @@ public class ScarletRotLoseHpAction extends AbstractGameAction {
                 power.updateDescription();
             }
 
-            if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+            if (room.monsters.areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();
             }
             addToTop((AbstractGameAction)new WaitAction(0.1F));

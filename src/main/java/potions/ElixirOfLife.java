@@ -6,11 +6,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import general.PotionEffectHelper;
 
 public class ElixirOfLife extends AbstractPotion {
     public static final String POTION_ID = "ElixirOfLife";
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
     private static final int GOLD_LOSS = 10;
+    private static final int SACRED_BARK_GOLD_LOSS = 5;
 
     public ElixirOfLife() {
         super(potionStrings.NAME, POTION_ID, PotionRarity.RARE, PotionSize.FAIRY, PotionColor.FAIRY);
@@ -21,7 +23,9 @@ public class ElixirOfLife extends AbstractPotion {
     @Override
     public void initializeData() {
         this.potency = getPotency();
-        this.description = potionStrings.DESCRIPTIONS[0] + this.potency + potionStrings.DESCRIPTIONS[1];
+        this.description = potionStrings.DESCRIPTIONS[0] + this.potency
+                + potionStrings.DESCRIPTIONS[1] + getGoldLoss()
+                + potionStrings.DESCRIPTIONS[2];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
     }
@@ -44,6 +48,11 @@ public class ElixirOfLife extends AbstractPotion {
     @Override
     public int getPotency(int ascensionLevel) {
         return 100;
+    }
+
+    @Override
+    public int getPotency() {
+        return getPotency(AbstractDungeon.ascensionLevel);
     }
 
     @Override
@@ -80,10 +89,17 @@ public class ElixirOfLife extends AbstractPotion {
                 continue;
             }
             potion.flash();
-            AbstractDungeon.player.loseGold(GOLD_LOSS);
+            AbstractDungeon.player.loseGold(getGoldLoss());
             if (AbstractDungeon.player.gold <= 0) {
                 AbstractDungeon.topPanel.destroyPotion(i);
             }
         }
+    }
+
+    private static int getGoldLoss() {
+        if (PotionEffectHelper.hasSacredBarkEffect()) {
+            return SACRED_BARK_GOLD_LOSS;
+        }
+        return GOLD_LOSS;
     }
 }

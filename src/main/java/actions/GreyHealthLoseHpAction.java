@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.relics.LizardTail;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.DeathScreen;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import general.CombatState;
 import potions.ElixirOfLife;
+import powers.PowerOfErdtreePower;
 import powers.UnyieldingPower;
 
 public class GreyHealthLoseHpAction extends AbstractGameAction {
@@ -54,6 +55,11 @@ public class GreyHealthLoseHpAction extends AbstractGameAction {
         if (target == null || target.currentHealth <= 0 || amount <= 0) {
             return;
         }
+        if (target.hasPower(PowerOfErdtreePower.POWER_ID)) {
+            target.getPower(PowerOfErdtreePower.POWER_ID).flash();
+            target.lastDamageTaken = 0;
+            return;
+        }
 
         int loss = Math.min(amount, target.currentHealth);
         target.lastDamageTaken = loss;
@@ -81,8 +87,7 @@ public class GreyHealthLoseHpAction extends AbstractGameAction {
     }
 
     private static void handlePlayerAfterDirectLoss(AbstractPlayer player, int loss) {
-        if (AbstractDungeon.getCurrRoom() != null
-                && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+        if (CombatState.isInCombat()) {
             player.damagedThisCombat++;
         }
 

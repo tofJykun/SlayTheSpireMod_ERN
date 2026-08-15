@@ -16,7 +16,7 @@ public class PrimalGlintstone extends CustomCard {
     public static final String ID = "PrimalGlintstone";
     private static final String IMG_PATH = "img/cards/recluse/PrimalGlintstone.png";
     private static final int COST = 1;
-    private static final int INTELLIGENCE = 1;
+    private static final int INTELLIGENCE = 2;
     private static final int UPGRADE_PLUS_INTELLIGENCE = 1;
 
     public PrimalGlintstone() {

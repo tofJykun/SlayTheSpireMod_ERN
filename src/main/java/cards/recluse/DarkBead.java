@@ -17,7 +17,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import patches.AbstractCardEnum;
-import powers.IntelligencePower;
 
 public class DarkBead extends CustomCard {
     public static final String ID = "DarkBead";
@@ -85,7 +84,7 @@ public class DarkBead extends CustomCard {
             return this.baseMagicNumber;
         }
 
-        float tmp = this.baseMagicNumber + getIntelligenceAmount(player);
+        float tmp = this.baseMagicNumber;
         if (tmp < 0.0F) {
             tmp = 0.0F;
         }
@@ -93,7 +92,7 @@ public class DarkBead extends CustomCard {
             tmp = relic.atDamageModify(tmp, this);
         }
         for (AbstractPower power : player.powers) {
-            tmp = power.atDamageGive(tmp, this.damageTypeForTurn);
+            tmp = power.atDamageGive(tmp, this.damageTypeForTurn, this);
         }
         tmp = player.stance.atDamageGive(tmp, this.damageTypeForTurn, this);
         if (includeTargetPowers && target != null && !target.isDying && !target.isEscaping) {
@@ -113,11 +112,6 @@ public class DarkBead extends CustomCard {
             tmp = 0.0F;
         }
         return MathUtils.floor(tmp);
-    }
-
-    private int getIntelligenceAmount(AbstractPlayer player) {
-        AbstractPower power = player.getPower(IntelligencePower.POWER_ID);
-        return power == null ? 0 : power.amount;
     }
 
     private void applyOrdinaryDamagePowers(AbstractMonster target) {

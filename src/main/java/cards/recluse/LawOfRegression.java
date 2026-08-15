@@ -22,7 +22,7 @@ public class LawOfRegression extends CustomCard {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.Recluse_COLOR, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
-        this.cardsToPreview = new FadingPrimalGlintstone();
+        this.cardsToPreview = makeUpgradedFadingPrimalGlintstone();
     }
 
     private static CardStrings getCardStrings() {
@@ -33,8 +33,14 @@ public class LawOfRegression extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int cardsToCreate = HAND_SIZE - p.hand.size();
         if (cardsToCreate > 0) {
-            addToBot((AbstractGameAction)new MakeTempCardInHandAction(new FadingPrimalGlintstone(), cardsToCreate));
+            addToBot((AbstractGameAction)new MakeTempCardInHandAction(makeUpgradedFadingPrimalGlintstone(), cardsToCreate));
         }
+    }
+
+    private static AbstractCard makeUpgradedFadingPrimalGlintstone() {
+        AbstractCard card = new FadingPrimalGlintstone();
+        card.upgrade();
+        return card;
     }
 
     @Override

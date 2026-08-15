@@ -63,11 +63,47 @@
       " NL 在战斗结束时消失。"
     ]
   },
+  "DredgeMossClump": {
+    "NAME": "清淤苔藓球",
+    "DESCRIPTIONS": [
+      "失去 #b",
+      "% 的 #y虚血 和 #y虚血+ ，向上取整。"
+    ]
+  },
+  "DuskHerbDew": {
+    "NAME": "黄昏草露",
+    "DESCRIPTIONS": [
+      "你每打出 #b1 张能力牌或状态牌，获得 #b",
+      " 点 格挡 。"
+    ]
+  },
+  "IntelligencePotion": {
+    "NAME": "智力药水",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      " 点 #y智力 。"
+    ]
+  },
+  "CrimsonPotion": {
+    "NAME": "深红药水",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      " 层 #y再生 。获得 #b",
+      " 点费用。"
+    ]
+  },
   "ElixirOfLife": {
     "NAME": "长生不老药",
     "DESCRIPTIONS": [
       "当你要被杀死时，免死并回复到最大生命值的 #b",
-      "% ，丢弃这瓶药水。在你的回合结束时，失去10金币。如果金币为0，丢弃这瓶药水。"
+      "% ，丢弃这瓶药水。在你的回合结束时，失去 #b",
+      " 金币。如果金币为0，丢弃这瓶药水。"
+    ]
+  },
+  "HaligtreeBalm": {
+    "NAME": "圣树香油",
+    "DESCRIPTIONS": [
+      "在本场战斗中，药水的效果翻倍。"
     ]
   }
 }

@@ -35,8 +35,10 @@ public class SleepPower extends AbstractPower {
     }
 
     @Override
-    public void atEndOfRound() {
-        addToBot((AbstractGameAction)new ReducePowerAction(this.owner, this.owner, this, 1));
+    public void atEndOfTurn(boolean isPlayer) {
+        if (this.owner != null && this.owner.isPlayer == isPlayer) {
+            addToBot((AbstractGameAction)new ReducePowerAction(this.owner, this.owner, this, 1));
+        }
     }
 
     @Override

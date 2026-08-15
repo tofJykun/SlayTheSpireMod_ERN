@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import general.CombatState;
 import patches.AbstractCardEnum;
 
 public class LetFeastBegin extends CustomCard {
@@ -42,12 +44,13 @@ public class LetFeastBegin extends CustomCard {
     }
 
     private static boolean hasExecutableEnemy() {
+        AbstractRoom room = CombatState.currentRoom();
         if (AbstractDungeon.player == null
-                || AbstractDungeon.getCurrRoom() == null
-                || AbstractDungeon.getCurrRoom().monsters == null) {
+                || room == null
+                || room.monsters == null) {
             return false;
         }
-        for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
+        for (AbstractMonster monster : room.monsters.monsters) {
             if (!monster.isDeadOrEscaped() && monster.maxHealth <= AbstractDungeon.player.maxHealth) {
                 return true;
             }

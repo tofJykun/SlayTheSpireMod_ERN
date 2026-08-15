@@ -9,8 +9,8 @@
   "IntelligencePower": {
     "NAME": "Intelligence",
     "DESCRIPTIONS": [
-      "Magic cards gain #b",
-      "Magic cards lose #b",
+      "Magic damage and Magic Block gain #b",
+      "Magic damage and Magic Block lose #b",
       " additional value."
     ]
   },
@@ -24,9 +24,16 @@
   "FaithPower": {
     "NAME": "Faith",
     "DESCRIPTIONS": [
-      "Thaumaturgy cards gain #b",
-      "Thaumaturgy cards lose #b",
+      "Thaumaturgy damage and Thaumaturgy Block gain #b",
+      "Thaumaturgy damage and Thaumaturgy Block lose #b",
       " additional value."
+    ]
+  },
+  "ArcanePower": {
+    "NAME": "Arcane",
+    "DESCRIPTIONS": [
+      "When choosing reward cards, if there are no Rare cards, there is a #b",
+      "% chance to add #b1 random Rare card to choose from."
     ]
   },
   "FallControlPower": {
@@ -58,6 +65,13 @@
     "DESCRIPTIONS": [
       "At the end of #b%d turns, deal #b%d damage to ALL enemies.",
       "At the end of this turn, deal #b%d damage to ALL enemies."
+    ]
+  },
+  "CrystalScrapPower": {
+    "NAME": "Crystal Scrap",
+    "DESCRIPTIONS": [
+      "At the end of next turn, deal #b%d magic damage to random enemies #b%d times.",
+      "At the end of this turn, deal #b%d magic damage to random enemies #b%d times."
     ]
   },
   "BedOfMagicCostReductionPower": {
@@ -111,6 +125,13 @@
       " *Magic *Ember to your hand."
     ]
   },
+  "TwilightHerbPower": {
+    "NAME": "Twilight Herb",
+    "DESCRIPTIONS": [
+      "This turn, whenever you play a Status card, gain #b",
+      " Block."
+    ]
+  },
   "HoverPower": {
     "NAME": "Hover",
     "DESCRIPTIONS": [
@@ -123,8 +144,15 @@
     "NAME": "Perfect Guard",
     "DESCRIPTIONS": [
       "Lasts #b",
-      " turn(s). Whenever enemy attack damage exactly breaks your Block, gain #b",
+      " turn(s). If you have at least #b15 #yBlock when an enemy attack ends, gain #b",
       " Vigor."
+    ]
+  },
+  "BarricadeShieldPower": {
+    "NAME": "Barricade Shield",
+    "DESCRIPTIONS": [
+      "When you Perfect Guard, apply #b",
+      " Poise Break to the attacker."
     ]
   },
   "ParryPower": {
@@ -132,6 +160,20 @@
     "DESCRIPTIONS": [
       "Lasts #b",
       " turn(s). Whenever enemy attack damage exactly breaks your Block, the enemy is Stunned after 1 turn."
+    ]
+  },
+  "CeruleanDaggerPower": {
+    "NAME": "Cerulean Dagger",
+    "DESCRIPTIONS": [
+      "Whenever you successfully Parry, gain [E] [E] next turn.",
+      "Whenever you successfully Parry, gain [E] [E] and draw #b2 additional cards next turn."
+    ]
+  },
+  "CeruleanwhorlBubblePower": {
+    "NAME": "Ceruleanwhorl Bubble",
+    "DESCRIPTIONS": [
+      "Your next #b",
+      " card(s) can be played for free. When played, gain [E] equal to their costs."
     ]
   },
   "DelayedStunPower": {
@@ -207,6 +249,27 @@
     "DESCRIPTIONS": [
       "Whenever you are attacked, apply #b",
       " Bloodburn to the attacker."
+    ]
+  },
+  "SinBriarsPower": {
+    "NAME": "Sin Briars",
+    "DESCRIPTIONS": [
+      "Whenever you are attacked, apply #b",
+      " Bloodloss to the attacker."
+    ]
+  },
+  "BloodSigilPower": {
+    "NAME": "Blood Sigil",
+    "DESCRIPTIONS": [
+      "Whenever this enemy is attacked, gain #b",
+      " Block."
+    ]
+  },
+  "BloodSigilRecoveryPower": {
+    "NAME": "Blood Sigil",
+    "DESCRIPTIONS": [
+      "At the end of combat, heal #b",
+      " HP."
     ]
   },
   "BlackFlameBladePower": {
@@ -297,6 +360,20 @@
       "Gain #b",
       " Block. NL Add 1 ",
       " to your hand. NL Vanishes when your Block is gone."
+    ]
+  },
+  "SummonAsimi": {
+    "NAME": "Summon: Asimi",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Block. NL Add 1 ",
+      " to your hand. NL Vanishes when your Block is gone."
+    ]
+  },
+  "AsimiEchoPower": {
+    "NAME": "Asimi",
+    "DESCRIPTIONS": [
+      "This turn, while Summon: Asimi is active, your played cards are played 1 additional time."
     ]
   },
   "PumpkinHelmPower": {
@@ -391,6 +468,12 @@
       " cards."
     ]
   },
+  "CeruleanburstCrystalPower": {
+    "NAME": "Ceruleanburst Crystal",
+    "DESCRIPTIONS": [
+      "Whenever you play 10 cards, gain [E] ."
+    ]
+  },
   "BellowingDragoncrestPower": {
     "NAME": "Bellowing Dragoncrest",
     "DESCRIPTIONS": [
@@ -412,6 +495,87 @@
     "DESCRIPTIONS": [
       "At the start of each turn, lose #b",
       " Spirit."
+    ]
+  },
+  "SoulVesselPower": {
+    "NAME": "Soul Vessel",
+    "DESCRIPTIONS": [
+      "Whenever you play a Power card, gain #b",
+      " Block."
+    ]
+  },
+  "DuskHerbDewPower": {
+    "NAME": "Dusk Herb Dew",
+    "DESCRIPTIONS": [
+      "Whenever you play a Power or Status card, gain #b",
+      " Block."
+    ]
+  },
+  "IctarusPower": {
+    "NAME": "Ictarus",
+    "DESCRIPTIONS": [
+      "At the start of your turn, lose #b",
+      " HP."
+    ]
+  },
+  "MagicRecyclePower": {
+    "NAME": "Magic Recycle",
+    "DESCRIPTIONS": [
+      "For #b",
+      " turn(s), the first time you play a Power card each turn, heal #b",
+      " HP."
+    ]
+  },
+  "SummonAidPower": {
+    "NAME": "Summon Aid!!",
+    "DESCRIPTIONS": [
+      "At the start of your next #b",
+      " turns, gain #ySummon: #yHelen and add 1 additional #yPhantom #yHelen to your hand."
+    ]
+  },
+  "PowerOfErdtreePower": {
+    "NAME": "Protection of the Erdtree",
+    "DESCRIPTIONS": [
+      "Until the start of your next turn, you cannot lose HP."
+    ]
+  },
+  "PowerOfNightPower": {
+    "NAME": "Protection of the Night",
+    "DESCRIPTIONS": [
+      "At the start of each turn, you may choose 1 of 3 random cards to add to your hand. It costs 0 that turn.",
+      "At the start of each turn, you may choose 1 of 3 random cards #b",
+      " times to add to your hand. They cost 0 that turn."
+    ]
+  },
+  "GlintstoneCrownPower": {
+    "NAME": "Glintstone Crown",
+    "DESCRIPTIONS": [
+      "Magic cards deal #b",
+      "% additional damage."
+    ]
+  },
+  "QuasicrystalPower": {
+    "NAME": "Quasicrystal",
+    "DESCRIPTIONS": [
+      "Whenever you play 2 Crystal cards, add 1 random Crystal card to your hand."
+    ]
+  },
+  "HaligtreeBalmPower": {
+    "NAME": "Haligtree Balm",
+    "DESCRIPTIONS": [
+      "Potion effects are doubled this combat."
+    ]
+  },
+  "TrancePower": {
+    "NAME": "Trance",
+    "DESCRIPTIONS": [
+      "Your next #yAttack card deals double damage."
+    ]
+  },
+  "CollectAffinityPower": {
+    "NAME": "Collect Affinity",
+    "DESCRIPTIONS": [
+      "At the end of your turn, retain non-Ethereal Status cards."
     ]
   }
 }

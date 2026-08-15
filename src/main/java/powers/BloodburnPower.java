@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import general.CombatState;
 
 public class BloodburnPower extends AbstractPower {
     public static final String POWER_ID = "BloodburnPower";
@@ -60,7 +60,7 @@ public class BloodburnPower extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT
+        if (CombatState.isInCombat()
                 && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flashWithoutSound();
             addToBot((AbstractGameAction)new BloodburnLoseHpAction(this.owner, this.source,
