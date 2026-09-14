@@ -1,0 +1,49 @@
+package powers;
+
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+
+public class LoftyPower extends AbstractPower {
+    public static final String POWER_ID = "LoftyPower";
+    private static final PowerStrings POWER_STRINGS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = POWER_STRINGS.NAME;
+    public static final String[] DESCRIPTIONS = POWER_STRINGS.DESCRIPTIONS;
+    private static final int FROSTBITE = 1;
+    private static final float DAMAGE_MULTIPLIER = 1.25F;
+
+    public LoftyPower(AbstractCreature owner) {
+        this.name = NAME;
+        this.ID = POWER_ID;
+        this.owner = owner;
+        this.amount = -1;
+        this.type = PowerType.BUFF;
+        this.canGoNegative = false;
+        PowerIconHelper.load(this, POWER_ID);
+        updateDescription();
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        flash();
+        addToBot((AbstractGameAction)new ApplyPowerAction(this.owner, this.owner,
+                new FrostbitePower(this.owner, FROSTBITE), FROSTBITE));
+    }
+
+    @Override
+    public float atDamageGive(float damage, DamageInfo.DamageType type) {
+        if (type == DamageInfo.DamageType.NORMAL) {
+            return (float)Math.ceil(damage * DAMAGE_MULTIPLIER);
+        }
+        return damage;
+    }
+
+    @Override
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0];
+    }
+}

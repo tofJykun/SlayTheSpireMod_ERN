@@ -16,7 +16,7 @@ public class GreatSwampTome extends CustomCard {
     public static final String ID = "GreatSwampTome";
     private static final String IMG_PATH = "img/cards/undertaker/GreatSwampTome.png";
     private static final int COST = 1;
-    private static final int FAITH = 1;
+    private static final int FAITH = 2;
     private static final int UPGRADE_PLUS_FAITH = 1;
 
     public GreatSwampTome() {

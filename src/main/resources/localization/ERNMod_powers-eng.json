@@ -29,11 +29,89 @@
       " additional value."
     ]
   },
+  "LoseFaithAtEndOfTurnPower": {
+    "NAME": "Temporary Faith",
+    "DESCRIPTIONS": [
+      "At end of turn, lose #b",
+      " Faith."
+    ]
+  },
   "ArcanePower": {
     "NAME": "Arcane",
     "DESCRIPTIONS": [
       "When choosing reward cards, if there are no Rare cards, there is a #b",
       "% chance to add #b1 random Rare card to choose from."
+    ]
+  },
+  "BlessedDewPower": {
+    "NAME": "Blessed Dew",
+    "DESCRIPTIONS": [
+      "At the start of your turn, lose #b",
+      " Grey Health.",
+      "At the start of your turn, lose #b",
+      " Grey Health+."
+    ]
+  },
+  "CatarinaRoundMoonPower": {
+    "NAME": "Catarina Round Moon",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, lose all #yGrey #yHealth and #yGrey #yHealth+, then deal damage equal to the total stacks lost to ALL enemies."
+    ]
+  },
+  "VordtGreatHammerPower": {
+    "NAME": "Vordt's Great Hammer",
+    "DESCRIPTIONS": [
+      "Until the start of your next turn, whenever you take unblocked damage, gain #b",
+      " [E] next turn. Damage converted to #yGrey #yHealth or #yGrey #yHealth+ by #yUnyielding or #yUnyielding+ also counts."
+    ]
+  },
+  "GreatClubPower": {
+    "NAME": "Great Club",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, lose #b",
+      " Grey Health.",
+      "At the start of your next turn, lose #b",
+      " Grey Health+."
+    ]
+  },
+  "StaggerPower": {
+    "NAME": "Stagger",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yGrey #yHealth.",
+      "At the start of your turn, gain #b",
+      " #yGrey #yHealth+."
+    ]
+  },
+  "MasterworkPower": {
+    "NAME": "Masterwork",
+    "DESCRIPTIONS": [
+      "Whenever you Smith, lose #b",
+      " Grey Health.",
+      "Whenever you Smith, lose #b",
+      " Grey Health+."
+    ]
+  },
+  "LoyaltyCardPower": {
+    "NAME": "Loyalty Card",
+    "DESCRIPTIONS": [
+      "Whenever you lose Token, gain Block equal to the amount lost."
+    ]
+  },
+  "VirtualCurrencyPower": {
+    "NAME": "Virtual Currency",
+    "DESCRIPTIONS": [
+      "Whenever you would lose #yGold, lose that much #yVirtual #yCurrency first."
+    ]
+  },
+  "UsuryPower": {
+    "NAME": "Usury",
+    "DESCRIPTIONS": [
+      "At the start of your turn, for every #b",
+      " #yVirtual #yCurrency you have, gain #b1 #yVirtual #yCurrency.",
+      "At the start of your turn, each stack gains #b1 #yVirtual #yCurrency for every #b",
+      " #yVirtual #yCurrency you have. Current stacks: #b",
+      "."
     ]
   },
   "FallControlPower": {
@@ -58,6 +136,13 @@
       ", this enemy dies.",
       ", you lose #b",
       " HP."
+    ]
+  },
+  "InfectionStrikePower": {
+    "NAME": "Infection Strike",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " debuff(s) this enemy receives are also applied to all other enemies."
     ]
   },
   "WhiteLightningPower": {
@@ -137,7 +222,76 @@
     "DESCRIPTIONS": [
       "Reduces damage taken by 50% for the next #b",
       " instances of damage.",
-      " NL Lose #b1 stack whenever you take attack damage."
+      " NL Lose #b1 stack whenever you take attack damage. When stacks are at least #b10 and less than #b15, gain #yLofty. When stacks are at least #b15, gain #yDeep #ySpace."
+    ]
+  },
+  "LoftyPower": {
+    "NAME": "Lofty",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b1 #yFrostbite. Deal #b25% additional damage."
+    ]
+  },
+  "DeepSpacePower": {
+    "NAME": "Deep Space",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b2 #yFrostbite and #b1 #yHover. Deal #b50% additional damage."
+    ]
+  },
+  "KineticBombardmentPower": {
+    "NAME": "Kinetic Bombardment",
+    "DESCRIPTIONS": [
+      "For every #b3 #yHover you have, deal #b10% additional damage. NL (Deal #b",
+      "% additional damage.)"
+    ]
+  },
+  "GowerRingOfProtectionPower": {
+    "NAME": "Gower Ring of Protection",
+    "DESCRIPTIONS": [
+      "Damage you take is reduced by #b50% . At the start of each turn, gain #b1 less [E] ."
+    ]
+  },
+  "TotemStelaPower": {
+    "NAME": "Totem Stela",
+    "DESCRIPTIONS": [
+      "Damage taken is reduced by 50% this turn."
+    ]
+  },
+  "StormcallerPower": {
+    "NAME": "Storm Approaching",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " time(s) your Hover reaches 0, you cannot play cards next turn."
+    ]
+  },
+  "CallLightningPower": {
+    "NAME": "Call Lightning",
+    "DESCRIPTIONS": [
+      "At the end of your turn, deal #b",
+      " damage to ALL enemies. #yLofty: also deal #b",
+      " damage to yourself."
+    ]
+  },
+  "BrightbugPower": {
+    "NAME": "Brightbug",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yVigor."
+    ]
+  },
+  "PreeningPower": {
+    "NAME": "Preening",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #yVigor equal to your #yHover.",
+      "At the start of your turn, each stack gains #yVigor equal to your #yHover. Current stacks: #b",
+      "."
+    ]
+  },
+  "StormcallerNoPlayPower": {
+    "NAME": "Storm Lock",
+    "DESCRIPTIONS": [
+      "You cannot play cards this turn.",
+      "You cannot play cards for the next #b",
+      " turn(s)."
     ]
   },
   "PerfectGuardPower": {
@@ -174,6 +328,34 @@
     "DESCRIPTIONS": [
       "Your next #b",
       " card(s) can be played for free. When played, gain [E] equal to their costs."
+    ]
+  },
+  "BlackClawAssistantPower": {
+    "NAME": "Black Claw Assistant",
+    "DESCRIPTIONS": [
+      "Cards you play will be Upgraded for this combat."
+    ]
+  },
+  "SnakeSloughPower": {
+    "NAME": "Snake Slough",
+    "DESCRIPTIONS": [
+      "Whenever you #yTransform a card, gain #b",
+      " #yBlock."
+    ]
+  },
+  "DullEmberPower": {
+    "NAME": "Dull Ember",
+    "DESCRIPTIONS": [
+      "#yStrike deals #b",
+      " additional damage. #yDefend gains #b",
+      " additional #yBlock."
+    ]
+  },
+  "MoonOfNokstellaPower": {
+    "NAME": "Moon of Nokstella",
+    "DESCRIPTIONS": [
+      "#yCraftman #yCreation costs #b",
+      " less."
     ]
   },
   "DelayedStunPower": {
@@ -228,6 +410,26 @@
       "Whenever you play an Attack, reduce this by #b2. NL At the end of your turn, lose HP equal to your #yGrey #yHealth+. NL At the end of combat, lose HP equal to your #yGrey #yHealth+."
     ]
   },
+  "BlueTearstoneRingPower": {
+    "NAME": "Blue Tearstone Ring",
+    "DESCRIPTIONS": [
+      "#b",
+      " trigger(s) remaining. At the end of your turn or at the end of combat, if your #yGrey #yHealth or #yGrey #yHealth+ is greater than or equal to your HP, reduce it to 50%."
+    ]
+  },
+  "RedTearstoneRingPower": {
+    "NAME": "Red Tearstone Ring",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if your #yGrey #yHealth or #yGrey #yHealth+ is greater than or equal to your HP, double all attack damage this turn."
+    ]
+  },
+  "RedTearstoneRingActivePower": {
+    "NAME": "Red Tearstone Ring",
+    "DESCRIPTIONS": [
+      "Attack damage is multiplied by #b",
+      " this turn."
+    ]
+  },
   "ScarletRotPower": {
     "NAME": "Scarlet Rot",
     "DESCRIPTIONS": [
@@ -258,11 +460,45 @@
       " Bloodloss to the attacker."
     ]
   },
+  "ImmolationPower": {
+    "NAME": "Immolation",
+    "DESCRIPTIONS": [
+      "When you are attacked, if you have #ySummon, the attacker loses HP equal to the blocked damage."
+    ]
+  },
+  "GhostflameIgnitionPower": {
+    "NAME": "Ghostflame Ignition",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b",
+      " #yFrostbite to ALL enemies."
+    ]
+  },
+  "FreezingMistPower": {
+    "NAME": "Freezing Mist",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b",
+      " #yFrostbite to ALL enemies."
+    ]
+  },
+  "FingerprintStoneShieldPower": {
+    "NAME": "Fingerprint Stone Shield",
+    "DESCRIPTIONS": [
+      "Whenever you are attacked, apply #b",
+      " Madness to the attacker."
+    ]
+  },
   "BloodSigilPower": {
     "NAME": "Blood Sigil",
     "DESCRIPTIONS": [
       "Whenever this enemy is attacked, gain #b",
       " Block."
+    ]
+  },
+  "BladeOfCallingPower": {
+    "NAME": "Blade of Calling",
+    "DESCRIPTIONS": [
+      "Whenever this enemy takes unblocked damage, apply #b",
+      " Bloodburn to it."
     ]
   },
   "BloodSigilRecoveryPower": {
@@ -277,6 +513,13 @@
     "DESCRIPTIONS": [
       "Whenever your attack deals unblocked damage, apply #b",
       " Bloodburn."
+    ]
+  },
+  "DarkBloodPower": {
+    "NAME": "Dark Blood",
+    "DESCRIPTIONS": [
+      "Whenever you apply a negative Status to an enemy, gain #b",
+      " Block."
     ]
   },
   "SoulbloodSongPower": {
@@ -311,8 +554,9 @@
   "OuterBoonPower": {
     "NAME": "Outer Boon",
     "DESCRIPTIONS": [
+      "Whenever you play a random card, gain [E] .",
       "Whenever you play a random card, gain #b",
-      " Block."
+      " Energy."
     ]
   },
   "ZealotryPower": {
@@ -326,8 +570,10 @@
     "NAME": "Insight",
     "DESCRIPTIONS": [
       "For the first #b",
-      " random plays each turn, choose a card and play it for free instead. This still counts as a random play.",
-      "Choose a card to play for free."
+      " random plays, random discards, or random exhausts each turn, choose instead. Random plays still count as random plays.",
+      "Choose a card to play for free.",
+      "Choose a card to discard.",
+      "Choose a card to exhaust."
     ]
   },
   "SummonHelen": {
@@ -408,6 +654,13 @@
       "."
     ]
   },
+  "FadingSpiritPower": {
+    "NAME": "Temporary Spirit",
+    "DESCRIPTIONS": [
+      "At the end of the turn, lose #b",
+      " Spirit."
+    ]
+  },
   "FrostbitePower": {
     "NAME": "Frostbite",
     "DESCRIPTIONS": [
@@ -474,6 +727,23 @@
       "Whenever you play 10 cards, gain [E] ."
     ]
   },
+  "CrystalEnchantedPower": {
+    "NAME": "Crystal Enchanted",
+    "DESCRIPTIONS": [
+      "Every time you play #b",
+      " cards in a single turn, lose #b1 #yStrength and #b1 #yDexterity for that turn. NL Current count: #b",
+      ". NL At the end of your turn, regain #b",
+      " #yStrength and #b",
+      " #yDexterity."
+    ]
+  },
+  "WindyCrystalPower": {
+    "NAME": "Windy Crystal",
+    "DESCRIPTIONS": [
+      "Whenever you play 10 cards, draw #b",
+      " card."
+    ]
+  },
   "BellowingDragoncrestPower": {
     "NAME": "Bellowing Dragoncrest",
     "DESCRIPTIONS": [
@@ -533,6 +803,47 @@
       " turns, gain #ySummon: #yHelen and add 1 additional #yPhantom #yHelen to your hand."
     ]
   },
+  "IScreamPower": {
+    "NAME": "I Scream",
+    "DESCRIPTIONS": [
+      "At the start of your next #b",
+      " turn, gain #ySummon: #ySebastian."
+    ]
+  },
+  "InitiativePower": {
+    "NAME": "Initiative",
+    "DESCRIPTIONS": [
+      "Whenever you #ySummon, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "LifegemPower": {
+    "NAME": "Lifegem",
+    "DESCRIPTIONS": [
+      "At the start of your next #b",
+      " turns, gain [E] ."
+    ]
+  },
+  "ForkedHatchetPower": {
+    "NAME": "Forked Hatchet",
+    "DESCRIPTIONS": [
+      "Put Forked Hatchet on top of the draw pile."
+    ]
+  },
+  "WarMaterielPower": {
+    "NAME": "War Materiel",
+    "DESCRIPTIONS": [
+      "At the start of next turn, gain 1 Energy and choose ",
+      " Attack cards."
+    ]
+  },
+  "HandAxeReturnPower": {
+    "NAME": "Hand Axe",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, try to return #b",
+      " #yHand #yAxe from your draw pile or discard pile to your hand."
+    ]
+  },
   "PowerOfErdtreePower": {
     "NAME": "Protection of the Erdtree",
     "DESCRIPTIONS": [
@@ -545,6 +856,32 @@
       "At the start of each turn, you may choose 1 of 3 random cards to add to your hand. It costs 0 that turn.",
       "At the start of each turn, you may choose 1 of 3 random cards #b",
       " times to add to your hand. They cost 0 that turn."
+    ]
+  },
+    "WolfAssaultPower": {
+      "NAME": "Wolf Assault",
+      "DESCRIPTIONS": [
+        "At the start of your turn, draw until your hand is full and cannot draw any more cards this turn."
+      ]
+    },
+    "WarmthPower": {
+      "NAME": "Warmth",
+      "DESCRIPTIONS": [
+        "Whenever you play a card this turn, gain 1 Energy."
+      ]
+    },
+    "DarkswordPower": {
+    "NAME": "Darksword",
+    "DESCRIPTIONS": [
+      "All of your attack damage is #b",
+      " times this turn, and you cannot see card descriptions."
+    ]
+  },
+  "ClimaxPower": {
+    "NAME": "Climax",
+    "DESCRIPTIONS": [
+      "All of your attack damage is #b",
+      " times this turn."
     ]
   },
   "GlintstoneCrownPower": {
@@ -576,6 +913,389 @@
     "NAME": "Collect Affinity",
     "DESCRIPTIONS": [
       "At the end of your turn, retain non-Ethereal Status cards."
+    ]
+  },
+  "DarkWoodGrainPower": {
+    "NAME": "Dark Wood Grain",
+    "DESCRIPTIONS": [
+      "Whenever you reset a card with Scheduled 3 or more, reduce that card's count by #b",
+      " . NL Cannot reduce below #b2 ."
+    ]
+  },
+  "JupiterHeartPower": {
+    "NAME": "Jupiter Heart",
+    "DESCRIPTIONS": [
+      "At the end of this turn, take #b",
+      " extra turn(s)."
+    ]
+  },
+  "FlowingTechniquesPower": {
+    "NAME": "Flowing Techniques",
+    "DESCRIPTIONS": [
+      "If you play #b",
+      " or more cards in a turn, draw #b",
+      " additional card(s) next turn."
+    ]
+  },
+  "HornetRingPower": {
+    "NAME": "Hornet Ring",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      "% additional damage to enemies whose intent is attacking."
+    ]
+  },
+  "SabbathPower": {
+    "NAME": "Sabbath",
+    "DESCRIPTIONS": [
+      "Whenever you play a card that costs #b2 or more, gain #b",
+      " Block."
+    ]
+  },
+  "DeterrencePower": {
+    "NAME": "Deterrence",
+    "DESCRIPTIONS": [
+      "Enemies with #yVulnerable deal #b",
+      "% less attack damage."
+    ]
+  },
+  "HowManyPower": {
+    "NAME": "How Many?",
+    "DESCRIPTIONS": [
+      "Whenever you spend #b",
+      " [E] , gain 1 [E] . NL Current count: #b",
+      "."
+    ]
+  },
+  "BorrowedTimePower": {
+    "NAME": "Borrowed Time",
+    "DESCRIPTIONS": [
+      "All cards cost #b",
+      " more this turn."
+    ]
+  },
+  "StargazePower": {
+    "NAME": "Stargaze",
+    "DESCRIPTIONS": [
+      "Whenever your draw pile is shuffled, put #b",
+      " card(s) from your draw pile on top of your draw pile. Earlier choices are placed closer to the top."
+    ]
+  },
+  "DecisionsDecisionsPower": {
+    "NAME": "Decisions, Decisions...",
+    "DESCRIPTIONS": [
+      "Whenever you play #b",
+      " cards, draw #b1 card and discard #b1 card.",
+      "Whenever you play #b",
+      " cards, draw #b",
+      " cards and discard #b",
+      " cards."
+    ]
+  },
+  "TaxesPower": {
+    "NAME": "Taxes",
+    "DESCRIPTIONS": [
+      "The first #b",
+      " card(s) you play each turn cost #b0 . Remaining this turn: #b",
+      "."
+    ]
+  },
+  "WantToDrinkThisPower": {
+    "NAME": "Want To Drink This o.o",
+    "DESCRIPTIONS": [
+      "Every #b2 turns, gain #b1 random #yBulk Potion.",
+      "Every #b2 turns, each stack gains #b1 random #yBulk Potion. Current stacks: #b",
+      "."
+    ]
+  },
+  "FragrantBranchOfYorePower": {
+    "NAME": "Fragrant Branch of Yore",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " additional card reward after combat."
+    ]
+  },
+  "GoldPickledFowlFootPower": {
+    "NAME": "Gold-Pickled Fowl Foot",
+    "DESCRIPTIONS": [
+      "Enemy Gold drops are increased by #b",
+      "%."
+    ]
+  },
+  "SilverPickledFowlFootPower": {
+    "NAME": "Silver-Pickled Fowl Foot",
+    "DESCRIPTIONS": [
+      "Enemies have a #b",
+      "% chance to drop an additional card reward."
+    ]
+  },
+  "RustedGoldCoinPower": {
+    "NAME": "Rusted Gold Coin",
+    "DESCRIPTIONS": [
+      "Normal enemies have a #b",
+      "% chance to drop a common, uncommon, or rare relic."
+    ]
+  },
+  "FluctuationPower": {
+    "NAME": "Fluctuation",
+    "DESCRIPTIONS": [
+      "At the start of your turn, you may choose #b",
+      " card(s) in your hand to #yTransform."
+    ]
+  },
+  "BloodrosePower": {
+    "NAME": "Bloodrose",
+    "DESCRIPTIONS": [
+      "Apply 2 Bloodloss."
+    ]
+  },
+  "RowaFruitPower": {
+    "NAME": "Rowa Fruit",
+    "DESCRIPTIONS": [
+      "Exhaust 1 card from your hand, then draw 1 card."
+    ]
+  },
+  "EyeOfYeloughPower": {
+    "NAME": "Eye of Yelough",
+    "DESCRIPTIONS": [
+      "Apply 2 Madness."
+    ]
+  },
+  "FightThroughPower": {
+    "NAME": "Fight Through",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain ",
+      "At the start of your turn, gain "
+    ]
+  },
+  "EarthSeekerPower": {
+    "NAME": "Earth Seeker",
+    "DESCRIPTIONS": [
+      "At the start of your turn, automatically play Earth Seekers in the Exhaust pile."
+    ]
+  },
+  "GravelStonePower": {
+    "NAME": "Gravel Stone",
+    "DESCRIPTIONS": [
+      "Apply 3 Poise Break."
+    ]
+  },
+  "AlbinauricBloodclotPower": {
+    "NAME": "Albinauric Bloodclot",
+    "DESCRIPTIONS": [
+      "Heal 5 HP. NL Gain 5 Grey Health."
+    ]
+  },
+  "GoldenCentipedePower": {
+    "NAME": "Golden Centipede",
+    "DESCRIPTIONS": [
+      "Gain [E]."
+    ]
+  },
+  "AeonianButterflyPower": {
+    "NAME": "Aeonian Butterfly",
+    "DESCRIPTIONS": [
+      "Apply 7 Scarlet Rot."
+    ]
+  },
+  "TrinaLilyPower": {
+    "NAME": "Trina Lily",
+    "DESCRIPTIONS": [
+      "Apply 2 Sleep."
+    ]
+  },
+  "MiquellaLilyPower": {
+    "NAME": "Miquella Lily",
+    "DESCRIPTIONS": [
+      "Enemy loses 99 Strength this turn."
+    ]
+  },
+  "NascentButterflyPower": {
+    "NAME": "Nascent Butterfly",
+    "DESCRIPTIONS": [
+      "Gain 1 Artifact."
+    ]
+  },
+  "SacramentalBudPower": {
+    "NAME": "Sacramental Bud",
+    "DESCRIPTIONS": [
+      "Remove all negative effects from yourself."
+    ]
+  },
+  "ArteriaLeafPower": {
+    "NAME": "Arteria Leaf",
+    "DESCRIPTIONS": [
+      "Gain 6 Strength this turn."
+    ]
+  },
+  "PotentateCookbookPower": {
+    "NAME": "Potentate Cookbook",
+    "DESCRIPTIONS": [
+      "Mottled Pot does not Exhaust."
+    ]
+  },
+  "DrawstringPotPower": {
+    "NAME": "Drawstring Pot",
+    "DESCRIPTIONS": [
+      "At the end of your turn, retain non-Ethereal Crude Drug cards."
+    ]
+  },
+  "LoseStrengthAtEndOfTurnPower": {
+    "NAME": "Kindling Rite",
+    "DESCRIPTIONS": [
+      "At the end of your turn, lose #b",
+      " #yStrength."
+    ]
+  },
+  "DragonHeadStonePower": {
+    "NAME": "Dragon Head Stone",
+    "DESCRIPTIONS": [
+      "All Attacks cost #b0 . NL All Skills cost #b1 more."
+    ]
+  },
+  "DoOrDieNextTurnPower": {
+    "NAME": "Do or Die",
+    "DESCRIPTIONS": [
+      "Next turn, you cannot play #ySkills, and #yAttacks you play are played twice."
+    ]
+  },
+  "DoOrDiePower": {
+    "NAME": "Do or Die",
+    "DESCRIPTIONS": [
+      "You cannot play #ySkills. NL #yAttacks you play are played twice."
+    ]
+  },
+  "PowerOfHouseMaraisPower": {
+    "NAME": "Power of House Marais",
+    "DESCRIPTIONS": [
+      "This card currently gains #b",
+      " #yStrength. Fatal permanently increases this value. Losing HP permanently decreases this value."
+    ]
+  },
+  "DowsingRodPower": {
+    "NAME": "Dowsing Rod",
+    "DESCRIPTIONS": [
+      "Enemies have a #b",
+      "% chance to drop an additional Rare card reward."
+    ]
+  },
+  "CaestusPower": {
+    "NAME": "Caestus",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yAttack card, gain #b",
+      " #yBlock."
+    ]
+  },
+  "StoneRingPower": {
+    "NAME": "Stone Ring",
+    "DESCRIPTIONS": [
+      "Every 3rd #yAttack card you play each turn additionally applies #b",
+      " #yPoise #yBreak to attacked enemies."
+    ]
+  },
+  "AssemblyLinePower": {
+    "NAME": "Assembly Line",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yRetain up to #b",
+      " material cards."
+    ]
+  },
+  "DuelistFurledFingerPower": {
+    "NAME": "Duelist's Furled Finger",
+    "DESCRIPTIONS": [
+      "This turn, whenever you play an #yAttack card, draw #b",
+      " card."
+    ]
+  },
+  "SmithboxPower": {
+    "NAME": "Smithbox",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " Ethereal and Exhaust *Craftman Hammer to your hand."
+    ]
+  },
+  "SpinningSlashPower": {
+    "NAME": "Spinning Slash",
+    "DESCRIPTIONS": [
+      "This turn, your #yAttack cards are put on top of your draw pile."
+    ]
+  },
+  "MushroomPower": {
+    "NAME": "Mushroom",
+    "DESCRIPTIONS": [
+      "Agaricomycetes",
+      "Agaricales",
+      "Auriculariales",
+      "Boletales",
+      "Cantharellales",
+      "Gomphales",
+      "Phallales",
+      "Polyporales",
+      "Russulales",
+      "Agaricaceae",
+      "Clavariaceae",
+      "Fistulinaceae",
+      "Hydnangiaceae",
+      "Hygrophoraceae",
+      "Mycenaceae",
+      "Pleurotaceae",
+      "Pluteaceae",
+      "Psathyrellaceae",
+      "Schizophyllaceae",
+      "Tricholomataceae",
+      "Pleurotus",
+      "Hohenbuehelia",
+      "Pleurotus citrinopileatus",
+      "Pleurotus dryinus",
+      "Pleurotus eryngii",
+      "Pleurotus tuber-regium",
+      "Pleurotus tuoliensis",
+      "Pleurotus ostreatus",
+      "Pleurotus pulmonarius",
+      "The universe approaches..."
+    ]
+  },
+  "SlimeMoldPower": {
+    "NAME": "Slime Mold",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, gain #yMushroom.",
+      "Whenever you play a card, gain #yMushroom once for each stack. Current stacks: #b",
+      "."
+    ]
+  },
+  "DestitutionAssistPower": {
+    "NAME": "Destitution Assist",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yFinal #yPlan card, gain #b",
+      " #yBlock."
+    ]
+  },
+  "PowerOfVengeancePower": {
+    "NAME": "Power of Vengeance",
+    "DESCRIPTIONS": [
+      "At the start of your turn, change your #yBlock to #b",
+      ". Fatal permanently increases this value. Losing HP permanently decreases this value."
+    ]
+  },
+  "AbyssSealPower": {
+    "NAME": "Abyss Seal",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain [E] .",
+      "At the start of your turn, gain #b",
+      " [E] ."
+    ]
+  },
+  "CrucibleCodexPower": {
+    "NAME": "Crucible Codex",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " *Crucible *Token to your hand."
+    ]
+  },
+  "BookOfRevelationPower": {
+    "NAME": "Book of Revelation",
+    "DESCRIPTIONS": [
+      "In #b",
+      " turns, lose #b99999 HP."
     ]
   }
 }

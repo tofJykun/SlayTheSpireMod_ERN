@@ -63,6 +63,34 @@
       " NL Vanishes at the end of combat."
     ]
   },
+  "CloudPotion": {
+    "NAME": "Cloud Potion",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yHover."
+    ]
+  },
+  "CocoaPotion": {
+    "NAME": "Cocoa Potion",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yVigor."
+    ]
+  },
+  "PearlPotion": {
+    "NAME": "Pearl Potion",
+    "DESCRIPTIONS": [
+      "Choose #b1 of #b3 random #ySmithing #ymaterial #ycards to add to your hand.",
+      "Choose #b1 of #b3 random #ySmithing #ymaterial #ycards. Add #b2 copies of it to your hand."
+    ]
+  },
+  "HeavyPotion": {
+    "NAME": "Heavy Potion",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yPoise #yBreak."
+    ]
+  },
   "DredgeMossClump": {
     "NAME": "Dredge Moss Clump",
     "DESCRIPTIONS": [

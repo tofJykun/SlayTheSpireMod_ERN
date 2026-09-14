@@ -14,6 +14,7 @@ import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 import powers.PumpkinHelmPower;
+import powers.PowerOfVengeancePower;
 import powers.SummonFrederick;
 import powers.UndeathPower;
 
@@ -43,11 +44,12 @@ public class PumpkinHelmBlockPatch {
                 public void edit(MethodCall m) throws CannotCompileException {
                     if ("com.megacrit.cardcrawl.characters.AbstractPlayer".equals(m.getClassName())
                             && "hasPower".equals(m.getMethodName())) {
-                        m.replace("$_ = $proceed($$) || (\"Barricade\".equals($1) && ("
-                                + "com.megacrit.cardcrawl.dungeons.AbstractDungeon.player != null && "
+                        m.replace("$_ = $proceed($$) || (\"Barricade\".equals($1) && "
+                                + "com.megacrit.cardcrawl.dungeons.AbstractDungeon.player != null && ("
                                 + "com.megacrit.cardcrawl.dungeons.AbstractDungeon.player.hasPower(\""
-                                + UndeathPower.POWER_ID + "\") || ("
-                                + "com.megacrit.cardcrawl.dungeons.AbstractDungeon.player != null && "
+                                + UndeathPower.POWER_ID + "\") || "
+                                + "powers.PowerOfVengeancePower.hasPowerOfVengeance("
+                                + "com.megacrit.cardcrawl.dungeons.AbstractDungeon.player) || ("
                                 + "com.megacrit.cardcrawl.dungeons.AbstractDungeon.player.hasPower(\""
                                 + PumpkinHelmPower.POWER_ID + "\") && "
                                 + "com.megacrit.cardcrawl.dungeons.AbstractDungeon.player.hasPower(\""

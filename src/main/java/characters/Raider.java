@@ -1,6 +1,7 @@
 package characters;
 
 import basemod.abstracts.CustomPlayer;
+import cards.raider.Club;
 import cards.raider.CraftmanHammer;
 import cards.raider.Defend_Raider;
 import cards.raider.Strike_Raider;
@@ -69,6 +70,7 @@ public class Raider extends CustomPlayer {
         retVal.add(Defend_Raider.ID);
         retVal.add(Defend_Raider.ID);
         retVal.add(CraftmanHammer.ID);
+        retVal.add(Club.ID);
         return retVal;
     }
 

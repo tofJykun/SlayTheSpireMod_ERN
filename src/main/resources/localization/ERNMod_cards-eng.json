@@ -21,16 +21,16 @@
   },
   "SmallShield": {
     "NAME": "Small Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Gain 1 Parry.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain 2 Parry."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Parry.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Parry."
   },
   "CrismonParma": {
     "NAME": "Crismon Parma",
-    "DESCRIPTION": "Gain Block equal to the number of cards in your discard pile. NL (Gain !B! Block.) NL Gain 1 Parry."
+    "DESCRIPTION": "Gain Block equal to the number of cards in your discard pile. NL (Gain !B! Block.) NL Gain !M! Parry."
   },
   "BlueWhiteWoodenShield": {
     "NAME": "Blue-White Wooden Shield",
-    "DESCRIPTION": "Gain Block equal to the number of cards in your draw pile. NL (Gain !B! Block.) NL Gain 1 Parry."
+    "DESCRIPTION": "Gain Block equal to the number of cards in your draw pile. NL (Gain !B! Block.) NL Gain !M! Parry."
   },
   "GrassCrestShield": {
     "NAME": "Grass Crest Shield",
@@ -83,6 +83,10 @@
     "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] .",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] ."
   },
+  "FarronTechniques": {
+    "NAME": "Farron Techniques",
+    "DESCRIPTION": "Draw !M! cards. NL Lose 1 Dexterity. NL At the end of your turn, gain 1 Dexterity."
+  },
   "CrowQuills": {
     "NAME": "Crow Quills",
     "DESCRIPTION": "Lose 2 Dexterity. At the end of your turn, gain 2 Dexterity. NL Return this card to your hand.",
@@ -103,8 +107,16 @@
   },
   "ManikinShield": {
     "NAME": "Manikin Shield",
-    "DESCRIPTION": "Gain 1 Parry. NL Retain your hand this turn.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Parry. NL Retain your hand this turn. NL Gain [E] next turn."
+    "DESCRIPTION": "Gain !M! Parry. NL Retain your hand this turn.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Parry. NL Retain your hand this turn. NL Gain [E] next turn."
+  },
+  "Valorheart": {
+    "NAME": "Valorheart",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Gain !M! Parry."
+  },
+  "FumeUltraGreatsword": {
+    "NAME": "Fume Ultra Greatsword",
+    "DESCRIPTION": "Deal !D! damage. NL If you have no Block, gain !B! Block."
   },
   "CeruleanDagger": {
     "NAME": "Cerulean Dagger",
@@ -115,6 +127,35 @@
     "NAME": "Wolf Greatshield",
     "DESCRIPTION": "Gain Block equal to enemy total damage. NL Exhaust."
   },
+  "WolfGreatsword": {
+    "NAME": "Wolf Greatsword",
+    "DESCRIPTION": "Deal the absolute value of !MD! damage. NL Each time this card is played, its value decreases by !M! this combat."
+  },
+    "WolfAssault": {
+      "NAME": "Wolf Assault",
+      "DESCRIPTION": "At the start of your turn, draw until your hand is full. NL You cannot draw any more cards this turn."
+    },
+    "Warmth": {
+      "NAME": "Warmth",
+      "DESCRIPTION": "This turn, whenever you play a card, gain [E]. NL Exhaust. NL Ethereal."
+    },
+    "AstoraGreatsword": {
+    "NAME": "Astora Greatsword",
+    "DESCRIPTION": "Deal !D! damage X times. NL Apply !M! Poise Break X times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage X+1 times. NL Apply !M! Poise Break X+1 times."
+  },
+    "GravelordSword": {
+      "NAME": "Gravelord Sword",
+      "DESCRIPTION": "Deal !D! damage. NL Add !M! *Dazed to your hand."
+    },
+    "GravelordSwordDance": {
+      "NAME": "Gravelord Sword Dance",
+      "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Fill your hand with *Dazed."
+    },
+    "SquareOff": {
+    "NAME": "Square Off",
+    "DESCRIPTION": " Exhaust 1 card from your hand. NL Draw !M! additional cards next turn."
+  },
   "Strike_Guardian": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -123,7 +164,7 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "Whirlwind": {
+  "GuardianWhirlwind": {
     "NAME": "Whirlwind",
     "DESCRIPTION": "Deal !D! damage 3 times."
   },
@@ -135,9 +176,34 @@
     "NAME": "Charge Forth",
     "DESCRIPTION": "Deal !D! damage. NL Draw !M! card(s). NL If you have Vigor, this card costs 0."
   },
+  "FeatherFan": {
+    "NAME": "Feather Fan",
+    "DESCRIPTION": "Deal damage equal to !M! times your Hover. NL (Deals !D! damage.)"
+  },
+  "WingedKnightHalberd": {
+    "NAME": "Winged Knight Halberd",
+    "DESCRIPTION": "Deal !D! damage. NL For every !M! Block you have, deal 7 additional damage."
+  },
+  "BlackKnightHalberd": {
+    "NAME": "Black Knight Halberd",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever this card is played, its base damage decreases by !M! this combat."
+  },
+  "SunlightStraightSword": {
+    "NAME": "Sunlight Straight Sword",
+    "DESCRIPTION": "Deal !D! damage. NL This card's damage cannot be lower than the damage it had when previously played this combat."
+  },
+  "GoldenHalberd": {
+    "NAME": "Golden Halberd",
+    "DESCRIPTION": "Deal !D! damage. NL For every !M! Block you have, gain 1 [E] ."
+  },
   "Bonewheel": {
     "NAME": "Bonewheel",
     "DESCRIPTION": "Deal !D! damage !M! times."
+  },
+  "SplitleafGreatsword": {
+    "NAME": "Splitleaf Greatsword",
+    "DESCRIPTION": "Deal !D! damage X times. NL Gain X Hover.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage X+1 times. NL Gain X+1 Hover."
   },
   "SpikedShield": {
     "NAME": "Spiked Shield",
@@ -146,6 +212,49 @@
   "BarricadeShield": {
     "NAME": "Barricade Shield",
     "DESCRIPTION": "When you Perfect Guard, apply !M! Poise Break to the attacker."
+  },
+  "Preening": {
+    "NAME": "Preening",
+    "DESCRIPTION": "At the start of your turn, gain Vigor equal to your Hover.",
+    "UPGRADE_DESCRIPTION": " Innate. NL At the start of your turn, gain Vigor equal to your Hover."
+  },
+  "PurpleSign": {
+    "NAME": "Purple Sign",
+    "DESCRIPTION": "Choose 1 of 3 random Recluse cards to add to your hand. It costs 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 random Upgraded Recluse cards to add to your hand. It costs 0 this turn."
+  },
+  "Stormcaller": {
+    "NAME": "Stormcaller",
+    "DESCRIPTION": "Gain !M! Hover. NL The next time your Hover reaches 0, you cannot play cards next turn."
+  },
+  "CallLightning": {
+    "NAME": "Call Lightning",
+    "DESCRIPTION": "At the end of your turn, deal !M! damage to ALL enemies. NL Lofty: also deal !M! damage to yourself.",
+    "UPGRADE_DESCRIPTION": " Innate. NL At the end of your turn, deal !M! damage to ALL enemies. NL Lofty: also deal !M! damage to yourself."
+  },
+  "Brightbug": {
+    "NAME": "Brightbug",
+    "DESCRIPTION": "At the start of each turn, gain !M! Vigor."
+  },
+  "Cyclone": {
+    "NAME": "Cyclone",
+    "DESCRIPTION": "Double your Hover and Soar. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple your Hover and Soar. NL Exhaust."
+  },
+  "ForcedLanding": {
+    "NAME": "Forced Landing",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Lose !M! Hover.",
+    "EXTENDED_DESCRIPTION": [
+      "Requires at least 3 Hover."
+    ]
+  },
+  "KineticBombardment": {
+    "NAME": "Kinetic Bombardment",
+    "DESCRIPTION": "For every !M! Hover you have, deal 10% additional damage."
+  },
+  "GowerRingOfProtection": {
+    "NAME": "Gower Ring of Protection",
+    "DESCRIPTION": "Damage you take is reduced by 50%. NL At the start of each turn, gain 1 less [E] ."
   },
   "Strike_Ironeye": {
     "NAME": "Strike",
@@ -183,6 +292,152 @@
     "NAME": "Ceruleanwhorl Bubble",
     "DESCRIPTION": "You may play your next card for free. NL Gain [E] equal to its cost."
   },
+  "PharrosLockstone": {
+    "NAME": "Pharros' Lockstone",
+    "DESCRIPTION": "Gain !M! Arcane."
+  },
+  "PortableShop": {
+    "NAME": "Portable Shop",
+    "DESCRIPTION": "Lose 5 Gold. NL Choose 1 of 3 random Colorless cards to add to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Lose 5 Gold. NL Choose 1 of 3 random Colorless cards to add to your hand."
+  },
+  "RustedCoin": {
+    "NAME": "Rusted Coin",
+    "DESCRIPTION": "Lose 5 Gold. NL Gain !M! Arcane. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Lose 5 Gold. NL Gain !M! Arcane.",
+    "EXTENDED_DESCRIPTION": [
+      "Not enough Gold."
+    ]
+  },
+  "DeadOrAlive": {
+    "NAME": "Dead or Alive",
+    "DESCRIPTION": "If the target enemy's HP is less than or equal to your Gold, lose Gold equal to its HP and set its HP to 0.",
+    "UPGRADE_DESCRIPTION": " Retain. NL If the target enemy's HP is less than or equal to your Gold, lose Gold equal to its HP and set its HP to 0.",
+    "EXTENDED_DESCRIPTION": [
+      "Not enough Gold."
+    ]
+  },
+  "Barter": {
+    "NAME": "Barter",
+    "DESCRIPTION": "Lose a random potion. NL Gain a random common, uncommon, or rare relic. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Lose a random potion. NL Gain a random common, uncommon, or rare relic. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "No potion."
+    ]
+  },
+  "RustedGoldCoin": {
+    "NAME": "Rusted Gold Coin",
+    "DESCRIPTION": "Normal enemies have a !M!% chance to drop a common, uncommon, or rare relic."
+  },
+  "VendingMachine": {
+    "NAME": "Vending Machine",
+    "DESCRIPTION": "Lose !M! Gold. NL Gain a random potion in each empty potion slot. NL Exhaust."
+  },
+  "BitComet": {
+    "NAME": "BitComet",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply !M! Weak. NL Gain 10 Virtual Currency."
+  },
+  "ShieldOfWant": {
+    "NAME": "Shield of Want",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Virtual Currency."
+  },
+  "Lifegem": {
+    "NAME": "Lifegem",
+    "DESCRIPTION": "For the next !M! turns, NL gain [E] at the start of your turn."
+  },
+  "Plunder": {
+    "NAME": "Plunder",
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! *Lottery *Ticket to your hand."
+  },
+  "BillPlease": {
+    "NAME": "Bill, Please",
+    "DESCRIPTION": "Lose !M! Gold. NL Gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Lose !M! Gold. NL Gain [E] [E] [E] .",
+    "EXTENDED_DESCRIPTION": [
+      "Not enough Gold."
+    ]
+  },
+  "MidasTouch": {
+    "NAME": "Midas Touch",
+    "DESCRIPTION": " Exhaust 1 card in your hand. NL Gain !M! Virtual Currency."
+  },
+  "LoyaltyCard": {
+    "NAME": "Loyalty Card",
+    "DESCRIPTION": "Whenever you lose Token, gain Block equal to the amount lost."
+  },
+  "PlatinumCard": {
+    "NAME": "Platinum Card",
+    "DESCRIPTION": "Gain !M! Virtual Currency. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Virtual Currency."
+  },
+  "GhostMillstone": {
+    "NAME": "Ghost Millstone",
+    "DESCRIPTION": "For every !M! Virtual Currency you have, deal 1 damage to ALL enemies. NL (Deals !D! damage.)"
+  },
+  "GhostBlade": {
+    "NAME": "Ghost Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Fatal: Gain !M! Arcane. NL Exhaust."
+  },
+  "GoughGreatbow": {
+    "NAME": "Gough Greatbow",
+    "DESCRIPTION": " Stun ALL enemies for 1 turn. NL Exhaust."
+  },
+  "RainOfArrows": {
+    "NAME": "Rain of Arrows",
+    "DESCRIPTION": "Deal !D! damage. NL Randomly play !M! Attack card(s) from your draw pile."
+  },
+  "DivineSpear": {
+    "NAME": "Divine Spear",
+    "DESCRIPTION": "Deal !D! damage. NL For each Rare card in your deck, deal !M! additional damage."
+  },
+  "Usury": {
+    "NAME": "Usury",
+    "DESCRIPTION": "At the start of your turn, for every !MD! Virtual Currency you have, gain 1 Virtual Currency.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Virtual Currency. NL At the start of your turn, for every !MD! Virtual Currency you have, gain 1 Virtual Currency."
+  },
+  "Bounty": {
+    "NAME": "Bounty",
+    "DESCRIPTION": "Play all Power cards in your draw pile. NL Lose !M! Gold for each card played. NL Exhaust."
+  },
+  "OldRadiantLifegem": {
+    "NAME": "Old Radiant Lifegem",
+    "DESCRIPTION": "Gain !M! [E] ."
+  },
+  "GoldPickledFowlFoot": {
+    "NAME": "Gold-Pickled Fowl Foot",
+    "DESCRIPTION": "Enemy Gold drops are increased by !M!%."
+  },
+  "SilverPickledFowlFoot": {
+    "NAME": "Silver-Pickled Fowl Foot",
+    "DESCRIPTION": "Enemies have a !M!% chance to drop an additional card reward."
+  },
+  "BlackClawAssistant": {
+    "NAME": "Black Claw Assistant",
+    "DESCRIPTION": "Cards you play will be Upgraded for this combat.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Cards you play will be Upgraded for this combat."
+  },
+  "SnakeSlough": {
+    "NAME": "Snake Slough",
+    "DESCRIPTION": "Whenever you Transform a card, gain !M! Block."
+  },
+  "Fluctuation": {
+    "NAME": "Fluctuation",
+    "DESCRIPTION": "At the start of each turn, you may choose !M! card in your hand to Transform.",
+    "UPGRADE_DESCRIPTION": " Innate. NL At the start of each turn, you may choose !M! card in your hand to Transform."
+  },
+  "HeatUp": {
+    "NAME": "Heat Up",
+    "DESCRIPTION": " Retain. NL Transform all cards in your hand."
+  },
+  "Entropy": {
+    "NAME": "Entropy",
+    "DESCRIPTION": "Deal damage to ALL enemies equal to !M! times the number of cards you have Transformed this combat."
+  },
+  "FragrantBranchOfYore": {
+    "NAME": "Fragrant Branch of Yore",
+    "DESCRIPTION": "Gain 1 additional card reward after combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Gain 1 additional card reward after combat. NL Exhaust."
+  },
   "Strike_Raider": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -201,9 +456,47 @@
   },
   "BloodWall": {
     "NAME": "Blood Wall",
-    "DESCRIPTION": "Gain 3 Grey Health. NL Gain !B! Block.",
+    "DESCRIPTION": "Gain 2 Grey Health. NL Gain !B! Block.",
     "EXTENDED_DESCRIPTION": [
-      "Gain 3 Grey Health+. NL Gain !B! Block."
+      "Gain 2 Grey Health+. NL Gain !B! Block."
+    ]
+  },
+  "PierceShield": {
+    "NAME": "Pierce Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card(s). NL If you have Grey Health or Grey Health+, draw 1 additional card."
+  },
+  "BlessedDew": {
+    "NAME": "Blessed Dew",
+    "DESCRIPTION": "At the start of your turn, lose !M! Grey Health.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, lose !M! Grey Health.",
+    "EXTENDED_DESCRIPTION": [
+      "At the start of your turn, lose !M! Grey Health+.",
+      "At the start of your turn, lose !M! Grey Health+."
+    ]
+  },
+  "GreatClub": {
+    "NAME": "Great Club",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poise Break. NL At the start of your next turn, lose !MS! Grey Health.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Poise Break. NL At the start of your next turn, lose !MS! Grey Health.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage. NL Apply !M! Poise Break. NL At the start of your next turn, lose !MS! Grey Health+.",
+      "Deal !D! damage. NL Apply !M! Poise Break. NL At the start of your next turn, lose !MS! Grey Health+."
+    ]
+  },
+  "Masterwork": {
+    "NAME": "Masterwork",
+    "DESCRIPTION": "Whenever you Smith, lose !M! Grey Health.",
+    "UPGRADE_DESCRIPTION": "Whenever you Smith, lose !M! Grey Health.",
+    "EXTENDED_DESCRIPTION": [
+      "Whenever you Smith, lose !M! Grey Health+.",
+      "Whenever you Smith, lose !M! Grey Health+."
+    ]
+  },
+  "Siegbrau": {
+    "NAME": "Siegbrau",
+    "DESCRIPTION": "Retain. NL Lose !M! Grey Health. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Retain. NL Lose !M! Grey Health+. NL Exhaust."
     ]
   },
   "BloodDebt": {
@@ -220,6 +513,14 @@
     "DESCRIPTION": "Lose all Grey Health and Grey Health+. NL Exhaust.",
     "UPGRADE_DESCRIPTION": " Retain. NL Lose all Grey Health and Grey Health+. NL Exhaust."
   },
+  "BlueTearstoneRing": {
+    "NAME": "Blue Tearstone Ring",
+    "DESCRIPTION": "The next time at the end of your turn or at the end of combat, if your Grey Health or Grey Health+ is greater than or equal to your HP, reduce your Grey Health or Grey Health+ to 50%."
+  },
+  "RedTearstoneRing": {
+    "NAME": "Red Tearstone Ring",
+    "DESCRIPTION": "At the start of your turn, if your Grey Health or Grey Health+ is greater than or equal to your HP, all of your attack damage is doubled."
+  },
   "BleedStone": {
     "NAME": "Bleed Stone",
     "DESCRIPTION": "Cannot be played. NL Remove up to !M! Grey Health and Grey Health+.",
@@ -229,7 +530,7 @@
   },
   "Boltstone": {
     "NAME": "Boltstone",
-    "DESCRIPTION": "Cannot be played. NL Take 3 damage. NL Deal !D! damage.",
+    "DESCRIPTION": "Retain. NL Cannot be played. NL Take 3 damage. NL Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "Cannot be played."
     ]
@@ -243,29 +544,113 @@
   },
   "FiredrakeStone": {
     "NAME": "Firedrake Stone",
-    "DESCRIPTION": "Cannot be played. NL Deal !D! damage. NL Apply !M! Poise Break.",
+    "DESCRIPTION": "Cannot be played. NL Deal !D! damage. NL Apply !M! Poise Break. NL Ethereal.",
     "EXTENDED_DESCRIPTION": [
       "Cannot be played."
     ]
   },
   "DarknightStone": {
     "NAME": "Darknight Stone",
-    "DESCRIPTION": "Cannot be played. NL Apply !M! Weak and Vulnerable to ALL enemies.",
+    "DESCRIPTION": "Cannot be played. NL Apply !M! Weak and Vulnerable to ALL enemies. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Cannot be played."
+    ]
+  },
+  "PrelateCharge": {
+    "NAME": "Prelate's Charge",
+    "DESCRIPTION": "Deal !D! damage X times. NL Draw 2X cards. NL If you have at least !M! Grey Health, gain [E].",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage X times. NL Draw 2X cards. NL If you have at least !M! Grey Health+, gain [E]."
+    ]
+  },
+  "DemonGreatHammer": {
+    "NAME": "Demon's Great Hammer",
+    "DESCRIPTION": "Deal !D! damage. NL Choose !M! card in your hand to Transform."
+  },
+  "BloodforgedSword": {
+    "NAME": "Bloodforged Sword",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Grey Health. NL Smith this card with a random Smithing material.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage. NL Gain !M! Grey Health+. NL Smith this card with a random Smithing material."
     ]
   },
   "Pickaxe": {
     "NAME": "Pickaxe",
     "DESCRIPTION": "Deal !D! damage. NL Apply 2 Poise Break."
   },
+  "Club": {
+    "NAME": "Club",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poise Break.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Poise Break."
+  },
+  "FourProngedPlow": {
+    "NAME": "Four-Pronged Plow",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !MS! Grey Health. NL Draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !MS! Grey Health. NL Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage. NL Gain !MS! Grey Health+. NL Draw !M! cards.",
+      "Deal !D! damage. NL Gain !MS! Grey Health+. NL Draw !M! cards."
+    ]
+  },
+  "ForkedHatchet": {
+    "NAME": "Forked Hatchet",
+    "DESCRIPTION": "Deal !D! damage. NL Put this card on top of the draw pile."
+  },
+  "StormRuler": {
+    "NAME": "Storm Ruler",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !MX! Poise Break. NL If the target enemy has at least !M! Health, additionally apply !MX! Poise Break."
+  },
+  "Stagger": {
+    "NAME": "Stagger",
+    "DESCRIPTION": "Gain [E] [E] [E]. NL Draw !M! cards. NL At the start of your turn, gain !MS! Grey Health. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Draw !M! cards. NL At the start of your turn, gain !MS! Grey Health. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Gain [E] [E] [E]. NL Draw !M! cards. NL At the start of your turn, gain !MS! Grey Health+. NL Exhaust."
+    ]
+  },
+  "FightThrough": {
+    "NAME": "Fight Through",
+    "DESCRIPTION": "At the start of your turn, gain !MS! Grey Health and draw !M! cards.",
+    "UPGRADE_DESCRIPTION": " Innate. NL At the start of your turn, gain !MS! Grey Health and draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "At the start of your turn, gain !MS! Grey Health+ and draw !M! cards.",
+      " Innate. NL At the start of your turn, gain !MS! Grey Health+ and draw !M! cards."
+    ]
+  },
+  "EarthSeeker": {
+    "NAME": "Earth Seeker",
+    "DESCRIPTION": "Deal !D! damage. NL At the start of your turn, if this card is in the Exhaust pile, play this card. NL Exhaust."
+  },
+  "LargeClub": {
+    "NAME": "Large Club",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL Gain !MS! Grey Health. NL Draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL Gain !MS! Grey Health. NL Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage to ALL enemies twice. NL Gain !MS! Grey Health+. NL Draw !M! cards.",
+      "Deal !D! damage to ALL enemies twice. NL Gain !MS! Grey Health+. NL Draw !M! cards."
+    ]
+  },
+  "HammerTime": {
+    "NAME": "Hammer Time",
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! Ethereal and Exhaust *Craftman Hammer to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add !M! Ethereal and Exhaust *Craftman Hammer+ to your hand."
+  },
+  "MurkyHandScythe": {
+    "NAME": "Murky Hand Scythe",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL *Craftman Creation forged with this card costs 0.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL *Craftman Creation forged with this card costs 0."
+  },
+  "StormKick": {
+    "NAME": "Storm Kick",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !MX! Poise Break. NL Scheduled !M!."
+  },
   "Kick": {
     "NAME": "Kick",
-    "DESCRIPTION": "Deal !D! damage. NL When you draw this card, play it automatically."
+    "DESCRIPTION": "Deal !D! damage. NL If you have played fewer than 999 cards this turn, play this card automatically when drawn."
   },
   "RawStone": {
     "NAME": "Raw Stone",
-    "DESCRIPTION": "Cannot be played. NL Deal !D! damage.",
+    "DESCRIPTION": "Cannot be played. NL Deal !D! damage. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Cannot be played."
     ]
@@ -312,6 +697,89 @@
       "Cannot be played."
     ]
   },
+  "DragonTorsoStone": {
+    "NAME": "Dragon Torso Stone",
+    "DESCRIPTION": "Transform all Attacks in your hand into *Dragon #yPunch.",
+    "UPGRADE_DESCRIPTION": "Transform all Attacks in your hand into *Dragon #yPunch+."
+  },
+  "DragonHeadStone": {
+    "NAME": "Dragon Head Stone",
+    "DESCRIPTION": "All Attacks cost 0. NL All Skills cost 1 more."
+  },
+  "DoOrDie": {
+    "NAME": "Do or Die",
+    "DESCRIPTION": "Next turn, you cannot play Skills, and Attacks you play are played twice."
+  },
+  "DowsingRod": {
+    "NAME": "Dowsing Rod",
+    "DESCRIPTION": "Enemies have a !M!% chance to drop an additional Rare card reward. NL Exhaust."
+  },
+  "TotemStela": {
+    "NAME": "Totem Stela",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You take !M!% less damage this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL You take !M!% less damage this turn."
+  },
+  "AcidSurge": {
+    "NAME": "Acid Surge",
+    "DESCRIPTION": "Exhaust a *Craftman #yCreation. NL Enemy loses !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a Craftman Creation to Exhaust.",
+      "Requires a Craftman Creation."
+    ]
+  },
+  "PowerOfHouseMarais": {
+    "NAME": "Power of House Marais",
+    "DESCRIPTION": "Gain !M! Strength. NL Fatal: permanently increase this card's value by 5 this run. NL When you lose HP, permanently decrease this card's value by 1 this run."
+  },
+  "Caestus": {
+    "NAME": "Caestus",
+    "DESCRIPTION": "Whenever you play an Attack card, gain !M! Block."
+  },
+  "StoneRing": {
+    "NAME": "Stone Ring",
+    "DESCRIPTION": "Every 3rd Attack card you play each turn additionally applies !M! Poise Break to attacked enemies."
+  },
+  "AssemblyLine": {
+    "NAME": "Assembly Line",
+    "DESCRIPTION": "At the end of your turn, Retain up to !M! material cards."
+  },
+  "CourtesyEnough": {
+    "NAME": "Courtesy Enough",
+    "DESCRIPTION": "Cannot be played. NL If this card is Exhausted, NL gain !M! Strength, NL gain !M! Dexterity.",
+    "EXTENDED_DESCRIPTION": [
+      "Cannot be played."
+    ],
+    "UPGRADE_DESCRIPTION": "Cannot be played. NL If this card is Exhausted, NL gain !M! Strength, NL gain !M! Dexterity."
+  },
+  "BoneFist": {
+    "NAME": "Bone Fist",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a non-0-cost Attack card, return this card from your discard pile to your hand."
+  },
+  "HandAxe": {
+    "NAME": "Hand Axe",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL Next turn, if this card is in your draw pile or discard pile, return it to your hand."
+  },
+  "DuelistFurledFinger": {
+    "NAME": "Duelist's Furled Finger",
+    "DESCRIPTION": "This turn, whenever you play an Attack card, draw !M! card. NL Exhaust."
+  },
+  "Smithbox": {
+    "NAME": "Smithbox",
+    "DESCRIPTION": "At the start of your turn, add !M! Ethereal and Exhaust *Craftman Hammer to your hand."
+  },
+  "SpinningSlash": {
+    "NAME": "Spinning Slash",
+    "DESCRIPTION": "Deal !D! damage. NL This turn, your Attack cards are put on top of your draw pile. (Only cards that would move to the discard pile.)"
+  },
+  "DullEmber": {
+    "NAME": "Dull Ember",
+    "DESCRIPTION": " *Strike deals !M! additional damage. NL *Defend gains !M! additional Block."
+  },
+  "MoonOfNokstella": {
+    "NAME": "Moon of Nokstella",
+    "DESCRIPTION": " *Craftman #yCreation costs 1 less.",
+    "UPGRADE_DESCRIPTION": " Innate. NL  *Craftman #yCreation costs 1 less."
+  },
   "OldMundaneStone": {
     "NAME": "Old Mundane Stone",
     "DESCRIPTION": "Cannot be played. NL Draw !M! cards.",
@@ -346,16 +814,59 @@
     "NAME": "Prism Stone",
     "DESCRIPTION": "Add 1 random Smithing material card to your hand."
   },
+  "CatarinaRoundMoon": {
+    "NAME": "Catarina Round Moon",
+    "DESCRIPTION": "At the start of your next turn, lose all Grey Health and Grey Health+, then deal damage equal to the total stacks lost to ALL enemies. NL Exhaust."
+  },
+  "Insurance": {
+    "NAME": "Insurance",
+    "DESCRIPTION": "Choose a card in your hand. Whenever it is Exhausted, return it to your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to insure."
+    ]
+  },
+  "Dismantle": {
+    "NAME": "Dismantle",
+    "DESCRIPTION": "Exhaust 1 card from your hand. NL Add 1 random Reinforcement material card to your hand."
+  },
   "BloodfiendArm": {
     "NAME": "Bloodfiend Arm",
     "DESCRIPTION": "Deal !D! damage. NL Apply 2 Poise Break. NL Apply !M! Bloodloss."
   },
+  "VordtGreatHammer": {
+    "NAME": "Vordt's Great Hammer",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you take unblocked damage this turn, gain !M! [E] next turn."
+  },
+  "GiantCrusher": {
+    "NAME": "Giant Crusher",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable."
+  },
   "DuelistGreataxe": {
     "NAME": "Duelist Greataxe",
-    "DESCRIPTION": "Deal !D! damage. NL If your Grey Health is 6 or higher, play this card 1 additional time.",
+    "DESCRIPTION": "Deal !D! damage. NL If your Grey Health is 4 or higher, play this card 1 additional time.",
     "EXTENDED_DESCRIPTION": [
-      "Deal !D! damage. NL If your Grey Health+ is 6 or higher, play this card 1 additional time."
+      "Deal !D! damage. NL If your Grey Health+ is 4 or higher, play this card 1 additional time."
     ]
+  },
+  "WingedKnightTwinaxes": {
+    "NAME": "Winged Knight Twinaxes",
+    "DESCRIPTION": "Deal !D! damage 2 times. NL Replay !M!. NL Each time this card is played, its Replay increases by 1 this combat."
+  },
+  "WarMateriel": {
+    "NAME": "War Materiel",
+    "DESCRIPTION": "At the start of your next turn, gain [E] and choose !M! Attack cards from your discard pile to put into your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose Attack cards from your discard pile."
+    ]
+  },
+  "ExpectAFight": {
+    "NAME": "Expect a Fight",
+    "DESCRIPTION": "Gain 1 [E] for each Attack in your hand. NL (Gain !M! [E].) NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 1 [E] for each Attack in your hand. NL (Gain !M! [E].)"
+  },
+  "DragonPunch": {
+    "NAME": "Dragon Punch",
+    "DESCRIPTION": "Deal !D! damage."
   },
   "Strike_Duchess": {
     "NAME": "Strike",
@@ -378,13 +889,61 @@
     "NAME": "Mortgage",
     "DESCRIPTION": "Gain !M! Gold. NL Lose 1 Strength, NL Lose 1 Dexterity."
   },
+  "NoMoney": {
+    "NAME": "No Money",
+    "DESCRIPTION": "Gain !B! Block. NL Gain Mushroom."
+  },
+  "SlimeMold": {
+    "NAME": "Slime Mold",
+    "DESCRIPTION": "Whenever you play a card, gain Mushroom. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a card, gain Mushroom."
+  },
   "SellswordTwinblades": {
     "NAME": "Sellsword Twinblades",
     "DESCRIPTION": "Deal !D! damage 2 times. NL Replay 2."
   },
+  "Darkdrift": {
+    "NAME": "Darkdrift",
+    "DESCRIPTION": "Deal !D! damage. NL Replay 1."
+  },
+  "ScavengerCurvedSword": {
+    "NAME": "Scavenger Curved Sword",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Replay 1."
+  },
+  "BladeOfCalling": {
+    "NAME": "Blade of Calling",
+    "DESCRIPTION": "Cannot be played. NL Deal !D! damage. NL Whenever the target enemy takes unblocked damage, apply !MS! Bloodburn to it. NL Scheduled !M! .",
+    "EXTENDED_DESCRIPTION": [
+      "Cannot be played."
+    ]
+  },
+  "BewitchingBranch": {
+    "NAME": "Bewitching Branch",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL If there are 3 or more enemies, play this card repeatedly until an enemy dies. NL Exhaust."
+  },
+  "StormCurvedSword": {
+    "NAME": "Storm Curved Sword",
+    "DESCRIPTION": "Deal !D! damage twice. NL Gain !M! Vigor."
+  },
   "CeruleanburstCrystal": {
     "NAME": "Ceruleanburst Crystal",
     "DESCRIPTION": "Whenever you play 10 cards, gain [E] ."
+  },
+  "CrystalEnchanted": {
+    "NAME": "Crystal Enchanted",
+    "DESCRIPTION": "Gain !MD! Strength. NL Gain !MD! Dexterity. NL Every time you play !M! cards in a single turn, lose 1 Strength and 1 Dexterity for that turn."
+  },
+  "WindyCrystal": {
+    "NAME": "Windy Crystal",
+    "DESCRIPTION": "Whenever you play 10 cards, draw !M! card."
+  },
+  "FlowingTechniques": {
+    "NAME": "Flowing Techniques",
+    "DESCRIPTION": "If you play 6 or more cards in a turn, draw !M! additional card(s) next turn."
+  },
+  "HornetRing": {
+    "NAME": "Hornet Ring",
+    "DESCRIPTION": "Deal !M! % additional damage to enemies whose intent is attacking."
   },
   "WildStrikes": {
     "NAME": "Wild Strikes",
@@ -394,9 +953,18 @@
       "Cannot be played with X equal to 0."
     ]
   },
+  "DancerEnchantedSwords": {
+    "NAME": "Dancer's Enchanted Swords",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Scheduled !M! ."
+  },
   "ChillingMist": {
     "NAME": "Chilling Mist",
     "DESCRIPTION": "Apply !M! Frostbite to ALL enemies."
+  },
+  "DarkWoodGrain": {
+    "NAME": "Dark Wood Grain",
+    "DESCRIPTION": "Whenever you reset a card with Scheduled 3 or more, reduce that card's count by 1. NL Cannot reduce below 2.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Whenever you reset a card with Scheduled 3 or more, reduce that card's count by 1. NL Cannot reduce below 2."
   },
   "Strike_Executor": {
     "NAME": "Strike",
@@ -416,7 +984,11 @@
   },
   "BlackFlameTornado": {
     "NAME": "Black Flame Tornado",
-    "DESCRIPTION": "Apply !M! Bloodburn to ALL enemies. For each enemy currently at or above 50% HP, play this an additional time. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Bloodburn to ALL enemies. NL For each enemy currently at or above 50% HP, play this an additional time. NL Exhaust."
+  },
+  "Metastasis": {
+    "NAME": "Metastasis",
+    "DESCRIPTION": "Apply !M! Bloodburn. NL Put a copy of this card that costs 0 into your draw pile."
   },
   "BlackFlameRitual": {
     "NAME": "Black Flame Ritual",
@@ -425,6 +997,14 @@
   "BlackFlameBlade": {
     "NAME": "Black Flame Blade",
     "DESCRIPTION": "Whenever an attack deals unblocked damage, apply !M! Bloodburn."
+  },
+  "DarkBlood": {
+    "NAME": "Dark Blood",
+    "DESCRIPTION": "Whenever you apply a negative Status to an enemy, gain !M! Block."
+  },
+  "DeathPoker": {
+    "NAME": "Death Poker",
+    "DESCRIPTION": "Deal !D! damage. NL Add 1 Revenant *Ghostflame *Ignition to your hand."
   },
   "LetFeastBegin": {
     "NAME": "Let Feast Begin",
@@ -449,6 +1029,10 @@
     "DESCRIPTION": "Transform your Frostbite into Vulnerable, Sleep into Frail, and Madness and Bloodloss into Weak.",
     "UPGRADE_DESCRIPTION": " Retain. NL Transform your Frostbite into Vulnerable, Sleep into Frail, and Madness and Bloodloss into Weak."
   },
+  "EmitForce": {
+    "NAME": "Emit Force",
+    "DESCRIPTION": "Gain !M! Metallicize. NL Apply !M! Metallicize to an enemy."
+  },
   "RiversOfBlood": {
     "NAME": "Rivers of Blood",
     "DESCRIPTION": "Apply 5 Bloodloss. NL Apply !M! Bloodloss to yourself."
@@ -460,6 +1044,15 @@
   "HoarfrostStomp": {
     "NAME": "Hoarfrost Stomp",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Frostbite."
+  },
+  "InfectionStrike": {
+    "NAME": "Infection Strike",
+    "DESCRIPTION": "Deal !D! damage. NL The next !M! debuff the enemy receives is also applied to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next !M! debuff the enemy receives is also applied to ALL enemies."
+  },
+  "CrossInfection": {
+    "NAME": "Cross Infection",
+    "DESCRIPTION": "Apply all debuffs on this enemy to ALL enemies."
   },
   "FrenziedBurst": {
     "NAME": "Frenzied Burst",
@@ -479,15 +1072,41 @@
     "NAME": "Bloodhound's Fang",
     "DESCRIPTION": "Deal !D! damage. NL Apply 3 Bloodloss."
   },
+  "ChaosBlade": {
+    "NAME": "Chaos Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Apply 2 random Aberration to yourself."
+  },
   "Seppuku": {
     "NAME": "Seppuku",
     "DESCRIPTION": "Gain [E] [E] . NL Apply 4 random Aberration to yourself.",
     "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] . NL Apply 4 random Aberration to yourself."
   },
+  "DungPie": {
+    "NAME": "Dung Pie",
+    "DESCRIPTION": "Apply 3 Poison to yourself. NL Apply !M! Poison."
+  },
   "AriandelBlood": {
     "NAME": "Blood of Ariandel",
     "DESCRIPTION": "Permanently lose 1 Max HP. NL Gain [E] [E] . NL Draw 2 cards. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Permanently lose 1 Max HP. NL Gain [E] [E] . NL Draw 2 cards."
+  },
+  "OrderBlade": {
+    "NAME": "Order Blade",
+    "DESCRIPTION": "Deal !D! damage. NL For each debuff the enemy has, deal !D! additional damage."
+  },
+  "Expose": {
+    "NAME": "Expose",
+    "DESCRIPTION": "Remove all Block and Artifact from an enemy. NL Apply !M! Vulnerable. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Remove all Block and Artifact from an enemy. NL Apply !M! Vulnerable. NL Exhaust."
+  },
+  "FreezingMist": {
+    "NAME": "Freezing Mist",
+    "DESCRIPTION": "At the start of your turn, apply !M! Frostbite to ALL enemies."
+  },
+  "GammaKnife": {
+    "NAME": "Gamma Knife",
+    "DESCRIPTION": "Remove all debuffs from yourself. NL For each debuff removed, gain 1 [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Remove all debuffs from yourself. NL For each debuff removed, gain 1 [E]. NL Exhaust."
   },
   "Strike_Revenant": {
     "NAME": "Strike",
@@ -520,13 +1139,92 @@
       "Can only be played while you have Summon."
     ]
   },
+  "Immolation": {
+    "NAME": "Immolation",
+    "DESCRIPTION": "When you are attacked, if you have Summon, the attacker loses HP equal to the blocked damage.",
+    "UPGRADE_DESCRIPTION": " Innate. NL When you are attacked, if you have Summon, the attacker loses HP equal to the blocked damage."
+  },
+  "Initiative": {
+    "NAME": "Initiative",
+    "DESCRIPTION": "Whenever you Summon, NL deal !M! damage to a random enemy."
+  },
+  "GhostflameIgnition": {
+    "NAME": "Ghostflame Ignition",
+    "DESCRIPTION": "At the start of your turn, apply !M! Frostbite to ALL enemies."
+  },
   "LightningRam": {
     "NAME": "Lightning Ram",
     "DESCRIPTION": "Deal !D! Thaumaturgy damage 2X times."
   },
+  "BeastClaw": {
+    "NAME": "Beast Claw",
+    "DESCRIPTION": "Deal !D! Thaumaturgy damage !M! times."
+  },
+  "LeadingStrike": {
+    "NAME": "Leading Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Randomly Basic Summon."
+  },
+  "CursedClaws": {
+    "NAME": "Cursed Claws",
+    "DESCRIPTION": "Final Plan. NL Deal !D! damage. NL Increase the damage of all *Cursed *Claws cards by !M! this combat.",
+    "EXTENDED_DESCRIPTION": [
+      "Requires 0 Energy."
+    ]
+  },
+  "GhizaWheel": {
+    "NAME": "Ghiza's Wheel",
+    "DESCRIPTION": "Gain 3 Spirit this turn. NL Apply !M! Weak and Vulnerable to all enemies."
+  },
+  "VisageShield": {
+    "NAME": "Visage Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! Thaumaturgy damage to ALL enemies."
+  },
+  "GreatEpee": {
+    "NAME": "Great Epee",
+    "DESCRIPTION": "Final Plan. NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "Requires 0 Energy."
+    ]
+  },
+  "StarlightShards": {
+    "NAME": "Starlight Shards",
+    "DESCRIPTION": "Final Plan. NL Gain [E] . NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Final Plan. NL Gain [E] [E] . NL Draw !M! card.",
+    "EXTENDED_DESCRIPTION": [
+      "Requires 0 Energy."
+    ]
+  },
+  "WantThis": {
+    "NAME": "Want This OvO",
+    "DESCRIPTION": "Final Plan. NL Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "Requires 0 Energy."
+    ]
+  },
+  "Climax": {
+    "NAME": "Climax",
+    "DESCRIPTION": "Final Plan. NL All of your attack damage is doubled this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Final Plan. NL All of your attack damage is doubled this turn.",
+    "EXTENDED_DESCRIPTION": [
+      "Requires 0 Energy."
+    ]
+  },
+  "DestitutionAssist": {
+    "NAME": "Destitution Assist",
+    "DESCRIPTION": "Whenever you play a Final Plan card, gain !M! Block."
+  },
+  "PowerOfVengeance": {
+    "NAME": "Power of Vengeance",
+    "DESCRIPTION": "At the start of your turn, change your Block to !M!. NL Fatal: permanently increase this card's value by 10 this run. NL When you lose HP, permanently decrease this card's value by 5 this run."
+  },
   "SummonAid": {
     "NAME": "Summon Aid!!",
     "DESCRIPTION": "Gain !B! Block. NL At the start of your next !M! turns, Summon: Helen and add 1 additional *Phantom *Helen to your hand."
+  },
+  "IScream": {
+    "NAME": "I Scream",
+    "DESCRIPTION": "Next turn, Summon: Sebastian. NL Unspent Energy is retained this turn.",
+    "UPGRADE_DESCRIPTION": "Next turn, Summon: Sebastian. NL Unspent Energy is retained this turn. NL Retain."
   },
   "Strike_Scholar": {
     "NAME": "Strike",
@@ -540,6 +1238,85 @@
     "NAME": "Potion Covered Ashes",
     "DESCRIPTION": "Gain a random Bulk Potion."
   },
+  "Bloodrose": {
+    "NAME": "Bloodrose",
+    "DESCRIPTION": " Brew Bloodrose. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Bloodrose."
+  },
+  "RowaFruit": {
+    "NAME": "Rowa Fruit",
+    "DESCRIPTION": " Brew Rowa Fruit. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Rowa Fruit."
+  },
+  "EyeOfYelough": {
+    "NAME": "Eye of Yelough",
+    "DESCRIPTION": " Brew Eye of Yelough. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Eye of Yelough."
+  },
+  "TranquilWalkOfPeace": {
+    "NAME": "Tranquil Walk of Peace",
+    "DESCRIPTION": "Apply !M! Sleep to all enemies. NL Gain !M! Sleep. NL Gain !MP! Strength. NL At the end of your turn, lose !MP! Strength."
+  },
+  "GravelStone": {
+    "NAME": "Gravel Stone",
+    "DESCRIPTION": " Brew Gravel Stone. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Gravel Stone."
+  },
+  "AlbinauricBloodclot": {
+    "NAME": "Albinauric Bloodclot",
+    "DESCRIPTION": " Brew Albinauric Bloodclot. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Albinauric Bloodclot."
+  },
+  "GoldenCentipede": {
+    "NAME": "Golden Centipede",
+    "DESCRIPTION": " Brew Golden Centipede. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Golden Centipede."
+  },
+  "WaterHorse": {
+    "NAME": "Water Horse",
+    "DESCRIPTION": "Lose a random Bulk potion. NL Gain !M! Vigor. NL Draw 2 cards.",
+    "EXTENDED_DESCRIPTION": [
+      "No Bulk potion."
+    ]
+  },
+  "AeonianButterfly": {
+    "NAME": "Aeonian Butterfly",
+    "DESCRIPTION": " Brew Aeonian Butterfly. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Aeonian Butterfly."
+  },
+  "TrinaLily": {
+    "NAME": "Trina Lily",
+    "DESCRIPTION": " Brew Trina Lily. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Trina Lily."
+  },
+  "MiquellaLily": {
+    "NAME": "Miquella Lily",
+    "DESCRIPTION": " Brew Miquella Lily. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Miquella Lily."
+  },
+  "NascentButterfly": {
+    "NAME": "Nascent Butterfly",
+    "DESCRIPTION": " Brew Nascent Butterfly. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Nascent Butterfly."
+  },
+  "SacramentalBud": {
+    "NAME": "Sacramental Bud",
+    "DESCRIPTION": " Brew Sacramental Bud. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Sacramental Bud."
+  },
+  "ArteriaLeaf": {
+    "NAME": "Arteria Leaf",
+    "DESCRIPTION": " Brew Arteria Leaf. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Arteria Leaf."
+  },
+  "Ergodic": {
+    "NAME": "Ergodic",
+    "DESCRIPTION": "Deal damage to ALL enemies equal to !M! times the total number of random numbers used this combat. NL (Deal !D! damage.)"
+  },
+  "FingerprintStoneShield": {
+    "NAME": "Fingerprint Stone Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! Madness to the attacker."
+  },
   "AntspurRapier": {
     "NAME": "Antspur Rapier",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Scarlet Rot. NL If you have Vigor, play this an additional time."
@@ -548,6 +1325,23 @@
     "NAME": "Tyranny",
     "DESCRIPTION": "At the start of your turn, draw 1 card and Exhaust 1 card from your hand.",
     "UPGRADE_DESCRIPTION": " Innate. NL At the start of your turn, draw 1 card and Exhaust 1 card from your hand."
+  },
+  "PotentateCookbook": {
+    "NAME": "Potentate Cookbook",
+    "DESCRIPTION": " *Mottled Pot does not Exhaust.",
+    "UPGRADE_DESCRIPTION": " Innate. NL  *Mottled Pot does not Exhaust."
+  },
+  "DrawstringPot": {
+    "NAME": "Drawstring Pot",
+    "DESCRIPTION": "At the end of your turn, do not automatically discard Crude Drug cards."
+  },
+  "RiteOfKindling": {
+    "NAME": "Rite of Kindling",
+    "DESCRIPTION": "Can only be played if your Strength is greater than or equal to 0. NL Gain [E] [E] . NL At the end of your turn, lose 2 Strength.",
+    "UPGRADE_DESCRIPTION": "Can only be played if your Strength is greater than or equal to 0. NL Gain [E] [E] [E] . NL At the end of your turn, lose 2 Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "Requires non-negative Strength."
+    ]
   },
   "PenglaiWorship": {
     "NAME": "Penglai Worship",
@@ -565,6 +1359,11 @@
     "NAME": "Aja Red Stone",
     "DESCRIPTION": "Choose 1 of *Royal *Legacy , *Penglai *Worship , or *Homunculus to add to your hand. NL Exhaust."
   },
+  "PotionAscetic": {
+    "NAME": "Potion Ascetic",
+    "DESCRIPTION": "Use all potions you have used this combat again. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Use all potions you have used this combat again."
+  },
   "Strike_Undertaker": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -579,7 +1378,7 @@
   },
   "OuterBoon": {
     "NAME": "Outer Boon",
-    "DESCRIPTION": "Whenever you play a random card, gain !M! Block."
+    "DESCRIPTION": "Whenever you play a random card, gain [E] ."
   },
   "EyesWithin": {
     "NAME": "Eyes Within",
@@ -588,6 +1387,40 @@
   "GreatSwampTome": {
     "NAME": "Great Swamp Tome",
     "DESCRIPTION": "Gain !M! Faith."
+  },
+  "BookOfRevelation": {
+    "NAME": "Book of Revelation",
+    "DESCRIPTION": "Gain [E] [E] [E] . NL Draw !M! cards. NL Gain !M! Strength. NL Die in 7 turns.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Gain [E] [E] [E] . NL Draw !M! cards. NL Gain !M! Strength. NL Die in 7 turns."
+  },
+  "BookOfGenesis": {
+    "NAME": "Book of Genesis",
+    "DESCRIPTION": " Exhaust all cards in your hand. NL For each card Exhausted, choose 1 of 3 random cards to add to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Exhaust all cards in your hand. NL For each card Exhausted, choose 1 of 3 random upgraded cards to add to your hand. NL Exhaust."
+  },
+  "Sabbath": {
+    "NAME": "Sabbath",
+    "DESCRIPTION": "Whenever you play a card that costs 2 or more, gain !M! Block."
+  },
+  "Deterrence": {
+    "NAME": "Deterrence",
+    "DESCRIPTION": "Enemies with Vulnerable deal !M!% less attack damage."
+  },
+  "HowMany": {
+    "NAME": "How Many?",
+    "DESCRIPTION": "Whenever you spend 4 [E] , gain 1 [E] ."
+  },
+  "Stargaze": {
+    "NAME": "Stargaze",
+    "DESCRIPTION": "Whenever your draw pile is shuffled, put a card from your draw pile on top of your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to put on top of your draw pile."
+    ]
+  },
+  "WantToDrinkThis": {
+    "NAME": "Want To Drink This o.o",
+    "DESCRIPTION": "Every 2 turns, gain 1 random Bulk Potion.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Every 2 turns, gain 1 random Bulk Potion."
   },
   "ForbiddenSun": {
     "NAME": "Forbidden Sun",
@@ -601,6 +1434,22 @@
     "NAME": "Normal Hammer",
     "DESCRIPTION": "Deal !D! damage."
   },
+  "Server": {
+    "NAME": "Server",
+    "DESCRIPTION": "Deal !D! damage. NL Heal !M! HP. NL Exhaust."
+  },
+  "DemonScar": {
+    "NAME": "Demon Scar",
+    "DESCRIPTION": "Deal !D! Thaumaturgy damage. NL Gain !M! Faith this turn. NL Add 1 *Demon *Scar to your hand. NL Exhaust."
+  },
+  "Grant": {
+    "NAME": "Grant",
+    "DESCRIPTION": "Deal !D! Thaumaturgy damage. NL Apply !M! Weak."
+  },
+  "LoathsomeHex": {
+    "NAME": "Loathsome Hex",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+  },
   "DeadAgain": {
     "NAME": "Dead Again",
     "DESCRIPTION": "Deal damage to ALL enemies equal to the sum of the Max HP of all enemies that have died this combat."
@@ -609,12 +1458,68 @@
     "NAME": "Chime of Want",
     "DESCRIPTION": "Exhaust 1 random card in your hand. NL Gain !M! Gold. NL Exhaust."
   },
+  "PrescribedLevy": {
+    "NAME": "Prescribed Levy",
+    "DESCRIPTION": "Draw !M! cards."
+  },
+  "Devourer": {
+    "NAME": "Devourer",
+    "DESCRIPTION": " Exhaust all cards in your hand. NL Draw !M! cards. NL Exhaust."
+  },
+  "DoThis": {
+    "NAME": "Do This",
+    "DESCRIPTION": "Choose a card in your hand to play.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to play."
+    ]
+  },
+  "Purge": {
+    "NAME": "Purge",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Discard 1 card."
+  },
+  "Forgotwww": {
+    "NAME": "Forgotwww",
+    "DESCRIPTION": "Discard 1 card. NL Gain !M! Vigor."
+  },
+  "BorrowedTime": {
+    "NAME": "Borrowed Time",
+    "DESCRIPTION": "Gain !M! [E] . NL All cards cost 1 more this turn."
+  },
+  "CleaningAndHosting": {
+    "NAME": "Cleaning and Hosting",
+    "DESCRIPTION": "Discard any number of cards, then draw that many cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Discard any number of cards, then draw that many cards.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose any number of cards to discard."
+    ]
+  },
+  "Clockwise": {
+    "NAME": "Clockwise",
+    "DESCRIPTION": "Discard this card. NL If you have played fewer than 999 cards this turn, play the leftmost card in your hand !M! times in sequence."
+  },
+  "CounterClockwise": {
+    "NAME": "Counterclockwise",
+    "DESCRIPTION": "Discard this card. NL If you have played fewer than 999 cards this turn, play the rightmost card in your hand !M! times in sequence."
+  },
+  "PreceptsStrike": {
+    "NAME": "Precepts Strike",
+    "DESCRIPTION": "Deal !D! Thaumaturgy damage. NL For each Insight you have, this card loses 3 base damage this combat."
+  },
+  "Flustered": {
+    "NAME": "Flustered",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Gain !B! Block. NL Discard a random card."
+  },
   "Denial": {
     "NAME": "Denial",
     "DESCRIPTION": "Put !M! cards from your discard pile into your hand.",
     "EXTENDED_DESCRIPTION": [
       "Choose cards to put into your hand."
     ]
+  },
+  "TransferPayment": {
+    "NAME": "Transfer Payment",
+    "DESCRIPTION": "Gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] ."
   },
   "Zealotry": {
     "NAME": "Zealotry",
@@ -625,6 +1530,15 @@
     "NAME": "Albinauric Proof",
     "DESCRIPTION": "Lose 2 Faith. NL At the start of each turn, draw !M! additional cards.",
     "UPGRADE_DESCRIPTION": " Innate. NL Lose 2 Faith. NL At the start of each turn, draw !M! additional cards."
+  },
+  "DecisionsDecisions": {
+    "NAME": "Decisions, Decisions...",
+    "DESCRIPTION": "Whenever you play !M! cards, draw 1 card and discard 1 card.",
+    "UPGRADE_DESCRIPTION": " Innate. NL Whenever you play !M! cards, draw 1 card and discard 1 card."
+  },
+  "Taxes": {
+    "NAME": "Taxes",
+    "DESCRIPTION": "The first !M! card(s) you play each turn cost 0. NL Ethereal."
   },
   "WhatsUp": {
     "NAME": "Whats Up...",
@@ -899,6 +1813,10 @@
     "NAME": "Dynast Finesse",
     "DESCRIPTION": "Gain 1 Hover. NL Deal !D! damage."
   },
+  "IceRapier": {
+    "NAME": "Ice Rapier",
+    "DESCRIPTION": "Deal !D! damage. NL If the target enemy's intent is attacking, deal double damage."
+  },
   "CarianSlicer": {
     "NAME": "Carian Slicer",
     "DESCRIPTION": "Deal !D! magic damage to ALL enemies. NL Scheduled !M! ."
@@ -1041,6 +1959,14 @@
     "DESCRIPTION": "Deal !D! damage, gain !B! Block. NL Apply !MP! Poison. NL Apply !MR! Scarlet Rot. NL Apply !MD! Bloodburn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage, gain !B! Block. NL Apply !MP! Poison. NL Apply !MR! Scarlet Rot. NL Apply !MD! Bloodburn."
   },
+  "LotteryTicket": {
+    "NAME": "Lottery Ticket",
+    "DESCRIPTION": " Retain. NL Gain !M! Virtual Currency. NL Exhaust."
+  },
+  "CrucibleCodex": {
+    "NAME": "Crucible Codex",
+    "DESCRIPTION": "At the start of your turn, add 1 *Crucible *Token to your hand. NL Ethereal."
+  },
   "PowerOfErdtree": {
     "NAME": "Protection of the Erdtree",
     "DESCRIPTION": "Until the start of your next turn, you cannot lose HP. NL Exhaust."
@@ -1049,6 +1975,33 @@
     "NAME": "Protection of the Night",
     "DESCRIPTION": "At the start of each turn, you may choose 1 of 3 random cards to add to your hand. It costs 0 that turn.",
     "UPGRADE_DESCRIPTION": " Innate. NL At the start of each turn, you may choose 1 of 3 random cards to add to your hand. It costs 0 that turn."
+  },
+  "AbyssSeal": {
+    "NAME": "Abyss Seal",
+    "DESCRIPTION": "At the start of each turn, gain [E] . NL Lose !M! Strength.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, gain [E] [E] . NL Lose !M! Strength."
+  },
+  "Darksword": {
+    "NAME": "Darksword",
+    "DESCRIPTION": "You cannot see card descriptions this turn. NL All of your attack damage is doubled this turn. NL Ethereal."
+  },
+  "EstusFlask": {
+    "NAME": "Estus Flask",
+    "DESCRIPTION": " Retain. NL Heal !M! HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Heal !M! HP. NL Draw 1 card. NL Exhaust."
+  },
+  "AshenEstusFlask": {
+    "NAME": "Ashen Estus Flask",
+    "DESCRIPTION": " Retain. NL Gain [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Gain [E] . NL Draw 1 card. NL Exhaust."
+  },
+  "SipAbyss": {
+    "NAME": "Sip Abyss",
+    "DESCRIPTION": "Gain [E] [E] . NL Draw !M! cards. NL Put 1 *Void on top of your draw pile."
+  },
+  "Greatsword": {
+    "NAME": "Greatsword",
+    "DESCRIPTION": " Charged. NL Deal !D! damage. NL Remove all negative effects from yourself."
   },
   "FellowshipAtt": {
     "NAME": "Fellowship Attachment",
@@ -1065,6 +2018,31 @@
     "NAME": "Dark Silver Tracer",
     "DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL Scheduled !M! .",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain [E] [E] . NL Scheduled !M! ."
+  },
+  "JupiterHeart": {
+    "NAME": "Jupiter Heart",
+    "DESCRIPTION": " Unplayable. NL At the end of this turn, take an extra turn. NL Scheduled !M! .",
+    "UPGRADE_DESCRIPTION": " Retain. NL Unplayable. NL At the end of this turn, take an extra turn. NL Scheduled !M! .",
+    "EXTENDED_DESCRIPTION": [
+      "This card cannot be played."
+    ]
+  },
+  "ConvenientBundlingStrap": {
+    "NAME": "Convenient Bundling Strap",
+    "DESCRIPTION": "Packaging !M! cards. NL Disposable.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose cards to package.",
+      ", ",
+      ". NL Exhaust."
+    ]
+  },
+  "SantierSpear": {
+    "NAME": "Santier Spear",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL This card will be reinforced after ",
+    "EXTENDED_DESCRIPTION": [
+      " more play(s).",
+      "Deal !D! damage twice. NL Draw !M! cards."
+    ]
   },
   "Bloodbite": {
     "NAME": "Bloodbite",
@@ -1099,5 +2077,30 @@
     "NAME": "Starcaller Cry",
     "DESCRIPTION": "Next turn, NL draw !M! additional card, NL gain [E] .",
     "UPGRADE_DESCRIPTION": "Next turn, NL draw !M! additional cards, NL gain [E] [E] ."
+  },
+  "MottledPot": {
+    "NAME": "Mottled Pot",
+    "DESCRIPTION": "Trigger 3 Crude Drug effects in order. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " NL Exhaust."
+    ]
+  },
+  "AlphaToOmega": {
+    "NAME": "Alpha To Omega",
+    "DESCRIPTION": "If you have played fewer than 999 cards this turn, play all cards you have played this turn again. NL Exhaust."
+  },
+  "TakeoutBox": {
+    "NAME": "Takeout Box",
+    "DESCRIPTION": " Retain. NL Packaging !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose cards to package.",
+      " Retain. NL ",
+      ", ",
+      "."
+    ]
+  },
+  "MiniatureStraghess": {
+    "NAME": "Miniature Straghess",
+    "DESCRIPTION": "Transform an enemy into full-health Slime Bosses with the same max HP. Their intent starts with Slam. Their number equals the current Act. NL Exhaust. NL Ethereal."
   }
 }

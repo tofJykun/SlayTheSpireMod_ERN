@@ -21,16 +21,16 @@
   },
   "SmallShield": {
     "NAME": "小盾",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得1层 弹反 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得2层 弹反 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 弹反 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 弹反 。"
   },
   "CrismonParma": {
     "NAME": "红圆盾",
-    "DESCRIPTION": "获得与你当前弃牌堆中牌数相等的 格挡 值。 NL （获得 !B! 点 格挡 。） NL 获得1层 弹反 。"
+    "DESCRIPTION": "获得与你当前弃牌堆中牌数相等的 格挡 值。 NL （获得 !B! 点 格挡 。） NL 获得 !M! 层 弹反 。"
   },
   "BlueWhiteWoodenShield": {
     "NAME": "蓝白木盾",
-    "DESCRIPTION": "获得与你当前抽牌堆中牌数相等的 格挡 值。 NL （获得 !B! 点 格挡 。） NL 获得1层 弹反 。"
+    "DESCRIPTION": "获得与你当前抽牌堆中牌数相等的 格挡 值。 NL （获得 !B! 点 格挡 。） NL 获得 !M! 层 弹反 。"
   },
   "GrassCrestShield": {
     "NAME": "草纹盾",
@@ -83,6 +83,10 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下一回合获得 [E] 。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 下一回合获得 [E] [E] 。"
   },
+  "FarronTechniques": {
+    "NAME": "法兰剑法",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 失去1点 敏捷 。 NL 在你的回合结束时，获得1点 敏捷 。"
+  },
   "CrowQuills": {
     "NAME": "鸦羽",
     "DESCRIPTION": "失去2点 敏捷 ，在你的回合结束时，获得2点 敏捷 。 NL 将这张牌返回你的手牌。",
@@ -103,8 +107,16 @@
   },
   "ManikinShield": {
     "NAME": "密探小盾",
-    "DESCRIPTION": "获得1层 弹反 。 NL 在本回合 保留 你的手牌。",
-    "UPGRADE_DESCRIPTION": "获得1层 弹反 。 NL 在本回合 保留 你的手牌。 NL 下一回合获得 [E] 。"
+    "DESCRIPTION": "获得 !M! 层 弹反 。 NL 在本回合 保留 你的手牌。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 弹反 。 NL 在本回合 保留 你的手牌。 NL 下一回合获得 [E] 。"
+  },
+  "Valorheart": {
+    "NAME": "果敢心",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 层 弹反 。"
+  },
+  "FumeUltraGreatsword": {
+    "NAME": "漫烟特大剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你没有 格挡 ，获得 !B! 点 格挡 。"
   },
   "CeruleanDagger": {
     "NAME": "染蓝凶刀",
@@ -115,6 +127,35 @@
     "NAME": "狼大盾",
     "DESCRIPTION": "获得等于敌人总伤害点 格挡 。 NL 消耗 。"
   },
+  "WolfGreatsword": {
+    "NAME": "狼大剑",
+    "DESCRIPTION": "造成 !MD! 的绝对值点伤害。 NL 这张牌每被打出一次，它在本场战斗中的数值下降 !M! 。"
+  },
+    "WolfAssault": {
+      "NAME": "狼袭",
+      "DESCRIPTION": "在你的回合开始时，抽牌直到将手牌抽满。 NL 你在回合内不能再抽任何牌。"
+    },
+    "Warmth": {
+      "NAME": "温暖的火",
+      "DESCRIPTION": "在本回合内，你每打出一张牌，获得 [E] 。 NL 消耗 。 NL 虚无 。"
+    },
+    "AstoraGreatsword": {
+    "NAME": "亚斯特拉大剑",
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 给予 !M! 层 削韧 X次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害X+1次。 NL 给予 !M! 层 削韧 X+1次。"
+  },
+    "GravelordSword": {
+      "NAME": "墓王剑",
+      "DESCRIPTION": "造成 !D! 点伤害。 NL 增加 !M! 张 *晕眩 到你的手牌。"
+    },
+    "GravelordSwordDance": {
+      "NAME": "墓王剑舞",
+      "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 用 *晕眩 填满你的手牌。"
+    },
+    "SquareOff": {
+    "NAME": "准备架式",
+    "DESCRIPTION": " 消耗 一张手牌。 NL 在下一回合多抽 !M! 张牌。"
+  },
   "Strike_Guardian": {
     "NAME": "打击",
     "DESCRIPTION": "造成 !D! 点伤害。"
@@ -123,7 +164,7 @@
     "NAME": "防御",
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
-  "Whirlwind": {
+  "GuardianWhirlwind": {
     "NAME": "旋风",
     "DESCRIPTION": "造成 !D! 点伤害3次。"
   },
@@ -135,9 +176,34 @@
     "NAME": "突击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 如果你有 活力 ，这张牌耗能变为0。"
   },
+  "FeatherFan": {
+    "NAME": "羽扇",
+    "DESCRIPTION": "造成你 振翼 层数 !M! 倍的伤害。 NL （造成 !D! 点伤害。）"
+  },
+  "WingedKnightHalberd": {
+    "NAME": "羽翼骑士戟",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 你每有 !M! 点 格挡 ，额外造成7点伤害。"
+  },
+  "BlackKnightHalberd": {
+    "NAME": "黑骑士戟",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 这张牌每被打出一次，它在本场战斗中的基础伤害下降 !M! 。"
+  },
+  "SunlightStraightSword": {
+    "NAME": "太阳直剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 这张牌的伤害不会低于在本场战斗中之前打出此牌时的伤害。"
+  },
+  "GoldenHalberd": {
+    "NAME": "黄金戟",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 你每有 !M! 点 格挡 ，获得1点 [E] 。"
+  },
   "Bonewheel": {
     "NAME": "骸骨车轮",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "SplitleafGreatsword": {
+    "NAME": "半叶大刀",
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 获得X层 振翼 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害X+1次。 NL 获得X+1层 振翼 。"
   },
   "SpikedShield": {
     "NAME": "刺针盾",
@@ -146,6 +212,49 @@
   "BarricadeShield": {
     "NAME": "铁壁盾防",
     "DESCRIPTION": "在 完美格挡 时，给予攻击者 !M! 层 削韧 。"
+  },
+  "Preening": {
+    "NAME": "梳理",
+    "DESCRIPTION": "在你的回合开始时，获得与 振翼 层数相等的 活力 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时，获得与 振翼 层数相等的 活力 。"
+  },
+  "PurpleSign": {
+    "NAME": "紫色标记",
+    "DESCRIPTION": "从3张随机隐士牌中选择1张加入你的手牌。这张牌在本回合耗能变为0。",
+    "UPGRADE_DESCRIPTION": "从3张 升级 过的随机隐士牌中选择1张加入你的手牌。这张牌在本回合耗能变为0。"
+  },
+  "Stormcaller": {
+    "NAME": "唤起风暴",
+    "DESCRIPTION": "获得 !M! 层 振翼 。 NL 下一次当你的 振翼 层数清零，在下一回合无法打出牌。"
+  },
+  "CallLightning": {
+    "NAME": "唤雷",
+    "DESCRIPTION": "在你的回合结束时，对所有敌人造成 !M! 点伤害。 NL 高空 ：同时对自己造成 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合结束时，对所有敌人造成 !M! 点伤害。 NL 高空 ：同时对自己造成 !M! 点伤害。"
+  },
+  "Brightbug": {
+    "NAME": "光虫",
+    "DESCRIPTION": "在每回合开始时，获得 !M! 点 活力 。"
+  },
+  "Cyclone": {
+    "NAME": "气旋",
+    "DESCRIPTION": "将你的 振翼 和 展翼 层数翻倍。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将你的 振翼 和 展翼 层数变为三倍。 NL 消耗 。"
+  },
+  "ForcedLanding": {
+    "NAME": "迫降",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 失去 !M! 层 振翼 。",
+    "EXTENDED_DESCRIPTION": [
+      "需要至少3层振翼。"
+    ]
+  },
+  "KineticBombardment": {
+    "NAME": "天基动能",
+    "DESCRIPTION": "你每有 !M! 层 振翼 ，造成10%额外伤害。"
+  },
+  "GowerRingOfProtection": {
+    "NAME": "戈达守护戒指",
+    "DESCRIPTION": "你受到的伤害降低50%。 NL 每回合开始时少获得1 [E] 。"
   },
   "Strike_Ironeye": {
     "NAME": "打击",
@@ -166,8 +275,8 @@
   },
   "StringSecret": {
     "NAME": "秘绳",
-    "DESCRIPTION": "从3张随机罕见牌中选择1张加入你的手牌。",
-    "UPGRADE_DESCRIPTION": "从3张 升级 过的随机罕见牌中选择1张加入你的手牌。"
+    "DESCRIPTION": "从3张随机稀有牌中选择1张加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "从3张 升级 过的随机稀有牌中选择1张加入你的手牌。"
   },
   "SmoothSilkyStone": {
     "NAME": "光滑石头",
@@ -182,6 +291,152 @@
   "CeruleanwhorlBubble": {
     "NAME": "蓝漩泡泡",
     "DESCRIPTION": "你可以免费打出下一张牌。 NL 获得与其耗能相等的 [E] 。"
+  },
+  "PharrosLockstone": {
+    "NAME": "法洛斯之石",
+    "DESCRIPTION": "获得 !M! 点 感应 。"
+  },
+  "PortableShop": {
+    "NAME": "便携商店",
+    "DESCRIPTION": "失去5金币。 NL 从3张随机无色牌中选择1张加入你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "失去5金币。 NL 从3张随机无色牌中选择1张加入你的手牌。"
+  },
+  "RustedCoin": {
+    "NAME": "锈斑硬币",
+    "DESCRIPTION": "失去5金币。 NL 获得 !M! 点 感应 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "失去5金币。 NL 获得 !M! 点 感应 。",
+    "EXTENDED_DESCRIPTION": [
+      "金币不足。"
+    ]
+  },
+  "DeadOrAlive": {
+    "NAME": "通缉",
+    "DESCRIPTION": "如果目标敌人的生命值小于等于你的金币数，则失去等于其生命值的金币，将其生命值变为0。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 如果目标敌人的生命值小于等于你的金币数，则失去等于其生命值的金币，将其生命值变为0。",
+    "EXTENDED_DESCRIPTION": [
+      "金币不足。"
+    ]
+  },
+  "Barter": {
+    "NAME": "易物",
+    "DESCRIPTION": "随机失去一瓶药水。 NL 获得一件随机普通、罕见或稀有遗物。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 随机失去一瓶药水。 NL 获得一件随机普通、罕见或稀有遗物。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "没有药水。"
+    ]
+  },
+  "RustedGoldCoin": {
+    "NAME": "锈斑金币",
+    "DESCRIPTION": "普通敌人有 !M! %几率掉落一件普通、罕见或稀有遗物。"
+  },
+  "VendingMachine": {
+    "NAME": "自动贩卖机",
+    "DESCRIPTION": "失去 !M! 金币。 NL 在所有空药水栏位中获得随机药水。 NL 消耗 。"
+  },
+  "BitComet": {
+    "NAME": "比特彗星",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 给予 !M! 层 虚弱 。 NL 获得10点 代币 。"
+  },
+  "ShieldOfWant": {
+    "NAME": "渴望盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 代币 。"
+  },
+  "Lifegem": {
+    "NAME": "滴石",
+    "DESCRIPTION": "下 !M! 回合 NL 获得 [E] 。"
+  },
+  "Plunder": {
+    "NAME": "劫掠",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 增加 !M! 张 *奖券 到你的手牌。"
+  },
+  "BillPlease": {
+    "NAME": "结账",
+    "DESCRIPTION": "失去 !M! 金币。 NL 获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "失去 !M! 金币。 NL 获得 [E] [E] [E] 。",
+    "EXTENDED_DESCRIPTION": [
+      "金币不足。"
+    ]
+  },
+  "MidasTouch": {
+    "NAME": "迈达斯之手",
+    "DESCRIPTION": " 消耗 一张手牌。 NL 获得 !M! 点 代币 。"
+  },
+  "LoyaltyCard": {
+    "NAME": "积分卡",
+    "DESCRIPTION": "每当你失去 代币 时，获得相同数量的 格挡 。"
+  },
+  "PlatinumCard": {
+    "NAME": "白金卡",
+    "DESCRIPTION": "获得 !M! 点 代币 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 代币 。"
+  },
+  "GhostMillstone": {
+    "NAME": "鬼磨",
+    "DESCRIPTION": "你每有 !M! 点 代币 ，对所有敌人造成1点伤害。 NL （造成 !D! 点伤害。）"
+  },
+  "GhostBlade": {
+    "NAME": "亡灵小刀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时，获得 !M! 点 感应 。 NL 消耗 。"
+  },
+  "GoughGreatbow": {
+    "NAME": "戈夫大弓",
+    "DESCRIPTION": " 击晕 所有敌人1回合。 NL 消耗 。"
+  },
+  "RainOfArrows": {
+    "NAME": "箭雨",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机打出抽牌堆中 !M! 张攻击牌。"
+  },
+  "DivineSpear": {
+    "NAME": "圣枪",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 你的牌组中每有一张稀有牌，额外造成 !M! 点伤害。"
+  },
+  "Usury": {
+    "NAME": "高利贷",
+    "DESCRIPTION": "在你的回合开始时，你每有 !MD! 点 代币 ，获得1点 代币 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 代币 。 NL 在你的回合开始时，你每有 !MD! 点 代币 ，获得1点 代币 。"
+  },
+  "Bounty": {
+    "NAME": "悬赏",
+    "DESCRIPTION": "打出抽牌堆中的所有能力牌。 NL 每打出一张，失去 !M! 金币。 NL 消耗 。"
+  },
+  "OldRadiantLifegem": {
+    "NAME": "古老辉滴石",
+    "DESCRIPTION": "获得 !M! [E] 。"
+  },
+  "GoldPickledFowlFoot": {
+    "NAME": "腌制黄金鸡爪",
+    "DESCRIPTION": "敌人掉落的金币增加 !M! %。"
+  },
+  "SilverPickledFowlFoot": {
+    "NAME": "腌制白银鸡爪",
+    "DESCRIPTION": "敌人有 !M! %几率多掉落一次卡牌奖励。"
+  },
+  "BlackClawAssistant": {
+    "NAME": "黑爪援助",
+    "DESCRIPTION": "你打出的牌将在本场战斗中 升级 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 你打出的牌将在本场战斗中 升级 。"
+  },
+  "SnakeSlough": {
+    "NAME": "蛇蜕",
+    "DESCRIPTION": "你每 变化 一张牌，获得 !M! 点 格挡 。"
+  },
+  "Fluctuation": {
+    "NAME": "涨落",
+    "DESCRIPTION": "在每回合开始时，你可以从手牌中选择 !M! 张牌 变化 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 在每回合开始时，你可以从手牌中选择 !M! 张牌 变化 。"
+  },
+  "HeatUp": {
+    "NAME": "热化",
+    "DESCRIPTION": " 保留 。 NL 变化 所有手牌。"
+  },
+  "Entropy": {
+    "NAME": "熵",
+    "DESCRIPTION": "对所有敌人造成你在本场战斗中 变化 过的牌的总数 !M! 倍的伤害。"
+  },
+  "FragrantBranchOfYore": {
+    "NAME": "怀念香木",
+    "DESCRIPTION": "战斗结束后多掉落一次卡牌奖励。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 战斗结束后多掉落一次卡牌奖励。 NL 消耗 。"
   },
   "Strike_Raider": {
     "NAME": "打击",
@@ -201,9 +456,47 @@
   },
   "BloodWall": {
     "NAME": "血墙",
-    "DESCRIPTION": "获得3层 虚血 。 NL 获得 !B! 点 格挡 。",
+    "DESCRIPTION": "获得2层 虚血 。 NL 获得 !B! 点 格挡 。",
     "EXTENDED_DESCRIPTION": [
-      "获得3层 虚血+ 。 NL 获得 !B! 点 格挡 。"
+      "获得2层 虚血+ 。 NL 获得 !B! 点 格挡 。"
+    ]
+  },
+  "PierceShield": {
+    "NAME": "突刺盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌。 NL 如果你有 虚血 或 虚血+ ，额外抽1张牌。"
+  },
+  "BlessedDew": {
+    "NAME": "恩惠露滴",
+    "DESCRIPTION": "在你的回合开始时，失去 !M! 层 虚血 。",
+    "UPGRADE_DESCRIPTION": "在你的回合开始时，失去 !M! 层 虚血 。",
+    "EXTENDED_DESCRIPTION": [
+      "在你的回合开始时，失去 !M! 层 虚血+ 。",
+      "在你的回合开始时，失去 !M! 层 虚血+ 。"
+    ]
+  },
+  "GreatClub": {
+    "NAME": "巨型棍棒",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 削韧 。 NL 你的下一回合开始时，失去 !MS! 层 虚血 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 削韧 。 NL 你的下一回合开始时，失去 !MS! 层 虚血 。",
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害。 NL 给予 !M! 层 削韧 。 NL 你的下一回合开始时，失去 !MS! 层 虚血+ 。",
+      "造成 !D! 点伤害。 NL 给予 !M! 层 削韧 。 NL 你的下一回合开始时，失去 !MS! 层 虚血+ 。"
+    ]
+  },
+  "Masterwork": {
+    "NAME": "心血之作",
+    "DESCRIPTION": "每当你 锻造 时，失去 !M! 层 虚血 。",
+    "UPGRADE_DESCRIPTION": "每当你 锻造 时，失去 !M! 层 虚血 。",
+    "EXTENDED_DESCRIPTION": [
+      "每当你 锻造 时，失去 !M! 层 虚血+ 。",
+      "每当你 锻造 时，失去 !M! 层 虚血+ 。"
+    ]
+  },
+  "Siegbrau": {
+    "NAME": "杰克的酒",
+    "DESCRIPTION": " 保留 。 NL 失去 !M! 层 虚血 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      " 保留 。 NL 失去 !M! 层 虚血+ 。 NL 消耗 。"
     ]
   },
   "BloodDebt": {
@@ -220,6 +513,14 @@
     "DESCRIPTION": "失去所有 虚血 和 虚血+ 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": " 保留 。 NL 失去所有 虚血 和 虚血+ 。 NL 消耗 。"
   },
+  "BlueTearstoneRing": {
+    "NAME": "蓝泪石戒指",
+    "DESCRIPTION": "下1次在你的回合结束或战斗结束时，如果 虚血 或 虚血+ 层数大于等于生命值，将 虚血 或 虚血+ 层数减少到50%。"
+  },
+  "RedTearstoneRing": {
+    "NAME": "红泪石戒指",
+    "DESCRIPTION": "在你的回合开始时，如果 虚血 或 虚血+ 层数大于等于生命值，你所有的攻击伤害翻倍。"
+  },
   "BleedStone": {
     "NAME": "血块石",
     "DESCRIPTION": " 不能被打出 。 NL 去除至多 !M! 层 虚血 和 虚血+ 。",
@@ -229,7 +530,7 @@
   },
   "Boltstone": {
     "NAME": "雷光石",
-    "DESCRIPTION": " 不能被打出 。 NL 受到3点伤害。 NL 造成 !D! 点伤害。",
+    "DESCRIPTION": " 保留 。 NL 不能被打出 。 NL 受到3点伤害。 NL 造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "不能被打出。"
     ]
@@ -243,29 +544,113 @@
   },
   "FiredrakeStone": {
     "NAME": "火龙石",
-    "DESCRIPTION": " 不能被打出 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 削韧 。",
+    "DESCRIPTION": " 不能被打出 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 削韧 。 NL 虚无 。",
     "EXTENDED_DESCRIPTION": [
       "不能被打出。"
     ]
   },
   "DarknightStone": {
     "NAME": "暗夜石",
-    "DESCRIPTION": " 不能被打出 。 NL 给予所有敌人 !M! 层 虚弱 和 易伤 。",
+    "DESCRIPTION": " 不能被打出 。 NL 给予所有敌人 !M! 层 虚弱 和 易伤 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "不能被打出。"
+    ]
+  },
+  "PrelateCharge": {
+    "NAME": "主教冲锋",
+    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 抽2X张牌。 NL 如果你的 虚血 层数大于等于 !M! ，获得 [E] 。",
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害X次。 NL 抽2X张牌。 NL 如果你的 虚血+ 层数大于等于 !M! ，获得 [E] 。"
+    ]
+  },
+  "DemonGreatHammer": {
+    "NAME": "恶魔大锤",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 从手牌中选择 !M! 张牌 变化 。"
+  },
+  "BloodforgedSword": {
+    "NAME": "血铸之剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 虚血 。 NL 使用随机 锻造 素材牌对这张牌 锻造 。",
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害。 NL 获得 !M! 层 虚血+ 。 NL 使用随机 锻造 素材牌对这张牌 锻造 。"
     ]
   },
   "Pickaxe": {
     "NAME": "十字镐",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予2层 削韧 。"
   },
+  "Club": {
+    "NAME": "棍棒",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 削韧 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 削韧 。"
+  },
+  "FourProngedPlow": {
+    "NAME": "四齿钉耙",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !MS! 层 虚血 。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !MS! 层 虚血 。 NL 抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害。 NL 获得 !MS! 层 虚血+ 。 NL 抽 !M! 张牌。",
+      "造成 !D! 点伤害。 NL 获得 !MS! 层 虚血+ 。 NL 抽 !M! 张牌。"
+    ]
+  },
+  "ForkedHatchet": {
+    "NAME": "分岔手斧",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将这张牌放到抽牌堆的顶部。"
+  },
+  "StormRuler": {
+    "NAME": "风暴管束者",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !MX! 层 削韧 。 NL 如果目标敌人的生命值大于等于 !M! 点，额外给予 !MX! 层 削韧 。"
+  },
+  "Stagger": {
+    "NAME": "蹒跚",
+    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽 !M! 张牌。 NL 在你的回合开始时，获得 !MS! 层 虚血 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽 !M! 张牌。 NL 在你的回合开始时，获得 !MS! 层 虚血 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "获得 [E] [E] [E] 。 NL 抽 !M! 张牌。 NL 在你的回合开始时，获得 !MS! 层 虚血+ 。 NL 消耗 。"
+    ]
+  },
+  "FightThrough": {
+    "NAME": "强撑",
+    "DESCRIPTION": "在你的回合开始时，获得 !MS! 层 虚血 ，抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时，获得 !MS! 层 虚血 ，抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": [
+      "在你的回合开始时，获得 !MS! 层 虚血+ ，抽 !M! 张牌。",
+      " 固有 。 NL 在你的回合开始时，获得 !MS! 层 虚血+ ，抽 !M! 张牌。"
+    ]
+  },
+  "EarthSeeker": {
+    "NAME": "追地者",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 在你的回合开始时，如果这张牌在消耗牌堆中，打出这张牌。 NL 消耗 。"
+  },
+  "LargeClub": {
+    "NAME": "大型棍棒",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害两次。 NL 获得 !MS! 层 虚血 。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害两次。 NL 获得 !MS! 层 虚血 。 NL 抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": [
+      "对所有敌人造成 !D! 点伤害两次。 NL 获得 !MS! 层 虚血+ 。 NL 抽 !M! 张牌。",
+      "对所有敌人造成 !D! 点伤害两次。 NL 获得 !MS! 层 虚血+ 。 NL 抽 !M! 张牌。"
+    ]
+  },
+  "HammerTime": {
+    "NAME": "锤子时间",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 增加 !M! 张 虚无 且 消耗 的 *名匠铁锤 到你的手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 增加 !M! 张 虚无 且 消耗 的 *名匠铁锤+ 到你的手牌。"
+  },
+  "MurkyHandScythe": {
+    "NAME": "濡湿小镰刀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 使用这张牌 锻造 的 *名匠造物 耗能为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 使用这张牌 锻造 的 *名匠造物 耗能为0。"
+  },
+  "StormKick": {
+    "NAME": "风暴踢击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !MX! 层 削韧 。 NL 定时 !M! 。"
+  },
   "Kick": {
     "NAME": "踢击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 当你抽到这张牌时自动打出。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你在这回合打出的牌数少于999张，当你抽到这张牌时自动打出。"
   },
   "RawStone": {
     "NAME": "粗刚石",
-    "DESCRIPTION": " 不能被打出 。 NL 造成 !D! 点伤害。",
+    "DESCRIPTION": " 不能被打出 。 NL 造成 !D! 点伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "不能被打出。"
     ]
@@ -312,6 +697,89 @@
       "不能被打出。"
     ]
   },
+  "DragonTorsoStone": {
+    "NAME": "龙体石",
+    "DESCRIPTION": "将你手牌中的所有攻击牌变为 *龙拳 。",
+    "UPGRADE_DESCRIPTION": "将你手牌中的所有攻击牌变为 *龙拳+ 。"
+  },
+  "DragonHeadStone": {
+    "NAME": "龙头石",
+    "DESCRIPTION": "所有攻击牌耗能变为0。 NL 所有技能牌耗能增加1。"
+  },
+  "DoOrDie": {
+    "NAME": "背水一战",
+    "DESCRIPTION": "在下一回合，你不能打出技能牌，你打出的攻击牌会被打出两次。"
+  },
+  "DowsingRod": {
+    "NAME": "寻龙尺",
+    "DESCRIPTION": "敌人有 !M! %几率多掉落一次稀有卡牌奖励。 NL 消耗 。"
+  },
+  "TotemStela": {
+    "NAME": "图腾碑石",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 你在本回合内受到的伤害降低 !M! %。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 你在本回合内受到的伤害降低 !M! %。"
+  },
+  "AcidSurge": {
+    "NAME": "喷射酸液",
+    "DESCRIPTION": "消耗 一张 *名匠造物 。 NL 使敌人失去 !M! 点 力量 。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张名匠造物消耗。",
+      "需要一张名匠造物。"
+    ]
+  },
+  "PowerOfHouseMarais": {
+    "NAME": "玛雷家的庇佑",
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 斩杀 时，这张牌在本局游戏中的数值永久性增加5。 NL 失去生命时，这张牌在本局游戏中的数值永久性下降1。"
+  },
+  "Caestus": {
+    "NAME": "护手带",
+    "DESCRIPTION": "你每打出一张攻击牌，获得 !M! 点 格挡 。"
+  },
+  "StoneRing": {
+    "NAME": "石之戒指",
+    "DESCRIPTION": "你每在同一回合内打出的第3张攻击牌会额外给予 !M! 层 削韧 。"
+  },
+  "AssemblyLine": {
+    "NAME": "流水线",
+    "DESCRIPTION": "在你的回合结束时， 保留 最多 !M! 张素材牌。"
+  },
+  "CourtesyEnough": {
+    "NAME": "繁文缛节",
+    "DESCRIPTION": " 不能被打出 。 NL 如果这张牌被 消耗 ， NL 获得 !M! 点 力量 ， NL 获得 !M! 点 敏捷 。",
+    "EXTENDED_DESCRIPTION": [
+      "不能被打出。"
+    ],
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 如果这张牌被 消耗 ， NL 获得 !M! 点 力量 ， NL 获得 !M! 点 敏捷 。"
+  },
+  "BoneFist": {
+    "NAME": "骨拳套",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当你打出耗能不为0的攻击牌，将这张牌从弃牌堆放回你的手牌。"
+  },
+  "HandAxe": {
+    "NAME": "手斧",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 在下一回合，如果这张牌在抽牌堆或弃牌堆中，将这张牌放回你的手牌。"
+  },
+  "DuelistFurledFinger": {
+    "NAME": "斗士勾指",
+    "DESCRIPTION": "在本回合内，你每打出一张攻击牌，抽 !M! 张牌。 NL 消耗 。"
+  },
+  "Smithbox": {
+    "NAME": "打铁箱",
+    "DESCRIPTION": "在你的回合开始时，增加 !M! 张 虚无 且 消耗 的 *名匠铁锤 到你的手牌。"
+  },
+  "SpinningSlash": {
+    "NAME": "回旋斩",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 在本回合内，你打出的攻击牌将会被放置到抽牌堆的顶部。 （只限会移入弃牌堆的牌）"
+  },
+  "DullEmber": {
+    "NAME": "将熄余烬",
+    "DESCRIPTION": " *打击 造成 !M! 点额外伤害。 NL *防御 获得 !M! 点额外 格挡 。"
+  },
+  "MoonOfNokstella": {
+    "NAME": "诺克史黛拉之月",
+    "DESCRIPTION": " *名匠造物 耗能降低1。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL  *名匠造物 耗能降低1。"
+  },
   "OldMundaneStone": {
     "NAME": "暗澹古石",
     "DESCRIPTION": " 不能被打出 。 NL 抽 !M! 张牌。",
@@ -346,16 +814,59 @@
     "NAME": "七色石",
     "DESCRIPTION": "增加1张随机 锻造 素材牌到你的手牌。"
   },
+  "CatarinaRoundMoon": {
+    "NAME": "卡塔利纳的圆月",
+    "DESCRIPTION": "你的下一回合开始时，失去所有 虚血 和 虚血+ ，对所有敌人造成相同数量的伤害。 NL 消耗 。"
+  },
+  "Insurance": {
+    "NAME": "保险",
+    "DESCRIPTION": "选择一张手牌，每当其被 消耗 时，将其放回你的手牌。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "选择1张牌投保。"
+    ]
+  },
+  "Dismantle": {
+    "NAME": "拆卸",
+    "DESCRIPTION": " 消耗 一张手牌。 NL 增加1张随机 强化 素材牌到你的手牌。"
+  },
   "BloodfiendArm": {
     "NAME": "血怪手臂",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予2层 削韧 。 NL 给予 !M! 层 出血 。"
   },
+  "VordtGreatHammer": {
+    "NAME": "玻尔多大锤",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 在本回合，你每受到一次未被格挡的伤害，下一回合获得 !M! 点 [E] 。"
+  },
+  "GiantCrusher": {
+    "NAME": "粉碎巨人槌",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。"
+  },
   "DuelistGreataxe": {
     "NAME": "斗士大斧",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你的 虚血 层数大于等于6，额外打出1次。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你的 虚血 层数大于等于4，额外打出1次。",
     "EXTENDED_DESCRIPTION": [
-      "造成 !D! 点伤害。 NL 如果你的 虚血+ 层数大于等于6，额外打出1次。"
+      "造成 !D! 点伤害。 NL 如果你的 虚血+ 层数大于等于4，额外打出1次。"
     ]
+  },
+  "WingedKnightTwinaxes": {
+    "NAME": "羽翼骑士断头斧",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 重放 !M! 。 NL 这张牌每被打出一次，它在本场战斗中的 重放 增加1。"
+  },
+  "WarMateriel": {
+    "NAME": "辎重",
+    "DESCRIPTION": "你的下一回合开始时，获得 [E] ，从弃牌堆中选择 !M! 张攻击牌放入你的手牌。",
+    "EXTENDED_DESCRIPTION": [
+      "从弃牌堆中选择攻击牌。"
+    ]
+  },
+  "ExpectAFight": {
+    "NAME": "跃跃欲试",
+    "DESCRIPTION": "手牌中每有一张攻击牌，获得1点 [E] 。 NL （获得 !M! [E] 。） NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "手牌中每有一张攻击牌，获得1点 [E] 。 NL （获得 !M! [E] 。）"
+  },
+  "DragonPunch": {
+    "NAME": "龙拳",
+    "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "Strike_Duchess": {
     "NAME": "打击",
@@ -378,13 +889,61 @@
     "NAME": "典当",
     "DESCRIPTION": "获得 !M! 金币。 NL 失去1点 力量 ， NL 失去1点 敏捷 。"
   },
+  "NoMoney": {
+    "NAME": "走空",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 蘑菇 。"
+  },
+  "SlimeMold": {
+    "NAME": "黏菌",
+    "DESCRIPTION": "你每打出一张牌，都获得 蘑菇 。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "你每打出一张牌，都获得 蘑菇 。"
+  },
   "SellswordTwinblades": {
     "NAME": "佣兵对刀",
     "DESCRIPTION": "造成 !D! 点伤害2次。 NL 重放 2。"
   },
+  "Darkdrift": {
+    "NAME": "暗胧",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 重放 1。"
+  },
+  "ScavengerCurvedSword": {
+    "NAME": "剥尸曲剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 重放 1。"
+  },
+  "BladeOfCalling": {
+    "NAME": "使命短刀",
+    "DESCRIPTION": " 不能被打出 。 NL 造成 !D! 点伤害。 NL 每当目标敌人受到未被格挡的伤害时，给予其 !MS! 层 燃命 。 NL 定时 !M! 。",
+    "EXTENDED_DESCRIPTION": [
+      "不能被打出。"
+    ]
+  },
+  "BewitchingBranch": {
+    "NAME": "魅惑树枝",
+    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 如果敌人数量大于等于3，重复打出这张牌，直到有敌人死亡。 NL 消耗 。"
+  },
+  "StormCurvedSword": {
+    "NAME": "风暴曲剑",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 获得 !M! 点 活力 。"
+  },
   "CeruleanburstCrystal": {
     "NAME": "涌蓝结晶",
     "DESCRIPTION": "你每打出10张牌，获得 [E] 。"
+  },
+  "CrystalEnchanted": {
+    "NAME": "结晶附魔",
+    "DESCRIPTION": "获得 !MD! 点 力量 。 NL 获得 !MD! 点 敏捷 。 NL 你每在同一回合内打出 !M! 张牌，在该回合内失去1点 力量 和1点 敏捷 。"
+  },
+  "WindyCrystal": {
+    "NAME": "风结晶",
+    "DESCRIPTION": "每打出10张牌，抽 !M! 张牌。"
+  },
+  "FlowingTechniques": {
+    "NAME": "流水剑法",
+    "DESCRIPTION": "如果你在一个回合内打出大于等于6张牌，在下一回合多抽 !M! 张牌。"
+  },
+  "HornetRing": {
+    "NAME": "黄蜂戒指",
+    "DESCRIPTION": "你对意图是攻击的敌人额外造成 !M! %伤害。"
   },
   "WildStrikes": {
     "NAME": "盲击",
@@ -394,9 +953,18 @@
       "X为0时不能打出。"
     ]
   },
+  "DancerEnchantedSwords": {
+    "NAME": "成对舞娘魔剑",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害X次。 NL 定时 !M! 。"
+  },
   "ChillingMist": {
     "NAME": "寒气冻雾",
     "DESCRIPTION": "给予所有敌人 !M! 层 冻伤 。"
+  },
+  "DarkWoodGrain": {
+    "NAME": "暗沉木纹",
+    "DESCRIPTION": "每当你重置 定时 大于等于3的牌，将这张牌的计数减少1。 NL 最小减少到2。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 每当你重置 定时 大于等于3的牌，将这张牌的计数减少1。 NL 最小减少到2。"
   },
   "Strike_Executor": {
     "NAME": "打击",
@@ -416,7 +984,11 @@
   },
   "BlackFlameTornado": {
     "NAME": "黑焰漩涡",
-    "DESCRIPTION": "给予所有敌人 !M! 层 燃命 。 当前每有1名敌人生命值高于或等于50%，额外打出1次。 NL 消耗 。"
+    "DESCRIPTION": "给予所有敌人 !M! 层 燃命 。 NL 当前每有1名敌人生命值高于或等于50%，额外打出1次。 NL 消耗 。"
+  },
+  "Metastasis": {
+    "NAME": "扩散",
+    "DESCRIPTION": "给予 !M! 层 燃命 。 NL 在抽牌堆放入一张此牌的耗能为0的复制品。"
   },
   "BlackFlameRitual": {
     "NAME": "黑焰仪式",
@@ -425,6 +997,14 @@
   "BlackFlameBlade": {
     "NAME": "黑焰刀刃",
     "DESCRIPTION": "每有1次攻击造成未被格挡的伤害，就给予 !M! 层 燃命 。"
+  },
+  "DarkBlood": {
+    "NAME": "黑暗之血",
+    "DESCRIPTION": "每当你对一名敌人造成负面 状态 ，获得 !M! 点 格挡 。"
+  },
+  "DeathPoker": {
+    "NAME": "死亡钩棒",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张复仇者的 *点燃灵火 放入你的手牌中。"
   },
   "LetFeastBegin": {
     "NAME": "大啖食粮",
@@ -449,6 +1029,10 @@
     "DESCRIPTION": "将你的 冻伤 变成 易伤 ， 睡眠 变成 脆弱 ， 发狂 和 出血 变成 虚弱 。",
     "UPGRADE_DESCRIPTION": " 保留 。 NL 将你的 冻伤 变成 易伤 ， 睡眠 变成 脆弱 ， 发狂 和 出血 变成 虚弱 。"
   },
+  "EmitForce": {
+    "NAME": "原力并射",
+    "DESCRIPTION": "获得 !M! 层 金属化 。 NL 给予敌人 !M! 层 金属化 。"
+  },
   "RiversOfBlood": {
     "NAME": "尸山血海",
     "DESCRIPTION": "给予5层 出血 。 NL 给予自己 !M! 层 出血 。"
@@ -460,6 +1044,15 @@
   "HoarfrostStomp": {
     "NAME": "冻霜踏地",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予 !M! 层 冻伤 。"
+  },
+  "InfectionStrike": {
+    "NAME": "感染打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 敌人受到的下 !M! 次负面 状态 会同时给予所有敌人。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 敌人受到的下 !M! 次负面 状态 会同时给予所有敌人。"
+  },
+  "CrossInfection": {
+    "NAME": "交叉感染",
+    "DESCRIPTION": "给予所有敌人该敌人身上所有负面 状态 。"
   },
   "FrenziedBurst": {
     "NAME": "划空癫火",
@@ -479,15 +1072,41 @@
     "NAME": "猎犬长牙",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予3层 出血 。"
   },
+  "ChaosBlade": {
+    "NAME": "混沌之刃",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予自己2层随机 异变 。"
+  },
   "Seppuku": {
     "NAME": "切腹",
     "DESCRIPTION": "获得 [E] [E] 。 NL 给予自己4层随机 异变 。",
     "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] 。 NL 给予自己4层随机 异变 。"
   },
+  "DungPie": {
+    "NAME": "屎块",
+    "DESCRIPTION": "给予自己3层 中毒 。 NL 给予 !M! 层 中毒 。"
+  },
   "AriandelBlood": {
     "NAME": "艾雷德尔之血",
     "DESCRIPTION": "永久失去1点最大生命。 NL 获得 [E] [E] 。 NL 抽2张牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "永久失去1点最大生命。 NL 获得 [E] [E] 。 NL 抽2张牌。"
+  },
+  "OrderBlade": {
+    "NAME": "圣律剑刃",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 敌人每有一种负面效果，额外造成 !D! 点伤害。"
+  },
+  "Expose": {
+    "NAME": "暴露",
+    "DESCRIPTION": "去除敌人身上所有 格挡 值和 人工制品 。 NL 给予 !M! 层 易伤 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 去除敌人身上所有 格挡 值和 人工制品 。 NL 给予 !M! 层 易伤 。 NL 消耗 。"
+  },
+  "FreezingMist": {
+    "NAME": "冰雾",
+    "DESCRIPTION": "在你的回合开始时，给予所有敌人 !M! 层 冻伤 。"
+  },
+  "GammaKnife": {
+    "NAME": "伽马刀",
+    "DESCRIPTION": "移除你身上的所有负面效果。 NL 每移除1种，获得1点 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 移除你身上的所有负面效果。 NL 每移除1种，获得1点 [E] 。 NL 消耗 。"
   },
   "Strike_Revenant": {
     "NAME": "打击",
@@ -520,13 +1139,92 @@
       "只有当召唤时才能打出。"
     ]
   },
+  "Immolation": {
+    "NAME": "焚身火",
+    "DESCRIPTION": "你受到攻击时，如果有 召唤 ，攻击者失去相当于被格挡的伤害点生命。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 你受到攻击时，如果有 召唤 ，攻击者失去相当于被格挡的伤害点生命。"
+  },
+  "Initiative": {
+    "NAME": "先下一程",
+    "DESCRIPTION": "每当你 召唤 时， NL 对随机一名敌人造成 !M! 点伤害。"
+  },
+  "GhostflameIgnition": {
+    "NAME": "点燃灵火",
+    "DESCRIPTION": "在你的回合开始时，给予所有敌人 !M! 层 冻伤 。"
+  },
   "LightningRam": {
     "NAME": "雷电羊球",
     "DESCRIPTION": "造成 !D! 点奇术伤害2X次。"
   },
+  "BeastClaw": {
+    "NAME": "兽爪",
+    "DESCRIPTION": "造成 !D! 点奇术伤害 !M! 次。"
+  },
+  "LeadingStrike": {
+    "NAME": "先制打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 基础召唤 。"
+  },
+  "CursedClaws": {
+    "NAME": "咒爪",
+    "DESCRIPTION": " 锦囊 。 NL 造成 !D! 点伤害。 NL 在本场战斗中所有 *咒爪 牌的伤害增加 !M! 。",
+    "EXTENDED_DESCRIPTION": [
+      "需要费用为0。"
+    ]
+  },
+  "GhizaWheel": {
+    "NAME": "基萨的刺轮",
+    "DESCRIPTION": "在本回合内获得3点 灵力 。 NL 给予所有敌人 !M! 层 虚弱 和 易伤 。"
+  },
+  "VisageShield": {
+    "NAME": "颜面盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 对所有敌人造成 !D! 点奇术伤害。"
+  },
+  "GreatEpee": {
+    "NAME": "大重剑",
+    "DESCRIPTION": " 锦囊 。 NL 造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      "需要费用为0。"
+    ]
+  },
+  "StarlightShards": {
+    "NAME": "星光碎片",
+    "DESCRIPTION": " 锦囊 。 NL 获得 [E] 。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": " 锦囊 。 NL 获得 [E] [E] 。 NL 抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": [
+      "需要费用为0。"
+    ]
+  },
+  "WantThis": {
+    "NAME": "想要这个OvO",
+    "DESCRIPTION": " 锦囊 。 NL 抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": [
+      "需要费用为0。"
+    ]
+  },
+  "Climax": {
+    "NAME": "亢奋",
+    "DESCRIPTION": " 锦囊 。 NL 在本回合内，你所有的攻击伤害翻倍。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 锦囊 。 NL 在本回合内，你所有的攻击伤害翻倍。",
+    "EXTENDED_DESCRIPTION": [
+      "需要费用为0。"
+    ]
+  },
+  "DestitutionAssist": {
+    "NAME": "穷途之助",
+    "DESCRIPTION": "你每打出一张 锦囊 牌，获得 !M! 点 格挡 。"
+  },
+  "PowerOfVengeance": {
+    "NAME": "复仇的庇佑",
+    "DESCRIPTION": "在你的回合开始时，将 格挡 变化到 !M! 。 NL 斩杀 时，这张牌在本局游戏中的数值永久性增加10。 NL 失去生命时，这张牌在本局游戏中的数值永久性下降5。"
+  },
   "SummonAid": {
     "NAME": "呼叫支援！！",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 在你的下 !M! 回合开始时， 召唤：海伦 ，额外增加1张 *幻影海伦 到你的手牌。"
+  },
+  "IScream": {
+    "NAME": "我尖叫",
+    "DESCRIPTION": "下一回合， 召唤：塞巴斯蒂安 。 NL 本回合多余的费用可以留到下一回合。",
+    "UPGRADE_DESCRIPTION": "下一回合， 召唤：塞巴斯蒂安 。 NL 本回合多余的费用可以留到下一回合。 NL 保留 。"
   },
   "Strike_Scholar": {
     "NAME": "打击",
@@ -540,6 +1238,85 @@
     "NAME": "沾药骨灰",
     "DESCRIPTION": "获得1瓶随机 散装 药水"
   },
+  "Bloodrose": {
+    "NAME": "血蔷薇",
+    "DESCRIPTION": " 炼制 血蔷薇 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 血蔷薇 。"
+  },
+  "RowaFruit": {
+    "NAME": "罗亚果实",
+    "DESCRIPTION": " 炼制 罗亚果实 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 罗亚果实 。"
+  },
+  "EyeOfYelough": {
+    "NAME": "耶罗眼珠",
+    "DESCRIPTION": " 炼制 耶罗眼珠 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 耶罗眼珠 。"
+  },
+  "TranquilWalkOfPeace": {
+    "NAME": "和平缓步",
+    "DESCRIPTION": "给予所有敌人 !M! 层 睡眠 。 NL 获得 !M! 层 睡眠 。 NL 获得 !MP! 点 力量 。 NL 你的回合结束时，失去 !MP! 点 力量 。"
+  },
+  "GravelStone": {
+    "NAME": "碎石",
+    "DESCRIPTION": " 炼制 碎石 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 碎石 。"
+  },
+  "AlbinauricBloodclot": {
+    "NAME": "白金凝血",
+    "DESCRIPTION": " 炼制 白金凝血 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 白金凝血 。"
+  },
+  "GoldenCentipede": {
+    "NAME": "黄金百足",
+    "DESCRIPTION": " 炼制 黄金百足 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 黄金百足 。"
+  },
+  "WaterHorse": {
+    "NAME": "饮马",
+    "DESCRIPTION": "随机失去一瓶 散装 药水。 NL 获得 !M! 点 活力 。 NL 抽2张牌。",
+    "EXTENDED_DESCRIPTION": [
+      "没有散装药水。"
+    ]
+  },
+  "AeonianButterfly": {
+    "NAME": "艾奥尼亚蝶",
+    "DESCRIPTION": " 炼制 艾奥尼亚蝶 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 艾奥尼亚蝶 。"
+  },
+  "TrinaLily": {
+    "NAME": "托莉娜睡莲",
+    "DESCRIPTION": " 炼制 托莉娜睡莲 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 托莉娜睡莲 。"
+  },
+  "MiquellaLily": {
+    "NAME": "米凯拉睡莲",
+    "DESCRIPTION": " 炼制 米凯拉睡莲 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 米凯拉睡莲 。"
+  },
+  "NascentButterfly": {
+    "NAME": "蜕生蝶",
+    "DESCRIPTION": " 炼制 蜕生蝶 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 蜕生蝶 。"
+  },
+  "SacramentalBud": {
+    "NAME": "圣血木芽",
+    "DESCRIPTION": " 炼制 圣血木芽 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 圣血木芽 。"
+  },
+  "ArteriaLeaf": {
+    "NAME": "亚缇莉亚叶",
+    "DESCRIPTION": " 炼制 亚缇莉亚叶 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 亚缇莉亚叶 。"
+  },
+  "Ergodic": {
+    "NAME": "各态历经",
+    "DESCRIPTION": "对所有敌人造成你在本场战斗中使用过的随机数总数 !M! 倍的伤害。 NL （造成 !D! 点伤害。）"
+  },
+  "FingerprintStoneShield": {
+    "NAME": "指纹石盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 你在这个回合每受到一次攻击，都给予攻击者 !M! 层 发狂 。"
+  },
   "AntspurRapier": {
     "NAME": "蚁刺细剑",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 猩红腐败 。 NL 如果你有 活力 ，则额外打出1次。"
@@ -548,6 +1325,23 @@
     "NAME": "暴政",
     "DESCRIPTION": "在你的回合开始时，抽1张牌， 消耗 1张手牌",
     "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时，抽1张牌， 消耗 1张手牌"
+  },
+  "PotentateCookbook": {
+    "NAME": "维壶笔记",
+    "DESCRIPTION": " *斑斓壶 不会 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL  *斑斓壶 不会 消耗 。"
+  },
+  "DrawstringPot": {
+    "NAME": "附绳壶",
+    "DESCRIPTION": "你在回合结束时不再自动丢弃 药材 牌。"
+  },
+  "RiteOfKindling": {
+    "NAME": "注火秘密仪式",
+    "DESCRIPTION": "只有当 力量 大于等于0时才能打出。 NL 获得 [E] [E] 。 NL 你的回合结束时，失去2点 力量 。",
+    "UPGRADE_DESCRIPTION": "只有当 力量 大于等于0时才能打出。 NL 获得 [E] [E] [E] 。 NL 你的回合结束时，失去2点 力量 。",
+    "EXTENDED_DESCRIPTION": [
+      "需要非负力量。"
+    ]
   },
   "PenglaiWorship": {
     "NAME": "蓬莱崇拜",
@@ -565,6 +1359,11 @@
     "NAME": "艾哲红石",
     "DESCRIPTION": "从 *皇族遗产 ， *蓬莱崇拜 ， *霍姆克鲁斯 中选择1张增加到你的手牌。 NL 消耗 。"
   },
+  "PotionAscetic": {
+    "NAME": "药水探究者",
+    "DESCRIPTION": "再次使用全部你在本场战斗中使用过的药水。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "再次使用全部你在本场战斗中使用过的药水。"
+  },
   "Strike_Undertaker": {
     "NAME": "打击",
     "DESCRIPTION": "造成 !D! 点伤害。"
@@ -579,7 +1378,7 @@
   },
   "OuterBoon": {
     "NAME": "外神恩惠",
-    "DESCRIPTION": "你每随机打出1张牌，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "你每随机打出1张牌，获得 [E] 。"
   },
   "EyesWithin": {
     "NAME": "内在之眼",
@@ -588,6 +1387,40 @@
   "GreatSwampTome": {
     "NAME": "大沼遗著",
     "DESCRIPTION": "获得 !M! 点 信仰 。"
+  },
+  "BookOfRevelation": {
+    "NAME": "启示录",
+    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽 !M! 张牌。 NL 获得 !M! 点 力量 。 NL 在7回合后死亡。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 [E] [E] [E] 。 NL 抽 !M! 张牌。 NL 获得 !M! 点 力量 。 NL 在7回合后死亡。"
+  },
+  "BookOfGenesis": {
+    "NAME": "创世纪",
+    "DESCRIPTION": " 消耗 所有手牌。 NL 每消耗一张，从3张随机牌中选择1张加入你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 消耗 所有手牌。 NL 每消耗一张，从3张 升级 过的随机牌中选择1张加入你的手牌。 NL 消耗 。"
+  },
+  "Sabbath": {
+    "NAME": "礼拜日",
+    "DESCRIPTION": "你每打出一张耗能大于等于2的牌，获得 !M! 点 格挡 。"
+  },
+  "Deterrence": {
+    "NAME": "威慑",
+    "DESCRIPTION": "有 易伤 状态 的敌人攻击造成的伤害减少 !M! %。"
+  },
+  "HowMany": {
+    "NAME": "多少？",
+    "DESCRIPTION": "你每使用4点 [E] ，获得1点 [E] 。"
+  },
+  "Stargaze": {
+    "NAME": "观星",
+    "DESCRIPTION": "你每次将抽牌堆洗牌时，将抽牌堆中的一张牌放到抽牌堆的顶部。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张牌放到抽牌堆的顶部。"
+    ]
+  },
+  "WantToDrinkThis": {
+    "NAME": "想喝这个o.o",
+    "DESCRIPTION": "每2回合，获得1瓶随机 散装 药水。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 每2回合，获得1瓶随机 散装 药水。"
   },
   "ForbiddenSun": {
     "NAME": "封印太阳",
@@ -601,13 +1434,84 @@
     "NAME": "普通一锤",
     "DESCRIPTION": "造成 !D! 点伤害。"
   },
+  "Server": {
+    "NAME": "献祭刀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 回复 !M! 生命。 NL 消耗 。"
+  },
+  "DemonScar": {
+    "NAME": "恶魔爪痕",
+    "DESCRIPTION": "造成 !D! 点奇术伤害。 NL 在本回合内获得 !M! 点 信仰 。 NL 增加1张 *恶魔爪痕 到你的手牌。 NL 消耗 。"
+  },
+  "Grant": {
+    "NAME": "神许重锤",
+    "DESCRIPTION": "造成 !D! 点奇术伤害。 NL 给予 !M! 层 虚弱 。"
+  },
+  "LoathsomeHex": {
+    "NAME": "不详一击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
+  },
   "DeadAgain": {
     "NAME": "死者活化",
     "DESCRIPTION": "对所有敌人造成等于本场战斗中全部已死亡敌人最大生命值之和的伤害。"
   },
+  "AlphaToOmega": {
+    "NAME": "阿拉法和俄梅戛",
+    "DESCRIPTION": "如果你在这回合打出的牌数少于999张，再次打出全部你本回合打出过的牌。 NL 消耗 。"
+  },
   "ChimeOfWant": {
     "NAME": "渴望之铃",
     "DESCRIPTION": " 消耗 1张随机手牌。 NL 获得 !M! 金币。 NL 消耗 。"
+  },
+  "PrescribedLevy": {
+    "NAME": "额定征收",
+    "DESCRIPTION": "抽 !M! 张牌。"
+  },
+  "Devourer": {
+    "NAME": "吞世",
+    "DESCRIPTION": " 消耗 所有手牌。 NL 抽 !M! 张牌。 NL 消耗 。"
+  },
+  "DoThis": {
+    "NAME": "做这个",
+    "DESCRIPTION": "从手牌中选择一张牌打出。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张要打出的牌。"
+    ]
+  },
+  "Purge": {
+    "NAME": "清算",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 丢弃1张牌。"
+  },
+  "Forgotwww": {
+    "NAME": "忘掉啦",
+    "DESCRIPTION": "丢弃1张牌。 NL 获得 !M! 点 活力 。"
+  },
+  "BorrowedTime": {
+    "NAME": "预借时间",
+    "DESCRIPTION": "获得 !M! [E] 。 NL 所有牌在本回合耗能增加1。"
+  },
+  "CleaningAndHosting": {
+    "NAME": "打扫与请客",
+    "DESCRIPTION": "丢弃任意张牌，然后抽相同数量张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "丢弃任意张牌，然后抽相同数量张牌。",
+    "EXTENDED_DESCRIPTION": [
+      "选择任意张牌丢弃。"
+    ]
+  },
+  "Clockwise": {
+    "NAME": "顺时针",
+    "DESCRIPTION": "丢弃这张牌。 NL 如果你在这回合打出的牌数少于999张，依次打出当前手牌最左边的牌，进行 !M! 次。"
+  },
+  "CounterClockwise": {
+    "NAME": "逆时针",
+    "DESCRIPTION": "丢弃这张牌。 NL 如果你在这回合打出的牌数少于999张，依次打出当前手牌最右边的牌，进行 !M! 次。"
+  },
+  "PreceptsStrike": {
+    "NAME": "戒律攻击",
+    "DESCRIPTION": "造成 !D! 点奇术伤害。 NL 你每有1层 灵视 ，这张牌在本场战斗中的基础伤害下降3。"
+  },
+  "Flustered": {
+    "NAME": "慌乱",
+    "DESCRIPTION": "随机造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 丢弃一张随机手牌。"
   },
   "Denial": {
     "NAME": "惜别",
@@ -615,6 +1519,11 @@
     "EXTENDED_DESCRIPTION": [
       "选择要放入手牌的牌。"
     ]
+  },
+  "TransferPayment": {
+    "NAME": "转移支付",
+    "DESCRIPTION": "获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] 。"
   },
   "Zealotry": {
     "NAME": "狂热",
@@ -625,6 +1534,15 @@
     "NAME": "白金信物",
     "DESCRIPTION": "失去2点 信仰 。 NL 在每回合开始时额外抽 !M! 张牌。",
     "UPGRADE_DESCRIPTION": " 固有 。 NL 失去2点 信仰 。 NL 在每回合开始时额外抽 !M! 张牌。"
+  },
+  "DecisionsDecisions": {
+    "NAME": "抉择，抉择...",
+    "DESCRIPTION": "你每打出 !M! 张牌，抽1张牌，丢弃1张牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 你每打出 !M! 张牌，抽1张牌，丢弃1张牌。"
+  },
+  "Taxes": {
+    "NAME": "税金",
+    "DESCRIPTION": "你每回合打出的前 !M! 张牌耗能变为0。 NL 虚无 。"
   },
   "WhatsUp": {
     "NAME": "干嘛...",
@@ -899,6 +1817,10 @@
     "NAME": "王朝剑技",
     "DESCRIPTION": "获得1层 振翼 。 NL 造成 !D! 点伤害。"
   },
+  "IceRapier": {
+    "NAME": "冰之刺剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标敌人的意图是攻击，你造成双倍伤害。"
+  },
   "CarianSlicer": {
     "NAME": "卡利亚迅剑",
     "DESCRIPTION": "对所有敌人造成 !D! 点魔法伤害。 NL 定时 !M! 。"
@@ -1041,6 +1963,14 @@
     "DESCRIPTION": "造成 !D! 点 伤害，获得 !B! 点 格挡 。 NL 给予 !MP! 点 中毒 。 NL 给予 !MR! 点 猩红腐败 。 NL 给予 !MD! 点 燃命 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点 伤害，获得 !B! 点 格挡 。 NL 给予 !MP! 点 中毒 。 NL 给予 !MR! 点 猩红腐败 。 NL 给予 !MD! 点 燃命 。"
   },
+  "LotteryTicket": {
+    "NAME": "奖券",
+    "DESCRIPTION": " 保留 。 NL 获得 !M! 点 代币 。 NL 消耗 。"
+  },
+  "CrucibleCodex": {
+    "NAME": "熔炉法典",
+    "DESCRIPTION": "在你的回合开始时，增加一张 *熔炉符记 到你的手牌。 NL 虚无 。"
+  },
   "PowerOfErdtree": {
     "NAME": "黄金树的庇佑",
     "DESCRIPTION": "直到你的下一回合开始前，你不会失去生命。 NL 消耗 。"
@@ -1049,6 +1979,33 @@
     "NAME": "黑夜的庇佑",
     "DESCRIPTION": "在每回合开始时，你可以从3张随机牌中选择1张加入你的手牌，这张牌在该回合耗能变为0。",
     "UPGRADE_DESCRIPTION": " 固有 。 NL 在每回合开始时，你可以从3张随机牌中选择1张加入你的手牌，这张牌在该回合耗能变为0。"
+  },
+  "AbyssSeal": {
+    "NAME": "深渊徽记",
+    "DESCRIPTION": "在每回合开始时获得 [E] 。 NL 失去 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": "在每回合开始时获得 [E] [E] 。 NL 失去 !M! 点 力量 。"
+  },
+  "Darksword": {
+    "NAME": "黑暗剑",
+    "DESCRIPTION": "你在本回合内无法看见卡牌描述。 NL 本回合内你所有的攻击伤害翻倍。 NL 虚无 。"
+  },
+  "EstusFlask": {
+    "NAME": "原素瓶",
+    "DESCRIPTION": " 保留 。 NL 回复 !M! 生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 回复 !M! 生命。 NL 抽1张牌。 NL 消耗 。"
+  },
+  "AshenEstusFlask": {
+    "NAME": "原素灰瓶",
+    "DESCRIPTION": " 保留 。 NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 [E] 。 NL 抽1张牌。 NL 消耗 。"
+  },
+  "SipAbyss": {
+    "NAME": "啜饮深渊",
+    "DESCRIPTION": "获得 [E] [E] 。 NL 抽 !M! 张牌。 NL 将一张 *虚空 放到抽牌堆的顶端。"
+  },
+  "Greatsword": {
+    "NAME": "巨剑",
+    "DESCRIPTION": " 充能 。 NL 造成 !D! 点伤害。 NL 移除你身上的所有负面效果。"
   },
   "FellowshipAtt": {
     "NAME": "机构附件",
@@ -1065,6 +2022,31 @@
     "NAME": "暗银残灭",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 [E] 。 NL 定时 !M! 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 [E] [E] 。 NL 定时 !M! 。"
+  },
+  "JupiterHeart": {
+    "NAME": "朱庇特的心脏",
+    "DESCRIPTION": " 不能被打出 。 NL 本回合结束后，额外获得一回合。 NL 定时 !M! 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 不能被打出 。 NL 本回合结束后，额外获得一回合。 NL 定时 !M! 。",
+    "EXTENDED_DESCRIPTION": [
+      "这张牌不能被打出。"
+    ]
+  },
+  "ConvenientBundlingStrap": {
+    "NAME": "便捷扎带",
+    "DESCRIPTION": "封装 !M! 张牌。 NL 一次性 。",
+    "EXTENDED_DESCRIPTION": [
+      "选择要封装的牌。",
+      " ， ",
+      " 。 NL 消耗 。"
+    ]
+  },
+  "SantierSpear": {
+    "NAME": "珊第之枪",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 这张牌将在打出 ",
+    "EXTENDED_DESCRIPTION": [
+      " 次后强化。",
+      "造成 !D! 点伤害两次。 NL 抽 !M! 张牌。"
+    ]
   },
   "Bloodbite": {
     "NAME": "咬血",
@@ -1099,5 +2081,26 @@
     "NAME": "唤星",
     "DESCRIPTION": "下一回合， NL 多抽 !M! 张牌， NL 获得 [E] 。",
     "UPGRADE_DESCRIPTION": "下一回合， NL 多抽 !M! 张牌， NL 获得 [E] [E] 。"
+  },
+  "MottledPot": {
+    "NAME": "斑斓壶",
+    "DESCRIPTION": "依次触发3个 药材 效果。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL 消耗 。"
+    ]
+  },
+  "TakeoutBox": {
+    "NAME": "打包盒",
+    "DESCRIPTION": " 保留 。 NL 封装 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": [
+      "选择要封装的牌。",
+      " 保留 。 NL ",
+      " ， ",
+      " 。"
+    ]
+  },
+  "MiniatureStraghess": {
+    "NAME": "娇小的史柴格斯",
+    "DESCRIPTION": "将一名敌人变成最大生命值相同的血量全满的史莱姆老大，意图是撞击，数量与当前幕数相同。 NL 消耗 。 NL 虚无 。"
   }
 }

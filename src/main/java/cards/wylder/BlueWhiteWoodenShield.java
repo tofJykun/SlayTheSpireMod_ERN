@@ -19,7 +19,7 @@ public class BlueWhiteWoodenShield extends CustomCard {
     private static final String IMG_PATH = "img/cards/wylder/BlueWhiteWoodenShield.png";
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
-    private static final int PARRY = 1;
+    private static final int PARRY = 5;
 
     public BlueWhiteWoodenShield() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

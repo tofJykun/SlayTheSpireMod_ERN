@@ -24,6 +24,7 @@ public class Boltstone extends CustomCard {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.Raider_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
+        this.selfRetain = true;
     }
 
     private static CardStrings getCardStrings() {

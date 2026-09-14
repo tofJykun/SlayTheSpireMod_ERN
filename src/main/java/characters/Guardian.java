@@ -67,7 +67,7 @@ public class Guardian extends CustomPlayer {
         retVal.add(Defend_Guardian.ID);
         retVal.add(Defend_Guardian.ID);
         retVal.add(Defend_Guardian.ID);
-        retVal.add(cards.guardian.Whirlwind.ID);
+        retVal.add(cards.guardian.GuardianWhirlwind.ID);
         return retVal;
     }
 

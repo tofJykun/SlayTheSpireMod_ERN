@@ -8,6 +8,7 @@ import cards.raider.DragonScale;
 import cards.raider.Faintstone;
 import cards.raider.FiredrakeStone;
 import cards.raider.MagicStone;
+import cards.raider.MurkyHandScythe;
 import cards.raider.OldMundaneStone;
 import cards.raider.Palestone;
 import cards.raider.PoisonStone;
@@ -22,18 +23,23 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import patches.ReplayField;
+import relics.LargeEmber;
+import powers.MoonOfNokstellaPower;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 
 public final class SmithingHelper {
+    private static AbstractCard activeCraftmanCreation;
     public static final String TITANITE_SHARD_ID = TitaniteShard.ID;
     public static final String TITANITE_CHUNK_ID = TitaniteChunk.ID;
     public static final String TITANITE_SLAB_ID = TitaniteSlab.ID;
     public static final String TWINKLING_TITANITE_ID = TwinklingTitanite.ID;
     public static final String DEMON_TITANITE_ID = DemonTitanite.ID;
     public static final String DRAGON_SCALE_ID = DragonScale.ID;
+    public static final String MURKY_HAND_SCYTHE_ID = MurkyHandScythe.ID;
 
     private static final ArrayList<String> INFUSION_MATERIAL_IDS = new ArrayList<>();
     private static final ArrayList<String> REINFORCEMENT_MATERIAL_IDS = new ArrayList<>();
@@ -107,14 +113,19 @@ public final class SmithingHelper {
         if (body == null) {
             return 0;
         }
+        if (MURKY_HAND_SCYTHE_ID.equals(body.cardID)) {
+            return 0;
+        }
         if (setsCraftmanCostToZero(reinforcementMaterial)) {
             return 0;
         }
-        if (body.cost < 0) {
-            return body.cost;
+        int bodyCost = LargeEmber.effectiveBaseCost(body);
+        if (bodyCost < 0) {
+            return bodyCost;
         }
-        int cost = body.cost + materialCount(infusionMaterial, reinforcementMaterial)
-                - craftmanCostReduction(reinforcementMaterial);
+        int cost = bodyCost + materialCount(infusionMaterial, reinforcementMaterial)
+                - craftmanCostReduction(reinforcementMaterial)
+                - MoonOfNokstellaPower.currentReduction();
         return Math.max(0, cost);
     }
 
@@ -158,6 +169,16 @@ public final class SmithingHelper {
                 ? 0
                 : AbstractDungeon.cardRandomRng.random(INFUSION_MATERIAL_IDS.size() - 1);
         return copyForSmithing(CardLibrary.getCopy(INFUSION_MATERIAL_IDS.get(index)));
+    }
+
+    public static AbstractCard randomReinforcementMaterial() {
+        if (REINFORCEMENT_MATERIAL_IDS.isEmpty()) {
+            return null;
+        }
+        int index = AbstractDungeon.cardRandomRng == null
+                ? 0
+                : AbstractDungeon.cardRandomRng.random(REINFORCEMENT_MATERIAL_IDS.size() - 1);
+        return copyForSmithing(CardLibrary.getCopy(REINFORCEMENT_MATERIAL_IDS.get(index)));
     }
 
     public static AbstractCard randomSmithingMaterial() {
@@ -251,17 +272,15 @@ public final class SmithingHelper {
                     break;
             }
         }
+        // A single-target component still needs a selected enemy beside any area effects.
+        if (enemy) {
+            return self ? AbstractCard.CardTarget.SELF_AND_ENEMY : AbstractCard.CardTarget.ENEMY;
+        }
         if (self && allEnemy) {
             return AbstractCard.CardTarget.ALL;
         }
         if (allEnemy) {
             return AbstractCard.CardTarget.ALL_ENEMY;
-        }
-        if (self && enemy) {
-            return AbstractCard.CardTarget.SELF_AND_ENEMY;
-        }
-        if (enemy) {
-            return AbstractCard.CardTarget.ENEMY;
         }
         if (self) {
             return AbstractCard.CardTarget.SELF;
@@ -291,6 +310,11 @@ public final class SmithingHelper {
     }
 
     public static void playComponent(AbstractCard component, AbstractPlayer player, AbstractMonster monster) {
+        playComponent(component, player, monster, null);
+    }
+
+    public static void playComponent(AbstractCard component, AbstractPlayer player, AbstractMonster monster,
+                                     AbstractCard sourceCard) {
         if (component == null) {
             return;
         }
@@ -307,7 +331,22 @@ public final class SmithingHelper {
         } else {
             playable.applyPowers();
         }
-        playable.use(player, monster);
+        AbstractCard previousSourceCard = activeCraftmanCreation;
+        activeCraftmanCreation = sourceCard;
+        try {
+            playable.use(player, monster);
+        } finally {
+            activeCraftmanCreation = previousSourceCard;
+        }
+    }
+
+    public static UUID getHandAxeReturnUuid(AbstractCard fallbackCard) {
+        AbstractCard source = getSmithingSourceCard(fallbackCard);
+        return source == null ? null : source.uuid;
+    }
+
+    public static AbstractCard getSmithingSourceCard(AbstractCard fallbackCard) {
+        return activeCraftmanCreation == null ? fallbackCard : activeCraftmanCreation;
     }
 
     public static AbstractCard copyForSmithing(AbstractCard card) {

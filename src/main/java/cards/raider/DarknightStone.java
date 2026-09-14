@@ -26,6 +26,7 @@ public class DarknightStone extends CustomCard {
                 CardType.SKILL, AbstractCardEnum.Raider_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseMagicNumber = DEBUFF;
         this.magicNumber = this.baseMagicNumber;
+        this.exhaust = true;
     }
 
     private static CardStrings getCardStrings() {

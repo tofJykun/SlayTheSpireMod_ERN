@@ -2,6 +2,7 @@ package relics;
 
 import basemod.abstracts.CustomRelic;
 import cards.wylder.PitaBread;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,7 +23,9 @@ public class ToastyMittens extends CustomRelic {
     public void atTurnStart() {
         flash();
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new PitaBread(), 1, false));
+        AbstractCard card = new PitaBread();
+        card.upgrade();
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1, false));
     }
 
     @Override

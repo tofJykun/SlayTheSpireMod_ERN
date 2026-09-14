@@ -2,8 +2,8 @@ package powers;
 
 import actions.GreyHealthPlusSettleAction;
 import actions.GreyHealthLoseHpAction;
+import actions.BlueTearstoneRingAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import general.GreyHealthAttackReduction;
 import relics.BorrowedLife;
 
 public class GreyHealthPlusPower extends AbstractPower {
@@ -20,6 +21,7 @@ public class GreyHealthPlusPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private static final int ATTACK_REDUCTION = 2;
+    private final GreyHealthAttackReduction attackReduction = new GreyHealthAttackReduction(this);
 
     public GreyHealthPlusPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -47,12 +49,12 @@ public class GreyHealthPlusPower extends AbstractPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK && this.amount > 0) {
             flash();
-            if (this.amount <= ATTACK_REDUCTION) {
-                addToBot((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, this));
-            } else {
-                addToBot((AbstractGameAction)new ReducePowerAction(this.owner, this.owner, this, ATTACK_REDUCTION));
-            }
+            this.attackReduction.queue(ATTACK_REDUCTION);
         }
+    }
+
+    public void settlePendingAttackReductions() {
+        this.attackReduction.settlePending();
     }
 
     @Override
@@ -64,9 +66,11 @@ public class GreyHealthPlusPower extends AbstractPower {
 
     @Override
     public void onVictory() {
+        GreyHealthAttackReduction.settleBeforeVictory(this.owner);
         if (this.amount > 0) {
             flash();
             if (AbstractDungeon.player == null || !AbstractDungeon.player.hasRelic(BorrowedLife.ID)) {
+                BlueTearstoneRingAction.triggerAtCombatEnd(this.owner);
                 try {
                     UnyieldingPower.bypassGreyHealth = true;
                     GreyHealthLoseHpAction.loseHpDirectly(this.owner, this.amount);

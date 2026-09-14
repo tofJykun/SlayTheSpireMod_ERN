@@ -63,6 +63,34 @@
       " NL 在战斗结束时消失。"
     ]
   },
+  "CloudPotion": {
+    "NAME": "云朵药水",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      " 层 #y振翼 。"
+    ]
+  },
+  "CocoaPotion": {
+    "NAME": "可可药水",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      " 点 #y活力 。"
+    ]
+  },
+  "PearlPotion": {
+    "NAME": "珍珠药水",
+    "DESCRIPTIONS": [
+      "从 #b3 张随机 #y锻造素材牌 中选择 #b1 张加入你的手牌。",
+      "从 #b3 张随机 #y锻造素材牌 中选择 #b1 张，将其加入你的手牌 #b2 次。"
+    ]
+  },
+  "HeavyPotion": {
+    "NAME": "重药水",
+    "DESCRIPTIONS": [
+      "给予 #b",
+      " 层 #y削韧 。"
+    ]
+  },
   "DredgeMossClump": {
     "NAME": "清淤苔藓球",
     "DESCRIPTIONS": [

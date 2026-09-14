@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import general.CombatState;
@@ -14,7 +15,8 @@ public class SixthSense extends CustomRelic {
     public static final String ID = "SixthSense";
     private static final String IMG = "img/relics/wylder/SixthSense.png";
     private static final String IMG_OTL = "img/relics/wylder/outline/SixthSense.png";
-    private static final int BLOCK_NEXT_TURN = 10;
+    private static final int DRAW_NEXT_TURN = 2;
+    private static final int BLOCK_NEXT_TURN = 5;
 
     public SixthSense() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
@@ -37,7 +39,11 @@ public class SixthSense extends CustomRelic {
                     new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player,
-                            new NextTurnBlockPower((AbstractCreature)AbstractDungeon.player, BLOCK_NEXT_TURN, this.name),
+                            new DrawCardNextTurnPower((AbstractCreature)AbstractDungeon.player, DRAW_NEXT_TURN),
+                            DRAW_NEXT_TURN));
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player,
+                            new NextTurnBlockPower((AbstractCreature)AbstractDungeon.player, BLOCK_NEXT_TURN),
                             BLOCK_NEXT_TURN));
         }
     }

@@ -15,7 +15,7 @@ public class Faintstone extends CustomCard {
     public static final String ID = "Faintstone";
     private static final String IMG_PATH = "img/cards/raider/Faintstone.png";
     private static final int COST = -2;
-    private static final int BLOCK = 2;
+    private static final int BLOCK = 3;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public Faintstone() {

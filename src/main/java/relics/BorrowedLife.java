@@ -11,7 +11,7 @@ public class BorrowedLife extends CustomRelic {
 
     public BorrowedLife() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
-                RelicTier.BOSS, AbstractRelic.LandingSound.HEAVY);
+                RelicTier.RARE, AbstractRelic.LandingSound.HEAVY);
     }
 
     @Override

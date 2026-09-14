@@ -27,7 +27,7 @@ public class AntspurRapier extends CustomCard {
 
     public AntspurRapier() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.ENEMY);
+                CardType.ATTACK, AbstractCardEnum.Scholar_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
         this.baseMagicNumber = SCARLET_ROT;
         this.magicNumber = this.baseMagicNumber;

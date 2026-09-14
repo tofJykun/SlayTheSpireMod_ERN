@@ -18,16 +18,33 @@ import basemod.interfaces.PostExhaustSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import basemod.interfaces.PostPowerApplySubscriber;
 import basemod.interfaces.RelicGetSubscriber;
+import cards.duchess.BewitchingBranch;
+import cards.duchess.BladeOfCalling;
 import cards.duchess.CeruleanburstCrystal;
+import cards.duchess.CrystalEnchanted;
 import cards.duchess.ChillingMist;
+import cards.duchess.ConvenientBundlingStrap;
+import cards.duchess.DancerEnchantedSwords;
+import cards.duchess.DarkWoodGrain;
 import cards.duchess.Defend_Duchess;
 import cards.duchess.DarkSilverTracer;
+import cards.duchess.Darkdrift;
 import cards.duchess.DynastFinesse;
+import cards.duchess.FlowingTechniques;
 import cards.duchess.GoldTracer;
+import cards.duchess.HornetRing;
+import cards.duchess.IceRapier;
+import cards.duchess.JupiterHeart;
 import cards.duchess.Mortgage;
+import cards.duchess.NoMoney;
+import cards.duchess.SantierSpear;
+import cards.duchess.ScavengerCurvedSword;
 import cards.duchess.SellswordTwinblades;
+import cards.duchess.SlimeMold;
+import cards.duchess.StormCurvedSword;
 import cards.duchess.Strike_Duchess;
 import cards.duchess.WaterfowlDance;
+import cards.duchess.WindyCrystal;
 import cards.duchess.WildStrikes;
 import cards.executor.Blending;
 import cards.executor.AriandelBlood;
@@ -38,12 +55,24 @@ import cards.executor.BlackFlameRitual;
 import cards.executor.BlackFlameTornado;
 import cards.executor.BloodboonRitual;
 import cards.executor.BloodhoundFang;
+import cards.executor.ChaosBlade;
+import cards.executor.CrossInfection;
+import cards.executor.CrucibleCodex;
+import cards.executor.DarkBlood;
+import cards.executor.DeathPoker;
 import cards.executor.DestinedDeath;
 import cards.executor.Defend_Executor;
+import cards.executor.EmitForce;
+import cards.executor.Expose;
+import cards.executor.FreezingMist;
 import cards.executor.FrenziedBurst;
+import cards.executor.GammaKnife;
 import cards.executor.HoarfrostStomp;
+import cards.executor.InfectionStrike;
 import cards.executor.LetFeastBegin;
+import cards.executor.Metastasis;
 import cards.executor.Numbness;
+import cards.executor.OrderBlade;
 import cards.executor.PaintWorld;
 import cards.executor.PowerOfErdtree;
 import cards.executor.RiversOfBlood;
@@ -51,51 +80,146 @@ import cards.executor.Seppuku;
 import cards.executor.StTrinaSword;
 import cards.executor.Strike_Executor;
 import cards.executor.UnendurableFrenzy;
+import cards.guardian.BlackKnightHalberd;
 import cards.guardian.Bonewheel;
 import cards.guardian.BarricadeShield;
+import cards.guardian.Brightbug;
+import cards.guardian.CallLightning;
 import cards.guardian.ChargeForth;
+import cards.guardian.Cyclone;
 import cards.guardian.Defend_Guardian;
+import cards.guardian.FeatherFan;
+import cards.guardian.ForcedLanding;
+import cards.guardian.GoldenHalberd;
+import cards.guardian.GowerRingOfProtection;
+import cards.guardian.KineticBombardment;
+import cards.guardian.Preening;
+import cards.guardian.PurpleSign;
 import cards.guardian.SpikedShield;
+import cards.guardian.SplitleafGreatsword;
+import cards.guardian.Stormcaller;
 import cards.guardian.Strike_Guardian;
+import cards.guardian.SunlightStraightSword;
 import cards.guardian.WarmingStone;
+import cards.guardian.WingedKnightHalberd;
 import cards.guardian.WingsOfSalvation;
+import cards.ironeye.BlackClawAssistant;
+import cards.ironeye.Barter;
+import cards.ironeye.BillPlease;
+import cards.ironeye.BitComet;
+import cards.ironeye.Bounty;
 import cards.ironeye.CeruleanwhorlBubble;
+import cards.ironeye.DeadOrAlive;
 import cards.ironeye.Defend_Ironeye;
+import cards.ironeye.DivineSpear;
+import cards.ironeye.Entropy;
+import cards.ironeye.Fluctuation;
 import cards.ironeye.FellowshipAtt;
 import cards.ironeye.CobCannon;
+import cards.ironeye.FragrantBranchOfYore;
+import cards.ironeye.GhostBlade;
+import cards.ironeye.GhostMillstone;
+import cards.ironeye.GoughGreatbow;
+import cards.ironeye.GoldPickledFowlFoot;
+import cards.ironeye.HeatUp;
 import cards.ironeye.Imitater;
+import cards.ironeye.Lifegem;
+import cards.ironeye.LoyaltyCard;
+import cards.ironeye.MidasTouch;
+import cards.ironeye.OldRadiantLifegem;
 import cards.ironeye.PetrifiedSomething;
+import cards.ironeye.PharrosLockstone;
+import cards.ironeye.Plunder;
+import cards.ironeye.PlatinumCard;
+import cards.ironeye.PortableShop;
+import cards.ironeye.RainOfArrows;
+import cards.ironeye.RustedCoin;
+import cards.ironeye.RustedGoldCoin;
+import cards.ironeye.ShieldOfWant;
+import cards.ironeye.SilverPickledFowlFoot;
 import cards.ironeye.SmoothSilkyStone;
+import cards.ironeye.SnakeSlough;
 import cards.ironeye.StringSecret;
 import cards.ironeye.Strike_Ironeye;
+import cards.ironeye.Usury;
+import cards.ironeye.VendingMachine;
 import cards.raider.Defend_Raider;
+import cards.raider.AcidSurge;
+import cards.raider.AssemblyLine;
 import cards.raider.BloodDebt;
 import cards.raider.BloodTax;
 import cards.raider.BloodWall;
+import cards.raider.BlessedDew;
 import cards.raider.BloodfiendArm;
 import cards.raider.BleedStone;
+import cards.raider.BoneFist;
+import cards.raider.BlueTearstoneRing;
 import cards.raider.Boltstone;
+import cards.raider.Caestus;
+import cards.raider.Club;
 import cards.raider.CraftmanHammer;
+import cards.raider.CourtesyEnough;
 import cards.raider.DarknightStone;
 import cards.raider.DemonTitanite;
+import cards.raider.DoOrDie;
+import cards.raider.DowsingRod;
+import cards.raider.TotemStela;
+import cards.raider.Dismantle;
+import cards.raider.Insurance;
+import cards.raider.CatarinaRoundMoon;
+import cards.raider.DungPie;
+import cards.raider.DullEmber;
+import cards.raider.EarthSeeker;
+import cards.raider.DragonTorsoStone;
+import cards.raider.DragonHeadStone;
 import cards.raider.DragonScale;
 import cards.raider.Faintstone;
 import cards.raider.FiredrakeStone;
+import cards.raider.FightThrough;
+import cards.raider.FourProngedPlow;
+import cards.raider.ForkedHatchet;
+import cards.raider.StormRuler;
+import cards.raider.Stagger;
+import cards.raider.GiantCrusher;
+import cards.raider.VordtGreatHammer;
+import cards.raider.GreatClub;
+import cards.raider.HammerTime;
+import cards.raider.HandAxe;
 import cards.raider.MagicStone;
+import cards.raider.MoonOfNokstella;
+import cards.raider.MurkyHandScythe;
 import cards.raider.OldMundaneStone;
 import cards.raider.Palestone;
 import cards.raider.Pickaxe;
+import cards.raider.DemonGreatHammer;
+import cards.raider.BloodforgedSword;
+import cards.raider.PrelateCharge;
+import cards.raider.PierceShield;
 import cards.raider.Kick;
+import cards.raider.StormKick;
+import cards.raider.LargeClub;
+import cards.raider.Masterwork;
 import cards.raider.PoisonStone;
+import cards.raider.PowerOfHouseMarais;
 import cards.raider.PrismStone;
 import cards.raider.RawStone;
+import cards.raider.RedTearstoneRing;
+import cards.raider.Siegbrau;
+import cards.raider.SpinningSlash;
+import cards.raider.StoneRing;
 import cards.raider.TitaniteChunk;
 import cards.raider.TitaniteSlab;
 import cards.raider.TitaniteShard;
 import cards.raider.TwinklingTitanite;
+import cards.raider.DuelistFurledFinger;
+import cards.raider.Smithbox;
 import cards.raider.DuelistGreataxe;
+import cards.raider.ExpectAFight;
 import cards.raider.Strike_Raider;
+import cards.raider.WingedKnightTwinaxes;
+import cards.raider.WarMateriel;
 import cards.revenant.BlackButler;
+import cards.revenant.BeastClaw;
 import cards.recluse.BedOfMagic;
 import cards.recluse.BellowingDragoncrest;
 import cards.recluse.AmbushShard;
@@ -172,42 +296,83 @@ import cards.recluse.TwilightHerb;
 import cards.recluse.UnleashMagic;
 import cards.recluse.WhiteLightning;
 import cards.recluse.Yearn;
+import cards.revenant.CursedClaws;
+import cards.revenant.Climax;
 import cards.revenant.Defend_Revenant;
+import cards.revenant.DestitutionAssist;
 import cards.revenant.Dirge;
 import cards.revenant.DoggoXD;
+import cards.revenant.GhostflameIgnition;
+import cards.revenant.GhizaWheel;
 import cards.revenant.Grovewort;
+import cards.revenant.GreatEpee;
+import cards.revenant.Immolation;
+import cards.revenant.IScream;
 import cards.revenant.ImpatientBall;
+import cards.revenant.Initiative;
 import cards.revenant.Invoke;
+import cards.revenant.LeadingStrike;
 import cards.revenant.LightningRam;
 import cards.revenant.MimicTear;
 import cards.revenant.PartingFlame;
 import cards.revenant.PhantomSlash;
 import cards.revenant.PowerWithin;
+import cards.revenant.PowerOfVengeance;
 import cards.revenant.PumpkinHelm;
 import cards.revenant.RedHairIcon;
 import cards.revenant.RepeatingCrossbow;
 import cards.revenant.Seance;
+import cards.revenant.StarlightShards;
 import cards.revenant.SummonAid;
 import cards.revenant.Strike_Revenant;
 import cards.revenant.Undeath;
+import cards.revenant.VisageShield;
+import cards.revenant.WantThis;
+import cards.scholar.AeonianButterfly;
+import cards.scholar.AlbinauricBloodclot;
 import cards.scholar.AntspurRapier;
+import cards.scholar.ArteriaLeaf;
+import cards.scholar.Bloodrose;
 import cards.scholar.Defend_Scholar;
+import cards.scholar.DrawstringPot;
+import cards.scholar.Ergodic;
+import cards.scholar.EyeOfYelough;
+import cards.scholar.FingerprintStoneShield;
+import cards.scholar.GoldenCentipede;
+import cards.scholar.GravelStone;
 import cards.scholar.Homunculus;
+import cards.scholar.MiquellaLily;
+import cards.scholar.MiniatureStraghess;
+import cards.scholar.NascentButterfly;
+import cards.scholar.TrinaLily;
+import cards.scholar.TranquilWalkOfPeace;
+import cards.scholar.WaterHorse;
 import cards.scholar.PenglaiWorship;
 import cards.scholar.AjaRedStone;
+import cards.scholar.PotionAscetic;
 import cards.scholar.PotionCoveredAshes;
+import cards.scholar.PotentateCookbook;
+import cards.scholar.RiteOfKindling;
 import cards.scholar.RoyalLegacy;
+import cards.scholar.RowaFruit;
+import cards.scholar.SacramentalBud;
 import cards.scholar.Strike_Scholar;
 import cards.scholar.Tyranny;
 import cards.status.MagicEmber;
 import cards.tempcards.CraftmanCreation;
 import cards.tempcards.CrucibleToken;
+import cards.tempcards.DragonPunch;
 import cards.tempcards.FadingPrimalGlintstone;
+import cards.tempcards.LotteryTicket;
+import cards.tempcards.MottledPot;
 import cards.tempcards.PhantomDoggo;
 import cards.tempcards.PhantomFrederick;
 import cards.tempcards.PhantomHelen;
 import cards.tempcards.PhantomAsimi;
 import cards.tempcards.PhantomSebastian;
+import cards.wylder.AbyssSeal;
+import cards.wylder.AshenEstusFlask;
+import cards.wylder.AstoraGreatsword;
 import cards.wylder.BlueWhiteWoodenShield;
 import cards.wylder.Barehanded;
 import cards.wylder.BloodVeil;
@@ -222,32 +387,72 @@ import cards.wylder.Onikiri;
 import cards.wylder.PitaBread;
 import cards.wylder.PowerOfNight;
 import cards.wylder.RemoveArmor;
+import cards.wylder.SipAbyss;
+import cards.wylder.SquareOff;
 import cards.undertaker.AlbinauricProof;
+import cards.undertaker.AlphaToOmega;
+import cards.undertaker.BookOfGenesis;
+import cards.undertaker.BookOfRevelation;
+import cards.undertaker.BorrowedTime;
 import cards.undertaker.ChimeOfWant;
+import cards.undertaker.Clockwise;
+import cards.undertaker.CleaningAndHosting;
+import cards.undertaker.CounterClockwise;
 import cards.undertaker.DeadAgain;
+import cards.undertaker.DecisionsDecisions;
 import cards.undertaker.Denial;
 import cards.undertaker.Delirium;
 import cards.undertaker.Defend_Undertaker;
+import cards.undertaker.DemonScar;
+import cards.undertaker.Deterrence;
+import cards.undertaker.Devourer;
+import cards.undertaker.DoThis;
 import cards.undertaker.EyesWithin;
+import cards.undertaker.Flustered;
 import cards.undertaker.ForbiddenSun;
+import cards.undertaker.Forgotwww;
+import cards.undertaker.Grant;
 import cards.undertaker.GreatSwampTome;
+import cards.undertaker.HowMany;
+import cards.undertaker.LoathsomeHex;
 import cards.undertaker.NormalHammer;
 import cards.undertaker.OuterBoon;
+import cards.undertaker.PreceptsStrike;
+import cards.undertaker.PrescribedLevy;
+import cards.undertaker.Purge;
+import cards.undertaker.Sabbath;
+import cards.undertaker.Server;
 import cards.undertaker.SoulAppease;
+import cards.undertaker.Stargaze;
 import cards.undertaker.Strike_Undertaker;
+import cards.undertaker.TakeoutBox;
+import cards.undertaker.Taxes;
+import cards.undertaker.TransferPayment;
+import cards.undertaker.WantToDrinkThis;
 import cards.undertaker.WhatsUp;
 import cards.undertaker.Zealotry;
 import cards.wylder.ClawShot;
 import cards.wylder.CrismonParma;
 import cards.wylder.CrowQuills;
+import cards.wylder.Darksword;
 import cards.wylder.Defend_Wylder;
+import cards.wylder.EstusFlask;
+import cards.wylder.FarronTechniques;
+import cards.wylder.FumeUltraGreatsword;
 import cards.wylder.GrassCrestShield;
+import cards.wylder.GravelordSword;
+import cards.wylder.GravelordSwordDance;
+import cards.wylder.Greatsword;
 import cards.wylder.SmallShield;
 import cards.wylder.Strike_Wylder;
 import cards.wylder.SymbolOfAvarice;
 import cards.wylder.TransientCurse;
 import cards.wylder.Ubadachi;
+import cards.wylder.Valorheart;
 import cards.wylder.WolfGreatshield;
+import cards.wylder.WolfGreatsword;
+import cards.wylder.WolfAssault;
+import cards.wylder.Warmth;
 import characters.Duchess;
 import characters.Executor;
 import characters.Guardian;
@@ -282,41 +487,67 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
 import general.BulkPotionQueue;
+import general.CrudeDrug;
 import general.DeadEnemyStats;
 import general.EnemyBattleStartSnapshot;
+import general.FragrantBranchOfYoreRewards;
 import general.GuidanceStats;
+import general.PotionHistory;
+import general.RandomUsageCounter;
+import general.TransformStats;
 import patches.AbstractCardEnum;
 import patches.ERNModClassEnum;
 import powers.BellowingDragoncrestPower;
 import powers.BlendingPower;
+import powers.DarkBloodPower;
+import powers.InfectionStrikePower;
+import powers.InitiativePower;
 import powers.LingeringDragoncrestPower;
 import powers.PaintWorldPower;
 import powers.RedHairIconPower;
 import powers.SlumberingDragoncrestPower;
+import potions.CloudPotion;
+import potions.CocoaPotion;
 import potions.CrimsonPotion;
 import potions.DredgeMossClump;
+import potions.HeavyPotion;
+import potions.PearlPotion;
 import potions.DuskHerbDew;
 import potions.HaligtreeBalm;
 import potions.IntelligencePotion;
+import relics.AlbinauricPot;
+import relics.AldiaFund;
 import relics.Bagcraft;
 import relics.BedOfChaos;
+import relics.BeverageGiveaways;
 import relics.BequestOfSeath;
 import relics.BorrowedLife;
 import relics.CinderellaRosette;
-import relics.CrucibleCodex;
 import relics.DebtToBond;
 import relics.FighterDestined;
 import relics.FighterResolve;
 import relics.HonorOfPinionfolk;
+import relics.IllusoryRing;
+import relics.Jar;
 import relics.JosephForesight;
 import relics.KleinBottle;
+import relics.LaplaceDemon;
+import relics.LargeEmber;
+import relics.OneTwoPunch;
+import relics.Bloodletting;
+import relics.LostAshesOfWar;
 import relics.LooksLens;
 import relics.MagicCocktail;
+import relics.MiniatureThunder;
 import relics.EagleEye;
+import relics.CovetousGoldSerpentRing;
+import relics.CovetousSilverSerpentRing;
 import relics.NightShard;
 import relics.DeepWoodBranch;
 import relics.MagnificentPoise;
 import relics.OldGreataxe;
+import relics.OldWolfRoster;
+import relics.OilPot;
 import relics.PetrifiedDragonBone;
 import relics.PrescientGlintEye;
 import relics.CalamityWard;
@@ -324,10 +555,13 @@ import relics.RitualBand;
 import relics.ScrollOfLogan;
 import relics.SacredTimber;
 import relics.SeedbedCurse;
+import relics.SilverPendant;
 import relics.SoulForge;
 import relics.SummonSpirit;
 import relics.ToastyMittens;
 import relics.Trance;
+import relics.TransposingKiln;
+import relics.StarsDice;
 import relics.WhisperingEarring;
 import relics.WheelCatalyst;
 import relics.YearsEntwined;
@@ -409,6 +643,18 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
                 DuskHerbDew.POTION_ID, ERNModClassEnum.Recluse_CLASS);
         BaseMod.addPotion(DredgeMossClump.class, RAIDER_COLOR.cpy(), RAIDER_COLOR.cpy(), Color.WHITE.cpy(),
                 DredgeMossClump.POTION_ID, ERNModClassEnum.Raider_CLASS);
+        BaseMod.addPotion(HeavyPotion.class, RAIDER_COLOR.cpy(),
+                new Color(0.32F, 0.32F, 0.32F, 1.0F), Color.WHITE.cpy(),
+                HeavyPotion.POTION_ID, ERNModClassEnum.Raider_CLASS);
+        BaseMod.addPotion(PearlPotion.class, new Color(0.91F, 0.91F, 0.96F, 1.0F),
+                new Color(0.70F, 0.80F, 0.88F, 1.0F), Color.WHITE.cpy(),
+                PearlPotion.POTION_ID, ERNModClassEnum.Raider_CLASS);
+        BaseMod.addPotion(CocoaPotion.class, GUARDIAN_COLOR.cpy(),
+                new Color(0.32F, 0.18F, 0.10F, 1.0F), Color.WHITE.cpy(),
+                CocoaPotion.POTION_ID, ERNModClassEnum.Guardian_CLASS);
+        BaseMod.addPotion(CloudPotion.class, new Color(0.82F, 0.90F, 0.96F, 1.0F),
+                new Color(0.58F, 0.73F, 0.84F, 1.0F), Color.WHITE.cpy(),
+                CloudPotion.POTION_ID, ERNModClassEnum.Guardian_CLASS);
         BaseMod.addPotion(HaligtreeBalm.class, SCHOLAR_COLOR.cpy(),
                 new Color(0.82F, 0.78F, 0.56F, 1.0F), Color.WHITE.cpy(),
                 HaligtreeBalm.POTION_ID, ERNModClassEnum.Scholar_CLASS);
@@ -521,6 +767,12 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new BloodVeil());
         this.cardsToAdd.add(new BloodhoundFinesse());
         this.cardsToAdd.add(new BloodhoundStep());
+        this.cardsToAdd.add(new FarronTechniques());
+        this.cardsToAdd.add(new Valorheart());
+        this.cardsToAdd.add(new FumeUltraGreatsword());
+        this.cardsToAdd.add(new Greatsword());
+        this.cardsToAdd.add(new GravelordSword());
+        this.cardsToAdd.add(new GravelordSwordDance());
         this.cardsToAdd.add(new CrowQuills());
         this.cardsToAdd.add(new SymbolOfAvarice());
         this.cardsToAdd.add(new Ubadachi());
@@ -528,69 +780,191 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new ManikinShield());
         this.cardsToAdd.add(new CeruleanDagger());
         this.cardsToAdd.add(new WolfGreatshield());
+        this.cardsToAdd.add(new WolfGreatsword());
+        this.cardsToAdd.add(new WolfAssault());
+        this.cardsToAdd.add(new Warmth());
         this.cardsToAdd.add(new PowerOfNight());
+        this.cardsToAdd.add(new AbyssSeal());
+        this.cardsToAdd.add(new AshenEstusFlask());
+        this.cardsToAdd.add(new Darksword());
+        this.cardsToAdd.add(new EstusFlask());
+        this.cardsToAdd.add(new SipAbyss());
+        this.cardsToAdd.add(new AstoraGreatsword());
+        this.cardsToAdd.add(new SquareOff());
         this.cardsToAdd.add(new Strike_Guardian());
         this.cardsToAdd.add(new Defend_Guardian());
-        this.cardsToAdd.add(new cards.guardian.Whirlwind());
+        this.cardsToAdd.add(new cards.guardian.GuardianWhirlwind());
         this.cardsToAdd.add(new WarmingStone());
         this.cardsToAdd.add(new WingsOfSalvation());
         this.cardsToAdd.add(new ChargeForth());
+        this.cardsToAdd.add(new FeatherFan());
+        this.cardsToAdd.add(new WingedKnightHalberd());
+        this.cardsToAdd.add(new BlackKnightHalberd());
+        this.cardsToAdd.add(new SunlightStraightSword());
+        this.cardsToAdd.add(new GoldenHalberd());
+        this.cardsToAdd.add(new SplitleafGreatsword());
         this.cardsToAdd.add(new Bonewheel());
         this.cardsToAdd.add(new SpikedShield());
         this.cardsToAdd.add(new BarricadeShield());
+        this.cardsToAdd.add(new Preening());
+        this.cardsToAdd.add(new PurpleSign());
+        this.cardsToAdd.add(new Stormcaller());
+        this.cardsToAdd.add(new CallLightning());
+        this.cardsToAdd.add(new Cyclone());
+        this.cardsToAdd.add(new Brightbug());
+        this.cardsToAdd.add(new ForcedLanding());
+        this.cardsToAdd.add(new KineticBombardment());
+        this.cardsToAdd.add(new GowerRingOfProtection());
         this.cardsToAdd.add(new Strike_Ironeye());
         this.cardsToAdd.add(new Defend_Ironeye());
         this.cardsToAdd.add(new CobCannon());
+        this.cardsToAdd.add(new BitComet());
+        this.cardsToAdd.add(new ShieldOfWant());
+        this.cardsToAdd.add(new Lifegem());
+        this.cardsToAdd.add(new Plunder());
+        this.cardsToAdd.add(new BillPlease());
+        this.cardsToAdd.add(new MidasTouch());
         this.cardsToAdd.add(new Imitater());
         this.cardsToAdd.add(new StringSecret());
         this.cardsToAdd.add(new SmoothSilkyStone());
         this.cardsToAdd.add(new PetrifiedSomething());
         this.cardsToAdd.add(new CeruleanwhorlBubble());
+        this.cardsToAdd.add(new PharrosLockstone());
+        this.cardsToAdd.add(new PortableShop());
+        this.cardsToAdd.add(new RustedCoin());
+        this.cardsToAdd.add(new DeadOrAlive());
+        this.cardsToAdd.add(new Barter());
+        this.cardsToAdd.add(new RustedGoldCoin());
+        this.cardsToAdd.add(new VendingMachine());
+        this.cardsToAdd.add(new PlatinumCard());
+        this.cardsToAdd.add(new LoyaltyCard());
+        this.cardsToAdd.add(new GhostBlade());
+        this.cardsToAdd.add(new GhostMillstone());
+        this.cardsToAdd.add(new GoughGreatbow());
+        this.cardsToAdd.add(new RainOfArrows());
+        this.cardsToAdd.add(new DivineSpear());
+        this.cardsToAdd.add(new Usury());
+        this.cardsToAdd.add(new GoldPickledFowlFoot());
+        this.cardsToAdd.add(new SilverPickledFowlFoot());
+        this.cardsToAdd.add(new Bounty());
+        this.cardsToAdd.add(new OldRadiantLifegem());
         this.cardsToAdd.add(new FellowshipAtt());
+        this.cardsToAdd.add(new FragrantBranchOfYore());
+        this.cardsToAdd.add(new BlackClawAssistant());
+        this.cardsToAdd.add(new SnakeSlough());
+        this.cardsToAdd.add(new Fluctuation());
+        this.cardsToAdd.add(new Entropy());
+        this.cardsToAdd.add(new HeatUp());
         this.cardsToAdd.add(new Strike_Raider());
         this.cardsToAdd.add(new Defend_Raider());
+        this.cardsToAdd.add(new Club());
+        this.cardsToAdd.add(new FourProngedPlow());
+        this.cardsToAdd.add(new ForkedHatchet());
+        this.cardsToAdd.add(new StormRuler());
+        this.cardsToAdd.add(new Stagger());
+        this.cardsToAdd.add(new FightThrough());
+        this.cardsToAdd.add(new LargeClub());
+        this.cardsToAdd.add(new Masterwork());
         this.cardsToAdd.add(new CraftmanHammer());
+        this.cardsToAdd.add(new CourtesyEnough());
         this.cardsToAdd.add(new BloodWall());
+        this.cardsToAdd.add(new PierceShield());
+        this.cardsToAdd.add(new BlessedDew());
+        this.cardsToAdd.add(new Siegbrau());
         this.cardsToAdd.add(new BloodDebt());
         this.cardsToAdd.add(new BloodTax());
+        this.cardsToAdd.add(new BlueTearstoneRing());
+        this.cardsToAdd.add(new RedTearstoneRing());
         this.cardsToAdd.add(new BleedStone());
         this.cardsToAdd.add(new Boltstone());
         this.cardsToAdd.add(new DarknightStone());
         this.cardsToAdd.add(new Faintstone());
         this.cardsToAdd.add(new FiredrakeStone());
         this.cardsToAdd.add(new Kick());
+        this.cardsToAdd.add(new StormKick());
+        this.cardsToAdd.add(new HammerTime());
+        this.cardsToAdd.add(new MurkyHandScythe());
         this.cardsToAdd.add(new Pickaxe());
+        this.cardsToAdd.add(new DemonGreatHammer());
+        this.cardsToAdd.add(new BloodforgedSword());
+        this.cardsToAdd.add(new PrelateCharge());
         this.cardsToAdd.add(new RawStone());
+        this.cardsToAdd.add(new DungPie());
         this.cardsToAdd.add(new TitaniteShard());
         this.cardsToAdd.add(new TitaniteChunk());
         this.cardsToAdd.add(new TitaniteSlab());
         this.cardsToAdd.add(new TwinklingTitanite());
         this.cardsToAdd.add(new DemonTitanite());
         this.cardsToAdd.add(new DragonScale());
+        this.cardsToAdd.add(new DragonTorsoStone());
+        this.cardsToAdd.add(new DragonHeadStone());
+        this.cardsToAdd.add(new DoOrDie());
+        this.cardsToAdd.add(new DowsingRod());
+        this.cardsToAdd.add(new TotemStela());
+        this.cardsToAdd.add(new AcidSurge());
+        this.cardsToAdd.add(new PowerOfHouseMarais());
+        this.cardsToAdd.add(new Caestus());
+        this.cardsToAdd.add(new StoneRing());
+        this.cardsToAdd.add(new AssemblyLine());
+        this.cardsToAdd.add(new DullEmber());
+        this.cardsToAdd.add(new EarthSeeker());
+        this.cardsToAdd.add(new HandAxe());
         this.cardsToAdd.add(new BloodfiendArm());
+        this.cardsToAdd.add(new GiantCrusher());
+        this.cardsToAdd.add(new VordtGreatHammer());
+        this.cardsToAdd.add(new GreatClub());
         this.cardsToAdd.add(new MagicStone());
+        this.cardsToAdd.add(new MoonOfNokstella());
         this.cardsToAdd.add(new OldMundaneStone());
         this.cardsToAdd.add(new Palestone());
         this.cardsToAdd.add(new PoisonStone());
         this.cardsToAdd.add(new PrismStone());
+        this.cardsToAdd.add(new Dismantle());
+        this.cardsToAdd.add(new Insurance());
+        this.cardsToAdd.add(new CatarinaRoundMoon());
+        this.cardsToAdd.add(new DuelistFurledFinger());
+        this.cardsToAdd.add(new Smithbox());
         this.cardsToAdd.add(new DuelistGreataxe());
+        this.cardsToAdd.add(new WingedKnightTwinaxes());
+        this.cardsToAdd.add(new WarMateriel());
+        this.cardsToAdd.add(new BoneFist());
+        this.cardsToAdd.add(new ExpectAFight());
+        this.cardsToAdd.add(new SpinningSlash());
         this.cardsToAdd.add(new Strike_Duchess());
         this.cardsToAdd.add(new Defend_Duchess());
         this.cardsToAdd.add(new DynastFinesse());
+        this.cardsToAdd.add(new IceRapier());
+        this.cardsToAdd.add(new Darkdrift());
+        this.cardsToAdd.add(new ScavengerCurvedSword());
+        this.cardsToAdd.add(new StormCurvedSword());
+        this.cardsToAdd.add(new BladeOfCalling());
+        this.cardsToAdd.add(new BewitchingBranch());
         this.cardsToAdd.add(new cards.duchess.Restage());
         this.cardsToAdd.add(new WaterfowlDance());
         this.cardsToAdd.add(new Mortgage());
+        this.cardsToAdd.add(new NoMoney());
+        this.cardsToAdd.add(new SlimeMold());
         this.cardsToAdd.add(new SellswordTwinblades());
         this.cardsToAdd.add(new CeruleanburstCrystal());
+        this.cardsToAdd.add(new CrystalEnchanted());
+        this.cardsToAdd.add(new WindyCrystal());
+        this.cardsToAdd.add(new FlowingTechniques());
+        this.cardsToAdd.add(new HornetRing());
         this.cardsToAdd.add(new WildStrikes());
+        this.cardsToAdd.add(new DancerEnchantedSwords());
         this.cardsToAdd.add(new GoldTracer());
         this.cardsToAdd.add(new DarkSilverTracer());
+        this.cardsToAdd.add(new JupiterHeart());
+        this.cardsToAdd.add(new ConvenientBundlingStrap());
+        this.cardsToAdd.add(new SantierSpear());
         this.cardsToAdd.add(new ChillingMist());
+        this.cardsToAdd.add(new DarkWoodGrain());
         this.cardsToAdd.add(new Strike_Executor());
         this.cardsToAdd.add(new Defend_Executor());
         this.cardsToAdd.add(new DestinedDeath());
         this.cardsToAdd.add(new BlackFlame());
         this.cardsToAdd.add(new BlackFlameTornado());
+        this.cardsToAdd.add(new Metastasis());
         this.cardsToAdd.add(new BlackFlameRitual());
         this.cardsToAdd.add(new BlackFlameBlade());
         this.cardsToAdd.add(new LetFeastBegin());
@@ -598,30 +972,56 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new Blending());
         this.cardsToAdd.add(new AspectsOfCrucible());
         this.cardsToAdd.add(new Numbness());
+        this.cardsToAdd.add(new EmitForce());
         this.cardsToAdd.add(new RiversOfBlood());
         this.cardsToAdd.add(new StTrinaSword());
         this.cardsToAdd.add(new HoarfrostStomp());
+        this.cardsToAdd.add(new InfectionStrike());
+        this.cardsToAdd.add(new CrossInfection());
         this.cardsToAdd.add(new FrenziedBurst());
         this.cardsToAdd.add(new UnendurableFrenzy());
         this.cardsToAdd.add(new BloodboonRitual());
         this.cardsToAdd.add(new BloodhoundFang());
+        this.cardsToAdd.add(new ChaosBlade());
         this.cardsToAdd.add(new Seppuku());
         this.cardsToAdd.add(new PowerOfErdtree());
         this.cardsToAdd.add(new AriandelBlood());
+        this.cardsToAdd.add(new OrderBlade());
+        this.cardsToAdd.add(new DarkBlood());
+        this.cardsToAdd.add(new CrucibleCodex());
+        this.cardsToAdd.add(new Expose());
+        this.cardsToAdd.add(new FreezingMist());
+        this.cardsToAdd.add(new GammaKnife());
+        this.cardsToAdd.add(new DeathPoker());
         this.cardsToAdd.add(new Strike_Revenant());
         this.cardsToAdd.add(new Defend_Revenant());
         this.cardsToAdd.add(new PhantomSlash());
         this.cardsToAdd.add(new Invoke());
+        this.cardsToAdd.add(new BeastClaw());
+        this.cardsToAdd.add(new LeadingStrike());
+        this.cardsToAdd.add(new CursedClaws());
+        this.cardsToAdd.add(new GhizaWheel());
+        this.cardsToAdd.add(new DestitutionAssist());
         this.cardsToAdd.add(new Dirge());
         this.cardsToAdd.add(new Grovewort());
         this.cardsToAdd.add(new PumpkinHelm());
         this.cardsToAdd.add(new RepeatingCrossbow());
         this.cardsToAdd.add(new BlackButler());
+        this.cardsToAdd.add(new GreatEpee());
+        this.cardsToAdd.add(new Immolation());
+        this.cardsToAdd.add(new Initiative());
         this.cardsToAdd.add(new LightningRam());
+        this.cardsToAdd.add(new VisageShield());
         this.cardsToAdd.add(new Seance());
         this.cardsToAdd.add(new Undeath());
         this.cardsToAdd.add(new PowerWithin());
         this.cardsToAdd.add(new PartingFlame());
+        this.cardsToAdd.add(new GhostflameIgnition());
+        this.cardsToAdd.add(new IScream());
+        this.cardsToAdd.add(new StarlightShards());
+        this.cardsToAdd.add(new WantThis());
+        this.cardsToAdd.add(new Climax());
+        this.cardsToAdd.add(new PowerOfVengeance());
         this.cardsToAdd.add(new SummonAid());
         this.cardsToAdd.add(new RedHairIcon());
         this.cardsToAdd.add(new ImpatientBall());
@@ -630,27 +1030,75 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new Strike_Scholar());
         this.cardsToAdd.add(new Defend_Scholar());
         this.cardsToAdd.add(new PotionCoveredAshes());
+        this.cardsToAdd.add(new Bloodrose());
+        this.cardsToAdd.add(new RowaFruit());
+        this.cardsToAdd.add(new EyeOfYelough());
+        this.cardsToAdd.add(new TranquilWalkOfPeace());
+        this.cardsToAdd.add(new GravelStone());
+        this.cardsToAdd.add(new AlbinauricBloodclot());
+        this.cardsToAdd.add(new GoldenCentipede());
+        this.cardsToAdd.add(new WaterHorse());
+        this.cardsToAdd.add(new AeonianButterfly());
+        this.cardsToAdd.add(new TrinaLily());
+        this.cardsToAdd.add(new MiquellaLily());
+        this.cardsToAdd.add(new NascentButterfly());
+        this.cardsToAdd.add(new SacramentalBud());
+        this.cardsToAdd.add(new ArteriaLeaf());
+        this.cardsToAdd.add(new Ergodic());
+        this.cardsToAdd.add(new FingerprintStoneShield());
+        this.cardsToAdd.add(new DrawstringPot());
+        this.cardsToAdd.add(new RiteOfKindling());
         this.cardsToAdd.add(new AntspurRapier());
         this.cardsToAdd.add(new Tyranny());
         this.cardsToAdd.add(new PenglaiWorship());
         this.cardsToAdd.add(new RoyalLegacy());
         this.cardsToAdd.add(new Homunculus());
         this.cardsToAdd.add(new AjaRedStone());
+        this.cardsToAdd.add(new PotionAscetic());
+        this.cardsToAdd.add(new PotentateCookbook());
+        this.cardsToAdd.add(new MiniatureStraghess());
         this.cardsToAdd.add(new Strike_Undertaker());
         this.cardsToAdd.add(new Defend_Undertaker());
         this.cardsToAdd.add(new Denial());
         this.cardsToAdd.add(new Delirium());
+        this.cardsToAdd.add(new TransferPayment());
+        this.cardsToAdd.add(new DoThis());
+        this.cardsToAdd.add(new Purge());
+        this.cardsToAdd.add(new Flustered());
+        this.cardsToAdd.add(new Forgotwww());
+        this.cardsToAdd.add(new BorrowedTime());
+        this.cardsToAdd.add(new CleaningAndHosting());
+        this.cardsToAdd.add(new Clockwise());
+        this.cardsToAdd.add(new CounterClockwise());
+        this.cardsToAdd.add(new DemonScar());
+        this.cardsToAdd.add(new Grant());
+        this.cardsToAdd.add(new PreceptsStrike());
         this.cardsToAdd.add(new OuterBoon());
         this.cardsToAdd.add(new EyesWithin());
         this.cardsToAdd.add(new GreatSwampTome());
         this.cardsToAdd.add(new ForbiddenSun());
         this.cardsToAdd.add(new Zealotry());
         this.cardsToAdd.add(new AlbinauricProof());
+        this.cardsToAdd.add(new DecisionsDecisions());
+        this.cardsToAdd.add(new Taxes());
         this.cardsToAdd.add(new WhatsUp());
+        this.cardsToAdd.add(new Devourer());
         this.cardsToAdd.add(new ChimeOfWant());
+        this.cardsToAdd.add(new PrescribedLevy());
+        this.cardsToAdd.add(new Sabbath());
+        this.cardsToAdd.add(new Deterrence());
+        this.cardsToAdd.add(new HowMany());
+        this.cardsToAdd.add(new Stargaze());
+        this.cardsToAdd.add(new WantToDrinkThis());
         this.cardsToAdd.add(new SoulAppease());
+        this.cardsToAdd.add(new LoathsomeHex());
         this.cardsToAdd.add(new NormalHammer());
+        this.cardsToAdd.add(new Server());
         this.cardsToAdd.add(new DeadAgain());
+        this.cardsToAdd.add(new AlphaToOmega());
+        this.cardsToAdd.add(new BookOfGenesis());
+        this.cardsToAdd.add(new BookOfRevelation());
+        this.cardsToAdd.add(new TakeoutBox());
         this.cardsToAdd.add(new GlitstonePebble());
         this.cardsToAdd.add(new FallControl());
         this.cardsToAdd.add(new CannonOfHaima());
@@ -728,7 +1176,10 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new PhantomSebastian());
         this.cardsToAdd.add(new PhantomDoggo());
         this.cardsToAdd.add(new PhantomAsimi());
+        this.cardsToAdd.add(new DragonPunch());
         this.cardsToAdd.add(new CrucibleToken());
+        this.cardsToAdd.add(new LotteryTicket());
+        this.cardsToAdd.add(new MottledPot());
         this.cardsToAdd.add(new CraftmanCreation());
         this.cardsToAdd.add(new MagicEmber());
         this.cardsToAdd.add(new BedOfMagic());
@@ -754,29 +1205,46 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         addERNRelic(new WheelCatalyst(), AbstractCardEnum.Recluse_COLOR);
         addERNRelic(new NightShard(), AbstractCardEnum.Recluse_COLOR);
         addERNRelic(new relics.SixthSense(), AbstractCardEnum.Wylder_COLOR);
+        addERNRelic(new OldWolfRoster(), AbstractCardEnum.Wylder_COLOR);
+        addERNRelic(new TransposingKiln(), AbstractCardEnum.Wylder_COLOR);
         addERNRelic(new ToastyMittens(), AbstractCardEnum.Wylder_COLOR);
         addERNRelic(new JosephForesight(), AbstractCardEnum.Wylder_COLOR);
+        addERNRelic(new SilverPendant(), AbstractCardEnum.Wylder_COLOR);
         addERNRelic(new HonorOfPinionfolk(), AbstractCardEnum.Guardian_COLOR);
         addERNRelic(new EagleEye(), AbstractCardEnum.Ironeye_COLOR);
+        addERNRelic(new MiniatureThunder(), AbstractCardEnum.Ironeye_COLOR);
+        addERNRelic(new LostAshesOfWar(), AbstractCardEnum.Ironeye_COLOR);
+        addERNRelic(new CovetousSilverSerpentRing(), AbstractCardEnum.Ironeye_COLOR);
+        addERNRelic(new CovetousGoldSerpentRing(), AbstractCardEnum.Ironeye_COLOR);
+        addERNRelic(new AldiaFund(), AbstractCardEnum.Ironeye_COLOR);
         addERNRelic(new FighterResolve(), AbstractCardEnum.Raider_COLOR);
         addERNRelic(new OldGreataxe(), AbstractCardEnum.Raider_COLOR);
         addERNRelic(new PetrifiedDragonBone(), AbstractCardEnum.Raider_COLOR);
+        addERNRelic(new Bloodletting(), AbstractCardEnum.Raider_COLOR);
         addERNRelic(new BorrowedLife(), AbstractCardEnum.Raider_COLOR);
+        addERNRelic(new LargeEmber(), AbstractCardEnum.Raider_COLOR);
+        addERNRelic(new OneTwoPunch(), AbstractCardEnum.Raider_COLOR);
         addERNRelic(new DebtToBond(), AbstractCardEnum.Raider_COLOR);
         addERNRelic(new FighterDestined(), AbstractCardEnum.Raider_COLOR);
         addERNRelic(new MagnificentPoise(), AbstractCardEnum.Duchess_COLOR);
+        addERNRelic(new IllusoryRing(), AbstractCardEnum.Duchess_COLOR);
         addERNRelic(new CalamityWard(), AbstractCardEnum.Executor_COLOR);
+        addERNRelic(new StarsDice(), AbstractCardEnum.Executor_COLOR);
         addERNRelic(new SeedbedCurse(), AbstractCardEnum.Executor_COLOR);
-        addERNRelic(new CrucibleCodex(), AbstractCardEnum.Executor_COLOR);
+        addERNRelic(new OilPot(), AbstractCardEnum.Executor_COLOR);
         addERNRelic(new SummonSpirit(), AbstractCardEnum.Revenant_COLOR);
         addERNRelic(new SoulForge(), AbstractCardEnum.Revenant_COLOR);
         addERNRelic(new YearsEntwined(), AbstractCardEnum.Revenant_COLOR);
         addERNRelic(new SacredTimber(), AbstractCardEnum.Revenant_COLOR);
         addERNRelic(new Bagcraft(), AbstractCardEnum.Scholar_COLOR);
         addERNRelic(new LooksLens(), AbstractCardEnum.Scholar_COLOR);
+        addERNRelic(new AlbinauricPot(), AbstractCardEnum.Scholar_COLOR);
+        addERNRelic(new BeverageGiveaways(), AbstractCardEnum.Scholar_COLOR);
         addERNRelic(new KleinBottle(), AbstractCardEnum.Scholar_COLOR);
+        addERNRelic(new Jar(), AbstractCardEnum.Scholar_COLOR);
         addERNRelic(new Trance(), AbstractCardEnum.Undertaker_COLOR);
         addERNRelic(new PrescientGlintEye(), AbstractCardEnum.Undertaker_COLOR);
+        addERNRelic(new LaplaceDemon(), AbstractCardEnum.Undertaker_COLOR);
         addERNRelic(new WhisperingEarring(), AbstractCardEnum.Undertaker_COLOR);
     }
 
@@ -840,8 +1308,20 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
             ((SeedbedCurse)AbstractDungeon.player.getRelic(SeedbedCurse.ID))
                     .onPostPowerApply(pow, target, owner);
         }
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(OilPot.ID)) {
+            ((OilPot)AbstractDungeon.player.getRelic(OilPot.ID))
+                    .onPostPowerApply(pow, target, owner);
+        }
+        if (target != null && !target.isPlayer && target.hasPower(InfectionStrikePower.POWER_ID)) {
+            ((InfectionStrikePower)target.getPower(InfectionStrikePower.POWER_ID))
+                    .onPostPowerApply(pow, target, owner);
+        }
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(PaintWorldPower.POWER_ID)) {
             ((PaintWorldPower)AbstractDungeon.player.getPower(PaintWorldPower.POWER_ID))
+                    .onPostPowerApply(pow, target, owner);
+        }
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(DarkBloodPower.POWER_ID)) {
+            ((DarkBloodPower)AbstractDungeon.player.getPower(DarkBloodPower.POWER_ID))
                     .onPostPowerApply(pow, target, owner);
         }
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(BlendingPower.POWER_ID)) {
@@ -854,6 +1334,10 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         }
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(RedHairIconPower.POWER_ID)) {
             ((RedHairIconPower)AbstractDungeon.player.getPower(RedHairIconPower.POWER_ID))
+                    .onPostPowerApply(pow, target, owner);
+        }
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(InitiativePower.POWER_ID)) {
+            ((InitiativePower)AbstractDungeon.player.getPower(InitiativePower.POWER_ID))
                     .onPostPowerApply(pow, target, owner);
         }
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(BellowingDragoncrestPower.POWER_ID)) {
@@ -875,12 +1359,20 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         EnemyBattleStartSnapshot.reset();
         GuidanceStats.resetCombat();
         DeadEnemyStats.resetCombat();
+        PotionHistory.resetCombat();
+        FragrantBranchOfYoreRewards.resetCombat();
+        RandomUsageCounter.endCombat();
+        TransformStats.resetCombat();
     }
 
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         GuidanceStats.resetCombat();
         DeadEnemyStats.resetCombat();
+        PotionHistory.resetCombat();
+        FragrantBranchOfYoreRewards.resetCombat();
+        RandomUsageCounter.resetCombat();
+        TransformStats.resetCombat();
     }
 
     @Override
@@ -891,6 +1383,40 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         if (Settings.language == Settings.GameLanguage.ZHS) {
             BaseMod.addKeyword("重放", new String[] { "重放" },
                     "打出时，额外打出指定次数。由 #y重放 打出的牌不会再次触发 #y重放 。");
+            BaseMod.addKeyword("锦囊", new String[] { "锦囊" },
+                    "只有当费用为0时可以打出。");
+            BaseMod.addKeyword("充能", new String[] { "充能" },
+                    "只有当手牌抽满时可以打出。");
+            BaseMod.addKeyword("封装", new String[] { "封装" },
+                    "选择若干张牌从手牌放入到这张牌的队列牌堆。下一次打出这张牌时，将依次打出队列牌堆的牌的复制品，并将这些牌放回到手牌中。");
+            BaseMod.addKeyword("一次性", new String[] { "一次性" },
+                    "这张牌在 #y封装 时是 #y消耗牌 。");
+            BaseMod.addKeyword("炼制", new String[] { "炼制" },
+                    "将 #b3 个 #y药材 效果合成为一张 #y斑斓壶 。");
+            BaseMod.addKeyword("药材", new String[] { "药材" },
+                    CrudeDrug.buildCrudeDrugKeywordDescription("药材包括： ", " ， ", " 。"));
+            BaseMod.addKeyword("艾奥尼亚蝶", new String[] { "艾奥尼亚蝶" },
+                    "给予 #b7 层 #y猩红腐败 。");
+            BaseMod.addKeyword("血蔷薇", new String[] { "血蔷薇" },
+                    "给予 #b2 层 #y出血 。");
+            BaseMod.addKeyword("耶罗眼珠", new String[] { "耶罗眼珠" },
+                    "给予 #b2 层 #y发狂 。");
+            BaseMod.addKeyword("碎石", new String[] { "碎石" },
+                    "给予 #b3 层 #y削韧 。");
+            BaseMod.addKeyword("白金凝血", new String[] { "白金凝血" },
+                    "回复 #b5 生命，获得 #b5 层 #y虚血 。");
+            BaseMod.addKeyword("黄金百足", new String[] { "黄金百足" },
+                    "获得 [E] 。");
+            BaseMod.addKeyword("托莉娜睡莲", new String[] { "托莉娜睡莲" },
+                    "给予 #b2 层 #y睡眠 。");
+            BaseMod.addKeyword("米凯拉睡莲", new String[] { "米凯拉睡莲" },
+                    "敌人在本回合内失去 #b99 点 #y力量 。");
+            BaseMod.addKeyword("蜕生蝶", new String[] { "蜕生蝶" },
+                    "获得 #b1 层 #y人工制品 。");
+            BaseMod.addKeyword("圣血木芽", new String[] { "圣血木芽" },
+                    "移除你身上的所有负面效果。");
+            BaseMod.addKeyword("亚缇莉亚叶", new String[] { "亚缇莉亚叶" },
+                    "在本回合内获得 #b6 点 #y力量 。");
             BaseMod.addKeyword("锻造", new String[] { "锻造" },
                     "使用素材牌对非素材牌 #y质变 或 #y强化 。");
             BaseMod.addKeyword("质变", new String[] { "质变" },
@@ -898,7 +1424,9 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
             BaseMod.addKeyword("强化", new String[] { "强化" },
                     "强化素材包括： #y楔形石碎片 ， #y楔形石块 ， #y楔形石原盘 ， #y光辉楔形石 ， #y恶魔楔形石 ， #y龙鳞 。");
             BaseMod.addKeyword("感应", new String[] { "感应" },
-                    "通过潜在能力，能比较容易找到罕见牌。");
+                    "通过潜在能力，能比较容易找到稀有牌。");
+            BaseMod.addKeyword("代币", new String[] { "代币" },
+                    "每当要失去 #y金币 时，失去相同数量的 #y代币 。");
             BaseMod.addKeyword("荆棘", new String[] { "荆棘" },
                     "受到攻击时，对攻击者造成等同于层数的伤害。");
             BaseMod.addKeyword("召唤", new String[] { "召唤" },
@@ -936,7 +1464,11 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
             BaseMod.addKeyword("展翼", new String[] { "展翼" },
                     "将所受到的下几次伤害降低50%。每当你受到未被格挡的攻击伤害时，失去1层。");
             BaseMod.addKeyword("振翼", new String[] { "振翼" },
-                    "将所受到的下几次伤害降低50%。每当你受到攻击伤害时，失去1层。");
+                    "将所受到的下几次伤害降低50%。每当你受到攻击伤害时，失去1层。在层数大于等于10且小于15时，获得 #y高空 。在层数大于等于15时，获得 #y深空 。");
+            BaseMod.addKeyword("高空", new String[] { "高空" },
+                    "在你的回合开始时，获得 #b1 层 #y冻伤 。造成 #b25% 额外伤害。");
+            BaseMod.addKeyword("深空", new String[] { "深空" },
+                    "在你的回合开始时，获得 #b2 层 #y冻伤 ，获得 #b1 层 #y振翼 。造成 #b50% 额外伤害。");
             BaseMod.addKeyword("完美格挡", new String[] { "完美格挡" },
                     "持续若干回合。如果敌人攻击结束时你有大于等于 #b15 点 #y格挡 ，获得 #b6 点 #y活力 。");
             BaseMod.addKeyword("弹反", new String[] { "弹反" },
@@ -987,9 +1519,47 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
                     " #y中毒 ， #y猩红腐败 ， #y燃命 。");
             BaseMod.addKeyword("异变", new String[] { "异变" },
                     " #y冻伤 ， #y睡眠 ， #y发狂 ， #y出血 。");
+            BaseMod.addKeyword("蘑菇", new String[] { "蘑菇" },
+                    "居然是菇！");
+            BaseMod.addKeyword("变化", new String[] { "变化" },
+                    "将一张牌替换为同角色的一张随机牌。");
         } else {
             BaseMod.addKeyword("Replay", new String[] { "replay" },
                     "When played, play this card an additional number of times. Cards played by #yReplay do not trigger #yReplay again.");
+            BaseMod.addKeyword("Final Plan", new String[] { "final plan", "finalplan" },
+                    "Can only be played when you have 0 Energy.");
+            BaseMod.addKeyword("Charged", new String[] { "charged" },
+                    "Can only be played when your hand is full.");
+            BaseMod.addKeyword("Packaging", new String[] { "packaging" },
+                    "Choose cards from your hand and put them into this card's queue. The next time this card is played, play copies of the queued cards in order, then return those cards to your hand.");
+            BaseMod.addKeyword("Disposable", new String[] { "disposable" },
+                    "This card is an #yExhaust card while #yPackaged.");
+            BaseMod.addKeyword("Brew", new String[] { "brew" },
+                    "Combine #b3 #yCrude #yDrug effects into a #yMottled #yPot.");
+            BaseMod.addKeyword("Crude Drug", new String[] { "crude drug", "crude drugs" },
+                    CrudeDrug.buildCrudeDrugKeywordDescription("Crude Drugs include: ", " , ", "."));
+            BaseMod.addKeyword("Aeonian Butterfly", new String[] { "aeonian butterfly" },
+                    "Apply #b7 #yScarlet #yRot.");
+            BaseMod.addKeyword("Bloodrose", new String[] { "bloodrose" },
+                    "Apply #b2 #yBloodloss.");
+            BaseMod.addKeyword("Eye of Yelough", new String[] { "eye of yelough" },
+                    "Apply #b2 #yMadness.");
+            BaseMod.addKeyword("Gravel Stone", new String[] { "gravel stone" },
+                    "Apply #b3 #yPoise #yBreak.");
+            BaseMod.addKeyword("Albinauric Bloodclot", new String[] { "albinauric bloodclot" },
+                    "Heal #b5 HP and gain #b5 #yGrey #yHealth.");
+            BaseMod.addKeyword("Golden Centipede", new String[] { "golden centipede" },
+                    "Gain [E].");
+            BaseMod.addKeyword("Trina Lily", new String[] { "trina lily" },
+                    "Apply #b2 #ySleep.");
+            BaseMod.addKeyword("Miquella Lily", new String[] { "miquella lily" },
+                    "Enemy loses #b99 #yStrength this turn.");
+            BaseMod.addKeyword("Nascent Butterfly", new String[] { "nascent butterfly" },
+                    "Gain #b1 #yArtifact.");
+            BaseMod.addKeyword("Sacramental Bud", new String[] { "sacramental bud" },
+                    "Remove all negative effects from yourself.");
+            BaseMod.addKeyword("Arteria Leaf", new String[] { "arteria leaf" },
+                    "Gain #b6 #yStrength this turn.");
             BaseMod.addKeyword("Smithing", new String[] { "smithing" },
                     "Use material cards to #yInfuse or #yReinforce non-material cards.");
             BaseMod.addKeyword("Infusion", new String[] { "infusion" },
@@ -998,6 +1568,8 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
                     "Reinforcement materials include: #yTitanite #yShard , #yTitanite #yChunk , #yTitanite #ySlab , #yTwinkling #yTitanite , #yDemon #yTitanite , and #yDragon #yScale .");
             BaseMod.addKeyword("Arcane", new String[] { "arcane" },
                     "Dormant power helps discover Rare cards.");
+            BaseMod.addKeyword("Virtual Currency", new String[] { "virtual currency" },
+                    "Whenever you would lose #yGold, lose that much #yVirtual #yCurrency first.");
             BaseMod.addKeyword("Thorns", new String[] { "thorns" },
                     "When attacked, deal damage to the attacker equal to this amount.");
             BaseMod.addKeyword("Summon", new String[] { "summon" },
@@ -1033,7 +1605,11 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
             BaseMod.addKeyword("Soar", new String[] { "soar" },
                     "Reduces the next few instances of damage taken by 50%. Lose 1 stack whenever you take unblocked attack damage.");
             BaseMod.addKeyword("Hover", new String[] { "hover" },
-                    "Reduces the next few instances of damage taken by 50%. Lose 1 stack whenever you take attack damage.");
+                    "Reduces the next few instances of damage taken by 50%. Lose 1 stack whenever you take attack damage. When stacks are at least #b10 and less than #b15, gain #yLofty. When stacks are at least #b15, gain #yDeep #ySpace.");
+            BaseMod.addKeyword("Lofty", new String[] { "lofty" },
+                    "At the start of your turn, gain #b1 #yFrostbite. Deal #b25% additional damage.");
+            BaseMod.addKeyword("Deep Space", new String[] { "deep space" },
+                    "At the start of your turn, gain #b2 #yFrostbite and #b1 #yHover. Deal #b50% additional damage.");
             BaseMod.addKeyword("Perfect Guard", new String[] { "perfect guard" },
                     "Lasts for several turns. If you have at least #b15 #yBlock when enemy attacks finish, gain #b6 #yVigor.");
             BaseMod.addKeyword("Parry", new String[] { "parry" },
@@ -1084,6 +1660,10 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
                     " #yPoison, #yScarlet #yRot, and #yBloodburn.");
             BaseMod.addKeyword("Aberration", new String[] { "aberration", "aberrations" },
                     " #yFrostbite, #ySleep, #yMadness, and #yBloodloss.");
+            BaseMod.addKeyword("Mushroom", new String[] { "mushroom" },
+                    "It is actually a mushroom!");
+            BaseMod.addKeyword("Transform", new String[] { "transform" },
+                    "Replace a card with a random card from the same character.");
         }
     }
 
@@ -1101,6 +1681,9 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         BedOfMagic.resetCombat();
         EnemyBattleStartSnapshot.reset();
         DeadEnemyStats.resetCombat();
+        PotionHistory.resetCombat();
+        RandomUsageCounter.endCombat();
+        TransformStats.resetCombat();
         removeBulkPotions();
     }
 

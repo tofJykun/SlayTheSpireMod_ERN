@@ -1,10 +1,9 @@
 package powers;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -34,12 +33,16 @@ public class OuterBoonPower extends AbstractPower {
 
     public void onRandomCardPlayed() {
         flash();
-        addToBot((AbstractGameAction)new GainBlockAction(this.owner, this.amount, Settings.FAST_MODE));
+        addToBot((AbstractGameAction)new GainEnergyAction(this.amount));
     }
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0];
+        } else {
+            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+        }
     }
 }
 

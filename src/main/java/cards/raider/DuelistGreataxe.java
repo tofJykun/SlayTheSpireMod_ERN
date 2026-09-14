@@ -25,7 +25,7 @@ public class DuelistGreataxe extends CustomCard {
     private static final int COST = 2;
     private static final int ATTACK_DMG = 16;
     private static final int UPGRADE_PLUS_DMG = 6;
-    private static final int GREY_HEALTH_THRESHOLD = 6;
+    private static final int GREY_HEALTH_THRESHOLD = 4;
 
     public DuelistGreataxe() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

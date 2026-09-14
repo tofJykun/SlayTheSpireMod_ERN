@@ -17,9 +17,9 @@ import powers.ParryPower;
 public class CrismonParma extends CustomCard {
     public static final String ID = "CrismonParma";
     private static final String IMG_PATH = "img/cards/wylder/CrismonParma.png";
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
-    private static final int PARRY = 1;
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
+    private static final int PARRY = 5;
 
     public CrismonParma() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

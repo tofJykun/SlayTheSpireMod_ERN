@@ -6,14 +6,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import general.CombatState;
 
-class WylderIntentHelper {
+public class WylderIntentHelper {
     private WylderIntentHelper() {}
 
-    static int incomingDamageBlockGap(AbstractPlayer player) {
+    public static int incomingDamageBlockGap(AbstractPlayer player) {
         return totalIncomingAttackDamage(player) - player.currentBlock;
     }
 
-    static int totalIncomingAttackDamage(AbstractPlayer player) {
+    public static int totalIncomingAttackDamage(AbstractPlayer player) {
         AbstractRoom room = CombatState.currentRoom();
         if (room == null || room.monsters == null) {
             return 0;
@@ -38,7 +38,7 @@ class WylderIntentHelper {
         return total;
     }
 
-    static boolean isPrime(int value) {
+    public static boolean isPrime(int value) {
         if (value < 2) {
             return false;
         }
@@ -50,7 +50,7 @@ class WylderIntentHelper {
         return true;
     }
 
-    static int nextPrimeAtLeast(int value) {
+    public static int nextPrimeAtLeast(int value) {
         int candidate = Math.max(2, value);
         while (!isPrime(candidate)) {
             candidate++;

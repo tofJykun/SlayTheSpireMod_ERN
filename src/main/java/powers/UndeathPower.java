@@ -36,19 +36,39 @@ public class UndeathPower extends AbstractPower {
     }
 
     public static void retainBlockAtTurnStart(AbstractPlayer player) {
-        if (player == null || !player.hasPower(POWER_ID) || player.currentBlock <= 0 || hasFullBlockRetention(player)) {
+        if (player == null || (!player.hasPower(POWER_ID) && !PowerOfVengeancePower.hasPowerOfVengeance(player))) {
             return;
         }
 
-        int retainedBlock = Math.min(player.currentBlock, RETAIN_BLOCK);
-        if (player.hasRelic("Calipers")) {
-            retainedBlock += Math.max(0, player.currentBlock - RETAIN_BLOCK - 15);
+        int retainedBlock = getBestRetainedBlock(player);
+        if (retainedBlock < 0) {
+            return;
         }
 
-        int blockLoss = player.currentBlock - retainedBlock;
-        if (blockLoss > 0) {
-            player.loseBlock(blockLoss);
+        if (player.currentBlock > retainedBlock) {
+            player.loseBlock(player.currentBlock - retainedBlock);
+        } else if (player.currentBlock < retainedBlock) {
+            player.addBlock(retainedBlock - player.currentBlock);
         }
+    }
+
+    private static int getBestRetainedBlock(AbstractPlayer player) {
+        int retainedBlock = -1;
+        if (hasFullBlockRetention(player)) {
+            retainedBlock = Math.max(retainedBlock, player.currentBlock);
+        }
+        if (player.hasRelic("Calipers")) {
+            retainedBlock = Math.max(retainedBlock, Math.max(0, player.currentBlock - 15));
+        }
+        if (player.hasPower(POWER_ID)) {
+            int undeathBlock = Math.min(player.currentBlock, RETAIN_BLOCK);
+            if (player.hasRelic("Calipers")) {
+                undeathBlock += Math.max(0, player.currentBlock - RETAIN_BLOCK - 15);
+            }
+            retainedBlock = Math.max(retainedBlock, undeathBlock);
+        }
+        retainedBlock = Math.max(retainedBlock, PowerOfVengeancePower.getBestBlockTarget(player));
+        return retainedBlock;
     }
 
     private static boolean hasFullBlockRetention(AbstractPlayer player) {

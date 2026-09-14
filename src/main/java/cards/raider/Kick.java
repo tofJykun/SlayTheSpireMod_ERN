@@ -19,7 +19,7 @@ import patches.AbstractCardEnum;
 public class Kick extends CustomCard {
     public static final String ID = "Kick";
     private static final String IMG_PATH = "img/cards/raider/Kick.png";
-    private static final int COST = 0;
+    private static final int COST = 3;
     private static final int ATTACK_DMG = 6;
     private static final int UPGRADE_PLUS_DMG = 3;
 
@@ -38,14 +38,14 @@ public class Kick extends CustomCard {
         super.triggerWhenDrawn();
         if (AbstractDungeon.player == null
                 || AbstractDungeon.player.hand == null
+                || AbstractDungeon.actionManager == null
+                || AbstractDungeon.actionManager.cardsPlayedThisTurn.size() >= 999
                 || AbstractDungeon.getMonsters() == null
                 || AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             return;
         }
-        if (AbstractDungeon.player.hand.group.contains(this)) {
-            AbstractDungeon.player.hand.group.remove(this);
-        }
-        AbstractDungeon.player.limbo.addToBottom(this);
+        // The draw callback runs before addToHand. Let native draw/use move the card;
+        // adding it to limbo here leaves a second render reference after it is played.
         RandomPlayHelper.prepareRandomPlayedCard(this);
         AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(this, true,
                 EnergyPanel.getCurrentEnergy(), true, true), true);

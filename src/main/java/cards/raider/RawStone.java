@@ -23,6 +23,7 @@ public class RawStone extends CustomCard {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.Raider_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
+        this.exhaust = true;
     }
 
     private static CardStrings getCardStrings() {

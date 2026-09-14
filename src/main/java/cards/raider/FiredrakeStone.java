@@ -28,6 +28,7 @@ public class FiredrakeStone extends CustomCard {
         this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber = POISE_BREAK;
         this.magicNumber = this.baseMagicNumber;
+        this.isEthereal = true;
     }
 
     private static CardStrings getCardStrings() {

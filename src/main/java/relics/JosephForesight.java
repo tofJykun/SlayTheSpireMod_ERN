@@ -6,15 +6,17 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import general.CombatState;
-import powers.NextTurnIntangiblePower;
 
 public class JosephForesight extends CustomRelic {
     public static final String ID = "JosephForesight";
     private static final String IMG = "img/relics/wylder/JosephForesight.png";
     private static final String IMG_OTL = "img/relics/wylder/outline/JosephForesight.png";
-    private static final int INTANGIBLE_NEXT_TURN = 1;
+    private static final int DRAW_NEXT_TURN = 5;
+    private static final int ENERGY_NEXT_TURN = 2;
 
     public JosephForesight() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
@@ -51,8 +53,12 @@ public class JosephForesight extends CustomRelic {
                     new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player,
-                            new NextTurnIntangiblePower((AbstractCreature)AbstractDungeon.player, INTANGIBLE_NEXT_TURN),
-                            INTANGIBLE_NEXT_TURN));
+                            new DrawCardNextTurnPower((AbstractCreature)AbstractDungeon.player, DRAW_NEXT_TURN),
+                            DRAW_NEXT_TURN));
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player,
+                            new EnergizedPower((AbstractCreature)AbstractDungeon.player, ENERGY_NEXT_TURN),
+                            ENERGY_NEXT_TURN));
         }
     }
 

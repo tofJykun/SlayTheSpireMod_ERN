@@ -20,7 +20,7 @@ public class BloodWall extends CustomCard {
     public static final String ID = "BloodWall";
     private static final String IMG_PATH = "img/cards/raider/BloodWall.png";
     private static final int COST = 2;
-    private static final int GREY_HEALTH = 3;
+    private static final int GREY_HEALTH = 2;
     private static final int BLOCK_AMT = 16;
     private static final int UPGRADE_PLUS_BLOCK = 4;
 

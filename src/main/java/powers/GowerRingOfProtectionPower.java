@@ -1,0 +1,53 @@
+package powers;
+
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+
+public class GowerRingOfProtectionPower extends AbstractPower {
+    public static final String POWER_ID = "GowerRingOfProtectionPower";
+    private static final PowerStrings POWER_STRINGS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = POWER_STRINGS.NAME;
+    public static final String[] DESCRIPTIONS = POWER_STRINGS.DESCRIPTIONS;
+    private static final int ENERGY_LOSS = 1;
+
+    public GowerRingOfProtectionPower(AbstractCreature owner) {
+        this.name = NAME;
+        this.ID = POWER_ID;
+        this.owner = owner;
+        this.amount = -1;
+        this.type = PowerType.BUFF;
+        this.canGoNegative = false;
+        PowerIconHelper.load(this, POWER_ID);
+        updateDescription();
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+    }
+
+    @Override
+    public void onEnergyRecharge() {
+        if (this.owner instanceof AbstractPlayer) {
+            flash();
+            ((AbstractPlayer)this.owner).loseEnergy(ENERGY_LOSS);
+        }
+    }
+
+    @Override
+    public float atDamageFinalReceive(float damage, DamageInfo.DamageType type) {
+        if (type != DamageInfo.DamageType.HP_LOSS && type != DamageInfo.DamageType.THORNS) {
+            return (float)Math.floor(damage * 0.5F);
+        }
+        return damage;
+    }
+
+    @Override
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0];
+    }
+}

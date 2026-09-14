@@ -50,6 +50,14 @@ public class InsightPower extends AbstractPower {
         return DESCRIPTIONS[2];
     }
 
+    public String getDiscardPrompt() {
+        return DESCRIPTIONS[3];
+    }
+
+    public String getExhaustPrompt() {
+        return DESCRIPTIONS[4];
+    }
+
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];

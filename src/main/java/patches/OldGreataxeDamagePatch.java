@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import powers.StoneRingPower;
 import relics.OldGreataxe;
 
 public class OldGreataxeDamagePatch {
@@ -16,6 +17,7 @@ public class OldGreataxeDamagePatch {
         @SpirePrefixPatch
         public static void prefix(AbstractMonster __instance, DamageInfo info) {
             OldGreataxe.recordAttackedEnemy(__instance, info);
+            StoneRingPower.recordAttackedEnemy(__instance, info);
         }
     }
 
@@ -28,6 +30,7 @@ public class OldGreataxeDamagePatch {
             }
             AbstractCard card = ReflectionHacks.getPrivate(__instance, UseCardAction.class, "targetCard");
             OldGreataxe.queueFinish(card);
+            StoneRingPower.queueFinish(card);
         }
     }
 }

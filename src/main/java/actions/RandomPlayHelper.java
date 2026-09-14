@@ -19,10 +19,30 @@ public class RandomPlayHelper {
         return power.canChooseRandomPlay();
     }
 
+    public static boolean shouldChooseRandomDiscard(AbstractPlayer player) {
+        return shouldChooseRandomPlay(player);
+    }
+
+    public static boolean shouldChooseRandomExhaust(AbstractPlayer player) {
+        return shouldChooseRandomPlay(player);
+    }
+
     public static String consumeInsightPrompt(AbstractPlayer player) {
         InsightPower power = (InsightPower)player.getPower(InsightPower.POWER_ID);
         power.consumeRandomPlayChoice();
         return power.getPrompt();
+    }
+
+    public static String consumeInsightDiscardPrompt(AbstractPlayer player) {
+        InsightPower power = (InsightPower)player.getPower(InsightPower.POWER_ID);
+        power.consumeRandomPlayChoice();
+        return power.getDiscardPrompt();
+    }
+
+    public static String consumeInsightExhaustPrompt(AbstractPlayer player) {
+        InsightPower power = (InsightPower)player.getPower(InsightPower.POWER_ID);
+        power.consumeRandomPlayChoice();
+        return power.getExhaustPrompt();
     }
 
     public static void prepareRandomPlayedCard(AbstractCard card) {

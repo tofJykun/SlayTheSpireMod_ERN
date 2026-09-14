@@ -16,13 +16,12 @@ public class OuterBoon extends CustomCard {
     public static final String ID = "OuterBoon";
     private static final String IMG_PATH = "img/cards/undertaker/OuterBoon.png";
     private static final int COST = 1;
-    private static final int BLOCK = 4;
-    private static final int UPGRADE_PLUS_BLOCK = 1;
+    private static final int POWER_AMOUNT = 1;
 
     public OuterBoon() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.POWER, AbstractCardEnum.Undertaker_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = BLOCK;
+        this.baseMagicNumber = POWER_AMOUNT;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -45,7 +44,7 @@ public class OuterBoon extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_BLOCK);
+            upgradeBaseCost(0);
         }
     }
 }

@@ -18,8 +18,13 @@ public class SmithingMaterialDiscoveryAction extends AbstractGameAction {
     private boolean retrieveCard;
 
     public SmithingMaterialDiscoveryAction() {
+        this(1);
+    }
+
+    public SmithingMaterialDiscoveryAction(int amount) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
+        this.amount = Math.max(1, amount);
     }
 
     @Override
@@ -38,17 +43,21 @@ public class SmithingMaterialDiscoveryAction extends AbstractGameAction {
         if (!this.retrieveCard) {
             AbstractCard selected = AbstractDungeon.cardRewardScreen.discoveryCard;
             if (selected != null) {
-                AbstractCard card = selected.makeStatEquivalentCopy();
-                if (!card.upgraded && AbstractDungeon.player.hasPower("MasterRealityPower")) {
-                    card.upgrade();
-                }
-                card.current_x = -1000.0F * Settings.xScale;
-                if (AbstractDungeon.player.hand.size() < 10) {
-                    AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(card,
-                            Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
-                } else {
-                    AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(card,
-                            Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
+                int availableSlots = Math.max(0, 10 - AbstractDungeon.player.hand.size());
+                for (int i = 0; i < this.amount; i++) {
+                    AbstractCard card = selected.makeStatEquivalentCopy();
+                    if (!card.upgraded && AbstractDungeon.player.hasPower("MasterRealityPower")) {
+                        card.upgrade();
+                    }
+                    card.current_x = -1000.0F * Settings.xScale;
+                    float x = Settings.WIDTH / 2.0F + (i - (this.amount - 1) / 2.0F) * AbstractCard.IMG_WIDTH;
+                    if (i < availableSlots) {
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(card,
+                                x, Settings.HEIGHT / 2.0F));
+                    } else {
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(card,
+                                x, Settings.HEIGHT / 2.0F));
+                    }
                 }
                 AbstractDungeon.cardRewardScreen.discoveryCard = null;
             }
@@ -61,12 +70,13 @@ public class SmithingMaterialDiscoveryAction extends AbstractGameAction {
         ArrayList<String> candidates = new ArrayList<>(SmithingHelper.getSmithingMaterialIds());
         ArrayList<AbstractCard> choices = new ArrayList<>();
         int targetCount = Math.min(CHOICE_COUNT, candidates.size());
-        while (choices.size() < targetCount) {
+        while (choices.size() < targetCount && !candidates.isEmpty()) {
             int index = AbstractDungeon.cardRandomRng == null
                     ? 0
                     : AbstractDungeon.cardRandomRng.random(candidates.size() - 1);
-            AbstractCard card = CardLibrary.getCopy(candidates.remove(index));
-            if (card != null) {
+            AbstractCard template = CardLibrary.getCard(candidates.remove(index));
+            if (template != null) {
+                AbstractCard card = template.makeCopy();
                 UnlockTracker.markCardAsSeen(card.cardID);
                 choices.add(card);
             }

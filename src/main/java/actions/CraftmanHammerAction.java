@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import general.SmithingHelper;
+import patches.InsuranceField;
+import powers.MasterworkPower;
 
 public class CraftmanHammerAction extends AbstractGameAction {
     private static final String SELECT_MATERIAL_ZH = "选择1张锻造素材。";
@@ -121,6 +123,7 @@ public class CraftmanHammerAction extends AbstractGameAction {
         this.player.hand.removeCard(this.selectedMaterial);
         this.player.hand.removeCard(selectedBody);
         addToTop(new MakeTempCardInHandAction(creation, 1));
+        MasterworkPower.onSmithing(this.player);
         this.player.hand.refreshHandLayout();
     }
 
@@ -142,6 +145,8 @@ public class CraftmanHammerAction extends AbstractGameAction {
             reinforcement = material;
         }
 
-        return new CraftmanCreation(infusion, body, reinforcement);
+        CraftmanCreation result = new CraftmanCreation(infusion, body, reinforcement);
+        InsuranceField.inherit(result, selectedBody);
+        return result;
     }
 }

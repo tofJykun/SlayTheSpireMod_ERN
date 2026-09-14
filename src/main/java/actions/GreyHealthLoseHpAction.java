@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import general.CombatState;
+import general.PlayerHpLossHelper;
 import potions.ElixirOfLife;
 import powers.PowerOfErdtreePower;
 import powers.UnyieldingPower;
@@ -79,6 +80,7 @@ public class GreyHealthLoseHpAction extends AbstractGameAction {
         target.healthBarUpdatedEvent();
 
         if (target instanceof AbstractPlayer) {
+            PlayerHpLossHelper.onPlayerLostHp((AbstractPlayer)target, loss);
             handlePlayerAfterDirectLoss((AbstractPlayer)target, loss);
         } else if (target.currentHealth < 1) {
             target.isDead = true;

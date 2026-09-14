@@ -73,21 +73,42 @@
     "NAME": "Sixth Sense",
     "FLAVOR": "Wylder's character skill.",
     "DESCRIPTIONS": [
-      "The first time you lose HP each combat, gain #b10 #yBlock next turn."
+      "The first time you lose HP each combat, next turn draw #b2 additional cards and gain #b5 #yBlock."
+    ]
+  },
+  "OldWolfRoster": {
+    "NAME": "Old Wolf Roster",
+    "FLAVOR": "The old wolf no longer raised his head, yet each name began to glow.",
+    "DESCRIPTIONS": [
+      "If your deck has at least #b3 #yUncommon #yAttack cards, gain #b3 #yStrength."
+    ]
+  },
+  "TransposingKiln": {
+    "NAME": "Transposing Kiln",
+    "FLAVOR": "Broken things wait inside the kiln to become another shape.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, you may choose #b1 of #b3 random common cards to fill your hand with copies of it."
     ]
   },
   "ToastyMittens": {
     "NAME": "Toasty Mittens",
     "FLAVOR": "Warm enough to hold fresh bread without dropping the blade.",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a #yPita #yBread to your hand."
+      "At the start of your turn, add a #yPita #yBread+ to your hand."
     ]
   },
   "JosephForesight": {
     "NAME": "Joseph Foresight",
     "FLAVOR": "An echo of Sixth Sense reaching higher ground.",
     "DESCRIPTIONS": [
-      "The first time you lose HP each combat, gain #b1 #yIntangible next turn."
+      "The first time you lose HP each combat, next turn draw #b5 additional cards and gain [E] [E] ."
+    ]
+  },
+  "SilverPendant": {
+    "NAME": "Silver Pendant",
+    "FLAVOR": "Soft silver light sees the first blow for you.",
+    "DESCRIPTIONS": [
+      "On the first turn of each combat, gain #yBlock equal to the total enemy damage."
     ]
   },
   "HonorOfPinionfolk": {
@@ -102,6 +123,41 @@
     "FLAVOR": "Ironeye's character skill.",
     "DESCRIPTIONS": [
       "At the start of each combat, gain #b4 #yArcane."
+    ]
+  },
+  "MiniatureThunder": {
+    "NAME": "Miniature Thunder",
+    "FLAVOR": "A tiny storm crackling in the palm of your hand.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b50 #yTokens."
+    ]
+  },
+  "LostAshesOfWar": {
+    "NAME": "Lost Ashes Of War",
+    "FLAVOR": "Ashes of war stripped of force, still remembering the first technique.",
+    "DESCRIPTIONS": [
+      "Add #b1 copy of the first card you play each combat to your hand."
+    ]
+  },
+  "CovetousSilverSerpentRing": {
+    "NAME": "Covetous Silver Serpent Ring",
+    "FLAVOR": "The silver serpent swallows every coin that reaches your hand.",
+    "DESCRIPTIONS": [
+      "All #yGold from all sources is increased by #b25% when gained."
+    ]
+  },
+  "CovetousGoldSerpentRing": {
+    "NAME": "Covetous Gold Serpent Ring",
+    "FLAVOR": "The gold serpent scents rewards yet unseen.",
+    "DESCRIPTIONS": [
+      "Enemies have a #b25% chance to drop an additional card reward."
+    ]
+  },
+  "AldiaFund": {
+    "NAME": "Aldia Fund",
+    "FLAVOR": "Unstable transformations settled into reliable profit.",
+    "DESCRIPTIONS": [
+      "The first time you #yTransform a card each turn, gain [E] ."
     ]
   },
   "FighterResolve": {
@@ -153,11 +209,25 @@
       "Every #b3 cards played, gain #b3 #yBlock."
     ]
   },
+  "IllusoryRing": {
+    "NAME": "Illusory Ring",
+    "FLAVOR": "\"Bestowed upon the shade in a dream of eternal slumber.\" - Jykun",
+    "DESCRIPTIONS": [
+      "Whenever you reset a card with #yScheduled greater than or equal to #b3, reduce that card's counter by #b1. Minimum #b2."
+    ]
+  },
   "CalamityWard": {
     "NAME": "Calamity Ward",
     "FLAVOR": "Executor's character skill.",
     "DESCRIPTIONS": [
       "At the start of your second turn, gain #b1 #yArtifact."
+    ]
+  },
+  "StarsDice": {
+    "NAME": "Stars Dice",
+    "FLAVOR": "The one spared was not you.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, you may choose #b1 card in your hand to #yTransform."
     ]
   },
   "SeedbedCurse": {
@@ -167,11 +237,11 @@
       "Every time you apply #b10 #yAberration, apply #b1 #yDeathblight to a random enemy."
     ]
   },
-  "CrucibleCodex": {
-    "NAME": "Crucible Codex",
-    "FLAVOR": "After the tenth article, the words begin to burn.",
+  "OilPot": {
+    "NAME": "Oil Pot",
+    "FLAVOR": "Tilt it slightly, and flame will find its place.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add #b1 #yCrucible #yToken to your hand."
+      "The first negative #yStatus you apply to an enemy each combat is applied an additional time."
     ]
   },
   "SummonSpirit": {
@@ -209,11 +279,32 @@
       "At the start of each combat, gain #b1 random #yBulk Potion."
     ]
   },
+  "Jar": {
+    "NAME": "Jar",
+    "FLAVOR": "A heavy jar-shaped helm, where echoes ferment into strength.",
+    "DESCRIPTIONS": [
+      "The first #yCrude #yDrug card you play each combat is played three times."
+    ]
+  },
   "LooksLens": {
     "NAME": "Look's Lens",
     "FLAVOR": "Through it, the other side of the reward comes into view.",
     "DESCRIPTIONS": [
       "At the start of each combat, gain #b1 #yArcane ."
+    ]
+  },
+  "AlbinauricPot": {
+    "NAME": "Albinauric Pot",
+    "FLAVOR": "It carries the echo of an Albinauric.",
+    "DESCRIPTIONS": [
+      "Whenever you use a non-#yBulk potion, gain #b1 #yArcane ."
+    ]
+  },
+  "BeverageGiveaways": {
+    "NAME": "Beverage Giveaways",
+    "FLAVOR": "After the third bottle, the gift arrives.",
+    "DESCRIPTIONS": [
+      "Every time you use #b3 potions in the same turn, gain #b1 #yStrength and #b1 #yDexterity."
     ]
   },
   "Trance": {
@@ -237,11 +328,41 @@
       "At the start of each combat, gain #b1 #yInsight ."
     ]
   },
+  "LaplaceDemon": {
+    "NAME": "Laplace Demon",
+    "FLAVOR": "It says the next card to burn was already determined.",
+    "DESCRIPTIONS": [
+      "Turn random #yExhaust into choosing a card to #yExhaust .",
+      "Choose a card to exhaust."
+    ]
+  },
   "WhisperingEarring": {
     "NAME": "Whispering Earring",
     "FLAVOR": "The voice beside your ear chooses the grave for you.",
     "DESCRIPTIONS": [
       "At the start of each turn, gain [E] . The first targeted card each turn is played randomly."
+    ]
+  },
+  "Bloodletting": {
+    "NAME": "Bloodletting",
+    "FLAVOR": "Burn away the old, and a little of the blood debt with it.",
+    "DESCRIPTIONS": [
+      "Whenever you #yExhaust #b1 card, lose #b1 #yGrey #yHealth .",
+      "Whenever you #yExhaust #b1 card, lose #b1 #yGrey #yHealth+ ."
+    ]
+  },
+  "OneTwoPunch": {
+    "NAME": "One-Two Punch",
+    "FLAVOR": "Pull back, ready to strike again.",
+    "DESCRIPTIONS": [
+      "The first #yAttack you play each combat returns to your hand after it is played."
+    ]
+  },
+  "LargeEmber": {
+    "NAME": "Large Ember",
+    "FLAVOR": "A great ember left by an old blacksmith, still burning within basic weapons.",
+    "DESCRIPTIONS": [
+      " #yStrike costs #b0, deals #b3 additional damage, and cannot be removed from your deck."
     ]
   }
 }

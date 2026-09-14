@@ -18,13 +18,13 @@ public class ManikinShield extends CustomCard {
     public static final String ID = "ManikinShield";
     private static final String IMG_PATH = "img/cards/wylder/ManikinShield.png";
     private static final int COST = 1;
-    private static final int PARRY = 1;
+    private static final int PARRY = 2;
     private static final int RETAIN_HAND = 1;
     private static final int NEXT_TURN_ENERGY = 1;
 
     public ManikinShield() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Wylder_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Wylder_COLOR, CardRarity.COMMON, CardTarget.SELF);
         this.baseMagicNumber = PARRY;
         this.magicNumber = this.baseMagicNumber;
     }

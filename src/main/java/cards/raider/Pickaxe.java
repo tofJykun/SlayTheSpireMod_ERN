@@ -18,7 +18,7 @@ public class Pickaxe extends CustomCard {
     public static final String ID = "Pickaxe";
     private static final String IMG_PATH = "img/cards/raider/Pickaxe.png";
     private static final int COST = 2;
-    private static final int ATTACK_DMG = 15;
+    private static final int ATTACK_DMG = 20;
     private static final int UPGRADE_PLUS_DMG = 5;
     private static final int POISE_BREAK = 2;
 

@@ -5,6 +5,10 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import powers.DarkWoodGrainPower;
+import relics.IllusoryRing;
 
 public final class ScheduledField {
     @SpirePatch(clz = AbstractCard.class, method = SpirePatch.CLASS)
@@ -67,10 +71,33 @@ public final class ScheduledField {
         if (!isScheduled(card)) {
             return;
         }
-        Fields.scheduled.set(card, getBaseScheduled(card));
+        Fields.scheduled.set(card, getResetScheduled(card));
         Fields.pendingAutoplay.set(card, false);
         notifyScheduledCountChanged(card);
         refreshDescription(card);
+    }
+
+    private static int getResetScheduled(AbstractCard card) {
+        int base = getBaseScheduled(card);
+        if (base < 3) {
+            return base;
+        }
+        AbstractPlayer player = AbstractDungeon.player;
+        if (player == null) {
+            return base;
+        }
+        int reduction = 0;
+        if (player.hasPower(DarkWoodGrainPower.POWER_ID)) {
+            reduction += player.getPower(DarkWoodGrainPower.POWER_ID).amount;
+        }
+        if (player.hasRelic(IllusoryRing.ID)) {
+            reduction += 1;
+            player.getRelic(IllusoryRing.ID).flash();
+        }
+        if (reduction <= 0) {
+            return base;
+        }
+        return Math.max(2, base - reduction);
     }
 
     public static void enterHand(AbstractCard card) {
