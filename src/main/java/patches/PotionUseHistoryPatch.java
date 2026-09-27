@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.FairyPotion;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.PotionPopUp;
 import general.CombatState;
@@ -29,7 +30,7 @@ public class PotionUseHistoryPatch {
 
         @SpirePostfixPatch
         public static void postfix(PotionPopUp __instance) {
-            recordIfPotionWasUsed(beforePotionUseCount, potion);
+            recordIfPotionWasUsed(beforePotionUseCount, potion, null);
             potion = null;
         }
     }
@@ -47,7 +48,8 @@ public class PotionUseHistoryPatch {
 
         @SpirePostfixPatch
         public static void postfix(PotionPopUp __instance) {
-            recordIfPotionWasUsed(beforePotionUseCount, potion);
+            AbstractMonster target = ReflectionHacks.getPrivate(__instance, PotionPopUp.class, "hoveredMonster");
+            recordIfPotionWasUsed(beforePotionUseCount, potion, target);
             potion = null;
         }
     }
@@ -72,7 +74,7 @@ public class PotionUseHistoryPatch {
         return CardCrawlGame.metricData == null ? 0 : CardCrawlGame.metricData.potions_floor_usage.size();
     }
 
-    private static void recordIfPotionWasUsed(int beforePotionUseCount, AbstractPotion potion) {
+    private static void recordIfPotionWasUsed(int beforePotionUseCount, AbstractPotion potion, AbstractMonster target) {
         if (potion == null
                 || CardCrawlGame.metricData == null
                 || CardCrawlGame.metricData.potions_floor_usage.size() <= beforePotionUseCount
@@ -81,11 +83,13 @@ public class PotionUseHistoryPatch {
             return;
         }
         PotionHistory.record(potion);
+        powers.ScattershotThrowPower.onPotionUsed(potion, target);
     }
 
     private static void recordDirectPotionUse(AbstractPotion potion) {
         if (CombatState.isInCombat()) {
             PotionHistory.record(potion);
+            powers.ScattershotThrowPower.onPotionUsed(potion, null);
         }
     }
 }

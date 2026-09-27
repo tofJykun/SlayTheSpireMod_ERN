@@ -15,15 +15,14 @@ import powers.BellowingDragoncrestPower;
 public class BellowingDragoncrest extends CustomCard {
     public static final String ID = "BellowingDragoncrest";
     private static final String IMG_PATH = "img/cards/recluse/BellowingDragoncrest.png";
-    private static final int COST = 1;
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DAMAGE = 3;
+    private static final int COST = 2;
+    private static final int INTELLIGENCE = 1;
 
     public BellowingDragoncrest() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.Recluse_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseDamage = DAMAGE;
-        this.damage = this.baseDamage;
+        this.baseMagicNumber = INTELLIGENCE;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     private static CardStrings getCardStrings() {
@@ -33,7 +32,7 @@ public class BellowingDragoncrest extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p,
-                new BellowingDragoncrestPower((AbstractCreature)p, this.damage), this.damage));
+                new BellowingDragoncrestPower((AbstractCreature)p, this.magicNumber), this.magicNumber));
     }
 
     @Override
@@ -45,7 +44,7 @@ public class BellowingDragoncrest extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DAMAGE);
+            upgradeBaseCost(COST - 1);
         }
     }
 }

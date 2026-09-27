@@ -314,6 +314,13 @@
       "你每场战斗打出的第 #b1 张 #y攻击牌 会造成 #b2 倍伤害。"
     ]
   },
+  "Diplopia": {
+    "NAME": "复眼",
+    "FLAVOR": "送葬者的技艺。",
+    "DESCRIPTIONS": [
+      "你每回合打出的第 #b1 张 #y攻击牌 会造成 #b2 倍伤害。"
+    ]
+  },
   "SacredTimber": {
     "NAME": "金石誓木",
     "FLAVOR": "沉默的木质圣物，像石头一样冰冷。",
@@ -333,7 +340,7 @@
     "FLAVOR": "它说，下一张被烧毁的牌早已确定。",
     "DESCRIPTIONS": [
       "将随机 #y消耗 变为选择牌 #y消耗 。",
-      "选择1张牌消耗。"
+      "选择1张牌 #y消耗 。"
     ]
   },
   "WhisperingEarring": {
@@ -341,6 +348,34 @@
     "FLAVOR": "耳边的声音会替你挑选墓碑。",
     "DESCRIPTIONS": [
       "每回合开始获得 [E] 。每回合的第 #b1 张指向性牌变为随机打出。"
+    ]
+  },
+  "PerpetualMotionMachine": {
+    "NAME": "永动机",
+    "FLAVOR": "只要还在运动，就不会停下。",
+    "DESCRIPTIONS": [
+      "你在每回合第一次弃牌时，抽 #b2 张牌。"
+    ]
+  },
+  "ERN_Brimstone": {
+    "NAME": "硫磺火",
+    "FLAVOR": "燃烧信仰，锻造力量。",
+    "DESCRIPTIONS": [
+      "每当你获得 #y信仰 时，获得 #b1 点 #y力量 。"
+    ]
+  },
+  "Decalogue": {
+    "NAME": "十诫",
+    "FLAVOR": "少即是多，余下皆可保留。",
+    "DESCRIPTIONS": [
+      "若你在某个回合打出的牌少于等于 #b1 张，则你在该回合可以 #y保留 任意张牌。"
+    ]
+  },
+  "MirrorMirror": {
+    "NAME": "反演之镜",
+    "FLAVOR": "镜中的顺序与现实相反。",
+    "DESCRIPTIONS": [
+      "你在回合内抽牌将依次放入手牌最左边。"
     ]
   },
   "Bloodletting": {
@@ -357,6 +392,11 @@
     "DESCRIPTIONS": [
       "你在每场战斗打出的第一张 #y攻击牌 将会被放回你的手牌。"
     ]
+  },
+  "VoiceConduit": {
+    "NAME": "传音筒",
+    "FLAVOR": "遥远的声音，为前路留下一刻安宁。",
+    "DESCRIPTIONS": ["你在下 #b", " 个 #y? 房间中不会再遭遇常规战斗，并在进入时回复 #b", " 点生命。"]
   },
   "LargeEmber": {
     "NAME": "大块余烬",

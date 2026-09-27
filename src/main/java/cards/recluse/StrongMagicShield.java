@@ -19,6 +19,7 @@ public class StrongMagicShield extends CustomCard {
     private static final String IMG_PATH = "img/cards/recluse/StrongMagicShield.png";
     private static final int COST = 2;
     private static final int BLOCK_AMT = 16;
+    private static final int UPGRADE_PLUS_BLOCK = 4;
     private static final int INTELLIGENCE = 2;
     private static final int UPGRADE_PLUS_INTELLIGENCE = 1;
 
@@ -52,6 +53,7 @@ public class StrongMagicShield extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
             upgradeMagicNumber(UPGRADE_PLUS_INTELLIGENCE);
             initializeDescription();
         }

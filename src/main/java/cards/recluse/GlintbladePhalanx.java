@@ -20,7 +20,7 @@ public class GlintbladePhalanx extends CustomCard {
 
     public GlintbladePhalanx() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.Recluse_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
+                CardType.ATTACK, AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
         this.baseBlock = BLOCK;
     }

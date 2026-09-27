@@ -35,7 +35,7 @@ public class StunMonsterPatch {
                     if (methodCall.getClassName().equals(AbstractMonster.class.getName())
                             && methodCall.getMethodName().equals("takeTurn")) {
                         methodCall.replace("if (!((com.megacrit.cardcrawl.monsters.AbstractMonster)$0).hasPower(\""
-                                + StunPower.POWER_ID + "\")) { $_ = $proceed($$); }");
+                                + StunPower.POWER_ID + "\")) { powers.PostureBreakPower.beginTurn($0); $_ = $proceed($$); }");
                     }
                 }
             };

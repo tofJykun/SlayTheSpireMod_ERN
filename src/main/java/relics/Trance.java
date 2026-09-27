@@ -24,9 +24,10 @@ public class Trance extends CustomRelic {
     public void atBattleStart() {
         flash();
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction((AbstractCreature)AbstractDungeon.player,
-                (AbstractCreature)AbstractDungeon.player,
-                (AbstractPower)new TrancePower((AbstractCreature)AbstractDungeon.player), 1, true));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                (AbstractCreature) AbstractDungeon.player,
+                (AbstractCreature) AbstractDungeon.player,
+                (AbstractPower) new TrancePower((AbstractCreature) AbstractDungeon.player), 1, true));
     }
 
     @Override

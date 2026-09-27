@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import ernmod.ERNMod;
@@ -80,7 +81,9 @@ public class Executor extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
-                Settings.language == Settings.GameLanguage.ZHS ? "将决意化为处刑的渡夜者。" : "A disciplined Nightfarer who turns resolve into execution.",
+                Settings.language == Settings.GameLanguage.ZHS
+                        ? "讲求色彩调和的画家，颜料来自熔炉百相之异常。 NL 真实形态是大狗。"
+                        : "A painter with an eye for color harmony, whose pigments come from the afflictions of the Crucible's many aspects. NL His true form is a big dog.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
@@ -168,6 +171,6 @@ public class Executor extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return null;
+        return Vampires.DESCRIPTIONS[0];
     }
 }

@@ -33,7 +33,7 @@ public class GrassCrestShield extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int count = 0;
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c != this) {
+            if (c != general.SmithingBody.physical(this)) {
                 count++;
             }
         }

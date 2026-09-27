@@ -5,11 +5,13 @@ import cards.status.MagicEmber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import patches.AbstractCardEnum;
@@ -26,6 +28,7 @@ public class DarkOrb extends CustomCard {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
+        this.baseMagicNumber = this.magicNumber = MAGIC_EMBERS;
         this.cardsToPreview = new MagicEmber();
     }
 
@@ -38,7 +41,17 @@ public class DarkOrb extends CustomCard {
         addToBot((AbstractGameAction)new DamageAction((AbstractCreature)m,
                 new DamageInfo((AbstractCreature)p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        addToBot((AbstractGameAction)new MakeTempCardInHandAction(new MagicEmber(), MAGIC_EMBERS));
+        addToBot((AbstractGameAction)new MakeTempCardInHandAction(new MagicEmber(), this.magicNumber));
+    }
+
+    @Override
+    public void triggerOnCardPlayed(AbstractCard card) {
+        AbstractCard returningCard = general.SmithingBody.physical(this);
+        if (card != null && card.type == CardType.POWER
+                && AbstractDungeon.player != null && AbstractDungeon.actionManager != null
+                && AbstractDungeon.player.discardPile.contains(returningCard)) {
+            addToBot(new DiscardToHandAction(returningCard));
+        }
     }
 
     @Override

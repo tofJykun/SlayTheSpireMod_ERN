@@ -19,7 +19,7 @@ public class BleedStone extends CustomCard {
     public static final String ID = "BleedStone";
     private static final String IMG_PATH = "img/cards/raider/BleedStone.png";
     private static final int COST = -2;
-    private static final int REDUCTION = 5;
+    private static final int REDUCTION = 7;
     private static final int UPGRADE_PLUS_REDUCTION = 2;
 
     public BleedStone() {

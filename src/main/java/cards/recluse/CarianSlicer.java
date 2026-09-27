@@ -1,6 +1,6 @@
 package cards.recluse;
 
-import cards.AbstractScheduledCard;
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,21 +10,23 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import patches.AbstractCardEnum;
+import patches.ReplayField;
 
-public class CarianSlicer extends AbstractScheduledCard {
+public class CarianSlicer extends CustomCard {
     public static final String ID = "CarianSlicer";
     private static final String IMG_PATH = "img/cards/recluse/CarianSlicer.png";
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 6;
-    private static final int UPGRADE_PLUS_DMG = 3;
-    private static final int DEFAULT_SCHEDULED = 2;
+    private static final int ATTACK_DMG = 4;
+    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int REPLAY = 1;
 
     public CarianSlicer() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.ALL_ENEMY, DEFAULT_SCHEDULED);
+                AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.isMultiDamage = true;
-        onScheduledCountChanged(DEFAULT_SCHEDULED, DEFAULT_SCHEDULED);
+        this.baseMagicNumber = this.magicNumber = REPLAY;
+        ReplayField.setReplay(this, REPLAY);
     }
 
     private static CardStrings getCardStrings() {
@@ -35,13 +37,6 @@ public class CarianSlicer extends AbstractScheduledCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot((AbstractGameAction)new DamageAllEnemiesAction((AbstractCreature)p, this.multiDamage,
                 this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-    }
-
-    @Override
-    public void onScheduledCountChanged(int current, int base) {
-        this.baseMagicNumber = base;
-        this.magicNumber = current;
-        this.isMagicNumberModified = current != base;
     }
 
     @Override

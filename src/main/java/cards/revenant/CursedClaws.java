@@ -129,7 +129,7 @@ public class CursedClaws extends CustomCard {
             if (AbstractDungeon.actionManager != null) {
                 for (CardQueueItem item : AbstractDungeon.actionManager.cardQueue) {
                     if (item != null && item.card != null) {
-                        cards.add(item.card);
+                        cards.add(general.SmithingBody.behavior(item.card));
                     }
                 }
             }
@@ -138,7 +138,7 @@ public class CursedClaws extends CustomCard {
 
         private static void addGroup(Set<AbstractCard> cards, CardGroup group) {
             if (group != null) {
-                cards.addAll(group.group);
+                for (AbstractCard card : group.group) cards.add(general.SmithingBody.behavior(card));
             }
         }
     }

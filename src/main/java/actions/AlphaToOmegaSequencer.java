@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import general.PlayedCardHistory;
+import general.SmithingBody;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -23,20 +25,15 @@ public final class AlphaToOmegaSequencer {
             return;
         }
 
-        ArrayList<AbstractCard> snapshot = new ArrayList<AbstractCard>();
-        for (AbstractCard played : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
-            if (played == null || played == currentCard) {
-                continue;
-            }
-            if (currentCard != null && currentCard.uuid != null && currentCard.uuid.equals(played.uuid)) {
-                continue;
-            }
-            snapshot.add(played.makeStatEquivalentCopy());
-        }
+        ArrayList<AbstractCard> snapshot = PlayedCardHistory.beforeCurrentPlay(currentCard);
 
         if (!snapshot.isEmpty()) {
-            requests.addLast(new Request(snapshot));
+            requests.addFirst(new Request(snapshot));
         }
+    }
+
+    public static void clear() {
+        requests.clear();
     }
 
     public static void resumeIfIdle(GameActionManager manager) {
@@ -81,8 +78,9 @@ public final class AlphaToOmegaSequencer {
         if (card == null) {
             return;
         }
-        AbstractDungeon.player.limbo.addToBottom(card);
+        card = SmithingBody.physical(card);
         prepareAutoplayCard(card);
+        AbstractDungeon.player.limbo.addToBottom(card);
 
         boolean randomTarget = card.target == AbstractCard.CardTarget.ENEMY
                 || card.target == AbstractCard.CardTarget.SELF_AND_ENEMY;
@@ -105,6 +103,7 @@ public final class AlphaToOmegaSequencer {
         card.drawScale = 0.12F;
         card.targetDrawScale = 0.75F;
         card.freeToPlayOnce = true;
+        card.purgeOnUse = true;
         card.applyPowers();
     }
 

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import patches.AbstractCardEnum;
+import powers.CrystalRingShieldPower;
 
 public class CrystalRingShield extends CustomCard {
     public static final String ID = "CrystalRingShield";
@@ -30,6 +31,8 @@ public class CrystalRingShield extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, this.block));
+        addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(p, p,
+                new CrystalRingShieldPower(p), 1));
     }
 
     @Override

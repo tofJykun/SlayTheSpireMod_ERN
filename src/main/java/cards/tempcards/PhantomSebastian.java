@@ -1,9 +1,8 @@
 package cards.tempcards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,22 +10,20 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import powers.AbstractSummonPower;
-import powers.SpiritPower;
 import powers.SummonSebastian;
 import summons.SummonAnimationManager;
 
 public class PhantomSebastian extends AbstractPhantomCard {
     public static final String ID = "PhantomSebastian";
     private static final String IMG_PATH = "img/cards/tempcards/PhantomSebastian.png";
-    private static final int COST = 2;
-    private static final int DAMAGE = 5;
-    private static final int UPGRADE_PLUS_DAMAGE = 2;
-    private static final int HIT_COUNT = 3;
+    private static final int COST = 1;
+    private static final int DRAW = 2;
+    private static final int UPGRADE_PLUS_DRAW = 1;
 
     public PhantomSebastian() {
-        super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.ATTACK,
-                CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ALL_ENEMY);
-        this.baseMagicNumber = DAMAGE;
+        super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.SKILL,
+                CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
+        this.baseMagicNumber = DRAW;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
         this.isEthereal = true;
@@ -59,25 +56,9 @@ public class PhantomSebastian extends AbstractPhantomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        SpiritPower.applyPhantomNumber(this);
         SummonAnimationManager.triggerAttack(SummonSebastian.SUMMON_KEY);
-        for (int i = 0; i < HIT_COUNT; i++) {
-            addToBot((AbstractGameAction)new DamageRandomEnemyAction(
-                    new DamageInfo((AbstractCreature)p, this.magicNumber, this.damageTypeForTurn),
-                    AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        }
-    }
-
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        SpiritPower.applyPhantomNumber(this);
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
-        SpiritPower.applyPhantomNumber(this);
+        addToBot(new GainEnergyAction(this.upgraded ? 3 : 2));
+        addToBot(new DrawCardAction(p, this.magicNumber));
     }
 
     @Override
@@ -89,7 +70,9 @@ public class PhantomSebastian extends AbstractPhantomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_DAMAGE);
+            upgradeMagicNumber(UPGRADE_PLUS_DRAW);
+            this.rawDescription = getCardStrings().UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

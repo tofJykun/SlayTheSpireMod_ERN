@@ -40,7 +40,7 @@ public class BedOfMagicToHandAction extends AbstractGameAction {
 
     private static void collect(ArrayList<CardLocation> cardsToMove, CardGroup group) {
         for (AbstractCard card : group.group) {
-            if (BedOfMagic.ID.equals(card.cardID)) {
+            if (BedOfMagic.ID.equals(general.SmithingBody.behavior(card).cardID)) {
                 cardsToMove.add(new CardLocation(card, group));
             }
         }

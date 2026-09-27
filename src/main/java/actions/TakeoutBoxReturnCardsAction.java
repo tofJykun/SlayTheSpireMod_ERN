@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import general.PackagingCard;
+import basemod.BaseMod;
 
 import java.util.ArrayList;
 
@@ -26,15 +27,23 @@ public class TakeoutBoxReturnCardsAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        if (this.isDone) return;
+        this.isDone = true;
         AbstractPlayer player = AbstractDungeon.player;
         if (player != null) {
             for (AbstractCard card : this.cards) {
+                if (player.hand.contains(card) || player.drawPile.contains(card)
+                        || player.discardPile.contains(card) || player.exhaustPile.contains(card)) continue;
                 card.unhover();
                 card.untip();
                 card.stopGlowing();
                 card.resetAttributes();
                 card.applyPowers();
-                player.hand.addToBottom(card);
+                if (player.hand.size() < BaseMod.MAX_HAND_SIZE) {
+                    player.hand.addToBottom(card);
+                } else {
+                    player.discardPile.addToTop(card);
+                }
             }
             player.hand.refreshHandLayout();
         }

@@ -15,11 +15,12 @@ import powers.SummonDoggo;
 public class DoggoXD extends CustomCard {
     public static final String ID = "DoggoXD";
     private static final String IMG_PATH = "img/cards/revenant/DoggoXD.png";
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     public DoggoXD() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.Revenant_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Revenant_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.exhaust = true;
     }
 
     private static CardStrings getCardStrings() {
@@ -42,6 +43,9 @@ public class DoggoXD extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(0);
+            this.exhaust = false;
+            this.rawDescription = getCardStrings().UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

@@ -4,7 +4,9 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -24,6 +26,9 @@ public class ForbiddenSun extends CustomCard {
                 CardType.ATTACK, AbstractCardEnum.Undertaker_COLOR, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.isMultiDamage = true;
+        this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber;
+        this.cardsToPreview = new Burn();
     }
 
     private static CardStrings getCardStrings() {
@@ -34,7 +39,8 @@ public class ForbiddenSun extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot((AbstractGameAction)new DamageAllEnemiesAction((AbstractCreature)p, this.multiDamage,
                 this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
-        addToBot((AbstractGameAction)new ExhaustAction(1, true, false, false));
+        addToBot((AbstractGameAction)new ExhaustAction(this.magicNumber, true, false, false));
+        addToBot(new MakeTempCardInHandAction(new Burn(), 1));
     }
 
     @Override

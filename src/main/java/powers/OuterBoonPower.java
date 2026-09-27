@@ -36,6 +36,11 @@ public class OuterBoonPower extends AbstractPower {
         addToBot((AbstractGameAction)new GainEnergyAction(this.amount));
     }
 
+    public void onRandomCardDiscarded() {
+        flash();
+        addToBot((AbstractGameAction)new GainEnergyAction(this.amount));
+    }
+
     @Override
     public void updateDescription() {
         if (this.amount == 1) {

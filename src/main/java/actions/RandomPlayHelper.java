@@ -46,6 +46,7 @@ public class RandomPlayHelper {
     }
 
     public static void prepareRandomPlayedCard(AbstractCard card) {
+        card = general.SmithingBody.physical(card);
         card.current_x = card.hb.cX;
         card.current_y = card.hb.cY;
         card.target_x = AbstractDungeon.player.hb.cX;
@@ -64,6 +65,12 @@ public class RandomPlayHelper {
         }
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(ZealotryPower.POWER_ID)) {
             ((ZealotryPower)AbstractDungeon.player.getPower(ZealotryPower.POWER_ID)).onRandomCardPlayed();
+        }
+    }
+
+    public static void notifyRandomCardDiscarded() {
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(OuterBoonPower.POWER_ID)) {
+            ((OuterBoonPower)AbstractDungeon.player.getPower(OuterBoonPower.POWER_ID)).onRandomCardDiscarded();
         }
     }
 }

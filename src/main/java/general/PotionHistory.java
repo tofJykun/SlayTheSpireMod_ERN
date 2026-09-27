@@ -40,6 +40,10 @@ public final class PotionHistory {
     }
 
     public static void replayPotion(String potionId, AbstractMonster preferredTarget) {
+        replayPotion(potionId, preferredTarget, true);
+    }
+
+    public static void replayPotion(String potionId, AbstractMonster preferredTarget, boolean triggerScattershot) {
         AbstractPotion potion = PotionHelper.getPotion(potionId);
         if (potion == null || AbstractDungeon.player == null) {
             return;
@@ -58,6 +62,9 @@ public final class PotionHistory {
         }
 
         triggerPotionRelics(potion);
+        if (triggerScattershot) {
+            powers.ScattershotThrowPower.onPotionUsed(potion, preferredTarget);
+        }
     }
 
     private static AbstractCreature targetFor(AbstractPotion potion, AbstractMonster preferredTarget) {

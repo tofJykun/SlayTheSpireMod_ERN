@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import general.CombatState;
 
 public class HiddenBodyPower extends AbstractPower {
     public static final String POWER_ID = "HiddenBodyPower";
@@ -31,6 +32,8 @@ public class HiddenBodyPower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
         flash();
+        this.amount = Math.max(0, this.amount - countAttackingEnemies());
+        updateDescription();
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             if (!monster.isDeadOrEscaped()) {
                 addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)monster, this.owner,
@@ -39,6 +42,26 @@ public class HiddenBodyPower extends AbstractPower {
             }
         }
         addToBot((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, this));
+    }
+
+    public static int countAttackingEnemies() {
+        if (!CombatState.isInCombat() || AbstractDungeon.getMonsters() == null) {
+            return 0;
+        }
+        int count = 0;
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (monster != null && !monster.isDeadOrEscaped() && !monster.halfDead && isAttackIntent(monster.intent)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    private static boolean isAttackIntent(AbstractMonster.Intent intent) {
+        return intent == AbstractMonster.Intent.ATTACK
+                || intent == AbstractMonster.Intent.ATTACK_BUFF
+                || intent == AbstractMonster.Intent.ATTACK_DEBUFF
+                || intent == AbstractMonster.Intent.ATTACK_DEFEND;
     }
 
     @Override

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import ernmod.ERNMod;
@@ -81,7 +82,9 @@ public class Guardian extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
-                Settings.language == Settings.GameLanguage.ZHS ? "擅长防护与控场的防御型渡夜者。" : "A defensive Nightfarer with strong protection and crowd control.",
+                Settings.language == Settings.GameLanguage.ZHS
+                        ? "尽管羽翼受到诅咒，仍能借助天空战斗的群体。 NL 合翼卫，可以举盾一整天。"
+                        : "A flock that harnesses the skies in battle despite its cursed wings. NL A guardian with folded wings who can keep his shield raised all day.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
@@ -169,6 +172,6 @@ public class Guardian extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return null;
+        return Vampires.DESCRIPTIONS[0];
     }
 }

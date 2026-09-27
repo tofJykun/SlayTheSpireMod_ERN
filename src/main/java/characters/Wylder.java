@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import ernmod.ERNMod;
@@ -83,7 +84,9 @@ public class Wylder extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
-                Settings.language == Settings.GameLanguage.ZHS ? "追踪黑夜王的均衡型渡夜者。" : "A balanced Nightfarer in pursuit of the Nightlord.",
+                Settings.language == Settings.GameLanguage.ZHS
+                        ? "将思考融入战斗交互的骑士，一些力量只在解除封印时发挥。 NL 如果超绝操作被人忽略会脸色变黑。"
+                        : "A knight who brings careful thought to every exchange in battle. Some of his powers only emerge when their seals are broken. NL His expression darkens when his masterful moves go unnoticed.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
@@ -171,6 +174,6 @@ public class Wylder extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return null;
+        return Vampires.DESCRIPTIONS[0];
     }
 }

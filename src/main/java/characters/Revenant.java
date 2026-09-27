@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import ernmod.ERNMod;
@@ -84,7 +85,9 @@ public class Revenant extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
-                Settings.language == Settings.GameLanguage.ZHS ? "召唤灵魂投入战斗的复仇者。" : "A vengeful Nightfarer who calls spirits to the battle.",
+                Settings.language == Settings.GameLanguage.ZHS
+                        ? "人缘很好的唤灵人偶，在绝境将掏出藏有的秘密武器。 NL 其实是不给星光碎片吃就挠人的蜗牛。"
+                        : "A well-liked doll who summons spirits and brings out her hidden secret weapon when cornered. NL Actually a snail who scratches anyone who refuses to feed her Starlight Shards.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
@@ -172,6 +175,6 @@ public class Revenant extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return null;
+        return Vampires.DESCRIPTIONS[1];
     }
 }

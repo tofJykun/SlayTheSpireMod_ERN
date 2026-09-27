@@ -46,8 +46,9 @@ public class Kick extends CustomCard {
         }
         // The draw callback runs before addToHand. Let native draw/use move the card;
         // adding it to limbo here leaves a second render reference after it is played.
-        RandomPlayHelper.prepareRandomPlayedCard(this);
-        AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(this, true,
+        AbstractCard source = general.SmithingBody.physical(this);
+        RandomPlayHelper.prepareRandomPlayedCard(source);
+        AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(source, true,
                 EnergyPanel.getCurrentEnergy(), true, true), true);
     }
 

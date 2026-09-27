@@ -2,6 +2,7 @@ package characters;
 
 import basemod.abstracts.CustomPlayer;
 import cards.ironeye.Defend_Ironeye;
+import cards.ironeye.Marking;
 import cards.ironeye.Strike_Ironeye;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import ernmod.ERNMod;
@@ -67,6 +69,7 @@ public class Ironeye extends CustomPlayer {
         retVal.add(Defend_Ironeye.ID);
         retVal.add(Defend_Ironeye.ID);
         retVal.add(Defend_Ironeye.ID);
+        retVal.add(Marking.ID);
         return retVal;
     }
 
@@ -80,7 +83,9 @@ public class Ironeye extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
-                Settings.language == Settings.GameLanguage.ZHS ? "擅长远距离战斗并标记弱点的渡夜者。" : "A long-range Nightfarer who marks weak points.",
+                Settings.language == Settings.GameLanguage.ZHS
+                        ? "以寻宝谋生的机构杀手，金钱与装备又将投入战斗。 NL 紫玉米以月光为食，因而黑夜必须留下。"
+                        : "An assassin of the Fellowship who makes a living hunting treasure and puts his earnings and equipment back into battle. NL Purple corn feeds on moonlight, so the night must remain.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
@@ -168,6 +173,6 @@ public class Ironeye extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return null;
+        return Vampires.DESCRIPTIONS[0];
     }
 }

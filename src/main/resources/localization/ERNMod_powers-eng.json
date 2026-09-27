@@ -1,4 +1,20 @@
 {
+  "DeadlyDancePower": {
+    "NAME": "Deadly Dance",
+    "DESCRIPTIONS": ["Whenever you apply a debuff to an enemy, gain #b", " #yBlock."]
+  },
+  "SovereigntyPower": {
+    "NAME": "Sovereignty",
+    "DESCRIPTIONS": ["You no longer discard your hand at the end of your turn."]
+  },
+  "EternalSleepPower": {
+    "NAME": "Eternal Sleep",
+    "DESCRIPTIONS": ["At the start of this enemy's turn, remove this effect if it is at full HP. Otherwise, it heals #b5% of its max HP (rounded up) and is stunned for #b1 turn. Removed when the enemy loses HP."]
+  },
+  "BudgetTravelPower": {
+    "NAME": "Budget Travel",
+    "DESCRIPTIONS": ["At the start of your next turn, gain #b", " less [E]. Then remove this effect."]
+  },
   "ElementalDefensePower": {
     "NAME": "Elemental Defense",
     "DESCRIPTIONS": [
@@ -24,8 +40,8 @@
   "FaithPower": {
     "NAME": "Faith",
     "DESCRIPTIONS": [
-      "Thaumaturgy damage and Thaumaturgy Block gain #b",
-      "Thaumaturgy damage and Thaumaturgy Block lose #b",
+      "#yThaumaturgy damage and #yThaumaturgy Block gain #b",
+      "#yThaumaturgy damage and #yThaumaturgy Block lose #b",
       " additional value."
     ]
   },
@@ -152,6 +168,13 @@
       "At the end of this turn, deal #b%d damage to ALL enemies."
     ]
   },
+  "EarthshakerPower": {
+    "NAME": "Earthshaker",
+    "DESCRIPTIONS": [
+      "At the end of #b%d turns, deal #b%d damage to ALL enemies.",
+      "At the end of this turn, deal #b%d damage to ALL enemies."
+    ]
+  },
   "CrystalScrapPower": {
     "NAME": "Crystal Scrap",
     "DESCRIPTIONS": [
@@ -214,7 +237,7 @@
     "NAME": "Twilight Herb",
     "DESCRIPTIONS": [
       "This turn, whenever you play a Status card, gain #b",
-      " Block."
+      " [E] ."
     ]
   },
   "HoverPower": {
@@ -223,6 +246,27 @@
       "Reduces damage taken by 50% for the next #b",
       " instances of damage.",
       " NL Lose #b1 stack whenever you take attack damage. When stacks are at least #b10 and less than #b15, gain #yLofty. When stacks are at least #b15, gain #yDeep #ySpace."
+    ]
+  },
+  "MantleOfThornsPower": {
+    "NAME": "Mantle of Thorns",
+    "DESCRIPTIONS": [
+      "Whenever you gain Hover, gain #b",
+      " #yThorns."
+    ]
+  },
+  "PostureBreakPower": {
+    "NAME": "Posture Break",
+    "DESCRIPTIONS": [
+      "If this enemy has an attack intent and none of its attacks during that action cause you to lose HP, it is #yStunned on its next turn. Its original intent is delayed."
+    ]
+  },
+  "ConfluencePower": {
+    "NAME": "Confluence",
+    "DESCRIPTIONS": [
+      "This turn, you have played #b",
+      " cards costing at least #b",
+      "."
     ]
   },
   "LoftyPower": {
@@ -244,10 +288,24 @@
       "% additional damage.)"
     ]
   },
+  "TheBirdsPower": {
+    "NAME": "The Birds",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, deal #b",
+      " damage to a random enemy."
+    ]
+  },
   "GowerRingOfProtectionPower": {
     "NAME": "Gower Ring of Protection",
     "DESCRIPTIONS": [
       "Damage you take is reduced by #b50% . At the start of each turn, gain #b1 less [E] ."
+    ]
+  },
+  "DeterminationPower": {
+    "NAME": "Determination",
+    "DESCRIPTIONS": [
+      "Damage from each individual enemy attack you take is capped at #b",
+      " this turn."
     ]
   },
   "TotemStelaPower": {
@@ -449,8 +507,23 @@
   "BlackFlameRitualPower": {
     "NAME": "Black Flame Ritual",
     "DESCRIPTIONS": [
+      "Whenever an enemy loses HP, apply #b",
+      " times that much #yBloodburn to it."
+    ]
+  },
+  "BlackFlameBarrierPower": {
+    "NAME": "Black Flame Barrier",
+    "DESCRIPTIONS": [
       "Whenever you are attacked, apply #b",
       " Bloodburn to the attacker."
+    ]
+  },
+  "CarianPiercerPower": {
+    "NAME": "Carian Piercer",
+    "DESCRIPTIONS": [
+      "Until the start of your next turn, whenever you are attacked, add #b",
+      " #yFading #yPrimal #yGlintstone to your hand.",
+      " #yFading #yPrimal #yGlintstone+ to your hand."
     ]
   },
   "SinBriarsPower": {
@@ -464,6 +537,12 @@
     "NAME": "Immolation",
     "DESCRIPTIONS": [
       "When you are attacked, if you have #ySummon, the attacker loses HP equal to the blocked damage."
+    ]
+  },
+  "CrystalRingShieldPower": {
+    "NAME": "Crystal Ring Shield",
+    "DESCRIPTIONS": [
+      "When you are attacked, the attacker loses HP equal to the damage blocked."
     ]
   },
   "GhostflameIgnitionPower": {
@@ -483,8 +562,7 @@
   "FingerprintStoneShieldPower": {
     "NAME": "Fingerprint Stone Shield",
     "DESCRIPTIONS": [
-      "Whenever you are attacked, apply #b",
-      " Madness to the attacker."
+      "Whenever you play a #ySkill this turn, your next #yAttack costs #b0."
     ]
   },
   "BloodSigilPower": {
@@ -492,6 +570,24 @@
     "DESCRIPTIONS": [
       "Whenever this enemy is attacked, gain #b",
       " Block."
+    ]
+  },
+  "MarkingPower": {
+    "NAME": "Marking",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if this enemy has taken at least #b",
+      " damage this turn (including #yBlocked damage), it loses #b",
+      " HP. NL Damage taken this turn: #b",
+      "."
+    ]
+  },
+  "PoisonMarkingPower": {
+    "NAME": "Poison Marking",
+    "DESCRIPTIONS": [
+      "At the end of your turn, if this enemy has taken at least #b",
+      " damage this turn (including #yBlocked damage), it gains #b",
+      " #yPoison. NL Damage taken this turn: #b",
+      "."
     ]
   },
   "BladeOfCallingPower": {
@@ -518,8 +614,8 @@
   "DarkBloodPower": {
     "NAME": "Dark Blood",
     "DESCRIPTIONS": [
-      "Whenever you apply a negative Status to an enemy, gain #b",
-      " Block."
+      "At the start of your turn, apply #b",
+      " random #yAberration to yourself."
     ]
   },
   "SoulbloodSongPower": {
@@ -554,8 +650,8 @@
   "OuterBoonPower": {
     "NAME": "Outer Boon",
     "DESCRIPTIONS": [
-      "Whenever you play a random card, gain [E] .",
-      "Whenever you play a random card, gain #b",
+      "Whenever you play or discard a random card, gain [E] .",
+      "Whenever you play or discard a random card, gain #b",
       " Energy."
     ]
   },
@@ -650,8 +746,8 @@
   "SpiritPower": {
     "NAME": "Spirit",
     "DESCRIPTIONS": [
-      "All card text numbers on Phantom cards are increased by #b",
-      "."
+      "Card text numbers on Phantom cards are increased by #b",
+      ". Phantom Sebastian's Energy and card draw are unaffected."
     ]
   },
   "FadingSpiritPower": {
@@ -737,6 +833,14 @@
       " #yDexterity."
     ]
   },
+  "EventualGreatnessPower": {
+    "NAME": "Eventual Greatness",
+    "DESCRIPTIONS": [
+      "Every time you play #b",
+      " cards in a single turn, gain #b1 #yStrength and #b1 #yDexterity for that turn. NL Current count: #b",
+      "."
+    ]
+  },
   "WindyCrystalPower": {
     "NAME": "Windy Crystal",
     "DESCRIPTIONS": [
@@ -747,17 +851,17 @@
   "BellowingDragoncrestPower": {
     "NAME": "Bellowing Dragoncrest",
     "DESCRIPTIONS": [
-      "Whenever you gain Intelligence, deal #b",
-      " damage to a random enemy."
+      "Whenever you gain Intelligence, gain #b",
+      " temporary Intelligence this turn."
     ]
   },
   "SlumberingDragoncrestPower": {
     "NAME": "Slumbering Dragoncrest",
     "DESCRIPTIONS": [
       "Whenever you gain Intelligence, apply #b",
-      " Weak to a random enemy.",
+      " Sleep to a random enemy.",
       "Whenever you gain Intelligence, apply #b",
-      " Weak to ALL enemies."
+      " Sleep to ALL enemies."
     ]
   },
   "ImpatientBallPower": {
@@ -864,6 +968,10 @@
         "At the start of your turn, draw until your hand is full and cannot draw any more cards this turn."
       ]
     },
+    "RingedKnightStraightSwordPower": {
+      "NAME": "Ringed Knight Straight Sword",
+      "DESCRIPTIONS": ["After you play your next card, gain #b", " Energy."]
+    },
     "WarmthPower": {
       "NAME": "Warmth",
       "DESCRIPTIONS": [
@@ -876,6 +984,14 @@
       "All of your attack damage is #b",
       " times this turn, and you cannot see card descriptions."
     ]
+  },
+  "JellyfishShieldPower": {
+    "NAME": "Jellyfish Shield",
+    "DESCRIPTIONS": ["Your attacks deal #b", "% more damage this turn."]
+  },
+  "PerfectScorePower": {
+    "NAME": "Perfect Score",
+    "DESCRIPTIONS": ["Enemies drop an additional upgraded card reward; disappears when you lose HP."]
   },
   "ClimaxPower": {
     "NAME": "Climax",
@@ -907,6 +1023,12 @@
     "NAME": "Trance",
     "DESCRIPTIONS": [
       "Your next #yAttack card deals double damage."
+    ]
+  },
+  "DiplopiaPower": {
+    "NAME": "Diplopia",
+    "DESCRIPTIONS": [
+      "The first #yAttack card you play this turn deals double damage."
     ]
   },
   "CollectAffinityPower": {
@@ -1139,6 +1261,13 @@
       "At the end of your turn, retain non-Ethereal Crude Drug cards."
     ]
   },
+  "ScattershotThrowPower": {
+    "NAME": "Scattershot Throw",
+    "DESCRIPTIONS": [
+      "The next potion you use is used #b",
+      " times. Additional uses of Fairy in a Bottle and Elixir of Life have no effect."
+    ]
+  },
   "LoseStrengthAtEndOfTurnPower": {
     "NAME": "Kindling Rite",
     "DESCRIPTIONS": [
@@ -1163,6 +1292,10 @@
     "DESCRIPTIONS": [
       "You cannot play #ySkills. NL #yAttacks you play are played twice."
     ]
+  },
+  "DancingBladePower": {
+    "NAME": "Dancing Blade",
+    "DESCRIPTIONS": ["Your next manually played card must be a #ySkill. Automatically played cards are unrestricted. Removed after you play your next card."]
   },
   "PowerOfHouseMaraisPower": {
     "NAME": "Power of House Marais",
@@ -1198,6 +1331,14 @@
       "At the end of your turn, #yRetain up to #b",
       " material cards."
     ]
+  },
+  "OverheadStancePower": {
+    "NAME": "Overhead Stance",
+    "DESCRIPTIONS": ["Each hit of your next #yAttack applies #yPoise #yBreak equal to #b", " times that card's Energy cost."]
+  },
+  "PalmBlastPower": {
+    "NAME": "Palm Blast",
+    "DESCRIPTIONS": ["Whenever you play an #yAttack this turn, draw #b", " additional card(s) next turn."]
   },
   "DuelistFurledFingerPower": {
     "NAME": "Duelist's Furled Finger",
@@ -1262,6 +1403,13 @@
       "."
     ]
   },
+  "MushroomCrownPower": {
+    "NAME": "Mushroom Crown",
+    "DESCRIPTIONS": [
+      "This turn, whenever you play a card, gain #b",
+      " #yMushroom time(s)."
+    ]
+  },
   "DestitutionAssistPower": {
     "NAME": "Destitution Assist",
     "DESCRIPTIONS": [
@@ -1274,6 +1422,21 @@
     "DESCRIPTIONS": [
       "At the start of your turn, change your #yBlock to #b",
       ". Fatal permanently increases this value. Losing HP permanently decreases this value."
+    ]
+  },
+  "GrandeurPower": {
+    "NAME": "Grandeur",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain [E] .",
+      "At the start of your turn, gain #b",
+      " [E] ."
+    ]
+  },
+  "AssaultPower": {
+    "NAME": "Assault",
+    "DESCRIPTIONS": [
+      "Whenever you play #b3 #yAttacks in one turn, gain #b",
+      " #yVigor."
     ]
   },
   "AbyssSealPower": {
@@ -1296,6 +1459,30 @@
     "DESCRIPTIONS": [
       "In #b",
       " turns, lose #b99999 HP."
+    ]
+  },
+  "YoungWhiteBranchPower": {
+    "NAME": "Young White Branch",
+    "DESCRIPTIONS": ["At the start of your next turn, STUN a random enemy for 1 turn.", "At the start of your next turn, STUN all enemies for 1 turn."]
+  },
+  "ResistanceToAilmentsPower": {
+    "NAME": "Resistance to Ailments",
+    "DESCRIPTIONS": ["Gain 1 less [E] at the start of each turn."]
+  },
+  "SpinningWeaponPower": {
+    "NAME": "Spinning Weapon",
+    "DESCRIPTIONS": ["The next time you discard a card, gain #b", " #yBlock."]
+  },
+  "AllKnowingHelmPower": {
+    "NAME": "All-Knowing Helm",
+    "DESCRIPTIONS": ["This turn, the next #b", " cards you play cost #b0. Cards requiring an enemy target choose it randomly."]
+  },
+  "FilterPower": {
+    "NAME": "Filter",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " cards next turn, then discard #b",
+      " card(s)."
     ]
   }
 }

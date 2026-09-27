@@ -18,11 +18,16 @@ public class Dodge extends CustomCard {
     private static final String IMG_PATH = "img/cards/recluse/Dodge.png";
     private static final int COST = 0;
     private static final int DRAW = 1;
-    private static final int VIGOR = 1;
+    private static final int VIGOR = 2;
 
     public Dodge() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.Recluse_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.baseMagicNumber = this.magicNumber = DRAW;
+    }
+
+    public int getVigor() {
+        return VIGOR + (this.upgraded ? 1 : 0);
     }
 
     private static CardStrings getCardStrings() {
@@ -31,11 +36,9 @@ public class Dodge extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot((AbstractGameAction)new DrawCardAction((AbstractCreature)p, DRAW));
-        if (this.upgraded) {
-            addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p,
-                    new VigorPower((AbstractCreature)p, VIGOR), VIGOR));
-        }
+        addToBot((AbstractGameAction)new DrawCardAction((AbstractCreature)p, this.magicNumber));
+        addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p,
+                new VigorPower((AbstractCreature)p, getVigor()), getVigor()));
     }
 
     @Override
@@ -47,7 +50,6 @@ public class Dodge extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = getCardStrings().UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

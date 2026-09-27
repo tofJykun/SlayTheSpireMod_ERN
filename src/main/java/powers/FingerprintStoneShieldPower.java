@@ -3,11 +3,13 @@ package powers;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.FreeAttackPower;
 
 public class FingerprintStoneShieldPower extends AbstractPower {
     public static final String POWER_ID = "FingerprintStoneShieldPower";
@@ -15,11 +17,11 @@ public class FingerprintStoneShieldPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public FingerprintStoneShieldPower(AbstractCreature owner, int madnessAmount) {
+    public FingerprintStoneShieldPower(AbstractCreature owner) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = madnessAmount;
+        this.amount = -1;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
         this.canGoNegative = false;
@@ -28,25 +30,28 @@ public class FingerprintStoneShieldPower extends AbstractPower {
     }
 
     @Override
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.owner != null && info.owner != this.owner
-                && info.type != DamageInfo.DamageType.THORNS
-                && info.type != DamageInfo.DamageType.HP_LOSS) {
-            flash();
-            addToTop((AbstractGameAction)new ApplyPowerAction(info.owner, this.owner,
-                    new MadnessPower(info.owner, this.amount), this.amount,
-                    AbstractGameAction.AttackEffect.NONE));
-        }
-        return damageAmount;
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
     }
 
     @Override
-    public void atStartOfTurn() {
-        addToBot((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, this));
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (card.type == AbstractCard.CardType.SKILL) {
+            flash();
+            addToBot(new ApplyPowerAction(this.owner, this.owner,
+                    new FreeAttackPower(this.owner, 1), 1));
+        }
+    }
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        if (isPlayer) {
+            addToBot((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
     }
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0];
     }
 }

@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import relics.WhisperingEarring;
+import powers.AllKnowingHelmPower;
 
 public class WhisperingEarringPlayCardPatch {
     @SpirePatch(clz = AbstractPlayer.class, method = "playCard")
@@ -21,7 +22,8 @@ public class WhisperingEarringPlayCardPatch {
         public static SpireReturn<Void> prefix(AbstractPlayer __instance) {
             AbstractCard card = __instance.hoveredCard;
             WhisperingEarring relic = getRelic();
-            if (card == null || relic == null || !relic.shouldRandomize(card) || queueContains(card)) {
+            boolean earring = card != null && relic != null && relic.shouldRandomize(card);
+            if (card == null || (!earring && !AllKnowingHelmPower.shouldRandomize(card)) || queueContains(card)) {
                 return SpireReturn.Continue();
             }
 
@@ -34,11 +36,11 @@ public class WhisperingEarringPlayCardPatch {
                 if (target == null) {
                     return SpireReturn.Continue();
                 }
-                relic.consumeInsightChoice();
-                relic.consume(card);
+                RandomPlayHelper.consumeInsightPrompt(__instance);
+                notifyRandomPlay(relic, card, earring);
                 AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(card, target));
             } else {
-                relic.consume(card);
+                notifyRandomPlay(relic, card, earring);
                 AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(card, true,
                         EnergyPanel.getCurrentEnergy(), false, false));
             }
@@ -47,6 +49,14 @@ public class WhisperingEarringPlayCardPatch {
             __instance.hoveredCard = null;
             __instance.isDraggingCard = false;
             return SpireReturn.Return(null);
+        }
+
+        private static void notifyRandomPlay(WhisperingEarring relic, AbstractCard card, boolean earring) {
+            if (earring) {
+                relic.consume(card);
+            } else {
+                RandomPlayHelper.notifyRandomCardPlayed();
+            }
         }
 
         private static WhisperingEarring getRelic() {

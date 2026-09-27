@@ -45,6 +45,7 @@ public final class InsuranceField {
     public static void insure(AbstractCard card) {
         if (card != null) {
             Fields.insured.set(card, true);
+            card.initializeDescription();
         }
     }
 

@@ -18,7 +18,7 @@ public class Clockwise extends CustomCard {
 
     public Clockwise() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Undertaker_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Undertaker_COLOR, CardRarity.COMMON, CardTarget.SELF);
         this.baseMagicNumber = PLAY_COUNT;
         this.magicNumber = this.baseMagicNumber;
     }

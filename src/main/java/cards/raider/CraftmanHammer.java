@@ -16,7 +16,7 @@ public class CraftmanHammer extends CustomCard {
     public static final String ID = "CraftmanHammer";
     private static final String IMG_PATH = "img/cards/raider/CraftmanHammer.png";
     private static final int COST = 1;
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 8;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public CraftmanHammer() {

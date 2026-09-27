@@ -39,14 +39,22 @@ public class BoneFist extends CustomCard {
 
     @Override
     public void triggerOnCardPlayed(AbstractCard card) {
-        if (card != this && isNonzeroCostAttack(card)
+        returnFromDiscardOnCardPlayed(this, card);
+    }
+
+    public static void returnFromDiscardOnCardPlayed(AbstractCard returningCard, AbstractCard playedCard) {
+        returningCard = general.SmithingBody.physical(returningCard);
+        playedCard = general.SmithingBody.physical(playedCard);
+        if (returningCard != null && playedCard != returningCard && isNonzeroCostAttack(playedCard)
                 && AbstractDungeon.player != null
-                && AbstractDungeon.player.discardPile.contains(this)) {
-            addToBot((AbstractGameAction)new DiscardToHandAction(this));
+                && AbstractDungeon.actionManager != null
+                && AbstractDungeon.player.discardPile.contains(returningCard)) {
+            // The card in the pile may be a forged creation, not its internal BoneFist component.
+            AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(returningCard));
         }
     }
 
-    private boolean isNonzeroCostAttack(AbstractCard card) {
+    private static boolean isNonzeroCostAttack(AbstractCard card) {
         if (card == null || card.type != CardType.ATTACK) {
             return false;
         }

@@ -25,7 +25,10 @@ public final class ClockwiseSequencer {
     }
 
     private static void request(int amount, boolean fromRight) {
-        if (amount > 0 && AbstractDungeon.actionManager != null
+        if (amount > 0 && AbstractDungeon.player != null
+                && AbstractDungeon.player.hand != null
+                && !AbstractDungeon.player.hand.isEmpty()
+                && AbstractDungeon.actionManager != null
                 && AbstractDungeon.actionManager.cardsPlayedThisTurn.size() < MAX_PLAYS_THIS_TURN) {
             requests.addLast(new Request(amount, fromRight));
         }

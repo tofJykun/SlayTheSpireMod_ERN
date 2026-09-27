@@ -21,14 +21,12 @@ public class DarkFog extends CustomCard {
     public static final String ID = "DarkFog";
     private static final String IMG_PATH = "img/cards/recluse/DarkFog.png";
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 3;
-    private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int HIT_COUNT = 2;
-    private static final int MAGIC_EMBERS = 1;
+    private static final int ATTACK_DMG = 10;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     public DarkFog() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+                AbstractCardEnum.Recluse_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.isMultiDamage = true;
         this.cardsToPreview = new MagicEmber();
@@ -40,13 +38,19 @@ public class DarkFog extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < HIT_COUNT; i++) {
-            addToBot((AbstractGameAction)new VFXAction(
-                    (AbstractGameEffect)new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
-            addToBot((AbstractGameAction)new DamageAllEnemiesAction((AbstractCreature)p,
-                    this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        int enemyCount = 0;
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (monster != null && !monster.isDeadOrEscaped() && !monster.halfDead) {
+                enemyCount++;
+            }
         }
-        addToBot((AbstractGameAction)new MakeTempCardInHandAction(new MagicEmber(), MAGIC_EMBERS));
+        addToBot((AbstractGameAction)new VFXAction(
+                (AbstractGameEffect)new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
+        addToBot((AbstractGameAction)new DamageAllEnemiesAction((AbstractCreature)p,
+                this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        if (enemyCount > 0) {
+            addToBot(new MakeTempCardInHandAction(new MagicEmber(), enemyCount));
+        }
     }
 
     @Override

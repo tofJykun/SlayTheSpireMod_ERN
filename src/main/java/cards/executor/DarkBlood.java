@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import patches.AbstractCardEnum;
 import powers.DarkBloodPower;
 
@@ -16,13 +18,14 @@ public class DarkBlood extends CustomCard {
     public static final String ID = "DarkBlood";
     private static final String IMG_PATH = "img/cards/executor/DarkBlood.png";
     private static final int COST = 1;
-    private static final int BLOCK = 3;
-    private static final int UPGRADE_PLUS_BLOCK = 1;
+    private static final int STAT_GAIN = 3;
+    private static final int UPGRADE_PLUS_STAT = 1;
+    public static final int ABERRATION = 2;
 
     public DarkBlood() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.POWER, AbstractCardEnum.Executor_COLOR, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = BLOCK;
+        this.baseMagicNumber = STAT_GAIN;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -32,8 +35,10 @@ public class DarkBlood extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p,
-                new DarkBloodPower((AbstractCreature)p, this.magicNumber), this.magicNumber));
+                new DarkBloodPower((AbstractCreature)p, ABERRATION), ABERRATION));
     }
 
     @Override
@@ -45,7 +50,7 @@ public class DarkBlood extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_BLOCK);
+            upgradeMagicNumber(UPGRADE_PLUS_STAT);
             initializeDescription();
         }
     }

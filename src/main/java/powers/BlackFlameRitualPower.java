@@ -1,51 +1,45 @@
 package powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class BlackFlameRitualPower extends AbstractPower {
     public static final String POWER_ID = "BlackFlameRitualPower";
-    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-    public static final String NAME = powerStrings.NAME;
-    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    private static final PowerStrings STRINGS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 
-    public BlackFlameRitualPower(AbstractCreature owner, int bloodburnAmount) {
-        this.name = NAME;
+    public BlackFlameRitualPower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
+        this.name = STRINGS.NAME;
         this.owner = owner;
-        this.amount = bloodburnAmount;
-        updateDescription();
+        this.amount = amount;
+        this.type = PowerType.BUFF;
         PowerIconHelper.load(this, POWER_ID);
+        updateDescription();
     }
 
-    @Override
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.owner != null && info.owner != this.owner
-                && info.type != DamageInfo.DamageType.THORNS
-                && info.type != DamageInfo.DamageType.HP_LOSS) {
-            flash();
-            addToTop((AbstractGameAction)new ApplyPowerAction(info.owner, this.owner,
-                    new BloodburnPower(info.owner, this.owner, this.amount),
-                    this.amount, AbstractGameAction.AttackEffect.POISON));
+    public void onEnemyLoseHp(AbstractMonster enemy, int hpLost) {
+        if (hpLost <= 0 || this.amount <= 0 || enemy.currentHealth <= 0 || enemy.isDeadOrEscaped()) {
+            return;
         }
-        return damageAmount;
+        int bloodburn = (int)Math.min(Integer.MAX_VALUE, (long)hpLost * this.amount);
+        flash();
+        // Applying Bloodburn does not deal damage immediately; its later HP loss may trigger again.
+        addToTop(new ApplyPowerAction(enemy, this.owner,
+                new BloodburnPower(enemy, this.owner, bloodburn), bloodburn));
     }
 
     @Override
-    public void atStartOfTurn() {
-        addToBot((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        updateDescription();
     }
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = STRINGS.DESCRIPTIONS[0] + this.amount + STRINGS.DESCRIPTIONS[1];
     }
 }
-

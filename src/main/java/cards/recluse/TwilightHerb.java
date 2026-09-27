@@ -16,14 +16,14 @@ public class TwilightHerb extends CustomCard {
     public static final String ID = "TwilightHerb";
     private static final String IMG_PATH = "img/cards/recluse/TwilightHerb.png";
     private static final int COST = 1;
-    private static final int BLOCK_PER_STATUS = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int ENERGY_PER_STATUS = 1;
 
     public TwilightHerb() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.SELF);
-        this.baseMagicNumber = BLOCK_PER_STATUS;
+                CardType.SKILL, AbstractCardEnum.Recluse_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.baseMagicNumber = ENERGY_PER_STATUS;
         this.magicNumber = this.baseMagicNumber;
+        this.exhaust = true;
     }
 
     private static CardStrings getCardStrings() {
@@ -45,7 +45,7 @@ public class TwilightHerb extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_BLOCK);
+            upgradeBaseCost(0);
         }
     }
 }

@@ -16,7 +16,7 @@ public class Grovewort extends CustomCard {
     public static final String ID = "Grovewort";
     private static final String IMG_PATH = "img/cards/revenant/Grovewort.png";
     private static final int COST = 1;
-    private static final int SPIRIT = 1;
+    private static final int SPIRIT = 2;
     private static final int UPGRADE_PLUS_SPIRIT = 1;
 
     public Grovewort() {

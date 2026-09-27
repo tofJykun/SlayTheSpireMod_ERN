@@ -20,6 +20,7 @@ public class Purge extends CustomCard {
     private static final int COST = 2;
     private static final int ATTACK_DAMAGE = 15;
     private static final int DRAW = 2;
+    private static final int UPGRADE_PLUS_DAMAGE = 3;
     private static final int UPGRADE_PLUS_DRAW = 1;
 
     public Purge() {
@@ -51,7 +52,9 @@ public class Purge extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeDamage(UPGRADE_PLUS_DAMAGE);
             upgradeMagicNumber(UPGRADE_PLUS_DRAW);
+            initializeDescription();
         }
     }
 }

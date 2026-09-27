@@ -39,7 +39,7 @@ public class DarkswordDescriptionPatch {
         }
     }
 
-    private static boolean shouldHideDescription(AbstractCard card) {
+    public static boolean shouldHideDescription(AbstractCard card) {
         return card != null
                 && card.rawDescription != null
                 && !suppressed

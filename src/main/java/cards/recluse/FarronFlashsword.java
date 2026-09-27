@@ -15,8 +15,8 @@ public class FarronFlashsword extends AbstractScheduledCard {
     public static final String ID = "FarronFlashsword";
     private static final String IMG_PATH = "img/cards/recluse/FarronFlashsword.png";
     private static final int COST = 2;
-    private static final int DAMAGE = 12;
-    private static final int UPGRADE_PLUS_DAMAGE = 3;
+    private static final int DAMAGE = 16;
+    private static final int UPGRADE_PLUS_DAMAGE = 8;
     private static final int DEFAULT_SCHEDULED = 3;
 
     public FarronFlashsword() {

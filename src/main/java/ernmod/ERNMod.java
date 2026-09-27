@@ -19,46 +19,70 @@ import basemod.interfaces.PostInitializeSubscriber;
 import basemod.interfaces.PostPowerApplySubscriber;
 import basemod.interfaces.RelicGetSubscriber;
 import cards.duchess.BewitchingBranch;
+import cards.duchess.AssassinGambit;
+import cards.duchess.Poleblade;
 import cards.duchess.BladeOfCalling;
 import cards.duchess.CeruleanburstCrystal;
 import cards.duchess.CrystalEnchanted;
 import cards.duchess.ChillingMist;
+import cards.duchess.LineOfStars;
 import cards.duchess.ConvenientBundlingStrap;
 import cards.duchess.DancerEnchantedSwords;
+import cards.duchess.DancingBlade;
+import cards.duchess.Euporia;
 import cards.duchess.DarkWoodGrain;
 import cards.duchess.Defend_Duchess;
 import cards.duchess.DarkSilverTracer;
 import cards.duchess.Darkdrift;
 import cards.duchess.DynastFinesse;
+import cards.duchess.EventualGreatness;
 import cards.duchess.FlowingTechniques;
 import cards.duchess.GoldTracer;
+import cards.duchess.GodslayerGreatsword;
 import cards.duchess.HornetRing;
 import cards.duchess.IceRapier;
 import cards.duchess.JupiterHeart;
+import cards.duchess.PowerOfTheGreaterWill;
 import cards.duchess.Mortgage;
+import cards.duchess.MushroomCrown;
 import cards.duchess.NoMoney;
 import cards.duchess.SantierSpear;
 import cards.duchess.ScavengerCurvedSword;
+import cards.duchess.BlindSpot;
 import cards.duchess.SellswordTwinblades;
 import cards.duchess.SlimeMold;
 import cards.duchess.StormCurvedSword;
 import cards.duchess.Strike_Duchess;
+import cards.duchess.SwiftSlash;
 import cards.duchess.WaterfowlDance;
 import cards.duchess.WindyCrystal;
 import cards.duchess.WildStrikes;
+import cards.duchess.WhiteLightCharge;
 import cards.executor.Blending;
 import cards.executor.AriandelBlood;
 import cards.executor.AspectsOfCrucible;
 import cards.executor.BlackFlame;
 import cards.executor.BlackFlameBlade;
 import cards.executor.BlackFlameRitual;
+import cards.executor.BlackFlameBarrier;
 import cards.executor.BlackFlameTornado;
 import cards.executor.BloodboonRitual;
 import cards.executor.BloodhoundFang;
 import cards.executor.ChaosBlade;
+import cards.executor.InseparableSword;
+import cards.executor.RagingBeast;
+import cards.executor.DeathFlare;
+import cards.executor.SwordOfMilos;
+import cards.executor.SpinningGuillotine;
+import cards.executor.GiantHunt;
+import cards.executor.AlabasterLordsPull;
+import cards.executor.OnyxLordsRepulsion;
+import cards.executor.SolderingIron;
+import cards.executor.Shackle;
 import cards.executor.CrossInfection;
 import cards.executor.CrucibleCodex;
 import cards.executor.DarkBlood;
+import cards.executor.DeadlyDance;
 import cards.executor.DeathPoker;
 import cards.executor.DestinedDeath;
 import cards.executor.Defend_Executor;
@@ -76,23 +100,36 @@ import cards.executor.OrderBlade;
 import cards.executor.PaintWorld;
 import cards.executor.PowerOfErdtree;
 import cards.executor.RiversOfBlood;
+import cards.executor.ScarletAeonia;
 import cards.executor.Seppuku;
+import cards.executor.SerpentHunter;
+import cards.executor.NomadicFrenzyflame;
+import general.PlayerDebuffStats;
 import cards.executor.StTrinaSword;
 import cards.executor.Strike_Executor;
 import cards.executor.UnendurableFrenzy;
 import cards.guardian.BlackKnightHalberd;
+import cards.guardian.NeedlePiercer;
+import cards.guardian.SpinningGravityThrust;
 import cards.guardian.Bonewheel;
 import cards.guardian.BarricadeShield;
 import cards.guardian.Brightbug;
 import cards.guardian.CallLightning;
 import cards.guardian.ChargeForth;
 import cards.guardian.Cyclone;
+import cards.guardian.DuelingShield;
 import cards.guardian.Defend_Guardian;
 import cards.guardian.FeatherFan;
 import cards.guardian.ForcedLanding;
 import cards.guardian.GoldenHalberd;
+import cards.guardian.Grandeur;
+import cards.guardian.Assault;
 import cards.guardian.GowerRingOfProtection;
+import cards.guardian.HauntingWithin;
 import cards.guardian.KineticBombardment;
+import cards.guardian.MantleOfThorns;
+import cards.guardian.ShroudingHeavens;
+import cards.guardian.Sovereignty;
 import cards.guardian.Preening;
 import cards.guardian.PurpleSign;
 import cards.guardian.SpikedShield;
@@ -100,13 +137,17 @@ import cards.guardian.SplitleafGreatsword;
 import cards.guardian.Stormcaller;
 import cards.guardian.Strike_Guardian;
 import cards.guardian.SunlightStraightSword;
+import cards.guardian.TheBirds;
 import cards.guardian.WarmingStone;
 import cards.guardian.WingedKnightHalberd;
+import cards.guardian.WingStance;
 import cards.guardian.WingsOfSalvation;
 import cards.ironeye.BlackClawAssistant;
 import cards.ironeye.Barter;
 import cards.ironeye.BillPlease;
 import cards.ironeye.BitComet;
+import cards.ironeye.Marking;
+import cards.ironeye.PoisonMarking;
 import cards.ironeye.Bounty;
 import cards.ironeye.CeruleanwhorlBubble;
 import cards.ironeye.DeadOrAlive;
@@ -119,7 +160,10 @@ import cards.ironeye.CobCannon;
 import cards.ironeye.FragrantBranchOfYore;
 import cards.ironeye.GhostBlade;
 import cards.ironeye.GhostMillstone;
+import cards.ironeye.GoldenCrux;
+import cards.ironeye.SleepEvermore;
 import cards.ironeye.GoughGreatbow;
+import cards.ironeye.YoungWhiteBranch;
 import cards.ironeye.GoldPickledFowlFoot;
 import cards.ironeye.HeatUp;
 import cards.ironeye.Imitater;
@@ -190,8 +234,9 @@ import cards.raider.MoonOfNokstella;
 import cards.raider.MurkyHandScythe;
 import cards.raider.OldMundaneStone;
 import cards.raider.Palestone;
-import cards.raider.Pickaxe;
-import cards.raider.DemonGreatHammer;
+import cards.raider.Boomerang;
+import cards.undertaker.Pickaxe;
+import cards.undertaker.DemonGreatHammer;
 import cards.raider.BloodforgedSword;
 import cards.raider.PrelateCharge;
 import cards.raider.PierceShield;
@@ -205,6 +250,7 @@ import cards.raider.PrismStone;
 import cards.raider.RawStone;
 import cards.raider.RedTearstoneRing;
 import cards.raider.Siegbrau;
+import cards.raider.SmithingArtSpears;
 import cards.raider.SpinningSlash;
 import cards.raider.StoneRing;
 import cards.raider.TitaniteChunk;
@@ -220,6 +266,11 @@ import cards.raider.WingedKnightTwinaxes;
 import cards.raider.WarMateriel;
 import cards.revenant.BlackButler;
 import cards.revenant.BeastClaw;
+import cards.revenant.ScaleBearingMerchant;
+import cards.revenant.PowerfulWeapon;
+import cards.revenant.WatcherStick;
+import cards.revenant.ResistanceToAilments;
+import cards.revenant.LotOfRunes;
 import cards.recluse.BedOfMagic;
 import cards.recluse.BellowingDragoncrest;
 import cards.recluse.AmbushShard;
@@ -276,7 +327,7 @@ import cards.recluse.QuellStorm;
 import cards.recluse.ReignitedCinder;
 import cards.recluse.Replication;
 import cards.recluse.ResonantSoul;
-import cards.recluse.RockBlaster;
+import cards.recluse.WitchingHour;
 import cards.recluse.SeekGuidance;
 import cards.recluse.SoulBolt;
 import cards.recluse.SoulbloodSong;
@@ -298,6 +349,9 @@ import cards.recluse.WhiteLightning;
 import cards.recluse.Yearn;
 import cards.revenant.CursedClaws;
 import cards.revenant.Climax;
+import cards.revenant.JellyfishShield;
+import cards.revenant.PerfectScore;
+import cards.revenant.MoonlightGreatsword;
 import cards.revenant.Defend_Revenant;
 import cards.revenant.DestitutionAssist;
 import cards.revenant.Dirge;
@@ -308,11 +362,14 @@ import cards.revenant.Grovewort;
 import cards.revenant.GreatEpee;
 import cards.revenant.Immolation;
 import cards.revenant.IScream;
+import cards.revenant.ThankYouGift;
+import cards.revenant.SharedOrder;
 import cards.revenant.ImpatientBall;
 import cards.revenant.Initiative;
 import cards.revenant.Invoke;
 import cards.revenant.LeadingStrike;
 import cards.revenant.LightningRam;
+import cards.revenant.MoonStance;
 import cards.revenant.MimicTear;
 import cards.revenant.PartingFlame;
 import cards.revenant.PhantomSlash;
@@ -327,7 +384,12 @@ import cards.revenant.SummonAid;
 import cards.revenant.Strike_Revenant;
 import cards.revenant.Undeath;
 import cards.revenant.VisageShield;
+import cards.revenant.BlasphemousBlade;
 import cards.revenant.WantThis;
+import cards.revenant.BudgetTravel;
+import cards.revenant.RancorShot;
+import cards.revenant.RevengerBlade;
+import cards.revenant.GhostflameCall;
 import cards.scholar.AeonianButterfly;
 import cards.scholar.AlbinauricBloodclot;
 import cards.scholar.AntspurRapier;
@@ -335,6 +397,7 @@ import cards.scholar.ArteriaLeaf;
 import cards.scholar.Bloodrose;
 import cards.scholar.Defend_Scholar;
 import cards.scholar.DrawstringPot;
+import cards.scholar.ScattershotThrow;
 import cards.scholar.Ergodic;
 import cards.scholar.EyeOfYelough;
 import cards.scholar.FingerprintStoneShield;
@@ -347,6 +410,7 @@ import cards.scholar.NascentButterfly;
 import cards.scholar.TrinaLily;
 import cards.scholar.TranquilWalkOfPeace;
 import cards.scholar.WaterHorse;
+import cards.scholar.RollingSparks;
 import cards.scholar.PenglaiWorship;
 import cards.scholar.AjaRedStone;
 import cards.scholar.PotionAscetic;
@@ -364,6 +428,7 @@ import cards.tempcards.CrucibleToken;
 import cards.tempcards.DragonPunch;
 import cards.tempcards.FadingPrimalGlintstone;
 import cards.tempcards.LotteryTicket;
+import cards.tempcards.MoonlightSettles;
 import cards.tempcards.MottledPot;
 import cards.tempcards.PhantomDoggo;
 import cards.tempcards.PhantomFrederick;
@@ -379,7 +444,11 @@ import cards.wylder.BloodVeil;
 import cards.wylder.BloodhoundFinesse;
 import cards.wylder.BloodhoundStep;
 import cards.wylder.CeruleanDagger;
+import cards.wylder.CirqueBlade;
 import cards.wylder.ManikinShield;
+import cards.wylder.HoneBlade;
+import cards.wylder.LightspeedSlash;
+import cards.wylder.PalmBlast;
 import cards.wylder.NoxFlowingShieldTypeI;
 import cards.wylder.NoxFlowingShieldTypeP;
 import cards.wylder.OnslaughtStake;
@@ -397,29 +466,63 @@ import cards.undertaker.BorrowedTime;
 import cards.undertaker.ChimeOfWant;
 import cards.undertaker.Clockwise;
 import cards.undertaker.CleaningAndHosting;
+import cards.undertaker.Confluence;
 import cards.undertaker.CounterClockwise;
 import cards.undertaker.DeadAgain;
 import cards.undertaker.DecisionsDecisions;
 import cards.undertaker.Denial;
 import cards.undertaker.Delirium;
 import cards.undertaker.Defend_Undertaker;
+import cards.undertaker.Mace;
+import cards.undertaker.SpiralhornShield;
+import cards.undertaker.EochaidDancingBlade;
+import cards.undertaker.StarscourgeGreatsword;
+import cards.undertaker.SacredRelicSword;
 import cards.undertaker.DemonScar;
 import cards.undertaker.Deterrence;
 import cards.undertaker.Devourer;
+import cards.undertaker.WeedCutter;
+import cards.undertaker.Darkeater;
 import cards.undertaker.DoThis;
 import cards.undertaker.EyesWithin;
 import cards.undertaker.Flustered;
+import cards.undertaker.RedBearHunt;
+import cards.undertaker.Earthshaker;
+import cards.undertaker.IronBall;
+import cards.undertaker.GoldenParry;
+import cards.undertaker.OctopusSlapping;
+import cards.undertaker.Slam;
+import cards.undertaker.RustedAnchor;
+import cards.undertaker.SpinningWeapon;
 import cards.undertaker.ForbiddenSun;
 import cards.undertaker.Forgotwww;
+import cards.undertaker.Filter;
 import cards.undertaker.Grant;
+import cards.undertaker.YouAreMine;
+import cards.undertaker.Blinkbolt;
+import cards.undertaker.OverheadStance;
 import cards.undertaker.GreatSwampTome;
 import cards.undertaker.HowMany;
+import cards.undertaker.ImpenetrableThorns;
+import cards.undertaker.PowerOfTheLightlessVoid;
 import cards.undertaker.LoathsomeHex;
+import cards.undertaker.LamentingVisage;
+import cards.undertaker.RepeatingThrust;
+import cards.undertaker.MakeYourChoice;
+import cards.undertaker.GreatStrength;
+import cards.undertaker.GreatDexterity;
+import cards.undertaker.DeepInsight;
 import cards.undertaker.NormalHammer;
 import cards.undertaker.OuterBoon;
+import cards.undertaker.AllKnowingHelm;
+import cards.undertaker.TheGreatBeyond;
 import cards.undertaker.PreceptsStrike;
 import cards.undertaker.PrescribedLevy;
+import cards.undertaker.PoisonedHand;
 import cards.undertaker.Purge;
+import cards.undertaker.Purification;
+import cards.undertaker.SacredPhalanx;
+import cards.undertaker.Gravitas;
 import cards.undertaker.Sabbath;
 import cards.undertaker.Server;
 import cards.undertaker.SoulAppease;
@@ -435,10 +538,12 @@ import cards.wylder.ClawShot;
 import cards.wylder.CrismonParma;
 import cards.wylder.CrowQuills;
 import cards.wylder.Darksword;
+import cards.wylder.Determination;
 import cards.wylder.Defend_Wylder;
 import cards.wylder.EstusFlask;
 import cards.wylder.FarronTechniques;
 import cards.wylder.FumeUltraGreatsword;
+import cards.wylder.RingedKnightStraightSword;
 import cards.wylder.GrassCrestShield;
 import cards.wylder.GravelordSword;
 import cards.wylder.GravelordSwordDance;
@@ -490,6 +595,7 @@ import general.BulkPotionQueue;
 import general.CrudeDrug;
 import general.DeadEnemyStats;
 import general.EnemyBattleStartSnapshot;
+import general.ExtraCardRewards;
 import general.FragrantBranchOfYoreRewards;
 import general.GuidanceStats;
 import general.PotionHistory;
@@ -499,7 +605,7 @@ import patches.AbstractCardEnum;
 import patches.ERNModClassEnum;
 import powers.BellowingDragoncrestPower;
 import powers.BlendingPower;
-import powers.DarkBloodPower;
+import powers.FaithPower;
 import powers.InfectionStrikePower;
 import powers.InitiativePower;
 import powers.LingeringDragoncrestPower;
@@ -515,6 +621,9 @@ import potions.PearlPotion;
 import potions.DuskHerbDew;
 import potions.HaligtreeBalm;
 import potions.IntelligencePotion;
+import potions.InsightPotion;
+import potions.OrderPotion;
+import potions.SeafoodFeast;
 import relics.AlbinauricPot;
 import relics.AldiaFund;
 import relics.Bagcraft;
@@ -559,16 +668,24 @@ import relics.SilverPendant;
 import relics.SoulForge;
 import relics.SummonSpirit;
 import relics.ToastyMittens;
+import relics.Diplopia;
+import relics.Brimstone;
+import relics.Decalogue;
+import relics.MirrorMirror;
+import relics.PerpetualMotionMachine;
 import relics.Trance;
 import relics.TransposingKiln;
 import relics.StarsDice;
 import relics.WhisperingEarring;
+import relics.VoiceConduit;
 import relics.WheelCatalyst;
 import relics.YearsEntwined;
 import variables.CrucibleTokenBloodburnVariable;
+import variables.LotOfRunesInsightVariable;
 import variables.CrucibleTokenPoisonVariable;
 import variables.CrucibleTokenScarletRotVariable;
 import variables.ScheduledVariable;
+import variables.DarkBloodAberrationVariable;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -623,6 +740,8 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         BaseMod.addDynamicVariable(new CrucibleTokenScarletRotVariable());
         BaseMod.addDynamicVariable(new CrucibleTokenBloodburnVariable());
         BaseMod.addDynamicVariable(new ScheduledVariable());
+        BaseMod.addDynamicVariable(new LotOfRunesInsightVariable());
+        BaseMod.addDynamicVariable(new DarkBloodAberrationVariable());
         addNightfarerColor(AbstractCardEnum.Recluse_COLOR, RECLUSE_COLOR, "recluse");
         addNightfarerColor(AbstractCardEnum.Wylder_COLOR, WYLDER_COLOR, "wylder");
         addNightfarerColor(AbstractCardEnum.Guardian_COLOR, GUARDIAN_COLOR, "guardian");
@@ -658,6 +777,15 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         BaseMod.addPotion(HaligtreeBalm.class, SCHOLAR_COLOR.cpy(),
                 new Color(0.82F, 0.78F, 0.56F, 1.0F), Color.WHITE.cpy(),
                 HaligtreeBalm.POTION_ID, ERNModClassEnum.Scholar_CLASS);
+        BaseMod.addPotion(InsightPotion.class, UNDERTAKER_COLOR.cpy(),
+                new Color(0.48F, 0.48F, 0.58F, 1.0F), Color.WHITE.cpy(),
+                InsightPotion.POTION_ID, ERNModClassEnum.Undertaker_CLASS);
+        BaseMod.addPotion(OrderPotion.class, UNDERTAKER_COLOR.cpy(),
+                new Color(0.62F, 0.62F, 0.72F, 1.0F), Color.WHITE.cpy(),
+                OrderPotion.POTION_ID, ERNModClassEnum.Undertaker_CLASS);
+        BaseMod.addPotion(SeafoodFeast.class, UNDERTAKER_COLOR.cpy(),
+                new Color(0.36F, 0.52F, 0.62F, 1.0F), Color.WHITE.cpy(),
+                SeafoodFeast.POTION_ID, ERNModClassEnum.Undertaker_CLASS);
     }
 
     public static void initialize() {
@@ -767,9 +895,11 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new BloodVeil());
         this.cardsToAdd.add(new BloodhoundFinesse());
         this.cardsToAdd.add(new BloodhoundStep());
+        this.cardsToAdd.add(new CirqueBlade());
         this.cardsToAdd.add(new FarronTechniques());
         this.cardsToAdd.add(new Valorheart());
         this.cardsToAdd.add(new FumeUltraGreatsword());
+        this.cardsToAdd.add(new RingedKnightStraightSword());
         this.cardsToAdd.add(new Greatsword());
         this.cardsToAdd.add(new GravelordSword());
         this.cardsToAdd.add(new GravelordSwordDance());
@@ -778,6 +908,9 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new Ubadachi());
         this.cardsToAdd.add(new Onikiri());
         this.cardsToAdd.add(new ManikinShield());
+        this.cardsToAdd.add(new HoneBlade());
+        this.cardsToAdd.add(new LightspeedSlash());
+        this.cardsToAdd.add(new PalmBlast());
         this.cardsToAdd.add(new CeruleanDagger());
         this.cardsToAdd.add(new WolfGreatshield());
         this.cardsToAdd.add(new WolfGreatsword());
@@ -787,11 +920,14 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new AbyssSeal());
         this.cardsToAdd.add(new AshenEstusFlask());
         this.cardsToAdd.add(new Darksword());
+        this.cardsToAdd.add(new Determination());
         this.cardsToAdd.add(new EstusFlask());
         this.cardsToAdd.add(new SipAbyss());
         this.cardsToAdd.add(new AstoraGreatsword());
         this.cardsToAdd.add(new SquareOff());
         this.cardsToAdd.add(new Strike_Guardian());
+        this.cardsToAdd.add(new Grandeur());
+        this.cardsToAdd.add(new Assault());
         this.cardsToAdd.add(new Defend_Guardian());
         this.cardsToAdd.add(new cards.guardian.GuardianWhirlwind());
         this.cardsToAdd.add(new WarmingStone());
@@ -800,11 +936,15 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new FeatherFan());
         this.cardsToAdd.add(new WingedKnightHalberd());
         this.cardsToAdd.add(new BlackKnightHalberd());
+        this.cardsToAdd.add(new NeedlePiercer());
+        this.cardsToAdd.add(new SpinningGravityThrust());
         this.cardsToAdd.add(new SunlightStraightSword());
         this.cardsToAdd.add(new GoldenHalberd());
         this.cardsToAdd.add(new SplitleafGreatsword());
         this.cardsToAdd.add(new Bonewheel());
         this.cardsToAdd.add(new SpikedShield());
+        this.cardsToAdd.add(new MantleOfThorns());
+        this.cardsToAdd.add(new HauntingWithin());
         this.cardsToAdd.add(new BarricadeShield());
         this.cardsToAdd.add(new Preening());
         this.cardsToAdd.add(new PurpleSign());
@@ -814,11 +954,18 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new Brightbug());
         this.cardsToAdd.add(new ForcedLanding());
         this.cardsToAdd.add(new KineticBombardment());
+        this.cardsToAdd.add(new WingStance());
+        this.cardsToAdd.add(new DuelingShield());
+        this.cardsToAdd.add(new ShroudingHeavens());
+        this.cardsToAdd.add(new Sovereignty());
         this.cardsToAdd.add(new GowerRingOfProtection());
+        this.cardsToAdd.add(new TheBirds());
         this.cardsToAdd.add(new Strike_Ironeye());
         this.cardsToAdd.add(new Defend_Ironeye());
         this.cardsToAdd.add(new CobCannon());
         this.cardsToAdd.add(new BitComet());
+        this.cardsToAdd.add(new Marking());
+        this.cardsToAdd.add(new PoisonMarking());
         this.cardsToAdd.add(new ShieldOfWant());
         this.cardsToAdd.add(new Lifegem());
         this.cardsToAdd.add(new Plunder());
@@ -840,7 +987,10 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new LoyaltyCard());
         this.cardsToAdd.add(new GhostBlade());
         this.cardsToAdd.add(new GhostMillstone());
+        this.cardsToAdd.add(new GoldenCrux());
+        this.cardsToAdd.add(new SleepEvermore());
         this.cardsToAdd.add(new GoughGreatbow());
+        this.cardsToAdd.add(new YoungWhiteBranch());
         this.cardsToAdd.add(new RainOfArrows());
         this.cardsToAdd.add(new DivineSpear());
         this.cardsToAdd.add(new Usury());
@@ -868,9 +1018,11 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new CraftmanHammer());
         this.cardsToAdd.add(new CourtesyEnough());
         this.cardsToAdd.add(new BloodWall());
+        this.cardsToAdd.add(new Boomerang());
         this.cardsToAdd.add(new PierceShield());
         this.cardsToAdd.add(new BlessedDew());
         this.cardsToAdd.add(new Siegbrau());
+        this.cardsToAdd.add(new SmithingArtSpears());
         this.cardsToAdd.add(new BloodDebt());
         this.cardsToAdd.add(new BloodTax());
         this.cardsToAdd.add(new BlueTearstoneRing());
@@ -935,37 +1087,51 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new DynastFinesse());
         this.cardsToAdd.add(new IceRapier());
         this.cardsToAdd.add(new Darkdrift());
+        this.cardsToAdd.add(new GodslayerGreatsword());
         this.cardsToAdd.add(new ScavengerCurvedSword());
+        this.cardsToAdd.add(new BlindSpot());
         this.cardsToAdd.add(new StormCurvedSword());
         this.cardsToAdd.add(new BladeOfCalling());
         this.cardsToAdd.add(new BewitchingBranch());
+        this.cardsToAdd.add(new Poleblade());
         this.cardsToAdd.add(new cards.duchess.Restage());
         this.cardsToAdd.add(new WaterfowlDance());
         this.cardsToAdd.add(new Mortgage());
         this.cardsToAdd.add(new NoMoney());
         this.cardsToAdd.add(new SlimeMold());
+        this.cardsToAdd.add(new MushroomCrown());
         this.cardsToAdd.add(new SellswordTwinblades());
         this.cardsToAdd.add(new CeruleanburstCrystal());
         this.cardsToAdd.add(new CrystalEnchanted());
+        this.cardsToAdd.add(new EventualGreatness());
         this.cardsToAdd.add(new WindyCrystal());
         this.cardsToAdd.add(new FlowingTechniques());
         this.cardsToAdd.add(new HornetRing());
+        this.cardsToAdd.add(new AssassinGambit());
         this.cardsToAdd.add(new WildStrikes());
         this.cardsToAdd.add(new DancerEnchantedSwords());
+        this.cardsToAdd.add(new Euporia());
         this.cardsToAdd.add(new GoldTracer());
         this.cardsToAdd.add(new DarkSilverTracer());
+        this.cardsToAdd.add(new SwiftSlash());
         this.cardsToAdd.add(new JupiterHeart());
+        this.cardsToAdd.add(new PowerOfTheGreaterWill());
         this.cardsToAdd.add(new ConvenientBundlingStrap());
         this.cardsToAdd.add(new SantierSpear());
         this.cardsToAdd.add(new ChillingMist());
+        this.cardsToAdd.add(new LineOfStars());
         this.cardsToAdd.add(new DarkWoodGrain());
+        this.cardsToAdd.add(new WhiteLightCharge());
+        this.cardsToAdd.add(new DancingBlade());
         this.cardsToAdd.add(new Strike_Executor());
         this.cardsToAdd.add(new Defend_Executor());
         this.cardsToAdd.add(new DestinedDeath());
         this.cardsToAdd.add(new BlackFlame());
         this.cardsToAdd.add(new BlackFlameTornado());
+        this.cardsToAdd.add(new ScarletAeonia());
         this.cardsToAdd.add(new Metastasis());
         this.cardsToAdd.add(new BlackFlameRitual());
+        this.cardsToAdd.add(new BlackFlameBarrier());
         this.cardsToAdd.add(new BlackFlameBlade());
         this.cardsToAdd.add(new LetFeastBegin());
         this.cardsToAdd.add(new PaintWorld());
@@ -983,11 +1149,24 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new BloodboonRitual());
         this.cardsToAdd.add(new BloodhoundFang());
         this.cardsToAdd.add(new ChaosBlade());
+        this.cardsToAdd.add(new InseparableSword());
+        this.cardsToAdd.add(new RagingBeast());
+        this.cardsToAdd.add(new DeathFlare());
+        this.cardsToAdd.add(new SwordOfMilos());
+        this.cardsToAdd.add(new SpinningGuillotine());
+        this.cardsToAdd.add(new GiantHunt());
+        this.cardsToAdd.add(new AlabasterLordsPull());
+        this.cardsToAdd.add(new OnyxLordsRepulsion());
+        this.cardsToAdd.add(new SolderingIron());
+        this.cardsToAdd.add(new SerpentHunter());
+        this.cardsToAdd.add(new NomadicFrenzyflame());
+        this.cardsToAdd.add(new Shackle());
         this.cardsToAdd.add(new Seppuku());
         this.cardsToAdd.add(new PowerOfErdtree());
         this.cardsToAdd.add(new AriandelBlood());
         this.cardsToAdd.add(new OrderBlade());
         this.cardsToAdd.add(new DarkBlood());
+        this.cardsToAdd.add(new DeadlyDance());
         this.cardsToAdd.add(new CrucibleCodex());
         this.cardsToAdd.add(new Expose());
         this.cardsToAdd.add(new FreezingMist());
@@ -998,12 +1177,23 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new PhantomSlash());
         this.cardsToAdd.add(new Invoke());
         this.cardsToAdd.add(new BeastClaw());
+        this.cardsToAdd.add(new ScaleBearingMerchant());
+        this.cardsToAdd.add(new PowerfulWeapon());
+        this.cardsToAdd.add(new WatcherStick());
+        this.cardsToAdd.add(new ResistanceToAilments());
+        this.cardsToAdd.add(new LotOfRunes());
+        this.cardsToAdd.add(new MakeYourChoice());
+        this.cardsToAdd.add(new GreatStrength());
+        this.cardsToAdd.add(new GreatDexterity());
+        this.cardsToAdd.add(new DeepInsight());
         this.cardsToAdd.add(new LeadingStrike());
         this.cardsToAdd.add(new CursedClaws());
         this.cardsToAdd.add(new GhizaWheel());
         this.cardsToAdd.add(new DestitutionAssist());
         this.cardsToAdd.add(new Dirge());
         this.cardsToAdd.add(new Grovewort());
+        this.cardsToAdd.add(new ThankYouGift());
+        this.cardsToAdd.add(new SharedOrder());
         this.cardsToAdd.add(new PumpkinHelm());
         this.cardsToAdd.add(new RepeatingCrossbow());
         this.cardsToAdd.add(new BlackButler());
@@ -1011,7 +1201,9 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new Immolation());
         this.cardsToAdd.add(new Initiative());
         this.cardsToAdd.add(new LightningRam());
+        this.cardsToAdd.add(new MoonStance());
         this.cardsToAdd.add(new VisageShield());
+        this.cardsToAdd.add(new BlasphemousBlade());
         this.cardsToAdd.add(new Seance());
         this.cardsToAdd.add(new Undeath());
         this.cardsToAdd.add(new PowerWithin());
@@ -1020,7 +1212,14 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new IScream());
         this.cardsToAdd.add(new StarlightShards());
         this.cardsToAdd.add(new WantThis());
+        this.cardsToAdd.add(new BudgetTravel());
+        this.cardsToAdd.add(new RancorShot());
+        this.cardsToAdd.add(new RevengerBlade());
+        this.cardsToAdd.add(new GhostflameCall());
         this.cardsToAdd.add(new Climax());
+        this.cardsToAdd.add(new JellyfishShield());
+        this.cardsToAdd.add(new PerfectScore());
+        this.cardsToAdd.add(new MoonlightGreatsword());
         this.cardsToAdd.add(new PowerOfVengeance());
         this.cardsToAdd.add(new SummonAid());
         this.cardsToAdd.add(new RedHairIcon());
@@ -1038,6 +1237,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new AlbinauricBloodclot());
         this.cardsToAdd.add(new GoldenCentipede());
         this.cardsToAdd.add(new WaterHorse());
+        this.cardsToAdd.add(new RollingSparks());
         this.cardsToAdd.add(new AeonianButterfly());
         this.cardsToAdd.add(new TrinaLily());
         this.cardsToAdd.add(new MiquellaLily());
@@ -1047,6 +1247,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new Ergodic());
         this.cardsToAdd.add(new FingerprintStoneShield());
         this.cardsToAdd.add(new DrawstringPot());
+        this.cardsToAdd.add(new ScattershotThrow());
         this.cardsToAdd.add(new RiteOfKindling());
         this.cardsToAdd.add(new AntspurRapier());
         this.cardsToAdd.add(new Tyranny());
@@ -1059,12 +1260,32 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new MiniatureStraghess());
         this.cardsToAdd.add(new Strike_Undertaker());
         this.cardsToAdd.add(new Defend_Undertaker());
+        this.cardsToAdd.add(new Mace());
+        this.cardsToAdd.add(new SpiralhornShield());
         this.cardsToAdd.add(new Denial());
         this.cardsToAdd.add(new Delirium());
         this.cardsToAdd.add(new TransferPayment());
         this.cardsToAdd.add(new DoThis());
         this.cardsToAdd.add(new Purge());
+        this.cardsToAdd.add(new Purification());
+        this.cardsToAdd.add(new SacredPhalanx());
+        this.cardsToAdd.add(new Gravitas());
+        this.cardsToAdd.add(new Filter());
+        this.cardsToAdd.add(new LamentingVisage());
+        this.cardsToAdd.add(new RepeatingThrust());
+        this.cardsToAdd.add(new Confluence());
+        this.cardsToAdd.add(new EochaidDancingBlade());
+        this.cardsToAdd.add(new StarscourgeGreatsword());
+        this.cardsToAdd.add(new SacredRelicSword());
         this.cardsToAdd.add(new Flustered());
+        this.cardsToAdd.add(new RedBearHunt());
+        this.cardsToAdd.add(new Earthshaker());
+        this.cardsToAdd.add(new IronBall());
+        this.cardsToAdd.add(new GoldenParry());
+        this.cardsToAdd.add(new OctopusSlapping());
+        this.cardsToAdd.add(new Slam());
+        this.cardsToAdd.add(new RustedAnchor());
+        this.cardsToAdd.add(new SpinningWeapon());
         this.cardsToAdd.add(new Forgotwww());
         this.cardsToAdd.add(new BorrowedTime());
         this.cardsToAdd.add(new CleaningAndHosting());
@@ -1072,8 +1293,13 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new CounterClockwise());
         this.cardsToAdd.add(new DemonScar());
         this.cardsToAdd.add(new Grant());
+        this.cardsToAdd.add(new YouAreMine());
+        this.cardsToAdd.add(new Blinkbolt());
+        this.cardsToAdd.add(new OverheadStance());
         this.cardsToAdd.add(new PreceptsStrike());
         this.cardsToAdd.add(new OuterBoon());
+        this.cardsToAdd.add(new TheGreatBeyond());
+        this.cardsToAdd.add(new AllKnowingHelm());
         this.cardsToAdd.add(new EyesWithin());
         this.cardsToAdd.add(new GreatSwampTome());
         this.cardsToAdd.add(new ForbiddenSun());
@@ -1083,11 +1309,16 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new Taxes());
         this.cardsToAdd.add(new WhatsUp());
         this.cardsToAdd.add(new Devourer());
+        this.cardsToAdd.add(new WeedCutter());
+        this.cardsToAdd.add(new Darkeater());
         this.cardsToAdd.add(new ChimeOfWant());
         this.cardsToAdd.add(new PrescribedLevy());
+        this.cardsToAdd.add(new PoisonedHand());
         this.cardsToAdd.add(new Sabbath());
         this.cardsToAdd.add(new Deterrence());
         this.cardsToAdd.add(new HowMany());
+        this.cardsToAdd.add(new ImpenetrableThorns());
+        this.cardsToAdd.add(new PowerOfTheLightlessVoid());
         this.cardsToAdd.add(new Stargaze());
         this.cardsToAdd.add(new WantToDrinkThis());
         this.cardsToAdd.add(new SoulAppease());
@@ -1102,7 +1333,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new GlitstonePebble());
         this.cardsToAdd.add(new FallControl());
         this.cardsToAdd.add(new CannonOfHaima());
-        this.cardsToAdd.add(new RockBlaster());
+        this.cardsToAdd.add(new WitchingHour());
         this.cardsToAdd.add(new FarronFlashsword());
         this.cardsToAdd.add(new StarcallerCry());
         this.cardsToAdd.add(new AmbushShard());
@@ -1179,6 +1410,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new DragonPunch());
         this.cardsToAdd.add(new CrucibleToken());
         this.cardsToAdd.add(new LotteryTicket());
+        this.cardsToAdd.add(new MoonlightSettles());
         this.cardsToAdd.add(new MottledPot());
         this.cardsToAdd.add(new CraftmanCreation());
         this.cardsToAdd.add(new MagicEmber());
@@ -1228,6 +1460,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         addERNRelic(new FighterDestined(), AbstractCardEnum.Raider_COLOR);
         addERNRelic(new MagnificentPoise(), AbstractCardEnum.Duchess_COLOR);
         addERNRelic(new IllusoryRing(), AbstractCardEnum.Duchess_COLOR);
+        addERNRelic(new VoiceConduit(), AbstractCardEnum.Duchess_COLOR);
         addERNRelic(new CalamityWard(), AbstractCardEnum.Executor_COLOR);
         addERNRelic(new StarsDice(), AbstractCardEnum.Executor_COLOR);
         addERNRelic(new SeedbedCurse(), AbstractCardEnum.Executor_COLOR);
@@ -1242,10 +1475,15 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         addERNRelic(new BeverageGiveaways(), AbstractCardEnum.Scholar_COLOR);
         addERNRelic(new KleinBottle(), AbstractCardEnum.Scholar_COLOR);
         addERNRelic(new Jar(), AbstractCardEnum.Scholar_COLOR);
+        addERNRelic(new Diplopia(), AbstractCardEnum.Undertaker_COLOR);
         addERNRelic(new Trance(), AbstractCardEnum.Undertaker_COLOR);
         addERNRelic(new PrescientGlintEye(), AbstractCardEnum.Undertaker_COLOR);
         addERNRelic(new LaplaceDemon(), AbstractCardEnum.Undertaker_COLOR);
         addERNRelic(new WhisperingEarring(), AbstractCardEnum.Undertaker_COLOR);
+        addERNRelic(new PerpetualMotionMachine(), AbstractCardEnum.Undertaker_COLOR);
+        addERNRelic(new Brimstone(), AbstractCardEnum.Undertaker_COLOR);
+        addERNRelic(new Decalogue(), AbstractCardEnum.Undertaker_COLOR);
+        addERNRelic(new MirrorMirror(), AbstractCardEnum.Undertaker_COLOR);
     }
 
     private static void addERNRelic(AbstractRelic relic, AbstractCard.CardColor color) {
@@ -1304,6 +1542,10 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
 
     @Override
     public void receivePostPowerApplySubscriber(AbstractPower pow, AbstractCreature target, AbstractCreature owner) {
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(Brimstone.ID)
+                && pow instanceof FaithPower && target == AbstractDungeon.player && pow.amount > 0) {
+            ((Brimstone)AbstractDungeon.player.getRelic(Brimstone.ID)).onFaithGain();
+        }
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(SeedbedCurse.ID)) {
             ((SeedbedCurse)AbstractDungeon.player.getRelic(SeedbedCurse.ID))
                     .onPostPowerApply(pow, target, owner);
@@ -1318,10 +1560,6 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         }
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(PaintWorldPower.POWER_ID)) {
             ((PaintWorldPower)AbstractDungeon.player.getPower(PaintWorldPower.POWER_ID))
-                    .onPostPowerApply(pow, target, owner);
-        }
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(DarkBloodPower.POWER_ID)) {
-            ((DarkBloodPower)AbstractDungeon.player.getPower(DarkBloodPower.POWER_ID))
                     .onPostPowerApply(pow, target, owner);
         }
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(BlendingPower.POWER_ID)) {
@@ -1355,24 +1593,30 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
 
     @Override
     public void receivePostDungeonInitialize() {
+        PlayerDebuffStats.resetCombat();
         BedOfMagic.resetCombat();
         EnemyBattleStartSnapshot.reset();
         GuidanceStats.resetCombat();
         DeadEnemyStats.resetCombat();
         PotionHistory.resetCombat();
         FragrantBranchOfYoreRewards.resetCombat();
+        ExtraCardRewards.resetCombat();
         RandomUsageCounter.endCombat();
         TransformStats.resetCombat();
+        general.SmithingStats.resetCombat();
     }
 
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
+        PlayerDebuffStats.resetCombat();
         GuidanceStats.resetCombat();
         DeadEnemyStats.resetCombat();
         PotionHistory.resetCombat();
         FragrantBranchOfYoreRewards.resetCombat();
+        ExtraCardRewards.resetCombat();
         RandomUsageCounter.resetCombat();
         TransformStats.resetCombat();
+        general.SmithingStats.resetCombat();
     }
 
     @Override
@@ -1381,6 +1625,8 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
     @Override
     public void receiveEditKeywords() {
         if (Settings.language == Settings.GameLanguage.ZHS) {
+            BaseMod.addKeyword("爪牙", new String[] { "爪牙" },
+                    "#y爪牙 会在他们的领导者死亡时放弃战斗。");
             BaseMod.addKeyword("重放", new String[] { "重放" },
                     "打出时，额外打出指定次数。由 #y重放 打出的牌不会再次触发 #y重放 。");
             BaseMod.addKeyword("锦囊", new String[] { "锦囊" },
@@ -1454,9 +1700,9 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
             BaseMod.addKeyword("黑执事", new String[] { "黑执事" },
                     "如果有 #y召唤：塞巴斯蒂安 ，在本回合 #y保留 你的手牌。");
             BaseMod.addKeyword("智力", new String[] { "智力" },
-                    "魔法伤害和魔法 格挡 获得等同于智力层数的额外数值。");
+                    "#y魔法伤害 和 #y魔法 格挡 获得等同于 #y智力 层数的额外数值。");
             BaseMod.addKeyword("魔法", new String[] { "魔法" },
-                    "效果中有“魔法”的卡牌。");
+                    "效果中有“#y魔法”的卡牌。");
             BaseMod.addKeyword("结晶", new String[] { "结晶" },
                     "结晶包括： #y灵魂结晶枪 ， #y结晶卷轴 ， #y结晶环盾 ， #y追踪灵魂结晶块 ， #y崩裂结晶 ， #y重力结晶 。");
             BaseMod.addKeyword("散装", new String[] { "散装" },
@@ -1472,19 +1718,21 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
             BaseMod.addKeyword("完美格挡", new String[] { "完美格挡" },
                     "持续若干回合。如果敌人攻击结束时你有大于等于 #b15 点 #y格挡 ，获得 #b6 点 #y活力 。");
             BaseMod.addKeyword("弹反", new String[] { "弹反" },
-                    "持续若干回合。每当敌人的攻击伤害刚好击破你的格挡时，敌人下回合被 #y击晕 。");
+                    "持续若干回合。每当敌人的攻击伤害刚好击破你的 #y格挡 时，敌人下回合被 #y击晕 。");
+            BaseMod.addKeyword("失衡", new String[] { "失衡" },
+                    "如果该敌人的意图包含攻击，且本次行动的攻击没有使你损失生命，则在下一个敌人回合被 #y击晕 ，原意图顺延。");
             BaseMod.addKeyword("活力", new String[] { "活力" },
                     "你的下一次攻击造成额外伤害。");
             BaseMod.addKeyword("骤死", new String[] { "骤死" },
-                    "回合结束时，如果骤死层数大于等于 #b10 ，会触发即死效果。");
+                    "回合结束时，如果 #y骤死 层数大于等于 #b10 ，会触发即死效果。");
             BaseMod.addKeyword("猩红腐败", new String[] { "猩红腐败" },
                     "在回合开始时，像 #y中毒 一样失去生命并减少层数，但会结算两次。");
             BaseMod.addKeyword("燃命", new String[] { "燃命" },
                     "在回合开始时，像 #y中毒 一样失去生命并减少层数，同时失去等量最大生命。");
             BaseMod.addKeyword("击晕", new String[] { "击晕" },
-                    "敌人跳过当前行动，并在下回合继续原本意图。");
+                    "敌人被 #y击晕 时跳过当前行动，并在下回合继续原本意图。");
             BaseMod.addKeyword("虚血", new String[] { "虚血" },
-                    "每打出一张攻击牌减少1层。在你的回合结束和战斗结束时，失去等同于层数的生命。");
+                    "每打出一张 #y攻击牌 减少1层。在你的回合结束和战斗结束时，失去等同于层数的生命。");
             BaseMod.addKeyword("不屈", new String[] { "不屈" },
                     "阻止受到的生命值损伤，获得等同于生命值损伤数的 #y虚血 层数。");
             BaseMod.addKeyword("不屈+", new String[] { "不屈+" },
@@ -1496,15 +1744,17 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
             BaseMod.addKeyword("灵视", new String[] { "灵视" },
                     "每回合的前若干次随机打出，改为选择一张牌将其免费打出。这次出牌仍视作随机打出。");
             BaseMod.addKeyword("灵力", new String[] { "灵力" },
-                    "幻影牌的所有卡面数字都增加等同于 #y灵力 的数值。");
+                    "幻影牌的卡面数字增加等同于 #y灵力 的数值。幻影塞巴斯蒂安的能量和抽牌数不受影响。");
             BaseMod.addKeyword("信仰", new String[] { "信仰" },
-                    "奇术伤害和奇术 格挡 获得或失去额外数值。");
+                    "#y奇术伤害 和 #y奇术 格挡 获得或失去额外数值。");
             BaseMod.addKeyword("奇术", new String[] { "奇术" },
-                    "效果中有“奇术”的卡牌。");
+                    "效果中有“#y奇术”的卡牌。");
             BaseMod.addKeyword("冻伤", new String[] { "冻伤" },
                     "每有1层 #y冻伤 ，从 #y攻击 受到的伤害增加 #b20% 。回合开始时，将 #y冻伤 层数减少 #b1 。");
             BaseMod.addKeyword("睡眠", new String[] { "睡眠" },
                     "每有1层 #y睡眠 ，相当于失去 #b1 点 #y力量 。回合结束时，将 #y睡眠 层数减少 #b1 。");
+            BaseMod.addKeyword("永眠", new String[] { "永眠" },
+                    "在你的回合开始时，如果敌人生命值全满，失去这个效果，否则回复 #b5% 最大生命，#y击晕 #b1 回合。这个效果在敌人受到生命值损伤时失去。");
             BaseMod.addKeyword("发狂", new String[] { "发狂" },
                     "获得 #b10 层 #y发狂 时，受到 #b10% 最大生命值的伤害。如果是敌人，则额外在当前回合 #y击晕 。");
             BaseMod.addKeyword("出血", new String[] { "出血" },
@@ -1524,6 +1774,8 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
             BaseMod.addKeyword("变化", new String[] { "变化" },
                     "将一张牌替换为同角色的一张随机牌。");
         } else {
+            BaseMod.addKeyword("Minion", new String[] { "minion", "minions" },
+                    "Minions abandon combat without their leader.");
             BaseMod.addKeyword("Replay", new String[] { "replay" },
                     "When played, play this card an additional number of times. Cards played by #yReplay do not trigger #yReplay again.");
             BaseMod.addKeyword("Final Plan", new String[] { "final plan", "finalplan" },
@@ -1614,6 +1866,8 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
                     "Lasts for several turns. If you have at least #b15 #yBlock when enemy attacks finish, gain #b6 #yVigor.");
             BaseMod.addKeyword("Parry", new String[] { "parry" },
                     "Lasts for several turns. Whenever enemy attack damage exactly breaks your Block, the enemy is #yStunned next turn.");
+            BaseMod.addKeyword("Posture Break", new String[] { "posture break" },
+                    "If this enemy has an attack intent and none of its attacks during that action cause you to lose HP, it is #yStunned on its next turn. Its original intent is delayed.");
             BaseMod.addKeyword("Vigor", new String[] { "vigor" },
                     "Your next attack deals additional damage.");
             BaseMod.addKeyword("Deathblight", new String[] { "deathblight" },
@@ -1637,7 +1891,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
             BaseMod.addKeyword("Insight", new String[] { "insight" },
                     "For the first few random plays each turn, choose a card and play it for free instead. This still counts as a random play.");
             BaseMod.addKeyword("Spirit", new String[] { "spirit" },
-                    "All card text numbers on Phantom cards are increased by your #ySpirit.");
+                    "Card text numbers on Phantom cards are increased by your #ySpirit. Phantom Sebastian's Energy and card draw are unaffected.");
             BaseMod.addKeyword("Faith", new String[] { "faith" },
                     "Thaumaturgy damage and Thaumaturgy Block gain or lose additional value.");
             BaseMod.addKeyword("Thaumaturgy", new String[] { "thaumaturgy" },
@@ -1646,6 +1900,8 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
                     "For each stack of #yFrostbite, take #b20% more damage from #yAttacks. At the start of turn, reduce #yFrostbite by #b1.");
             BaseMod.addKeyword("Sleep", new String[] { "sleep" },
                     "For each stack of #ySleep, this is equivalent to losing #b1 #yStrength. At the end of turn, reduce #ySleep by #b1.");
+            BaseMod.addKeyword("Eternal Sleep", new String[] { "eternal sleep" },
+                    "At the start of this enemy's turn, remove this effect if it is at full HP. Otherwise, it heals #b5% of its max HP (rounded up) and is stunned for #b1 turn. Removed when the enemy loses HP.");
             BaseMod.addKeyword("Madness", new String[] { "madness" },
                     "When you gain #b10 #yMadness, take damage equal to #b10% of your Max HP. If this is an enemy, it is also #yStunned this turn.");
             BaseMod.addKeyword("Bloodloss", new String[] { "bloodloss" },
@@ -1670,7 +1926,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
         GuidanceStats.recordCardUse(abstractCard);
-        if (BedOfMagic.ID.equals(abstractCard.cardID)) {
+        if (BedOfMagic.ID.equals(general.SmithingBody.behavior(abstractCard).cardID)) {
             return;
         }
         BedOfMagic.recordPlayedCard(abstractCard);
@@ -1678,12 +1934,14 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
 
     @Override
     public void receivePostBattle(AbstractRoom r) {
+        PlayerDebuffStats.resetCombat();
         BedOfMagic.resetCombat();
         EnemyBattleStartSnapshot.reset();
         DeadEnemyStats.resetCombat();
         PotionHistory.resetCombat();
         RandomUsageCounter.endCombat();
         TransformStats.resetCombat();
+        general.SmithingStats.resetCombat();
         removeBulkPotions();
     }
 

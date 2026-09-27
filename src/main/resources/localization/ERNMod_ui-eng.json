@@ -1,4 +1,14 @@
 {
+  "Decalogue": {
+    "TEXT": [
+      "Choose cards to retain this turn."
+    ]
+  },
+  "OrderPotion": {
+    "TEXT": [
+      "Choose cards to discard."
+    ]
+  },
   "SeekGuidance": {
     "TEXT": [
       "Come back to explore the area ahead after Intelligence reaches 9.",

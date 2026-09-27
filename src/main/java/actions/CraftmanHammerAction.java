@@ -122,7 +122,7 @@ public class CraftmanHammerAction extends AbstractGameAction {
         CraftmanCreation creation = createForgedCard(this.selectedMaterial, selectedBody);
         this.player.hand.removeCard(this.selectedMaterial);
         this.player.hand.removeCard(selectedBody);
-        addToTop(new MakeTempCardInHandAction(creation, 1));
+        addToTop(new MakeTempCardInHandAction(creation, true, true));
         MasterworkPower.onSmithing(this.player);
         this.player.hand.refreshHandLayout();
     }
@@ -146,6 +146,9 @@ public class CraftmanHammerAction extends AbstractGameAction {
         }
 
         CraftmanCreation result = new CraftmanCreation(infusion, body, reinforcement);
+        if (selectedBody instanceof CraftmanCreation) {
+            for (int i = 0; i < Math.max(selectedBody.timesUpgraded, selectedBody.upgraded ? 1 : 0); i++) result.upgrade();
+        }
         InsuranceField.inherit(result, selectedBody);
         return result;
     }

@@ -20,6 +20,7 @@ public class SinBriars extends CustomCard {
     private static final int BLOCK = 15;
     private static final int UPGRADE_PLUS_BLOCK = 5;
     private static final int BLOODLOSS = 1;
+    private static final int UPGRADE_PLUS_BLOODLOSS = 1;
 
     public SinBriars() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
@@ -50,6 +51,7 @@ public class SinBriars extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeMagicNumber(UPGRADE_PLUS_BLOODLOSS);
         }
     }
 }

@@ -2,6 +2,8 @@ package characters;
 
 import basemod.abstracts.CustomPlayer;
 import cards.undertaker.Defend_Undertaker;
+import cards.undertaker.Mace;
+import cards.undertaker.SpiralhornShield;
 import cards.undertaker.Strike_Undertaker;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -11,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import ernmod.ERNMod;
@@ -67,6 +70,8 @@ public class Undertaker extends CustomPlayer {
         retVal.add(Defend_Undertaker.ID);
         retVal.add(Defend_Undertaker.ID);
         retVal.add(Defend_Undertaker.ID);
+        retVal.add(Mace.ID);
+        retVal.add(SpiralhornShield.ID);
         return retVal;
     }
 
@@ -80,7 +85,9 @@ public class Undertaker extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
-                Settings.language == Settings.GameLanguage.ZHS ? "引导亡者的庄严渡夜者。" : "A solemn Nightfarer who guides the fallen.",
+                Settings.language == Settings.GameLanguage.ZHS
+                        ? "信奉力量与序的修女，上帝掷骰子与否在一念之间。 NL 祷告时总在思考吃什么，不喜欢吃手指饼干。"
+                        : "A nun who puts her faith in strength and order; whether God plays dice hinges on a single thought. NL She always thinks about what to eat while praying and dislikes ladyfinger biscuits.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
@@ -168,6 +175,6 @@ public class Undertaker extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return null;
+        return Vampires.DESCRIPTIONS[1];
     }
 }

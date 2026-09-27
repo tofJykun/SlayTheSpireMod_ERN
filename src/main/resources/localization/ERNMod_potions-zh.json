@@ -133,5 +133,27 @@
     "DESCRIPTIONS": [
       "在本场战斗中，药水的效果翻倍。"
     ]
+  },
+  "InsightPotion": {
+    "NAME": "灵视药水",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      " 点 #y灵视 。"
+    ]
+  },
+  "OrderPotion": {
+    "NAME": "列序药水",
+    "DESCRIPTIONS": [
+      "抽 #b",
+      " 张牌，丢弃 #b",
+      " 张牌。"
+    ]
+  },
+  "SeafoodFeast": {
+    "NAME": "海鲜大餐",
+    "DESCRIPTIONS": [
+      "依次打出当前手牌最右边的牌，进行 #b",
+      " 次。"
+    ]
   }
 }

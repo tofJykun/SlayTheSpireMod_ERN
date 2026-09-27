@@ -19,7 +19,7 @@ public class MagicKinship extends CustomCard {
 
     public MagicKinship() {
         super(ID, CARD_STRINGS.NAME, IMG_PATH, COST, CARD_STRINGS.DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.Recluse_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.SELF);
         this.cardsToPreview = new BedOfMagic();
     }
 

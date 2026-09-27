@@ -33,7 +33,7 @@ public class BedOfMagicDoublePower extends AbstractPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && BedOfMagic.ID.equals(card.cardID) && this.amount > 0) {
+        if (!card.purgeOnUse && BedOfMagic.ID.equals(general.SmithingBody.behavior(card).cardID) && this.amount > 0) {
             flash();
             AbstractMonster m = null;
             if (action.target != null) {

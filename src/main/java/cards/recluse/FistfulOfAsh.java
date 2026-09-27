@@ -2,7 +2,6 @@ package cards.recluse;
 
 import actions.FistfulOfAshAction;
 import basemod.abstracts.CustomCard;
-import cards.status.MagicEmber;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,14 +13,13 @@ public class FistfulOfAsh extends CustomCard {
     public static final String ID = "FistfulOfAsh";
     private static final String IMG_PATH = "img/cards/recluse/FistfulOfAsh.png";
     private static final int COST = 1;
-    private static final int BLOCK_PER_EMBER = 3;
+    private static final int BLOCK_PER_STATUS = 3;
     private static final int UPGRADE_PLUS_BLOCK = 2;
 
     public FistfulOfAsh() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Recluse_COLOR, CardRarity.COMMON, CardTarget.SELF);
-        this.baseBlock = BLOCK_PER_EMBER;
-        this.cardsToPreview = new MagicEmber();
+        this.baseMagicNumber = this.magicNumber = BLOCK_PER_STATUS;
     }
 
     private static CardStrings getCardStrings() {
@@ -30,7 +28,7 @@ public class FistfulOfAsh extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new FistfulOfAshAction(p, p, this.block));
+        addToBot(new FistfulOfAshAction(p, p, this.magicNumber));
     }
 
     @Override
@@ -42,7 +40,7 @@ public class FistfulOfAsh extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeMagicNumber(UPGRADE_PLUS_BLOCK);
         }
     }
 }

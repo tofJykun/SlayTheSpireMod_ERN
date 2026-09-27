@@ -48,7 +48,7 @@ public class SoulBolt extends CustomCard {
             if (newCost < 0) {
                 newCost = 0;
             }
-            if (ID.equals(card.cardID)) {
+            if (ID.equals(general.SmithingBody.behavior(card).cardID)) {
                 newCost++;
             }
         }
@@ -60,7 +60,7 @@ public class SoulBolt extends CustomCard {
         if (card.type == CardType.POWER) {
             changeCostForCombat(-1);
         }
-        if (ID.equals(card.cardID)) {
+        if (ID.equals(general.SmithingBody.behavior(card).cardID)) {
             changeCostForCombat(1);
         }
     }

@@ -16,11 +16,11 @@ import patches.AbstractCardEnum;
 public class DarkSilverTracer extends AbstractScheduledCard {
     public static final String ID = "DarkSilverTracer";
     private static final String IMG_PATH = "img/cards/duchess/DarkSilverTracer.png";
-    private static final int COST = 2;
+    private static final int COST = 3;
     private static final int DAMAGE = 6;
-    private static final int ENERGY = 1;
+    private static final int ENERGY = 2;
     private static final int UPGRADE_PLUS_ENERGY = 1;
-    private static final int DEFAULT_SCHEDULED = 5;
+    private static final int DEFAULT_SCHEDULED = 4;
     private int energyGain = ENERGY;
 
     public DarkSilverTracer() {

@@ -1,10 +1,9 @@
 package powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -32,14 +31,25 @@ public class DarkBloodPower extends AbstractPower {
         updateDescription();
     }
 
-    public void onPostPowerApply(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power == null || target == null || source != this.owner || target.isPlayer
-                || power.type != PowerType.DEBUFF || power.amount <= 0 || target.isDeadOrEscaped()) {
-            return;
-        }
-
+    @Override
+    public void atStartOfTurn() {
         flash();
-        addToBot((AbstractGameAction)new GainBlockAction(this.owner, this.amount, Settings.FAST_MODE));
+        AbstractPower aberration;
+        switch (AbstractDungeon.cardRandomRng.random(3)) {
+            case 0:
+                aberration = new FrostbitePower(this.owner, this.amount);
+                break;
+            case 1:
+                aberration = new SleepPower(this.owner, this.amount);
+                break;
+            case 2:
+                aberration = new MadnessPower(this.owner, this.amount);
+                break;
+            default:
+                aberration = new BloodlossPower(this.owner, this.amount);
+                break;
+        }
+        addToBot(new ApplyPowerAction(this.owner, this.owner, aberration, this.amount));
     }
 
     @Override

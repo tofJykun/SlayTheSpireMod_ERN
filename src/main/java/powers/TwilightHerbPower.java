@@ -1,13 +1,12 @@
 package powers;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -38,15 +37,17 @@ public class TwilightHerbPower extends AbstractPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.STATUS && this.amount > 0) {
+        if (card != null && card.type == AbstractCard.CardType.STATUS && this.amount > 0) {
             flash();
-            addToBot((AbstractGameAction)new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.amount));
+            addToBot(new GainEnergyAction(this.amount));
         }
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        addToBot((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        if (isPlayer) {
+            addToBot((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
     }
 
     @Override

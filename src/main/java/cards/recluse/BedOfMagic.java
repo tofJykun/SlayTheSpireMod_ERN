@@ -98,7 +98,7 @@ public class BedOfMagic extends CustomCard {
             }
         }
         playedThisTurn = true;
-        recordCurrentBedIfMissing(this);
+        recordCurrentBedIfMissing(general.SmithingBody.physical(this));
     }
 
     @Override
@@ -333,7 +333,7 @@ public class BedOfMagic extends CustomCard {
     }
 
     private static void refreshGroup(com.megacrit.cardcrawl.cards.CardGroup group) {
-        for (AbstractCard card : group.group) {
+        for (AbstractCard card : general.SmithingBody.behaviorCards(group)) {
             if (card instanceof BedOfMagic) {
                 ((BedOfMagic)card).updateBedCost();
                 ((BedOfMagic)card).updateDynamicDescription();

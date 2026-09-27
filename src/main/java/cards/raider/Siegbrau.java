@@ -21,7 +21,7 @@ public class Siegbrau extends CustomCard {
     public static final String ID = "Siegbrau";
     private static final String IMG_PATH = "img/cards/raider/Siegbrau.png";
     private static final int COST = 1;
-    private static final int REDUCTION = 6;
+    private static final int REDUCTION = 9;
     private static final int UPGRADE_PLUS_REDUCTION = 3;
 
     public Siegbrau() {

@@ -18,8 +18,8 @@ public class TheGnawling extends CustomCard {
     public static final String ID = "TheGnawling";
     private static final String IMG_PATH = "img/cards/recluse/TheGnawling.png";
     private static final int COST = 2;
-    private static final int ATTACK_DMG = 9;
-    private static final int UPGRADE_PLUS_DMG = 6;
+    private static final int ATTACK_DMG = 12;
+    private static final int UPGRADE_PLUS_DMG = 8;
     private static final int BASE_INTELLIGENCE = 1;
 
     public TheGnawling() {

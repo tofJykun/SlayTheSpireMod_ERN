@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 public class SlumberingDragoncrestPower extends AbstractPower {
     public static final String POWER_ID = "SlumberingDragoncrestPower";
@@ -48,29 +47,29 @@ public class SlumberingDragoncrestPower extends AbstractPower {
 
         flash();
         if (this.affectsAllEnemies) {
-            applyWeakToAllEnemies();
+            applySleepToAllEnemies();
         } else {
-            applyWeakToRandomEnemy();
+            applySleepToRandomEnemy();
         }
     }
 
-    private void applyWeakToRandomEnemy() {
+    private void applySleepToRandomEnemy() {
         AbstractMonster monster = AbstractDungeon.getMonsters().getRandomMonster(null, true,
                 AbstractDungeon.cardRandomRng);
         if (monster != null) {
             addToBot((AbstractGameAction)new ApplyPowerAction(monster, this.owner,
-                    new WeakPower(monster, this.amount, false), this.amount, true,
+                    new SleepPower(monster, this.amount), this.amount, true,
                     AbstractGameAction.AttackEffect.NONE));
         }
     }
 
-    private void applyWeakToAllEnemies() {
+    private void applySleepToAllEnemies() {
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             if (monster == null || monster.isDeadOrEscaped()) {
                 continue;
             }
             addToBot((AbstractGameAction)new ApplyPowerAction(monster, this.owner,
-                    new WeakPower(monster, this.amount, false), this.amount, true,
+                    new SleepPower(monster, this.amount), this.amount, true,
                     AbstractGameAction.AttackEffect.NONE));
         }
     }

@@ -26,6 +26,7 @@ public class TakeoutBoxPackageAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        if (this.isDone) return;
         if (this.duration == Settings.ACTION_DUR_FAST) {
             if (this.player == null || this.box == null || this.cardsToPackage <= 0 || this.player.hand.isEmpty()) {
                 this.isDone = true;
@@ -66,4 +67,5 @@ public class TakeoutBoxPackageAction extends AbstractGameAction {
 
         tickDuration();
     }
+
 }

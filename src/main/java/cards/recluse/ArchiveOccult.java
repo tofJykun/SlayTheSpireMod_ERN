@@ -19,7 +19,7 @@ public class ArchiveOccult extends CustomCard {
     private static final String IMG_PATH = "img/cards/recluse/ArchiveOccult.png";
     private static final int COST = 2;
     private static final int BLOCK = 20;
-    private static final int UPGRADE_PLUS_BLOCK = 6;
+    private static final int UPGRADE_PLUS_BLOCK = 10;
 
     public ArchiveOccult() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

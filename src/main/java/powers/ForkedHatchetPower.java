@@ -23,7 +23,7 @@ public class ForkedHatchetPower extends AbstractPower {
         this.owner = owner;
         this.amount = 1;
         this.type = PowerType.BUFF;
-        this.trackedCard = trackedCard;
+        this.trackedCard = general.SmithingBody.physical(trackedCard);
         PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }

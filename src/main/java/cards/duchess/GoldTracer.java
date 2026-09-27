@@ -16,11 +16,11 @@ import patches.AbstractCardEnum;
 public class GoldTracer extends AbstractScheduledCard {
     public static final String ID = "GoldTracer";
     private static final String IMG_PATH = "img/cards/duchess/GoldTracer.png";
-    private static final int COST = 2;
+    private static final int COST = 3;
     private static final int DAMAGE = 12;
-    private static final int DRAW = 1;
+    private static final int DRAW = 2;
     private static final int UPGRADE_PLUS_DRAW = 1;
-    private static final int DEFAULT_SCHEDULED = 5;
+    private static final int DEFAULT_SCHEDULED = 4;
 
     public GoldTracer() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

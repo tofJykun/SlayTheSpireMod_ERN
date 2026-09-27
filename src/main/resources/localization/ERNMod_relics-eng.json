@@ -314,6 +314,13 @@
       "The first #yAttack card you play each combat deals #b2 times damage."
     ]
   },
+  "Diplopia": {
+    "NAME": "Diplopia",
+    "FLAVOR": "Undertaker's character skill.",
+    "DESCRIPTIONS": [
+      "The #b1st #yAttack card you play each turn deals #b2 times damage."
+    ]
+  },
   "SacredTimber": {
     "NAME": "Sacred Timber",
     "FLAVOR": "A silent wooden relic, cold as stone.",
@@ -343,6 +350,34 @@
       "At the start of each turn, gain [E] . The first targeted card each turn is played randomly."
     ]
   },
+  "PerpetualMotionMachine": {
+    "NAME": "Perpetual Motion Machine",
+    "FLAVOR": "As long as it moves, it will never stop.",
+    "DESCRIPTIONS": [
+      "The first time you discard each turn, draw #b2 cards."
+    ]
+  },
+  "ERN_Brimstone": {
+    "NAME": "Brimstone",
+    "FLAVOR": "Burn faith into strength.",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yFaith , gain #b1 #yStrength ."
+    ]
+  },
+  "Decalogue": {
+    "NAME": "Decalogue",
+    "FLAVOR": "When less is more, the rest may be kept.",
+    "DESCRIPTIONS": [
+      "If you play no more than #b1 card in a turn, you may #yRetain any number of cards that turn."
+    ]
+  },
+  "MirrorMirror": {
+    "NAME": "Mirror Mirror",
+    "FLAVOR": "The order in the mirror runs opposite to reality.",
+    "DESCRIPTIONS": [
+      "Cards you draw during your turn are placed on the left side of your hand in sequence."
+    ]
+  },
   "Bloodletting": {
     "NAME": "Bloodletting",
     "FLAVOR": "Burn away the old, and a little of the blood debt with it.",
@@ -357,6 +392,11 @@
     "DESCRIPTIONS": [
       "The first #yAttack you play each combat returns to your hand after it is played."
     ]
+  },
+  "VoiceConduit": {
+    "NAME": "Voice Conduit",
+    "FLAVOR": "A distant voice grants a moment of peace on the road ahead.",
+    "DESCRIPTIONS": ["The next #b", " #y? rooms you enter cannot contain regular enemy encounters. Heal #b", " HP when entering each of them."]
   },
   "LargeEmber": {
     "NAME": "Large Ember",

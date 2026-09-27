@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import ernmod.ERNMod;
@@ -84,7 +85,9 @@ public class Recluse extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
-                Settings.language == Settings.GameLanguage.ZHS ? "幽邃森林的女巫之一。 NL 能够熟练使用各种法术。" : "One of the witches of the deep forest, NL and is able to deftly cast all manner of spells.",
+                Settings.language == Settings.GameLanguage.ZHS
+                        ? "擅长用混合魔法应对不同情况的深林魔女。 NL 雍容来自惊人的年龄的沉淀。"
+                        : "A witch of the deep forest, adept at using blended magic to meet any situation. NL Her poise is the product of an astonishing number of years.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
@@ -172,6 +175,6 @@ public class Recluse extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return null;
+        return Vampires.DESCRIPTIONS[1];
     }
 }

@@ -133,5 +133,27 @@
     "DESCRIPTIONS": [
       "For this combat, potion effects are doubled."
     ]
+  },
+  "InsightPotion": {
+    "NAME": "Insight Potion",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yInsight."
+    ]
+  },
+  "OrderPotion": {
+    "NAME": "Order Potion",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " cards, discard #b",
+      " cards."
+    ]
+  },
+  "SeafoodFeast": {
+    "NAME": "Seafood Feast",
+    "DESCRIPTIONS": [
+      "Play the rightmost card in your hand sequentially #b",
+      " times."
+    ]
   }
 }

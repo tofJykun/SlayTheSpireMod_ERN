@@ -17,7 +17,7 @@ public class ChillingMist extends CustomCard {
     public static final String ID = "ChillingMist";
     private static final String IMG_PATH = "img/cards/duchess/ChillingMist.png";
     private static final int COST = 0;
-    private static final int FROSTBITE = 2;
+    private static final int FROSTBITE = 3;
     private static final int UPGRADE_PLUS_FROSTBITE = 1;
 
     public ChillingMist() {

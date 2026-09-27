@@ -1,9 +1,9 @@
 package cards.undertaker;
 
 import basemod.abstracts.CustomCard;
+import actions.GainGoldWithAnimationAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -33,7 +33,7 @@ public class ChimeOfWant extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot((AbstractGameAction)new ExhaustAction(1, true, false, false));
-        addToBot((AbstractGameAction)new GainGoldAction(this.magicNumber));
+        addToBot((AbstractGameAction)new GainGoldWithAnimationAction(this.magicNumber));
     }
 
     @Override

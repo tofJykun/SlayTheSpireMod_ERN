@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import patches.AbstractCardEnum;
 import patches.ReplayField;
 
@@ -20,15 +21,15 @@ public class ScavengerCurvedSword extends CustomCard {
     private static final String IMG_PATH = "img/cards/duchess/ScavengerCurvedSword.png";
     private static final int COST = 1;
     private static final int DAMAGE = 3;
-    private static final int VULNERABLE = 1;
-    private static final int UPGRADE_PLUS_VULNERABLE = 1;
+    private static final int DEBUFF_AMOUNT = 1;
+    private static final int UPGRADE_PLUS_DAMAGE = 3;
     private static final int REPLAY = 1;
 
     public ScavengerCurvedSword() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.Duchess_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
-        this.baseMagicNumber = VULNERABLE;
+        this.baseMagicNumber = DEBUFF_AMOUNT;
         this.magicNumber = this.baseMagicNumber;
         ReplayField.setReplay(this, REPLAY);
     }
@@ -47,6 +48,8 @@ public class ScavengerCurvedSword extends CustomCard {
                 AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p,
                 new VulnerablePower((AbstractCreature)m, this.magicNumber, false), this.magicNumber));
+        addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p,
+                new WeakPower((AbstractCreature)m, this.magicNumber, false), this.magicNumber));
     }
 
     @Override
@@ -58,7 +61,7 @@ public class ScavengerCurvedSword extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_VULNERABLE);
+            upgradeDamage(UPGRADE_PLUS_DAMAGE);
         }
     }
 }

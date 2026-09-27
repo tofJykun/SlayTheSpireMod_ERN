@@ -1,4 +1,14 @@
 {
+  "Decalogue": {
+    "TEXT": [
+      "选择本回合保留的牌。"
+    ]
+  },
+  "OrderPotion": {
+    "TEXT": [
+      "选择要丢弃的牌。"
+    ]
+  },
   "SeekGuidance": {
     "TEXT": [
       "前面的区域等智力达到9再来探索吧",

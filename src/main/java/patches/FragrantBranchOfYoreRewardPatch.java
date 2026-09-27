@@ -17,11 +17,13 @@ import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
 import com.megacrit.cardcrawl.screens.CombatRewardScreen;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import general.ExtraCardRewards;
 import general.FragrantBranchOfYoreRewards;
 import general.RelicRewardHelper;
 import powers.RustedGoldCoinPower;
 import powers.SilverPickledFowlFootPower;
 import powers.DowsingRodPower;
+import powers.PerfectScorePower;
 import relics.CovetousGoldSerpentRing;
 
 import java.util.ArrayList;
@@ -34,7 +36,7 @@ public class FragrantBranchOfYoreRewardPatch {
         @SpirePostfixPatch
         public static void postfix(CombatRewardScreen __instance) {
             AbstractRoom room = AbstractDungeon.getCurrRoom();
-            int count = FragrantBranchOfYoreRewards.consume();
+            int count = FragrantBranchOfYoreRewards.consume() + ExtraCardRewards.consume();
             if (count <= 0 || !(room instanceof MonsterRoom) || AbstractDungeon.player == null) {
                 if (!(room instanceof MonsterRoom) || AbstractDungeon.player == null) {
                     return;
@@ -48,12 +50,13 @@ public class FragrantBranchOfYoreRewardPatch {
                 count++;
             }
             int rareRewardCount = shouldAddDowsingRodRareReward() ? 1 : 0;
+            boolean perfectScoreReward = shouldAddPerfectScoreReward(__instance, room);
             boolean addedRelicReward = false;
             if (shouldAddRustedGoldCoinRelicReward(room)) {
                 __instance.rewards.add(new RewardItem(RelicRewardHelper.returnRandomEliteDropRelic()));
                 addedRelicReward = true;
             }
-            if (count <= 0 && rareRewardCount <= 0) {
+            if (count <= 0 && rareRewardCount <= 0 && !perfectScoreReward) {
                 if (addedRelicReward) {
                     __instance.positionRewards();
                 }
@@ -69,6 +72,12 @@ public class FragrantBranchOfYoreRewardPatch {
             }
             for (int i = 0; i < rareRewardCount; i++) {
                 RewardItem reward = createRareCardReward();
+                if (reward.cards != null && reward.cards.size() > 0) {
+                    __instance.rewards.add(reward);
+                }
+            }
+            if (perfectScoreReward) {
+                RewardItem reward = createPerfectScoreReward();
                 if (reward.cards != null && reward.cards.size() > 0) {
                     __instance.rewards.add(reward);
                 }
@@ -117,6 +126,23 @@ public class FragrantBranchOfYoreRewardPatch {
         return true;
     }
 
+    private static boolean shouldAddPerfectScoreReward(CombatRewardScreen screen, AbstractRoom room) {
+        if (AbstractDungeon.player == null || !(room instanceof MonsterRoom)
+                || !AbstractDungeon.player.hasPower(PerfectScorePower.POWER_ID)) {
+            return false;
+        }
+        for (RewardItem reward : screen.rewards) {
+            if (reward.type == RewardItem.RewardType.CARD) {
+                AbstractPower power = AbstractDungeon.player.getPower(PerfectScorePower.POWER_ID);
+                if (power != null) {
+                    power.flash();
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
     private static boolean shouldAddRustedGoldCoinRelicReward(AbstractRoom room) {
         if (!isNormalMonsterRoom(room) || AbstractDungeon.player == null
                 || !AbstractDungeon.player.hasPower(RustedGoldCoinPower.POWER_ID)) {
@@ -143,6 +169,22 @@ public class FragrantBranchOfYoreRewardPatch {
         reward.cards = getRareRewardCards();
         reward.text = RewardItem.TEXT[2];
         ReflectionHacks.setPrivate(reward, RewardItem.class, "isBoss", true);
+        return reward;
+    }
+
+    private static RewardItem createPerfectScoreReward() {
+        RewardItem reward = new RewardItem();
+        if (reward.cards == null) {
+            return reward;
+        }
+        for (AbstractCard card : reward.cards) {
+            if (card.canUpgrade()) {
+                card.upgrade();
+            }
+            for (AbstractRelic relic : AbstractDungeon.player.relics) {
+                relic.onPreviewObtainCard(card);
+            }
+        }
         return reward;
     }
 

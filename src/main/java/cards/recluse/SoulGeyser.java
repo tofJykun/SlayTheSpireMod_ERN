@@ -53,7 +53,7 @@ public class SoulGeyser extends CustomCard {
         }
 
         int end = AbstractDungeon.actionManager.cardsPlayedThisCombat.size();
-        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(end - 1) == this) {
+        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(end - 1) == general.SmithingBody.physical(this)) {
             end--;
         }
         if (end < SKILL_COUNT) {

@@ -1,8 +1,10 @@
 package variables;
 
 import basemod.abstracts.DynamicVariable;
+import cards.ironeye.PoisonMarking;
 import cards.scholar.TranquilWalkOfPeace;
 import cards.tempcards.CrucibleToken;
+import cards.undertaker.Blinkbolt;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class CrucibleTokenPoisonVariable extends DynamicVariable {
@@ -18,6 +20,12 @@ public class CrucibleTokenPoisonVariable extends DynamicVariable {
 
     @Override
     public int value(AbstractCard card) {
+        if (card instanceof Blinkbolt) {
+            return ((Blinkbolt)card).getDrawPerEnemy();
+        }
+        if (card instanceof PoisonMarking) {
+            return ((PoisonMarking)card).getPoison();
+        }
         if (card instanceof TranquilWalkOfPeace) {
             return ((TranquilWalkOfPeace)card).strength;
         }
@@ -26,6 +34,12 @@ public class CrucibleTokenPoisonVariable extends DynamicVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
+        if (card instanceof Blinkbolt) {
+            return ((Blinkbolt)card).getDrawPerEnemy();
+        }
+        if (card instanceof PoisonMarking) {
+            return ((PoisonMarking)card).getPoison();
+        }
         if (card instanceof TranquilWalkOfPeace) {
             return ((TranquilWalkOfPeace)card).baseStrength;
         }
@@ -34,6 +48,6 @@ public class CrucibleTokenPoisonVariable extends DynamicVariable {
 
     @Override
     public boolean upgraded(AbstractCard card) {
-        return false;
+        return card instanceof PoisonMarking && card.upgraded;
     }
 }

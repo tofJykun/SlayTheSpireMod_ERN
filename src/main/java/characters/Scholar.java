@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import ernmod.ERNMod;
@@ -82,7 +83,9 @@ public class Scholar extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
-                Settings.language == Settings.GameLanguage.ZHS ? "分析战场并寻找破绽的学者。" : "A calculating Nightfarer who studies the battlefield.",
+                Settings.language == Settings.GameLanguage.ZHS
+                        ? "炼药技术高明的白金之子。 NL 常备各种零食在战场旁神秘观察。"
+                        : "An Albinauric adept at brewing potions. NL Always carrying an assortment of snacks, he observes the battlefield from the sidelines with an air of mystery.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
@@ -170,6 +173,6 @@ public class Scholar extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return null;
+        return Vampires.DESCRIPTIONS[0];
     }
 }

@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import ernmod.ERNMod;
@@ -84,7 +85,9 @@ public class Raider extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
-                Settings.language == Settings.GameLanguage.ZHS ? "擅长正面战斗的力量型渡夜者。" : "A powerful Nightfarer who thrives in direct combat.",
+                Settings.language == Settings.GameLanguage.ZHS
+                        ? "精通锻造技术的豪爽海盗，坚信进攻是最好的防守。 NL 曾是地下室的铁匠，喜欢吃洋葱。"
+                        : "A hearty pirate and master smith who firmly believes that offense is the best defense. NL Once a blacksmith in a basement, he enjoys eating onions.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
@@ -172,6 +175,6 @@ public class Raider extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return null;
+        return Vampires.DESCRIPTIONS[0];
     }
 }

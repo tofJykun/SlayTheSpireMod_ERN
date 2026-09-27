@@ -30,6 +30,7 @@ public class MasterworkPower extends AbstractPower {
         if (player == null) {
             return;
         }
+        general.SmithingStats.recordSmithing();
         AbstractPower power = player.getPower(POWER_ID);
         if (power instanceof MasterworkPower) {
             ((MasterworkPower)power).triggerSmithing();

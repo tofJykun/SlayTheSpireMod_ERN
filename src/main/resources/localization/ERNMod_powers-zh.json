@@ -1,16 +1,32 @@
 {
+  "DeadlyDancePower": {
+    "NAME": "灾厄之舞",
+    "DESCRIPTIONS": ["每当你对一名敌人造成负面 #y状态 ，获得 #b", " 点 #y格挡 。"]
+  },
+  "SovereigntyPower": {
+    "NAME": "尊矣",
+    "DESCRIPTIONS": ["你在回合结束时不再自动丢弃所有手牌。"]
+  },
+  "EternalSleepPower": {
+    "NAME": "永眠",
+    "DESCRIPTIONS": ["在你的回合开始时，如果敌人生命值全满，失去这个效果，否则回复 #b5% 最大生命，#y击晕 #b1 回合。这个效果在敌人受到生命值损伤时失去。"]
+  },
+  "BudgetTravelPower": {
+    "NAME": "穷游",
+    "DESCRIPTIONS": ["下回合开始时少获得 #b", " [E] 。随后移除此效果。"]
+  },
   "ElementalDefensePower": {
     "NAME": "驾驭元素",
     "DESCRIPTIONS": [
-      " 魔法 卡牌耗能降低 #b",
+      " #y魔法 卡牌耗能降低 #b",
       " 。"
     ]
   },
   "IntelligencePower": {
     "NAME": "智力",
     "DESCRIPTIONS": [
-      "魔法伤害和魔法 格挡 获得 #b",
-      "魔法伤害和魔法 格挡 失去 #b",
+      "#y魔法伤害 和 #y魔法 #y格挡 获得 #b",
+      "#y魔法伤害 和 #y魔法 #y格挡 失去 #b",
       " 点额外数值。"
     ]
   },
@@ -18,14 +34,14 @@
     "NAME": "临时智力",
     "DESCRIPTIONS": [
       "回合结束时失去 #b",
-      " 点 智力 。"
+      " 点 #y智力 。"
     ]
   },
   "FaithPower": {
     "NAME": "信仰",
     "DESCRIPTIONS": [
-      "奇术伤害和奇术 格挡 获得 #b",
-      "奇术伤害和奇术 格挡 失去 #b",
+      "#y奇术 伤害 和 #y奇术 格挡 获得 #b",
+      "#y奇术 伤害 和 #y奇术 格挡 失去 #b",
       " 点额外数值。"
     ]
   },
@@ -33,7 +49,7 @@
     "NAME": "临时信仰",
     "DESCRIPTIONS": [
       "回合结束时失去 #b",
-      " 点 信仰 。"
+      " 点 #y信仰 。"
     ]
   },
   "ArcanePower": {
@@ -47,9 +63,9 @@
     "NAME": "恩惠露滴",
     "DESCRIPTIONS": [
       "在你的回合开始时，失去 #b",
-      " 层 虚血 。",
+      " 层 #y虚血 。",
       "在你的回合开始时，失去 #b",
-      " 层 虚血+ 。"
+      " 层 #y虚血+ 。"
     ]
   },
   "CatarinaRoundMoonPower": {
@@ -61,7 +77,7 @@
   "VordtGreatHammerPower": {
     "NAME": "玻尔多大锤",
     "DESCRIPTIONS": [
-      "直到你的下一回合开始，每当你受到一次未被格挡的伤害，下一回合获得 #b",
+      "直到你的下一回合开始，每当你受到一次未被 #y格挡 的伤害，下一回合获得 #b",
       " 点 [E] 。被 #y不屈 或 #y不屈+ 转为 #y虚血 或 #y虚血+ 的伤害同样计数。"
     ]
   },
@@ -69,9 +85,9 @@
     "NAME": "巨型棍棒",
     "DESCRIPTIONS": [
       "你的下一回合开始时，失去 #b",
-      " 层 虚血 。",
+      " 层 #y虚血 。",
       "你的下一回合开始时，失去 #b",
-      " 层 虚血+ 。"
+      " 层 #y虚血+ 。"
     ]
   },
   "StaggerPower": {
@@ -86,16 +102,16 @@
   "MasterworkPower": {
     "NAME": "心血之作",
     "DESCRIPTIONS": [
-      "每当你 锻造 时，失去 #b",
-      " 层 虚血 。",
-      "每当你 锻造 时，失去 #b",
-      " 层 虚血+ 。"
+      "每当你 #y锻造 时，失去 #b",
+      " 层 #y虚血 。",
+      "每当你 #y锻造 时，失去 #b",
+      " 层 #y虚血+ 。"
     ]
   },
   "LoyaltyCardPower": {
     "NAME": "积分卡",
     "DESCRIPTIONS": [
-      "每当你失去 代币 时，获得相同数量的 格挡 。"
+      "每当你失去 #y代币 时，获得相同数量的 #y格挡 。"
     ]
   },
   "VirtualCurrencyPower": {
@@ -118,7 +134,7 @@
     "NAME": "控制坠落",
     "DESCRIPTIONS": [
       "在你的回合结束时，获得 #b",
-      " 点 智力 。"
+      " 点 #y智力 。"
     ]
   },
   "SoarPower": {
@@ -126,7 +142,7 @@
     "DESCRIPTIONS": [
       "将所受到的下 #b",
       " 次伤害降低50%。",
-      " NL 每当你受到未被格挡的攻击伤害时，层数-1。"
+      " NL 每当你受到未被 #y格挡 的攻击伤害时，层数-1。"
     ]
   },
   "DeathblightPower": {
@@ -152,11 +168,18 @@
       "在这个回合结束时，对所有敌人造成 #b%d 点伤害。"
     ]
   },
+  "EarthshakerPower": {
+    "NAME": "撼地",
+    "DESCRIPTIONS": [
+      "#b%d 回合结束后，对所有敌人造成 #b%d 点伤害。",
+      "在这个回合结束时，对所有敌人造成 #b%d 点伤害。"
+    ]
+  },
   "CrystalScrapPower": {
     "NAME": "崩裂结晶",
     "DESCRIPTIONS": [
-      "在下一回合结束时，随机对敌人造成 #b%d 点魔法伤害 #b%d 次。",
-      "在这个回合结束时，随机对敌人造成 #b%d 点魔法伤害 #b%d 次。"
+      "在下一回合结束时，随机对敌人造成 #b%d 点 #y魔法伤害 #b%d 次。",
+      "在这个回合结束时，随机对敌人造成 #b%d 点 #y魔法伤害 #b%d 次。"
     ]
   },
   "BedOfMagicCostReductionPower": {
@@ -171,7 +194,7 @@
   "BedOfMagicPowerTriggerPower": {
     "NAME": "魔法温床",
     "DESCRIPTIONS": [
-      "本回合下 #b 张能力牌打出时，抽1张牌并增加1张 *魔法余烬 到手牌。",
+      "本回合下 #b 张 #y能力牌 打出时，抽1张牌并增加1张 *魔法余烬 到手牌。",
       ""
     ]
   },
@@ -186,21 +209,21 @@
     "NAME": "隐形身躯",
     "DESCRIPTIONS": [
       "下1回合开始时，给予所有敌人 #b",
-      " 层虚弱。"
+      " 层 #y虚弱 。"
     ]
   },
   "NextTurnIntelligencePower": {
     "NAME": "法术力场",
     "DESCRIPTIONS": [
       "下1回合开始时，获得 #b",
-      " 点临时智力。"
+      " 点临时 #y智力 。"
     ]
   },
   "NextTurnIntangiblePower": {
     "NAME": "下回合无实体",
     "DESCRIPTIONS": [
       "下1回合开始时，获得 #b",
-      " 层 无实体 。"
+      " 层 #y无实体 。"
     ]
   },
   "ReignitedCinderPower": {
@@ -214,7 +237,7 @@
     "NAME": "晓暗草",
     "DESCRIPTIONS": [
       "这个回合内，每当你打出1张状态牌，获得 #b",
-      " 格挡 。"
+      " 点 [E] 。"
     ]
   },
   "HoverPower": {
@@ -223,6 +246,27 @@
       "将所受到的下 #b",
       " 次伤害降低50%。",
       " NL 每当你受到攻击伤害时，层数-1。在层数大于等于10且小于15时，获得 #y高空 。在层数大于等于15时，获得 #y深空 。"
+    ]
+  },
+  "MantleOfThornsPower": {
+    "NAME": "棘刺上身",
+    "DESCRIPTIONS": [
+      "每当你获得 #y振翼 时，获得 #b",
+      " 层 #y荆棘 。"
+    ]
+  },
+  "PostureBreakPower": {
+    "NAME": "失衡",
+    "DESCRIPTIONS": [
+      "如果该敌人的意图包含攻击，且本次行动的攻击没有使你损失生命，则在下一个敌人回合被 #y击晕 ，原意图顺延。"
+    ]
+  },
+  "ConfluencePower": {
+    "NAME": "感知力量",
+    "DESCRIPTIONS": [
+      "本回合已打出 #b",
+      " 张耗能大于等于 #b",
+      " 的牌。"
     ]
   },
   "LoftyPower": {
@@ -244,10 +288,24 @@
       "% 额外伤害。）"
     ]
   },
+  "TheBirdsPower": {
+    "NAME": "群鸟",
+    "DESCRIPTIONS": [
+      "你每打出一张牌，对随机一名敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
   "GowerRingOfProtectionPower": {
     "NAME": "戈达守护戒指",
     "DESCRIPTIONS": [
       "你受到的伤害降低 #b50% 。每回合开始时少获得 #b1 [E] 。"
+    ]
+  },
+  "DeterminationPower": {
+    "NAME": "决心",
+    "DESCRIPTIONS": [
+      "本回合内，你受到敌人单次攻击的伤害上限为 #b",
+      "。"
     ]
   },
   "TotemStelaPower": {
@@ -260,7 +318,7 @@
     "NAME": "风暴将至",
     "DESCRIPTIONS": [
       "你的下 #b",
-      " 次 振翼 层数清零时，在下一回合无法打出牌。"
+      " 次 #y振翼 层数清零时，在下一回合无法打出牌。"
     ]
   },
   "CallLightningPower": {
@@ -299,28 +357,28 @@
     "DESCRIPTIONS": [
       "持续 #b",
       " 回合。如果敌人攻击结束时你有大于等于 #b15 点 #y格挡 ，获得 #b",
-      " 点活力。"
+      " 点 #y活力 。"
     ]
   },
   "BarricadeShieldPower": {
     "NAME": "铁壁盾防",
     "DESCRIPTIONS": [
-      "在 完美格挡 时，给予攻击者 #b",
-      " 层 削韧 。"
+      "在 #y完美格挡 时，给予攻击者 #b",
+      " 层 #y削韧 。"
     ]
   },
   "ParryPower": {
     "NAME": "弹反",
     "DESCRIPTIONS": [
       "持续 #b",
-      " 回合。每当敌人的攻击伤害刚好击破你的格挡时，敌人1回合后被 击晕 。"
+      " 回合。每当敌人的攻击伤害刚好击破你的 #y格挡 时，敌人1回合后被 #y击晕 。"
     ]
   },
   "CeruleanDaggerPower": {
     "NAME": "染蓝凶刀",
     "DESCRIPTIONS": [
-      "成功 弹反 时，下一回合获得 [E] [E] 。",
-      "成功 弹反 时，下一回合获得 [E] [E] ，多抽 #b2 张牌。"
+      "成功 #y弹反 时，下一回合获得 [E] [E] 。",
+      "成功 #y弹反 时，下一回合获得 [E] [E] ，多抽 #b2 张牌。"
     ]
   },
   "CeruleanwhorlBubblePower": {
@@ -361,13 +419,13 @@
   "DelayedStunPower": {
     "NAME": "弹反",
     "DESCRIPTIONS": [
-      "该敌人在下回合会被 击晕 。"
+      "该敌人在下回合会被 #y击晕 。"
     ]
   },
   "StunPower": {
     "NAME": "击晕",
     "DESCRIPTIONS": [
-      "该敌人被击晕 #b",
+      "该敌人被 #y击晕 #b",
       " 回合。当前意图顺延。"
     ]
   },
@@ -375,15 +433,15 @@
     "NAME": "钩爪射击",
     "DESCRIPTIONS": [
       "在你的回合结束时，获得 #b",
-      " 点 敏捷 。"
+      " 点 #y敏捷 。"
     ]
   },
   "TransientCursePower": {
     "NAME": "暂时诅咒",
     "DESCRIPTIONS": [
       "在你的回合结束时，获得 #b",
-      " 点 敏捷 ，失去 #b",
-      " 点 力量 。"
+      " 点 #y敏捷 ，失去 #b",
+      " 点 #y力量 。"
     ]
   },
   "UnyieldingPower": {
@@ -434,7 +492,7 @@
     "NAME": "猩红腐败",
     "DESCRIPTIONS": [
       "在回合开始时，失去 #b",
-      " 点生命两次，每次失去1层 猩红腐败 。",
+      " 点生命两次，每次失去1层 #y猩红腐败 。",
       "在回合开始时，该敌人失去 #b"
     ]
   },
@@ -442,28 +500,49 @@
     "NAME": "燃命",
     "DESCRIPTIONS": [
       "在回合开始时，失去 #b",
-      " 点生命和等量最大生命，并失去1层 燃命 。",
+      " 点生命和等量最大生命，并失去1层 #y燃命 。",
       "在回合开始时，该敌人失去 #b"
     ]
   },
   "BlackFlameRitualPower": {
     "NAME": "黑焰仪式",
     "DESCRIPTIONS": [
+      "每当敌人失去生命时，给予其失去生命值 #b",
+      " 倍层数的 #y燃命 。"
+    ]
+  },
+  "BlackFlameBarrierPower": {
+    "NAME": "黑焰屏障",
+    "DESCRIPTIONS": [
       "每当你受到1次攻击时，给予攻击者 #b",
-      " 层 燃命 。"
+      " 层 #y燃命 。"
+    ]
+  },
+  "CarianPiercerPower": {
+    "NAME": "卡利亚式奉还",
+    "DESCRIPTIONS": [
+      "直到你的下个回合开始，每当你受到一次攻击，增加 #b",
+      " 张 #y消逝源辉石 到你的手牌。",
+      " 张 #y消逝源辉石+ 到你的手牌。"
     ]
   },
   "SinBriarsPower": {
     "NAME": "罪恶荆棘",
     "DESCRIPTIONS": [
       "每当你受到1次攻击时，给予攻击者 #b",
-      " 层 出血 。"
+      " 层 #y出血 。"
     ]
   },
   "ImmolationPower": {
     "NAME": "焚身火",
     "DESCRIPTIONS": [
-      "你受到攻击时，如果有 #y召唤 ，攻击者失去相当于被格挡的伤害点生命。"
+      "你受到攻击时，如果有 #y召唤 ，攻击者失去相当于被 #y格挡 的伤害点生命。"
+    ]
+  },
+  "CrystalRingShieldPower": {
+    "NAME": "结晶环盾",
+    "DESCRIPTIONS": [
+      "你受到攻击时，攻击者失去相当于被 #y格挡 的伤害点生命。"
     ]
   },
   "GhostflameIgnitionPower": {
@@ -483,22 +562,39 @@
   "FingerprintStoneShieldPower": {
     "NAME": "指纹石盾",
     "DESCRIPTIONS": [
-      "每当你受到1次攻击时，给予攻击者 #b",
-      " 层 发狂 。"
+      "在本回合内，每当你打出 #y技能牌 时，你打出的下一张 #y攻击牌 耗能变为 #b0 。"
     ]
   },
   "BloodSigilPower": {
     "NAME": "鲜血烙印",
     "DESCRIPTIONS": [
       "每当该敌人受到攻击时，你获得 #b",
-      " 点格挡。"
+      " 点 #y格挡 。"
+    ]
+  },
+  "MarkingPower": {
+    "NAME": "标记",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，如果本回合受到大于等于 #b",
+      " 点伤害（包括被 #y格挡 的伤害），失去 #b",
+      " 点生命。 NL 本回合已受到 #b",
+      " 点伤害。"
+    ]
+  },
+  "PoisonMarkingPower": {
+    "NAME": "毒性标记",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，如果本回合受到大于等于 #b",
+      " 点伤害（包括被 #y格挡 的伤害），获得 #b",
+      " 层 #y中毒 。 NL 本回合已受到 #b",
+      " 点伤害。"
     ]
   },
   "BladeOfCallingPower": {
     "NAME": "使命短刀",
     "DESCRIPTIONS": [
-      "每当该敌人受到未被格挡的伤害时，给予其 #b",
-      " 层 燃命 。"
+      "每当该敌人受到未被 #y格挡 的伤害时，给予其 #b",
+      " 层 #y燃命 。"
     ]
   },
   "BloodSigilRecoveryPower": {
@@ -511,21 +607,21 @@
   "BlackFlameBladePower": {
     "NAME": "黑焰刀刃",
     "DESCRIPTIONS": [
-      "每当你的攻击造成未被格挡的伤害时，给予 #b",
-      " 层 燃命 。"
+      "每当你的攻击造成未被 #y格挡 的伤害时，给予 #b",
+      " 层 #y燃命 。"
     ]
   },
   "DarkBloodPower": {
     "NAME": "黑暗之血",
     "DESCRIPTIONS": [
-      "每当你对一名敌人造成负面 状态 时，获得 #b",
-      " 点 格挡 。"
+      "在你的回合开始时，给予自己 #b",
+      " 层随机 #y异变 。"
     ]
   },
   "SoulbloodSongPower": {
     "NAME": "血魂歌",
     "DESCRIPTIONS": [
-      "本回合每当你造成未被格挡的伤害时，获得等量 格挡 。"
+      "本回合每当你造成未被格挡的伤害时，获得等量 #y格挡 。"
     ]
   },
   "WarmingStonePower": {
@@ -533,14 +629,14 @@
     "DESCRIPTIONS": [
       "在你的下 #b",
       " 个回合开始时，获得 #b",
-      " 点 活力 。"
+      " 点 #y活力 。"
     ]
   },
   "TyrannyPower": {
     "NAME": "暴政",
     "DESCRIPTIONS": [
       "在你的回合开始时，抽 #b",
-      " 张牌， 消耗 #b",
+      " 张牌， #y消耗 #b",
       " 张手牌。"
     ]
   },
@@ -554,8 +650,8 @@
   "OuterBoonPower": {
     "NAME": "外神恩惠",
     "DESCRIPTIONS": [
-      "每当你随机打出1张牌，获得 [E] 。",
-      "每当你随机打出1张牌，获得 #b",
+      "每当你随机打出或随机丢弃1张牌，获得 [E] 。",
+      "每当你随机打出或随机丢弃1张牌，获得 #b",
       " 点费用。"
     ]
   },
@@ -563,102 +659,102 @@
     "NAME": "狂热",
     "DESCRIPTIONS": [
       "每当你随机打出1张牌，获得 #b",
-      " 点 信仰 。"
+      " 点 #y信仰 。"
     ]
   },
   "InsightPower": {
     "NAME": "灵视",
     "DESCRIPTIONS": [
       "你在每回合的前 #b",
-      " 次随机打出、随机弃牌或随机消耗，改为由你选择。其中随机打出仍视作随机打出。",
+      " 次随机打出、随机弃牌或随机 #y消耗 ，改为由你选择。其中随机打出仍视作随机打出。",
       "选择1张牌将其免费打出。",
       "选择1张牌丢弃。",
-      "选择1张牌消耗。"
+      "选择1张牌 #y消耗 。"
     ]
   },
   "SummonHelen": {
     "NAME": "召唤：海伦",
     "DESCRIPTIONS": [
       "获得 #b",
-      " 点格挡。 NL 将1张 ",
-      " 加入你的手牌。 NL 在你的格挡消失时消散。"
+      " 点 #y格挡 。 NL 将1张 ",
+      " 加入你的手牌。 NL 在你的 #y格挡 消失时消散。"
     ]
   },
   "SummonFrederick": {
     "NAME": "召唤：弗雷德利克",
     "DESCRIPTIONS": [
       "获得 #b",
-      " 点格挡。 NL 将1张 ",
-      " 加入你的手牌。 NL 在你的格挡消失时消散。"
+      " 点 #y格挡 。 NL 将1张 ",
+      " 加入你的手牌。 NL 在你的 #y格挡 消失时消散。"
     ]
   },
   "SummonSebastian": {
     "NAME": "召唤：塞巴斯蒂安",
     "DESCRIPTIONS": [
       "获得 #b",
-      " 点格挡。 NL 将1张 ",
-      " 加入你的手牌。 NL 在你的格挡消失时消散。"
+      " 点 #y格挡 。 NL 将1张 ",
+      " 加入你的手牌。 NL 在你的 #y格挡 消失时消散。"
     ]
   },
   "SummonDoggo": {
     "NAME": "召唤：大狗",
     "DESCRIPTIONS": [
       "获得 #b",
-      " 点格挡。 NL 将1张 ",
-      " 加入你的手牌。 NL 在你的格挡消失时消散。"
+      " 点 #y格挡 。 NL 将1张 ",
+      " 加入你的手牌。 NL 在你的 #y格挡 消失时消散。"
     ]
   },
   "SummonAsimi": {
     "NAME": "召唤：安诗糸",
     "DESCRIPTIONS": [
       "获得 #b",
-      " 点格挡。 NL 将1张 ",
-      " 加入你的手牌。 NL 在你的格挡消失时消散。"
+      " 点 #y格挡 。 NL 将1张 ",
+      " 加入你的手牌。 NL 在你的 #y格挡 消失时消散。"
     ]
   },
   "AsimiEchoPower": {
     "NAME": "安诗糸",
     "DESCRIPTIONS": [
-      "在本回合内，如果有 召唤：安诗糸 ，你打出的牌会被额外打出1次。"
+      "在本回合内，如果有 #y召唤：安诗糸 ，你打出的牌会被额外打出1次。"
     ]
   },
   "PumpkinHelmPower": {
     "NAME": "南瓜头盔",
     "DESCRIPTIONS": [
-      "如果有 召唤：弗雷德利克 ， 格挡 不再在你的回合开始时消失。"
+      "如果有 #y召唤：弗雷德利克 ， #y格挡 不再在你的回合开始时消失。"
     ]
   },
   "RepeatingCrossbowPower": {
     "NAME": "连射弩",
     "DESCRIPTIONS": [
-      "如果有 召唤：海伦 ，打出的 *幻影海伦 会额外打出2次。"
+      "如果有 #y召唤：海伦 ，打出的 *幻影海伦 会额外打出2次。"
     ]
   },
   "BlackButlerPower": {
     "NAME": "黑执事",
     "DESCRIPTIONS": [
-      "如果有 召唤：塞巴斯蒂安 ，在本回合 保留 你的手牌。"
+      "如果有 #y召唤：塞巴斯蒂安 ，在本回合 #y保留 你的手牌。"
     ]
   },
   "UndeathPower": {
     "NAME": "不死",
     "DESCRIPTIONS": [
-      "在你的回合开始时，至多保留 #b",
-      " 点 格挡 。"
+      "在你的回合开始时，至多 #y保留 #b",
+      " 点 #y格挡 。"
     ]
   },
   "SpiritPower": {
     "NAME": "灵力",
     "DESCRIPTIONS": [
-      "幻影牌的所有卡面数字增加 #b",
-      "。"
+      "幻影牌的卡面数字增加 #b",
+      "。幻影塞巴斯蒂安的能量和抽牌数不受影响。"
     ]
   },
   "FadingSpiritPower": {
     "NAME": "临时灵力",
     "DESCRIPTIONS": [
       "在回合结束时失去 #b",
-      " 点 灵力 。"
+      " 点 #y灵力 。"
     ]
   },
   "FrostbitePower": {
@@ -708,8 +804,8 @@
   "LingeringDragoncrestPower": {
     "NAME": "伫立龙徽",
     "DESCRIPTIONS": [
-      "每当你获得 智力 时，抽1张牌。",
-      "每当你获得 智力 时，抽 #b",
+      "每当你获得 #y智力 时，抽1张牌。",
+      "每当你获得 #y智力 时，抽 #b",
       " 张牌。"
     ]
   },
@@ -737,6 +833,14 @@
       " 点 #y敏捷 。"
     ]
   },
+  "EventualGreatnessPower": {
+    "NAME": "大器晚成",
+    "DESCRIPTIONS": [
+      "你每在同一回合内打出 #b",
+      " 张牌，在该回合内获得 #b1 点 #y力量 和 #b1 点 #y敏捷 。 NL 当前计数：#b",
+      "。"
+    ]
+  },
   "WindyCrystalPower": {
     "NAME": "风结晶",
     "DESCRIPTIONS": [
@@ -747,38 +851,38 @@
   "BellowingDragoncrestPower": {
     "NAME": "狂吼龙徽",
     "DESCRIPTIONS": [
-      "每当你获得 智力 时，随机对敌人造成 #b",
-      " 点伤害。"
+      "每当你获得 #y智力 时，额外在本回合获得 #b",
+      " 点 #y智力 。"
     ]
   },
   "SlumberingDragoncrestPower": {
     "NAME": "沉眠龙徽",
     "DESCRIPTIONS": [
-      "每当你获得 智力 时，随机给予敌人 #b",
-      " 层 虚弱 。",
-      "每当你获得 智力 时，给予所有敌人 #b",
-      " 层 虚弱 。"
+      "每当你获得 #y智力 时，随机给予敌人 #b",
+      " 层 #y睡眠 。",
+      "每当你获得 #y智力 时，给予所有敌人 #b",
+      " 层 #y睡眠 。"
     ]
   },
   "ImpatientBallPower": {
     "NAME": "魔偶，不耐烦了",
     "DESCRIPTIONS": [
       "在每回合开始时，失去 #b",
-      " 点 灵力 。"
+      " 点 #y灵力 。"
     ]
   },
   "SoulVesselPower": {
     "NAME": "灵魂容器",
     "DESCRIPTIONS": [
       "每当你打出一张能力牌，获得 #b",
-      " 点 格挡 。"
+      " 点 #y格挡 。"
     ]
   },
   "DuskHerbDewPower": {
     "NAME": "黄昏草露",
     "DESCRIPTIONS": [
       "每当你打出1张能力牌或状态牌，获得 #b",
-      " 点 格挡 。"
+      " 点 #y格挡 。"
     ]
   },
   "IctarusPower": {
@@ -864,6 +968,10 @@
         "在你的回合开始时，抽牌直到将手牌抽满，并且本回合不能再抽牌。"
       ]
     },
+    "RingedKnightStraightSwordPower": {
+      "NAME": "环印骑士直剑",
+      "DESCRIPTIONS": ["你打出下一张牌后，获得 #b", " 点能量。"]
+    },
     "WarmthPower": {
       "NAME": "温暖的火",
       "DESCRIPTIONS": [
@@ -877,6 +985,14 @@
       " 倍，并且无法看见卡牌描述。"
     ]
   },
+  "JellyfishShieldPower": {
+    "NAME": "水母盾",
+    "DESCRIPTIONS": ["本回合内你的所有攻击造成 #b", "% 额外伤害。"]
+  },
+  "PerfectScorePower": {
+    "NAME": "满分考卷",
+    "DESCRIPTIONS": ["敌人多掉落一组升级过的卡牌奖励；失去生命时消失。"]
+  },
   "ClimaxPower": {
     "NAME": "亢奋",
     "DESCRIPTIONS": [
@@ -887,7 +1003,7 @@
   "GlintstoneCrownPower": {
     "NAME": "辉石头罩",
     "DESCRIPTIONS": [
-      "魔法卡牌额外造成 #b",
+      "#y魔法 卡牌额外造成 #b",
       "% 伤害。"
     ]
   },
@@ -909,16 +1025,22 @@
       "你打出的下1张 #y攻击牌 会造成双倍伤害。"
     ]
   },
+  "DiplopiaPower": {
+    "NAME": "复眼",
+    "DESCRIPTIONS": [
+      "你本回合打出的第1张 #y攻击牌 会造成双倍伤害。"
+    ]
+  },
   "CollectAffinityPower": {
     "NAME": "收集属性",
     "DESCRIPTIONS": [
-      "在你的回合结束时，保留非虚无的状态牌。"
+      "在你的回合结束时，#y保留 非#y虚无 的 #y状态牌 。"
     ]
   },
   "DarkWoodGrainPower": {
     "NAME": "暗沉木纹",
     "DESCRIPTIONS": [
-      "每当你重置 定时 大于等于3的牌，将这张牌的计数减少 #b",
+      "每当你重置 #y定时 大于等于3的牌，将这张牌的计数减少 #b",
       " 。 NL 最小减少到 #b2 。"
     ]
   },
@@ -948,7 +1070,7 @@
     "NAME": "礼拜日",
     "DESCRIPTIONS": [
       "你每打出一张耗能大于等于 #b2 的牌，获得 #b",
-      " 点 格挡 。"
+      " 点 #y格挡 。"
     ]
   },
   "DeterrencePower": {
@@ -1045,13 +1167,13 @@
   "BloodrosePower": {
     "NAME": "血蔷薇",
     "DESCRIPTIONS": [
-      "给予2层 出血 。"
+      "给予2层 #y出血 。"
     ]
   },
   "RowaFruitPower": {
     "NAME": "罗亚果实",
     "DESCRIPTIONS": [
-      " 消耗 一张手牌，抽1张牌。"
+      " #y消耗 一张手牌，抽1张牌。"
     ]
   },
   "EyeOfYeloughPower": {
@@ -1070,19 +1192,19 @@
   "EarthSeekerPower": {
     "NAME": "追地者",
     "DESCRIPTIONS": [
-      "在你的回合开始时，自动打出消耗牌堆中的追地者。"
+      "在你的回合开始时，自动打出 #y消耗牌堆 中的追地者。"
     ]
   },
   "GravelStonePower": {
     "NAME": "碎石",
     "DESCRIPTIONS": [
-      "给予3层 削韧 。"
+      "给予3层 #y削韧 。"
     ]
   },
   "AlbinauricBloodclotPower": {
     "NAME": "白金凝血",
     "DESCRIPTIONS": [
-      "回复5生命。 NL 获得5层 虚血 。"
+      "回复5生命。 NL 获得5层 #y虚血 。"
     ]
   },
   "GoldenCentipedePower": {
@@ -1094,25 +1216,25 @@
   "AeonianButterflyPower": {
     "NAME": "艾奥尼亚蝶",
     "DESCRIPTIONS": [
-      "给予7层 猩红腐败 。"
+      "给予7层 #y猩红腐败 。"
     ]
   },
   "TrinaLilyPower": {
     "NAME": "托莉娜睡莲",
     "DESCRIPTIONS": [
-      "给予2层 睡眠 。"
+      "给予2层 #y睡眠 。"
     ]
   },
   "MiquellaLilyPower": {
     "NAME": "米凯拉睡莲",
     "DESCRIPTIONS": [
-      "敌人在本回合内失去99点 力量 。"
+      "敌人在本回合内失去99点 #y力量 。"
     ]
   },
   "NascentButterflyPower": {
     "NAME": "蜕生蝶",
     "DESCRIPTIONS": [
-      "获得1层 人工制品 。"
+      "获得1层 #y人工制品 。"
     ]
   },
   "SacramentalBudPower": {
@@ -1124,19 +1246,26 @@
   "ArteriaLeafPower": {
     "NAME": "亚缇莉亚叶",
     "DESCRIPTIONS": [
-      "在本回合内获得6点 力量。"
+      "在本回合内获得6点 #y力量 。"
     ]
   },
   "PotentateCookbookPower": {
     "NAME": "维壶笔记",
     "DESCRIPTIONS": [
-      "斑斓壶不会 消耗 。"
+      "斑斓壶不会 #y消耗 。"
     ]
   },
   "DrawstringPotPower": {
     "NAME": "附绳壶",
     "DESCRIPTIONS": [
-      "在你的回合结束时，保留非虚无的 药材 牌。"
+      "在你的回合结束时，#y保留 非#y虚无 的 #y药材 牌。"
+    ]
+  },
+  "ScattershotThrowPower": {
+    "NAME": "多重投掷",
+    "DESCRIPTIONS": [
+      "你使用的下一瓶药水会打出 #b",
+      " 次。瓶中精灵和长生不老药的额外使用不会产生效果。"
     ]
   },
   "LoseStrengthAtEndOfTurnPower": {
@@ -1163,6 +1292,10 @@
     "DESCRIPTIONS": [
       "你不能打出 #y技能牌 。 NL 你打出的 #y攻击牌 会被打出两次。"
     ]
+  },
+  "DancingBladePower": {
+    "NAME": "舞蹈剑",
+    "DESCRIPTIONS": ["你下一张手动打出的牌必须是 #y技能牌 。自动打出的牌不受限制。打出下一张牌后移除此效果。"]
   },
   "PowerOfHouseMaraisPower": {
     "NAME": "玛雷家的庇佑",
@@ -1199,6 +1332,14 @@
       " 张素材牌。"
     ]
   },
+  "OverheadStancePower": {
+    "NAME": "大上段",
+    "DESCRIPTIONS": ["你打出的下一张 #y攻击牌 每次命中都会额外给予被攻击者这张牌耗能 #b", " 倍的 #y削韧 。"]
+  },
+  "PalmBlastPower": {
+    "NAME": "发劲",
+    "DESCRIPTIONS": ["在本回合内，你每打出一张 #y攻击牌 ，在下一回合多抽 #b", " 张牌。"]
+  },
   "DuelistFurledFingerPower": {
     "NAME": "斗士勾指",
     "DESCRIPTIONS": [
@@ -1210,7 +1351,7 @@
     "NAME": "打铁箱",
     "DESCRIPTIONS": [
       "在你的回合开始时，增加 #b",
-      " 张虚无且消耗的 *名匠铁锤到你的手牌。"
+      " 张 #y虚无 且 #y消耗 的 *名匠铁锤到你的手牌。"
     ]
   },
   "SpinningSlashPower": {
@@ -1262,6 +1403,13 @@
       " 。"
     ]
   },
+  "MushroomCrownPower": {
+    "NAME": "蘑菇王冠",
+    "DESCRIPTIONS": [
+      "本回合内，你每打出一张牌，获得 #b",
+      " 次 #y蘑菇 。"
+    ]
+  },
   "DestitutionAssistPower": {
     "NAME": "穷途之助",
     "DESCRIPTIONS": [
@@ -1272,8 +1420,23 @@
   "PowerOfVengeancePower": {
     "NAME": "复仇的庇佑",
     "DESCRIPTIONS": [
-      "在你的回合开始时，将 #y格挡 变化到 #b",
+      "在你的回合开始时，将 #y格挡 #y变化 到 #b",
       " 。斩杀会永久增加数值，失去生命会永久降低数值。"
+    ]
+  },
+  "GrandeurPower": {
+    "NAME": "伟哉",
+    "DESCRIPTIONS": [
+      "在你的回合开始时获得 [E] 。",
+      "在你的回合开始时获得 #b",
+      " 点 [E] 。"
+    ]
+  },
+  "AssaultPower": {
+    "NAME": "强攻",
+    "DESCRIPTIONS": [
+      "你每在同一回合内打出 #b3 张 #y攻击牌，获得 #b",
+      " 点 #y活力 。"
     ]
   },
   "AbyssSealPower": {
@@ -1296,6 +1459,30 @@
     "DESCRIPTIONS": [
       "#b",
       " 回合后，你会失去 #b99999 点生命。"
+    ]
+  },
+  "YoungWhiteBranchPower": {
+    "NAME": "嫩白树枝",
+    "DESCRIPTIONS": ["你的下一回合开始时，#y击晕 随机敌人1回合。", "你的下一回合开始时，#y击晕 所有敌人1回合。"]
+  },
+  "ResistanceToAilmentsPower": {
+    "NAME": "异常状态的抵抗力",
+    "DESCRIPTIONS": ["每回合开始时少获得1 [E] 。"]
+  },
+  "SpinningWeaponPower": {
+    "NAME": "转啊转",
+    "DESCRIPTIONS": ["下一次当你丢弃牌时，获得 #b", " 点 #y格挡 。"]
+  },
+  "AllKnowingHelmPower": {
+    "NAME": "百智头盔",
+    "DESCRIPTIONS": ["本回合内，你打出的下 #b", " 张牌耗能变为 #b0 。需要指定敌人的牌随机选择目标。"]
+  },
+  "FilterPower": {
+    "NAME": "筛选",
+    "DESCRIPTIONS": [
+      "在你的下一个回合抽 #b",
+      " 张牌，然后选择丢弃 #b",
+      " 张牌。"
     ]
   }
 }

@@ -210,14 +210,16 @@ public final class SmithingHelper {
 
     public static AbstractCard effectiveBodyCard(AbstractCard body, AbstractCard reinforcementMaterial,
                                                  boolean craftmanCreationUpgraded) {
+        return effectiveBodyCard(body, reinforcementMaterial, craftmanCreationUpgraded ? 1 : 0);
+    }
+
+    public static AbstractCard effectiveBodyCard(AbstractCard body, AbstractCard reinforcementMaterial,
+                                                 int craftmanCreationUpgrades) {
         if (body == null) {
             return null;
         }
         AbstractCard effective = copyForSmithing(body);
-        int upgradeCount = 0;
-        if (craftmanCreationUpgraded) {
-            upgradeCount++;
-        }
+        int upgradeCount = Math.max(0, craftmanCreationUpgrades);
         if (upgradesBodyCard(reinforcementMaterial)) {
             upgradeCount++;
         }
@@ -346,14 +348,16 @@ public final class SmithingHelper {
     }
 
     public static AbstractCard getSmithingSourceCard(AbstractCard fallbackCard) {
-        return activeCraftmanCreation == null ? fallbackCard : activeCraftmanCreation;
+        if (activeCraftmanCreation != null) return activeCraftmanCreation;
+        AbstractCard physical = SmithingBody.physical(fallbackCard);
+        return physical;
     }
 
     public static AbstractCard copyForSmithing(AbstractCard card) {
         if (card == null) {
             return null;
         }
-        AbstractCard copy = card.makeStatEquivalentCopy();
+        AbstractCard copy = SmithingBody.copy(card);
         copy.costForTurn = copy.cost;
         copy.isCostModifiedForTurn = false;
         copy.freeToPlayOnce = false;
