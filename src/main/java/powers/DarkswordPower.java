@@ -58,9 +58,13 @@ public class DarkswordPower extends AbstractPower {
 
     @Override
     public void onRemove() {
-        DarkswordDescriptionPatch.suppress(true);
-        refreshCombatCardDescriptions();
-        DarkswordDescriptionPatch.suppress(false);
+        DarkswordDescriptionPatch.restoreDescriptions();
+    }
+
+    @Override
+    public void onVictory() {
+        // Victory can occur before the end-of-turn removal action runs.
+        DarkswordDescriptionPatch.restoreDescriptions();
     }
 
     @Override

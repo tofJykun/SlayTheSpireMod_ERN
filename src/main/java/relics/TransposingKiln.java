@@ -14,7 +14,7 @@ public class TransposingKiln extends CustomRelic {
 
     public TransposingKiln() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
-                RelicTier.UNCOMMON, AbstractRelic.LandingSound.FLAT);
+                RelicTier.BOSS, AbstractRelic.LandingSound.FLAT);
     }
 
     @Override

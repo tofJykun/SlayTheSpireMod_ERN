@@ -18,9 +18,9 @@ public class FumeUltraGreatsword extends CustomCard {
     private static final String IMG_PATH = "img/cards/wylder/FumeUltraGreatsword.png";
     private static final int COST = 2;
     private static final int DAMAGE = 15;
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 10;
     private static final int UPGRADE_PLUS_DMG = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 4;
+    private static final int UPGRADE_PLUS_BLOCK = 5;
 
     public FumeUltraGreatsword() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

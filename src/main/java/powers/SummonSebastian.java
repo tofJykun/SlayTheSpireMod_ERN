@@ -14,4 +14,9 @@ public class SummonSebastian extends AbstractSummonPower {
     public SummonSebastian(AbstractCreature owner) {
         super(owner, POWER_ID, powerStrings.NAME, powerStrings.DESCRIPTIONS, BLOCK, new PhantomSebastian(), SUMMON_KEY);
     }
+
+    @Override
+    public AbstractSummonPower makeSummonCopy(AbstractCreature owner) {
+        return new SummonSebastian(owner);
+    }
 }

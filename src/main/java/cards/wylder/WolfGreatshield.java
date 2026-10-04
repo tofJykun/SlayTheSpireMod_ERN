@@ -15,8 +15,7 @@ import patches.AbstractCardEnum;
 public class WolfGreatshield extends CustomCard {
     public static final String ID = "WolfGreatshield";
     private static final String IMG_PATH = "img/cards/wylder/WolfGreatshield.png";
-    private static final int COST = 3;
-    private static final int UPGRADED_COST = 2;
+    private static final int COST = 1;
 
     public WolfGreatshield() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
@@ -61,7 +60,9 @@ public class WolfGreatshield extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            this.selfRetain = true;
+            this.rawDescription = getCardStrings().UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

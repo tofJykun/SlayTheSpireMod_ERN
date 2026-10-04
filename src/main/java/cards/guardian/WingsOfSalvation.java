@@ -16,14 +16,15 @@ public class WingsOfSalvation extends CustomCard {
     public static final String ID = "WingsOfSalvation";
     private static final String IMG_PATH = "img/cards/guardian/WingsOfSalvation.png";
     private static final int COST = 1;
-    private static final int SOAR = 1;
-    private static final int UPGRADE_PLUS_SOAR = 1;
+    private static final int SOAR = 3;
+    private static final int UPGRADE_PLUS_SOAR = 2;
 
     public WingsOfSalvation() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.Guardian_COLOR, CardRarity.RARE, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Guardian_COLOR, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = SOAR;
         this.magicNumber = this.baseMagicNumber;
+        this.exhaust = true;
     }
 
     private static CardStrings getCardStrings() {

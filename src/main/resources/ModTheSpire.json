@@ -1,13 +1,13 @@
 {
   "modid": "ERN",
-  "name": "ERN-jykun",
+  "name": "EldenRingNightreign",
   "author_list": [
-    "jykun"
+    "Jykun"
   ],
   "description": "ELDEN RING NIGHTREIGN mod for Slay the Spire. Not finished now.",
   "dependencies": [
     "basemod"
   ],
-  "version": "0.3.0",
+  "version": "0.4.0",
   "sts_version": "05-06-2026"
 }

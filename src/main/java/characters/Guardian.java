@@ -3,6 +3,7 @@ package characters;
 import basemod.abstracts.CustomPlayer;
 import cards.guardian.Defend_Guardian;
 import cards.guardian.Strike_Guardian;
+import cards.guardian.WingCrestShield;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -69,6 +70,7 @@ public class Guardian extends CustomPlayer {
         retVal.add(Defend_Guardian.ID);
         retVal.add(Defend_Guardian.ID);
         retVal.add(cards.guardian.GuardianWhirlwind.ID);
+        retVal.add(WingCrestShield.ID);
         return retVal;
     }
 

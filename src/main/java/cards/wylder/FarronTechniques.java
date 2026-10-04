@@ -24,7 +24,7 @@ public class FarronTechniques extends CustomCard {
 
     public FarronTechniques() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Wylder_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Wylder_COLOR, CardRarity.COMMON, CardTarget.SELF);
         this.baseMagicNumber = DRAW;
         this.magicNumber = this.baseMagicNumber;
     }

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import relics.KnightRing;
 
 public class ParryPower extends AbstractPower {
     public static final String POWER_ID = "ParryPower";
@@ -58,6 +59,9 @@ public class ParryPower extends AbstractPower {
             AbstractPower ceruleanDagger = player.getPower(CeruleanDaggerPower.POWER_ID);
             if (ceruleanDagger instanceof CeruleanDaggerPower) {
                 ((CeruleanDaggerPower)ceruleanDagger).onSuccessfulParry();
+            }
+            if (player.getRelic(KnightRing.ID) instanceof KnightRing) {
+                ((KnightRing)player.getRelic(KnightRing.ID)).onSuccessfulParry();
             }
         }
     }

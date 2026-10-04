@@ -36,6 +36,10 @@ public class FragrantBranchOfYoreRewardPatch {
         @SpirePostfixPatch
         public static void postfix(CombatRewardScreen __instance) {
             AbstractRoom room = AbstractDungeon.getCurrRoom();
+            if (room != null && room.smoked) {
+                NineStagesOfDecayRewardPatch.clearRewards(room, __instance);
+                return;
+            }
             int count = FragrantBranchOfYoreRewards.consume() + ExtraCardRewards.consume();
             if (count <= 0 || !(room instanceof MonsterRoom) || AbstractDungeon.player == null) {
                 if (!(room instanceof MonsterRoom) || AbstractDungeon.player == null) {

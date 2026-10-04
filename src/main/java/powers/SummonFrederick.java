@@ -14,4 +14,9 @@ public class SummonFrederick extends AbstractSummonPower {
     public SummonFrederick(AbstractCreature owner) {
         super(owner, POWER_ID, powerStrings.NAME, powerStrings.DESCRIPTIONS, BLOCK, new PhantomFrederick(), SUMMON_KEY);
     }
+
+    @Override
+    public AbstractSummonPower makeSummonCopy(AbstractCreature owner) {
+        return new SummonFrederick(owner);
+    }
 }

@@ -17,6 +17,7 @@ public abstract class AbstractSummonPower extends AbstractPower {
     private final int blockAmount;
     private final AbstractPhantomCard phantomCard;
     private final String summonKey;
+    private int displayedBlock;
 
     protected AbstractSummonPower(AbstractCreature owner, String powerId, String name, String[] descriptions,
                                   int blockAmount, AbstractPhantomCard phantomCard, String summonKey) {
@@ -50,6 +51,8 @@ public abstract class AbstractSummonPower extends AbstractPower {
     public String getSummonKey() {
         return this.summonKey;
     }
+
+    public abstract AbstractSummonPower makeSummonCopy(AbstractCreature owner);
 
     public static AbstractSummonPower getActiveSummon(AbstractCreature creature) {
         if (creature == null) {
@@ -107,7 +110,8 @@ public abstract class AbstractSummonPower extends AbstractPower {
     }
 
     private void triggerSummonEffect() {
-        addToBot((AbstractGameAction)new GainBlockAction(this.owner, this.owner, this.blockAmount));
+        addToBot((AbstractGameAction)new GainBlockAction(this.owner, this.owner,
+                SpiritPower.summonBlock(this.owner, this.blockAmount)));
         addToBot((AbstractGameAction)new MakeTempCardInHandAction(this.phantomCard.makeStatEquivalentCopy(), 1));
     }
 
@@ -122,8 +126,17 @@ public abstract class AbstractSummonPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = this.descriptions[0] + this.blockAmount + this.descriptions[1]
+        this.displayedBlock = SpiritPower.summonBlock(this.owner, this.blockAmount);
+        this.description = this.descriptions[0] + this.displayedBlock + this.descriptions[1]
                 + this.phantomCard.name + this.descriptions[2];
+    }
+
+    @Override
+    public void update(int slot) {
+        super.update(slot);
+        if (this.displayedBlock != SpiritPower.summonBlock(this.owner, this.blockAmount)) {
+            updateDescription();
+        }
     }
 }
 

@@ -19,7 +19,7 @@ public class AstoraGreatsword extends CustomCard {
     public static final String ID = "AstoraGreatsword";
     private static final String IMG_PATH = "img/cards/wylder/AstoraGreatsword.png";
     private static final int COST = -1;
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 9;
     private static final int POISE_BREAK = 1;
     private static final int UPGRADE_PLUS_POISE_BREAK = 1;
 

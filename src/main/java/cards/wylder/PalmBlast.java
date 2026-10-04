@@ -16,7 +16,7 @@ public class PalmBlast extends CustomCard {
 
     public PalmBlast() {
         super(ID, strings().NAME, IMG_PATH, 0, strings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Wylder_COLOR, CardRarity.COMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Wylder_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
     }
 

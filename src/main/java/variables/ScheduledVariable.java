@@ -2,9 +2,16 @@ package variables;
 
 import basemod.abstracts.DynamicVariable;
 import cards.ironeye.Marking;
+import cards.executor.RiversOfBlood;
+import cards.guardian.GlintstoneKris;
+import cards.guardian.WingCrestShield;
+import cards.guardian.CurseWardGreatshield;
+import cards.guardian.GreatshieldOfGlory;
+import cards.guardian.FalconShield;
 import cards.executor.AlabasterLordsPull;
 import cards.executor.OnyxLordsRepulsion;
 import cards.duchess.BladeOfCalling;
+import cards.duchess.BlackKnife;
 import cards.duchess.PowerOfTheGreaterWill;
 import relics.VoiceConduit;
 import cards.raider.LargeClub;
@@ -15,6 +22,9 @@ import cards.recluse.GreatSoulDregs;
 import cards.recluse.Dodge;
 import cards.recluse.CarianPiercer;
 import cards.revenant.LotOfRunes;
+import cards.revenant.FamilyHeads;
+import cards.wylder.IronFlesh;
+import cards.wylder.Valorheart;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import patches.ScheduledField;
 
@@ -26,6 +36,36 @@ public class ScheduledVariable extends DynamicVariable {
 
     @Override
     public boolean isModified(AbstractCard card) {
+        if (card instanceof FalconShield) {
+            return false;
+        }
+        if (card instanceof GreatshieldOfGlory) {
+            return false;
+        }
+        if (card instanceof CurseWardGreatshield) {
+            return false;
+        }
+        if (card instanceof WingCrestShield) {
+            return false;
+        }
+        if (card instanceof Valorheart) {
+            return false;
+        }
+        if (card instanceof RiversOfBlood) {
+            return false;
+        }
+        if (card instanceof GlintstoneKris) {
+            return false;
+        }
+        if (card instanceof IronFlesh) {
+            return false;
+        }
+        if (card instanceof FamilyHeads) {
+            return false;
+        }
+        if (card instanceof BlackKnife) {
+            return false;
+        }
         if (card instanceof CarianPiercer) {
             return false;
         }
@@ -70,6 +110,36 @@ public class ScheduledVariable extends DynamicVariable {
 
     @Override
     public int value(AbstractCard card) {
+        if (card instanceof FalconShield) {
+            return ((FalconShield)card).getDrawAmount();
+        }
+        if (card instanceof GreatshieldOfGlory) {
+            return ((GreatshieldOfGlory)card).getVigorAmount();
+        }
+        if (card instanceof CurseWardGreatshield) {
+            return ((CurseWardGreatshield)card).getArtifactAmount();
+        }
+        if (card instanceof WingCrestShield) {
+            return WingCrestShield.HOVER;
+        }
+        if (card instanceof Valorheart) {
+            return ((Valorheart)card).getParryAmount();
+        }
+        if (card instanceof RiversOfBlood) {
+            return ((RiversOfBlood)card).getSelfBloodloss();
+        }
+        if (card instanceof GlintstoneKris) {
+            return GlintstoneKris.STRENGTH_LOSS;
+        }
+        if (card instanceof IronFlesh) {
+            return ((IronFlesh)card).getPlating();
+        }
+        if (card instanceof FamilyHeads) {
+            return 1;
+        }
+        if (card instanceof BlackKnife) {
+            return ((BlackKnife)card).getBloodburn();
+        }
         if (card instanceof CarianPiercer) {
             return CarianPiercer.GLINTSTONES;
         }
@@ -114,6 +184,36 @@ public class ScheduledVariable extends DynamicVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
+        if (card instanceof FalconShield) {
+            return ((FalconShield)card).getDrawAmount();
+        }
+        if (card instanceof GreatshieldOfGlory) {
+            return ((GreatshieldOfGlory)card).getVigorAmount();
+        }
+        if (card instanceof CurseWardGreatshield) {
+            return ((CurseWardGreatshield)card).getArtifactAmount();
+        }
+        if (card instanceof WingCrestShield) {
+            return WingCrestShield.HOVER;
+        }
+        if (card instanceof Valorheart) {
+            return ((Valorheart)card).getParryAmount();
+        }
+        if (card instanceof RiversOfBlood) {
+            return ((RiversOfBlood)card).getSelfBloodloss();
+        }
+        if (card instanceof GlintstoneKris) {
+            return GlintstoneKris.STRENGTH_LOSS;
+        }
+        if (card instanceof IronFlesh) {
+            return ((IronFlesh)card).getPlating();
+        }
+        if (card instanceof FamilyHeads) {
+            return 1;
+        }
+        if (card instanceof BlackKnife) {
+            return ((BlackKnife)card).getBloodburn();
+        }
         if (card instanceof CarianPiercer) {
             return CarianPiercer.GLINTSTONES;
         }
@@ -158,6 +258,15 @@ public class ScheduledVariable extends DynamicVariable {
 
     @Override
     public boolean upgraded(AbstractCard card) {
-        return (card instanceof LotOfRunes || card instanceof Marking || card instanceof Dodge) && card.upgraded;
+        if (card instanceof FalconShield) {
+            return card.upgraded;
+        }
+        if (card instanceof GreatshieldOfGlory) {
+            return card.upgraded;
+        }
+        if (card instanceof CurseWardGreatshield) {
+            return card.upgraded;
+        }
+        return (card instanceof Valorheart || card instanceof RiversOfBlood || card instanceof IronFlesh || card instanceof BlackKnife || card instanceof LotOfRunes || card instanceof Marking || card instanceof Dodge) && card.upgraded;
     }
 }

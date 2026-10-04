@@ -18,23 +18,23 @@ public class SymbolOfAvarice extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/wylder/SymbolOfAvarice.png";
     private static final int COST = 0;
-    private static final int SELF_DAMAGE = 8;
+    private static final int SELF_DAMAGE = 6;
     private static final int ENERGY = 2;
     private static final int UPGRADED_ENERGY = 3;
 
     public SymbolOfAvarice() {
         super(ID, CARD_STRINGS.NAME, IMG_PATH, COST, CARD_STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Wylder_COLOR, CardRarity.COMMON, CardTarget.SELF);
-        this.baseMagicNumber = ENERGY;
+        this.baseMagicNumber = SELF_DAMAGE;
         this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot((AbstractGameAction)new DamageAction((AbstractCreature)p,
-                new DamageInfo((AbstractCreature)p, SELF_DAMAGE, DamageInfo.DamageType.NORMAL),
+                new DamageInfo((AbstractCreature)p, this.magicNumber, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.FIRE));
-        addToBot((AbstractGameAction)new GainEnergyAction(this.magicNumber));
+        addToBot((AbstractGameAction)new GainEnergyAction(this.upgraded ? UPGRADED_ENERGY : ENERGY));
     }
 
     @Override
@@ -46,8 +46,6 @@ public class SymbolOfAvarice extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.baseMagicNumber = UPGRADED_ENERGY;
-            this.magicNumber = this.baseMagicNumber;
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

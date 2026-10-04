@@ -16,10 +16,10 @@ import powers.ParryPower;
 public class SmallShield extends CustomCard {
     public static final String ID = "SmallShield";
     private static final String IMG_PATH = "img/cards/wylder/SmallShield.png";
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int BLOCK_AMT = 7;
     private static final int PARRY = 2;
-    private static final int UPGRADE_PLUS_PARRY = 1;
+    private static final int UPGRADE_PLUS_PARRY = 2;
 
     public SmallShield() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

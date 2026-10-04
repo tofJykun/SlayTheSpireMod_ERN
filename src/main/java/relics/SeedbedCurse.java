@@ -25,7 +25,7 @@ public class SeedbedCurse extends CustomRelic {
 
     public SeedbedCurse() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
-                RelicTier.SHOP, AbstractRelic.LandingSound.MAGICAL);
+                RelicTier.UNCOMMON, AbstractRelic.LandingSound.MAGICAL);
         this.counter = 0;
     }
 

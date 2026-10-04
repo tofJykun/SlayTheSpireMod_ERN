@@ -1,4 +1,262 @@
 {
+  "BanditKnife": {
+    "NAME": "Bandit Knife",
+    "DESCRIPTION": "Deal !D! damage. NL If the target enemy is Stunned this turn, gain !M! Gold. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL If the target enemy is Stunned this turn, gain !M! Gold. NL Exhaust."
+  },
+  "InTheZone": {
+    "NAME": "In the Zone",
+    "DESCRIPTION": "Gain !M! Parry. NL Gain !MD! Plating. NL Exhaust."
+  },
+  "ExecutionerSword": {
+    "NAME": "Executioner Sword",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL If the enemy's current intent is Stunned, gain [E] [E].",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL If the enemy's current intent is Stunned, gain [E] [E] [E]."
+  },
+  "PardonMe": {
+    "NAME": "Pardon Me",
+    "DESCRIPTION": "Charged. NL Gain !M! Intangible. NL Whenever you play a card, lose !MD! Dexterity for the rest of that turn."
+  },
+  "WaveOfDestruction": {
+    "NAME": "Wave of Destruction",
+    "DESCRIPTION": "Retain. NL Charged. NL Deal !D! damage to ALL enemies. NL Exhaust."
+  },
+  "SeaOfMagma": {
+    "NAME": "Sea of Magma",
+    "DESCRIPTION": "Exhaust all Status cards in your draw pile, discard pile, and hand. NL Deal !D! damage to ALL enemies for each card Exhausted. NL Fill your hand with *Burns.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Exhaust all Status cards in your draw pile, discard pile, and hand. NL Deal !D! damage to ALL enemies for each card Exhausted. NL Fill your hand with *Burns."
+  },
+  "SoulOfAbyss": {
+    "NAME": "Soul of Abyss",
+    "DESCRIPTION": "Whenever you create a Status card, NL draw !M! card and NL gain [E].",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you create a Status card, NL draw !M! card and NL gain [E]."
+  },
+  "TonguesOfFire": {
+    "NAME": "Tongues of Fire",
+    "DESCRIPTION": "Charged. NL Exhaust a card in your hand. NL Deal !D! damage."
+  },
+  "ChargedGrapefruit": {
+    "NAME": "Charged Grapefruit",
+    "DESCRIPTION": "Charged. NL Gain [E] [E] [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Charged. NL Gain [E] [E] [E]."
+  },
+  "PutrescenceSword": {
+    "NAME": "Putrescence Sword",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Fill your hand with *Slimed."
+  },
+  "SwordOfNight": {
+    "NAME": "Sword of Night",
+    "DESCRIPTION": "Charged. NL Deal !D! damage. NL Whenever the target is attacked, apply !M! Sleep to it. NL Exhaust."
+  },
+  "SilvercatRing": {
+    "NAME": "Silvercat Ring",
+    "DESCRIPTION": "Whenever you gain or lose Dexterity, draw !M! card."
+  },
+  "Aufheben": {
+    "NAME": "Aufheben",
+    "DESCRIPTION": "Lose all Vigor and gain that much Strength. NL Lose all Hover and gain that much Dexterity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Lose all Vigor and gain that much Strength. NL Lose all Hover and gain that much Dexterity. NL Exhaust."
+  },
+  "Prolong": {
+    "NAME": "Prolong",
+    "DESCRIPTION": "At the start of your next turn, gain Block equal to your current Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "At the start of your next turn, gain Block equal to your current Block."
+  },
+  "FalconShield": {
+    "NAME": "Falcon Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Hover. NL If you have Vigor, draw !MS! cards."
+  },
+  "GreatshieldOfGlory": {
+    "NAME": "Greatshield of Glory",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Perfect Guard. NL Whenever you are attacked this turn, gain !MS! Vigor."
+  },
+  "SunlightShield": {
+    "NAME": "Sunlight Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Double your current Vigor."
+  },
+  "CurseWardGreatshield": {
+    "NAME": "Curse Ward Greatshield",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Perfect Guard. NL Gain !MS! Artifact. NL Exhaust."
+  },
+  "WingCrestShield": {
+    "NAME": "Wing Crest Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Perfect Guard. NL Gain !MS! Hover."
+  },
+  "BrassShield": {
+    "NAME": "Brass Shield",
+    "DESCRIPTION": "Gain !M! Perfect Guard. NL Exhaust."
+  },
+  "Sacrifice": {
+    "NAME": "Sacrifice",
+    "DESCRIPTION": "Exhaust any number of cards. Take that much damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust any number of cards. Take that much damage."
+  },
+  "Nostalgia": {
+    "NAME": "Nostalgia",
+    "DESCRIPTION": "At the start of your turn, put !M! card(s) from your discard pile into your hand."
+  },
+  "GateOfHorn": {
+    "NAME": "Gate of Horn",
+    "DESCRIPTION": "Fill your hand with random 0-cost cards.",
+    "UPGRADE_DESCRIPTION": "Fill your hand with random Upgraded 0-cost cards."
+  },
+  "ViperBite": {
+    "NAME": "Viper Bite",
+    "DESCRIPTION": "Retain. NL Apply !M! Poison. NL Apply !M! Scarlet Rot."
+  },
+  "SpearcallRitual": {
+    "NAME": "Spearcall Ritual",
+    "DESCRIPTION": "Deal !D! damage. NL Deal damage an additional time for every !M! HP the enemy has. NL (Deals damage !MD! times.) NL Exhaust."
+  },
+  "SoulStifler": {
+    "NAME": "Soul Stifler",
+    "DESCRIPTION": "Prevent the target enemy from gaining Block this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Prevent ALL enemies from gaining Block this combat. NL Exhaust."
+  },
+  "RuinousGhostflame": {
+    "NAME": "Ruinous Ghostflame",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever the target is attacked, apply !M! Frostbite to it. NL Exhaust."
+  },
+  "HelphenSteeple": {
+    "NAME": "Helphen's Steeple",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Frostbite. NL Retain your hand this turn."
+  },
+  "CodedSword": {
+    "NAME": "Coded Sword",
+    "DESCRIPTION": "Deal !D! thaumaturgy damage. NL The target additionally loses that much HP."
+  },
+  "BastardSword": {
+    "NAME": "Bastard Sword",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each *Bastard *Sword in your deck. NL Fatal: Add a *Bastard *Sword to your deck. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each *Bastard *Sword+ in your deck. NL Fatal: Add a *Bastard *Sword+ to your deck. NL Exhaust."
+  },
+  "GraftedBladeGreatsword": {
+    "NAME": "Grafted Blade Greatsword",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Gain !M! Plating. NL If this kills an enemy, add a *Grafted *Blade *Greatsword to your deck. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL Gain !M! Plating. NL If this kills an enemy, add a *Grafted *Blade *Greatsword+ to your deck. NL Exhaust."
+  },
+  "Zweihander": {
+    "NAME": "Zweihander",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poise Break. NL If the enemy is currently Stunned, apply !MD! additional Poise Break."
+  },
+  "Urumi": {
+    "NAME": "Urumi",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Whenever this deals unblocked damage, draw !M! card."
+  },
+  "XanthousCrown": {
+    "NAME": "Xanthous Crown",
+    "DESCRIPTION": "Whenever you gain or lose Dexterity, gain Mushroom."
+  },
+  "SwordOfNightAndFlame": {
+    "NAME": "Sword of Night and Flame",
+    "DESCRIPTION": "Final Plan. NL Deal !D! thaumaturgy damage !M! times. NL Deal !MD! thaumaturgy damage to ALL enemies. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["Can only be played when you have 0 Energy."]
+  },
+  "AdaptiveShield": {
+    "NAME": "Adaptive Shield",
+    "DESCRIPTION": "Gain !M! Plating. NL At the end of your turn, lose !M! Plating."
+  },
+  "RaptorOfTheMists": {
+    "NAME": "Raptor of the Mists",
+    "DESCRIPTION": "Prevent the next !M! times you would lose HP this turn. NL Ethereal."
+  },
+  "InescapableFrenzy": {
+    "NAME": "Inescapable Frenzy",
+    "DESCRIPTION": "If the enemy's intent is Stun, apply !M! Madness."
+  },
+  "GolemHalberd": {
+    "NAME": "Golem Halberd",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL If this card consumes Vigor, regain the same amount of Vigor."
+  },
+  "Bouquet": {
+    "NAME": "Bouquet",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever the target enemy is attacked, apply !M! Vulnerable and make it lose !M! Strength for that turn. NL Exhaust."
+  },
+  "Moonveil": {
+    "NAME": "Moonveil",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, apply !M! Weak. NL Otherwise, apply !M! Poise Break."
+  },
+  "Misericorde": {
+    "NAME": "Misericorde",
+    "DESCRIPTION": "Deal !D! damage. NL For each stack of Vulnerable on the enemy, this card deals an additional !M! times its damage."
+  },
+  "Girandole": {
+    "NAME": "Girandole",
+    "DESCRIPTION": "Lose !M! Strength. NL Gain !MD! Artifact. NL Exhaust."
+  },
+  "HaloScythe": {
+    "NAME": "Halo Scythe",
+    "DESCRIPTION": "Deal !D! damage. NL Scheduled !M!. NL Return this card to your hand."
+  },
+  "GlintstoneKris": {
+    "NAME": "Glintstone Kris",
+    "DESCRIPTION": "Lose !MS! Strength. NL ALL enemies lose !M! Strength. NL Exhaust."
+  },
+  "Retaliatory": {
+    "NAME": "Retaliatory",
+    "DESCRIPTION": "The first !M! times you consume Vigor each turn, regain the same amount of Vigor."
+  },
+  "FallingstarBeastJaw": {
+    "NAME": "Fallingstar Beast Jaw",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Block, play this card repeatedly until it deals unblocked damage.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL If the enemy has Block, play this card repeatedly until it deals unblocked damage."
+  },
+  "CrescentMoonAxe": {
+    "NAME": "Crescent Moon Axe",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, gain !M! Thorns. NL Otherwise, gain !M! Vigor."
+  },
+  "BeastRepellentTorch": {
+    "NAME": "Beast-Repellent Torch",
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies that intend to attack. NL Exhaust."
+  },
+  "StormWing": {
+    "NAME": "Storm Wing",
+    "DESCRIPTION": "Gain !M! Hover."
+  },
+  "EmeraldTablet": {
+    "NAME": "Emerald Tablet",
+    "DESCRIPTION": "Gain !B! Block. NL Choose 1 of 3 random Common Nightfarer cards to add to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Choose 1 of 3 random Upgraded Common Nightfarer cards to add to your hand."
+  },
+  "Ridicule": {
+    "NAME": "Ridicule",
+    "DESCRIPTION": "Whenever you are attacked this turn, gain !M! Strength. NL Exhaust."
+  },
+  "LessLikelyToBeTargeted": {
+    "NAME": "Less Likely to Be Targeted",
+    "DESCRIPTION": "For each enemy intending to attack, replace its action with gaining !M! Block. NL Exhaust."
+  },
+  "NineStagesOfDecay": {
+    "NAME": "Nine Stages of Decay",
+    "DESCRIPTION": "If this is not a Boss combat, kill ALL enemies in 9 turns. NL If combat ends this way, receive no rewards.",
+    "UPGRADE_DESCRIPTION": "Innate. NL If this is not a Boss combat, kill ALL enemies in 9 turns. NL If combat ends this way, receive no rewards."
+  },
+  "Cragblade": {
+    "NAME": "Cragblade",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain !M! Plating."
+  },
+  "EternalArmor": {
+    "NAME": "Eternal Armor",
+    "DESCRIPTION": "At the start of your turn, gain !M! Plating.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! Plating."
+  },
+  "IronFlesh": {
+    "NAME": "Iron Flesh",
+    "DESCRIPTION": "Lose !M! Dexterity. NL Gain !MS! Plating."
+  },
+  "StoneArmor": {
+    "NAME": "Stone Armor",
+    "DESCRIPTION": "Gain !M! Plating."
+  },
+  "LifestealFist": {
+    "NAME": "Lifesteal Fist",
+    "DESCRIPTION": "Deal !D! damage. NL If the target is stunned this turn, this card deals !M! times as much damage."
+  },
+  "FamilyHeads": {
+    "NAME": "Family Heads",
+    "DESCRIPTION": "Final Plan. NL For every !M! Spirit you have, gain !MS! Faith. NL For every !M! Faith you have, gain !MS! Spirit. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["Can only be played when you have 0 Energy."]
+  },
   "Strike_Recluse": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -30,7 +288,16 @@
   },
   "BlueWhiteWoodenShield": {
     "NAME": "Blue-White Wooden Shield",
-    "DESCRIPTION": "Gain Block equal to the number of cards in your draw pile. NL (Gain !B! Block.) NL Gain !M! Parry."
+    "DESCRIPTION": "At the start of your turn, gain Block equal to the number of cards in your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain Block equal to the number of cards in your draw pile."
+  },
+  "FlynnRing": {
+    "NAME": "Flynn's Ring",
+    "DESCRIPTION": "Deal !M! % more damage for each point of negative Dexterity you have."
+  },
+  "RingOfFavor": {
+    "NAME": "Ring of Favor",
+    "DESCRIPTION": "The first time you play this card each combat, gain !M! Strength and draw !M! additional cards at the start of each turn. NL When this card is Exhausted, lose !M! Strength and draw !M! fewer cards at the start of each turn. NL Ethereal."
   },
   "GrassCrestShield": {
     "NAME": "Grass Crest Shield",
@@ -71,8 +338,8 @@
   },
   "BloodVeil": {
     "NAME": "Blood Veil",
-    "DESCRIPTION": "Gain 2 Frail. NL Apply 5 Vulnerable. NL Apply 5 Weak. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " Retain. NL Gain 2 Frail. NL Apply 5 Vulnerable. NL Apply 5 Weak. NL Exhaust."
+    "DESCRIPTION": "Gain !MD! Frail. NL Apply !M! Vulnerable. NL Apply !M! Weak. NL Fill your hand with *Wounds. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !MD! Frail. NL Apply !M! Vulnerable. NL Apply !M! Weak. NL Fill your hand with *Wounds. NL Exhaust."
   },
   "BloodhoundFinesse": {
     "NAME": "Bloodhound Finesse",
@@ -94,8 +361,8 @@
   },
   "SymbolOfAvarice": {
     "NAME": "Symbol of Avarice",
-    "DESCRIPTION": "Take 8 damage. Gain [E] [E] .",
-    "UPGRADE_DESCRIPTION": "Take 8 damage. Gain [E] [E] [E] ."
+    "DESCRIPTION": "Take !M! damage. Gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Take !M! damage. Gain [E] [E] [E] ."
   },
   "Ubadachi": {
     "NAME": "Ubadachi",
@@ -120,12 +387,12 @@
   },
   "ManikinShield": {
     "NAME": "Manikin Shield",
-    "DESCRIPTION": "Gain !M! Parry. NL Retain your hand this turn.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Parry. NL Retain your hand this turn. NL Gain [E] next turn."
+    "DESCRIPTION": "Gain !M! Parry. NL Retain your hand this turn. NL Gain [E] next turn.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Parry. NL Retain your hand this turn. NL Gain [E] [E] next turn."
   },
   "Valorheart": {
     "NAME": "Valorheart",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Gain !M! Parry."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Gain !MS! Parry."
   },
   "CirqueBlade": {
     "NAME": "Cirque Blade",
@@ -145,12 +412,13 @@
   },
   "CeruleanDagger": {
     "NAME": "Cerulean Dagger",
-    "DESCRIPTION": "Whenever you successfully Parry, gain [E] [E] next turn.",
-    "UPGRADE_DESCRIPTION": "Whenever you successfully Parry, gain [E] [E] and draw 2 additional cards next turn."
+    "DESCRIPTION": "Whenever you successfully Parry, gain [E] [E] [E] next turn.",
+    "UPGRADE_DESCRIPTION": "Whenever you successfully Parry, gain [E] [E] [E] and draw 3 additional cards next turn."
   },
   "WolfGreatshield": {
     "NAME": "Wolf Greatshield",
-    "DESCRIPTION": "Gain Block equal to enemy total damage. NL Exhaust."
+    "DESCRIPTION": "Charged. NL Gain Block equal to enemy total damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Charged. NL Gain Block equal to enemy total damage. NL Exhaust."
   },
   "WolfGreatsword": {
     "NAME": "Wolf Greatsword",
@@ -166,8 +434,8 @@
     },
     "AstoraGreatsword": {
     "NAME": "Astora Greatsword",
-    "DESCRIPTION": "Deal !D! damage X times. NL Apply !M! Poise Break X times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage X+1 times. NL Apply !M! Poise Break X+1 times."
+    "DESCRIPTION": "Charged. NL Deal !D! damage X times. NL Apply !M! Poise Break X times.",
+    "UPGRADE_DESCRIPTION": "Charged. NL Deal !D! damage X+1 times. NL Apply !M! Poise Break X+1 times."
   },
     "GravelordSword": {
       "NAME": "Gravelord Sword",
@@ -243,7 +511,7 @@
   },
   "SpikedShield": {
     "NAME": "Spiked Shield",
-    "DESCRIPTION": "Gain !M! Thorns."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Thorns."
   },
   "MantleOfThorns": {
     "NAME": "Mantle of Thorns",
@@ -994,6 +1262,10 @@
     "NAME": "Mushroom Crown",
     "DESCRIPTION": "Gain !B! Block. NL Whenever you play a card this turn, gain Mushroom !M! times. NL Scheduled !MS! ."
   },
+  "InvertedStatue": {
+    "NAME": "Inverted Statue",
+    "DESCRIPTION": "Gain !B! Block. NL Swap all cards in your draw and discard piles. NL Scheduled !M! ."
+  },
   "SellswordTwinblades": {
     "NAME": "Sellsword Twinblades",
     "DESCRIPTION": "Deal !D! damage 2 times. NL Replay 2."
@@ -1168,7 +1440,7 @@
   },
   "RiversOfBlood": {
     "NAME": "Rivers of Blood",
-    "DESCRIPTION": "Apply 5 Bloodloss. NL Apply !M! Bloodloss to yourself."
+    "DESCRIPTION": "Apply !M! Bloodloss to ALL enemies. NL Apply !MS! Bloodloss to yourself."
   },
   "StTrinaSword": {
     "NAME": "St. Trina's Sword",
@@ -1332,6 +1604,24 @@
   "VisageShield": {
     "NAME": "Visage Shield",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! Thaumaturgy damage to ALL enemies."
+  },
+  "GraftedDragon": {
+    "NAME": "Grafted Dragon",
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL You cannot Summon for !M! turns."
+  },
+  "LongHorn": {
+    "NAME": "Long Horn",
+    "DESCRIPTION": "Deal !D! Thaumaturgy damage to a random enemy !M! times."
+  },
+  "CelebrantCleaver": {
+    "NAME": "Celebrant Cleaver",
+    "DESCRIPTION": "Can only be played while you have Summon. NL Deal !D! damage to ALL enemies. NL Lose Summon.",
+    "EXTENDED_DESCRIPTION": ["Can only be played while you have Summon."]
+  },
+  "BeastclawGreathammer": {
+    "NAME": "Beastclaw Greathammer",
+    "DESCRIPTION": "Final Plan. NL Deal !D! Thaumaturgy damage. NL Apply !M! Poise Break.",
+    "EXTENDED_DESCRIPTION": ["Requires 0 Energy."]
   },
   "GreatEpee": {
     "NAME": "Great Epee",
@@ -2149,6 +2439,10 @@
     "NAME": "Dynast Finesse",
     "DESCRIPTION": "Gain 1 Hover. NL Deal !D! damage."
   },
+  "BlackKnife": {
+    "NAME": "Black Knife",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, draw !M! cards. NL Otherwise, apply !MS! Bloodburn."
+  },
   "IceRapier": {
     "NAME": "Ice Rapier",
     "DESCRIPTION": "Deal !D! damage. NL If the target enemy's intent is attacking, deal double damage."
@@ -2194,7 +2488,7 @@
   },
   "WingsOfSalvation": {
     "NAME": "Wings Of Salvation",
-    "DESCRIPTION": "Gain !M! Soar."
+    "DESCRIPTION": "Gain !M! Soar. NL Exhaust."
   },
   "PhantomHelen": {
     "NAME": "Phantom Helen",
@@ -2305,10 +2599,24 @@
     "DESCRIPTION": "Deal !D! damage, gain !B! Block. NL Apply !MP! Poison. NL Apply !MR! Scarlet Rot. NL Apply !MD! Bloodburn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage, gain !B! Block. NL Apply !MP! Poison. NL Apply !MR! Scarlet Rot. NL Apply !MD! Bloodburn."
   },
+  "RallyingStandard": {
+    "NAME": "Rallying Standard",
+    "DESCRIPTION": "Summon: At the start of your turn, gain your current Summon. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Summon: At the start of your turn, gain your current Summon. NL Exhaust."
+  },
+  "SpiritOfAsh": {
+    "NAME": "Spirit of Ash",
+    "DESCRIPTION": "Gain X Spirit. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain X Spirit."
+  },
+  "Speedster": {
+    "NAME": "Speedster",
+    "DESCRIPTION": "Draw !M! X cards."
+  },
   "MoonlightSettles": {
     "NAME": "Moonlight Settles",
-    "DESCRIPTION": "Gain !M! [E] . NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! [E] ."
+    "DESCRIPTION": "Retain. NL Gain !M! [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! [E] ."
   },
   "LotteryTicket": {
     "NAME": "Lottery Ticket",
@@ -2352,13 +2660,13 @@
   },
   "EstusFlask": {
     "NAME": "Estus Flask",
-    "DESCRIPTION": " Retain. NL Heal !M! HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " Retain. NL Heal !M! HP. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": " Retain. NL Charged. NL Heal !M! HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Charged. NL Heal !M! HP. NL Draw 1 card. NL Exhaust."
   },
   "AshenEstusFlask": {
     "NAME": "Ashen Estus Flask",
-    "DESCRIPTION": " Retain. NL Gain [E] . NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " Retain. NL Gain [E] . NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": " Retain. NL Charged. NL Gain [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Retain. NL Charged. NL Gain [E] . NL Draw 1 card. NL Exhaust."
   },
   "SipAbyss": {
     "NAME": "Sip Abyss",

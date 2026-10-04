@@ -145,6 +145,9 @@ public class YearnAction extends AbstractGameAction {
         this.player.discardPile.group.addAll(newDiscardPile);
         this.player.drawPile.group.clear();
         this.player.drawPile.group.addAll(newDrawPile);
+        if (this.drawIndexes.contains(newDrawPile.size() - 1)) {
+            patches.OperationeSolisPatch.recordTopPlacement(this.player.drawPile);
+        }
     }
 
     private int maxSelectableCards() {

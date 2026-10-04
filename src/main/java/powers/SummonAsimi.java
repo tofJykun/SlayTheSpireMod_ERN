@@ -14,4 +14,9 @@ public class SummonAsimi extends AbstractSummonPower {
     public SummonAsimi(AbstractCreature owner) {
         super(owner, POWER_ID, powerStrings.NAME, powerStrings.DESCRIPTIONS, BLOCK, new PhantomAsimi(), SUMMON_KEY);
     }
+
+    @Override
+    public AbstractSummonPower makeSummonCopy(AbstractCreature owner) {
+        return new SummonAsimi(owner);
+    }
 }

@@ -1,4 +1,122 @@
 {
+  "ClarityPotionPower": {
+    "NAME": "明晰",
+    "DESCRIPTIONS": ["下回合开始时，抽 #b%d 张牌，获得 #b%d 点能量。", " NL 再下回合开始时，抽 #b%d 张牌，获得 #b%d 点能量。"]
+  },
+  "PardonMePower": {
+    "NAME": "借过一下",
+    "DESCRIPTIONS": ["每打出 #b1 张牌，在该回合内失去 #b", " 点 #y敏捷 。你的回合结束时，返还本效果实际扣除的 #y敏捷 。 NL （本回合返还 #b", " 点 #y敏捷 。）"]
+  },
+  "GreatshieldOfGloryPower": {
+    "NAME": "荣誉大盾",
+    "DESCRIPTIONS": ["你在这个回合每受到一次攻击，都获得 #b", " 点 #y活力 。"]
+  },
+  "NostalgiaPower": {
+    "NAME": "怀旧",
+    "DESCRIPTIONS": ["在你的回合开始时，将弃牌堆中的 #b", " 张牌放入你的手牌。"]
+  },
+  "BlueWhiteWoodenShieldPower": {
+    "NAME": "蓝白木盾",
+    "DESCRIPTIONS": ["在你的回合开始时，抽牌前获得相当于抽牌堆牌数 #b", " 倍的 #y格挡 。"]
+  },
+  "SoulStiflerPower": {
+    "NAME": "恶意气息",
+    "DESCRIPTIONS": ["失去所有 #y格挡 ，在本场战斗中无法获得 #y格挡 。"]
+  },
+  "RuinousGhostflamePower": {
+    "NAME": "毁灭灵火",
+    "DESCRIPTIONS": ["每当受到攻击时，获得 #b", " 层 #y冻伤 。"]
+  },
+  "SoulOfAbyssPower": {
+    "NAME": "深渊灵魂",
+    "DESCRIPTIONS": ["每生成 #b1 张 #y状态牌 ，抽 #b", " 张牌，获得 #b", " 点 [E] 。"]
+  },
+  "SwordOfNightPower": {
+    "NAME": "黑夜刀",
+    "DESCRIPTIONS": ["每当受到攻击时，获得 #b", " 层 #y睡眠 。"]
+  },
+  "SilvercatRingPower": {
+    "NAME": "银猫戒指",
+    "DESCRIPTIONS": ["每当你获得或失去 #y敏捷 时，抽 #b", " 张牌。"]
+  },
+  "XanthousCrownPower": {
+    "NAME": "黄衣头冠",
+    "DESCRIPTIONS": ["每当你获得或失去 #y敏捷 时，获得 #y蘑菇 #b", " 次。"]
+  },
+  "LosePlatingAtEndOfTurnPower": {
+    "NAME": "临时覆甲",
+    "DESCRIPTIONS": ["你的回合结束时，失去 #b", " 层 #y覆甲 。"]
+  },
+  "RaptorOfTheMistsPower": {
+    "NAME": "潜雾猛禽",
+    "DESCRIPTIONS": ["在 #y缓冲 之前阻止下 #b", " 次生命值损伤。在你的下一回合开始时失去此效果。"]
+  },
+  "BouquetPower": {
+    "NAME": "花束",
+    "DESCRIPTIONS": ["每当受到攻击时，获得 #b", " 层 #y易伤 ，在该回合内失去 #b", " 点 #y力量 。"]
+  },
+  "RetaliatoryPower": {
+    "NAME": "回击",
+    "DESCRIPTIONS": ["每回合前 #b", " 次使用 #y活力 后返还相同层数的 #y活力 。本回合剩余 #b", " 次。"]
+  },
+  "GraftedDragonPower": {
+    "NAME": "接肢飞龙",
+    "DESCRIPTIONS": ["接下来 #b", " 回合内无法获得 #y召唤 。每轮结束时减少 #b1 层。"]
+  },
+  "OperationeSolis": {
+    "NAME": "太阳任务",
+    "DESCRIPTIONS": [
+      "这是确凿，无瑕的真理",
+      "上方之物正如下方之物，反之亦然",
+      "又因万物皆源于一物，故一物的思索可衍化为万物",
+      "太阳是其父，月亮是其母，风儿将它置于腹中携带，大地是它的看护",
+      "万物之父，世界的先知在此",
+      "若是它降临于世，即拥有完整无敌的力量",
+      "伴随着崇敬与智慧，你应愉快的从烈火中分离泥土，从粗鄙中分离精细",
+      "它直冲云霄，然后再次落下，吸收天地之力",
+      "然后你将会拥有世界的荣耀",
+      "因此，所有的障碍都会远离你",
+      "这是最强的力量，因为它将战胜所有精巧之物，穿透所有坚硬之物",
+      "世界即是如此创造而成",
+      "依此步骤是奇迹般的演化。而在这世上拥有三重智慧的分身的我也因此得名赫密斯",
+      "我说，有关太阳的任务已经完成"
+    ]
+  },
+  "RidiculePower": {
+    "NAME": "嘲讽",
+    "DESCRIPTIONS": ["本回合内，每受到一次敌人的攻击，获得 #b", " 点 #y力量 。"]
+  },
+  "LessLikelyToBeTargetedPower": {
+    "NAME": "比较不会攻击自己",
+    "DESCRIPTIONS": ["下一次行动改为获得 #b", " 点 #y格挡 ，原本的行动顺延一回合。"]
+  },
+  "NineStagesOfDecayPower": {
+    "NAME": "九相图",
+    "DESCRIPTIONS": ["在接下来的第 #b", " 个你的回合开始时，杀死所有敌人，包括其复活阶段。以此结束战斗时不获得任何奖励。"]
+  },
+  "RallyingStandardPower": {
+    "NAME": "归于麾下",
+    "DESCRIPTIONS": ["在你的回合开始时，获得 %s #b%d 次。"]
+  },
+  "EternalArmorPower": {
+    "NAME": "永恒铠甲",
+    "DESCRIPTIONS": ["在你的回合开始时，获得 #b", " 层 #y覆甲 。"]
+  },
+  "PlatingPower": {
+    "NAME": "覆甲",
+    "DESCRIPTIONS": [
+      "在敌人回合开始时，如果敌人总伤害与你的 #y格挡 之差大于 #b0 且小于等于 #b",
+      " ，获得等同于该差值的 #y格挡 。"
+    ]
+  },
+  "FlynnRingPower": {
+    "NAME": "弗林戒指",
+    "DESCRIPTIONS": ["你每有一点负的 #y敏捷 ，额外造成 #b%d%% 伤害。"]
+  },
+  "RingOfFavorPower": {
+    "NAME": "宠爱戒指",
+    "DESCRIPTIONS": ["每回合开始时额外抽 #b%d 张牌。", "每回合开始时少抽 #b%d 张牌。"]
+  },
   "DeadlyDancePower": {
     "NAME": "灾厄之舞",
     "DESCRIPTIONS": ["每当你对一名敌人造成负面 #y状态 ，获得 #b", " 点 #y格挡 。"]
@@ -371,14 +489,14 @@
     "NAME": "弹反",
     "DESCRIPTIONS": [
       "持续 #b",
-      " 回合。每当敌人的攻击伤害刚好击破你的 #y格挡 时，敌人1回合后被 #y击晕 。"
+      " 回合。每当敌人的攻击伤害刚好击破你的 #y格挡 时，在下一角色回合开始前将其意图变为 #y击晕 ，跳过其下个敌人回合，之后恢复原意图。"
     ]
   },
   "CeruleanDaggerPower": {
     "NAME": "染蓝凶刀",
     "DESCRIPTIONS": [
-      "成功 #y弹反 时，下一回合获得 [E] [E] 。",
-      "成功 #y弹反 时，下一回合获得 [E] [E] ，多抽 #b2 张牌。"
+      "成功 #y弹反 时，下一回合获得 [E] [E] [E] 。",
+      "成功 #y弹反 时，下一回合获得 [E] [E] [E] ，多抽 #b3 张牌。"
     ]
   },
   "CeruleanwhorlBubblePower": {
@@ -419,7 +537,7 @@
   "DelayedStunPower": {
     "NAME": "弹反",
     "DESCRIPTIONS": [
-      "该敌人在下回合会被 #y击晕 。"
+      "本轮敌人回合结束时，意图变为 #y击晕 ，持续到下个敌人回合结束。跳过该回合后恢复原意图。"
     ]
   },
   "StunPower": {
@@ -746,8 +864,8 @@
   "SpiritPower": {
     "NAME": "灵力",
     "DESCRIPTIONS": [
-      "幻影牌的卡面数字增加 #b",
-      "。幻影塞巴斯蒂安的能量和抽牌数不受影响。"
+      "#y召唤 获得的 #y格挡 和幻影牌的卡面数字增加 #b",
+      "。幻影塞巴斯蒂安的能量和抽牌数，以及效果持续回合数不受影响。"
     ]
   },
   "FadingSpiritPower": {

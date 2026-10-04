@@ -36,6 +36,8 @@ public class DelayedStunPower extends AbstractPower {
 
     @Override
     public void atEndOfRound() {
+        // The completed attack and its rollMove are over. Queued Stun starts before
+        // the next player turn and expires only after the following enemy round.
         if (this.owner instanceof AbstractMonster && !((AbstractMonster)this.owner).isDeadOrEscaped()) {
             addToBot((AbstractGameAction)new ApplyPowerAction(this.owner, this.owner,
                     new StunPower((AbstractMonster)this.owner, 1), 1));

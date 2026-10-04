@@ -14,4 +14,9 @@ public class SummonHelen extends AbstractSummonPower {
     public SummonHelen(AbstractCreature owner) {
         super(owner, POWER_ID, powerStrings.NAME, powerStrings.DESCRIPTIONS, BLOCK, new PhantomHelen(), SUMMON_KEY);
     }
+
+    @Override
+    public AbstractSummonPower makeSummonCopy(AbstractCreature owner) {
+        return new SummonHelen(owner);
+    }
 }

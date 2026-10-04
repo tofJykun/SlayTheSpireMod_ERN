@@ -15,8 +15,8 @@ public class CeruleanDaggerPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private static final int ENERGY_NEXT_TURN = 2;
-    private static final int DRAW_NEXT_TURN = 2;
+    private static final int ENERGY_NEXT_TURN = 3;
+    private static final int DRAW_NEXT_TURN = 3;
     private boolean drawNextTurn;
 
     public CeruleanDaggerPower(AbstractCreature owner, boolean drawNextTurn) {

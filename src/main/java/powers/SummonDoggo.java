@@ -14,4 +14,9 @@ public class SummonDoggo extends AbstractSummonPower {
     public SummonDoggo(AbstractCreature owner) {
         super(owner, POWER_ID, powerStrings.NAME, powerStrings.DESCRIPTIONS, BLOCK, new PhantomDoggo(), SUMMON_KEY);
     }
+
+    @Override
+    public AbstractSummonPower makeSummonCopy(AbstractCreature owner) {
+        return new SummonDoggo(owner);
+    }
 }

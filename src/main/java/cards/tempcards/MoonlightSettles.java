@@ -20,6 +20,7 @@ public class MoonlightSettles extends CustomCard {
         super(ID, strings().NAME, IMG_PATH, 0, strings().DESCRIPTION,
                 CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
         this.exhaust = true;
+        this.selfRetain = true;
         setX(energy);
     }
 

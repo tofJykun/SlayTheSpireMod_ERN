@@ -1,4 +1,14 @@
 {
+  "InvigoratingCuredMeat": {
+    "NAME": "Invigorating Cured Meat",
+    "FLAVOR": "",
+    "DESCRIPTIONS": ["Whenever you #yRest, increase your Max HP by #b7."]
+  },
+  "SunStone": {
+    "NAME": "Sun Stone",
+    "FLAVOR": "",
+    "DESCRIPTIONS": ["At the start of each combat, gain #b3 #yStrength, #b3 #yDexterity, and #b3 #yArcane. NL Upon pickup, gain #b999 #yGold."]
+  },
   "MagicCocktail": {
     "NAME": "Magic Cocktail",
     "FLAVOR": "Recluse's character skill.",
@@ -83,11 +93,18 @@
       "If your deck has at least #b3 #yUncommon #yAttack cards, gain #b3 #yStrength."
     ]
   },
+  "ArsenalCharm": {
+    "NAME": "Arsenal Charm",
+    "FLAVOR": "An arsenal to bear, a heavier step to take.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of each turn. At the start of each combat, lose #b1 #yDexterity."
+    ]
+  },
   "TransposingKiln": {
     "NAME": "Transposing Kiln",
     "FLAVOR": "Broken things wait inside the kiln to become another shape.",
     "DESCRIPTIONS": [
-      "At the start of each combat, you may choose #b1 of #b3 random common cards to fill your hand with copies of it."
+      "At the start of each combat, you may choose #b1 of #b3 random cards to fill your hand with copies of it."
     ]
   },
   "ToastyMittens": {
@@ -103,6 +120,16 @@
     "DESCRIPTIONS": [
       "The first time you lose HP each combat, next turn draw #b5 additional cards and gain [E] [E] ."
     ]
+  },
+  "NanoAlloy": {
+    "NAME": "Nano Alloy",
+    "FLAVOR": "Tiny metal particles arrange themselves into armor.",
+    "DESCRIPTIONS": ["At the start of each combat, gain #b5 #yPlating."]
+  },
+  "KnightRing": {
+    "NAME": "Knight Ring",
+    "FLAVOR": "A precise defense lends strength to the counterattack.",
+    "DESCRIPTIONS": ["Whenever you successfully #yParry, gain #b3 #yStrength."]
   },
   "SilverPendant": {
     "NAME": "Silver Pendant",

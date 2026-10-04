@@ -7,6 +7,9 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import general.CombatState;
 
 public class WylderIntentHelper {
+    private static final ReflectionHacks.RMethod CALCULATE_DAMAGE =
+            ReflectionHacks.privateMethod(AbstractMonster.class, "calculateDamage", int.class);
+
     private WylderIntentHelper() {}
 
     public static int incomingDamageBlockGap(AbstractPlayer player) {
@@ -15,7 +18,7 @@ public class WylderIntentHelper {
 
     public static int totalIncomingAttackDamage(AbstractPlayer player) {
         AbstractRoom room = CombatState.currentRoom();
-        if (room == null || room.monsters == null) {
+        if (player == null || room == null || room.monsters == null) {
             return 0;
         }
 
@@ -25,7 +28,7 @@ public class WylderIntentHelper {
                 continue;
             }
 
-            int perHitDamage = monster.getIntentDmg();
+            int perHitDamage = currentIntentDamage(monster);
             if (perHitDamage <= 0) {
                 continue;
             }
@@ -36,6 +39,18 @@ public class WylderIntentHelper {
             total += perHitDamage * getIntentHits(monster);
         }
         return total;
+    }
+
+    private static int currentIntentDamage(AbstractMonster monster) {
+        // onModifyPower refreshes the hand before monsters, so intentDmg can still be stale.
+        // Recalculate from the base, including both sides' powers, without altering the intent cache.
+        int cachedDamage = ReflectionHacks.getPrivate(monster, AbstractMonster.class, "intentDmg");
+        try {
+            CALCULATE_DAMAGE.invoke(monster, monster.getIntentBaseDmg());
+            return monster.getIntentDmg();
+        } finally {
+            ReflectionHacks.setPrivate(monster, AbstractMonster.class, "intentDmg", cachedDamage);
+        }
     }
 
     public static boolean isPrime(int value) {

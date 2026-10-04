@@ -1,4 +1,262 @@
 {
+  "BanditKnife": {
+    "NAME": "盗贼短刀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标敌人这个回合被击晕，获得 !M! 金币。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害。 NL 如果目标敌人这个回合被击晕，获得 !M! 金币。 NL 消耗 。"
+  },
+  "InTheZone": {
+    "NAME": "心流",
+    "DESCRIPTION": "获得 !M! 层 弹反 。 NL 获得 !MD! 层 覆甲 。 NL 消耗 。"
+  },
+  "ExecutionerSword": {
+    "NAME": "行刑剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 如果目标敌人这个回合被击晕，获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 如果目标敌人这个回合被击晕，获得 [E] [E] [E] 。"
+  },
+  "PardonMe": {
+    "NAME": "借过一下",
+    "DESCRIPTION": " 充能 。 NL 获得 !M! 层 无实体 。 NL 每回合中，你每打出一张牌，在该回合内失去 !MD! 点 敏捷 。"
+  },
+  "WaveOfDestruction": {
+    "NAME": "崩坏波",
+    "DESCRIPTION": " 保留 。 NL 充能 。 NL 对所有敌人造成 !D! 点伤害。 NL 消耗 。"
+  },
+  "SeaOfMagma": {
+    "NAME": "熔岩海",
+    "DESCRIPTION": " 消耗 抽牌堆、弃牌堆、手牌中所有状态牌。 NL 每张被 消耗 的牌对所有敌人造成 !D! 点伤害。 NL 用 *灼伤 填满你的手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 消耗 抽牌堆、弃牌堆、手牌中所有状态牌。 NL 每张被 消耗 的牌对所有敌人造成 !D! 点伤害。 NL 用 *灼伤 填满你的手牌。"
+  },
+  "SoulOfAbyss": {
+    "NAME": "深渊灵魂",
+    "DESCRIPTION": "你每生成一张状态牌， NL 抽 !M! 张牌， NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 你每生成一张状态牌， NL 抽 !M! 张牌， NL 获得 [E] 。"
+  },
+  "TonguesOfFire": {
+    "NAME": "火焰舌柱",
+    "DESCRIPTION": " 充能 。 NL 消耗 一张手牌。 NL 造成 !D! 点伤害。"
+  },
+  "ChargedGrapefruit": {
+    "NAME": "充能柚子",
+    "DESCRIPTION": " 充能 。 NL 获得 [E] [E] [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 充能 。 NL 获得 [E] [E] [E] 。"
+  },
+  "PutrescenceSword": {
+    "NAME": "融泥剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 用 *粘液 填满你的手牌。"
+  },
+  "SwordOfNight": {
+    "NAME": "黑夜刀",
+    "DESCRIPTION": " 充能 。 NL 造成 !D! 点伤害。 NL 每当目标敌人受到攻击时，给予其 !M! 层 睡眠 。 NL 消耗 。"
+  },
+  "SilvercatRing": {
+    "NAME": "银猫戒指",
+    "DESCRIPTION": "每当你获得或失去 敏捷 时，抽 !M! 张牌。"
+  },
+  "Aufheben": {
+    "NAME": "奥伏赫变",
+    "DESCRIPTION": "失去所有 活力 ，获得相同数量的 力量 。 NL 失去所有 振翼 ，获得相同数量的 敏捷 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 失去所有 活力 ，获得相同数量的 力量 。 NL 失去所有 振翼 ，获得相同数量的 敏捷 。 NL 消耗 。"
+  },
+  "Prolong": {
+    "NAME": "延伸",
+    "DESCRIPTION": "你的下一回合开始时，获得与当前 格挡 值相同的 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "你的下一回合开始时，获得与当前 格挡 值相同的 格挡 。"
+  },
+  "FalconShield": {
+    "NAME": "鹰小盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 振翼 。 NL 如果你有 活力 ，抽 !MS! 张牌。"
+  },
+  "GreatshieldOfGlory": {
+    "NAME": "荣誉大盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 完美格挡 。 NL 你在这个回合每受到一次攻击，都获得 !MS! 点 活力 。"
+  },
+  "SunlightShield": {
+    "NAME": "太阳纹盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将你当前的 活力 层数翻倍。"
+  },
+  "CurseWardGreatshield": {
+    "NAME": "抗咒大盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 完美格挡 。 NL 获得 !MS! 层 人工制品 。 NL 消耗 。"
+  },
+  "WingCrestShield": {
+    "NAME": "翼图纹盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 完美格挡 。 NL 获得 !MS! 层 振翼 。"
+  },
+  "BrassShield": {
+    "NAME": "黄铜盾",
+    "DESCRIPTION": "获得 !M! 层 完美格挡 。 NL 消耗 。"
+  },
+  "Sacrifice": {
+    "NAME": "献祭",
+    "DESCRIPTION": " 消耗 任意张牌，受到相同数量的伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 消耗 任意张牌，受到相同数量的伤害。"
+  },
+  "Nostalgia": {
+    "NAME": "怀旧",
+    "DESCRIPTION": "在你的回合开始时，将弃牌堆中的 !M! 张牌放入你的手牌。"
+  },
+  "GateOfHorn": {
+    "NAME": "角之门",
+    "DESCRIPTION": "用随机耗能为0的卡牌填满你的手牌。",
+    "UPGRADE_DESCRIPTION": "用随机 升级 过的耗能为0的卡牌填满你的手牌。"
+  },
+  "ViperBite": {
+    "NAME": "毒蛇咬杀",
+    "DESCRIPTION": " 保留 。 NL 给予 !M! 层 中毒 。 NL 给予 !M! 层 猩红腐败 。"
+  },
+  "SpearcallRitual": {
+    "NAME": "唤矛仪式",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 敌人每有 !M! 点生命，就额外造成一次伤害。 NL （造成 !MD! 次伤害。） NL 消耗 。"
+  },
+  "SoulStifler": {
+    "NAME": "恶意气息",
+    "DESCRIPTION": "在本场战斗中阻止目标敌人获得 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "在本场战斗中阻止所有敌人获得 格挡 。 NL 消耗 。"
+  },
+  "RuinousGhostflame": {
+    "NAME": "毁灭灵火",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当目标敌人受到攻击时，给予其 !M! 层 冻伤 。 NL 消耗 。"
+  },
+  "HelphenSteeple": {
+    "NAME": "赫芬尖塔剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 冻伤 。 NL 在本回合 保留 你的手牌。"
+  },
+  "CodedSword": {
+    "NAME": "秘文剑",
+    "DESCRIPTION": "造成 !D! 点奇术伤害。 NL 被攻击者额外失去相同的生命。"
+  },
+  "BastardSword": {
+    "NAME": "大剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 你的牌组中每有一张 *大剑 ，伤害+ !M! 。 NL 斩杀 时，将一张 *大剑 增加到你的牌组中。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 你的牌组中每有一张 *大剑+ ，伤害+ !M! 。 NL 斩杀 时，将一张 *大剑+ 增加到你的牌组中。 NL 消耗 。"
+  },
+  "GraftedBladeGreatsword": {
+    "NAME": "剑骸大剑",
+    "DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害。 NL 获得 !M! 层 覆甲 。 NL 如果这张牌杀死了敌人，将一张 *剑骸大剑 增加到你的牌组中。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害。 NL 获得 !M! 层 覆甲 。 NL 如果这张牌杀死了敌人，将一张 *剑骸大剑+ 增加到你的牌组中。 NL 消耗 。"
+  },
+  "Zweihander": {
+    "NAME": "双手巨剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 削韧 。 NL 如果敌人当前被 击晕 ，额外给予 !MD! 层 削韧 。"
+  },
+  "Urumi": {
+    "NAME": "软鞭剑",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每造成一次未被格挡的伤害，就抽 !M! 张牌。"
+  },
+  "XanthousCrown": {
+    "NAME": "黄衣头冠",
+    "DESCRIPTION": "每当你获得或失去 敏捷 时，获得 蘑菇 。"
+  },
+  "SwordOfNightAndFlame": {
+    "NAME": "夜与火之剑",
+    "DESCRIPTION": " 锦囊 。 NL 造成 !D! 点奇术伤害 !M! 次。 NL 对所有敌人造成 !MD! 点奇术伤害。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["只有当费用为0时可以打出。"]
+  },
+  "AdaptiveShield": {
+    "NAME": "适应护盾",
+    "DESCRIPTION": "获得 !M! 层 覆甲 。 NL 你的回合结束时，失去 !M! 层 覆甲 。"
+  },
+  "RaptorOfTheMists": {
+    "NAME": "潜雾猛禽",
+    "DESCRIPTION": "在本回合内，阻止下 !M! 次你受到的生命值损伤。 NL 虚无 。"
+  },
+  "InescapableFrenzy": {
+    "NAME": "发狂扩散",
+    "DESCRIPTION": "如果敌人当前被 击晕 ，给予 !M! 层 发狂 。"
+  },
+  "GolemHalberd": {
+    "NAME": "魔像戟",
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次。 NL 如果这张牌使用了 活力 ，则返还相同层数的 活力 。"
+  },
+  "Bouquet": {
+    "NAME": "花束",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当目标敌人受到攻击时，给予其 !M! 层 易伤 ，在该回合内失去 !M! 点 力量。 NL 消耗 。"
+  },
+  "Moonveil": {
+    "NAME": "名刀月隐",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人的意图是攻击，给予 !M! 层 虚弱 。 NL 否则，给予 !M! 层 削韧 。"
+  },
+  "Misericorde": {
+    "NAME": "慈悲短剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 敌人每有一层 易伤 ，这张牌额外造成 !M! 倍伤害。"
+  },
+  "Girandole": {
+    "NAME": "烛台",
+    "DESCRIPTION": "失去 !M! 点 力量 。 NL 获得 !MD! 层 人工制品 。 NL 消耗 。"
+  },
+  "HaloScythe": {
+    "NAME": "光环镰刀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 定时 !M! 。 NL 将这张牌返回你的手牌。"
+  },
+  "GlintstoneKris": {
+    "NAME": "辉石克力士",
+    "DESCRIPTION": "失去 !MS! 点 力量 。 NL 所有敌人失去 !M! 点 力量 。 NL 消耗 。"
+  },
+  "Retaliatory": {
+    "NAME": "回击",
+    "DESCRIPTION": "你每回合前 !M! 次使用 活力 后返还相同层数的 活力 。"
+  },
+  "FallingstarBeastJaw": {
+    "NAME": "星兽半颚",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 格挡 ，重复打出这张牌，直到突破敌人的 格挡 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害。 NL 如果敌人有 格挡 ，重复打出这张牌，直到突破敌人的 格挡 。"
+  },
+  "CrescentMoonAxe": {
+    "NAME": "弦月斧",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人的意图是攻击，获得 !M! 层 荆棘 。 NL 否则，获得 !M! 点 活力 。"
+  },
+  "BeastRepellentTorch": {
+    "NAME": "驱兽火把",
+    "DESCRIPTION": "给予所有意图是攻击的敌人 !M! 层 虚弱 。 NL 消耗 。"
+  },
+  "StormWing": {
+    "NAME": "风暴翼",
+    "DESCRIPTION": "获得 !M! 层 振翼 。"
+  },
+  "EmeraldTablet": {
+    "NAME": "翠玉录",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 从3张渡夜者的随机普通牌中选择1张加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 从3张 升级 过的渡夜者的随机普通牌中选择1张加入你的手牌。"
+  },
+  "Ridicule": {
+    "NAME": "嘲讽",
+    "DESCRIPTION": "你在这个回合每受到一次攻击，获得 !M! 点 力量 。 NL 消耗 。"
+  },
+  "LessLikelyToBeTargeted": {
+    "NAME": "比较不会攻击自己",
+    "DESCRIPTION": "如果敌人的意图是攻击，则改为获得 !M! 点 格挡 。 NL 消耗 。"
+  },
+  "NineStagesOfDecay": {
+    "NAME": "九相图",
+    "DESCRIPTION": "如果当前是非Boss战斗，在九回合后杀死所有敌人。 NL 如果通过这种方式结束战斗，不获得任何奖励。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 如果当前是非Boss战斗，在九回合后杀死所有敌人。 NL 如果通过这种方式结束战斗，不获得任何奖励。"
+  },
+  "Cragblade": {
+    "NAME": "岩石剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌杀死了敌人，则获得 !M! 层 覆甲 。"
+  },
+  "EternalArmor": {
+    "NAME": "永恒铠甲",
+    "DESCRIPTION": "在你的回合开始时，获得 !M! 层 覆甲 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时，获得 !M! 层 覆甲 。"
+  },
+  "IronFlesh": {
+    "NAME": "铁身躯",
+    "DESCRIPTION": "失去 !M! 点 敏捷 。 NL 获得 !MS! 层 覆甲 。"
+  },
+  "StoneArmor": {
+    "NAME": "石质铠甲",
+    "DESCRIPTION": "获得 !M! 层 覆甲 。"
+  },
+  "LifestealFist": {
+    "NAME": "夺命拳",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标敌人这个回合被击晕，这张牌造成 !M! 倍伤害。"
+  },
+  "FamilyHeads": {
+    "NAME": "家人头连枷",
+    "DESCRIPTION": " 锦囊 。 NL 你每有 !M! 点 灵力 ，获得 !MS! 点 信仰 。 NL 你每有 !M! 点 信仰 ，获得 !MS! 点 灵力 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["只有当费用为0时可以打出。"]
+  },
   "Strike_Recluse": {
     "NAME": "打击",
     "DESCRIPTION": "造成 !D! 点伤害。"
@@ -30,7 +288,16 @@
   },
   "BlueWhiteWoodenShield": {
     "NAME": "蓝白木盾",
-    "DESCRIPTION": "获得与你当前抽牌堆中牌数相等的 格挡 值。 NL （获得 !B! 点 格挡 。） NL 获得 !M! 层 弹反 。"
+    "DESCRIPTION": "在你的回合开始时，获得与你当前抽牌堆中牌数相等的 格挡 值。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时，获得与你当前抽牌堆中牌数相等的 格挡 值。"
+  },
+  "FlynnRing": {
+    "NAME": "弗林戒指",
+    "DESCRIPTION": "你每有一点负的 敏捷 ，额外造成 !M! %伤害。"
+  },
+  "RingOfFavor": {
+    "NAME": "宠爱戒指",
+    "DESCRIPTION": "你在每场战斗中第一次打出本牌时，获得 !M! 点 力量 ，在每回合开始时额外抽 !M! 张牌。 NL 如果这张牌被 消耗 ，失去 !M! 点 力量 ，在每回合开始时少抽 !M! 张牌。 NL 虚无 。"
   },
   "GrassCrestShield": {
     "NAME": "草纹盾",
@@ -71,8 +338,8 @@
   },
   "BloodVeil": {
     "NAME": "以血蒙眼",
-    "DESCRIPTION": "获得2层 脆弱 。 NL 给予5层 易伤 。 NL 给予5层 虚弱 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得2层 脆弱 。 NL 给予5层 易伤 。 NL 给予5层 虚弱 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !MD! 层 脆弱 。 NL 给予 !M! 层 易伤 。 NL 给予 !M! 层 虚弱 。 NL 用 *伤口 填满你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 !MD! 层 脆弱 。 NL 给予 !M! 层 易伤 。 NL 给予 !M! 层 虚弱 。 NL 用 *伤口 填满你的手牌。 NL 消耗 。"
   },
   "BloodhoundFinesse": {
     "NAME": "猎犬剑技",
@@ -94,8 +361,8 @@
   },
   "SymbolOfAvarice": {
     "NAME": "贪欲烙印",
-    "DESCRIPTION": "受到8点伤害，获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": "受到8点伤害，获得 [E] [E] [E] 。"
+    "DESCRIPTION": "受到 !M! 点伤害，获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "受到 !M! 点伤害，获得 [E] [E] [E] 。"
   },
   "Ubadachi": {
     "NAME": "姥断",
@@ -120,12 +387,12 @@
   },
   "ManikinShield": {
     "NAME": "密探小盾",
-    "DESCRIPTION": "获得 !M! 层 弹反 。 NL 在本回合 保留 你的手牌。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层 弹反 。 NL 在本回合 保留 你的手牌。 NL 下一回合获得 [E] 。"
+    "DESCRIPTION": "获得 !M! 层 弹反 。 NL 在本回合 保留 你的手牌。 NL 下一回合获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 弹反 。 NL 在本回合 保留 你的手牌。 NL 下一回合获得 [E] [E] 。"
   },
   "Valorheart": {
     "NAME": "果敢心",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 层 弹反 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌 。 NL 获得 !MS! 层 弹反 。"
   },
   "CirqueBlade": {
     "NAME": "圆刃刀",
@@ -145,12 +412,13 @@
   },
   "CeruleanDagger": {
     "NAME": "染蓝凶刀",
-    "DESCRIPTION": "成功 弹反 时，下一回合获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": "成功 弹反 时，下一回合获得 [E] [E] ，多抽2张牌。"
+    "DESCRIPTION": "成功 弹反 时，下一回合获得 [E] [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "成功 弹反 时，下一回合获得 [E] [E] [E] ，多抽3张牌。"
   },
   "WolfGreatshield": {
     "NAME": "狼大盾",
-    "DESCRIPTION": "获得等于敌人总伤害点 格挡 。 NL 消耗 。"
+    "DESCRIPTION": " 充能 。 NL 获得等于敌人总伤害点 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 充能 。 NL 获得等于敌人总伤害点 格挡 。 NL 消耗 。"
   },
   "WolfGreatsword": {
     "NAME": "狼大剑",
@@ -166,8 +434,8 @@
     },
     "AstoraGreatsword": {
     "NAME": "亚斯特拉大剑",
-    "DESCRIPTION": "造成 !D! 点伤害X次。 NL 给予 !M! 层 削韧 X次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害X+1次。 NL 给予 !M! 层 削韧 X+1次。"
+    "DESCRIPTION": " 充能 。 NL 造成 !D! 点伤害X次。 NL 给予 !M! 层 削韧 X次。",
+    "UPGRADE_DESCRIPTION": " 充能 。 NL 造成 !D! 点伤害X+1次。 NL 给予 !M! 层 削韧 X+1次。"
   },
     "GravelordSword": {
       "NAME": "墓王剑",
@@ -243,7 +511,7 @@
   },
   "SpikedShield": {
     "NAME": "刺针盾",
-    "DESCRIPTION": "获得 !M! 层 荆棘 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 荆棘 。"
   },
   "MantleOfThorns": {
     "NAME": "棘刺上身",
@@ -994,6 +1262,10 @@
     "NAME": "蘑菇王冠",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 在本回合内，你每打出一张牌，都获得 蘑菇 !M! 次。 NL 定时 !MS! 。"
   },
+  "InvertedStatue": {
+    "NAME": "颠倒像",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 交换抽牌堆和弃牌堆的所有牌。 NL 定时 !M! 。"
+  },
   "SellswordTwinblades": {
     "NAME": "佣兵对刀",
     "DESCRIPTION": "造成 !D! 点伤害2次。 NL 重放 2。"
@@ -1168,7 +1440,7 @@
   },
   "RiversOfBlood": {
     "NAME": "尸山血海",
-    "DESCRIPTION": "给予5层 出血 。 NL 给予自己 !M! 层 出血 。"
+    "DESCRIPTION": "给予所有敌人 !M! 层 出血 。 NL 给予自己 !MS! 层 出血 。"
   },
   "StTrinaSword": {
     "NAME": "托莉娜剑",
@@ -1332,6 +1604,24 @@
   "VisageShield": {
     "NAME": "颜面盾",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 对所有敌人造成 !D! 点奇术伤害。"
+  },
+  "GraftedDragon": {
+    "NAME": "接肢飞龙",
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! 点 敏捷 。 NL 你在 !M! 回合内无法 召唤 。"
+  },
+  "LongHorn": {
+    "NAME": "长笛子",
+    "DESCRIPTION": "随机对敌人造成 !D! 点奇术伤害 !M! 次。"
+  },
+  "CelebrantCleaver": {
+    "NAME": "庆典柴刀",
+    "DESCRIPTION": "只有当 召唤 时才能打出。 NL 对所有敌人造成 !D! 点伤害。 NL 失去 召唤 。",
+    "EXTENDED_DESCRIPTION": ["只有当 召唤 时才能打出。"]
+  },
+  "BeastclawGreathammer": {
+    "NAME": "兽爪大锤",
+    "DESCRIPTION": " 锦囊 。 NL 造成 !D! 点奇术伤害。 NL 给予 !M! 层 削韧 。",
+    "EXTENDED_DESCRIPTION": ["需要费用为0。"]
   },
   "GreatEpee": {
     "NAME": "大重剑",
@@ -2153,6 +2443,10 @@
     "NAME": "王朝剑技",
     "DESCRIPTION": "获得1层 振翼 。 NL 造成 !D! 点伤害。"
   },
+  "BlackKnife": {
+    "NAME": "黑刀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标敌人的意图是攻击，则抽 !M! 张牌。 NL 否则，给予敌人 !MS! 层 燃命 。"
+  },
   "IceRapier": {
     "NAME": "冰之刺剑",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标敌人的意图是攻击，你造成双倍伤害。"
@@ -2198,7 +2492,7 @@
   },
   "WingsOfSalvation": {
     "NAME": "救世展翼",
-    "DESCRIPTION": "获得 !M! 层 展翼 。"
+    "DESCRIPTION": "获得 !M! 层 展翼 。 NL 消耗 。"
   },
   "PhantomHelen": {
     "NAME": "幻影海伦",
@@ -2309,10 +2603,24 @@
     "DESCRIPTION": "造成 !D! 点 伤害，获得 !B! 点 格挡 。 NL 给予 !MP! 点 中毒 。 NL 给予 !MR! 点 猩红腐败 。 NL 给予 !MD! 点 燃命 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点 伤害，获得 !B! 点 格挡 。 NL 给予 !MP! 点 中毒 。 NL 给予 !MR! 点 猩红腐败 。 NL 给予 !MD! 点 燃命 。"
   },
+  "RallyingStandard": {
+    "NAME": "归于麾下",
+    "DESCRIPTION": " 召唤 ： 在你的回合开始时，获得当前 召唤 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 召唤 ： 在你的回合开始时，获得当前 召唤 。 NL 消耗 。"
+  },
+  "SpiritOfAsh": {
+    "NAME": "灰烬之灵",
+    "DESCRIPTION": "获得X点 灵力 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得X点 灵力 。"
+  },
+  "Speedster": {
+    "NAME": "速行者",
+    "DESCRIPTION": "抽 !M! X张牌。"
+  },
   "MoonlightSettles": {
     "NAME": "月光沉淀",
-    "DESCRIPTION": "获得 !M! [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! [E] 。"
+    "DESCRIPTION": " 保留 。 NL 获得 !M! [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 !M! [E] 。"
   },
   "LotteryTicket": {
     "NAME": "奖券",
@@ -2356,13 +2664,13 @@
   },
   "EstusFlask": {
     "NAME": "原素瓶",
-    "DESCRIPTION": " 保留 。 NL 回复 !M! 生命。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 回复 !M! 生命。 NL 抽1张牌。 NL 消耗 。"
+    "DESCRIPTION": " 保留 。 NL 充能 。 NL 回复 !M! 生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 充能 。 NL 回复 !M! 生命。 NL 抽1张牌。 NL 消耗 。"
   },
   "AshenEstusFlask": {
     "NAME": "原素灰瓶",
-    "DESCRIPTION": " 保留 。 NL 获得 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 [E] 。 NL 抽1张牌。 NL 消耗 。"
+    "DESCRIPTION": " 保留 。 NL 充能 。 NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 充能 。 NL 获得 [E] 。 NL 抽1张牌。 NL 消耗 。"
   },
   "SipAbyss": {
     "NAME": "啜饮深渊",

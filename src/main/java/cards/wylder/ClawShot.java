@@ -20,11 +20,11 @@ public class ClawShot extends CustomCard {
     public static final String ID = "ClawShot";
     private static final String IMG_PATH = "img/cards/wylder/ClawShot.png";
     private static final int COST = 0;
-    private static final int ATTACK_DMG = 3;
-    private static final int BLOCK_AMT = 3;
+    private static final int ATTACK_DMG = 4;
+    private static final int BLOCK_AMT = 2;
     private static final int DEXTERITY_LOSS = 1;
     private static final int DEXTERITY_RETURN = 1;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     public ClawShot() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

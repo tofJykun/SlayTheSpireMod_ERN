@@ -18,7 +18,7 @@ public class ManikinShield extends CustomCard {
     public static final String ID = "ManikinShield";
     private static final String IMG_PATH = "img/cards/wylder/ManikinShield.png";
     private static final int COST = 1;
-    private static final int PARRY = 2;
+    private static final int PARRY = 4;
     private static final int RETAIN_HAND = 1;
     private static final int NEXT_TURN_ENERGY = 1;
 
@@ -39,10 +39,8 @@ public class ManikinShield extends CustomCard {
                 new ParryPower((AbstractCreature)p, this.magicNumber), this.magicNumber));
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p,
                 new EquilibriumPower((AbstractCreature)p, RETAIN_HAND), RETAIN_HAND));
-        if (this.upgraded) {
-            addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p,
-                    new EnergizedPower((AbstractCreature)p, NEXT_TURN_ENERGY), NEXT_TURN_ENERGY));
-        }
+        int energy = NEXT_TURN_ENERGY + (upgraded ? 1 : 0);
+        addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, energy), energy));
     }
 
     @Override

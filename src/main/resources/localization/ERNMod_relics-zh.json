@@ -1,4 +1,14 @@
 {
+  "InvigoratingCuredMeat": {
+    "NAME": "健壮肉干",
+    "FLAVOR": "",
+    "DESCRIPTIONS": ["每当你 #y休息 时，将你的最大生命值提升 #b7 。"]
+  },
+  "SunStone": {
+    "NAME": "太阳石",
+    "FLAVOR": "",
+    "DESCRIPTIONS": ["在每场战斗开始时，获得 #b3 点 #y力量 ， #b3 点 #y敏捷 和 #b3 点 #y感应 。 NL 拾起时，获得 #b999 #y金币 。"]
+  },
   "MagicCocktail": {
     "NAME": "混合魔法",
     "FLAVOR": "隐士的技艺。",
@@ -83,11 +93,18 @@
       "如果你的牌组中有大于等于 #b3 张 #y罕见攻击牌 ，获得 #b3 点 #y力量 。"
     ]
   },
+  "ArsenalCharm": {
+    "NAME": "众武护符",
+    "FLAVOR": "肩负众武，步履渐沉。",
+    "DESCRIPTIONS": [
+      "每回合开始获得 [E] 。在每场战斗开始时，失去 #b1 点 #y敏捷 。"
+    ]
+  },
   "TransposingKiln": {
     "NAME": "冶炼炉",
     "FLAVOR": "残缺之物在炉中沉默，等待成为另一种形状。",
     "DESCRIPTIONS": [
-      "在每场战斗开始时，你可以从 #b3 张随机普通牌中选择 #b1 张，用这张牌填满你的手牌。"
+      "在每场战斗开始时，你可以从 #b3 张随机牌中选择 #b1 张，用这张牌填满你的手牌。"
     ]
   },
   "ToastyMittens": {
@@ -103,6 +120,16 @@
     "DESCRIPTIONS": [
       "你在每场战斗中第 #b1 次损伤生命时，在下 #b1 回合多抽 #b5 张牌，获得 [E] [E] 。"
     ]
+  },
+  "NanoAlloy": {
+    "NAME": "纳米合金",
+    "FLAVOR": "细微的金属颗粒自行排列成甲。",
+    "DESCRIPTIONS": ["在每场战斗开始时，获得 #b5 层 #y覆甲 。"]
+  },
+  "KnightRing": {
+    "NAME": "骑士戒指",
+    "FLAVOR": "以精准的防守换取反击的力量。",
+    "DESCRIPTIONS": ["每当你成功 #y弹反 时，获得 #b3 点 #y力量 。"]
   },
   "SilverPendant": {
     "NAME": "银项链",

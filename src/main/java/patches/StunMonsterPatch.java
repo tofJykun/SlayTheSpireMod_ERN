@@ -11,6 +11,7 @@ import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 import powers.DelayedStunPower;
+import powers.LessLikelyToBeTargetedPower;
 import powers.StunPower;
 
 public class StunMonsterPatch {
@@ -18,7 +19,7 @@ public class StunMonsterPatch {
     public static class RollMovePatch {
         @SpirePrefixPatch
         public static SpireReturn<Void> prefix(AbstractMonster __instance) {
-            if (__instance.hasPower(StunPower.POWER_ID)) {
+            if (__instance.hasPower(StunPower.POWER_ID) || LessLikelyToBeTargetedPower.isReplacingIntent(__instance)) {
                 return SpireReturn.Return(null);
             }
             return SpireReturn.Continue();
@@ -35,7 +36,8 @@ public class StunMonsterPatch {
                     if (methodCall.getClassName().equals(AbstractMonster.class.getName())
                             && methodCall.getMethodName().equals("takeTurn")) {
                         methodCall.replace("if (!((com.megacrit.cardcrawl.monsters.AbstractMonster)$0).hasPower(\""
-                                + StunPower.POWER_ID + "\")) { powers.PostureBreakPower.beginTurn($0); $_ = $proceed($$); }");
+                                + StunPower.POWER_ID + "\")) { powers.PostureBreakPower.beginTurn($0); "
+                                + "if (!powers.LessLikelyToBeTargetedPower.takeTurn($0)) { $_ = $proceed($$); } }");
                     }
                 }
             };
@@ -52,7 +54,8 @@ public class StunMonsterPatch {
                     if (methodCall.getMethodName().equals("hasPower")) {
                         methodCall.replace("$_ = ($1.equals(\"Artifact\") && this.powerToApply != null && "
                                 + "(this.powerToApply.ID.equals(\"" + StunPower.POWER_ID + "\") || "
-                                + "this.powerToApply.ID.equals(\"" + DelayedStunPower.POWER_ID + "\"))) "
+                                + "this.powerToApply.ID.equals(\"" + DelayedStunPower.POWER_ID + "\") || "
+                                + "this.powerToApply.ID.equals(\"" + LessLikelyToBeTargetedPower.POWER_ID + "\"))) "
                                 + "? false : $proceed($$);");
                     }
                 }

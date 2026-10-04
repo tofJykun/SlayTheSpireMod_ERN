@@ -18,7 +18,7 @@ public class NoMoney extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/duchess/NoMoney.png";
     private static final int COST = 0;
-    private static final int BLOCK = 12;
+    private static final int BLOCK = 15;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public NoMoney() {

@@ -57,6 +57,11 @@ public class SpiritPower extends AbstractPower {
         card.isMagicNumberModified = card.magicNumber != card.baseMagicNumber;
     }
 
+    public static int summonBlock(AbstractCreature creature, int baseBlock) {
+        AbstractPower spirit = creature == null ? null : creature.getPower(POWER_ID);
+        return Math.max(0, baseBlock + (spirit == null ? 0 : spirit.amount));
+    }
+
     private static boolean isPhantomCard(AbstractCard card) {
         return card instanceof AbstractPhantomCard;
     }

@@ -80,11 +80,9 @@ public class TransposingKilnAction extends AbstractGameAction {
 
     private static ArrayList<AbstractCard> generateCardChoices() {
         ArrayList<AbstractCard> candidates = new ArrayList<>();
-        for (AbstractCard card : AbstractDungeon.srcCommonCardPool.group) {
-            if (!card.hasTag(AbstractCard.CardTags.HEALING)) {
-                candidates.add(card);
-            }
-        }
+        addEligibleCards(candidates, AbstractDungeon.srcCommonCardPool.group);
+        addEligibleCards(candidates, AbstractDungeon.srcUncommonCardPool.group);
+        addEligibleCards(candidates, AbstractDungeon.srcRareCardPool.group);
 
         ArrayList<AbstractCard> choices = new ArrayList<>();
         int targetCount = Math.min(CHOICE_COUNT, candidates.size());
@@ -97,5 +95,13 @@ public class TransposingKilnAction extends AbstractGameAction {
             choices.add(card);
         }
         return choices;
+    }
+
+    private static void addEligibleCards(ArrayList<AbstractCard> target, ArrayList<AbstractCard> source) {
+        for (AbstractCard card : source) {
+            if (!card.hasTag(AbstractCard.CardTags.HEALING)) {
+                target.add(card);
+            }
+        }
     }
 }

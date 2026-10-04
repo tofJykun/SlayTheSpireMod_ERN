@@ -1,4 +1,20 @@
 {
+  "PlatingPotion": {
+    "NAME": "Plating Potion",
+    "DESCRIPTIONS": ["Gain #b%d #yPlating."]
+  },
+  "BagOfRolls": {
+    "NAME": "Bag of Rolls",
+    "DESCRIPTIONS": ["Fill your hand with #yPita #yBread.", "Fill your hand with #yPita #yBread+."]
+  },
+  "ClarityPotion": {
+    "NAME": "Clarity Potion",
+    "DESCRIPTIONS": ["Draw #b%d cards and gain #b%d Energy. At the start of your next #b2 turns, draw #b%d cards and gain #b%d Energy."]
+  },
+  "EndurancePotion": {
+    "NAME": "Endurance Potion",
+    "DESCRIPTIONS": ["#yRetain your hand for #b%d turns."]
+  },
   "BulkFirePotion": {
     "NAME": "Bulk Fire Potion",
     "DESCRIPTIONS": [

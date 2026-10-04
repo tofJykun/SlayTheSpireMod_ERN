@@ -1,0 +1,53 @@
+package powers;
+
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+
+public class RidiculePower extends AbstractPower {
+    public static final String POWER_ID = "RidiculePower";
+    private static final PowerStrings STRINGS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+
+    public RidiculePower(AbstractCreature owner, int amount) {
+        this.ID = POWER_ID;
+        this.name = STRINGS.NAME;
+        this.owner = owner;
+        this.amount = amount;
+        this.type = PowerType.BUFF;
+        this.isTurnBased = true;
+        PowerIconHelper.load(this, POWER_ID);
+        updateDescription();
+    }
+
+    @Override
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        if (info != null && info.owner instanceof AbstractMonster && info.owner != owner
+                && info.type == DamageInfo.DamageType.NORMAL) {
+            flash();
+            addToTop(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
+        }
+        return damageAmount;
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        addToBot(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        updateDescription();
+    }
+
+    @Override
+    public void updateDescription() {
+        description = STRINGS.DESCRIPTIONS[0] + amount + STRINGS.DESCRIPTIONS[1];
+    }
+}

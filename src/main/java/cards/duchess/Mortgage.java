@@ -18,8 +18,8 @@ public class Mortgage extends CustomCard {
     public static final String ID = "Mortgage";
     private static final String IMG_PATH = "img/cards/duchess/Mortgage.png";
     private static final int COST = 1;
-    private static final int GOLD = 35;
-    private static final int UPGRADED_GOLD = 45;
+    private static final int GOLD = 40;
+    private static final int UPGRADED_GOLD = 50;
     private static final int STAT_LOSS = 1;
 
     public Mortgage() {

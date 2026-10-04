@@ -17,7 +17,7 @@ public class SilverPendant extends CustomRelic {
 
     public SilverPendant() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
-                RelicTier.RARE, AbstractRelic.LandingSound.CLINK);
+                RelicTier.UNCOMMON, AbstractRelic.LandingSound.CLINK);
     }
 
     @Override

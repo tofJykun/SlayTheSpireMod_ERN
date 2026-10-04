@@ -86,8 +86,8 @@ public class Undertaker extends CustomPlayer {
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
                 Settings.language == Settings.GameLanguage.ZHS
-                        ? "信奉力量与序的修女，上帝掷骰子与否在一念之间。 NL 祷告时总在思考吃什么，不喜欢吃手指饼干。"
-                        : "A nun who puts her faith in strength and order; whether God plays dice hinges on a single thought. NL She always thinks about what to eat while praying and dislikes ladyfinger biscuits.",
+                        ? "信奉力量与序的修女，上帝掷骰子与否在一念之间。 NL 喜欢吃章鱼，不喜欢吃手指饼干。"
+                        : "A nun who puts her faith in strength and order; whether God plays dice hinges on a single thought. NL She enjoys eating octopus but dislikes ladyfinger biscuits.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }

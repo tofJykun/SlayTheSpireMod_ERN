@@ -21,7 +21,7 @@ public class CrowQuills extends CustomCard {
 
     public CrowQuills() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Wylder_COLOR, CardRarity.COMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Wylder_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     private static CardStrings getCardStrings() {

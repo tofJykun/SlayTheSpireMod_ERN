@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class Greatsword extends CustomCard {
     public static final String ID = "Greatsword";
     private static final String IMG_PATH = "img/cards/wylder/Greatsword.png";
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int DAMAGE = 30;
     private static final int UPGRADE_PLUS_DMG = 10;
 

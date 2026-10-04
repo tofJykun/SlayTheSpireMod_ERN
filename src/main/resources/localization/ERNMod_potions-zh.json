@@ -1,4 +1,20 @@
 {
+  "PlatingPotion": {
+    "NAME": "覆甲药水",
+    "DESCRIPTIONS": ["获得 #b%d 层 #y覆甲 。"]
+  },
+  "BagOfRolls": {
+    "NAME": "袋装面包",
+    "DESCRIPTIONS": ["用 #y皮塔饼 填满你的手牌。", "用 #y皮塔饼+ 填满你的手牌。"]
+  },
+  "ClarityPotion": {
+    "NAME": "明晰药水",
+    "DESCRIPTIONS": ["抽 #b%d 张牌，获得 #b%d 点能量。在你的下 #b2 回合开始时，抽 #b%d 张牌，获得 #b%d 点能量。"]
+  },
+  "EndurancePotion": {
+    "NAME": "耐力药水",
+    "DESCRIPTIONS": ["在 #b%d 回合内 #y保留 你的手牌。"]
+  },
   "BulkFirePotion": {
     "NAME": "散装火焰药水",
     "DESCRIPTIONS": [

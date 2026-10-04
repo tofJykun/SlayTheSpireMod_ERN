@@ -16,7 +16,7 @@ public class SlimeMold extends CustomCard {
     public static final String ID = "SlimeMold";
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/duchess/SlimeMold.png";
-    private static final int COST = 3;
+    private static final int COST = 2;
 
     public SlimeMold() {
         super(ID, CARD_STRINGS.NAME, IMG_PATH, COST, CARD_STRINGS.DESCRIPTION,

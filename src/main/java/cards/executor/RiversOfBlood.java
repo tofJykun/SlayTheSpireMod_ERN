@@ -17,14 +17,14 @@ public class RiversOfBlood extends CustomCard {
     public static final String ID = "RiversOfBlood";
     private static final String IMG_PATH = "img/cards/executor/RiversOfBlood.png";
     private static final int COST = 1;
-    private static final int ENEMY_BLOODLOSS = 5;
+    private static final int ENEMY_BLOODLOSS = 6;
     private static final int SELF_BLOODLOSS = 3;
     private static final int UPGRADE_REDUCE_SELF_BLOODLOSS = 1;
 
     public RiversOfBlood() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Executor_COLOR, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        this.baseMagicNumber = SELF_BLOODLOSS;
+        this.baseMagicNumber = ENEMY_BLOODLOSS;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -32,18 +32,22 @@ public class RiversOfBlood extends CustomCard {
         return CardCrawlGame.languagePack.getCardStrings(ID);
     }
 
+    public int getSelfBloodloss() {
+        return SELF_BLOODLOSS - (upgraded ? UPGRADE_REDUCE_SELF_BLOODLOSS : 0);
+    }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             if (!monster.isDeadOrEscaped()) {
                 addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)monster, (AbstractCreature)p,
-                        new BloodlossPower((AbstractCreature)monster, ENEMY_BLOODLOSS),
-                        ENEMY_BLOODLOSS, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                        new BloodlossPower((AbstractCreature)monster, this.magicNumber),
+                        this.magicNumber, AbstractGameAction.AttackEffect.SLASH_HEAVY));
             }
         }
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p,
-                new BloodlossPower((AbstractCreature)p, this.magicNumber),
-                this.magicNumber, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                new BloodlossPower((AbstractCreature)p, getSelfBloodloss()),
+                getSelfBloodloss(), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 
     @Override
@@ -55,7 +59,7 @@ public class RiversOfBlood extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(-UPGRADE_REDUCE_SELF_BLOODLOSS);
+            initializeDescription();
         }
     }
 }

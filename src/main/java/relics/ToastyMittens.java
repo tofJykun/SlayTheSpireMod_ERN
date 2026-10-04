@@ -16,7 +16,7 @@ public class ToastyMittens extends CustomRelic {
 
     public ToastyMittens() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
-                RelicTier.BOSS, AbstractRelic.LandingSound.FLAT);
+                RelicTier.SHOP, AbstractRelic.LandingSound.FLAT);
     }
 
     @Override
