@@ -1,4 +1,16 @@
 {
+  "SummonPotion": {
+    "NAME": "Summon Potion",
+    "DESCRIPTIONS": ["Gain a random #ySummon .", "Gain the same random #ySummon twice."]
+  },
+  "WalnutMilk": {
+    "NAME": "Walnut Milk",
+    "DESCRIPTIONS": ["Lose all Energy. For each Energy lost, gain #b%d #ySpirit and #yFaith ."]
+  },
+  "SpiritPotion": {
+    "NAME": "Spirit Potion",
+    "DESCRIPTIONS": ["Gain #b%d #ySpirit."]
+  },
   "PlatingPotion": {
     "NAME": "Plating Potion",
     "DESCRIPTIONS": ["Gain #b%d #yPlating."]

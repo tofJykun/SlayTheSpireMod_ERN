@@ -41,7 +41,8 @@ public class SoarPower extends AbstractPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.owner != null && shouldReduceDamage(info.type) && damageAmount > 0) {
+        if (info.owner != null && (shouldReduceDamage(info.type)
+                || (amount > 0 && info.owner == owner && info.type == DamageInfo.DamageType.THORNS)) && damageAmount > 0) {
             flash();
             addToTop((AbstractGameAction)new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
         }

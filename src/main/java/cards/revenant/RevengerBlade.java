@@ -25,7 +25,7 @@ public class RevengerBlade extends CustomCard {
                 "img/cards/revenant/RevengerBlade.png", 1,
                 CardCrawlGame.languagePack.getCardStrings(ID).DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.Revenant_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = 9;
+        this.baseDamage = 12;
         this.baseMagicNumber = this.magicNumber = 2;
     }
 

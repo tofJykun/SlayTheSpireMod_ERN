@@ -30,6 +30,8 @@ public class DredgeMossClump extends AbstractPotion {
         this.description = potionStrings.DESCRIPTIONS[0] + this.potency + potionStrings.DESCRIPTIONS[1];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(GreyHealthPower.NAME, GreyHealthPower.DESCRIPTIONS[0]));
+        this.tips.add(new PowerTip(GreyHealthPlusPower.NAME, GreyHealthPlusPower.DESCRIPTIONS[0]));
     }
 
     @Override

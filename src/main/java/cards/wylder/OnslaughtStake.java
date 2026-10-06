@@ -25,6 +25,8 @@ public class OnslaughtStake extends CustomCard {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.Wylder_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = ATTACK_DMG;
+        this.baseMagicNumber = this.magicNumber = STUN;
+        this.exhaust = true;
     }
 
     private static CardStrings getCardStrings() {
@@ -40,7 +42,7 @@ public class OnslaughtStake extends CustomCard {
                 new DamageInfo((AbstractCreature)p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p,
-                new StunPower(m, STUN), STUN));
+                new StunPower(m, this.magicNumber), this.magicNumber));
     }
 
     @Override
@@ -52,9 +54,7 @@ public class OnslaughtStake extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.selfRetain = true;
-            this.rawDescription = getCardStrings().UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 }

@@ -68,6 +68,7 @@ public class CraftmanCreation extends AbstractScheduledCard {
         if (bodyCard != null) this.uuid = bodyCard.uuid;
         this.reinforcementMaterial = copyCard(reinforcementMaterial);
         InsuranceField.inherit(this, this.bodyCard);
+        patches.ShadowGuardField.inherit(this, this.bodyCard);
         syncFromParts();
     }
 

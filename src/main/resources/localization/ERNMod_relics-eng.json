@@ -278,11 +278,31 @@
       "At the start of your first #b3 turns, summon #ySummon: #yHelen, #ySummon: #yFrederick, and #ySummon: #ySebastian in order."
     ]
   },
+  "WhetstoneKnife": {
+    "NAME": "Whetstone Knife",
+    "FLAVOR": "Sharpen the blades of those who fight beside you.",
+    "DESCRIPTIONS": ["#ySlash #yAttacks deal #b3 additional damage."]
+  },
+  "DriedFingers": {
+    "NAME": "Dried Fingers",
+    "FLAVOR": "Call upon distant companions.",
+    "DESCRIPTIONS": ["Whenever you #ySummon , gain #b3 #yBlock ."]
+  },
+  "TripleBurrows": {
+    "NAME": "Triple Burrows",
+    "FLAVOR": "Always keep two plans in reserve.",
+    "DESCRIPTIONS": ["The first #yFinal #yPlan card you play each combat is played #b3 times."]
+  },
+  "TrialSizePackaging": {
+    "NAME": "Trial-Size Packaging",
+    "FLAVOR": "Try a sample first.",
+    "DESCRIPTIONS": ["The first time you play a #yFinal #yPlan card each turn, draw #b2 cards."]
+  },
   "SoulForge": {
     "NAME": "Soul Forge",
     "FLAVOR": "The ember of a spirit reforged into strength.",
     "DESCRIPTIONS": [
-      "At the start of your turn, if you have #ySummon , gain [E] ."
+      "The first time you #ySummon each turn, gain [E] ."
     ]
   },
   "YearsEntwined": {

@@ -17,7 +17,7 @@ public class BudgetTravel extends CustomCard {
         super(ID, CardCrawlGame.languagePack.getCardStrings(ID).NAME,
                 "img/cards/revenant/BudgetTravel.png", 0,
                 CardCrawlGame.languagePack.getCardStrings(ID).DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Revenant_COLOR, CardRarity.COMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Revenant_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 4;
     }
 

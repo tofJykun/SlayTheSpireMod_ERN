@@ -19,7 +19,7 @@ public class PowerWithin extends CustomCard {
     private static final int COST = 1;
     private static final int VULNERABLE = 2;
     private static final int SPIRIT = 4;
-    private static final int UPGRADE_PLUS_SPIRIT = 1;
+    private static final int UPGRADE_PLUS_SPIRIT = 2;
 
     public PowerWithin() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

@@ -21,7 +21,8 @@ public class PerfectScore extends CustomCard {
 
     public PerfectScore() {
         super(ID, CARD_STRINGS.NAME, IMG_PATH, COST, CARD_STRINGS.DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.Revenant_COLOR, CardRarity.RARE, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Revenant_COLOR, CardRarity.RARE, CardTarget.SELF);
+        this.exhaust = true;
         this.isEthereal = true;
     }
 

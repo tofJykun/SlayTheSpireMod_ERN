@@ -2,9 +2,7 @@ package cards.tempcards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,7 +11,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import powers.AbstractSummonPower;
 import powers.AsimiEchoPower;
-import powers.SpiritPower;
 import powers.SummonAsimi;
 import summons.SummonAnimationManager;
 
@@ -21,13 +18,10 @@ public class PhantomAsimi extends AbstractPhantomCard {
     public static final String ID = "PhantomAsimi";
     private static final String IMG_PATH = "img/cards/tempcards/PhantomAsimi.png";
     private static final int COST = 1;
-    private static final int DAMAGE = 5;
 
     public PhantomAsimi() {
-        super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.ATTACK,
-                CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY);
-        this.baseMagicNumber = DAMAGE;
-        this.magicNumber = this.baseMagicNumber;
+        super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.SKILL,
+                CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
         this.exhaust = true;
         this.isEthereal = true;
     }
@@ -59,27 +53,11 @@ public class PhantomAsimi extends AbstractPhantomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        SpiritPower.applyPhantomNumber(this);
         SummonAnimationManager.triggerAttack(SummonAsimi.SUMMON_KEY);
-        addToBot((AbstractGameAction)new DamageAction((AbstractCreature)m,
-                new DamageInfo((AbstractCreature)p, this.magicNumber, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         if (!p.hasPower(AsimiEchoPower.POWER_ID)) {
             addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p,
                     new AsimiEchoPower((AbstractCreature)p), 1));
         }
-    }
-
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        SpiritPower.applyPhantomNumber(this);
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
-        SpiritPower.applyPhantomNumber(this);
     }
 
     @Override
@@ -91,6 +69,7 @@ public class PhantomAsimi extends AbstractPhantomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeBaseCost(0);
         }
     }
 }

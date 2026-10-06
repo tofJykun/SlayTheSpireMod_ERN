@@ -69,7 +69,8 @@ public class HoverPower extends AbstractPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.owner != null && shouldReduceDamage(info.type)) {
+        if (info.owner != null && (shouldReduceDamage(info.type)
+                || (amount > 0 && info.owner == owner && info.type == DamageInfo.DamageType.THORNS))) {
             flash();
             if (this.amount == 1) {
                 StormcallerPower.triggerHoverDepleted(this.owner);

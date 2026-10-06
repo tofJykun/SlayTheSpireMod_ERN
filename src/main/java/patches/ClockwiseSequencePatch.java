@@ -2,6 +2,7 @@ package patches;
 
 import actions.AlphaToOmegaSequencer;
 import actions.ClockwiseSequencer;
+import actions.CoordinatedAttackSequencer;
 import actions.PackagingSequencer;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
@@ -12,6 +13,7 @@ public class ClockwiseSequencePatch {
     public static class UpdatePatch {
         @SpirePostfixPatch
         public static void postfix(GameActionManager __instance) {
+            CoordinatedAttackSequencer.resumeIfIdle(__instance);
             PackagingSequencer.resumeIfIdle(__instance);
             ClockwiseSequencer.resumeIfIdle(__instance);
             AlphaToOmegaSequencer.resumeIfIdle(__instance);

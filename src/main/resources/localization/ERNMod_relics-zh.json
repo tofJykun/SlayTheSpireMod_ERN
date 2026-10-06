@@ -278,11 +278,31 @@
       "在你的前 #b3 个回合开始时，依次 #y召唤：海伦 ， #y召唤：弗雷德利克 ， #y召唤：塞巴斯蒂安 。"
     ]
   },
+  "WhetstoneKnife": {
+    "NAME": "砥石小刀",
+    "FLAVOR": "为并肩而战的同伴磨砺锋刃。",
+    "DESCRIPTIONS": [" #y共击 #y攻击牌 额外造成 #b3 点伤害。"]
+  },
+  "DriedFingers": {
+    "NAME": "干缩手指",
+    "FLAVOR": "呼唤远方的同伴。",
+    "DESCRIPTIONS": ["每当你 #y召唤 时，获得 #b3 点 #y格挡 。"]
+  },
+  "TripleBurrows": {
+    "NAME": "狡兔",
+    "FLAVOR": "凡事多留两手。",
+    "DESCRIPTIONS": ["你每场战斗打出的第 #b1 张 #y锦囊 牌会打出 #b3 次。"]
+  },
+  "TrialSizePackaging": {
+    "NAME": "试用赠品",
+    "FLAVOR": "先试一份。",
+    "DESCRIPTIONS": ["你在每回合第一次打出 #y锦囊 牌时，抽 #b2 张牌。"]
+  },
   "SoulForge": {
     "NAME": "灵魂熔炉",
     "FLAVOR": "把幽魂的余烬重新锻成力量。",
     "DESCRIPTIONS": [
-      "在你的回合开始时，如果有 #y召唤 ，获得 [E] 。"
+      "你在每回合第一次 #y召唤 时，获得 [E] 。"
     ]
   },
   "YearsEntwined": {

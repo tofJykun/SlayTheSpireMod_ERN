@@ -18,7 +18,7 @@ public class JellyfishShield extends CustomCard {
 
     public JellyfishShield() {
         super(ID, strings().NAME, IMG_PATH, -1, strings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Revenant_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Revenant_COLOR, CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = 5;
     }
 

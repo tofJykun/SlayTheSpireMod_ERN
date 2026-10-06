@@ -1,4 +1,118 @@
 {
+  "Mischief": {
+    "NAME": "Mischief",
+    "DESCRIPTION": "Can only be played while Summoning. NL Exhaust up to !M! cards from your hand. NL Add that many Slash cards for your current Summon to your hand.",
+    "EXTENDED_DESCRIPTION": ["Can only be played while Summoning."]
+  },
+  "Reimbursement": {
+    "NAME": "Reimbursement",
+    "DESCRIPTION": "All Slash cards cost 0."
+  },
+  "SnailAdvent": {
+    "NAME": "Snail Advent",
+    "DESCRIPTION": "Summon: Sebastian. NL Draw !M! cards. NL Exhaust."
+  },
+  "FatalAppetite": {
+    "NAME": "Fatal Appetite",
+    "DESCRIPTION": "Lose all Hover. NL Gain !M! Max HP for every !MS! stack lost. NL (Gain up to !MD! Max HP.) NL Exhaust."
+  },
+  "SpiritInfusedFist": {
+    "NAME": "Spirit-Infused Fist",
+    "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for every !MS! Spirit you have."
+  },
+  "Souleater": {
+    "NAME": "Souleater",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills the enemy, gain !M! Spirit."
+  },
+  "SpiritGeyser": {
+    "NAME": "Spirit Geyser",
+    "DESCRIPTION": "Deal !D! thaumaturgy damage to ALL enemies. NL Lose !M! Spirit this turn."
+  },
+  "GiantDoorShield": {
+    "NAME": "Giant Door Shield",
+    "DESCRIPTION": "Lockout: Lose Lockout. NL Otherwise, gain Lockout.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Lockout: Lose Lockout. NL Otherwise, gain Lockout."
+  },
+  "Solidify": {
+    "NAME": "Solidify",
+    "DESCRIPTION": "Gain Block equal to your Plating."
+  },
+  "GreatClingingBone": {
+    "NAME": "Great Clinging Bone",
+    "DESCRIPTION": "Deal !D! damage. NL Summon: Sebastian."
+  },
+  "Milady": {
+    "NAME": "Milady",
+    "DESCRIPTION": "Deal !D! damage. NL Summon: Helen. NL Add !M! additional *Phantom *Helen to your hand."
+  },
+  "LadleStrike": {
+    "NAME": "Ladle Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Summon: Frederick."
+  },
+  "ManikinClaws": {
+    "NAME": "Manikin Claws",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards from the bottom of your draw pile."
+  },
+  "WraithCallingBell": {
+    "NAME": "Wraith-Calling Bell",
+    "DESCRIPTION": "Deal !D! Thaumaturgy damage. NL Whenever you play a 0-cost card other than *Wraith-Calling *Bell, return this card from your discard pile to your hand."
+  },
+  "CoordinatedAttack": {
+    "NAME": "Coordinated Attack",
+    "DESCRIPTION": "Deal !D! damage. NL Play all Slash cards in your hand against the target enemy."
+  },
+  "WorkStudy": {
+    "NAME": "Work Study",
+    "DESCRIPTION": "Final Plan. NL Gain !M! Gold. NL Exhaust. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Final Plan. NL Gain !M! Gold. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["You can only play this card if you have 0 Energy."]
+  },
+  "Confidence": {
+    "NAME": "Confidence",
+    "DESCRIPTION": "Final Plan. NL Exhaust all Slash cards in your hand. NL Gain !M! Faith.",
+    "EXTENDED_DESCRIPTION": ["You can only play this card if you have 0 Energy."]
+  },
+  "VerticalAlliance": {
+    "NAME": "Vertical Alliance",
+    "DESCRIPTION": "Exhaust a Slash card in your hand. NL Deal !D! damage. NL Draw !M! additional cards next turn.",
+    "EXTENDED_DESCRIPTION": ["You must have a Slash card in your hand.", "Choose a Slash card to Exhaust."]
+  },
+  "Conciliation": {
+    "NAME": "Conciliation",
+    "DESCRIPTION": "If this is not a Boss combat, end combat after you Summon !M! times. NL If combat ends this way, receive no card rewards. NL Exhaust."
+  },
+  "HorizontalAlliance": {
+    "NAME": "Horizontal Alliance",
+    "DESCRIPTION": "Exhaust a Slash card in your hand. NL Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "You must have a Slash card in your hand.",
+      "Choose a Slash card to Exhaust."
+    ]
+  },
+  "EyeOfDeath": {
+    "NAME": "Eye of Death",
+    "DESCRIPTION": "Can only be played while you have Summon. NL Apply !M! Deathblight. NL You cannot Summon for !MS! turns.",
+    "EXTENDED_DESCRIPTION": ["Can only be played while you have Summon."]
+  },
+  "ShadowGuard": {
+    "NAME": "Shadow Guard",
+    "DESCRIPTION": "Choose a card in your hand. Whenever you play it, play it an additional time. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in your hand. Whenever you play it, play it an additional time.",
+    "EXTENDED_DESCRIPTION": ["Choose a card in your hand without Shadow Guard.", " NL Shadow Guard."]
+  },
+  "HeartWall": {
+    "NAME": "Heart Wall",
+    "DESCRIPTION": "Gain !M! Artifact. NL Apply !M! Artifact to ALL enemies. NL Exhaust."
+  },
+  "BloodflameBlade": {
+    "NAME": "Bloodflame Blade",
+    "DESCRIPTION": "Whenever an attack deals unblocked damage this turn, apply !M! Bloodloss. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Whenever an attack deals unblocked damage this turn, apply !M! Bloodloss."
+  },
+  "CrucifixOfTheMadKing": {
+    "NAME": "Crucifix of the Mad King",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Then randomly do one of the following: deal !D! damage to ALL enemies, gain !M! Hover, or take !MD! damage."
+  },
   "BanditKnife": {
     "NAME": "Bandit Knife",
     "DESCRIPTION": "Deal !D! damage. NL If the target enemy is Stunned this turn, gain !M! Gold. NL Exhaust.",
@@ -35,8 +149,8 @@
     "NAME": "Tongues of Fire",
     "DESCRIPTION": "Charged. NL Exhaust a card in your hand. NL Deal !D! damage."
   },
-  "ChargedGrapefruit": {
-    "NAME": "Charged Grapefruit",
+  "ChargedBread": {
+    "NAME": "Charged Bread",
     "DESCRIPTION": "Charged. NL Gain [E] [E] [E]. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Charged. NL Gain [E] [E] [E]."
   },
@@ -319,8 +433,7 @@
   },
   "OnslaughtStake": {
     "NAME": "Onslaught Stake",
-    "DESCRIPTION": "Deal !D! damage. NL Stun the enemy for 1 turn.",
-    "UPGRADE_DESCRIPTION": " Retain. NL Deal !D! damage. NL Stun the enemy for 1 turn."
+    "DESCRIPTION": "Deal !D! damage. NL Stun the enemy for !M! turn(s). NL Exhaust."
   },
   "PitaBread": {
     "NAME": "Pita Bread",
@@ -417,8 +530,8 @@
   },
   "WolfGreatshield": {
     "NAME": "Wolf Greatshield",
-    "DESCRIPTION": "Charged. NL Gain Block equal to enemy total damage. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Charged. NL Gain Block equal to enemy total damage. NL Exhaust."
+    "DESCRIPTION": "Gain Block equal to enemy total damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain Block equal to enemy total damage. NL Exhaust."
   },
   "WolfGreatsword": {
     "NAME": "Wolf Greatsword",
@@ -1527,7 +1640,7 @@
   },
   "PhantomSlash": {
     "NAME": "Phantom Slash",
-    "DESCRIPTION": "Add the current Summon's Slash to your hand."
+    "DESCRIPTION": "Add !M! copies of your current Summon's Slash card to your hand."
   },
   "Invoke": {
     "NAME": "Invoke",
@@ -1567,7 +1680,7 @@
   },
   "PerfectScore": {
     "NAME": "Perfect Score",
-    "DESCRIPTION": "Enemies drop an additional Upgraded card reward. NL This effect disappears when you lose HP. NL Ethereal."
+    "DESCRIPTION": "Enemies drop an additional Upgraded card reward. NL This effect disappears when you lose HP. NL Exhaust. NL Ethereal."
   },
   "MoonStance": {
     "NAME": "Moon Stance",
@@ -1707,8 +1820,8 @@
   },
   "LotOfRunes": {
     "NAME": "Lot of Runes",
-    "DESCRIPTION": "Gain !M! Gold. NL Gain !MG! Insight. NL At the start of each turn, gain !MS! Grey Health.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Gold. NL Gain !MG! Insight. NL At the start of each turn, gain !MS! Grey Health."
+    "DESCRIPTION": "Gain !M! Gold. NL Gain !MG! Arcane. NL At the start of your turn, gain !MS! Grey Health.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Gold. NL Gain !MG! Arcane. NL At the start of your turn, gain !MS! Grey Health."
   },
   "MakeYourChoice": {
     "NAME": "Make Your Choice",
@@ -2492,29 +2605,28 @@
   },
   "PhantomHelen": {
     "NAME": "Phantom Helen",
-    "DESCRIPTION": "Helen deals !M! damage. NL Can only be played while Summon: Helen. NL Exhaust. NL Ethereal.",
+    "DESCRIPTION": "Helen deals !D! damage. NL Can only be played while Summon: Helen. NL Exhaust. NL Ethereal.",
     "EXTENDED_DESCRIPTION": [
       "Can only be played while Summon: Helen."
     ]
   },
   "PhantomFrederick": {
     "NAME": "Phantom Frederick",
-    "DESCRIPTION": "Frederick deals !M! damage, NL gain !M! Block. NL Can only be played while Summon: Frederick. NL Exhaust. NL Ethereal.",
+    "DESCRIPTION": "Frederick deals !D! damage, NL gain !M! Block. NL Can only be played while Summon: Frederick. NL Exhaust. NL Ethereal.",
     "EXTENDED_DESCRIPTION": [
       "Can only be played while Summon: Frederick."
     ]
   },
   "PhantomSebastian": {
     "NAME": "Phantom Sebastian",
-    "DESCRIPTION": "Gain [E] [E] . NL Draw !M! cards. NL Can only be played while Summon: Sebastian. NL Exhaust. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] . NL Draw !M! cards. NL Can only be played while Summon: Sebastian. NL Exhaust. NL Ethereal.",
+    "DESCRIPTION": "Gain !MD! Energy. NL Draw !M! cards. NL Can only be played while Summon: Sebastian. NL Exhaust. NL Ethereal.",
     "EXTENDED_DESCRIPTION": [
       "Can only be played while Summon: Sebastian."
     ]
   },
   "PhantomDoggo": {
     "NAME": "Phantom Doggo",
-    "DESCRIPTION": "Doggo deals !M! damage to all enemies, NL all enemies lose !M! Strength for 1 turn. NL Can only be played while Summon: Doggo. NL Exhaust. NL Ethereal.",
+    "DESCRIPTION": "Doggo deals !D! damage to all enemies, NL all enemies lose !M! Strength for 1 turn. NL Can only be played while Summon: Doggo. NL Exhaust. NL Ethereal.",
     "EXTENDED_DESCRIPTION": [
       "Can only be played while Summon: Doggo."
     ]
@@ -2574,8 +2686,8 @@
   },
   "ImpatientBall": {
     "NAME": "Impatient Ball",
-    "DESCRIPTION": "Gain 6 Spirit. NL At the start of each turn, lose 1 Spirit.",
-    "UPGRADE_DESCRIPTION": "Gain 6 Spirit. NL At the start of each turn, lose 1 Spirit. NL Draw 2 cards."
+    "DESCRIPTION": "Gain !M! Spirit. NL At the start of each turn, lose 1 Spirit. NL Draw 2 cards.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Spirit. NL At the start of each turn, lose 1 Spirit. NL Draw 3 cards."
   },
   "DoggoXD": {
     "NAME": "Doggo XD",
@@ -2589,7 +2701,7 @@
   },
   "PhantomAsimi": {
     "NAME": "Phantom Asimi",
-    "DESCRIPTION": "Asimi deals !M! damage. NL This turn, while Summon: Asimi is active, Asimi plays your played cards 1 additional time. NL Can only be played while Summon: Asimi. NL Exhaust. NL Ethereal.",
+    "DESCRIPTION": "This turn, Asimi plays your played cards 1 additional time. NL Can only be played while Summon: Asimi. NL Exhaust. NL Ethereal.",
     "EXTENDED_DESCRIPTION": [
       "Can only be played while Summon: Asimi."
     ]

@@ -16,12 +16,12 @@ import powers.AbstractSummonPower;
 public class PhantomSlash extends CustomCard {
     public static final String ID = "PhantomSlash";
     private static final String IMG_PATH = "img/cards/revenant/PhantomSlash.png";
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = 0;
 
     public PhantomSlash() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Revenant_COLOR, CardRarity.BASIC, CardTarget.SELF);
+        this.baseMagicNumber = this.magicNumber = 1;
     }
 
     private static CardStrings getCardStrings() {
@@ -32,7 +32,7 @@ public class PhantomSlash extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard phantomCard = AbstractSummonPower.makeActiveSummonPhantomCard((AbstractCreature)p);
         if (phantomCard != null) {
-            addToBot((AbstractGameAction)new MakeTempCardInHandAction(phantomCard, 1));
+            addToBot((AbstractGameAction)new MakeTempCardInHandAction(phantomCard, this.magicNumber));
         }
     }
 
@@ -53,7 +53,7 @@ public class PhantomSlash extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeMagicNumber(1);
         }
     }
 }

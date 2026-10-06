@@ -23,6 +23,7 @@ public class SpiritPower extends AbstractPower {
         this.amount = amount;
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
+        this.canGoNegative = true;
         updateDescription();
         PowerIconHelper.load(this, POWER_ID);
     }
@@ -39,7 +40,9 @@ public class SpiritPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.type = amount < 0 ? PowerType.DEBUFF : PowerType.BUFF;
+        this.description = (amount < 0 ? DESCRIPTIONS[2] : DESCRIPTIONS[0])
+                + Math.abs(amount) + DESCRIPTIONS[1];
     }
 
     public static void applyPhantomNumber(AbstractCard card) {

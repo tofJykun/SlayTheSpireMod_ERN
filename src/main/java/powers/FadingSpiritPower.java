@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -38,9 +39,23 @@ public class FadingSpiritPower extends AbstractPower {
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer && this.owner.hasPower(SpiritPower.POWER_ID)) {
-            this.owner.getPower(SpiritPower.POWER_ID).stackPower(-this.amount);
-        }
-        addToBot((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+        if (!isPlayer) return;
+        final int loss = amount;
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (isDone) return;
+                // Reverse the grant even when temporary loss removed the zero-stack power.
+                AbstractPower spirit = owner.getPower(SpiritPower.POWER_ID);
+                if (spirit != null) {
+                    spirit.stackPower(-loss);
+                } else if (loss != 0) {
+                    owner.powers.add(new SpiritPower(owner, -loss));
+                }
+                AbstractDungeon.onModifyPower();
+                isDone = true;
+            }
+        });
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 }

@@ -41,26 +41,35 @@ public class FragrantBranchOfYoreRewardPatch {
                 return;
             }
             int count = FragrantBranchOfYoreRewards.consume() + ExtraCardRewards.consume();
-            if (count <= 0 || !(room instanceof MonsterRoom) || AbstractDungeon.player == null) {
-                if (!(room instanceof MonsterRoom) || AbstractDungeon.player == null) {
-                    return;
-                }
+            if (room == null || AbstractDungeon.player == null) {
+                return;
+            }
+            boolean monsterRoom = room instanceof MonsterRoom;
+            if (!monsterRoom || count < 0) {
                 count = 0;
             }
-            if (shouldAddCovetousGoldReward()) {
+            if (general.ConciliationRewards.suppressCards(room)) {
+                if (shouldAddRustedGoldCoinRelicReward(room)) {
+                    __instance.rewards.add(new RewardItem(RelicRewardHelper.returnRandomEliteDropRelic()));
+                }
+                ConciliationRewardPatch.filter(room, __instance);
+                __instance.positionRewards();
+                return;
+            }
+            if (monsterRoom && shouldAddCovetousGoldReward()) {
                 count++;
             }
-            if (shouldAddSilverPickledReward()) {
+            if (monsterRoom && shouldAddSilverPickledReward()) {
                 count++;
             }
-            int rareRewardCount = shouldAddDowsingRodRareReward() ? 1 : 0;
-            boolean perfectScoreReward = shouldAddPerfectScoreReward(__instance, room);
+            int rareRewardCount = monsterRoom && shouldAddDowsingRodRareReward() ? 1 : 0;
+            int perfectScoreRewardCount = getPerfectScoreRewardCount(__instance, room);
             boolean addedRelicReward = false;
             if (shouldAddRustedGoldCoinRelicReward(room)) {
                 __instance.rewards.add(new RewardItem(RelicRewardHelper.returnRandomEliteDropRelic()));
                 addedRelicReward = true;
             }
-            if (count <= 0 && rareRewardCount <= 0 && !perfectScoreReward) {
+            if (count <= 0 && rareRewardCount <= 0 && perfectScoreRewardCount <= 0) {
                 if (addedRelicReward) {
                     __instance.positionRewards();
                 }
@@ -80,7 +89,7 @@ public class FragrantBranchOfYoreRewardPatch {
                     __instance.rewards.add(reward);
                 }
             }
-            if (perfectScoreReward) {
+            for (int i = 0; i < perfectScoreRewardCount; i++) {
                 RewardItem reward = createPerfectScoreReward();
                 if (reward.cards != null && reward.cards.size() > 0) {
                     __instance.rewards.add(reward);
@@ -130,21 +139,24 @@ public class FragrantBranchOfYoreRewardPatch {
         return true;
     }
 
-    private static boolean shouldAddPerfectScoreReward(CombatRewardScreen screen, AbstractRoom room) {
-        if (AbstractDungeon.player == null || !(room instanceof MonsterRoom)
+    private static int getPerfectScoreRewardCount(CombatRewardScreen screen, AbstractRoom room) {
+        // Event combats keep their EventRoom; noncombat event rewards must not use stale powers.
+        if (AbstractDungeon.player == null || room == null
+                || (!(room instanceof MonsterRoom) && !room.isBattleOver)
                 || !AbstractDungeon.player.hasPower(PerfectScorePower.POWER_ID)) {
-            return false;
+            return 0;
         }
         for (RewardItem reward : screen.rewards) {
             if (reward.type == RewardItem.RewardType.CARD) {
                 AbstractPower power = AbstractDungeon.player.getPower(PerfectScorePower.POWER_ID);
-                if (power != null) {
+                if (power != null && power.amount > 0) {
                     power.flash();
+                    return power.amount;
                 }
-                return true;
+                return 0;
             }
         }
-        return false;
+        return 0;
     }
 
     private static boolean shouldAddRustedGoldCoinRelicReward(AbstractRoom room) {

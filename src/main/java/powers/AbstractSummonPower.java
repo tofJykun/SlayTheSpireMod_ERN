@@ -113,6 +113,10 @@ public abstract class AbstractSummonPower extends AbstractPower {
         addToBot((AbstractGameAction)new GainBlockAction(this.owner, this.owner,
                 SpiritPower.summonBlock(this.owner, this.blockAmount)));
         addToBot((AbstractGameAction)new MakeTempCardInHandAction(this.phantomCard.makeStatEquivalentCopy(), 1));
+        AbstractPower conciliation = this.owner.getPower(ConciliationPower.POWER_ID);
+        if (this.owner.isPlayer && conciliation instanceof ConciliationPower) {
+            ((ConciliationPower)conciliation).onSummon();
+        }
     }
 
     private AbstractCard makePhantomCardCopy() {

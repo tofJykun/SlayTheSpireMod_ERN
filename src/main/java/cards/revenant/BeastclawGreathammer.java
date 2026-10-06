@@ -21,7 +21,7 @@ public class BeastclawGreathammer extends CustomCard {
     public BeastclawGreathammer() {
         super(ID, STRINGS.NAME, "img/cards/revenant/BeastclawGreathammer.png", 0,
                 STRINGS.DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Revenant_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ENEMY);
+                CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 12;
         baseMagicNumber = magicNumber = 2;
     }

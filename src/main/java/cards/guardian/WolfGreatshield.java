@@ -1,6 +1,7 @@
-package cards.wylder;
+package cards.guardian;
 
 import basemod.abstracts.CustomCard;
+import cards.wylder.WylderIntentHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,12 +15,12 @@ import patches.AbstractCardEnum;
 
 public class WolfGreatshield extends CustomCard {
     public static final String ID = "WolfGreatshield";
-    private static final String IMG_PATH = "img/cards/wylder/WolfGreatshield.png";
-    private static final int COST = 1;
+    private static final String IMG_PATH = "img/cards/guardian/WolfGreatshield.png";
+    private static final int COST = 2;
 
     public WolfGreatshield() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Wylder_COLOR, CardRarity.RARE, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Guardian_COLOR, CardRarity.RARE, CardTarget.SELF);
         this.baseBlock = 0;
         this.exhaust = true;
     }

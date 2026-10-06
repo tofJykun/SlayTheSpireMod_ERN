@@ -10,6 +10,7 @@ public class ArcaneRewardPatch {
     public static class CardRewardConstructorPatch {
         @SpirePostfixPatch
         public static void postfix(RewardItem __instance) {
+            if (general.ConciliationRewards.suppressCards(general.CombatState.currentRoom())) return;
             ArcanePower.tryAddRareCard(__instance.cards);
         }
     }

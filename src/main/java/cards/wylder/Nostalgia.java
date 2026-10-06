@@ -16,7 +16,7 @@ public class Nostalgia extends CustomCard {
 
     public Nostalgia() {
         super(ID, STRINGS.NAME, "img/cards/wylder/Nostalgia.png", 2, STRINGS.DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.Wylder_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                CardType.POWER, AbstractCardEnum.Wylder_COLOR, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 

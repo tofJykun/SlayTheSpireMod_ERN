@@ -1,4 +1,20 @@
 {
+  "GainSpiritAtEndOfTurnPower": {
+    "NAME": "Spirit Recovery",
+    "DESCRIPTIONS": ["At the end of your turn, gain #b", " #ySpirit ."]
+  },
+  "LockoutPower": {
+    "NAME": "Lockout",
+    "DESCRIPTIONS": ["Reduce damage taken by #b75% . You cannot play #yAttacks ."]
+  },
+  "ConciliationPower": {
+    "NAME": "Conciliation",
+    "DESCRIPTIONS": ["End combat after you #ySummon #b%d times after gaining this effect. Receive no card rewards if combat ends this way. NL Summoned #b%d times. Does not stack."]
+  },
+  "BloodflameBladePower": {
+    "NAME": "Bloodflame Blade",
+    "DESCRIPTIONS": ["Whenever an attack deals unblocked damage this turn, apply #b", " #yBloodloss to the target."]
+  },
   "ClarityPotionPower": {
     "NAME": "Clarity",
     "DESCRIPTIONS": ["At the start of your next turn, draw #b%d cards and gain #b%d Energy.", " NL At the start of the following turn, draw #b%d cards and gain #b%d Energy."]
@@ -208,6 +224,10 @@
       " Grey Health+."
     ]
   },
+  "LotOfRunesPower": {
+    "NAME": "Lot of Runes",
+    "DESCRIPTIONS": ["At the start of your turn, gain #b", " #yGrey #yHealth."]
+  },
   "StaggerPower": {
     "NAME": "Stagger",
     "DESCRIPTIONS": [
@@ -258,9 +278,9 @@
   "SoarPower": {
     "NAME": "Soar",
     "DESCRIPTIONS": [
-      "Reduces damage taken by 50% for the next #b",
+      "Reduces damage taken by #b50% for the next #b",
       " instances of damage.",
-      " NL Lose #b1 stack whenever you take unblocked attack damage."
+      " NL Includes attacks and self-damage. Lose #b1 stack whenever you take unblocked attack damage or self-damage."
     ]
   },
   "DeathblightPower": {
@@ -361,9 +381,9 @@
   "HoverPower": {
     "NAME": "Hover",
     "DESCRIPTIONS": [
-      "Reduces damage taken by 50% for the next #b",
+      "Reduces damage taken by #b50% for the next #b",
       " instances of damage.",
-      " NL Lose #b1 stack whenever you take attack damage. When stacks are at least #b10 and less than #b15, gain #yLofty. When stacks are at least #b15, gain #yDeep #ySpace."
+      " NL Includes attacks and self-damage. Lose #b1 stack whenever you take attack damage or self-damage. When stacks are at least #b10 and less than #b15, gain #yLofty. When stacks are at least #b15, gain #yDeep #ySpace."
     ]
   },
   "MantleOfThornsPower": {
@@ -845,7 +865,7 @@
   "RepeatingCrossbowPower": {
     "NAME": "Repeating Crossbow",
     "DESCRIPTIONS": [
-      "If you have Summon: Helen, played *Phantom *Helen is played 2 additional times."
+      "If you have #ySummon: #yHelen, *Phantom *Helen costs 0 and is played 2 additional times."
     ]
   },
   "BlackButlerPower": {
@@ -865,7 +885,8 @@
     "NAME": "Spirit",
     "DESCRIPTIONS": [
       "#yBlock gained from #ySummons and card text numbers on Phantom cards are increased by #b",
-      ". Phantom Sebastian's Energy and card draw, and effect durations, are unaffected."
+      ".",
+      "#yBlock gained from #ySummons and card text numbers on Phantom cards are decreased by #b"
     ]
   },
   "FadingSpiritPower": {
@@ -1107,9 +1128,13 @@
     "NAME": "Jellyfish Shield",
     "DESCRIPTIONS": ["Your attacks deal #b", "% more damage this turn."]
   },
+  "ReimbursementPower": {
+    "NAME": "Reimbursement",
+    "DESCRIPTIONS": ["All #ySlash cards cost #b0."]
+  },
   "PerfectScorePower": {
     "NAME": "Perfect Score",
-    "DESCRIPTIONS": ["Enemies drop an additional upgraded card reward; disappears when you lose HP."]
+    "DESCRIPTIONS": ["Enemies drop #b", " additional #yUpgraded card rewards. Lose all stacks when you lose HP."]
   },
   "ClimaxPower": {
     "NAME": "Climax",

@@ -16,7 +16,7 @@ public class WantThis extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/revenant/WantThis.png";
     private static final int COST = 0;
-    private static final int DRAW = 3;
+    private static final int DRAW = 2;
     private static final int UPGRADE_PLUS_DRAW = 1;
 
     public WantThis() {

@@ -9,12 +9,12 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import patches.AbstractCardEnum;
 
-public class ChargedGrapefruit extends CustomCard {
-    public static final String ID = "ChargedGrapefruit";
+public class ChargedBread extends CustomCard {
+    public static final String ID = "ChargedBread";
     private static final CardStrings STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public ChargedGrapefruit() {
-        super(ID, STRINGS.NAME, "img/cards/wylder/ChargedGrapefruit.png", 0, STRINGS.DESCRIPTION,
+    public ChargedBread() {
+        super(ID, STRINGS.NAME, "img/cards/wylder/ChargedBread.png", 0, STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Wylder_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
     }
@@ -36,6 +36,6 @@ public class ChargedGrapefruit extends CustomCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new ChargedGrapefruit();
+        return new ChargedBread();
     }
 }

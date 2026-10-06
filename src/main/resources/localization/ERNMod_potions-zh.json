@@ -1,4 +1,16 @@
 {
+  "SummonPotion": {
+    "NAME": "唤灵药水",
+    "DESCRIPTIONS": ["随机 #y召唤 。", "随机 #y召唤 两次。"]
+  },
+  "WalnutMilk": {
+    "NAME": "核桃露",
+    "DESCRIPTIONS": ["失去所有能量。每失去一点，获得 #b%d 点 #y灵力 和 #y信仰 。"]
+  },
+  "SpiritPotion": {
+    "NAME": "灵力药水",
+    "DESCRIPTIONS": ["获得 #b%d 点 #y灵力 。"]
+  },
   "PlatingPotion": {
     "NAME": "覆甲药水",
     "DESCRIPTIONS": ["获得 #b%d 层 #y覆甲 。"]

@@ -1,4 +1,20 @@
 {
+  "GainSpiritAtEndOfTurnPower": {
+    "NAME": "灵力返还",
+    "DESCRIPTIONS": ["在你的回合结束时，获得 #b", " 点 #y灵力 。"]
+  },
+  "LockoutPower": {
+    "NAME": "紧闭",
+    "DESCRIPTIONS": ["将所受到的伤害降低 #b75% 。你不能打出 #y攻击牌 。"]
+  },
+  "ConciliationPower": {
+    "NAME": "怀柔",
+    "DESCRIPTIONS": ["在获得此效果后 #y召唤 #b%d 次时结束战斗，不获得卡牌奖励。 NL 已 #y召唤 #b%d 次。重复获得此效果无额外作用。"]
+  },
+  "BloodflameBladePower": {
+    "NAME": "血焰刀刃",
+    "DESCRIPTIONS": ["在本回合内，每有一次攻击造成未被格挡的伤害，就给予目标 #b", " 层 #y出血 。"]
+  },
   "ClarityPotionPower": {
     "NAME": "明晰",
     "DESCRIPTIONS": ["下回合开始时，抽 #b%d 张牌，获得 #b%d 点能量。", " NL 再下回合开始时，抽 #b%d 张牌，获得 #b%d 点能量。"]
@@ -208,6 +224,10 @@
       " 层 #y虚血+ 。"
     ]
   },
+  "LotOfRunesPower": {
+    "NAME": "卢恩",
+    "DESCRIPTIONS": ["在你的回合开始时，获得 #b", " 层 #y虚血 。"]
+  },
   "StaggerPower": {
     "NAME": "蹒跚",
     "DESCRIPTIONS": [
@@ -259,8 +279,8 @@
     "NAME": "展翼",
     "DESCRIPTIONS": [
       "将所受到的下 #b",
-      " 次伤害降低50%。",
-      " NL 每当你受到未被 #y格挡 的攻击伤害时，层数-1。"
+      " 次伤害降低 #b50% 。",
+      " NL 包括攻击和自伤。每当你受到未被 #y格挡 的攻击或自伤时，失去 #b1 层。"
     ]
   },
   "DeathblightPower": {
@@ -362,8 +382,8 @@
     "NAME": "振翼",
     "DESCRIPTIONS": [
       "将所受到的下 #b",
-      " 次伤害降低50%。",
-      " NL 每当你受到攻击伤害时，层数-1。在层数大于等于10且小于15时，获得 #y高空 。在层数大于等于15时，获得 #y深空 。"
+      " 次伤害降低 #b50% 。",
+      " NL 包括攻击和自伤。每当你受到攻击或自伤时，失去 #b1 层。在层数大于等于 #b10 且小于 #b15 时，获得 #y高空 。在层数大于等于 #b15 时，获得 #y深空 。"
     ]
   },
   "MantleOfThornsPower": {
@@ -845,7 +865,7 @@
   "RepeatingCrossbowPower": {
     "NAME": "连射弩",
     "DESCRIPTIONS": [
-      "如果有 #y召唤：海伦 ，打出的 *幻影海伦 会额外打出2次。"
+      "如果有 #y召唤：海伦 ， *幻影海伦 耗能变为0，会额外打出2次。"
     ]
   },
   "BlackButlerPower": {
@@ -865,7 +885,8 @@
     "NAME": "灵力",
     "DESCRIPTIONS": [
       "#y召唤 获得的 #y格挡 和幻影牌的卡面数字增加 #b",
-      "。幻影塞巴斯蒂安的能量和抽牌数，以及效果持续回合数不受影响。"
+      "。",
+      "#y召唤 获得的 #y格挡 和幻影牌的卡面数字减少 #b"
     ]
   },
   "FadingSpiritPower": {
@@ -1107,9 +1128,13 @@
     "NAME": "水母盾",
     "DESCRIPTIONS": ["本回合内你的所有攻击造成 #b", "% 额外伤害。"]
   },
+  "ReimbursementPower": {
+    "NAME": "报销",
+    "DESCRIPTIONS": ["所有 #y共击 牌耗能变为 #b0 。"]
+  },
   "PerfectScorePower": {
     "NAME": "满分考卷",
-    "DESCRIPTIONS": ["敌人多掉落一组升级过的卡牌奖励；失去生命时消失。"]
+    "DESCRIPTIONS": ["敌人额外掉落 #b", " 组 #y升级 过的卡牌奖励。失去生命时失去所有层数。"]
   },
   "ClimaxPower": {
     "NAME": "亢奋",

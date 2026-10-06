@@ -17,7 +17,7 @@ public class EternalArmor extends CustomCard {
     public EternalArmor() {
         super(ID, STRINGS.NAME, "img/cards/wylder/EternalArmor.png", 1, STRINGS.DESCRIPTION,
                 CardType.POWER, AbstractCardEnum.Wylder_COLOR, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override

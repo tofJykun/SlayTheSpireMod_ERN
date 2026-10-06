@@ -17,10 +17,10 @@ import powers.SpiritPower;
 public class ImpatientBall extends CustomCard {
     public static final String ID = "ImpatientBall";
     private static final String IMG_PATH = "img/cards/revenant/ImpatientBall.png";
-    private static final int COST = 1;
-    private static final int SPIRIT = 6;
+    private static final int COST = 0;
+    private static final int SPIRIT = 4;
     private static final int SPIRIT_LOSS = 1;
-    private static final int UPGRADE_DRAW = 2;
+    private static final int DRAW = 2;
 
     public ImpatientBall() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
@@ -39,9 +39,7 @@ public class ImpatientBall extends CustomCard {
                 new SpiritPower((AbstractCreature)p, this.magicNumber), this.magicNumber));
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p,
                 new ImpatientBallPower((AbstractCreature)p, SPIRIT_LOSS), SPIRIT_LOSS));
-        if (this.upgraded) {
-            addToBot((AbstractGameAction)new DrawCardAction((AbstractCreature)p, UPGRADE_DRAW));
-        }
+        addToBot((AbstractGameAction)new DrawCardAction((AbstractCreature)p, DRAW + (this.upgraded ? 1 : 0)));
     }
 
     @Override
@@ -53,6 +51,7 @@ public class ImpatientBall extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
             this.rawDescription = getCardStrings().UPGRADE_DESCRIPTION;
             initializeDescription();
         }

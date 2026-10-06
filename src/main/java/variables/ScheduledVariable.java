@@ -8,6 +8,7 @@ import cards.guardian.WingCrestShield;
 import cards.guardian.CurseWardGreatshield;
 import cards.guardian.GreatshieldOfGlory;
 import cards.guardian.FalconShield;
+import cards.guardian.FatalAppetite;
 import cards.executor.AlabasterLordsPull;
 import cards.executor.OnyxLordsRepulsion;
 import cards.duchess.BladeOfCalling;
@@ -23,6 +24,7 @@ import cards.recluse.Dodge;
 import cards.recluse.CarianPiercer;
 import cards.revenant.LotOfRunes;
 import cards.revenant.FamilyHeads;
+import cards.revenant.SpiritInfusedFist;
 import cards.wylder.IronFlesh;
 import cards.wylder.Valorheart;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -60,7 +62,7 @@ public class ScheduledVariable extends DynamicVariable {
         if (card instanceof IronFlesh) {
             return false;
         }
-        if (card instanceof FamilyHeads) {
+        if (card instanceof FamilyHeads || card instanceof SpiritInfusedFist || card instanceof FatalAppetite) {
             return false;
         }
         if (card instanceof BlackKnife) {
@@ -134,7 +136,7 @@ public class ScheduledVariable extends DynamicVariable {
         if (card instanceof IronFlesh) {
             return ((IronFlesh)card).getPlating();
         }
-        if (card instanceof FamilyHeads) {
+        if (card instanceof FamilyHeads || card instanceof SpiritInfusedFist || card instanceof FatalAppetite) {
             return 1;
         }
         if (card instanceof BlackKnife) {
@@ -208,7 +210,7 @@ public class ScheduledVariable extends DynamicVariable {
         if (card instanceof IronFlesh) {
             return ((IronFlesh)card).getPlating();
         }
-        if (card instanceof FamilyHeads) {
+        if (card instanceof FamilyHeads || card instanceof SpiritInfusedFist || card instanceof FatalAppetite) {
             return 1;
         }
         if (card instanceof BlackKnife) {

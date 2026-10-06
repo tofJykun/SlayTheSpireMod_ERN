@@ -18,6 +18,7 @@ import powers.AbstractSummonPower;
 import powers.SpiritPower;
 import powers.SummonDoggo;
 import summons.SummonAnimationManager;
+import relics.WhetstoneKnife;
 
 public class PhantomDoggo extends AbstractPhantomCard {
     public static final String ID = "PhantomDoggo";
@@ -31,6 +32,7 @@ public class PhantomDoggo extends AbstractPhantomCard {
                 CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ALL_ENEMY);
         this.baseMagicNumber = VALUE;
         this.magicNumber = this.baseMagicNumber;
+        WhetstoneKnife.refreshPhantomDamage(this);
         this.exhaust = true;
         this.isEthereal = true;
     }
@@ -63,11 +65,12 @@ public class PhantomDoggo extends AbstractPhantomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         SpiritPower.applyPhantomNumber(this);
+        WhetstoneKnife.refreshPhantomDamage(this);
         SummonAnimationManager.triggerAttack(SummonDoggo.SUMMON_KEY);
         for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters) {
             if (!mo.isDeadOrEscaped()) {
                 addToBot((AbstractGameAction)new DamageAction((AbstractCreature)mo,
-                        new DamageInfo((AbstractCreature)p, this.magicNumber, this.damageTypeForTurn),
+                        new DamageInfo((AbstractCreature)p, this.damage, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
             }
         }
@@ -91,12 +94,14 @@ public class PhantomDoggo extends AbstractPhantomCard {
     public void applyPowers() {
         super.applyPowers();
         SpiritPower.applyPhantomNumber(this);
+        WhetstoneKnife.refreshPhantomDamage(this);
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
         SpiritPower.applyPhantomNumber(this);
+        WhetstoneKnife.refreshPhantomDamage(this);
     }
 
     @Override
@@ -109,6 +114,8 @@ public class PhantomDoggo extends AbstractPhantomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_VALUE);
+            this.upgradedDamage = true;
+            WhetstoneKnife.refreshPhantomDamage(this);
         }
     }
 }

@@ -17,15 +17,24 @@ public class PerfectScorePower extends AbstractPower {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = -1;
+        this.amount = 1;
         this.type = PowerType.BUFF;
         PowerIconHelper.load(this, POWER_ID);
         updateDescription();
     }
 
     @Override
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+        updateDescription();
+    }
+
+    @Override
     public int onLoseHp(int damageAmount) {
         if (damageAmount > 0) {
+            this.amount = 0;
+            updateDescription();
             flash();
             addToTop((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
@@ -34,6 +43,6 @@ public class PerfectScorePower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }

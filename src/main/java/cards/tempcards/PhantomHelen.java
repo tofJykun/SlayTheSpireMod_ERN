@@ -14,6 +14,7 @@ import powers.AbstractSummonPower;
 import powers.SpiritPower;
 import powers.SummonHelen;
 import summons.SummonAnimationManager;
+import relics.WhetstoneKnife;
 
 public class PhantomHelen extends AbstractPhantomCard {
     public static final String ID = "PhantomHelen";
@@ -27,6 +28,7 @@ public class PhantomHelen extends AbstractPhantomCard {
                 CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY);
         this.baseMagicNumber = DAMAGE;
         this.magicNumber = this.baseMagicNumber;
+        WhetstoneKnife.refreshPhantomDamage(this);
         this.exhaust = true;
         this.isEthereal = true;
     }
@@ -59,9 +61,10 @@ public class PhantomHelen extends AbstractPhantomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         SpiritPower.applyPhantomNumber(this);
+        WhetstoneKnife.refreshPhantomDamage(this);
         SummonAnimationManager.triggerAttack(SummonHelen.SUMMON_KEY);
         addToBot((AbstractGameAction)new DamageAction((AbstractCreature)m,
-                new DamageInfo((AbstractCreature)p, this.magicNumber, this.damageTypeForTurn),
+                new DamageInfo((AbstractCreature)p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
@@ -69,12 +72,14 @@ public class PhantomHelen extends AbstractPhantomCard {
     public void applyPowers() {
         super.applyPowers();
         SpiritPower.applyPhantomNumber(this);
+        WhetstoneKnife.refreshPhantomDamage(this);
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
         SpiritPower.applyPhantomNumber(this);
+        WhetstoneKnife.refreshPhantomDamage(this);
     }
 
     @Override
@@ -87,6 +92,8 @@ public class PhantomHelen extends AbstractPhantomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_DAMAGE);
+            this.upgradedDamage = true;
+            WhetstoneKnife.refreshPhantomDamage(this);
         }
     }
 }

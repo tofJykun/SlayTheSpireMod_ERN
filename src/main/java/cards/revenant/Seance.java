@@ -12,9 +12,9 @@ import patches.AbstractCardEnum;
 public class Seance extends CustomCard {
     public static final String ID = "Seance";
     private static final String IMG_PATH = "img/cards/revenant/Seance.png";
-    private static final int COST = 1;
-    private static final int ATTACK_DMG = 4;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int COST = 0;
+    private static final int ATTACK_DMG = 6;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     public Seance() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

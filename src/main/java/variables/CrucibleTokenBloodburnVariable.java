@@ -7,10 +7,13 @@ import cards.duchess.GodslayerGreatsword;
 import cards.executor.RagingBeast;
 import cards.guardian.SpinningGravityThrust;
 import cards.guardian.DuelingShield;
+import cards.guardian.FatalAppetite;
+import cards.guardian.CrucifixOfTheMadKing;
 import cards.guardian.SpearcallRitual;
 import cards.ironeye.Usury;
 import cards.raider.SmithingArtSpears;
 import cards.tempcards.CrucibleToken;
+import cards.tempcards.PhantomSebastian;
 import cards.wylder.WolfGreatsword;
 import cards.wylder.Girandole;
 import cards.wylder.PardonMe;
@@ -40,6 +43,9 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public int value(AbstractCard card) {
+        if (card instanceof PhantomSebastian) return ((PhantomSebastian)card).getEnergyGain();
+        if (card instanceof FatalAppetite) return ((FatalAppetite)card).getMaxHpGain();
+        if (card instanceof CrucifixOfTheMadKing) return ((CrucifixOfTheMadKing)card).getSelfDamage();
         if (card instanceof InTheZone) return ((InTheZone)card).getPlating();
         if (card instanceof BloodVeil) return ((BloodVeil)card).getSelfFrail();
         if (card instanceof SpearcallRitual) {
@@ -86,6 +92,9 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
+        if (card instanceof PhantomSebastian) return ((PhantomSebastian)card).getEnergyGain();
+        if (card instanceof FatalAppetite) return ((FatalAppetite)card).getMaxHpGain();
+        if (card instanceof CrucifixOfTheMadKing) return ((CrucifixOfTheMadKing)card).getSelfDamage();
         if (card instanceof InTheZone) return ((InTheZone)card).getPlating();
         if (card instanceof BloodVeil) return ((BloodVeil)card).getSelfFrail();
         if (card instanceof SpearcallRitual) {
@@ -132,7 +141,8 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public boolean upgraded(AbstractCard card) {
-        return (card instanceof SmithingArtSpears || card instanceof Girandole || card instanceof InTheZone
-                || card instanceof SwordOfNightAndFlame) && card.upgraded;
+        return (card instanceof FatalAppetite || card instanceof SmithingArtSpears || card instanceof Girandole || card instanceof InTheZone
+                || card instanceof SwordOfNightAndFlame || card instanceof CrucifixOfTheMadKing
+                || card instanceof PhantomSebastian) && card.upgraded;
     }
 }

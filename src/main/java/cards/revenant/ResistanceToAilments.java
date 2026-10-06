@@ -3,6 +3,7 @@ package cards.revenant;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -25,7 +26,7 @@ public class ResistanceToAilments extends CustomCard {
         for (AbstractPower power : p.powers) if (power.type == AbstractPower.PowerType.DEBUFF || ArtifactPower.POWER_ID.equals(power.ID)) remove.add(power);
         for (AbstractPower power : remove) addToBot(new RemoveSpecificPowerAction(p, p, power.ID));
         if (upgraded) {
-            p.energy.use(1);
+            addToBot(new LoseEnergyAction(1));
         } else {
             addToBot(new ApplyPowerAction(p, p, new ResistanceToAilmentsPower(p, 1), 1));
         }

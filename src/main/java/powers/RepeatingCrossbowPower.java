@@ -19,6 +19,13 @@ public class RepeatingCrossbowPower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private static final int EXTRA_PLAYS = 2;
 
+    public static boolean makesFree(AbstractCard card) {
+        return card != null && PhantomHelen.ID.equals(card.cardID)
+                && AbstractDungeon.player != null
+                && AbstractDungeon.player.hasPower(POWER_ID)
+                && AbstractSummonPower.isActiveSummon(AbstractDungeon.player, SummonHelen.POWER_ID);
+    }
+
     public RepeatingCrossbowPower(AbstractCreature owner) {
         this.name = NAME;
         this.ID = POWER_ID;
