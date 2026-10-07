@@ -24,7 +24,7 @@ public class SpinningGravityThrust extends CustomCard {
         super(ID, STRINGS.NAME, IMG_PATH, 1, STRINGS.DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.Guardian_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 15;
-        this.baseMagicNumber = this.magicNumber = 2;
+        this.baseMagicNumber = this.magicNumber = 3;
     }
 
     public int getHoverLoss() {

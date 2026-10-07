@@ -16,11 +16,11 @@ import patches.AbstractCardEnum;
 public class WolfGreatshield extends CustomCard {
     public static final String ID = "WolfGreatshield";
     private static final String IMG_PATH = "img/cards/guardian/WolfGreatshield.png";
-    private static final int COST = 2;
+    private static final int COST = 3;
 
     public WolfGreatshield() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Guardian_COLOR, CardRarity.RARE, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Guardian_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = 0;
         this.exhaust = true;
     }

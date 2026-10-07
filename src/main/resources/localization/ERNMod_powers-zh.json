@@ -39,6 +39,18 @@
     "NAME": "恶意气息",
     "DESCRIPTIONS": ["失去所有 #y格挡 ，在本场战斗中无法获得 #y格挡 。"]
   },
+  "DragonToothPower": {
+    "NAME": "大龙牙",
+    "DESCRIPTIONS": ["你在本场战斗中不会获得 #y发狂 。"]
+  },
+  "GnawPower": {
+    "NAME": "侵蚀",
+    "DESCRIPTIONS": ["在自己的回合开始时，获得 #b", " 层 #y出血 。获得 #y发狂 时，失去此效果。"]
+  },
+  "FrozenNeedlePower": {
+    "NAME": "结冰针",
+    "DESCRIPTIONS": ["每当受到 #y攻击牌 攻击时，若攻击者打出该牌时有 #y活力 ，每次命中返还该牌的卡面耗能。此效果不叠加。"]
+  },
   "RuinousGhostflamePower": {
     "NAME": "毁灭灵火",
     "DESCRIPTIONS": ["每当受到攻击时，获得 #b", " 层 #y冻伤 。"]
@@ -137,9 +149,17 @@
     "NAME": "灾厄之舞",
     "DESCRIPTIONS": ["每当你对一名敌人造成负面 #y状态 ，获得 #b", " 点 #y格挡 。"]
   },
+  "PowerOfCompassionPower": {
+    "NAME": "温柔的庇佑",
+    "DESCRIPTIONS": ["本敌人的 #y力量 始终与角色的 #y力量 相同。此效果及其力量对齐不受 #y人工制品 阻挡。"]
+  },
   "SovereigntyPower": {
     "NAME": "尊矣",
     "DESCRIPTIONS": ["你在回合结束时不再自动丢弃所有手牌。"]
+  },
+  "FadeIntoShadowPower": {
+    "NAME": "融入暗影",
+    "DESCRIPTIONS": ["直到你的下回合开始前，你从所有来源获得的 #y格挡 翻倍 #b", " 次。"]
   },
   "EternalSleepPower": {
     "NAME": "永眠",
@@ -1397,6 +1417,10 @@
     "DESCRIPTIONS": [
       "斑斓壶不会 #y消耗 。"
     ]
+  },
+  "TelescopePower": {
+    "NAME": "望远镜",
+    "DESCRIPTIONS": ["观看抽牌堆时，卡牌将按顺序排列。"]
   },
   "DrawstringPotPower": {
     "NAME": "附绳壶",

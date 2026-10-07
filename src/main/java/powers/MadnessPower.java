@@ -32,11 +32,13 @@ public class MadnessPower extends AbstractPower {
 
     @Override
     public void onInitialApplication() {
+        GnawPower.onMadnessGained(this.owner, this.amount);
         checkThreshold();
     }
 
     @Override
     public void stackPower(int stackAmount) {
+        GnawPower.onMadnessGained(this.owner, stackAmount);
         super.stackPower(stackAmount);
         checkThreshold();
     }

@@ -19,48 +19,51 @@ import java.util.Map;
 public class RecluseDiscoveryAction extends AbstractGameAction {
     private static final int CHOICE_COUNT = 3;
     private final boolean upgradedChoices;
-    private boolean retrieveCard;
+    private boolean opened;
 
     public RecluseDiscoveryAction(boolean upgradedChoices) {
         this.actionType = ActionType.CARD_MANIPULATION;
-        this.duration = Settings.ACTION_DUR_FAST;
         this.upgradedChoices = upgradedChoices;
     }
 
     @Override
     public void update() {
-        if (this.duration == Settings.ACTION_DUR_FAST) {
+        if (this.isDone) {
+            return;
+        }
+        if (!this.opened) {
+            this.opened = true;
             ArrayList<AbstractCard> choices = generateCardChoices();
             if (choices.isEmpty()) {
                 this.isDone = true;
                 return;
             }
-            AbstractDungeon.cardRewardScreen.customCombatOpen(choices, CardRewardScreen.TEXT[1], false);
-            tickDuration();
+            AbstractDungeon.cardRewardScreen.customCombatOpen(choices, CardRewardScreen.TEXT[1], true);
             return;
         }
 
-        if (!this.retrieveCard) {
-            AbstractCard selected = AbstractDungeon.cardRewardScreen.discoveryCard;
-            if (selected != null) {
-                AbstractCard card = selected.makeStatEquivalentCopy();
-                if (!card.upgraded && AbstractDungeon.player.hasPower("MasterRealityPower")) {
-                    card.upgrade();
-                }
-                card.setCostForTurn(0);
-                card.current_x = -1000.0F * Settings.xScale;
-                if (AbstractDungeon.player.hand.size() < 10) {
-                    AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(card,
-                            Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
-                } else {
-                    AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(card,
-                            Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
-                }
-                AbstractDungeon.cardRewardScreen.discoveryCard = null;
-            }
-            this.retrieveCard = true;
+        if (AbstractDungeon.isScreenUp) {
+            return;
         }
-        tickDuration();
+        // A closed screen with no selection means the player skipped.
+        this.isDone = true;
+        AbstractCard selected = AbstractDungeon.cardRewardScreen.discoveryCard;
+        if (selected != null) {
+            AbstractCard card = selected.makeStatEquivalentCopy();
+            if (!card.upgraded && AbstractDungeon.player.hasPower("MasterRealityPower")) {
+                card.upgrade();
+            }
+            card.setCostForTurn(0);
+            card.current_x = -1000.0F * Settings.xScale;
+            if (AbstractDungeon.player.hand.size() < 10) {
+                AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(card,
+                        Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
+            } else {
+                AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(card,
+                        Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
+            }
+            AbstractDungeon.cardRewardScreen.discoveryCard = null;
+        }
     }
 
     private ArrayList<AbstractCard> generateCardChoices() {

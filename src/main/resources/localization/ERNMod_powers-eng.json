@@ -39,6 +39,18 @@
     "NAME": "Soul Stifler",
     "DESCRIPTIONS": ["Lose all #yBlock. Cannot gain #yBlock this combat."]
   },
+  "DragonToothPower": {
+    "NAME": "Dragon Tooth",
+    "DESCRIPTIONS": ["You cannot gain #yMadness this combat."]
+  },
+  "GnawPower": {
+    "NAME": "Gnaw",
+    "DESCRIPTIONS": ["At the start of its turn, gains #b", " #yBloodloss. Removed upon gaining #yMadness."]
+  },
+  "FrozenNeedlePower": {
+    "NAME": "Frozen Needle",
+    "DESCRIPTIONS": ["Whenever hit by an #yAttack, if its user had #yVigor when playing it, refund its displayed Energy cost for each hit. Does not stack."]
+  },
   "RuinousGhostflamePower": {
     "NAME": "Ruinous Ghostflame",
     "DESCRIPTIONS": ["Whenever attacked, gain #b", " #yFrostbite."]
@@ -137,9 +149,17 @@
     "NAME": "Deadly Dance",
     "DESCRIPTIONS": ["Whenever you apply a debuff to an enemy, gain #b", " #yBlock."]
   },
+  "PowerOfCompassionPower": {
+    "NAME": "Power of Compassion",
+    "DESCRIPTIONS": ["This enemy's #yStrength always matches the player's #yStrength. Neither this effect nor its Strength adjustments can be blocked by #yArtifact."]
+  },
   "SovereigntyPower": {
     "NAME": "Sovereignty",
     "DESCRIPTIONS": ["You no longer discard your hand at the end of your turn."]
+  },
+  "FadeIntoShadowPower": {
+    "NAME": "Fade Into Shadow",
+    "DESCRIPTIONS": ["Until your next turn, double all #yBlock you gain #b", " time(s)."]
   },
   "EternalSleepPower": {
     "NAME": "Eternal Sleep",
@@ -1397,6 +1417,10 @@
     "DESCRIPTIONS": [
       "Mottled Pot does not Exhaust."
     ]
+  },
+  "TelescopePower": {
+    "NAME": "Telescope",
+    "DESCRIPTIONS": ["When viewing your draw pile, the cards are shown in order."]
   },
   "DrawstringPotPower": {
     "NAME": "Drawstring Pot",

@@ -35,8 +35,9 @@ public class Bonewheel extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.baseDamage = getXValue(p);
-        calculateCardDamage(m);
+        // Only execution uses the queued X; previews must ignore default/stale energyOnUse.
+        this.baseDamage = getXValue(p, this.energyOnUse == -1 ? EnergyPanel.totalCount : this.energyOnUse);
+        super.calculateCardDamage(m);
         for (int i = 0; i < this.magicNumber; i++) {
             addToBot((AbstractGameAction)new DamageAction((AbstractCreature)m,
                     new DamageInfo((AbstractCreature)p, this.damage, this.damageTypeForTurn),
@@ -49,13 +50,13 @@ public class Bonewheel extends CustomCard {
 
     @Override
     public void applyPowers() {
-        this.baseDamage = getXValue(AbstractDungeon.player);
+        this.baseDamage = getXValue(AbstractDungeon.player, EnergyPanel.totalCount);
         super.applyPowers();
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
-        this.baseDamage = getXValue(AbstractDungeon.player);
+        this.baseDamage = getXValue(AbstractDungeon.player, EnergyPanel.totalCount);
         super.calculateCardDamage(mo);
     }
 
@@ -64,11 +65,7 @@ public class Bonewheel extends CustomCard {
         this.baseDamage = 0;
     }
 
-    private int getXValue(AbstractPlayer p) {
-        int value = EnergyPanel.totalCount;
-        if (this.energyOnUse != -1) {
-            value = this.energyOnUse;
-        }
+    private int getXValue(AbstractPlayer p, int value) {
         if (p != null && p.hasRelic("Chemical X")) {
             value += 2;
         }

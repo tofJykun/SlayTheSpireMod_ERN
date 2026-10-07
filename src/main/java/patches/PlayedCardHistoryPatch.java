@@ -1,6 +1,7 @@
 package patches;
 
 import actions.AlphaToOmegaSequencer;
+import actions.AvelynSequencer;
 import actions.PackagingSequencer;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.GameActionManager;
@@ -24,6 +25,7 @@ public class PlayedCardHistoryPatch {
         @SpirePostfixPatch
         public static void postfix(GameActionManager __instance) {
             PlayedCardHistory.clear();
+            AvelynSequencer.clear();
             AlphaToOmegaSequencer.clear();
             PackagingSequencer.clear();
         }

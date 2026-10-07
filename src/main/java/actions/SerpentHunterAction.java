@@ -70,6 +70,7 @@ public class SerpentHunterAction extends AbstractGameAction {
                 addToBot(new NewQueueCardAction(copy, true, false, true));
             }
             card.exhaustOnUseOnce = true;
+            AvelynAction.rememberHandPlay(card);
             this.player.hand.group.remove(card);
             AbstractDungeon.getCurrRoom().souls.remove(card);
             addToBot(new NewQueueCardAction(card, true, false, true));

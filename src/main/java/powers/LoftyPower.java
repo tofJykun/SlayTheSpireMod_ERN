@@ -35,7 +35,8 @@ public class LoftyPower extends AbstractPower {
     }
 
     @Override
-    public float atDamageGive(float damage, DamageInfo.DamageType type) {
+    public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
+        // Apply the multiplier after additive bonuses such as Strength and Vigor.
         if (type == DamageInfo.DamageType.NORMAL) {
             return (float)Math.ceil(damage * DAMAGE_MULTIPLIER);
         }

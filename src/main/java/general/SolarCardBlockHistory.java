@@ -66,7 +66,7 @@ public final class SolarCardBlockHistory {
         if (action.isDone) actions.remove(action);
     }
 
-    private static boolean fromCard() { return !contexts.isEmpty() && contexts.peek() != NONE; }
+    public static boolean fromCard() { return !contexts.isEmpty() && contexts.peek() != NONE; }
 
     public static void queued(AbstractGameAction action) {
         if (action != null && fromCard()) actions.put(action, contexts.peek());

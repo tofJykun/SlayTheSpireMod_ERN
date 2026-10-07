@@ -17,7 +17,7 @@ public class StormWing extends CustomCard {
     public StormWing() {
         super(ID, STRINGS.NAME, "img/cards/guardian/StormWing.png", 1, STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Guardian_COLOR, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
     }
 
     @Override

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
@@ -27,6 +28,13 @@ public class FalconShield extends CustomCard {
 
     public int getDrawAmount() {
         return upgraded ? 3 : 2;
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractDungeon.player != null && AbstractDungeon.player.hasPower(VigorPower.POWER_ID)
+                ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy()
+                : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 
     @Override

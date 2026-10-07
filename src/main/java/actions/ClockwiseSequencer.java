@@ -83,6 +83,7 @@ public final class ClockwiseSequencer {
             return;
         }
         if (AbstractDungeon.player.hand.group.contains(card)) {
+            AvelynAction.rememberHandPlay(card);
             AbstractDungeon.player.hand.group.remove(card);
         }
         AbstractDungeon.player.limbo.addToBottom(card);

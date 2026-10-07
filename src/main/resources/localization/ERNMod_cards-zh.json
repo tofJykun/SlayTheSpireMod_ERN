@@ -286,6 +286,14 @@
     "NAME": "花束",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 每当目标敌人受到攻击时，给予其 !M! 层 易伤 ，在该回合内失去 !M! 点 力量。 NL 消耗 。"
   },
+  "DragonTooth": {
+    "NAME": "大龙牙",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 你在本场战斗中不会获得 发狂 。 NL 消耗 。"
+  },
+  "Gnaw": {
+    "NAME": "侵蚀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标敌人在其回合开始时获得 !M! 层 出血 。 NL 这个效果在目标敌人获得 发狂 时消失。 NL 消耗 。"
+  },
   "Moonveil": {
     "NAME": "名刀月隐",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人的意图是攻击，给予 !M! 层 虚弱 。 NL 否则，给予 !M! 层 削韧 。"
@@ -323,6 +331,63 @@
     "NAME": "驱兽火把",
     "DESCRIPTION": "给予所有意图是攻击的敌人 !M! 层 虚弱 。 NL 消耗 。"
   },
+  "WingsOfFreedom": {
+    "NAME": "自由之翼",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 每有一名敌人的意图是攻击，获得 !MD! 层 振翼 。"
+  },
+  "FurPlucking": {
+    "NAME": "集羽",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得与所造成的未被格挡的伤害相等的 活力 。"
+  },
+  "ShotClub": {
+    "NAME": "射击俱乐部",
+    "DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! 点 敏捷 。 NL 当你抽到这张牌时，将其 消耗 。"
+  },
+  "StarPiercer": {
+    "NAME": "贯星",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌杀死了敌人，则获得 [E] [E] [E] ，将这张牌返回你的手牌，返还这张牌使用的 活力 。"
+  },
+  "WarhawkTalon": {
+    "NAME": "战鹰爪形剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予与 振翼 层数相同的易伤。"
+  },
+  "Stormhawk": {
+    "NAME": "风暴鹰",
+    "DESCRIPTION": "抽与 振翼 层数相同的牌。 NL 获得与 振翼 层数相同的能量。 NL 消耗 。"
+  },
+  "EagleAscent": {
+    "NAME": "鹰击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 振翼 。 NL 消耗 一张随机手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 振翼 。 NL 消耗 一张手牌。"
+  },
+  "BraggartRoar": {
+    "NAME": "夸耀咆哮",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !M! 点 活力 。 NL 消耗 。"
+  },
+  "SpikedPalisade": {
+    "NAME": "钉墙",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !M! 次。 NL 获得 !MD! 层 完美格挡 。"
+  },
+  "FrozenNeedle": {
+    "NAME": "结冰针",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当目标敌人受到攻击时，如果你有 活力 ，返还这张攻击牌的费用。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 每当目标敌人受到攻击时，如果你有 活力 ，返还这张攻击牌的费用。"
+  },
+  "SolarEnergy": {
+    "NAME": "太阳能",
+    "DESCRIPTION": "失去 !M! 点 活力 。 NL 获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "失去 !M! 点 活力 。 NL 获得 [E] [E] [E] 。",
+    "EXTENDED_DESCRIPTION": ["至少需要5点活力。"]
+  },
+  "BorderWall": {
+    "NAME": "边境墙",
+    "DESCRIPTION": "只有在手牌中没有攻击牌时才能被打出。 NL 获得 !M! 层 荆棘 。 NL 获得 !MD! 层 振翼 。",
+    "EXTENDED_DESCRIPTION": ["手牌中有攻击牌时不能打出。"]
+  },
+  "StormBlade": {
+    "NAME": "风暴刃",
+    "DESCRIPTION": "获得 !M! 点 活力 。"
+  },
   "StormWing": {
     "NAME": "风暴翼",
     "DESCRIPTION": "获得 !M! 层 振翼 。"
@@ -339,6 +404,10 @@
   "LessLikelyToBeTargeted": {
     "NAME": "比较不会攻击自己",
     "DESCRIPTION": "如果敌人的意图是攻击，则改为获得 !M! 点 格挡 。 NL 消耗 。"
+  },
+  "Avelyn": {
+    "NAME": "雅帆琳",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 随机打出你抽牌堆和弃牌堆中所有“雅帆琳”。 NL 如果从手牌打出，在抽牌堆放入一张此牌的复制品。"
   },
   "NineStagesOfDecay": {
     "NAME": "九相图",
@@ -588,7 +657,12 @@
   },
   "WingedKnightHalberd": {
     "NAME": "羽翼骑士戟",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 你每有 !M! 点 格挡 ，额外造成7点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将抽牌堆中的一张牌放入弃牌堆。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将抽牌堆中的任意张牌放入弃牌堆。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张牌放入弃牌堆。",
+      "选择任意张牌，按选择顺序放入弃牌堆。"
+    ]
   },
   "SpinningGravityThrust": {
     "NAME": "重力旋刺",
@@ -666,13 +740,33 @@
     "DESCRIPTION": "将你的 振翼 和 展翼 层数翻倍。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "将你的 振翼 和 展翼 层数变为三倍。 NL 消耗 。"
   },
+  "PowerOfCompassion": {
+    "NAME": "温柔的庇佑",
+    "DESCRIPTION": "使所有敌人的 力量 始终与自己相同。 NL 消耗 。"
+  },
+  "MarionetteArmor": {
+    "NAME": "人偶铠甲",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 活力。 NL 消耗 。"
+  },
+  "DragoncrestGreatshield": {
+    "NAME": "龙徽大盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !MD! 层 完美格挡 。 NL 在本回合 保留 你的手牌。"
+  },
+  "Typhoon": {
+    "NAME": "台风",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !MD! 层 冻伤 。 NL 给予所有敌人 !M! 层 冻伤 。"
+  },
+  "MillwoodKnightArmor": {
+    "NAME": "米尔伍德铠甲",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 振翼 。 NL 失去所有 冻伤 。"
+  },
   "WingStance": {
     "NAME": "单翼架式",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 振翼 。"
   },
   "ForcedLanding": {
     "NAME": "迫降",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 失去 !M! 层 振翼 。",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 失去 !M! 层 振翼 。 NL 抽 !M! 张牌。",
     "EXTENDED_DESCRIPTION": [
       "需要至少3层振翼。"
     ]
@@ -680,6 +774,10 @@
   "Sovereignty": {
     "NAME": "尊矣",
     "DESCRIPTION": "你在回合结束时不再自动丢弃所有手牌。"
+  },
+  "FadeIntoShadow": {
+    "NAME": "融入暗影",
+    "DESCRIPTION": "在本回合内，你获得的 格挡 翻倍。"
   },
   "ShroudingHeavens": {
     "NAME": "遮天",
@@ -1364,7 +1462,7 @@
   },
   "NoMoney": {
     "NAME": "走空",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 蘑菇 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 蘑菇 。 NL 你每在同一回合内打出 !M! 张牌，将这张牌从抽牌堆或弃牌堆放回你的手牌。"
   },
   "SlimeMold": {
     "NAME": "黏菌",
@@ -1495,6 +1593,11 @@
     "NAME": "猩红艾奥尼亚",
     "DESCRIPTION": "给予所有敌人 !M! 层 猩红腐败 。 NL 触发所有敌人的 异常 一次。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 猩红腐败 。 NL 触发所有敌人的 异常 一次。"
+  },
+  "UnalloyedGoldNeedle": {
+    "NAME": "纯净金针",
+    "DESCRIPTION": "移除敌人身上的所有正面 状态 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 移除敌人身上的所有正面 状态 。 NL 消耗 。"
   },
   "Metastasis": {
     "NAME": "扩散",
@@ -1886,6 +1989,11 @@
     "DESCRIPTION": " 炼制 黄金百足 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": " 炼制 黄金百足 。"
   },
+  "EquivalentExchange": {
+    "NAME": "等价代换",
+    "DESCRIPTION": "失去所有 散装 药水。 NL 获得相同瓶随机 散装 药水。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "失去所有 散装 药水。 NL 获得相同瓶随机 散装 药水。"
+  },
   "RollingSparks": {
     "NAME": "串联火花香",
     "DESCRIPTION": "失去所有 散装 药水。 NL 每失去一瓶，对所有敌人造成 !D! 点伤害一次。"
@@ -1948,6 +2056,16 @@
     "NAME": "维壶笔记",
     "DESCRIPTION": " *斑斓壶 不会 消耗 。",
     "UPGRADE_DESCRIPTION": " 固有 。 NL  *斑斓壶 不会 消耗 。"
+  },
+  "HeavenCord": {
+    "NAME": "天索",
+    "DESCRIPTION": "你在选择下一层的房间时有 !M! 次机会可以无视当前的路线。 NL 消耗 。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "你在选择下一层的房间时有 !M! 次机会可以无视当前的路线。 NL 消耗 。"
+  },
+  "Telescope": {
+    "NAME": "望远镜",
+    "DESCRIPTION": "现在观看抽牌堆时，卡牌将按顺序排列。 NL 抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 现在观看抽牌堆时，卡牌将按顺序排列。 NL 抽 !M! 张牌。"
   },
   "DrawstringPot": {
     "NAME": "附绳壶",
@@ -2554,7 +2672,7 @@
   },
   "DynastFinesse": {
     "NAME": "王朝剑技",
-    "DESCRIPTION": "获得1层 振翼 。 NL 造成 !D! 点伤害。"
+    "DESCRIPTION": "获得2层 振翼 。 NL 造成 !D! 点伤害。"
   },
   "BlackKnife": {
     "NAME": "黑刀",

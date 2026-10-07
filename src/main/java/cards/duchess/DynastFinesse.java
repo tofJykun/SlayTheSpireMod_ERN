@@ -19,7 +19,7 @@ public class DynastFinesse extends CustomCard {
     private static final String IMG_PATH = "img/cards/duchess/DynastFinesse.png";
     private static final int COST = 1;
     private static final int ATTACK_DMG = 6;
-    private static final int HOVER = 1;
+    private static final int HOVER = 2;
     private static final int UPGRADE_PLUS_DMG = 3;
 
     public DynastFinesse() {

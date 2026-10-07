@@ -286,6 +286,14 @@
     "NAME": "Bouquet",
     "DESCRIPTION": "Deal !D! damage. NL Whenever the target enemy is attacked, apply !M! Vulnerable and make it lose !M! Strength for that turn. NL Exhaust."
   },
+  "DragonTooth": {
+    "NAME": "Dragon Tooth",
+    "DESCRIPTION": "Deal !D! damage. NL You cannot gain Madness this combat. NL Exhaust."
+  },
+  "Gnaw": {
+    "NAME": "Gnaw",
+    "DESCRIPTION": "Deal !D! damage. NL At the start of its turn, the target gains !M! Bloodloss. NL This effect is removed when the target gains Madness. NL Exhaust."
+  },
   "Moonveil": {
     "NAME": "Moonveil",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, apply !M! Weak. NL Otherwise, apply !M! Poise Break."
@@ -323,6 +331,63 @@
     "NAME": "Beast-Repellent Torch",
     "DESCRIPTION": "Apply !M! Weak to ALL enemies that intend to attack. NL Exhaust."
   },
+  "WingsOfFreedom": {
+    "NAME": "Wings of Freedom",
+    "DESCRIPTION": "Draw !M! cards. NL For each enemy that intends to attack, gain !MD! Hover."
+  },
+  "FurPlucking": {
+    "NAME": "Fur Plucking",
+    "DESCRIPTION": "Deal !D! damage. NL Gain Vigor equal to unblocked damage dealt."
+  },
+  "ShotClub": {
+    "NAME": "Shot Club",
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL When you draw this card, Exhaust it."
+  },
+  "StarPiercer": {
+    "NAME": "Star Piercer",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E] [E] [E], return this card to your hand, and regain the Vigor used by this card."
+  },
+  "WarhawkTalon": {
+    "NAME": "Warhawk Talon",
+    "DESCRIPTION": "Deal !D! damage. NL Apply Vulnerable equal to your Hover."
+  },
+  "Stormhawk": {
+    "NAME": "Stormhawk",
+    "DESCRIPTION": "Draw cards equal to your Hover. NL Gain Energy equal to your Hover. NL Exhaust."
+  },
+  "EagleAscent": {
+    "NAME": "Eagle Ascent",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Hover. NL Exhaust a random card in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !M! Hover. NL Exhaust a card in your hand."
+  },
+  "BraggartRoar": {
+    "NAME": "Braggart Roar",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !M! Vigor. NL Exhaust."
+  },
+  "SpikedPalisade": {
+    "NAME": "Spiked Palisade",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL Gain !MD! Perfect Guard."
+  },
+  "FrozenNeedle": {
+    "NAME": "Frozen Needle",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever the target is attacked, if you have Vigor, refund the attacking card's Energy cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Whenever the target is attacked, if you have Vigor, refund the attacking card's Energy cost."
+  },
+  "SolarEnergy": {
+    "NAME": "Solar Energy",
+    "DESCRIPTION": "Lose !M! Vigor. NL Gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Lose !M! Vigor. NL Gain [E] [E] [E] .",
+    "EXTENDED_DESCRIPTION": ["Requires at least 5 Vigor."]
+  },
+  "BorderWall": {
+    "NAME": "Border Wall",
+    "DESCRIPTION": "Can only be played if you have no Attacks in hand. NL Gain !M! Thorns. NL Gain !MD! Hover.",
+    "EXTENDED_DESCRIPTION": ["Cannot be played while you have Attacks in hand."]
+  },
+  "StormBlade": {
+    "NAME": "Storm Blade",
+    "DESCRIPTION": "Gain !M! Vigor."
+  },
   "StormWing": {
     "NAME": "Storm Wing",
     "DESCRIPTION": "Gain !M! Hover."
@@ -339,6 +404,10 @@
   "LessLikelyToBeTargeted": {
     "NAME": "Less Likely to Be Targeted",
     "DESCRIPTION": "For each enemy intending to attack, replace its action with gaining !M! Block. NL Exhaust."
+  },
+  "Avelyn": {
+    "NAME": "Avelyn",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Play all copies of Avelyn in your draw and discard piles on random enemies. NL If played from your hand, shuffle a copy of this card into your draw pile."
   },
   "NineStagesOfDecay": {
     "NAME": "Nine Stages of Decay",
@@ -588,7 +657,12 @@
   },
   "WingedKnightHalberd": {
     "NAME": "Winged Knight Halberd",
-    "DESCRIPTION": "Deal !D! damage. NL For every !M! Block you have, deal 7 additional damage."
+    "DESCRIPTION": "Deal !D! damage. NL Put a card from your draw pile into your discard pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put any number of cards from your draw pile into your discard pile.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to put into your discard pile.",
+      "Choose any number of cards to put into your discard pile in selection order."
+    ]
   },
   "SpinningGravityThrust": {
     "NAME": "Spinning Gravity Thrust",
@@ -666,13 +740,33 @@
     "DESCRIPTION": "Double your Hover and Soar. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple your Hover and Soar. NL Exhaust."
   },
+  "PowerOfCompassion": {
+    "NAME": "Power of Compassion",
+    "DESCRIPTION": "ALL enemies' Strength always matches yours. NL Exhaust."
+  },
+  "MarionetteArmor": {
+    "NAME": "Marionette Armor",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vigor. NL Exhaust."
+  },
+  "DragoncrestGreatshield": {
+    "NAME": "Dragoncrest Greatshield",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !MD! Perfect Guard. NL Retain your hand this turn."
+  },
+  "Typhoon": {
+    "NAME": "Typhoon",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !MD! Frostbite. NL Apply !M! Frostbite to ALL enemies."
+  },
+  "MillwoodKnightArmor": {
+    "NAME": "Millwood Knight Armor",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Hover. NL Remove all Frostbite."
+  },
   "WingStance": {
     "NAME": "Wing Stance",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Hover."
   },
   "ForcedLanding": {
     "NAME": "Forced Landing",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Lose !M! Hover.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Lose !M! Hover. NL Draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
       "Requires at least 3 Hover."
     ]
@@ -680,6 +774,10 @@
   "Sovereignty": {
     "NAME": "Sovereignty",
     "DESCRIPTION": "You no longer discard your hand at the end of your turn."
+  },
+  "FadeIntoShadow": {
+    "NAME": "Fade Into Shadow",
+    "DESCRIPTION": "Double all Block you gain this turn."
   },
   "ShroudingHeavens": {
     "NAME": "Shrouding Heavens",
@@ -1364,7 +1462,7 @@
   },
   "NoMoney": {
     "NAME": "No Money",
-    "DESCRIPTION": "Gain !B! Block. NL Gain Mushroom."
+    "DESCRIPTION": "Gain !B! Block. NL Gain Mushroom. NL Every time you play !M! cards in a single turn, return this card from your draw or discard pile to your hand."
   },
   "SlimeMold": {
     "NAME": "Slime Mold",
@@ -1495,6 +1593,11 @@
     "NAME": "Scarlet Aeonia",
     "DESCRIPTION": "Apply !M! Scarlet Rot to ALL enemies. NL Trigger all enemies' Anomalies once. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply !M! Scarlet Rot to ALL enemies. NL Trigger all enemies' Anomalies once."
+  },
+  "UnalloyedGoldNeedle": {
+    "NAME": "Unalloyed Gold Needle",
+    "DESCRIPTION": "Remove all buffs from an enemy. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Remove all buffs from an enemy. NL Exhaust."
   },
   "Metastasis": {
     "NAME": "Metastasis",
@@ -1886,6 +1989,11 @@
     "DESCRIPTION": " Brew Golden Centipede. NL Exhaust.",
     "UPGRADE_DESCRIPTION": " Brew Golden Centipede."
   },
+  "EquivalentExchange": {
+    "NAME": "Equivalent Exchange",
+    "DESCRIPTION": "Lose all Bulk potions. NL Gain the same number of random Bulk potions. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Lose all Bulk potions. NL Gain the same number of random Bulk potions."
+  },
   "RollingSparks": {
     "NAME": "Rolling Sparks",
     "DESCRIPTION": "Lose all Bulk potions. NL For each potion lost, deal !D! damage to ALL enemies."
@@ -1948,6 +2056,16 @@
     "NAME": "Potentate Cookbook",
     "DESCRIPTION": " *Mottled Pot does not Exhaust.",
     "UPGRADE_DESCRIPTION": " Innate. NL  *Mottled Pot does not Exhaust."
+  },
+  "HeavenCord": {
+    "NAME": "Heaven Cord",
+    "DESCRIPTION": "You may ignore paths when choosing the next room to travel to !M! time. NL Exhaust. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "You may ignore paths when choosing the next room to travel to !M! time. NL Exhaust."
+  },
+  "Telescope": {
+    "NAME": "Telescope",
+    "DESCRIPTION": "When viewing your draw pile, the cards are now shown in order. NL Draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "Innate. NL When viewing your draw pile, the cards are now shown in order. NL Draw !M! cards."
   },
   "DrawstringPot": {
     "NAME": "Drawstring Pot",
@@ -2550,7 +2668,7 @@
   },
   "DynastFinesse": {
     "NAME": "Dynast Finesse",
-    "DESCRIPTION": "Gain 1 Hover. NL Deal !D! damage."
+    "DESCRIPTION": "Gain 2 Hover. NL Deal !D! damage."
   },
   "BlackKnife": {
     "NAME": "Black Knife",

@@ -49,6 +49,7 @@ public class SpikedShield extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeBlock(1);
             upgradeMagicNumber(UPGRADE_PLUS_THORNS);
             initializeDescription();
         }

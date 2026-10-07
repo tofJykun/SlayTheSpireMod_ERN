@@ -4,6 +4,11 @@
     "FLAVOR": "",
     "DESCRIPTIONS": ["Whenever you #yRest, increase your Max HP by #b7."]
   },
+  "HermesBoots": {
+    "NAME": "Hermes Boots",
+    "FLAVOR": "The road does not dictate the journey.",
+    "DESCRIPTIONS": ["You may ignore paths when choosing the next room to travel to #b", " times."]
+  },
   "SunStone": {
     "NAME": "Sun Stone",
     "FLAVOR": "",
@@ -138,11 +143,61 @@
       "On the first turn of each combat, gain #yBlock equal to the total enemy damage."
     ]
   },
+  "TheTwelveBronzeColossi": {
+    "NAME": "The Twelve Bronze Colossi",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "#yTransform all Strikes into #yMarionette #yArmor.",
+      "Strikes transformed into Marionette Armor."
+    ]
+  },
   "HonorOfPinionfolk": {
     "NAME": "Honor Of Pinionfolk",
     "FLAVOR": "Guardian's character skill.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain #b2 #yHover."
+      "At the start of each combat, gain #b3 #yHover."
+    ]
+  },
+  "SoaringInsignia": {
+    "NAME": "Soaring Insignia",
+    "FLAVOR": "Spread your wings and soar above the clouds.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b6 #yHover."
+    ]
+  },
+  "CelestialWings": {
+    "NAME": "Celestial Wings",
+    "FLAVOR": "The shelter of the heavens.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b1 #ySoar."
+    ]
+  },
+  "ShadowOfPorcine": {
+    "NAME": "Shadow of Porcine",
+    "FLAVOR": "The shadow steps forward to shield you.",
+    "DESCRIPTIONS": [
+      "The first time you gain #yBlock from a card each combat, double that #yBlock."
+    ]
+  },
+  "SunlightMaggot": {
+    "NAME": "Sunlight Maggot",
+    "FLAVOR": "A tiny sun, still shining.",
+    "DESCRIPTIONS": [
+      "The first time you use #yVigor each turn, gain [E]."
+    ]
+  },
+  "SunlightMedal": {
+    "NAME": "Sunlight Medal",
+    "FLAVOR": "Praise the sun.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain #b2 #yVigor."
+    ]
+  },
+  "OrmaGreatshield": {
+    "NAME": "Orma Greatshield",
+    "FLAVOR": "Hold the line.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b10 #yPerfect #yGuard."
     ]
   },
   "EagleEye": {

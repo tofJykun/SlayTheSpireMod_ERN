@@ -3,6 +3,7 @@ package cards.guardian;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,8 +19,8 @@ public class ForcedLanding extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/guardian/ForcedLanding.png";
     private static final int COST = 2;
-    private static final int DAMAGE = 22;
-    private static final int UPGRADE_PLUS_DAMAGE = 6;
+    private static final int DAMAGE = 24;
+    private static final int UPGRADE_PLUS_DAMAGE = 8;
     private static final int HOVER_LOSS = 3;
 
     public ForcedLanding() {
@@ -37,6 +38,7 @@ public class ForcedLanding extends CustomCard {
                 this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot((AbstractGameAction)new ReducePowerAction((AbstractCreature)p, (AbstractCreature)p,
                 HoverPower.POWER_ID, this.magicNumber));
+        addToBot(new DrawCardAction(p, this.magicNumber));
     }
 
     @Override

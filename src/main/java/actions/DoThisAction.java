@@ -75,6 +75,7 @@ public class DoThisAction extends AbstractGameAction {
             return;
         }
 
+        AvelynAction.rememberHandPlay(card);
         if (this.player.hand.group.contains(card)) {
             this.player.hand.group.remove(card);
         }

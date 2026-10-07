@@ -89,6 +89,7 @@ public class ChargeForth extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeDamage(1);
             upgradeMagicNumber(UPGRADE_PLUS_DRAW);
             initializeDescription();
         }

@@ -14,7 +14,7 @@ public class HonorOfPinionfolk extends CustomRelic {
     public static final String ID = "HonorOfPinionfolk";
     private static final String IMG = "img/relics/guardian/HonorOfPinionfolk.png";
     private static final String IMG_OTL = "img/relics/guardian/outline/HonorOfPinionfolk.png";
-    private static final int HOVER = 2;
+    private static final int HOVER = 3;
 
     public HonorOfPinionfolk() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),

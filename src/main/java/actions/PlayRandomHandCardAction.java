@@ -57,6 +57,7 @@ public class PlayRandomHandCardAction extends AbstractGameAction {
             return;
         }
         if (AbstractDungeon.player.hand.group.contains(card)) {
+            AvelynAction.rememberHandPlay(card);
             AbstractDungeon.player.hand.group.remove(card);
         }
         AbstractDungeon.player.limbo.addToBottom(card);

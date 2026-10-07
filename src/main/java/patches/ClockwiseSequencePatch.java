@@ -1,6 +1,7 @@
 package patches;
 
 import actions.AlphaToOmegaSequencer;
+import actions.AvelynSequencer;
 import actions.ClockwiseSequencer;
 import actions.CoordinatedAttackSequencer;
 import actions.PackagingSequencer;
@@ -13,6 +14,7 @@ public class ClockwiseSequencePatch {
     public static class UpdatePatch {
         @SpirePostfixPatch
         public static void postfix(GameActionManager __instance) {
+            AvelynSequencer.resumeIfIdle(__instance);
             CoordinatedAttackSequencer.resumeIfIdle(__instance);
             PackagingSequencer.resumeIfIdle(__instance);
             ClockwiseSequencer.resumeIfIdle(__instance);

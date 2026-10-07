@@ -22,7 +22,7 @@ public class CrescentMoonAxe extends CustomCard {
     public CrescentMoonAxe() {
         super(ID, STRINGS.NAME, "img/cards/guardian/CrescentMoonAxe.png", 1, STRINGS.DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.Guardian_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 7;
         baseMagicNumber = magicNumber = 3;
     }
 

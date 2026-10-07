@@ -21,21 +21,25 @@ public final class SolarAttackHistory {
     private SolarAttackHistory() {}
 
     public static void reset() {
+        FrozenNeedleAttackContext.reset();
         contexts.clear(); actions.clear(); hits.clear(); SolarCardBlockHistory.reset();
     }
 
     public static void beginCard(AbstractCard card) {
+        FrozenNeedleAttackContext.beginCard(card);
         SolarCardBlockHistory.beginCard(card);
         contexts.push(card != null && card.type == AbstractCard.CardType.ATTACK);
     }
 
-    public static void endCard() { contexts.pop(); SolarCardBlockHistory.endCard(); }
+    public static void endCard() { contexts.pop(); SolarCardBlockHistory.endCard(); FrozenNeedleAttackContext.endCard(); }
 
     public static void beginAction(AbstractGameAction action) {
+        FrozenNeedleAttackContext.beginAction(action);
         contexts.push(actions.contains(action)); SolarCardBlockHistory.beginAction(action);
     }
 
     public static void endAction(AbstractGameAction action) {
+        FrozenNeedleAttackContext.endAction(action);
         SolarCardBlockHistory.endAction(action);
         contexts.pop();
         if (action.isDone) actions.remove(action);
@@ -44,11 +48,13 @@ public final class SolarAttackHistory {
     private static boolean fromAttack() { return !contexts.isEmpty() && contexts.peek(); }
 
     public static void queued(AbstractGameAction action) {
+        FrozenNeedleAttackContext.queued(action);
         SolarCardBlockHistory.queued(action);
         if (action != null && fromAttack()) actions.add(action);
     }
 
     public static void created(DamageInfo info) {
+        FrozenNeedleAttackContext.created(info);
         if (fromAttack() && info.owner == AbstractDungeon.player && info.type == DamageInfo.DamageType.NORMAL) {
             hits.add(info);
         }

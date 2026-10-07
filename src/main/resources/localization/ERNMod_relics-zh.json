@@ -4,6 +4,11 @@
     "FLAVOR": "",
     "DESCRIPTIONS": ["每当你 #y休息 时，将你的最大生命值提升 #b7 。"]
   },
+  "HermesBoots": {
+    "NAME": "赫尔墨斯靴",
+    "FLAVOR": "道路并不规定旅途。",
+    "DESCRIPTIONS": ["你在选择下一层的房间时有 #b", " 次机会可以无视当前的路线。"]
+  },
   "SunStone": {
     "NAME": "太阳石",
     "FLAVOR": "",
@@ -138,11 +143,61 @@
       "在每场战斗的第 #b1 回合获得等于敌人总伤害点 #y格挡 。"
     ]
   },
+  "TheTwelveBronzeColossi": {
+    "NAME": "十二金人",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "将所有“打击” #y变化 为 #y人偶铠甲 。",
+      "打击已变化为人偶铠甲。"
+    ]
+  },
   "HonorOfPinionfolk": {
     "NAME": "羽翼之证",
     "FLAVOR": "守护者的技艺。",
     "DESCRIPTIONS": [
-      "在每场战斗开始时，获得 #b2 层 #y振翼 。"
+      "在每场战斗开始时，获得 #b3 层 #y振翼 。"
+    ]
+  },
+  "SoaringInsignia": {
+    "NAME": "翱翔徽章",
+    "FLAVOR": "展翼，直上云霄。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，获得 #b6 层 #y振翼 。"
+    ]
+  },
+  "CelestialWings": {
+    "NAME": "天界翼",
+    "FLAVOR": "天穹的庇护。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，获得 #b1 层 #y展翼 。"
+    ]
+  },
+  "ShadowOfPorcine": {
+    "NAME": "隶兽暗影",
+    "FLAVOR": "暗影先一步挡在身前。",
+    "DESCRIPTIONS": [
+      "你在每场战斗中第一次从卡牌中获得的 #y格挡 值翻倍。"
+    ]
+  },
+  "SunlightMaggot": {
+    "NAME": "太阳虫",
+    "FLAVOR": "微小的太阳，仍在发光。",
+    "DESCRIPTIONS": [
+      "你在每回合第一次使用 #y活力 时，获得 [E] 。"
+    ]
+  },
+  "SunlightMedal": {
+    "NAME": "太阳徽章",
+    "FLAVOR": "赞美太阳。",
+    "DESCRIPTIONS": [
+      "你在每回合开始时获得 #b2 点 #y活力 。"
+    ]
+  },
+  "OrmaGreatshield": {
+    "NAME": "洛马大盾",
+    "FLAVOR": "坚守阵线。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，获得 #b10 层 #y完美格挡 。"
     ]
   },
   "EagleEye": {

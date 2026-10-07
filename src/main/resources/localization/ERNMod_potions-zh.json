@@ -105,6 +105,13 @@
       " 点 #y活力 。"
     ]
   },
+  "TruffleLiqueur": {
+    "NAME": "松露酒",
+    "DESCRIPTIONS": [
+      "在每回合开始时，获得 #b",
+      " 点 #y活力 。"
+    ]
+  },
   "PearlPotion": {
     "NAME": "珍珠药水",
     "DESCRIPTIONS": [

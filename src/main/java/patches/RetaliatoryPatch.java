@@ -16,6 +16,7 @@ import powers.RetaliatoryPower;
 public class RetaliatoryPatch {
     @SpirePrefixPatch
     public static SpireReturn<Void> prefix(VigorPower __instance, AbstractCard card, UseCardAction action) {
+        relics.SunlightMaggot.onVigorUsed(__instance.owner, card, __instance.amount);
         boolean refundByCard = SmithingBody.behavior(card) instanceof GolemHalberd;
         if (card != null && card.type == AbstractCard.CardType.ATTACK
                 && __instance.owner != null

@@ -24,18 +24,22 @@ public class WingCrestShield extends CustomCard {
         baseMagicNumber = magicNumber = 2;
     }
 
+    public int getHoverAmount() {
+        return upgraded ? 2 : HOVER;
+    }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new PerfectGuardPower(p, magicNumber), magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new HoverPower(p, HOVER), HOVER));
+        addToBot(new ApplyPowerAction(p, p, new HoverPower(p, getHoverAmount()), getHoverAmount()));
     }
 
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(4);
+            upgradeBlock(2);
             upgradeMagicNumber(2);
         }
     }

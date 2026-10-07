@@ -122,7 +122,7 @@ public class ScheduledVariable extends DynamicVariable {
             return ((CurseWardGreatshield)card).getArtifactAmount();
         }
         if (card instanceof WingCrestShield) {
-            return WingCrestShield.HOVER;
+            return ((WingCrestShield)card).getHoverAmount();
         }
         if (card instanceof Valorheart) {
             return ((Valorheart)card).getParryAmount();
@@ -196,7 +196,7 @@ public class ScheduledVariable extends DynamicVariable {
             return ((CurseWardGreatshield)card).getArtifactAmount();
         }
         if (card instanceof WingCrestShield) {
-            return WingCrestShield.HOVER;
+            return ((WingCrestShield)card).getHoverAmount();
         }
         if (card instanceof Valorheart) {
             return ((Valorheart)card).getParryAmount();
@@ -260,6 +260,9 @@ public class ScheduledVariable extends DynamicVariable {
 
     @Override
     public boolean upgraded(AbstractCard card) {
+        if (card instanceof WingCrestShield) {
+            return card.upgraded;
+        }
         if (card instanceof FalconShield) {
             return card.upgraded;
         }

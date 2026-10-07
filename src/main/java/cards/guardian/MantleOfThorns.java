@@ -16,7 +16,7 @@ public class MantleOfThorns extends CustomCard {
     public static final String ID = "MantleOfThorns";
     private static final String IMG_PATH = "img/cards/guardian/MantleOfThorns.png";
     private static final int COST = 2;
-    private static final int THORNS_PER_HOVER = 1;
+    private static final int THORNS_PER_HOVER = 2;
     private static final int UPGRADE_PLUS_THORNS = 1;
 
     public MantleOfThorns() {

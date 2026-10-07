@@ -69,6 +69,7 @@ public class PlayRandomAttackHandCardAction extends AbstractGameAction {
         if (card == null || !this.player.hand.group.contains(card)) {
             return;
         }
+        AvelynAction.rememberHandPlay(card);
         this.player.hand.group.remove(card);
         this.player.limbo.addToBottom(card);
         RandomPlayHelper.prepareRandomPlayedCard(card);

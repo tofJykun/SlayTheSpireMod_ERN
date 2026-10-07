@@ -7,6 +7,11 @@ import cards.duchess.GodslayerGreatsword;
 import cards.executor.RagingBeast;
 import cards.guardian.SpinningGravityThrust;
 import cards.guardian.DuelingShield;
+import cards.guardian.Typhoon;
+import cards.guardian.DragoncrestGreatshield;
+import cards.guardian.WingsOfFreedom;
+import cards.guardian.BorderWall;
+import cards.guardian.SpikedPalisade;
 import cards.guardian.FatalAppetite;
 import cards.guardian.CrucifixOfTheMadKing;
 import cards.guardian.SpearcallRitual;
@@ -43,6 +48,11 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public int value(AbstractCard card) {
+        if (card instanceof SpikedPalisade) return ((SpikedPalisade)card).getPerfectGuardAmount();
+        if (card instanceof BorderWall) return ((BorderWall)card).getHoverGain();
+        if (card instanceof WingsOfFreedom) return ((WingsOfFreedom)card).getHoverPerEnemy();
+        if (card instanceof DragoncrestGreatshield) return ((DragoncrestGreatshield)card).getPerfectGuardAmount();
+        if (card instanceof Typhoon) return ((Typhoon)card).getSelfFrostbite();
         if (card instanceof PhantomSebastian) return ((PhantomSebastian)card).getEnergyGain();
         if (card instanceof FatalAppetite) return ((FatalAppetite)card).getMaxHpGain();
         if (card instanceof CrucifixOfTheMadKing) return ((CrucifixOfTheMadKing)card).getSelfDamage();
@@ -92,6 +102,11 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
+        if (card instanceof SpikedPalisade) return ((SpikedPalisade)card).getPerfectGuardAmount();
+        if (card instanceof BorderWall) return ((BorderWall)card).getHoverGain();
+        if (card instanceof WingsOfFreedom) return ((WingsOfFreedom)card).getHoverPerEnemy();
+        if (card instanceof DragoncrestGreatshield) return ((DragoncrestGreatshield)card).getPerfectGuardAmount();
+        if (card instanceof Typhoon) return ((Typhoon)card).getSelfFrostbite();
         if (card instanceof PhantomSebastian) return ((PhantomSebastian)card).getEnergyGain();
         if (card instanceof FatalAppetite) return ((FatalAppetite)card).getMaxHpGain();
         if (card instanceof CrucifixOfTheMadKing) return ((CrucifixOfTheMadKing)card).getSelfDamage();
@@ -142,7 +157,7 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
     @Override
     public boolean upgraded(AbstractCard card) {
         return (card instanceof FatalAppetite || card instanceof SmithingArtSpears || card instanceof Girandole || card instanceof InTheZone
-                || card instanceof SwordOfNightAndFlame || card instanceof CrucifixOfTheMadKing
-                || card instanceof PhantomSebastian) && card.upgraded;
+                || card instanceof SwordOfNightAndFlame || card instanceof CrucifixOfTheMadKing || card instanceof DragoncrestGreatshield
+                || card instanceof PhantomSebastian || card instanceof BorderWall || card instanceof SpikedPalisade) && card.upgraded;
     }
 }

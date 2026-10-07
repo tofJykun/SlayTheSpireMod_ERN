@@ -105,6 +105,13 @@
       " #yVigor."
     ]
   },
+  "TruffleLiqueur": {
+    "NAME": "Truffle Liqueur",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain #b",
+      " #yVigor."
+    ]
+  },
   "PearlPotion": {
     "NAME": "Pearl Potion",
     "DESCRIPTIONS": [

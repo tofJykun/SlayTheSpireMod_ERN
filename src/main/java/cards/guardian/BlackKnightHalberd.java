@@ -24,7 +24,7 @@ public class BlackKnightHalberd extends CustomCard {
 
     public BlackKnightHalberd() {
         super(ID, CARD_STRINGS.NAME, IMG_PATH, COST, CARD_STRINGS.DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.Guardian_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
+                CardType.ATTACK, AbstractCardEnum.Guardian_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
         this.baseMagicNumber = DAMAGE_LOSS;
         this.magicNumber = this.baseMagicNumber;
