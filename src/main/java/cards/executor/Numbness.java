@@ -23,7 +23,7 @@ import powers.SleepPower;
 public class Numbness extends CustomCard {
     public static final String ID = "Numbness";
     private static final String IMG_PATH = "img/cards/executor/Numbness.png";
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     public Numbness() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

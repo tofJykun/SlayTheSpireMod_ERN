@@ -1,4 +1,16 @@
 {
+  "CalamityPotion": {
+    "NAME": "灾厄药水",
+    "DESCRIPTIONS": ["给予所有敌人每种 #y异变 各 #b%d 层。"]
+  },
+  "DevilFruit": {
+    "NAME": "恶魔果实",
+    "DESCRIPTIONS": ["失去 #b%d 点最大生命。 NL 获得 #b%d 点能量，抽 #b%d 张牌。"]
+  },
+  "BlackflamePotion": {
+    "NAME": "黑焰药水",
+    "DESCRIPTIONS": ["给予 #b%d 层 #y燃命 。"]
+  },
   "SummonPotion": {
     "NAME": "唤灵药水",
     "DESCRIPTIONS": ["随机 #y召唤 。", "随机 #y召唤 两次。"]

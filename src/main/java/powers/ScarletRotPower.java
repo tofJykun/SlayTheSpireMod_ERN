@@ -2,8 +2,7 @@ package powers;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import actions.ScarletRotLoseHpAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import general.AnomalyTriggerHelper;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -63,10 +62,7 @@ public class ScarletRotPower extends AbstractPower {
         if (CombatState.isInCombat()
                 && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flashWithoutSound();
-            addToBot((AbstractGameAction)new ScarletRotLoseHpAction(this.owner, this.source,
-                    AbstractGameAction.AttackEffect.POISON));
-            addToBot((AbstractGameAction)new ScarletRotLoseHpAction(this.owner, this.source,
-                    AbstractGameAction.AttackEffect.POISON));
+            AnomalyTriggerHelper.queueTrigger(this, this.source, 2);
         }
     }
 

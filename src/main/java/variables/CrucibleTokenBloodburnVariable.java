@@ -5,6 +5,11 @@ import cards.duchess.CrystalEnchanted;
 import cards.duchess.EventualGreatness;
 import cards.duchess.GodslayerGreatsword;
 import cards.executor.RagingBeast;
+import cards.executor.FrenzyflameThrust;
+import cards.executor.ScorpionStinger;
+import cards.executor.PosionedRelief;
+import cards.executor.AlabasterLordsPull;
+import cards.executor.OnyxLordsRepulsion;
 import cards.guardian.SpinningGravityThrust;
 import cards.guardian.DuelingShield;
 import cards.guardian.Typhoon;
@@ -38,6 +43,7 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public boolean isModified(AbstractCard card) {
+        if (card instanceof AlabasterLordsPull || card instanceof OnyxLordsRepulsion) return card.isBlockModified;
         if (card instanceof SwordOfNightAndFlame) {
             SwordOfNightAndFlame sword = (SwordOfNightAndFlame)card;
             return sword.getAreaDamage() != sword.getBaseAreaDamage();
@@ -48,6 +54,10 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public int value(AbstractCard card) {
+        if (card instanceof PosionedRelief) return ((PosionedRelief)card).getDelayedHpLoss();
+        if (card instanceof AlabasterLordsPull || card instanceof OnyxLordsRepulsion) return card.block;
+        if (card instanceof ScorpionStinger) return ((ScorpionStinger)card).getScarletRotAmount();
+        if (card instanceof FrenzyflameThrust) return ((FrenzyflameThrust)card).getDrawAmount();
         if (card instanceof SpikedPalisade) return ((SpikedPalisade)card).getPerfectGuardAmount();
         if (card instanceof BorderWall) return ((BorderWall)card).getHoverGain();
         if (card instanceof WingsOfFreedom) return ((WingsOfFreedom)card).getHoverPerEnemy();
@@ -102,6 +112,10 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
+        if (card instanceof PosionedRelief) return ((PosionedRelief)card).getDelayedHpLoss();
+        if (card instanceof AlabasterLordsPull || card instanceof OnyxLordsRepulsion) return card.baseBlock;
+        if (card instanceof ScorpionStinger) return ((ScorpionStinger)card).getScarletRotAmount();
+        if (card instanceof FrenzyflameThrust) return ((FrenzyflameThrust)card).getDrawAmount();
         if (card instanceof SpikedPalisade) return ((SpikedPalisade)card).getPerfectGuardAmount();
         if (card instanceof BorderWall) return ((BorderWall)card).getHoverGain();
         if (card instanceof WingsOfFreedom) return ((WingsOfFreedom)card).getHoverPerEnemy();
@@ -156,7 +170,9 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public boolean upgraded(AbstractCard card) {
-        return (card instanceof FatalAppetite || card instanceof SmithingArtSpears || card instanceof Girandole || card instanceof InTheZone
+        if (card instanceof PosionedRelief) return card.upgraded;
+        if (card instanceof AlabasterLordsPull || card instanceof OnyxLordsRepulsion) return card.upgraded;
+        return (card instanceof ScorpionStinger || card instanceof FrenzyflameThrust || card instanceof FatalAppetite || card instanceof SmithingArtSpears || card instanceof Girandole || card instanceof InTheZone
                 || card instanceof SwordOfNightAndFlame || card instanceof CrucifixOfTheMadKing || card instanceof DragoncrestGreatshield
                 || card instanceof PhantomSebastian || card instanceof BorderWall || card instanceof SpikedPalisade) && card.upgraded;
     }

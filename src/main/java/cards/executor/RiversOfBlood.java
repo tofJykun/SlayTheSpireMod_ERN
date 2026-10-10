@@ -23,7 +23,7 @@ public class RiversOfBlood extends CustomCard {
 
     public RiversOfBlood() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Executor_COLOR, CardRarity.RARE, CardTarget.ALL_ENEMY);
+                CardType.SKILL, AbstractCardEnum.Executor_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseMagicNumber = ENEMY_BLOODLOSS;
         this.magicNumber = this.baseMagicNumber;
     }

@@ -1,4 +1,16 @@
 {
+  "RedRustPower": {
+    "NAME": "Red Rust",
+    "DESCRIPTIONS": ["The next #b", " debuffs received are applied an additional time. Each consumes #b1 #yRed #yRust. The extra application does not trigger #yRed #yRust again."]
+  },
+  "VenomousFangPower": {
+    "NAME": "Venomous Fang",
+    "DESCRIPTIONS": ["At the end of its turn, gains #b", " #yPoison."]
+  },
+  "PosionedReliefPower": {
+    "NAME": "Poisoned Relief",
+    "DESCRIPTIONS": ["At the start of your next turn, %s loses #b%d HP."]
+  },
   "GainSpiritAtEndOfTurnPower": {
     "NAME": "Spirit Recovery",
     "DESCRIPTIONS": ["At the end of your turn, gain #b", " #ySpirit ."]
@@ -144,6 +156,18 @@
   "RingOfFavorPower": {
     "NAME": "Ring of Favor",
     "DESCRIPTIONS": ["At the start of each turn, draw #b%d additional card(s).", "At the start of each turn, draw #b%d fewer card(s)."]
+  },
+  "CalamitySpraymistPower": {
+    "NAME": "Calamity Spraymist",
+    "DESCRIPTIONS": ["#yAnomalies on both sides trigger #b", " additional time(s)."]
+  },
+  "WavesOfDarknessPower": {
+    "NAME": "Waves of Darkness",
+    "DESCRIPTIONS": ["Every #b", " times you apply a debuff to an enemy, draw #b", " card. NL Current count: #b", "."]
+  },
+  "HolyGroundPower": {
+    "NAME": "Holy Ground",
+    "DESCRIPTIONS": ["Whenever you receive a debuff, gain #b", " Energy."]
   },
   "DeadlyDancePower": {
     "NAME": "Deadly Dance",
@@ -710,6 +734,21 @@
       " #yFrostbite to ALL enemies."
     ]
   },
+  "CalamityExultationPower": {
+    "NAME": "Calamity Exultation",
+    "DESCRIPTIONS": ["Whenever you receive a debuff, gain #b", " #yStrength."]
+  },
+  "NoFlyZonePower": {
+    "NAME": "No-Fly Zone",
+    "DESCRIPTIONS": ["Whenever an enemy loses HP, after other max HP reductions resolve, reduce its max HP to match its current HP."]
+  },
+  "RottenBreathPower": {
+    "NAME": "Rotten Breath",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b",
+      " #yScarlet #yRot to ALL enemies."
+    ]
+  },
   "FreezingMistPower": {
     "NAME": "Freezing Mist",
     "DESCRIPTIONS": [
@@ -1079,6 +1118,10 @@
       "Whenever you #ySummon, deal #b",
       " damage to a random enemy."
     ]
+  },
+  "LeveragePower": {
+    "NAME": "Leverage",
+    "DESCRIPTIONS": ["Your next card must be a #yRare card."]
   },
   "LifegemPower": {
     "NAME": "Lifegem",

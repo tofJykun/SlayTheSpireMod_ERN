@@ -21,12 +21,12 @@ import powers.FrostbitePower;
 import powers.MadnessPower;
 import powers.SleepPower;
 
-public class AspectsOfCrucible extends CustomCard {
-    public static final String ID = "AspectsOfCrucible";
-    private static final String IMG_PATH = "img/cards/executor/AspectsOfCrucible.png";
+public class AspectsOfTheCrucibleBeast extends CustomCard {
+    public static final String ID = "AspectsOfTheCrucibleBeast";
+    private static final String IMG_PATH = "img/cards/executor/AspectsOfTheCrucibleBeast.png";
     private static final int COST = 2;
 
-    public AspectsOfCrucible() {
+    public AspectsOfTheCrucibleBeast() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Executor_COLOR, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
@@ -65,7 +65,7 @@ public class AspectsOfCrucible extends CustomCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new AspectsOfCrucible();
+        return new AspectsOfTheCrucibleBeast();
     }
 
     @Override

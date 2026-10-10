@@ -22,7 +22,7 @@ public class Metastasis extends CustomCard {
 
     public Metastasis() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Executor_COLOR, CardRarity.RARE, CardTarget.ENEMY);
+                CardType.SKILL, AbstractCardEnum.Executor_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseMagicNumber = BLOODBURN;
         this.magicNumber = this.baseMagicNumber;
     }

@@ -16,8 +16,8 @@ import powers.CrucibleCodexPower;
 public class CrucibleCodex extends CustomCard {
     public static final String ID = "CrucibleCodex";
     private static final String IMG_PATH = "img/cards/executor/CrucibleCodex.png";
-    private static final int COST = 3;
-    private static final int UPGRADE_COST = 2;
+    private static final int COST = 2;
+    private static final int UPGRADE_COST = 1;
 
     public CrucibleCodex() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

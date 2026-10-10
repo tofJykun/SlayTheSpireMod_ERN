@@ -17,14 +17,14 @@ import powers.DarkBloodPower;
 public class DarkBlood extends CustomCard {
     public static final String ID = "DarkBlood";
     private static final String IMG_PATH = "img/cards/executor/DarkBlood.png";
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int STAT_GAIN = 3;
     private static final int UPGRADE_PLUS_STAT = 1;
     public static final int ABERRATION = 2;
 
     public DarkBlood() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.Executor_COLOR, CardRarity.RARE, CardTarget.SELF);
+                CardType.POWER, AbstractCardEnum.Executor_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = STAT_GAIN;
         this.magicNumber = this.baseMagicNumber;
     }

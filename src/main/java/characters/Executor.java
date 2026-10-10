@@ -1,6 +1,8 @@
 package characters;
 
 import basemod.abstracts.CustomPlayer;
+import cards.executor.BlackFlame;
+import cards.executor.Darkstorm;
 import cards.executor.Defend_Executor;
 import cards.executor.Strike_Executor;
 import com.badlogic.gdx.graphics.Color;
@@ -18,7 +20,7 @@ import ernmod.ERNMod;
 import general.ERNEnergyOrb;
 import patches.AbstractCardEnum;
 import patches.ERNModClassEnum;
-import relics.CalamityWard;
+import relics.Suncatcher;
 
 import java.util.ArrayList;
 
@@ -68,13 +70,15 @@ public class Executor extends CustomPlayer {
         retVal.add(Defend_Executor.ID);
         retVal.add(Defend_Executor.ID);
         retVal.add(Defend_Executor.ID);
+        retVal.add(BlackFlame.ID);
+        retVal.add(Darkstorm.ID);
         return retVal;
     }
 
     @Override
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(CalamityWard.ID);
+        retVal.add(Suncatcher.ID);
         return retVal;
     }
 

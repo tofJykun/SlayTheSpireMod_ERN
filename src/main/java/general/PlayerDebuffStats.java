@@ -14,11 +14,15 @@ public final class PlayerDebuffStats {
     }
 
     public static void recordApplication(AbstractCreature target, AbstractPower power, int amount) {
-        if (CombatState.isInCombat() && target != null && target == AbstractDungeon.player
-                && power != null && power.type == AbstractPower.PowerType.DEBUFF
-                && amount != 0 && (amount > 0 || power.canGoNegative)) {
+        if (isPlayerDebuffApplication(target, power, amount)) {
             applications++;
         }
+    }
+
+    public static boolean isPlayerDebuffApplication(AbstractCreature target, AbstractPower power, int amount) {
+        return CombatState.isInCombat() && target != null && target == AbstractDungeon.player
+                && power != null && power.type == AbstractPower.PowerType.DEBUFF
+                && amount != 0 && (amount > 0 || power.canGoNegative);
     }
 
     public static int getApplications() {

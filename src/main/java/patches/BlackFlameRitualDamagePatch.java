@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import powers.BlackFlameRitualPower;
+import powers.NoFlyZonePower;
 
 import java.util.ArrayDeque;
 
@@ -63,6 +64,7 @@ public class BlackFlameRitualDamagePatch {
                 break;
             }
         }
+        NoFlyZonePower.onEnemyLoseHp(monster, Math.max(0, loss - frame.nestedLoss));
         if (frame.power != null) {
             frame.power.onEnemyLoseHp(monster, Math.max(0, loss - frame.nestedLoss));
         }

@@ -2,6 +2,7 @@ package cards.executor;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -21,6 +22,7 @@ public class AlabasterLordsPull extends CustomCard {
                 CardCrawlGame.languagePack.getCardStrings(ID).DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Executor_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 1;
+        baseBlock = 6;
     }
 
     @Override
@@ -30,6 +32,7 @@ public class AlabasterLordsPull extends CustomCard {
                 addToBot(new LoseHPAction(monster, p, HP_LOSS));
             }
         }
+        addToBot(new GainBlockAction(p, p, this.block));
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             if (!monster.isDeadOrEscaped() && !monster.halfDead && monster.currentHealth > 0) {
                 addToBot(new ApplyPowerAction(monster, p, new WeakPower(monster, magicNumber, false), magicNumber));
@@ -46,6 +49,7 @@ public class AlabasterLordsPull extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeBlock(3);
             upgradeMagicNumber(1);
         }
     }

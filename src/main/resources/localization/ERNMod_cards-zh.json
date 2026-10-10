@@ -888,6 +888,10 @@
     "NAME": "渴望盾",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 代币 。"
   },
+  "Leverage": {
+    "NAME": "杠杆",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 你下一张只能打出稀有牌。"
+  },
   "Lifegem": {
     "NAME": "滴石",
     "DESCRIPTION": "下 !M! 回合 NL 获得 [E] 。"
@@ -1581,6 +1585,18 @@
     "NAME": "命定之死",
     "DESCRIPTION": "给予 !M! 层 骤死 。 NL 如果回合结束时仍在你的手牌中，给予你2层 骤死 。"
   },
+  "RedRustScimitar": {
+    "NAME": "红锈曲剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标敌人生命值高于或等于50%，其受到的下 !M! 次负面效果会被额外给予一次。"
+  },
+  "VenomousFang": {
+    "NAME": "毒蛇牙",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标敌人在其每个回合结束时获得 !M! 层 中毒 。 NL 消耗 。"
+  },
+  "Darkstorm": {
+    "NAME": "黑暗风暴",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予敌人 !M! 层随机 异变 。"
+  },
   "BlackFlame": {
     "NAME": "黑焰",
     "DESCRIPTION": "给予 !M! 层 燃命 。"
@@ -1615,6 +1631,23 @@
     "NAME": "黑焰刀刃",
     "DESCRIPTION": "每有1次攻击造成未被格挡的伤害，就给予 !M! 层 燃命 。"
   },
+  "CalamitySpraymist": {
+    "NAME": "厄发喷雾",
+    "DESCRIPTION": " 异常 在触发时会额外触发 !M! 次。"
+  },
+  "WavesOfDarkness": {
+    "NAME": "黑暗波动",
+    "DESCRIPTION": "你每给予敌人 !M! 次负面 状态 ，抽 !MD! 张牌。"
+  },
+  "FingerprintSpear": {
+    "NAME": "指痕矛",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 在本场战斗中，你每获得一次负面 状态 ，这张牌的基础伤害和基础 格挡 减少 !M! 。"
+  },
+  "HolyGround": {
+    "NAME": "圣域",
+    "DESCRIPTION": "每当你获得负面 状态 时，获得 [E] 。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "每当你获得负面 状态 时，获得 [E] 。"
+  },
   "DeadlyDance": {
     "NAME": "灾厄之舞",
     "DESCRIPTION": "每当你对一名敌人造成负面 状态 ，获得 !M! 点 格挡 。"
@@ -1640,8 +1673,8 @@
     "DESCRIPTION": "在本回合每当你给予 异常 ，额外给予另外两种 异常 相同层数。",
     "UPGRADE_DESCRIPTION": " 保留 。 NL 在本回合每当你给予 异常 ，额外给予另外两种 异常 相同层数。"
   },
-  "AspectsOfCrucible": {
-    "NAME": "熔炉百相",
+  "AspectsOfTheCrucibleBeast": {
+    "NAME": "熔炉百相之兽",
     "DESCRIPTION": "将你的 冻伤 变成 力量 ， 睡眠 变成 敏捷 ， 发狂 变成 保留卡牌 ， 出血 变成 金属化 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": " 保留 。 NL 将你的 冻伤 变成 力量 ， 睡眠 变成 敏捷 ， 发狂 变成 保留卡牌 ， 出血 变成 金属化 。 NL 消耗 。"
   },
@@ -1695,7 +1728,7 @@
   },
   "BloodhoundFang": {
     "NAME": "猎犬长牙",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予3层 出血 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予4层 出血 。"
   },
   "ChaosBlade": {
     "NAME": "混沌之刃",
@@ -1703,8 +1736,8 @@
   },
   "Seppuku": {
     "NAME": "切腹",
-    "DESCRIPTION": "获得 [E] [E] 。 NL 给予自己4层随机 异变 。",
-    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] 。 NL 给予自己4层随机 异变 。"
+    "DESCRIPTION": "获得 [E] [E] 。 NL 获得3层随机 异变 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] 。 NL 获得3层随机 异变 。"
   },
   "DungPie": {
     "NAME": "屎块",
@@ -1723,6 +1756,57 @@
     "NAME": "暴露",
     "DESCRIPTION": "去除敌人身上所有 格挡 值和 人工制品 。 NL 给予 !M! 层 易伤 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": " 固有 。 NL 去除敌人身上所有 格挡 值和 人工制品 。 NL 给予 !M! 层 易伤 。 NL 消耗 。"
+  },
+  "PosionedRelief": {
+    "NAME": "饮鸩",
+    "DESCRIPTION": "敌人回复 !M! 点生命。 NL 你的下一回合开始时，目标敌人失去 !MD! 点生命。"
+  },
+  "Bully": {
+    "NAME": "霸凌",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标敌人生命值高于或等于 !MD! %，其在本回合内失去 !M! 点 力量 。"
+  },
+  "BlackFlamestoneParma": {
+    "NAME": "黑炎石圆盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每当你给予 异常 时，将这张牌从弃牌堆放回你的手牌。"
+  },
+  "Appeasement": {
+    "NAME": "绥靖",
+    "DESCRIPTION": "当前每有1名敌人生命值高于或等于50%，获得 !M! 点能量。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "当前每有1名敌人生命值高于或等于50%，获得 !M! 点能量。"
+  },
+  "ScorpionStinger": {
+    "NAME": "蝎尾针",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 猩红腐败 状态，抽 !M! 张牌。 NL 给予 !MD! 层 猩红腐败 。"
+  },
+  "CladInBlackflame": {
+    "NAME": "黑焰化铠",
+    "DESCRIPTION": "获得等于所有敌人 燃命 总数的 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得等于所有敌人 燃命 总数的 格挡 。"
+  },
+  "FrenzyflameThrust": {
+    "NAME": "癫火突击",
+    "DESCRIPTION": "给予 !M! 层 发狂 。 NL 抽 !MD! 张牌 。"
+  },
+  "CalamityExultation": {
+    "NAME": "灾厄欢愉",
+    "DESCRIPTION": "每当你获得负面 状态 时，获得 !M! 点 力量 。"
+  },
+  "NoFlyZone": {
+    "NAME": "禁空",
+    "DESCRIPTION": "每当敌人失去生命时，将最大生命减少到与生命值相同。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 每当敌人失去生命时，将最大生命减少到与生命值相同。"
+  },
+  "SnapWillow": {
+    "NAME": "折柳",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 如果目标敌人生命值高于或等于 !MD! %，获得 [E] [E] 。"
+  },
+  "PosionMothFlight": {
+    "NAME": "双吻毒蛾",
+    "DESCRIPTION": "造成目标敌人 中毒 层数 !M! 倍的伤害。 NL 目标敌人失去所有 中毒 。"
+  },
+  "RottenBreath": {
+    "NAME": "腐败吐息",
+    "DESCRIPTION": "在你的回合开始时，给予所有敌人 !M! 层 猩红腐败 。"
   },
   "FreezingMist": {
     "NAME": "冰雾",
@@ -3023,15 +3107,15 @@
   },
   "SolderingIron": {
     "NAME": "烙铁",
-    "DESCRIPTION": "敌人失去 !M! 生命，失去 !M! 点最大生命。"
+    "DESCRIPTION": "敌人失去 !M! 生命，失去 !M! 点最大生命。 NL 消耗 一张手牌。"
   },
   "OnyxLordsRepulsion": {
     "NAME": "黑王推力波",
-    "DESCRIPTION": "所有敌人失去 !MS! 生命。 NL 给予所有敌人 !M! 层 易伤 。"
+    "DESCRIPTION": "所有敌人失去 !MS! 生命。 NL 获得 !MD! 点 格挡 。 NL 给予所有敌人 !M! 层 易伤 。"
   },
   "AlabasterLordsPull": {
     "NAME": "白王引力波",
-    "DESCRIPTION": "所有敌人失去 !MS! 生命。 NL 给予所有敌人 !M! 层 虚弱 。"
+    "DESCRIPTION": "所有敌人失去 !MS! 生命。 NL 获得 !MD! 点 格挡 。 NL 给予所有敌人 !M! 层 虚弱 。"
   },
   "SwordOfMilos": {
     "NAME": "灭洛斯剑",

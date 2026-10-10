@@ -19,12 +19,13 @@ public class HoarfrostStomp extends CustomCard {
     private static final String IMG_PATH = "img/cards/executor/HoarfrostStomp.png";
     private static final int COST = 1;
     private static final int ATTACK_DMG = 6;
+    private static final int UPGRADE_PLUS_DMG = 2;
     private static final int FROSTBITE = 1;
     private static final int UPGRADE_PLUS_FROSTBITE = 1;
 
     public HoarfrostStomp() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.Executor_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+                CardType.ATTACK, AbstractCardEnum.Executor_COLOR, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = ATTACK_DMG;
         this.isMultiDamage = true;
         this.baseMagicNumber = FROSTBITE;
@@ -57,6 +58,7 @@ public class HoarfrostStomp extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeMagicNumber(UPGRADE_PLUS_FROSTBITE);
         }
     }

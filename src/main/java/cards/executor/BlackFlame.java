@@ -21,7 +21,7 @@ public class BlackFlame extends CustomCard {
 
     public BlackFlame() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Executor_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
+                CardType.SKILL, AbstractCardEnum.Executor_COLOR, CardRarity.BASIC, CardTarget.ENEMY);
         this.baseMagicNumber = BLOODBURN;
         this.magicNumber = this.baseMagicNumber;
     }

@@ -18,9 +18,9 @@ public class BloodhoundFang extends CustomCard {
     public static final String ID = "BloodhoundFang";
     private static final String IMG_PATH = "img/cards/executor/BloodhoundFang.png";
     private static final int COST = 2;
-    private static final int ATTACK_DMG = 15;
-    private static final int UPGRADE_PLUS_DMG = 5;
-    private static final int BLOODLOSS = 3;
+    private static final int ATTACK_DMG = 14;
+    private static final int UPGRADE_PLUS_DMG = 6;
+    private static final int BLOODLOSS = 4;
 
     public BloodhoundFang() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

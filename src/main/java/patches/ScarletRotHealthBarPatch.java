@@ -12,6 +12,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import general.AnomalyTriggerHelper;
 import javassist.CtBehavior;
 import powers.BloodburnPower;
 import powers.ScarletRotPower;
@@ -59,14 +60,23 @@ public class ScarletRotHealthBarPatch {
             if (__instance.currentHealth > totalPreviewDamage) {
                 float targetWidth = getTargetHealthBarWidth(__instance);
                 float previewWidth = getPreviewWidth(__instance, targetWidth, totalPreviewDamage);
-                renderHealthBar(__instance, sb, x, y, targetWidth - previewWidth, true, true);
+                renderHealthBar(__instance, sb, x, y, targetWidth - previewWidth, true, previewWidth <= 0.0F);
             }
             return SpireReturn.Return(null);
         }
     }
 
+    @SpirePatch(clz = AbstractCreature.class, method = "renderGreenHealthBar",
+            paramtypez = { SpriteBatch.class, float.class, float.class })
+    public static class HideNativePoisonPreview {
+        public static SpireReturn<Void> Prefix(AbstractCreature __instance, SpriteBatch sb, float x, float y) {
+            return hasCustomPreview(__instance) ? SpireReturn.Return(null) : SpireReturn.Continue();
+        }
+    }
+
     private static boolean hasCustomPreview(AbstractCreature creature) {
-        return creature.hasPower(ScarletRotPower.POWER_ID) || creature.hasPower(BloodburnPower.POWER_ID);
+        return creature.hasPower(ScarletRotPower.POWER_ID) || creature.hasPower(BloodburnPower.POWER_ID)
+                || (creature.hasPower("Poison") && AnomalyTriggerHelper.extraRounds(creature) > 0);
     }
 
     private static void renderStatusPreviewBars(AbstractCreature creature, SpriteBatch sb, float x, float y) {
@@ -76,7 +86,7 @@ public class ScarletRotHealthBarPatch {
         int bloodburnDamage = getBloodburnPreviewDamage(creature);
         cursor = renderPreviewSegment(creature, sb, x, y, cursor, bloodburnDamage, BLOODBURN_BAR_COLOR);
 
-        int scarletRotDamage = Math.max(0, getScarletRotPreviewDamage(creature) - bloodburnDamage);
+        int scarletRotDamage = getScarletRotPreviewDamage(creature);
         cursor = renderPreviewSegment(creature, sb, x, y, cursor, scarletRotDamage, SCARLET_ROT_BAR_COLOR);
 
         int poisonDamage = getPoisonPreviewDamage(creature);
@@ -104,46 +114,20 @@ public class ScarletRotHealthBarPatch {
     }
 
     private static int getTotalPreviewDamage(AbstractCreature creature) {
-        return getPoisonPreviewDamage(creature)
-                + Math.max(0, getScarletRotPreviewDamage(creature) - getBloodburnPreviewDamage(creature))
-                + getBloodburnPreviewDamage(creature);
+        return (int)Math.min(Integer.MAX_VALUE, (long)getPoisonPreviewDamage(creature)
+                + getScarletRotPreviewDamage(creature) + getBloodburnPreviewDamage(creature));
     }
 
     private static int getPoisonPreviewDamage(AbstractCreature creature) {
-        if (!creature.hasPower("Poison")) {
-            return 0;
-        }
-        int amount = creature.getPower("Poison").amount;
-        if (amount > 0 && creature.hasPower("Intangible")) {
-            amount = 1;
-        }
-        return Math.max(0, amount);
+        return AnomalyTriggerHelper.previewDamage(creature, "Poison", 1);
     }
 
     private static int getScarletRotPreviewDamage(AbstractCreature creature) {
-        if (!creature.hasPower(ScarletRotPower.POWER_ID)) {
-            return 0;
-        }
-        int amount = creature.getPower(ScarletRotPower.POWER_ID).amount;
-        if (amount <= 0) {
-            return 0;
-        }
-        int damage = amount * 2 - 1;
-        if (damage > 0 && creature.hasPower("Intangible")) {
-            damage = Math.min(damage, 2);
-        }
-        return damage;
+        return AnomalyTriggerHelper.previewDamage(creature, ScarletRotPower.POWER_ID, 2);
     }
 
     private static int getBloodburnPreviewDamage(AbstractCreature creature) {
-        if (!creature.hasPower(BloodburnPower.POWER_ID)) {
-            return 0;
-        }
-        int amount = creature.getPower(BloodburnPower.POWER_ID).amount;
-        if (amount > 0 && creature.hasPower("Intangible")) {
-            amount = 1;
-        }
-        return Math.max(0, amount);
+        return AnomalyTriggerHelper.previewDamage(creature, BloodburnPower.POWER_ID, 1);
     }
 
     private static float getTargetHealthBarWidth(AbstractCreature creature) {

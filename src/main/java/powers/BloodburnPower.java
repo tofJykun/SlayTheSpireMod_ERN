@@ -1,9 +1,8 @@
 package powers;
 
-import actions.BloodburnLoseHpAction;
+import general.AnomalyTriggerHelper;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -63,8 +62,7 @@ public class BloodburnPower extends AbstractPower {
         if (CombatState.isInCombat()
                 && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flashWithoutSound();
-            addToBot((AbstractGameAction)new BloodburnLoseHpAction(this.owner, this.source,
-                    AbstractGameAction.AttackEffect.POISON));
+            AnomalyTriggerHelper.queueTrigger(this, this.source, 1);
         }
     }
 

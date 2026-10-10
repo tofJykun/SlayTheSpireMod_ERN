@@ -24,7 +24,7 @@ public class Seppuku extends CustomCard {
     private static final int COST = 0;
     private static final int ENERGY = 2;
     private static final int UPGRADED_ENERGY = 3;
-    private static final int ABERRATION = 4;
+    private static final int ABERRATION = 3;
 
     public Seppuku() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

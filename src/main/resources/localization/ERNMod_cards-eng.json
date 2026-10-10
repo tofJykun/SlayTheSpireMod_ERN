@@ -888,6 +888,10 @@
     "NAME": "Shield of Want",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Virtual Currency."
   },
+  "Leverage": {
+    "NAME": "Leverage",
+    "DESCRIPTION": "Draw !M! cards. NL Your next card must be a Rare card."
+  },
   "Lifegem": {
     "NAME": "Lifegem",
     "DESCRIPTION": "For the next !M! turns, NL gain [E] at the start of your turn."
@@ -1581,6 +1585,18 @@
     "NAME": "Destined Death",
     "DESCRIPTION": "Apply !M! Deathblight. NL If this card is still in your hand at end of turn, apply 2 Deathblight to yourself."
   },
+  "RedRustScimitar": {
+    "NAME": "Red Rust Scimitar",
+    "DESCRIPTION": "Deal !D! damage. NL If the target is at or above 50% HP, the next !M! debuffs it receives are applied an additional time."
+  },
+  "VenomousFang": {
+    "NAME": "Venomous Fang",
+    "DESCRIPTION": "Deal !D! damage. NL At the end of its turn, the target gains !M! Poison. NL Exhaust."
+  },
+  "Darkstorm": {
+    "NAME": "Darkstorm",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! random Aberration to the enemy."
+  },
   "BlackFlame": {
     "NAME": "Black Flame",
     "DESCRIPTION": "Apply !M! Bloodburn."
@@ -1615,6 +1631,23 @@
     "NAME": "Black Flame Blade",
     "DESCRIPTION": "Whenever an attack deals unblocked damage, apply !M! Bloodburn."
   },
+  "CalamitySpraymist": {
+    "NAME": "Calamity Spraymist",
+    "DESCRIPTION": "Anomalies trigger !M! additional time(s)."
+  },
+  "WavesOfDarkness": {
+    "NAME": "Waves of Darkness",
+    "DESCRIPTION": "Every !M! times you apply a debuff to an enemy, draw !MD! card."
+  },
+  "FingerprintSpear": {
+    "NAME": "Fingerprint Spear",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL For each time you have received a debuff this combat, this card's base damage and base Block are reduced by !M! ."
+  },
+  "HolyGround": {
+    "NAME": "Holy Ground",
+    "DESCRIPTION": "Whenever you receive a debuff, gain [E] . Ethereal.",
+    "UPGRADE_DESCRIPTION": "Whenever you receive a debuff, gain [E] ."
+  },
   "DeadlyDance": {
     "NAME": "Deadly Dance",
     "DESCRIPTION": "Whenever you apply a debuff to an enemy, gain !M! Block."
@@ -1640,8 +1673,8 @@
     "DESCRIPTION": "This turn whenever you apply Anomaly, also apply the other two Anomaly types for the same amount.",
     "UPGRADE_DESCRIPTION": " Retain. NL This turn whenever you apply Anomaly, also apply the other two Anomaly types for the same amount."
   },
-  "AspectsOfCrucible": {
-    "NAME": "Aspects of Crucible",
+  "AspectsOfTheCrucibleBeast": {
+    "NAME": "Aspects Of The Crucible Beast",
     "DESCRIPTION": "Transform your Frostbite into Strength, Sleep into Dexterity, Madness into Retain Cards, and Bloodloss into Metallicize. NL Exhaust.",
     "UPGRADE_DESCRIPTION": " Retain. NL Transform your Frostbite into Strength, Sleep into Dexterity, Madness into Retain Cards, and Bloodloss into Metallicize. NL Exhaust."
   },
@@ -1695,7 +1728,7 @@
   },
   "BloodhoundFang": {
     "NAME": "Bloodhound's Fang",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 3 Bloodloss."
+    "DESCRIPTION": "Deal !D! damage. NL Apply 4 Bloodloss."
   },
   "ChaosBlade": {
     "NAME": "Chaos Blade",
@@ -1703,8 +1736,8 @@
   },
   "Seppuku": {
     "NAME": "Seppuku",
-    "DESCRIPTION": "Gain [E] [E] . NL Apply 4 random Aberration to yourself.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] . NL Apply 4 random Aberration to yourself."
+    "DESCRIPTION": "Gain [E] [E] . NL Gain 3 stacks of a random Aberration.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] . NL Gain 3 stacks of a random Aberration."
   },
   "DungPie": {
     "NAME": "Dung Pie",
@@ -1723,6 +1756,57 @@
     "NAME": "Expose",
     "DESCRIPTION": "Remove all Block and Artifact from an enemy. NL Apply !M! Vulnerable. NL Exhaust.",
     "UPGRADE_DESCRIPTION": " Innate. NL Remove all Block and Artifact from an enemy. NL Apply !M! Vulnerable. NL Exhaust."
+  },
+  "PosionedRelief": {
+    "NAME": "Poisoned Relief",
+    "DESCRIPTION": "The enemy heals !M! HP. NL At the start of your next turn, that enemy loses !MD! HP."
+  },
+  "Bully": {
+    "NAME": "Bully",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is at or above !MD! % of its maximum HP, it loses !M! Strength this turn."
+  },
+  "BlackFlamestoneParma": {
+    "NAME": "Black Flamestone Parma",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you apply an Anomaly, return this card from your discard pile to your hand."
+  },
+  "Appeasement": {
+    "NAME": "Appeasement",
+    "DESCRIPTION": "Gain !M! Energy for each enemy at or above 50% of its maximum HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Energy for each enemy at or above 50% of its maximum HP."
+  },
+  "ScorpionStinger": {
+    "NAME": "Scorpion Stinger",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Scarlet Rot, draw !M! card(s). NL Apply !MD! Scarlet Rot."
+  },
+  "CladInBlackflame": {
+    "NAME": "Clad in Blackflame",
+    "DESCRIPTION": "Gain Block equal to the total Bloodburn on all enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain Block equal to the total Bloodburn on all enemies."
+  },
+  "FrenzyflameThrust": {
+    "NAME": "Frenzyflame Thrust",
+    "DESCRIPTION": "Apply !M! Madness. NL Draw !MD! card(s)."
+  },
+  "CalamityExultation": {
+    "NAME": "Calamity Exultation",
+    "DESCRIPTION": "Whenever you receive a debuff, gain !M! Strength."
+  },
+  "NoFlyZone": {
+    "NAME": "No-Fly Zone",
+    "DESCRIPTION": "Whenever an enemy loses HP, reduce its max HP to match its current HP.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever an enemy loses HP, reduce its max HP to match its current HP."
+  },
+  "SnapWillow": {
+    "NAME": "Snap Willow",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL If the target had at least !MD! % of its max HP before this attack, gain [E] [E]."
+  },
+  "PosionMothFlight": {
+    "NAME": "Poison Moth Flight",
+    "DESCRIPTION": "Deal damage equal to !M! times the target's Poison. NL The target loses all Poison."
+  },
+  "RottenBreath": {
+    "NAME": "Rotten Breath",
+    "DESCRIPTION": "At the start of your turn, apply !M! Scarlet Rot to ALL enemies."
   },
   "FreezingMist": {
     "NAME": "Freezing Mist",
@@ -3023,15 +3107,15 @@
   },
   "SolderingIron": {
     "NAME": "Soldering Iron",
-    "DESCRIPTION": "The enemy loses !M! HP and !M! Max HP."
+    "DESCRIPTION": "The enemy loses !M! HP and !M! Max HP. NL Exhaust a card in your hand."
   },
   "OnyxLordsRepulsion": {
     "NAME": "Onyx Lord's Repulsion",
-    "DESCRIPTION": "ALL enemies lose !MS! HP. NL Apply !M! Vulnerable to ALL enemies."
+    "DESCRIPTION": "ALL enemies lose !MS! HP. NL Gain !MD! Block. NL Apply !M! Vulnerable to ALL enemies."
   },
   "AlabasterLordsPull": {
     "NAME": "Alabaster Lord's Pull",
-    "DESCRIPTION": "ALL enemies lose !MS! HP. NL Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "ALL enemies lose !MS! HP. NL Gain !MD! Block. NL Apply !M! Weak to ALL enemies."
   },
   "SwordOfMilos": {
     "NAME": "Sword of Milos",

@@ -18,12 +18,12 @@ public class BlackFlameBarrier extends CustomCard {
     private static final String IMG_PATH = "img/cards/executor/BlackFlameBarrier.png";
     private static final int COST = 2;
     private static final int BLOCK = 12;
-    private static final int UPGRADE_PLUS_BLOCK = 4;
+    private static final int UPGRADE_PLUS_BLOCK = 8;
     private static final int BLOODBURN = 3;
 
     public BlackFlameBarrier() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Executor_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Executor_COLOR, CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = BLOCK;
         this.baseMagicNumber = BLOODBURN;
         this.magicNumber = this.baseMagicNumber;

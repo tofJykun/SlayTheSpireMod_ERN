@@ -14,11 +14,11 @@ public class CalamityWard extends CustomRelic {
     private static final String IMG = "img/relics/executor/CalamityWard.png";
     private static final String IMG_OTL = "img/relics/executor/outline/CalamityWard.png";
     private static final int TRIGGER_TURN = 2;
-    private static final int ARTIFACT = 1;
+    private static final int ARTIFACT = 2;
 
     public CalamityWard() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
-                RelicTier.STARTER, AbstractRelic.LandingSound.CLINK);
+                RelicTier.UNCOMMON, AbstractRelic.LandingSound.CLINK);
     }
 
     @Override

@@ -20,12 +20,12 @@ public class SeedbedCurse extends CustomRelic {
     public static final String ID = "SeedbedCurse";
     private static final String IMG = "img/relics/executor/SeedbedCurse.png";
     private static final String IMG_OTL = "img/relics/executor/outline/SeedbedCurse.png";
-    private static final int THRESHOLD = 10;
+    private static final int THRESHOLD = 6;
     private static final int DEATHBLIGHT = 1;
 
     public SeedbedCurse() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
-                RelicTier.UNCOMMON, AbstractRelic.LandingSound.MAGICAL);
+                RelicTier.RARE, AbstractRelic.LandingSound.MAGICAL);
         this.counter = 0;
     }
 

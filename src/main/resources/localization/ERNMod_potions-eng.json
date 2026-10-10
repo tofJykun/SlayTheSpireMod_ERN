@@ -1,4 +1,16 @@
 {
+  "CalamityPotion": {
+    "NAME": "Calamity Potion",
+    "DESCRIPTIONS": ["Apply #b%d stacks of each #yAberration to ALL enemies."]
+  },
+  "DevilFruit": {
+    "NAME": "Devil Fruit",
+    "DESCRIPTIONS": ["Lose #b%d Max HP. NL Gain #b%d Energy and draw #b%d cards."]
+  },
+  "BlackflamePotion": {
+    "NAME": "Blackflame Potion",
+    "DESCRIPTIONS": ["Apply #b%d #yBloodburn."]
+  },
   "SummonPotion": {
     "NAME": "Summon Potion",
     "DESCRIPTIONS": ["Gain a random #ySummon .", "Gain the same random #ySummon twice."]

@@ -298,11 +298,39 @@
       "Whenever you reset a card with #yScheduled greater than or equal to #b3, reduce that card's counter by #b1. Minimum #b2."
     ]
   },
+  "MalignantTumor": {
+    "NAME": "Malignant Tumor",
+    "FLAVOR": "The affliction spreads, sparing neither friend nor foe.",
+    "DESCRIPTIONS": [
+      "#yAnomalies trigger #b1 additional time."
+    ]
+  },
+  "BadApple": {
+    "NAME": "Bad Apple",
+    "FLAVOR": "Even decay has strength to spare.",
+    "DESCRIPTIONS": [
+      "The first time you apply a debuff to an enemy each turn, gain [E]."
+    ]
+  },
+  "Tengu": {
+    "NAME": "Tengu",
+    "FLAVOR": "Hardship sharpens the edge without dulling its grace.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b3 #yDexterity. NL The #b4th time you receive a debuff each combat, gain #b3 #yStrength."
+    ]
+  },
+  "Suncatcher": {
+    "NAME": "Suncatcher",
+    "FLAVOR": "Turn suffering into an edge.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b3 #yDexterity. NL The #b4th time you receive a debuff each combat, lose #b3 #yDexterity and gain #b3 #yStrength."
+    ]
+  },
   "CalamityWard": {
     "NAME": "Calamity Ward",
     "FLAVOR": "Executor's character skill.",
     "DESCRIPTIONS": [
-      "At the start of your second turn, gain #b1 #yArtifact."
+      "At the start of your second turn, gain #b2 #yArtifact."
     ]
   },
   "StarsDice": {
@@ -316,7 +344,7 @@
     "NAME": "Seedbed Curse",
     "FLAVOR": "A curse takes root in the fracture of aberration.",
     "DESCRIPTIONS": [
-      "Every time you apply #b10 #yAberration, apply #b1 #yDeathblight to a random enemy."
+      "Every time you apply #b6 #yAberration, apply #b1 #yDeathblight to a random enemy."
     ]
   },
   "OilPot": {
