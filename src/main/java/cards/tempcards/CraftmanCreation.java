@@ -65,10 +65,13 @@ public class CraftmanCreation extends AbstractScheduledCard {
                 SmithingHelper.combinedTarget(infusionMaterial, bodyCard, reinforcementMaterial), 0);
         this.infusionMaterial = copyCard(infusionMaterial);
         this.bodyCard = copyCard(bodyCard);
+        patches.FragileField.share(this, bodyCard);
+        patches.FragileField.share(this.bodyCard, this);
         if (bodyCard != null) this.uuid = bodyCard.uuid;
         this.reinforcementMaterial = copyCard(reinforcementMaterial);
         InsuranceField.inherit(this, this.bodyCard);
         patches.ShadowGuardField.inherit(this, this.bodyCard);
+        patches.IgnoreField.inherit(this, this.bodyCard);
         syncFromParts();
     }
 
@@ -288,7 +291,9 @@ public class CraftmanCreation extends AbstractScheduledCard {
     @Override
     public AbstractCard makeCopy() {
         commitBodyState();
-        return new CraftmanCreation(this.infusionMaterial, this.bodyCard, this.reinforcementMaterial);
+        CraftmanCreation copy = new CraftmanCreation(this.infusionMaterial, this.bodyCard, this.reinforcementMaterial);
+        patches.FragileField.copy(copy, this);
+        return copy;
     }
 
     @Override
@@ -309,7 +314,10 @@ public class CraftmanCreation extends AbstractScheduledCard {
 
     public AbstractCard getBodyCardCopy() {
         commitBodyState();
-        return copyCard(this.bodyCard);
+        AbstractCard copy = copyCard(this.bodyCard);
+        patches.FragileField.share(copy, this);
+        patches.IgnoreField.inherit(copy, this);
+        return copy;
     }
 
     public AbstractCard getLiveBody() {
@@ -356,6 +364,7 @@ public class CraftmanCreation extends AbstractScheduledCard {
 
     public CraftmanCreation copyWithBodyState(AbstractCard copiedBody) {
         CraftmanCreation copy = (CraftmanCreation)makeStatEquivalentCopy();
+        patches.FragileField.share(copy, copiedBody);
         copy.uuid = copiedBody.uuid;
         AbstractCard previous = copy.getLiveBody();
         int oldCost = previous.cost;
@@ -373,6 +382,7 @@ public class CraftmanCreation extends AbstractScheduledCard {
     }
 
     public void replaceLiveBodyState(AbstractCard body) {
+        patches.FragileField.share(this, body);
         this.bodyState.replace(SmithingBody.copy(body));
         SmithingBody.bind(this.bodyState.card(), this);
         this.artworkBody = this.bodyState.card();
@@ -544,11 +554,17 @@ public class CraftmanCreation extends AbstractScheduledCard {
         if (this.bodyState == null || this.bodyUpgradeCount != upgrades) {
             if (this.bodyState != null) this.bodyState.commit();
             AbstractCard live = SmithingHelper.effectiveBodyCard(this.bodyCard, this.reinforcementMaterial, ownUpgrades);
+            patches.FragileField.State fragile = patches.FragileField.state(live);
+            if (fragile != null && fragile.upgraded) {
+                patches.FragileField.upgradeBase(this, fragile.base);
+            }
             live.uuid = this.uuid;
             this.bodyState = new SmithingBodyState(this.bodyCard, live);
             this.bodyUpgradeCount = upgrades;
             SmithingBody.bind(live, this);
         }
+        patches.FragileField.share(this.bodyCard, this);
+        patches.FragileField.share(this.bodyState.card(), this);
         return this.bodyState.card();
     }
 

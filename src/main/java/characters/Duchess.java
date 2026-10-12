@@ -3,6 +3,8 @@ package characters;
 import basemod.abstracts.CustomPlayer;
 import cards.duchess.Defend_Duchess;
 import cards.duchess.Strike_Duchess;
+import cards.duchess.Twindaggers;
+import cards.duchess.TwistedBarricade;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -68,6 +70,8 @@ public class Duchess extends CustomPlayer {
         retVal.add(Defend_Duchess.ID);
         retVal.add(Defend_Duchess.ID);
         retVal.add(Defend_Duchess.ID);
+        retVal.add(Twindaggers.ID);
+        retVal.add(TwistedBarricade.ID);
         return retVal;
     }
 

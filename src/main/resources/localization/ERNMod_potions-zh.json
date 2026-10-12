@@ -1,4 +1,12 @@
 {
+  "MushroomSoup": {
+    "NAME": "菌菇汤",
+    "DESCRIPTIONS": ["你每打出 #b%d 张牌，都获得 #y蘑菇 。", "居然是菇！"]
+  },
+  "ERN:SkillPotion": {
+    "NAME": "技艺药水",
+    "DESCRIPTIONS": ["获得 #b%d 点 #y力量 和 #b%d 点 #y敏捷 。"]
+  },
   "CalamityPotion": {
     "NAME": "灾厄药水",
     "DESCRIPTIONS": ["给予所有敌人每种 #y异变 各 #b%d 层。"]

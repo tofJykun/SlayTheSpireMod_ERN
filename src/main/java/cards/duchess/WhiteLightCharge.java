@@ -13,10 +13,10 @@ import patches.AbstractCardEnum;
 public class WhiteLightCharge extends AbstractScheduledCard {
     public static final String ID = "WhiteLightCharge";
     private static final String IMG_PATH = "img/cards/duchess/WhiteLightCharge.png";
-    private static final int COST = 2;
+    private static final int COST = 3;
     private static final int DRAW = 3;
     private static final int UPGRADE_PLUS_DRAW = 1;
-    private static final int DEFAULT_SCHEDULED = 4;
+    private static final int DEFAULT_SCHEDULED = 3;
 
     public WhiteLightCharge() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,

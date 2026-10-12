@@ -16,9 +16,9 @@ public class Telescope extends CustomCard {
     private static final CardStrings STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public Telescope() {
-        super(ID, STRINGS.NAME, "img/cards/scholar/Telescope.png", 1, STRINGS.DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.Scholar_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = this.magicNumber = 2;
+        super(ID, STRINGS.NAME, "img/cards/scholar/Telescope.png", 0, STRINGS.DESCRIPTION,
+                CardType.POWER, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
+        this.baseMagicNumber = this.magicNumber = 3;
     }
 
     @Override

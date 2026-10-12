@@ -16,7 +16,7 @@ public class Darkdrift extends CustomCard {
     public static final String ID = "Darkdrift";
     private static final String IMG_PATH = "img/cards/duchess/Darkdrift.png";
     private static final int COST = 1;
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 7;
     private static final int REPLAY = 1;
     private static final int UPGRADE_PLUS_DMG = 2;
 
@@ -24,6 +24,7 @@ public class Darkdrift extends CustomCard {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.Duchess_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
+        this.baseMagicNumber = this.magicNumber = REPLAY;
         ReplayField.setReplay(this, REPLAY);
     }
 

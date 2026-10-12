@@ -15,7 +15,7 @@ public class LessLikelyToBeTargetedPower extends AbstractPower {
     private EnemyMoveInfo savedMove;
     private EnemyMoveInfo replacement;
     private String savedMoveName;
-    private boolean acted;
+    protected boolean acted;
 
     public LessLikelyToBeTargetedPower(AbstractMonster owner, int block) {
         this.ID = POWER_ID;
@@ -34,13 +34,18 @@ public class LessLikelyToBeTargetedPower extends AbstractPower {
 
     @Override
     public void onInitialApplication() {
+        replaceIntent(true);
+    }
+
+    protected void replaceIntent(boolean attacksOnly) {
         AbstractMonster monster = (AbstractMonster)owner;
         savedMove = ReflectionHacks.getPrivate(monster, AbstractMonster.class, "move");
-        if (savedMove == null || !isAttackIntent(monster.intent)) {
+        if (savedMove == null || (attacksOnly && !isAttackIntent(monster.intent))) {
             addToBot(new RemoveSpecificPowerAction(owner, owner, this));
             return;
         }
         savedMoveName = monster.moveName;
+        acted = false;
         replacement = new EnemyMoveInfo(savedMove.nextMove, AbstractMonster.Intent.DEFEND, -1, 0, false);
         ReflectionHacks.setPrivate(monster, AbstractMonster.class, "move", replacement);
         monster.moveName = name;
@@ -54,7 +59,17 @@ public class LessLikelyToBeTargetedPower extends AbstractPower {
     }
 
     public static boolean isReplacingIntent(AbstractMonster monster) {
+        return activeReplacement(monster) != null;
+    }
+
+    private static LessLikelyToBeTargetedPower activeReplacement(AbstractMonster monster) {
         AbstractPower power = monster.getPower(POWER_ID);
+        if (matchesReplacement(monster, power)) return (LessLikelyToBeTargetedPower)power;
+        power = monster.getPower(GetLostPower.POWER_ID);
+        return matchesReplacement(monster, power) ? (LessLikelyToBeTargetedPower)power : null;
+    }
+
+    private static boolean matchesReplacement(AbstractMonster monster, AbstractPower power) {
         if (!(power instanceof LessLikelyToBeTargetedPower)) {
             return false;
         }
@@ -67,7 +82,7 @@ public class LessLikelyToBeTargetedPower extends AbstractPower {
         if (!isReplacingIntent(monster)) {
             return false;
         }
-        LessLikelyToBeTargetedPower power = (LessLikelyToBeTargetedPower)monster.getPower(POWER_ID);
+        LessLikelyToBeTargetedPower power = activeReplacement(monster);
         if (!power.acted) {
             power.acted = true;
             power.flash();
@@ -86,7 +101,15 @@ public class LessLikelyToBeTargetedPower extends AbstractPower {
 
     @Override
     public void onRemove() {
+        restoreIntent();
+    }
+
+    protected void restoreIntent() {
         AbstractMonster monster = (AbstractMonster)owner;
+        AbstractPower stun = monster.getPower(StunPower.POWER_ID);
+        if (stun instanceof StunPower && savedMove != null && replacement != null) {
+            ((StunPower)stun).replaceSavedIntent(replacement, savedMove, savedMoveName);
+        }
         if (savedMove != null && !monster.isDeadOrEscaped() && replacement != null
                 && replacement == ReflectionHacks.getPrivate(monster, AbstractMonster.class, "move")) {
             // A death/phase transition that installed another move must not be overwritten.
@@ -95,6 +118,9 @@ public class LessLikelyToBeTargetedPower extends AbstractPower {
             monster.createIntent();
             monster.applyPowers();
         }
+        savedMove = null;
+        replacement = null;
+        acted = false;
     }
 
     @Override

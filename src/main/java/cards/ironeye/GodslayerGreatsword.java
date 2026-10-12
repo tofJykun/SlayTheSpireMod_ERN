@@ -1,4 +1,4 @@
-package cards.duchess;
+package cards.ironeye;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -21,9 +21,9 @@ public class GodslayerGreatsword extends CustomCard {
 
     public GodslayerGreatsword() {
         super(ID, CardCrawlGame.languagePack.getCardStrings(ID).NAME,
-                "img/cards/duchess/GodslayerGreatsword.png", 3,
+                "img/cards/ironeye/GodslayerGreatsword.png", 3,
                 CardCrawlGame.languagePack.getCardStrings(ID).DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.Duchess_COLOR, CardRarity.RARE, CardTarget.ENEMY);
+                CardType.ATTACK, AbstractCardEnum.Ironeye_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 13;
         baseMagicNumber = magicNumber = 13;
         isEthereal = true;

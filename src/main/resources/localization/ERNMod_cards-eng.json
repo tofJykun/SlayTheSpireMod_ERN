@@ -94,6 +94,12 @@
     "DESCRIPTION": "Can only be played while you have Summon. NL Apply !M! Deathblight. NL You cannot Summon for !MS! turns.",
     "EXTENDED_DESCRIPTION": ["Can only be played while you have Summon."]
   },
+  "Ignore": {
+    "NAME": "Ignore",
+    "DESCRIPTION": "Choose a card in your hand. Whenever you draw it, discard it and draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card in your hand. Whenever you draw it, discard it and draw !M! card.",
+    "EXTENDED_DESCRIPTION": ["Choose a card to ignore.", "Ignore. NL "]
+  },
   "ShadowGuard": {
     "NAME": "Shadow Guard",
     "DESCRIPTION": "Choose a card in your hand. Whenever you play it, play it an additional time. NL Exhaust.",
@@ -106,8 +112,7 @@
   },
   "BloodflameBlade": {
     "NAME": "Bloodflame Blade",
-    "DESCRIPTION": "Whenever an attack deals unblocked damage this turn, apply !M! Bloodloss. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Whenever an attack deals unblocked damage this turn, apply !M! Bloodloss."
+    "DESCRIPTION": "Whenever an attack deals unblocked damage this turn, apply !M! Bloodloss."
   },
   "CrucifixOfTheMadKing": {
     "NAME": "Crucifix of the Mad King",
@@ -255,7 +260,7 @@
   },
   "Urumi": {
     "NAME": "Urumi",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Whenever this deals unblocked damage, draw !M! card."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Whenever this deals unblocked damage, draw !M! card. NL Scheduled !MS!."
   },
   "XanthousCrown": {
     "NAME": "Xanthous Crown",
@@ -284,7 +289,7 @@
   },
   "Bouquet": {
     "NAME": "Bouquet",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever the target enemy is attacked, apply !M! Vulnerable and make it lose !M! Strength for that turn. NL Exhaust."
+    "DESCRIPTION": "Whenever the target enemy is attacked, apply !M! Vulnerable and make it lose !M! Strength for that turn. NL Exhaust."
   },
   "DragonTooth": {
     "NAME": "Dragon Tooth",
@@ -892,6 +897,14 @@
     "NAME": "Leverage",
     "DESCRIPTION": "Draw !M! cards. NL Your next card must be a Rare card."
   },
+  "WendingGrace": {
+    "NAME": "Wending Grace",
+    "DESCRIPTION": "Heal !M! HP. NL Fragile !MS!."
+  },
+  "Lush": {
+    "NAME": "Lush",
+    "DESCRIPTION": "Remove this card from your deck. NL Duplicate your entire deck."
+  },
   "Lifegem": {
     "NAME": "Lifegem",
     "DESCRIPTION": "For the next !M! turns, NL gain [E] at the start of your turn."
@@ -1363,8 +1376,8 @@
   },
   "Palestone": {
     "NAME": "Palestone",
-    "DESCRIPTION": "Cannot be played. NL Replay 1. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Cannot be played. NL Replay 2. NL Exhaust.",
+    "DESCRIPTION": "Cannot be played. NL Replay !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Cannot be played. NL Replay !M!. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Cannot be played."
     ]
@@ -1481,13 +1494,26 @@
     "NAME": "Inverted Statue",
     "DESCRIPTION": "Gain !B! Block. NL Swap all cards in your draw and discard piles. NL Scheduled !M! ."
   },
+  "Twindaggers": {
+    "NAME": "Twin Daggers",
+    "DESCRIPTION": "Deal !D! damage. NL Replay !M!."
+  },
+  "TwistedBarricade": {
+    "NAME": "Twisted Barricade",
+    "DESCRIPTION": "Gain !B! Block. NL Scheduled !M!."
+  },
+  "ScrapsOfLife": {
+    "NAME": "Scraps of Life",
+    "DESCRIPTION": "ALL enemies lose !M! HP. NL Exhaust a card from your hand. NL Scheduled !MS!.",
+    "EXTENDED_DESCRIPTION": ["Cannot be played."]
+  },
   "SellswordTwinblades": {
     "NAME": "Sellsword Twinblades",
-    "DESCRIPTION": "Deal !D! damage 2 times. NL Replay 2."
+    "DESCRIPTION": "Deal !D! damage 2 times. NL Replay !M!."
   },
   "Darkdrift": {
     "NAME": "Darkdrift",
-    "DESCRIPTION": "Deal !D! damage. NL Replay 1."
+    "DESCRIPTION": "Deal !D! damage. NL Replay !M!."
   },
   "BlindSpot": {
     "NAME": "Blind Spot",
@@ -1495,7 +1521,11 @@
   },
   "ScavengerCurvedSword": {
     "NAME": "Scavenger Curved Sword",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply !M! Weak. NL Replay 1."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Apply !M! Weak. NL Replay !MD!."
+  },
+  "DarkMoonGreatsword": {
+    "NAME": "Dark Moon Greatsword",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poise Break. NL Replay !MS!."
   },
   "BladeOfCalling": {
     "NAME": "Blade of Calling",
@@ -1559,6 +1589,43 @@
   "DancerEnchantedSwords": {
     "NAME": "Dancer's Enchanted Swords",
     "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Scheduled !M! ."
+  },
+  "MasterPlanner": {
+    "NAME": "Master Planner",
+    "DESCRIPTION": "You no longer automatically discard Scheduled cards at the end of your turn.",
+    "UPGRADE_DESCRIPTION": "You no longer automatically discard Scheduled cards at the end of your turn."
+  },
+  "BastardStars": {
+    "NAME": "Bastard Stars",
+    "DESCRIPTION": "Next turn, NL draw !M! additional cards, NL apply !MD! Poise Break to ALL enemies."
+  },
+  "WingOfAstel": {
+    "NAME": "Wing of Astel",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, apply !M! Poise Break to ALL enemies."
+  },
+  "ResonantFlesh": {
+    "NAME": "Resonant Flesh",
+    "DESCRIPTION": "Gain !M! Strength and !M! Dexterity this turn."
+  },
+  "Unveil": {
+    "NAME": "Unveil",
+    "DESCRIPTION": "Draw !M! card. NL If the target enemy intends to attack, NL Replay !MS!."
+  },
+  "Nebula": {
+    "NAME": "Nebula",
+    "DESCRIPTION": "Retain your hand this turn. NL Replay !M!."
+  },
+  "MushroomPlatter": {
+    "NAME": "Mushroom Platter",
+    "DESCRIPTION": "Gain Mushroom. NL Replay !M!."
+  },
+  "CrispyBread": {
+    "NAME": "Crispy Bread",
+    "DESCRIPTION": "Gain !B! Block. NL Gain Mushroom. NL Fragile !M!."
+  },
+  "PaperBag": {
+    "NAME": "Paper Bag",
+    "DESCRIPTION": "Draw !M! cards. NL Fragile !MS!."
   },
   "LineOfStars": {
     "NAME": "Line of Stars",
@@ -2101,18 +2168,18 @@
   },
   "MiquellaLily": {
     "NAME": "Miquella Lily",
-    "DESCRIPTION": " Brew Miquella Lily. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " Brew Miquella Lily."
+    "DESCRIPTION": " Brew Miquella Lily. NL Fragile !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Miquella Lily. NL Fragile !M!."
   },
   "NascentButterfly": {
     "NAME": "Nascent Butterfly",
-    "DESCRIPTION": " Brew Nascent Butterfly. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " Brew Nascent Butterfly."
+    "DESCRIPTION": " Brew Nascent Butterfly. NL Fragile !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Nascent Butterfly. NL Fragile !M!."
   },
   "SacramentalBud": {
     "NAME": "Sacramental Bud",
-    "DESCRIPTION": " Brew Sacramental Bud. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " Brew Sacramental Bud."
+    "DESCRIPTION": " Brew Sacramental Bud. NL Fragile !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Brew Sacramental Bud. NL Fragile !M!."
   },
   "ArteriaLeaf": {
     "NAME": "Arteria Leaf",
@@ -2146,6 +2213,10 @@
     "DESCRIPTION": "You may ignore paths when choosing the next room to travel to !M! time. NL Exhaust. NL Ethereal.",
     "UPGRADE_DESCRIPTION": "You may ignore paths when choosing the next room to travel to !M! time. NL Exhaust."
   },
+  "CaneSword": {
+    "NAME": "Cane Sword",
+    "DESCRIPTION": "Deal damage equal to the current floor number. NL (Deals !D! damage.) NL Fragile !M!."
+  },
   "Telescope": {
     "NAME": "Telescope",
     "DESCRIPTION": "When viewing your draw pile, the cards are now shown in order. NL Draw !M! cards.",
@@ -2169,7 +2240,7 @@
   },
   "PenglaiWorship": {
     "NAME": "Penglai Worship",
-    "DESCRIPTION": "Gain an Elixir of Life. If this card is still in your hand at the end of your turn, lose !M! Gold. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Elixir of Life potion. If this card is still in your hand at the end of your turn, lose !MS! Gold. NL Fragile !MD!."
   },
   "RoyalLegacy": {
     "NAME": "Royal Legacy",
@@ -3009,6 +3080,54 @@
   "SwiftSlash": {
     "NAME": "Swift Slash",
     "DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL Scheduled !MS! . NL Return this card to your hand."
+  },
+  "WhiteHood": {
+    "NAME": "White Hood",
+    "DESCRIPTION": "Block is not removed at the start of your next turn. NL Scheduled !M!."
+  },
+  "MushroomChips": {
+    "NAME": "Mushroom Chips",
+    "DESCRIPTION": "Can only be played if you have Mushroom. NL Gain !M! Vigor. NL Replay !MD!.",
+    "EXTENDED_DESCRIPTION": ["Requires Mushroom to play."]
+  },
+  "Sidestep": {
+    "NAME": "Sidestep",
+    "DESCRIPTION": "Gain [E] next turn.",
+    "UPGRADE_DESCRIPTION": "Gain [E] next turn. NL Replay !M!."
+  },
+  "VowOfSilence": {
+    "NAME": "Vow of Silence",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak to ALL enemies. NL Scheduled !MS!. NL End your turn."
+  },
+  "InertiaShield": {
+    "NAME": "Inertia Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! additional cards next turn. NL Scheduled !MS!."
+  },
+  "ParryingDagger": {
+    "NAME": "Parrying Dagger",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vigor. NL Scheduled !MS!."
+  },
+  "Quickstep": {
+    "NAME": "Quickstep",
+    "DESCRIPTION": "Draw !M! cards. NL Replay !MD!."
+  },
+  "BountifulSunlight": {
+    "NAME": "Bountiful Sunlight",
+    "DESCRIPTION": "Gain [E] [E]. NL Scheduled !MS!. NL Every !M! times this card is played, increase its default Scheduled count by !MD! this combat.",
+    "EXTENDED_DESCRIPTION": ["This card cannot be played manually."]
+  },
+  "EdgeState": {
+    "NAME": "Edge State",
+    "DESCRIPTION": "Increase all Replay counts by !M!."
+  },
+  "TheWillOfBalance": {
+    "NAME": "The Will of Balance",
+    "DESCRIPTION": "After you play !M! cards in a single turn, gain !MD! Strength and !MD! Dexterity for that turn."
+  },
+  "Finale": {
+    "NAME": "Finale",
+    "DESCRIPTION": "Apply Get Lost to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply Get Lost to ALL enemies. NL For this combat, Get Lost triggers at the end of your turn. NL Exhaust."
   },
   "WhiteLightCharge": {
     "NAME": "White Light Charge",

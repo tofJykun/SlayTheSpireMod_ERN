@@ -1,4 +1,7 @@
 {
+  "Fragile": {
+    "TEXT": ["Fragile", "After you play this card #b", "After you play this card #b", " more time(s) this combat, Exhaust it, then remove it from your deck.", " NL Fragile !ERNFragile!.", " time(s) in a combat, Exhaust it, then remove it from your deck."]
+  },
   "Decalogue": {
     "TEXT": [
       "Choose cards to retain this turn."

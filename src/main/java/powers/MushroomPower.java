@@ -21,6 +21,7 @@ public class MushroomPower extends AbstractPower {
     private static final int GENUS_PLEUROTUS = 20;
     private static final int SPECIES_ERYNGII = 24;
     private static final int MESSAGE_THE_UNIVERSE_APPROACHES = 29;
+    private static final float MESSAGE_DURATION = 6.0F;
 
     private static final int STAGE_ORDER = 0;
     private static final int STAGE_FAMILY = 1;
@@ -99,16 +100,20 @@ public class MushroomPower extends AbstractPower {
             this.stage = STAGE_SPECIES;
         } else if (this.stage == STAGE_SPECIES && selected == SPECIES_ERYNGII) {
             this.readyToDoom = true;
+            showUniverseMessage();
+        }
+    }
+
+    private void showUniverseMessage() {
+        if (AbstractDungeon.player != null) {
+            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX,
+                    AbstractDungeon.player.dialogY, MESSAGE_DURATION, DESCRIPTIONS[MESSAGE_THE_UNIVERSE_APPROACHES], true));
         }
     }
 
     private void triggerDoom() {
         this.readyToDoom = false;
         flash();
-        if (AbstractDungeon.player != null) {
-            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX,
-                    AbstractDungeon.player.dialogY, 3.0F, DESCRIPTIONS[MESSAGE_THE_UNIVERSE_APPROACHES], true));
-        }
         addToBot((AbstractGameAction)new MushroomDoomAction(this.owner, this));
     }
 

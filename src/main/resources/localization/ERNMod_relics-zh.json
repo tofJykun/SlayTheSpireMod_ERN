@@ -4,6 +4,11 @@
     "FLAVOR": "",
     "DESCRIPTIONS": ["每当你 #y休息 时，将你的最大生命值提升 #b7 。"]
   },
+  "Lordvessel": {
+    "NAME": "王器",
+    "FLAVOR": "",
+    "DESCRIPTIONS": ["你在选择房间时可以从所有房间中选择（仅能起效一次）。"]
+  },
   "HermesBoots": {
     "NAME": "赫尔墨斯靴",
     "FLAVOR": "道路并不规定旅途。",
@@ -290,6 +295,36 @@
     "DESCRIPTIONS": [
       "每打出 #b3 张牌，获得 #b3 点 #y格挡 。"
     ]
+  },
+  "Monopole": {
+    "NAME": "单极",
+    "FLAVOR": "指向力量的一极。",
+    "DESCRIPTIONS": ["每回合中，你每次打出一张 #y技能牌 ，获得 #b1 点临时 #y力量 。"]
+  },
+  "ProstheticHand": {
+    "NAME": "义手",
+    "FLAVOR": "再续一招。",
+    "DESCRIPTIONS": ["所有 #y重放 次数增加 #b1 。"]
+  },
+  "Colony": {
+    "NAME": "菌落",
+    "FLAVOR": "悄然生长，连绵成群。",
+    "DESCRIPTIONS": ["你每打出 #b2 张牌，都获得 #y蘑菇 。"]
+  },
+  "FlintAndSteel": {
+    "NAME": "打火石",
+    "FLAVOR": "第三次碰撞，火花乍现。",
+    "DESCRIPTIONS": ["你每回合打出第 #b3 张牌时，获得 [E] 。"]
+  },
+  "WingedSwordInsignia": {
+    "NAME": "带翼剑徽章",
+    "FLAVOR": "连绵不绝的剑舞。",
+    "DESCRIPTIONS": ["每打出 #b1 张牌，获得 #b1 点 #y活力 。"]
+  },
+  "StartledGrace": {
+    "NAME": "惊鸿",
+    "FLAVOR": "女爵的技艺。",
+    "DESCRIPTIONS": ["每打出 #b3 张牌，获得 #b6 点 #y格挡 。"]
   },
   "IllusoryRing": {
     "NAME": "幻影戒指",

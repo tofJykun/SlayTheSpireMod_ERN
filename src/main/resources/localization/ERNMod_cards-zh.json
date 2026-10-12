@@ -94,6 +94,12 @@
     "DESCRIPTION": "只有当 召唤 时才能打出。 NL 给予 !M! 层 骤死 。 NL 你在 !MS! 回合内无法 召唤 。",
     "EXTENDED_DESCRIPTION": ["只有当 召唤 时才能打出。"]
   },
+  "Ignore": {
+    "NAME": "忽略",
+    "DESCRIPTION": "选择一张手牌，每当你抽到这张牌时，丢弃这张牌，抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 选择一张手牌，每当你抽到这张牌时，丢弃这张牌，抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": ["选择一张手牌使其被忽略。", " 忽略 。 NL "]
+  },
   "ShadowGuard": {
     "NAME": "影卫",
     "DESCRIPTION": "选择一张手牌，每当打出这张牌时，额外打出一次。 NL 消耗 。",
@@ -106,8 +112,7 @@
   },
   "BloodflameBlade": {
     "NAME": "血焰刀刃",
-    "DESCRIPTION": "在本回合内，每有一次攻击造成未被格挡的伤害，就给予 !M! 层 出血 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "在本回合内，每有一次攻击造成未被格挡的伤害，就给予 !M! 层 出血 。"
+    "DESCRIPTION": "在本回合内，每有一次攻击造成未被格挡的伤害，就给予 !M! 层 出血 。"
   },
   "CrucifixOfTheMadKing": {
     "NAME": "狂王磔枪",
@@ -255,7 +260,7 @@
   },
   "Urumi": {
     "NAME": "软鞭剑",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每造成一次未被格挡的伤害，就抽 !M! 张牌。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每造成一次未被格挡的伤害，就抽 !M! 张牌。 NL 定时 !MS! 。"
   },
   "XanthousCrown": {
     "NAME": "黄衣头冠",
@@ -284,7 +289,7 @@
   },
   "Bouquet": {
     "NAME": "花束",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当目标敌人受到攻击时，给予其 !M! 层 易伤 ，在该回合内失去 !M! 点 力量。 NL 消耗 。"
+    "DESCRIPTION": "每当目标敌人受到攻击时，给予其 !M! 层 易伤 ，在该回合内失去 !M! 点 力量。 NL 消耗 。"
   },
   "DragonTooth": {
     "NAME": "大龙牙",
@@ -892,6 +897,14 @@
     "NAME": "杠杆",
     "DESCRIPTION": "抽 !M! 张牌。 NL 你下一张只能打出稀有牌。"
   },
+  "WendingGrace": {
+    "NAME": "徘徊赐福",
+    "DESCRIPTION": "回复 !M! 生命。 NL 易损 !MS! 。"
+  },
+  "Lush": {
+    "NAME": "繁茂",
+    "DESCRIPTION": "将这张牌从牌组中移除。 NL 将你的整个牌组复制一份。"
+  },
   "Lifegem": {
     "NAME": "滴石",
     "DESCRIPTION": "下 !M! 回合 NL 获得 [E] 。"
@@ -1363,8 +1376,8 @@
   },
   "Palestone": {
     "NAME": "白石",
-    "DESCRIPTION": " 不能被打出 。 NL 重放 1。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 重放 2。 NL 消耗 。",
+    "DESCRIPTION": " 不能被打出 。 NL 重放 !M! 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 重放 !M! 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "不能被打出。"
     ]
@@ -1481,13 +1494,26 @@
     "NAME": "颠倒像",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 交换抽牌堆和弃牌堆的所有牌。 NL 定时 !M! 。"
   },
+  "Twindaggers": {
+    "NAME": "成对短刀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 重放 !M! 。"
+  },
+  "TwistedBarricade": {
+    "NAME": "扭曲护壁",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 定时 !M! 。"
+  },
+  "ScrapsOfLife": {
+    "NAME": "生命残渣",
+    "DESCRIPTION": "所有敌人失去 !M! 生命。 NL 消耗 一张手牌。 NL 定时 !MS! 。",
+    "EXTENDED_DESCRIPTION": ["不能被打出。"]
+  },
   "SellswordTwinblades": {
     "NAME": "佣兵对刀",
-    "DESCRIPTION": "造成 !D! 点伤害2次。 NL 重放 2。"
+    "DESCRIPTION": "造成 !D! 点伤害2次。 NL 重放 !M! 。"
   },
   "Darkdrift": {
     "NAME": "暗胧",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 重放 1。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 重放 !M! 。"
   },
   "BlindSpot": {
     "NAME": "死角一击",
@@ -1495,7 +1521,11 @@
   },
   "ScavengerCurvedSword": {
     "NAME": "剥尸曲剑",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 给予 !M! 层 虚弱 。 NL 重放 1。"
+    "DESCRIPTION": "给予 !M! 层 易伤 。 NL 给予 !M! 层 虚弱 。 NL 重放 !MD! 。"
+  },
+  "DarkMoonGreatsword": {
+    "NAME": "暗月大剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 削韧 。 NL 重放 !MS! 。"
   },
   "BladeOfCalling": {
     "NAME": "使命短刀",
@@ -1563,6 +1593,43 @@
   "LineOfStars": {
     "NAME": "连星",
     "DESCRIPTION": "你每有一张手牌，在下一回合多抽一张牌。 NL 结束你的回合。"
+  },
+  "MasterPlanner": {
+    "NAME": "谋划专家",
+    "DESCRIPTION": "你在回合结束时不再自动丢弃 定时 牌。",
+    "UPGRADE_DESCRIPTION": "你在回合结束时不再自动丢弃 定时 牌。"
+  },
+  "BastardStars": {
+    "NAME": "弃子的繁星",
+    "DESCRIPTION": "下一回合， NL 多抽 !M! 张牌， NL 给予所有敌人 !MD! 层 削韧 。"
+  },
+  "WingOfAstel": {
+    "NAME": "艾丝缇薄翼",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 你的下一回合开始时，给予所有敌人 !M! 层 削韧 。"
+  },
+  "ResonantFlesh": {
+    "NAME": "躯体共鸣",
+    "DESCRIPTION": "在本回合内获得 !M! 点 力量 和 !M! 点 敏捷 。"
+  },
+  "Unveil": {
+    "NAME": "察觉敌意",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 如果目标敌人的意图是攻击， NL 重放 !MS! 。"
+  },
+  "Nebula": {
+    "NAME": "星云",
+    "DESCRIPTION": "在本回合 保留 你的手牌。 NL 重放 !M! 。"
+  },
+  "MushroomPlatter": {
+    "NAME": "蘑菇拼盘",
+    "DESCRIPTION": "获得 蘑菇 。 NL 重放 !M! 。"
+  },
+  "CrispyBread": {
+    "NAME": "酥脆大饼",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 蘑菇 。 NL 易损 !M! 。"
+  },
+  "PaperBag": {
+    "NAME": "纸带",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 易损 !MS! 。"
   },
   "ChillingMist": {
     "NAME": "寒气冻雾",
@@ -2101,18 +2168,18 @@
   },
   "MiquellaLily": {
     "NAME": "米凯拉睡莲",
-    "DESCRIPTION": " 炼制 米凯拉睡莲 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 炼制 米凯拉睡莲 。"
+    "DESCRIPTION": " 炼制 米凯拉睡莲 。 NL 易损 !M! 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 米凯拉睡莲 。 NL 易损 !M! 。"
   },
   "NascentButterfly": {
     "NAME": "蜕生蝶",
-    "DESCRIPTION": " 炼制 蜕生蝶 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 炼制 蜕生蝶 。"
+    "DESCRIPTION": " 炼制 蜕生蝶 。 NL 易损 !M! 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 蜕生蝶 。 NL 易损 !M! 。"
   },
   "SacramentalBud": {
     "NAME": "圣血木芽",
-    "DESCRIPTION": " 炼制 圣血木芽 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 炼制 圣血木芽 。"
+    "DESCRIPTION": " 炼制 圣血木芽 。 NL 易损 !M! 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 炼制 圣血木芽 。 NL 易损 !M! 。"
   },
   "ArteriaLeaf": {
     "NAME": "亚缇莉亚叶",
@@ -2146,6 +2213,10 @@
     "DESCRIPTION": "你在选择下一层的房间时有 !M! 次机会可以无视当前的路线。 NL 消耗 。 NL 虚无 。",
     "UPGRADE_DESCRIPTION": "你在选择下一层的房间时有 !M! 次机会可以无视当前的路线。 NL 消耗 。"
   },
+  "CaneSword": {
+    "NAME": "手杖剑",
+    "DESCRIPTION": "造成你当前楼层数的伤害。 NL （造成 !D! 点伤害。） NL 易损 !M! 。"
+  },
   "Telescope": {
     "NAME": "望远镜",
     "DESCRIPTION": "现在观看抽牌堆时，卡牌将按顺序排列。 NL 抽 !M! 张牌。",
@@ -2169,7 +2240,7 @@
   },
   "PenglaiWorship": {
     "NAME": "蓬莱崇拜",
-    "DESCRIPTION": "获得1瓶 长生不老药 。 如果回合结束时仍在你的手牌中，失去 !M! 金币。 NL 消耗 。"
+    "DESCRIPTION": "获得 !M! 瓶 长生不老药 。如果回合结束时仍在你的手牌中，失去 !MS! 金币。 NL 易损 !MD! 。"
   },
   "RoyalLegacy": {
     "NAME": "皇族遗产",
@@ -2531,7 +2602,7 @@
   },
   "UnleashMagic": {
     "NAME": "解放魔力",
-    "DESCRIPTION": "你在本场战斗中每打出过一张能力牌，就造成一次 !D! 点魔法伤害。 NL （你在本场战斗打出过!M!张能力牌。）"
+    "DESCRIPTION": "你在本场战斗中每打出过一张能力牌，就造成一次 !D! 点魔法伤害。 NL （你在本场战斗打出过 !M! 张能力牌。）"
   },
   "MagicKinship": {
     "NAME": "魔法共鸣",
@@ -3013,6 +3084,54 @@
   "SwiftSlash": {
     "NAME": "迅斩",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 定时 !MS! 。 NL 将这张牌返回你的手牌。"
+  },
+  "WhiteHood": {
+    "NAME": "白布风帽",
+    "DESCRIPTION": "你的下一回合开始时 格挡 不会消失。 NL 定时 !M! 。"
+  },
+  "MushroomChips": {
+    "NAME": "菌菇脆",
+    "DESCRIPTION": "只有当有 蘑菇 时才能打出。 NL 获得 !M! 点 活力 。 NL 重放 !MD! 。",
+    "EXTENDED_DESCRIPTION": ["需要有蘑菇才能打出。"]
+  },
+  "Sidestep": {
+    "NAME": "侧步",
+    "DESCRIPTION": "下一回合获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "下一回合获得 [E] 。 NL 重放 !M! 。"
+  },
+  "VowOfSilence": {
+    "NAME": "沉默禁令",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 !M! 层 虚弱 。 NL 定时 !MS! 。 NL 结束你的回合。"
+  },
+  "InertiaShield": {
+    "NAME": "惯性护盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 在下一回合多抽 !M! 张牌。 NL 定时 !MS! 。"
+  },
+  "ParryingDagger": {
+    "NAME": "格挡匕首",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 活力 。 NL 定时 !MS! 。"
+  },
+  "Quickstep": {
+    "NAME": "碎步",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 重放 !MD! 。"
+  },
+  "BountifulSunlight": {
+    "NAME": "阳光滋润",
+    "DESCRIPTION": "获得 [E] [E] 。 NL 定时 !MS! 。 NL 这张牌每被打出 !M! 次，在本场战斗中其默认定时数增加 !MD! 。",
+    "EXTENDED_DESCRIPTION": ["这张牌不能被手动打出。"]
+  },
+  "EdgeState": {
+    "NAME": "边缘态",
+    "DESCRIPTION": "所有 重放 次数增加 !M! 。"
+  },
+  "TheWillOfBalance": {
+    "NAME": "安定的遗志",
+    "DESCRIPTION": "你在同一回合内打出 !M! 张牌后，在该回合内获得 !MD! 点 力量 和 !MD! 点 敏捷 。"
+  },
+  "Finale": {
+    "NAME": "落幕之章",
+    "DESCRIPTION": "给予所有敌人 迷踪 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 迷踪 。 NL 在本场战斗， 迷踪 在你的回合结束时触发。 NL 消耗 。"
   },
   "WhiteLightCharge": {
     "NAME": "白光突袭",

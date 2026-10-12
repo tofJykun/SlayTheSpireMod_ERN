@@ -1,4 +1,32 @@
 {
+  "MushroomSoupPower": {
+    "NAME": "Mushroom Soup",
+    "DESCRIPTIONS": ["Every #b%d cards you play, gain #yMushroom. Cards played: #b%d."]
+  },
+  "MasterPlannerPower": {
+    "NAME": "Master Planner",
+    "DESCRIPTIONS": ["You no longer automatically discard #yScheduled cards at the end of your turn."]
+  },
+  "WingOfAstelPower": {
+    "NAME": "Wing of Astel",
+    "DESCRIPTIONS": ["At the start of your next turn, apply #b", " #yPoise #yBreak to ALL enemies."]
+  },
+  "BastardStarsPower": {
+    "NAME": "Bastard Stars",
+    "DESCRIPTIONS": ["At the start of your next turn, draw #b", " additional cards and apply #b", " #yPoise #yBreak to ALL enemies."]
+  },
+  "GetLostPower": {
+    "NAME": "Get Lost",
+    "DESCRIPTIONS": ["At the start of your turn, change this enemy's intent to gaining #b", "At the end of your turn, change this enemy's intent to gaining #b", " #yBlock. This effect is removed when the enemy loses HP."]
+  },
+  "TheWillOfBalancePower": {
+    "NAME": "The Will of Balance",
+    "DESCRIPTIONS": ["After playing #b3 cards in a turn, gain #b", " #yStrength and #b", " #yDexterity for that turn. Triggers once per turn, counting cards played earlier that turn."]
+  },
+  "EdgeStatePower": {
+    "NAME": "Edge State",
+    "DESCRIPTIONS": ["Cards with #yReplay have #b", " additional #yReplay."]
+  },
   "RedRustPower": {
     "NAME": "Red Rust",
     "DESCRIPTIONS": ["The next #b", " debuffs received are applied an additional time. Each consumes #b1 #yRed #yRust. The extra application does not trigger #yRed #yRust again."]
@@ -331,8 +359,8 @@
     "NAME": "Deathblight",
     "DESCRIPTIONS": [
       "At end of turn, if this reaches #b",
-      ", this enemy dies.",
-      ", you lose #b",
+      " , this enemy dies.",
+      " , you lose #b",
       " HP."
     ]
   },

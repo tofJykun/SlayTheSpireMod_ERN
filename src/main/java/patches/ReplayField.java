@@ -11,6 +11,8 @@ public class ReplayField {
         public static SpireField<Integer> replay = new SpireField<Integer>(() -> 0);
         public static SpireField<Boolean> replayCopy = new SpireField<Boolean>(() -> false);
         public static SpireField<Integer> remainingReplay = new SpireField<Integer>(() -> 0);
+        // Per-use decision, deliberately not inherited by generated copies.
+        public static SpireField<Boolean> replayAllowedForUse = new SpireField<Boolean>(() -> true);
     }
 
     @SpirePatch(clz = AbstractCard.class, method = "makeStatEquivalentCopy")
@@ -26,6 +28,16 @@ public class ReplayField {
 
     public static int getReplay(AbstractCard card) {
         return Fields.replay.get(card);
+    }
+
+    public static void setReplayAllowedForUse(AbstractCard card, boolean allowed) {
+        Fields.replayAllowedForUse.set(card, allowed);
+    }
+
+    public static boolean consumeReplayAllowedForUse(AbstractCard card) {
+        boolean allowed = Fields.replayAllowedForUse.get(card);
+        Fields.replayAllowedForUse.set(card, true);
+        return allowed;
     }
 
     public static void setReplay(AbstractCard card, int amount) {

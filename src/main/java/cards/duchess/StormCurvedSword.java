@@ -17,10 +17,11 @@ import patches.AbstractCardEnum;
 public class StormCurvedSword extends CustomCard {
     public static final String ID = "StormCurvedSword";
     private static final String IMG_PATH = "img/cards/duchess/StormCurvedSword.png";
-    private static final int COST = 1;
-    private static final int DAMAGE = 3;
-    private static final int VIGOR = 3;
-    private static final int UPGRADE_PLUS_VIGOR = 2;
+    private static final int COST = 0;
+    private static final int DAMAGE = 1;
+    private static final int VIGOR = 2;
+    private static final int UPGRADE_PLUS_DAMAGE = 1;
+    private static final int UPGRADE_PLUS_VIGOR = 1;
 
     public StormCurvedSword() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
@@ -56,6 +57,7 @@ public class StormCurvedSword extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeDamage(UPGRADE_PLUS_DAMAGE);
             upgradeMagicNumber(UPGRADE_PLUS_VIGOR);
         }
     }

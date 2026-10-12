@@ -17,8 +17,7 @@ public class BloodflameBlade extends CustomCard {
     public BloodflameBlade() {
         super(ID, STRINGS.NAME, "img/cards/duchess/BloodflameBlade.png", 1, STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Duchess_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
-        exhaust = true;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override
@@ -30,9 +29,7 @@ public class BloodflameBlade extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
-            rawDescription = STRINGS.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(0);
         }
     }
 

@@ -1,4 +1,12 @@
 {
+  "MushroomSoup": {
+    "NAME": "Mushroom Soup",
+    "DESCRIPTIONS": ["Every #b%d cards you play, gain #yMushroom.", "It is actually a mushroom!"]
+  },
+  "ERN:SkillPotion": {
+    "NAME": "Skill Potion",
+    "DESCRIPTIONS": ["Gain #b%d #yStrength and #b%d #yDexterity."]
+  },
   "CalamityPotion": {
     "NAME": "Calamity Potion",
     "DESCRIPTIONS": ["Apply #b%d stacks of each #yAberration to ALL enemies."]

@@ -3,9 +3,7 @@ package cards.duchess;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -20,15 +18,12 @@ public class ScavengerCurvedSword extends CustomCard {
     public static final String ID = "ScavengerCurvedSword";
     private static final String IMG_PATH = "img/cards/duchess/ScavengerCurvedSword.png";
     private static final int COST = 1;
-    private static final int DAMAGE = 3;
     private static final int DEBUFF_AMOUNT = 1;
-    private static final int UPGRADE_PLUS_DAMAGE = 3;
     private static final int REPLAY = 1;
 
     public ScavengerCurvedSword() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.Duchess_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = DAMAGE;
+                CardType.SKILL, AbstractCardEnum.Duchess_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseMagicNumber = DEBUFF_AMOUNT;
         this.magicNumber = this.baseMagicNumber;
         ReplayField.setReplay(this, REPLAY);
@@ -43,9 +38,6 @@ public class ScavengerCurvedSword extends CustomCard {
         if (m == null) {
             return;
         }
-        addToBot((AbstractGameAction)new DamageAction((AbstractCreature)m,
-                new DamageInfo((AbstractCreature)p, this.damage, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p,
                 new VulnerablePower((AbstractCreature)m, this.magicNumber, false), this.magicNumber));
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p,
@@ -61,7 +53,8 @@ public class ScavengerCurvedSword extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DAMAGE);
+            ReplayField.setReplay(this, 2);
+            initializeDescription();
         }
     }
 }

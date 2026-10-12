@@ -42,7 +42,7 @@ public class HermesBootsPatch {
     public static class Connection {
         @SpirePostfixPatch
         public static boolean postfix(boolean __result, MapRoomNode __instance, MapRoomNode node) {
-            return __result || canFly(__instance, node);
+            return __result || canFly(__instance, node) || general.LordvesselRoutes.canReach(__instance, node);
         }
     }
 
@@ -55,7 +55,7 @@ public class HermesBootsPatch {
                 public void edit(MethodCall call) throws CannotCompileException {
                     if (call.getClassName().equals(AbstractPlayer.class.getName())
                             && call.getMethodName().equals("hasRelic")) {
-                        call.replace("{ $_ = patches.HermesBootsPatch.consumeHermesOrUseWingBoots($0, $1); }");
+                        call.replace("{ $_ = general.LordvesselRoutes.consumeOffRoute($0, $1, this); }");
                     }
                 }
             };

@@ -15,7 +15,7 @@ import patches.ReplayField;
 public class SellswordTwinblades extends CustomCard {
     public static final String ID = "SellswordTwinblades";
     private static final String IMG_PATH = "img/cards/duchess/SellswordTwinblades.png";
-    private static final int COST = 3;
+    private static final int COST = 2;
     private static final int DAMAGE = 6;
     private static final int HIT_COUNT = 2;
     private static final int REPLAY = 2;
@@ -24,6 +24,7 @@ public class SellswordTwinblades extends CustomCard {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.Duchess_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
+        this.baseMagicNumber = this.magicNumber = REPLAY;
         ReplayField.setReplay(this, REPLAY);
     }
 
@@ -48,7 +49,7 @@ public class SellswordTwinblades extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
+            upgradeDamage(2);
         }
     }
 }

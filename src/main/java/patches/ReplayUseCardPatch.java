@@ -20,9 +20,10 @@ public class ReplayUseCardPatch {
             }
 
             AbstractMonster monster = target instanceof AbstractMonster ? (AbstractMonster)target : null;
+            boolean allowed = ReplayField.consumeReplayAllowedForUse(card);
             int remaining = ReplayField.isReplayCopy(card)
                     ? ReplayField.getRemainingReplay(card)
-                    : ReplayField.getReplay(card);
+                    : allowed ? general.ReplayBonus.effective(card) : 0;
             if (remaining > 0) {
                 AbstractDungeon.actionManager.addToBottom(new ReplayCardAction(card, monster, remaining));
             }

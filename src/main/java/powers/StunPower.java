@@ -90,6 +90,13 @@ public class StunPower extends AbstractPower {
         monster.applyPowers();
     }
 
+    public void replaceSavedIntent(EnemyMoveInfo expected, EnemyMoveInfo move, String moveName) {
+        if (this.savedMove == expected) {
+            this.savedMove = move;
+            this.savedMoveName = moveName;
+        }
+    }
+
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];

@@ -20,6 +20,7 @@ public class Palestone extends CustomCard {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Raider_COLOR, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
+        this.baseMagicNumber = this.magicNumber = REPLAY;
         ReplayField.setReplay(this, REPLAY);
     }
 
@@ -46,6 +47,7 @@ public class Palestone extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeMagicNumber(UPGRADED_REPLAY - REPLAY);
             ReplayField.setReplay(this, UPGRADED_REPLAY);
             this.rawDescription = getCardStrings().UPGRADE_DESCRIPTION;
             initializeDescription();

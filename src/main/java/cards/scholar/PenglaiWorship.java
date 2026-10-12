@@ -10,22 +10,22 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import patches.AbstractCardEnum;
+import patches.FragileField;
 import potions.ElixirOfLife;
 
 public class PenglaiWorship extends CustomCard {
     public static final String ID = "PenglaiWorship";
     private static final String IMG_PATH = "img/cards/scholar/PenglaiWorship.png";
     private static final int COST = 1;
-    private static final int GOLD_LOSS = 20;
-    private static final int UPGRADE_GOLD_LOSS = -10;
+    private static final int GOLD_LOSS = 5;
 
     public PenglaiWorship() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = GOLD_LOSS;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
         this.tags.add(CardTags.HEALING);
+        FragileField.setBase(this, 0);
     }
 
     private static CardStrings getCardStrings() {
@@ -34,12 +34,18 @@ public class PenglaiWorship extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot((AbstractGameAction)new ObtainPotionAction(new ElixirOfLife()));
+        for (int i = 0; i < this.magicNumber; i++) {
+            addToBot((AbstractGameAction)new ObtainPotionAction(new ElixirOfLife()));
+        }
     }
 
     @Override
     public void triggerOnEndOfTurnForPlayingCard() {
-        AbstractDungeon.player.loseGold(this.magicNumber);
+        AbstractDungeon.player.loseGold(getGoldLoss());
+    }
+
+    public int getGoldLoss() {
+        return GOLD_LOSS;
     }
 
     @Override
@@ -51,7 +57,7 @@ public class PenglaiWorship extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_GOLD_LOSS);
+            upgradeBaseCost(0);
             initializeDescription();
         }
     }

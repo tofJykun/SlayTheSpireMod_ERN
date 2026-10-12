@@ -20,8 +20,10 @@ public class NascentButterfly extends CustomCard {
 
     public NascentButterfly() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Scholar_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
+        this.baseMagicNumber = this.magicNumber = 3;
+        patches.FragileField.setBase(this, 3);
     }
 
     private static CardStrings getCardStrings() {

@@ -38,6 +38,9 @@ public class ScheduledVariable extends DynamicVariable {
 
     @Override
     public boolean isModified(AbstractCard card) {
+        if (card instanceof cards.duchess.Unveil) return false;
+        if (card instanceof cards.scholar.PenglaiWorship) return false;
+        if (card instanceof cards.duchess.DarkMoonGreatsword) return false;
         if (card instanceof FalconShield) {
             return false;
         }
@@ -112,6 +115,9 @@ public class ScheduledVariable extends DynamicVariable {
 
     @Override
     public int value(AbstractCard card) {
+        if (card instanceof cards.duchess.Unveil) return patches.ReplayField.getReplay(card);
+        if (card instanceof cards.scholar.PenglaiWorship) return ((cards.scholar.PenglaiWorship)card).getGoldLoss();
+        if (card instanceof cards.duchess.DarkMoonGreatsword) return patches.ReplayField.getReplay(card);
         if (card instanceof FalconShield) {
             return ((FalconShield)card).getDrawAmount();
         }
@@ -186,6 +192,9 @@ public class ScheduledVariable extends DynamicVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
+        if (card instanceof cards.duchess.Unveil) return patches.ReplayField.getReplay(card);
+        if (card instanceof cards.scholar.PenglaiWorship) return ((cards.scholar.PenglaiWorship)card).getGoldLoss();
+        if (card instanceof cards.duchess.DarkMoonGreatsword) return patches.ReplayField.getReplay(card);
         if (card instanceof FalconShield) {
             return ((FalconShield)card).getDrawAmount();
         }
@@ -260,6 +269,10 @@ public class ScheduledVariable extends DynamicVariable {
 
     @Override
     public boolean upgraded(AbstractCard card) {
+        if (card instanceof cards.duchess.Unveil) return card.upgraded;
+        if (card instanceof cards.scholar.PenglaiWorship) return false;
+        if (card instanceof cards.duchess.ScrapsOfLife) return card.upgraded;
+        if (card instanceof cards.duchess.DarkMoonGreatsword) return card.upgraded;
         if (card instanceof WingCrestShield) {
             return card.upgraded;
         }

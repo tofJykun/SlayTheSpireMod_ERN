@@ -2,8 +2,13 @@ package variables;
 
 import basemod.abstracts.DynamicVariable;
 import cards.duchess.CrystalEnchanted;
+import cards.duchess.BastardStars;
+import cards.duchess.TheWillOfBalance;
+import cards.duchess.Quickstep;
+import cards.duchess.BountifulSunlight;
+import patches.ReplayField;
 import cards.duchess.EventualGreatness;
-import cards.duchess.GodslayerGreatsword;
+import cards.ironeye.GodslayerGreatsword;
 import cards.executor.RagingBeast;
 import cards.executor.FrenzyflameThrust;
 import cards.executor.ScorpionStinger;
@@ -43,6 +48,7 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public boolean isModified(AbstractCard card) {
+        if (card instanceof BastardStars) return card.isMagicNumberModified;
         if (card instanceof AlabasterLordsPull || card instanceof OnyxLordsRepulsion) return card.isBlockModified;
         if (card instanceof SwordOfNightAndFlame) {
             SwordOfNightAndFlame sword = (SwordOfNightAndFlame)card;
@@ -54,6 +60,12 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public int value(AbstractCard card) {
+        if (card instanceof cards.duchess.MushroomChips) return ReplayField.getReplay(card);
+        if (card instanceof BastardStars) return card.magicNumber;
+        if (card instanceof cards.duchess.ScavengerCurvedSword) return ReplayField.getReplay(card);
+        if (card instanceof TheWillOfBalance) return ((TheWillOfBalance)card).getStatGain();
+        if (card instanceof BountifulSunlight) return 1;
+        if (card instanceof Quickstep) return ReplayField.getReplay(card);
         if (card instanceof PosionedRelief) return ((PosionedRelief)card).getDelayedHpLoss();
         if (card instanceof AlabasterLordsPull || card instanceof OnyxLordsRepulsion) return card.block;
         if (card instanceof ScorpionStinger) return ((ScorpionStinger)card).getScarletRotAmount();
@@ -112,6 +124,12 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
+        if (card instanceof cards.duchess.MushroomChips) return ReplayField.getReplay(card);
+        if (card instanceof BastardStars) return card.baseMagicNumber;
+        if (card instanceof cards.duchess.ScavengerCurvedSword) return ReplayField.getReplay(card);
+        if (card instanceof TheWillOfBalance) return ((TheWillOfBalance)card).getStatGain();
+        if (card instanceof BountifulSunlight) return 1;
+        if (card instanceof Quickstep) return ReplayField.getReplay(card);
         if (card instanceof PosionedRelief) return ((PosionedRelief)card).getDelayedHpLoss();
         if (card instanceof AlabasterLordsPull || card instanceof OnyxLordsRepulsion) return card.baseBlock;
         if (card instanceof ScorpionStinger) return ((ScorpionStinger)card).getScarletRotAmount();
@@ -170,6 +188,9 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public boolean upgraded(AbstractCard card) {
+        if (card instanceof BastardStars) return card.upgradedMagicNumber;
+        if (card instanceof cards.duchess.ScavengerCurvedSword) return card.upgraded;
+        if (card instanceof TheWillOfBalance) return card.upgraded;
         if (card instanceof PosionedRelief) return card.upgraded;
         if (card instanceof AlabasterLordsPull || card instanceof OnyxLordsRepulsion) return card.upgraded;
         return (card instanceof ScorpionStinger || card instanceof FrenzyflameThrust || card instanceof FatalAppetite || card instanceof SmithingArtSpears || card instanceof Girandole || card instanceof InTheZone

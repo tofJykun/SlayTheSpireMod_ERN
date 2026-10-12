@@ -4,6 +4,11 @@
     "FLAVOR": "",
     "DESCRIPTIONS": ["Whenever you #yRest, increase your Max HP by #b7."]
   },
+  "Lordvessel": {
+    "NAME": "Lordvessel",
+    "FLAVOR": "",
+    "DESCRIPTIONS": ["When choosing your next room, you may choose any other room in the current Act. Can only be used once."]
+  },
   "HermesBoots": {
     "NAME": "Hermes Boots",
     "FLAVOR": "The road does not dictate the journey.",
@@ -290,6 +295,36 @@
     "DESCRIPTIONS": [
       "Every #b3 cards played, gain #b3 #yBlock."
     ]
+  },
+  "Monopole": {
+    "NAME": "Monopole",
+    "FLAVOR": "A single pole pointing toward strength.",
+    "DESCRIPTIONS": ["Whenever you play a #ySkill, gain #b1 temporary #yStrength this turn."]
+  },
+  "ProstheticHand": {
+    "NAME": "Prosthetic Hand",
+    "FLAVOR": "One more flourish.",
+    "DESCRIPTIONS": ["Increase all #yReplay counts by #b1."]
+  },
+  "Colony": {
+    "NAME": "Colony",
+    "FLAVOR": "Quiet growth, endless company.",
+    "DESCRIPTIONS": ["Every #b2 cards you play, gain #yMushroom."]
+  },
+  "FlintAndSteel": {
+    "NAME": "Flint and Steel",
+    "FLAVOR": "On the third strike, a spark.",
+    "DESCRIPTIONS": ["When you play your #b3rd card each turn, gain [E]."]
+  },
+  "WingedSwordInsignia": {
+    "NAME": "Winged Sword Insignia",
+    "FLAVOR": "An unending dance of blades.",
+    "DESCRIPTIONS": ["Every #b1 card played, gain #b1 #yVigor."]
+  },
+  "StartledGrace": {
+    "NAME": "Startled Grace",
+    "FLAVOR": "Duchess' character skill.",
+    "DESCRIPTIONS": ["Every #b3 cards played, gain #b6 #yBlock."]
   },
   "IllusoryRing": {
     "NAME": "Illusory Ring",

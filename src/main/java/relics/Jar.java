@@ -22,7 +22,7 @@ public class Jar extends CustomRelic {
 
     public Jar() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),
-                RelicTier.BOSS, AbstractRelic.LandingSound.CLINK);
+                RelicTier.SHOP, AbstractRelic.LandingSound.CLINK);
     }
 
     @Override

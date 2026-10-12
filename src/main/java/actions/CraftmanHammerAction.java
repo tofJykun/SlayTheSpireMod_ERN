@@ -122,7 +122,8 @@ public class CraftmanHammerAction extends AbstractGameAction {
         CraftmanCreation creation = createForgedCard(this.selectedMaterial, selectedBody);
         this.player.hand.removeCard(this.selectedMaterial);
         this.player.hand.removeCard(selectedBody);
-        addToTop(new MakeTempCardInHandAction(creation, true, true));
+        addToTop(patches.FragileField.preserveForgedState(
+                new MakeTempCardInHandAction(creation, true, true), creation));
         MasterworkPower.onSmithing(this.player);
         this.player.hand.refreshHandLayout();
     }
