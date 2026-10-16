@@ -11,11 +11,11 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import general.CombatState;
 
-public class SkillPotion extends AbstractPotion {
-    public static final String POTION_ID = "ERN:SkillPotion";
+public class ArtPotion extends AbstractPotion {
+    public static final String POTION_ID = "ArtPotion";
     private static final PotionStrings STRINGS = CardCrawlGame.languagePack.getPotionString(POTION_ID);
 
-    public SkillPotion() {
+    public ArtPotion() {
         super(STRINGS.NAME, POTION_ID, PotionRarity.COMMON, PotionSize.S, PotionColor.WHITE);
         isThrown = false;
         targetRequired = false;
@@ -46,6 +46,6 @@ public class SkillPotion extends AbstractPotion {
 
     @Override
     public AbstractPotion makeCopy() {
-        return new SkillPotion();
+        return new ArtPotion();
     }
 }

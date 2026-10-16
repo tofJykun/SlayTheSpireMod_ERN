@@ -3,7 +3,7 @@ package cards.ironeye;
 import basemod.abstracts.CustomCard;
 import cards.tempcards.LotteryTicket;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import actions.PlunderAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -19,8 +19,8 @@ public class Plunder extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/ironeye/Plunder.png";
     private static final int COST = 1;
-    private static final int DAMAGE = 9;
-    private static final int UPGRADE_PLUS_DAMAGE = 1;
+    private static final int DAMAGE = 6;
+    private static final int UPGRADE_PLUS_DAMAGE = 2;
     private static final int TICKET_AMOUNT = 1;
     private static final int UPGRADE_PLUS_TICKETS = 1;
 
@@ -36,9 +36,7 @@ public class Plunder extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m != null) {
-            addToBot((AbstractGameAction)new DamageAction((AbstractCreature)m,
-                    new DamageInfo((AbstractCreature)p, this.damage, this.damageTypeForTurn),
-                    AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            addToBot(new PlunderAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
         }
         addToBot((AbstractGameAction)new MakeTempCardInHandAction(new LotteryTicket(), this.magicNumber));
     }

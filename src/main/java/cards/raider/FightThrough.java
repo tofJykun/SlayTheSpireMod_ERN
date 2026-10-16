@@ -60,7 +60,6 @@ public class FightThrough extends CustomCard {
         } else {
             description = this.upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION;
         }
-        description = description.replace("!M!", Integer.toString(this.magicNumber));
         description = description.replace("!MS!", Integer.toString(GREY_HEALTH));
         if (!description.equals(this.rawDescription)) {
             this.rawDescription = description;

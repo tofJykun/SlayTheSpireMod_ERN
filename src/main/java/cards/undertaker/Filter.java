@@ -55,7 +55,6 @@ public class Filter extends CustomCard {
     private void refreshDescription() {
         CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         String description = cardStrings.DESCRIPTION
-                .replace("!M!", Integer.toString(this.magicNumber))
                 .replace("!MS!", Integer.toString(DISCARDS));
         if (!description.equals(this.rawDescription)) {
             this.rawDescription = description;

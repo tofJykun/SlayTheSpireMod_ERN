@@ -18,7 +18,7 @@ public class ShieldOfWant extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/ironeye/ShieldOfWant.png";
     private static final int COST = 2;
-    private static final int BLOCK = 12;
+    private static final int BLOCK = 14;
     private static final int UPGRADE_PLUS_BLOCK = 4;
     private static final int TOKEN_GAIN = 10;
     private static final int UPGRADE_PLUS_TOKEN_GAIN = 5;

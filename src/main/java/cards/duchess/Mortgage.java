@@ -51,8 +51,7 @@ public class Mortgage extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.baseMagicNumber = UPGRADED_GOLD;
-            this.magicNumber = this.baseMagicNumber;
+            upgradeMagicNumber(UPGRADED_GOLD - this.baseMagicNumber);
             initializeDescription();
         }
     }

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PotionSlot;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import general.RelicRewardHelper;
+import general.PotionDiscardHelper;
 
 import java.util.ArrayList;
 
@@ -22,9 +23,10 @@ public class BarterAction extends AbstractGameAction {
             ArrayList<AbstractPotion> potions = getAvailablePotions();
             if (!potions.isEmpty()) {
                 AbstractPotion potion = potions.get(AbstractDungeon.cardRandomRng.random(potions.size() - 1));
-                AbstractDungeon.player.removePotion(potion);
-                AbstractRelic relic = RelicRewardHelper.returnRandomEliteDropRelic();
-                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, relic);
+                if (PotionDiscardHelper.discard(AbstractDungeon.player, potion)) {
+                    AbstractRelic relic = RelicRewardHelper.returnRandomEliteDropRelic();
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, relic);
+                }
             }
         }
         this.isDone = true;

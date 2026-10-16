@@ -21,7 +21,7 @@ public class GoldenCrux extends CustomCard {
     private static final CardStrings STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public GoldenCrux() {
-        super(ID, STRINGS.NAME, IMG_PATH, 2, STRINGS.DESCRIPTION,
+        super(ID, STRINGS.NAME, IMG_PATH, 0, STRINGS.DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.Ironeye_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 0;
         this.baseMagicNumber = this.magicNumber = 2;

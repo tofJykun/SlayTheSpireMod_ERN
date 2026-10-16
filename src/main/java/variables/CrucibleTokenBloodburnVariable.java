@@ -1,6 +1,5 @@
 package variables;
 
-import basemod.abstracts.DynamicVariable;
 import cards.duchess.CrystalEnchanted;
 import cards.duchess.BastardStars;
 import cards.duchess.TheWillOfBalance;
@@ -25,7 +24,6 @@ import cards.guardian.SpikedPalisade;
 import cards.guardian.FatalAppetite;
 import cards.guardian.CrucifixOfTheMadKing;
 import cards.guardian.SpearcallRitual;
-import cards.ironeye.Usury;
 import cards.raider.SmithingArtSpears;
 import cards.tempcards.CrucibleToken;
 import cards.tempcards.PhantomSebastian;
@@ -40,14 +38,22 @@ import cards.undertaker.GreatDexterity;
 import cards.undertaker.DeepInsight;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-public class CrucibleTokenBloodburnVariable extends DynamicVariable {
+public class CrucibleTokenBloodburnVariable extends UpgradePreviewVariable {
     @Override
     public String key() {
         return "MD";
     }
 
     @Override
-    public boolean isModified(AbstractCard card) {
+    protected boolean isValueModified(AbstractCard card) {
+        if (card instanceof cards.guardian.Assault || card instanceof cards.raider.StormRuler) return card.isMagicNumberModified;
+        if (card instanceof cards.scholar.PowerOfTwinPrinces) return false;
+        if (card instanceof cards.ironeye.HighFrequency) return false;
+        if (card instanceof cards.ironeye.FortuneCookie) return false;
+        if (card instanceof cards.ironeye.Railgun) return false;
+        if (card instanceof cards.ironeye.CashOnDelivery) return false;
+        if (card instanceof cards.duchess.Darkdrift) return false;
+        if (card instanceof cards.ironeye.BlackflameShooter) return false;
         if (card instanceof BastardStars) return card.isMagicNumberModified;
         if (card instanceof AlabasterLordsPull || card instanceof OnyxLordsRepulsion) return card.isBlockModified;
         if (card instanceof SwordOfNightAndFlame) {
@@ -59,7 +65,21 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
     }
 
     @Override
-    public int value(AbstractCard card) {
+    protected int currentValue(AbstractCard card) {
+        if (card instanceof cards.guardian.Assault || card instanceof cards.raider.StormRuler) return card.magicNumber;
+        if (card instanceof cards.undertaker.Confluence) return ((cards.undertaker.Confluence)card).getExtraDamage();
+        if (card instanceof cards.raider.StormKick) return ((cards.raider.StormKick)card).getPoiseBreak();
+        if (card instanceof cards.revenant.ImpatientBall) return ((cards.revenant.ImpatientBall)card).getDrawAmount();
+        if (hasUpgradeOnlyNumber(card)) return "CeruleanDagger".equals(card.cardID) ? 3 : 1;
+        if (card instanceof cards.scholar.BrandNewWorld) return cards.scholar.BrandNewWorld.GOLD;
+        if (card instanceof cards.scholar.PowerOfTwinPrinces) return ((cards.scholar.PowerOfTwinPrinces)card).getSecondaryAmount();
+        if (card instanceof cards.ironeye.HighFrequency) return cards.ironeye.HighFrequency.TOKEN_GAIN;
+        if (card instanceof cards.ironeye.FortuneCookie) return cards.ironeye.FortuneCookie.TICKET_AMOUNT;
+        if (card instanceof cards.ironeye.Railgun) return cards.ironeye.Railgun.DRAW_AMOUNT;
+        if (card instanceof cards.ironeye.CashOnDelivery) return ((cards.ironeye.CashOnDelivery)card).getDrawAmount();
+        if (card instanceof cards.duchess.Darkdrift) return cards.duchess.Darkdrift.ENERGY_LOSS;
+        if (card instanceof cards.ironeye.BlackflameShooter) return cards.ironeye.BlackflameShooter.BLOODBURN;
+        if (card instanceof cards.scholar.OriginalSin) return ((cards.scholar.OriginalSin)card).getDrawAmount();
         if (card instanceof cards.duchess.MushroomChips) return ReplayField.getReplay(card);
         if (card instanceof BastardStars) return card.magicNumber;
         if (card instanceof cards.duchess.ScavengerCurvedSword) return ReplayField.getReplay(card);
@@ -113,9 +133,6 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
         if (card instanceof WolfGreatsword) {
             return ((WolfGreatsword)card).getSignedDamage();
         }
-        if (card instanceof Usury) {
-            return ((Usury)card).getTokenDivisor();
-        }
         if (card instanceof DuelingShield || card instanceof PardonMe) {
             return 1;
         }
@@ -124,6 +141,20 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
+        if (card instanceof cards.guardian.Assault || card instanceof cards.raider.StormRuler) return card.baseMagicNumber;
+        if (card instanceof cards.undertaker.Confluence) return ((cards.undertaker.Confluence)card).getExtraDamage();
+        if (card instanceof cards.raider.StormKick) return ((cards.raider.StormKick)card).getPoiseBreak();
+        if (card instanceof cards.revenant.ImpatientBall) return ((cards.revenant.ImpatientBall)card).getDrawAmount();
+        if (hasUpgradeOnlyNumber(card)) return "CeruleanDagger".equals(card.cardID) ? 3 : 1;
+        if (card instanceof cards.scholar.BrandNewWorld) return cards.scholar.BrandNewWorld.GOLD;
+        if (card instanceof cards.scholar.PowerOfTwinPrinces) return ((cards.scholar.PowerOfTwinPrinces)card).getSecondaryAmount();
+        if (card instanceof cards.ironeye.HighFrequency) return cards.ironeye.HighFrequency.TOKEN_GAIN;
+        if (card instanceof cards.ironeye.FortuneCookie) return cards.ironeye.FortuneCookie.TICKET_AMOUNT;
+        if (card instanceof cards.ironeye.Railgun) return cards.ironeye.Railgun.DRAW_AMOUNT;
+        if (card instanceof cards.ironeye.CashOnDelivery) return ((cards.ironeye.CashOnDelivery)card).getDrawAmount();
+        if (card instanceof cards.duchess.Darkdrift) return cards.duchess.Darkdrift.ENERGY_LOSS;
+        if (card instanceof cards.ironeye.BlackflameShooter) return cards.ironeye.BlackflameShooter.BLOODBURN;
+        if (card instanceof cards.scholar.OriginalSin) return ((cards.scholar.OriginalSin)card).getDrawAmount();
         if (card instanceof cards.duchess.MushroomChips) return ReplayField.getReplay(card);
         if (card instanceof BastardStars) return card.baseMagicNumber;
         if (card instanceof cards.duchess.ScavengerCurvedSword) return ReplayField.getReplay(card);
@@ -177,9 +208,6 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
         if (card instanceof WolfGreatsword) {
             return ((WolfGreatsword)card).getSignedBaseDamage();
         }
-        if (card instanceof Usury) {
-            return ((Usury)card).getTokenDivisor();
-        }
         if (card instanceof DuelingShield || card instanceof PardonMe) {
             return 1;
         }
@@ -188,6 +216,17 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
 
     @Override
     public boolean upgraded(AbstractCard card) {
+        if (card instanceof cards.guardian.Assault || card instanceof cards.raider.StormRuler) return card.upgradedMagicNumber;
+        if (card instanceof cards.undertaker.Confluence || card instanceof cards.raider.StormKick
+                || card instanceof cards.revenant.ImpatientBall || hasUpgradeOnlyNumber(card)) return card.upgraded;
+        if (card instanceof cards.scholar.PowerOfTwinPrinces) return card.upgraded;
+        if (card instanceof cards.ironeye.HighFrequency) return false;
+        if (card instanceof cards.ironeye.FortuneCookie) return false;
+        if (card instanceof cards.ironeye.Railgun) return false;
+        if (card instanceof cards.ironeye.CashOnDelivery) return card.upgraded;
+        if (card instanceof cards.duchess.Darkdrift) return false;
+        if (card instanceof cards.ironeye.BlackflameShooter) return false;
+        if (card instanceof cards.scholar.OriginalSin) return card.upgraded;
         if (card instanceof BastardStars) return card.upgradedMagicNumber;
         if (card instanceof cards.duchess.ScavengerCurvedSword) return card.upgraded;
         if (card instanceof TheWillOfBalance) return card.upgraded;
@@ -196,5 +235,22 @@ public class CrucibleTokenBloodburnVariable extends DynamicVariable {
         return (card instanceof ScorpionStinger || card instanceof FrenzyflameThrust || card instanceof FatalAppetite || card instanceof SmithingArtSpears || card instanceof Girandole || card instanceof InTheZone
                 || card instanceof SwordOfNightAndFlame || card instanceof CrucifixOfTheMadKing || card instanceof DragoncrestGreatshield
                 || card instanceof PhantomSebastian || card instanceof BorderWall || card instanceof SpikedPalisade) && card.upgraded;
+    }
+
+    private static boolean hasUpgradeOnlyNumber(AbstractCard card) {
+        switch (card.cardID) {
+            case "AstoraGreatsword":
+            case "SplitleafGreatsword":
+            case "WildStrikes":
+            case "MoonStance":
+            case "CometAzur":
+            case "SerpentHunter":
+            case "CeruleanDagger":
+            case "EstusFlask":
+            case "AshenEstusFlask":
+                return true;
+            default:
+                return false;
+        }
     }
 }

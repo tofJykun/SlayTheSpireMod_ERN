@@ -32,7 +32,7 @@ public class DeadOrAlive extends CustomCard {
         if (!canUse) {
             return false;
         }
-        if (p == null || m == null || p.gold < m.currentHealth) {
+        if (p == null || m == null || general.GoldPaymentHelper.available(p) < m.currentHealth) {
             this.cantUseMessage = CARD_STRINGS.EXTENDED_DESCRIPTION[0];
             return false;
         }

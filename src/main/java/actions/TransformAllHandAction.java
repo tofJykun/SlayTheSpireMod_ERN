@@ -58,6 +58,7 @@ public class TransformAllHandAction extends AbstractGameAction {
         ArrayList<AbstractCard> candidates = new ArrayList<>();
         for (Map.Entry<String, AbstractCard> entry : CardLibrary.cards.entrySet()) {
             AbstractCard card = entry.getValue();
+            if (general.ExclusiveCardPool.isExcluded(card)) continue;
             if (card.color == this.player.getCardColor()
                     && isRewardRarity(card.rarity)
                     && card.type != AbstractCard.CardType.CURSE

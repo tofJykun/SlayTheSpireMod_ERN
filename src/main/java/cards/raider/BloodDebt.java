@@ -87,8 +87,7 @@ public class BloodDebt extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.baseMagicNumber = UPGRADED_ENERGY;
-            this.magicNumber = this.baseMagicNumber;
+            upgradeMagicNumber(UPGRADED_ENERGY - this.baseMagicNumber);
             refreshDescription();
         }
     }

@@ -14,9 +14,9 @@ public class Bounty extends CustomCard {
     public static final String ID = "Bounty";
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/ironeye/Bounty.png";
-    private static final int COST = 2;
-    private static final int GOLD_LOSS = 3;
-    private static final int UPGRADE_GOLD_LOSS = 2;
+    private static final int COST = 1;
+    private static final int GOLD_LOSS = 5;
+    private static final int UPGRADE_GOLD_LOSS = 3;
 
     public Bounty() {
         super(ID, CARD_STRINGS.NAME, IMG_PATH, COST, CARD_STRINGS.DESCRIPTION,

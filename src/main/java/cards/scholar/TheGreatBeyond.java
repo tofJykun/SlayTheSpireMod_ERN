@@ -1,4 +1,4 @@
-package cards.undertaker;
+package cards.scholar;
 
 import actions.PlayRandomHandCardAction;
 import basemod.abstracts.CustomCard;
@@ -13,14 +13,14 @@ import patches.AbstractCardEnum;
 
 public class TheGreatBeyond extends CustomCard {
     public static final String ID = "TheGreatBeyond";
-    private static final String IMG_PATH = "img/cards/undertaker/TheGreatBeyond.png";
+    private static final String IMG_PATH = "img/cards/scholar/TheGreatBeyond.png";
     private static final int COST = 3;
     private static final int PLAY_COUNT = 6;
     private static final int UPGRADE_COST = 2;
 
     public TheGreatBeyond() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
-                CardType.SKILL, AbstractCardEnum.Undertaker_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                CardType.SKILL, AbstractCardEnum.Scholar_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = PLAY_COUNT;
         this.magicNumber = this.baseMagicNumber;
     }

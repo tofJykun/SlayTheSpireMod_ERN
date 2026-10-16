@@ -1,7 +1,7 @@
 package powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import cards.tempcards.LotteryTicket;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,7 +13,6 @@ public class UsuryPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private static final int TOKEN_DIVISOR = 4;
 
     public UsuryPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -35,26 +34,17 @@ public class UsuryPower extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
-        if (AbstractDungeon.player == null) {
-            return;
-        }
-        AbstractPower currency = AbstractDungeon.player.getPower(VirtualCurrencyPower.POWER_ID);
-        int tokens = currency == null ? 0 : Math.max(0, currency.amount);
-        int tokenGain = tokens / TOKEN_DIVISOR * this.amount;
-        if (tokenGain <= 0) {
+        if (AbstractDungeon.player == null || this.amount <= 0) {
             return;
         }
         flash();
-        addToBot((AbstractGameAction)new ApplyPowerAction(this.owner, this.owner,
-                new VirtualCurrencyPower(this.owner, tokenGain), tokenGain));
+        LotteryTicket ticket = new LotteryTicket();
+        ticket.upgrade();
+        addToBot(new MakeTempCardInHandAction(ticket, this.amount));
     }
 
     @Override
     public void updateDescription() {
-        if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + TOKEN_DIVISOR + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[2] + TOKEN_DIVISOR + DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[4];
-        }
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }

@@ -66,9 +66,12 @@ public class HiddenBody extends CustomCard {
     private void refreshDescription() {
         CardStrings strings = getCardStrings();
         int effectiveWeak = effectiveWeak();
+        if (this.magicNumber != effectiveWeak) {
+            this.magicNumber = effectiveWeak;
+            this.isMagicNumberModified = effectiveWeak != this.baseMagicNumber;
+        }
         String description = (this.upgraded ? strings.UPGRADE_DESCRIPTION : strings.DESCRIPTION)
-                .replace("!MX!", "1")
-                .replace("!M!", Integer.toString(effectiveWeak));
+                .replace("!MX!", "1");
         if (!description.equals(this.rawDescription)) {
             this.rawDescription = description;
             initializeDescription();

@@ -1,6 +1,5 @@
 package variables;
 
-import basemod.abstracts.DynamicVariable;
 import cards.ironeye.Marking;
 import cards.executor.RiversOfBlood;
 import cards.guardian.GlintstoneKris;
@@ -30,14 +29,20 @@ import cards.wylder.Valorheart;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import patches.ScheduledField;
 
-public class ScheduledVariable extends DynamicVariable {
+public class ScheduledVariable extends UpgradePreviewVariable {
     @Override
     public String key() {
         return "MS";
     }
 
     @Override
-    public boolean isModified(AbstractCard card) {
+    protected boolean isValueModified(AbstractCard card) {
+        if (card instanceof cards.revenant.EyeOfDeath || card instanceof cards.duchess.SantierSpear) return false;
+        if (card instanceof cards.ironeye.Deposit) return false;
+        if (card instanceof cards.ironeye.CashOnDelivery) return false;
+        if (card instanceof cards.ironeye.BlackflameShooter) return false;
+        if (card instanceof cards.scholar.OriginalSin) return patches.FragileField.value(card) != 7;
+        if (card instanceof cards.scholar.CrownOfThorns) return false;
         if (card instanceof cards.duchess.Unveil) return false;
         if (card instanceof cards.scholar.PenglaiWorship) return false;
         if (card instanceof cards.duchess.DarkMoonGreatsword) return false;
@@ -114,7 +119,14 @@ public class ScheduledVariable extends DynamicVariable {
     }
 
     @Override
-    public int value(AbstractCard card) {
+    protected int currentValue(AbstractCard card) {
+        if (card instanceof cards.revenant.EyeOfDeath) return ((cards.revenant.EyeOfDeath)card).getSummonLockTurns();
+        if (card instanceof cards.duchess.SantierSpear) return ((cards.duchess.SantierSpear)card).getRemainingPlays();
+        if (card instanceof cards.ironeye.Deposit) return ((cards.ironeye.Deposit)card).getNextTurnAmount();
+        if (card instanceof cards.ironeye.CashOnDelivery) return cards.ironeye.CashOnDelivery.TICKET_AMOUNT;
+        if (card instanceof cards.ironeye.BlackflameShooter) return cards.ironeye.BlackflameShooter.HIT_COUNT;
+        if (card instanceof cards.scholar.OriginalSin) return patches.FragileField.value(card);
+        if (card instanceof cards.scholar.CrownOfThorns) return cards.scholar.CrownOfThorns.HP_LOSS;
         if (card instanceof cards.duchess.Unveil) return patches.ReplayField.getReplay(card);
         if (card instanceof cards.scholar.PenglaiWorship) return ((cards.scholar.PenglaiWorship)card).getGoldLoss();
         if (card instanceof cards.duchess.DarkMoonGreatsword) return patches.ReplayField.getReplay(card);
@@ -192,6 +204,13 @@ public class ScheduledVariable extends DynamicVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
+        if (card instanceof cards.revenant.EyeOfDeath) return ((cards.revenant.EyeOfDeath)card).getSummonLockTurns();
+        if (card instanceof cards.duchess.SantierSpear) return ((cards.duchess.SantierSpear)card).getRemainingPlays();
+        if (card instanceof cards.ironeye.Deposit) return ((cards.ironeye.Deposit)card).getNextTurnAmount();
+        if (card instanceof cards.ironeye.CashOnDelivery) return cards.ironeye.CashOnDelivery.TICKET_AMOUNT;
+        if (card instanceof cards.ironeye.BlackflameShooter) return cards.ironeye.BlackflameShooter.HIT_COUNT;
+        if (card instanceof cards.scholar.OriginalSin) return 7;
+        if (card instanceof cards.scholar.CrownOfThorns) return cards.scholar.CrownOfThorns.HP_LOSS;
         if (card instanceof cards.duchess.Unveil) return patches.ReplayField.getReplay(card);
         if (card instanceof cards.scholar.PenglaiWorship) return ((cards.scholar.PenglaiWorship)card).getGoldLoss();
         if (card instanceof cards.duchess.DarkMoonGreatsword) return patches.ReplayField.getReplay(card);
@@ -269,6 +288,14 @@ public class ScheduledVariable extends DynamicVariable {
 
     @Override
     public boolean upgraded(AbstractCard card) {
+        if (card instanceof cards.revenant.EyeOfDeath || card instanceof cards.duchess.SantierSpear
+                || card instanceof cards.duchess.Urumi || card instanceof BladeOfCalling
+                || card instanceof GreatClub) return card.upgraded;
+        if (card instanceof cards.ironeye.Deposit) return card.upgraded;
+        if (card instanceof cards.ironeye.CashOnDelivery) return false;
+        if (card instanceof cards.ironeye.BlackflameShooter) return false;
+        if (card instanceof cards.scholar.OriginalSin) return false;
+        if (card instanceof cards.scholar.CrownOfThorns) return false;
         if (card instanceof cards.duchess.Unveil) return card.upgraded;
         if (card instanceof cards.scholar.PenglaiWorship) return false;
         if (card instanceof cards.duchess.ScrapsOfLife) return card.upgraded;

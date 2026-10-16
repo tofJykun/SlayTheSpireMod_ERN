@@ -1,28 +1,27 @@
 package variables;
 
-import basemod.abstracts.DynamicVariable;
 import cards.executor.DarkBlood;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-public class DarkBloodAberrationVariable extends DynamicVariable {
+public class DarkBloodAberrationVariable extends UpgradePreviewVariable {
     @Override
     public String key() {
         return "MB";
     }
 
     @Override
-    public boolean isModified(AbstractCard card) {
+    protected boolean isValueModified(AbstractCard card) {
         return false;
     }
 
     @Override
-    public int value(AbstractCard card) {
+    protected int currentValue(AbstractCard card) {
         return card instanceof DarkBlood ? DarkBlood.ABERRATION : 0;
     }
 
     @Override
     public int baseValue(AbstractCard card) {
-        return value(card);
+        return currentValue(card);
     }
 
     @Override

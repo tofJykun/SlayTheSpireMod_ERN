@@ -46,8 +46,8 @@ public class MushroomCrown extends AbstractScheduledCard {
 
     @Override
     public void onScheduledCountChanged(int current, int base) {
-        this.baseMagicNumber = MUSHROOMS;
-        this.magicNumber = this.upgraded ? MUSHROOMS + UPGRADE_PLUS_MUSHROOMS : MUSHROOMS;
+        this.baseMagicNumber = this.upgraded ? MUSHROOMS + UPGRADE_PLUS_MUSHROOMS : MUSHROOMS;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     @Override

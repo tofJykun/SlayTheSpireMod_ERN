@@ -1,25 +1,24 @@
 package variables;
 
-import basemod.abstracts.DynamicVariable;
 import cards.ironeye.PoisonMarking;
 import cards.scholar.TranquilWalkOfPeace;
 import cards.tempcards.CrucibleToken;
 import cards.undertaker.Blinkbolt;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-public class CrucibleTokenPoisonVariable extends DynamicVariable {
+public class CrucibleTokenPoisonVariable extends UpgradePreviewVariable {
     @Override
     public String key() {
         return "MP";
     }
 
     @Override
-    public boolean isModified(AbstractCard card) {
+    protected boolean isValueModified(AbstractCard card) {
         return false;
     }
 
     @Override
-    public int value(AbstractCard card) {
+    protected int currentValue(AbstractCard card) {
         if (card instanceof Blinkbolt) {
             return ((Blinkbolt)card).getDrawPerEnemy();
         }
@@ -48,6 +47,6 @@ public class CrucibleTokenPoisonVariable extends DynamicVariable {
 
     @Override
     public boolean upgraded(AbstractCard card) {
-        return card instanceof PoisonMarking && card.upgraded;
+        return (card instanceof PoisonMarking || card instanceof TranquilWalkOfPeace) && card.upgraded;
     }
 }

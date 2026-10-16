@@ -22,6 +22,7 @@ public class StarsDiceAction extends AbstractGameAction {
     private final AbstractPlayer player;
     private final int amount;
     private final boolean canPickZero;
+    private final boolean random;
     private boolean selected;
 
     public StarsDiceAction() {
@@ -33,15 +34,21 @@ public class StarsDiceAction extends AbstractGameAction {
     }
 
     public StarsDiceAction(int amount, boolean canPickZero) {
+        this(amount, canPickZero, false);
+    }
+
+    public StarsDiceAction(int amount, boolean canPickZero, boolean random) {
         this.player = AbstractDungeon.player;
         this.amount = amount;
         this.canPickZero = canPickZero;
+        this.random = random;
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
     }
 
     @Override
     public void update() {
+        if (this.isDone) return;
         if (this.player == null || this.amount <= 0) {
             this.isDone = true;
             return;
@@ -53,6 +60,17 @@ public class StarsDiceAction extends AbstractGameAction {
                 return;
             }
             int selectableAmount = Math.min(this.amount, this.player.hand.size());
+            if (this.random) {
+                ArrayList<AbstractCard> candidates = new ArrayList<>(this.player.hand.group);
+                for (int i = 0; i < selectableAmount; i++) {
+                    int index = AbstractDungeon.cardRandomRng == null
+                            ? 0 : AbstractDungeon.cardRandomRng.random(candidates.size() - 1);
+                    transform(candidates.remove(index));
+                }
+                this.player.hand.refreshHandLayout();
+                this.isDone = true;
+                return;
+            }
             String prompt = Settings.language == Settings.GameLanguage.ZHS
                     ? SELECT_CARD_ZH_PREFIX + selectableAmount + SELECT_CARD_ZH_SUFFIX
                     : (this.canPickZero ? SELECT_CARD_ENG_PREFIX : "Choose ") + selectableAmount + SELECT_CARD_ENG_SUFFIX;
@@ -101,6 +119,7 @@ public class StarsDiceAction extends AbstractGameAction {
         ArrayList<AbstractCard> candidates = new ArrayList<>();
         for (Map.Entry<String, AbstractCard> entry : CardLibrary.cards.entrySet()) {
             AbstractCard card = entry.getValue();
+            if (general.ExclusiveCardPool.isExcluded(card)) continue;
             if (card.color == this.player.getCardColor()
                     && isRewardRarity(card.rarity)
                     && card.type != AbstractCard.CardType.CURSE

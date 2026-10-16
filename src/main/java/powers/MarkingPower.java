@@ -11,7 +11,7 @@ import patches.MarkingDamagePatch;
 
 public class MarkingPower extends AbstractPower {
     public static final String POWER_ID = "MarkingPower";
-    public static final int DAMAGE_THRESHOLD = 15;
+    public static final int DAMAGE_THRESHOLD = 20;
     private static final PowerStrings STRINGS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private final AbstractCreature source;
 
@@ -45,7 +45,9 @@ public class MarkingPower extends AbstractPower {
                 if (!owner.isDeadOrEscaped()
                         && MarkingDamagePatch.getDamageThisTurn(owner) >= DAMAGE_THRESHOLD) {
                     flash();
-                    addToTop(new LoseHPAction(owner, MarkingPower.this.source, MarkingPower.this.amount));
+                    int loss = (int)Math.min(Integer.MAX_VALUE,
+                            ((long)Math.max(0, owner.currentHealth) * MarkingPower.this.amount + 99) / 100);
+                    addToTop(new LoseHPAction(owner, MarkingPower.this.source, loss));
                 }
             }
         });

@@ -6,9 +6,11 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import general.TransformStats;
+import general.CombatState;
 import patches.AbstractCardEnum;
 
 public class Entropy extends CustomCard {
@@ -23,7 +25,7 @@ public class Entropy extends CustomCard {
                 CardType.ATTACK, AbstractCardEnum.Ironeye_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseMagicNumber = MULTIPLIER;
         this.magicNumber = this.baseMagicNumber;
-        this.baseDamage = 0;
+        this.baseDamage = this.damage = 0;
         this.isMultiDamage = true;
     }
 
@@ -34,11 +36,20 @@ public class Entropy extends CustomCard {
     @Override
     public void applyPowers() {
         setDamageFromTransforms();
-        super.applyPowers();
+        if (hasCombatPlayer()) {
+            super.applyPowers();
+        } else {
+            this.damage = 0;
+            this.isDamageModified = false;
+        }
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
+        if (!hasCombatPlayer()) {
+            applyPowers();
+            return;
+        }
         setDamageFromTransforms();
         super.calculateCardDamage(mo);
     }
@@ -52,11 +63,27 @@ public class Entropy extends CustomCard {
 
     @Override
     public void onMoveToDiscard() {
-        this.baseDamage = 0;
+        applyPowers();
     }
 
     private void setDamageFromTransforms() {
-        this.baseDamage = TransformStats.getCombatTransforms() * this.magicNumber;
+        this.baseDamage = transformDamage();
+    }
+
+    private boolean hasCombatPlayer() {
+        return CardCrawlGame.dungeon != null && AbstractDungeon.player != null && CombatState.isInCombat();
+    }
+
+    private int transformDamage() {
+        return hasCombatPlayer() ? TransformStats.getCombatTransforms() * this.magicNumber : 0;
+    }
+
+    @Override
+    public void update() {
+        super.update();
+        if (this.baseDamage != transformDamage() || (!hasCombatPlayer() && this.damage != 0)) {
+            applyPowers();
+        }
     }
 
     @Override
@@ -69,6 +96,7 @@ public class Entropy extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_MULTIPLIER);
+            applyPowers();
         }
     }
 }

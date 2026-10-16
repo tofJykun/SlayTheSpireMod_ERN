@@ -1,19 +1,18 @@
 package variables;
 
-import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import general.ReplayBonus;
 import patches.ReplayField;
 
-public class ReplayVariable extends DynamicVariable {
+public class ReplayVariable extends UpgradePreviewVariable {
     @Override
     public String key() { return "ERNReplay"; }
 
     @Override
-    public boolean isModified(AbstractCard card) { return value(card) != baseValue(card); }
+    protected boolean isValueModified(AbstractCard card) { return value(card) != baseValue(card); }
 
     @Override
-    public int value(AbstractCard card) { return ReplayBonus.effective(card); }
+    protected int currentValue(AbstractCard card) { return ReplayBonus.effective(card); }
 
     @Override
     public int baseValue(AbstractCard card) { return ReplayField.getReplay(card); }

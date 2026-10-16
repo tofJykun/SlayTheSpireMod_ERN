@@ -56,7 +56,6 @@ public class OctopusSlapping extends CustomCard {
 
     private void refreshDescription() {
         String description = strings().DESCRIPTION
-                .replace("!M!", Integer.toString(this.magicNumber))
                 .replace("!MS!", Integer.toString(SELF_WEAK));
         if (!description.equals(this.rawDescription)) {
             this.rawDescription = description;

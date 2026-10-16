@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import powers.SnakeSloughPower;
+import powers.TailBitingPower;
 import relics.AldiaFund;
 
 public final class TransformStats {
@@ -29,12 +30,16 @@ public final class TransformStats {
     }
 
     private static void triggerTransformPowers() {
-        if (AbstractDungeon.player == null || !AbstractDungeon.player.hasPower(SnakeSloughPower.POWER_ID)) {
+        if (AbstractDungeon.player == null) {
             return;
         }
         AbstractPower power = AbstractDungeon.player.getPower(SnakeSloughPower.POWER_ID);
         if (power instanceof SnakeSloughPower) {
             ((SnakeSloughPower)power).onTransformCard();
+        }
+        AbstractPower tailBiting = AbstractDungeon.player.getPower(TailBitingPower.POWER_ID);
+        if (tailBiting instanceof TailBitingPower) {
+            ((TailBitingPower)tailBiting).onTransformCard();
         }
     }
 

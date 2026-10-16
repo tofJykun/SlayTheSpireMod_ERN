@@ -51,9 +51,11 @@ public class StormKick extends AbstractScheduledCard {
     }
 
     private void refreshDescription() {
-        this.rawDescription = getCardStrings().DESCRIPTION.replace("!MX!", Integer.toString(this.poiseBreak));
+        this.rawDescription = getCardStrings().DESCRIPTION.replace("!MX!", "!MD!");
         initializeDescription();
     }
+
+    public int getPoiseBreak() { return poiseBreak; }
 
     @Override
     public AbstractCard makeCopy() {

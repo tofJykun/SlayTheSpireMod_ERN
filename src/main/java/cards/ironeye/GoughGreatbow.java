@@ -11,20 +11,19 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import patches.AbstractCardEnum;
-import powers.StunPower;
+import powers.PostureBreakPower;
 
 public class GoughGreatbow extends CustomCard {
     public static final String ID = "GoughGreatbow";
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/ironeye/GoughGreatbow.png";
     private static final int COST = 3;
-    private static final int UPGRADED_COST = 2;
-    private static final int STUN = 1;
 
     public GoughGreatbow() {
         super(ID, CARD_STRINGS.NAME, IMG_PATH, COST, CARD_STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Ironeye_COLOR, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.exhaust = true;
+        this.isEthereal = true;
     }
 
     @Override
@@ -32,7 +31,7 @@ public class GoughGreatbow extends CustomCard {
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             if (!monster.isDeadOrEscaped()) {
                 addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)monster,
-                        (AbstractCreature)p, new StunPower(monster, STUN), STUN));
+                        (AbstractCreature)p, new PostureBreakPower(monster), 1));
             }
         }
     }
@@ -46,7 +45,9 @@ public class GoughGreatbow extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            this.isEthereal = false;
+            this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

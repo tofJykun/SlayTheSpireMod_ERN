@@ -1,10 +1,25 @@
 {
+  "CaloricPotion": {
+    "NAME": "Caloric Potion",
+    "DESCRIPTIONS": ["Choose up to #b%d cards in your hand to #yTransform."]
+  },
+  "PlacerGoldPotion": {
+    "NAME": "Placer Gold Potion",
+    "DESCRIPTIONS": ["Gain #b%d #yVirtual #yCurrency."]
+  },
+  "GoldenDelight": {
+    "NAME": "Golden Delight",
+    "DESCRIPTIONS": [
+      "Choose #b1 of #b3 random Rare cards to add to your hand. It costs #b0 this turn.",
+      "Choose #b1 of #b3 random Rare cards and add #b2 copies to your hand. They cost #b0 this turn."
+    ]
+  },
   "MushroomSoup": {
     "NAME": "Mushroom Soup",
     "DESCRIPTIONS": ["Every #b%d cards you play, gain #yMushroom.", "It is actually a mushroom!"]
   },
-  "ERN:SkillPotion": {
-    "NAME": "Skill Potion",
+  "ArtPotion": {
+    "NAME": "Art Potion",
     "DESCRIPTIONS": ["Gain #b%d #yStrength and #b%d #yDexterity."]
   },
   "CalamityPotion": {

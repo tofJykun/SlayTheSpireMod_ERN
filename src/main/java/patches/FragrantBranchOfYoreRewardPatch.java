@@ -24,6 +24,7 @@ import powers.RustedGoldCoinPower;
 import powers.SilverPickledFowlFootPower;
 import powers.DowsingRodPower;
 import powers.PerfectScorePower;
+import powers.FlipPower;
 import relics.CovetousGoldSerpentRing;
 
 import java.util.ArrayList;
@@ -64,12 +65,13 @@ public class FragrantBranchOfYoreRewardPatch {
             }
             int rareRewardCount = monsterRoom && shouldAddDowsingRodRareReward() ? 1 : 0;
             int perfectScoreRewardCount = getPerfectScoreRewardCount(__instance, room);
+            int flipRewardCount = getFlipRewardCount(__instance, room);
             boolean addedRelicReward = false;
             if (shouldAddRustedGoldCoinRelicReward(room)) {
                 __instance.rewards.add(new RewardItem(RelicRewardHelper.returnRandomEliteDropRelic()));
                 addedRelicReward = true;
             }
-            if (count <= 0 && rareRewardCount <= 0 && perfectScoreRewardCount <= 0) {
+            if (count <= 0 && rareRewardCount <= 0 && perfectScoreRewardCount <= 0 && flipRewardCount <= 0) {
                 if (addedRelicReward) {
                     __instance.positionRewards();
                 }
@@ -77,6 +79,14 @@ public class FragrantBranchOfYoreRewardPatch {
             }
 
             boolean bossReward = room instanceof MonsterRoomBoss;
+            for (int i = 0; i < flipRewardCount; i++) {
+                RewardItem reward = bossReward ? createRareCardReward() : new RewardItem();
+                if (reward.cards != null && !reward.cards.isEmpty()) {
+                    // Keep the same reward if the event rebuilds its reward screen.
+                    room.rewards.add(reward);
+                    __instance.rewards.add(reward);
+                }
+            }
             for (int i = 0; i < count; i++) {
                 RewardItem reward = bossReward ? createRareCardReward() : new RewardItem();
                 if (reward.cards != null && reward.cards.size() > 0) {
@@ -97,6 +107,23 @@ public class FragrantBranchOfYoreRewardPatch {
             }
             __instance.positionRewards();
         }
+    }
+
+    private static int getFlipRewardCount(CombatRewardScreen screen, AbstractRoom room) {
+        AbstractPower power = AbstractDungeon.player.getPower(FlipPower.POWER_ID);
+        if (!(power instanceof FlipPower)) {
+            return 0;
+        }
+        int count = ((FlipPower) power).consumeRewards(room);
+        if (count > 0) {
+            for (RewardItem reward : screen.rewards) {
+                if (reward.type == RewardItem.RewardType.CARD) {
+                    power.flash();
+                    return count;
+                }
+            }
+        }
+        return 0;
     }
 
     private static boolean shouldAddCovetousGoldReward() {
@@ -260,6 +287,7 @@ public class FragrantBranchOfYoreRewardPatch {
         ArrayList<AbstractCard> pool = new ArrayList<>();
         for (Map.Entry<String, AbstractCard> entry : CardLibrary.cards.entrySet()) {
             AbstractCard card = entry.getValue();
+            if (general.ExclusiveCardPool.isExcluded(card)) continue;
             if (card.rarity == AbstractCard.CardRarity.RARE
                     && card.type != AbstractCard.CardType.CURSE
                     && card.type != AbstractCard.CardType.STATUS

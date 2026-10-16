@@ -1,22 +1,21 @@
 package variables;
 
-import basemod.abstracts.DynamicVariable;
 import cards.tempcards.CrucibleToken;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-public class CrucibleTokenScarletRotVariable extends DynamicVariable {
+public class CrucibleTokenScarletRotVariable extends UpgradePreviewVariable {
     @Override
     public String key() {
         return "MR";
     }
 
     @Override
-    public boolean isModified(AbstractCard card) {
+    protected boolean isValueModified(AbstractCard card) {
         return false;
     }
 
     @Override
-    public int value(AbstractCard card) {
+    protected int currentValue(AbstractCard card) {
         return card instanceof CrucibleToken ? ((CrucibleToken)card).scarletRot : 0;
     }
 

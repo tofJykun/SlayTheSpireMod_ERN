@@ -1,6 +1,7 @@
 package cards.ironeye;
 
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import patches.AbstractCardEnum;
 import powers.VirtualCurrencyPower;
+import general.CombatState;
 
 public class GhostMillstone extends CustomCard {
     public static final String ID = "GhostMillstone";
@@ -25,17 +27,20 @@ public class GhostMillstone extends CustomCard {
                 CardType.ATTACK, AbstractCardEnum.Ironeye_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseMagicNumber = TOKEN_PER_DAMAGE;
         this.magicNumber = this.baseMagicNumber;
+        this.baseDamage = this.damage = 0;
         this.isMultiDamage = true;
     }
 
     @Override
     public void applyPowers() {
         setDamageFromVirtualCurrency();
-        super.applyPowers();
+        if (hasCombatPlayer()) super.applyPowers();
+        else { this.damage = 0; this.isDamageModified = false; }
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
+        if (!hasCombatPlayer()) { applyPowers(); return; }
         setDamageFromVirtualCurrency();
         super.calculateCardDamage(mo);
     }
@@ -49,15 +54,43 @@ public class GhostMillstone extends CustomCard {
 
     @Override
     public void onMoveToDiscard() {
-        this.baseDamage = 0;
+        applyPowers();
+    }
+
+    private boolean hasCombatPlayer() {
+        // Card previews are also constructed before AbstractDungeon can safely initialize.
+        return CardCrawlGame.dungeon != null && AbstractDungeon.player != null && CombatState.isInCombat();
+    }
+
+    private int tokenDamage() {
+        int tokens = 0;
+        if (hasCombatPlayer() && AbstractDungeon.player.hasPower(VirtualCurrencyPower.POWER_ID)) {
+            tokens = AbstractDungeon.player.getPower(VirtualCurrencyPower.POWER_ID).amount;
+        }
+        return Math.max(0, tokens) / this.magicNumber;
     }
 
     private void setDamageFromVirtualCurrency() {
-        int tokens = 0;
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(VirtualCurrencyPower.POWER_ID)) {
-            tokens = AbstractDungeon.player.getPower(VirtualCurrencyPower.POWER_ID).amount;
-        }
-        this.baseDamage = Math.max(0, tokens) / this.magicNumber;
+        this.baseDamage = tokenDamage();
+    }
+
+    @Override
+    public void update() {
+        super.update();
+        if (this.baseDamage != tokenDamage()) applyPowers();
+    }
+
+    @Override
+    public void render(SpriteBatch sb, boolean selected) {
+        if (!hasCombatPlayer() || !AbstractDungeon.player.hand.contains(this)) applyPowers();
+        super.render(sb, selected);
+    }
+
+    @Override
+    public AbstractCard makeStatEquivalentCopy() {
+        AbstractCard copy = super.makeStatEquivalentCopy();
+        copy.applyPowers();
+        return copy;
     }
 
     @Override
@@ -69,8 +102,8 @@ public class GhostMillstone extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.baseMagicNumber = UPGRADE_TOKEN_PER_DAMAGE;
-            this.magicNumber = this.baseMagicNumber;
+            upgradeMagicNumber(UPGRADE_TOKEN_PER_DAMAGE - this.baseMagicNumber);
+            applyPowers();
         }
     }
 }

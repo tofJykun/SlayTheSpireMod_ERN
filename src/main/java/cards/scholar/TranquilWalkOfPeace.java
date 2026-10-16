@@ -75,8 +75,7 @@ public class TranquilWalkOfPeace extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.baseMagicNumber = UPGRADED_SLEEP;
-            this.magicNumber = this.baseMagicNumber;
+            upgradeMagicNumber(UPGRADED_SLEEP - this.baseMagicNumber);
             this.baseStrength = UPGRADED_STRENGTH;
             this.strength = this.baseStrength;
         }

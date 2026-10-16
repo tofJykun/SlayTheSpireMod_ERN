@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PotionSlot;
 import general.BulkPotionQueue;
+import general.PotionDiscardHelper;
 
 import java.util.ArrayList;
 
@@ -33,8 +34,7 @@ public class RollingSparksAction extends AbstractGameAction {
         for (AbstractPotion potion : new ArrayList<>(this.player.potions)) {
             if (potion != null && !(potion instanceof PotionSlot)
                     && BulkPotionQueue.isBulkPotion(potion.ID) && this.player.potions.contains(potion)) {
-                this.player.removePotion(potion);
-                if (!this.player.potions.contains(potion)) {
+                if (PotionDiscardHelper.discard(this.player, potion)) {
                     removed++;
                 }
             }

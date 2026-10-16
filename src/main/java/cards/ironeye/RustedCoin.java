@@ -16,7 +16,7 @@ public class RustedCoin extends CustomCard {
     public static final String ID = "RustedCoin";
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/ironeye/RustedCoin.png";
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int GOLD_LOSS = 5;
     private static final int ARCANE = 1;
 
@@ -41,7 +41,7 @@ public class RustedCoin extends CustomCard {
         if (!canUse) {
             return false;
         }
-        if (p == null || p.gold < GOLD_LOSS) {
+        if (p == null || general.GoldPaymentHelper.available(p) < GOLD_LOSS) {
             this.cantUseMessage = CARD_STRINGS.EXTENDED_DESCRIPTION[0];
             return false;
         }
@@ -57,7 +57,7 @@ public class RustedCoin extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.exhaust = false;
+            upgradeBaseCost(0);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

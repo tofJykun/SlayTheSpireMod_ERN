@@ -233,6 +233,7 @@ import cards.ironeye.Marking;
 import cards.ironeye.PoisonMarking;
 import cards.ironeye.Bounty;
 import cards.ironeye.Avelyn;
+import cards.ironeye.BlackflameShooter;
 import cards.ironeye.ShotClub;
 import cards.ironeye.CeruleanwhorlBubble;
 import cards.ironeye.DeadOrAlive;
@@ -249,6 +250,7 @@ import cards.ironeye.GoldenCrux;
 import cards.ironeye.SleepEvermore;
 import cards.ironeye.NineStagesOfDecay;
 import cards.ironeye.GoughGreatbow;
+import cards.ironeye.SingleShot;
 import cards.ironeye.YoungWhiteBranch;
 import cards.ironeye.GoldPickledFowlFoot;
 import cards.ironeye.HeatUp;
@@ -272,6 +274,27 @@ import cards.ironeye.ShieldOfWant;
 import cards.ironeye.SilverPickledFowlFoot;
 import cards.ironeye.SmoothSilkyStone;
 import cards.ironeye.SnakeSlough;
+import cards.ironeye.PowerOfLiveInDeath;
+import cards.ironeye.MightyShot;
+import cards.ironeye.EnchantedShot;
+import cards.ironeye.ThroughAndThrough;
+import cards.ironeye.BowOfWant;
+import cards.ironeye.ImmutableShield;
+import cards.ironeye.DeathLightning;
+import cards.ironeye.ProperDeath;
+import cards.ironeye.OnislayerBow;
+import cards.ironeye.JarCannon;
+import cards.ironeye.ChaosRapier;
+import cards.ironeye.CashOnDelivery;
+import cards.ironeye.Deposit;
+import cards.ironeye.ChaosShield;
+import cards.ironeye.Blackbow;
+import cards.ironeye.TailBiting;
+import cards.ironeye.Railgun;
+import cards.ironeye.FortuneCookie;
+import cards.ironeye.HighFrequency;
+import cards.ironeye.TrinityStrike;
+import cards.ironeye.AncientDeath;
 import cards.ironeye.StringSecret;
 import cards.ironeye.Strike_Ironeye;
 import cards.ironeye.Usury;
@@ -516,6 +539,9 @@ import cards.scholar.Bloodrose;
 import cards.scholar.Defend_Scholar;
 import cards.scholar.DrawstringPot;
 import cards.scholar.Telescope;
+import cards.scholar.Flip;
+import cards.scholar.PowerOfTwinPrinces;
+import cards.scholar.CrownOfThorns;
 import cards.scholar.CaneSword;
 import cards.scholar.HeavenCord;
 import cards.scholar.ScattershotThrow;
@@ -533,6 +559,8 @@ import cards.scholar.TranquilWalkOfPeace;
 import cards.scholar.WaterHorse;
 import cards.scholar.RollingSparks;
 import cards.scholar.EquivalentExchange;
+import cards.scholar.CatState;
+import cards.scholar.OriginalSin;
 import cards.scholar.PenglaiWorship;
 import cards.scholar.AjaRedStone;
 import cards.scholar.PotionAscetic;
@@ -662,7 +690,14 @@ import cards.undertaker.DeepInsight;
 import cards.undertaker.NormalHammer;
 import cards.undertaker.OuterBoon;
 import cards.undertaker.AllKnowingHelm;
-import cards.undertaker.TheGreatBeyond;
+import cards.scholar.TheGreatBeyond;
+import cards.scholar.FireElement;
+import cards.scholar.WoodElement;
+import cards.scholar.MetalElement;
+import cards.scholar.EarthElement;
+import cards.scholar.WaterElement;
+import cards.scholar.BrandNewWorld;
+import cards.undertaker.BipolarDisorder;
 import cards.undertaker.PreceptsStrike;
 import cards.undertaker.PrescribedLevy;
 import cards.undertaker.PoisonedHand;
@@ -798,7 +833,10 @@ import potions.BlackflamePotion;
 import potions.DevilFruit;
 import potions.CalamityPotion;
 import potions.MushroomSoup;
-import potions.SkillPotion;
+import potions.ArtPotion;
+import potions.PlacerGoldPotion;
+import potions.GoldenDelight;
+import potions.CaloricPotion;
 import potions.PearlPotion;
 import potions.DuskHerbDew;
 import potions.HaligtreeBalm;
@@ -843,6 +881,9 @@ import relics.LooksLens;
 import relics.MagicCocktail;
 import relics.MiniatureThunder;
 import relics.EagleEye;
+import relics.CompoundLens;
+import relics.AnotherBottle;
+import relics.BeckoningCat;
 import relics.CovetousGoldSerpentRing;
 import relics.CovetousSilverSerpentRing;
 import relics.NightShard;
@@ -948,6 +989,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
     public ERNMod() {
         BaseMod.subscribe((ISubscriber)this);
         BaseMod.addSaveField(BulkPotionQueue.SAVE_KEY, BulkPotionQueue.SAVE_FIELD);
+        BaseMod.addSaveField(general.BrandNewWorldProgress.SAVE_KEY, new general.BrandNewWorldProgress());
         BaseMod.addSaveField(general.ConciliationRewards.SAVE_KEY, new general.ConciliationRewards());
         BaseMod.addSaveField(general.LordvesselHistory.SAVE_KEY, new general.LordvesselHistory());
         BaseMod.addDynamicVariable(new CrucibleTokenPoisonVariable());
@@ -971,10 +1013,19 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         // MOON bottles have no spots texture; a spots color would crash potion rendering.
         BaseMod.addPotion(MushroomSoup.class, new Color(0.58F, 0.72F, 0.30F, 1.0F),
                 new Color(0.90F, 0.82F, 0.57F, 1.0F), null,
-                MushroomSoup.POTION_ID, ERNModClassEnum.Executor_CLASS);
-        BaseMod.addPotion(SkillPotion.class, new Color(0.76F, 0.24F, 0.30F, 1.0F),
+                MushroomSoup.POTION_ID, ERNModClassEnum.Duchess_CLASS);
+        BaseMod.addPotion(ArtPotion.class, new Color(0.76F, 0.24F, 0.30F, 1.0F),
                 new Color(0.30F, 0.74F, 0.44F, 1.0F), Color.WHITE.cpy(),
-                SkillPotion.POTION_ID, ERNModClassEnum.Executor_CLASS);
+                ArtPotion.POTION_ID, ERNModClassEnum.Duchess_CLASS);
+        BaseMod.addPotion(PlacerGoldPotion.class, new Color(0.95F, 0.72F, 0.16F, 1.0F),
+                IRONEYE_COLOR.cpy(), Color.WHITE.cpy(),
+                PlacerGoldPotion.POTION_ID, ERNModClassEnum.Ironeye_CLASS);
+        BaseMod.addPotion(GoldenDelight.class, new Color(0.98F, 0.75F, 0.20F, 1.0F),
+                new Color(0.82F, 0.42F, 0.12F, 1.0F), Color.WHITE.cpy(),
+                GoldenDelight.POTION_ID, ERNModClassEnum.Ironeye_CLASS);
+        BaseMod.addPotion(CaloricPotion.class, new Color(0.92F, 0.38F, 0.18F, 1.0F),
+                IRONEYE_COLOR.cpy(), Color.WHITE.cpy(),
+                CaloricPotion.POTION_ID, ERNModClassEnum.Ironeye_CLASS);
         BaseMod.addPotion(CalamityPotion.class, new Color(0.42F, 0.20F, 0.56F, 1.0F),
                 new Color(0.88F, 0.44F, 0.18F, 1.0F), null,
                 CalamityPotion.POTION_ID, ERNModClassEnum.Executor_CLASS);
@@ -1319,9 +1370,11 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new SleepEvermore());
         this.cardsToAdd.add(new NineStagesOfDecay());
         this.cardsToAdd.add(new Avelyn());
+        this.cardsToAdd.add(new BlackflameShooter());
         this.cardsToAdd.add(new GodslayerGreatsword());
         this.cardsToAdd.add(new ShotClub());
         this.cardsToAdd.add(new GoughGreatbow());
+        this.cardsToAdd.add(new SingleShot());
         this.cardsToAdd.add(new YoungWhiteBranch());
         this.cardsToAdd.add(new RainOfArrows());
         this.cardsToAdd.add(new DivineSpear());
@@ -1334,6 +1387,27 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new FragrantBranchOfYore());
         this.cardsToAdd.add(new BlackClawAssistant());
         this.cardsToAdd.add(new SnakeSlough());
+        this.cardsToAdd.add(new PowerOfLiveInDeath());
+        this.cardsToAdd.add(new MightyShot());
+        this.cardsToAdd.add(new EnchantedShot());
+        this.cardsToAdd.add(new ThroughAndThrough());
+        this.cardsToAdd.add(new BowOfWant());
+        this.cardsToAdd.add(new ImmutableShield());
+        this.cardsToAdd.add(new DeathLightning());
+        this.cardsToAdd.add(new ProperDeath());
+        this.cardsToAdd.add(new OnislayerBow());
+        this.cardsToAdd.add(new JarCannon());
+        this.cardsToAdd.add(new ChaosRapier());
+        this.cardsToAdd.add(new CashOnDelivery());
+        this.cardsToAdd.add(new Deposit());
+        this.cardsToAdd.add(new ChaosShield());
+        this.cardsToAdd.add(new Blackbow());
+        this.cardsToAdd.add(new TailBiting());
+        this.cardsToAdd.add(new Railgun());
+        this.cardsToAdd.add(new FortuneCookie());
+        this.cardsToAdd.add(new HighFrequency());
+        this.cardsToAdd.add(new TrinityStrike());
+        this.cardsToAdd.add(new AncientDeath());
         this.cardsToAdd.add(new Fluctuation());
         this.cardsToAdd.add(new Entropy());
         this.cardsToAdd.add(new HeatUp());
@@ -1660,6 +1734,15 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new WaterHorse());
         this.cardsToAdd.add(new RollingSparks());
         this.cardsToAdd.add(new EquivalentExchange());
+        this.cardsToAdd.add(new CatState());
+        this.cardsToAdd.add(new TheGreatBeyond());
+        this.cardsToAdd.add(new FireElement());
+        this.cardsToAdd.add(new WoodElement());
+        this.cardsToAdd.add(new MetalElement());
+        this.cardsToAdd.add(new EarthElement());
+        this.cardsToAdd.add(new WaterElement());
+        this.cardsToAdd.add(new BrandNewWorld());
+        this.cardsToAdd.add(new OriginalSin());
         this.cardsToAdd.add(new AeonianButterfly());
         this.cardsToAdd.add(new TrinaLily());
         this.cardsToAdd.add(new MiquellaLily());
@@ -1670,6 +1753,9 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new FingerprintStoneShield());
         this.cardsToAdd.add(new DrawstringPot());
         this.cardsToAdd.add(new Telescope());
+        this.cardsToAdd.add(new Flip());
+        this.cardsToAdd.add(new PowerOfTwinPrinces());
+        this.cardsToAdd.add(new CrownOfThorns());
         this.cardsToAdd.add(new CaneSword());
         this.cardsToAdd.add(new HeavenCord());
         this.cardsToAdd.add(new ScattershotThrow());
@@ -1724,7 +1810,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new OverheadStance());
         this.cardsToAdd.add(new PreceptsStrike());
         this.cardsToAdd.add(new OuterBoon());
-        this.cardsToAdd.add(new TheGreatBeyond());
+        this.cardsToAdd.add(new BipolarDisorder());
         this.cardsToAdd.add(new AllKnowingHelm());
         this.cardsToAdd.add(new EyesWithin());
         this.cardsToAdd.add(new GreatSwampTome());
@@ -1883,6 +1969,9 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         addERNRelic(new OrmaGreatshield(), AbstractCardEnum.Guardian_COLOR);
         addERNRelic(new TheTwelveBronzeColossi(), AbstractCardEnum.Guardian_COLOR);
         addERNRelic(new EagleEye(), AbstractCardEnum.Ironeye_COLOR);
+        addERNRelic(new CompoundLens(), AbstractCardEnum.Ironeye_COLOR);
+        addERNRelic(new AnotherBottle(), AbstractCardEnum.Ironeye_COLOR);
+        addERNRelic(new BeckoningCat(), AbstractCardEnum.Ironeye_COLOR);
         addERNRelic(new MiniatureThunder(), AbstractCardEnum.Ironeye_COLOR);
         addERNRelic(new LostAshesOfWar(), AbstractCardEnum.Ironeye_COLOR);
         addERNRelic(new CovetousSilverSerpentRing(), AbstractCardEnum.Ironeye_COLOR);
@@ -2066,6 +2155,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
 
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
+        general.ElementHelper.startCombat();
         if (!room.isBattleOver) general.ConciliationRewards.reset();
         PlayerDebuffStats.resetCombat();
         GuidanceStats.resetCombat();
@@ -2083,6 +2173,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
 
     @Override
     public void receiveEditKeywords() {
+        general.CardElement.registerKeywords();
         if (Settings.language == Settings.GameLanguage.ZHS) {
             BaseMod.addKeyword("爪牙", new String[] { "爪牙" },
                     "#y爪牙 会在他们的领导者死亡时放弃战斗。");
@@ -2305,7 +2396,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
                     "Reinforcement materials include: #yTitanite #yShard , #yTitanite #yChunk , #yTitanite #ySlab , #yTwinkling #yTitanite , #yDemon #yTitanite , and #yDragon #yScale .");
             BaseMod.addKeyword("Arcane", new String[] { "arcane" },
                     "Dormant power helps discover Rare cards.");
-            BaseMod.addKeyword("Virtual Currency", new String[] { "virtual currency" },
+            BaseMod.addKeyword("Virtual Currency", new String[] { "virtual currency", "token", "tokens" },
                     "Whenever you would lose #yGold, lose that much #yVirtual #yCurrency first.");
             BaseMod.addKeyword("Thorns", new String[] { "thorns" },
                     "When attacked, deal damage to the attacker equal to this amount.");
@@ -2425,6 +2516,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
 
     @Override
     public void receivePostBattle(AbstractRoom r) {
+        general.ElementHelper.endCombat();
         PlayerDebuffStats.resetCombat();
         BedOfMagic.resetCombat();
         EnemyBattleStartSnapshot.reset();

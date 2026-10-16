@@ -14,7 +14,7 @@ public class EagleEye extends CustomRelic {
     public static final String ID = "EagleEye";
     private static final String IMG = "img/relics/ironeye/EagleEye.png";
     private static final String IMG_OTL = "img/relics/ironeye/outline/EagleEye.png";
-    private static final int ARCANE = 4;
+    private static final int ARCANE = 6;
 
     public EagleEye() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),

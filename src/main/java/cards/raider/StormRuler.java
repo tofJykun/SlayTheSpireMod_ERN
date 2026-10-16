@@ -55,7 +55,7 @@ public class StormRuler extends CustomCard {
 
     private void refreshDescription() {
         String description = getCardStrings().DESCRIPTION
-                .replace("!MX!", Integer.toString(this.magicNumber))
+                .replace("!MX!", "!MD!")
                 .replace("!M!", Integer.toString(HEALTH_THRESHOLD));
         if (!description.equals(this.rawDescription)) {
             this.rawDescription = description;

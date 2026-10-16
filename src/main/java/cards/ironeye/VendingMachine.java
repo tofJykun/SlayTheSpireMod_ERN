@@ -60,8 +60,7 @@ public class VendingMachine extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.baseMagicNumber = UPGRADE_GOLD_LOSS;
-            this.magicNumber = this.baseMagicNumber;
+            upgradeMagicNumber(UPGRADE_GOLD_LOSS - this.baseMagicNumber);
             initializeDescription();
         }
     }

@@ -205,11 +205,26 @@
       "在每场战斗开始时，获得 #b10 层 #y完美格挡 。"
     ]
   },
+  "AnotherBottle": {
+    "NAME": "再来一瓶",
+    "FLAVOR": "",
+    "DESCRIPTIONS": ["“奖券”额外获得 #b5 点 #y代币 。"]
+  },
+  "BeckoningCat": {
+    "NAME": "招财猫",
+    "FLAVOR": "",
+    "DESCRIPTIONS": ["你每打出 #b2 张稀有牌，抽 #b1 张牌。"]
+  },
+  "CompoundLens": {
+    "NAME": "组合透镜",
+    "FLAVOR": "",
+    "DESCRIPTIONS": ["在每场战斗开始时，获得 #b12 点 #y感应 。"]
+  },
   "EagleEye": {
     "NAME": "观察入微",
     "FLAVOR": "铁之眼的技艺。",
     "DESCRIPTIONS": [
-      "在每场战斗开始时，获得 #b4 点 #y感应 。"
+      "在每场战斗开始时，获得 #b6 点 #y感应 。"
     ]
   },
   "MiniatureThunder": {

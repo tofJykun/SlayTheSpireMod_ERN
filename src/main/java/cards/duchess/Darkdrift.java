@@ -3,6 +3,7 @@ package cards.duchess;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,7 +17,8 @@ public class Darkdrift extends CustomCard {
     public static final String ID = "Darkdrift";
     private static final String IMG_PATH = "img/cards/duchess/Darkdrift.png";
     private static final int COST = 1;
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 12;
+    public static final int ENERGY_LOSS = 1;
     private static final int REPLAY = 1;
     private static final int UPGRADE_PLUS_DMG = 2;
 
@@ -36,6 +38,7 @@ public class Darkdrift extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        addToBot(new LoseEnergyAction(ENERGY_LOSS));
     }
 
     @Override

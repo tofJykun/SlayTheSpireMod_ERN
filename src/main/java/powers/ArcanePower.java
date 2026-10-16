@@ -102,6 +102,7 @@ public class ArcanePower extends AbstractPower {
         CardGroup anyCard = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (Map.Entry<String, AbstractCard> entry : CardLibrary.cards.entrySet()) {
             AbstractCard card = entry.getValue();
+            if (general.ExclusiveCardPool.isExcluded(card)) continue;
             if (card.rarity == AbstractCard.CardRarity.RARE
                     && card.type != AbstractCard.CardType.CURSE
                     && card.type != AbstractCard.CardType.STATUS

@@ -19,7 +19,7 @@ public class PoisonMarking extends CustomCard {
     private static final CardStrings STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/ironeye/PoisonMarking.png";
     private static final int COST = 1;
-    private int poison = 10;
+    private int poison = 12;
 
     public PoisonMarking() {
         super(ID, STRINGS.NAME, IMG_PATH, COST, STRINGS.DESCRIPTION,
@@ -43,7 +43,7 @@ public class PoisonMarking extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.poison += 2;
+            this.poison += 3;
         }
     }
 

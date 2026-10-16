@@ -89,7 +89,7 @@ public class GreatClub extends CustomCard {
     }
 
     public int getBaseGreyHealth() {
-        return GREY_HEALTH;
+        return GREY_HEALTH + (upgraded ? UPGRADE_GREY_HEALTH : 0);
     }
 
     @Override

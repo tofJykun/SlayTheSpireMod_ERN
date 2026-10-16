@@ -25,7 +25,7 @@ public class DeadOrAliveAction extends AbstractGameAction {
                 && this.target instanceof AbstractMonster
                 && !this.target.isDeadOrEscaped()
                 && this.target.currentHealth > 0
-                && this.player.gold >= this.target.currentHealth) {
+                && general.GoldPaymentHelper.available(this.player) >= this.target.currentHealth) {
             int goldCost = this.target.currentHealth;
             this.player.loseGold(goldCost);
             AbstractDungeon.actionManager.addToTop(new InstantKillAction(this.target));

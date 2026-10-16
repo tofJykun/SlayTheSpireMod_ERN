@@ -41,8 +41,7 @@ public class TransferPayment extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
-            this.baseMagicNumber = UPGRADED_ENERGY;
-            this.magicNumber = this.baseMagicNumber;
+            upgradeMagicNumber(UPGRADED_ENERGY - this.baseMagicNumber);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

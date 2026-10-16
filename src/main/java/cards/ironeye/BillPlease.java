@@ -15,7 +15,7 @@ public class BillPlease extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/ironeye/BillPlease.png";
     private static final int COST = 0;
-    private static final int GOLD_LOSS = 20;
+    private static final int GOLD_LOSS = 15;
     private static final int ENERGY_GAIN = 2;
     private static final int UPGRADED_ENERGY_GAIN = 3;
 
@@ -38,7 +38,7 @@ public class BillPlease extends CustomCard {
         if (!canUse) {
             return false;
         }
-        if (p == null || p.gold < GOLD_LOSS) {
+        if (p == null || general.GoldPaymentHelper.available(p) < GOLD_LOSS) {
             this.cantUseMessage = CARD_STRINGS.EXTENDED_DESCRIPTION[0];
             return false;
         }

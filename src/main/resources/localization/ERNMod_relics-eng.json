@@ -205,11 +205,26 @@
       "At the start of each combat, gain #b10 #yPerfect #yGuard."
     ]
   },
+  "AnotherBottle": {
+    "NAME": "Another Bottle",
+    "FLAVOR": "",
+    "DESCRIPTIONS": ["Lottery Tickets grant #b5 additional #yVirtual #yCurrency."]
+  },
+  "BeckoningCat": {
+    "NAME": "Beckoning Cat",
+    "FLAVOR": "",
+    "DESCRIPTIONS": ["Every time you play #b2 Rare cards, draw #b1 card."]
+  },
+  "CompoundLens": {
+    "NAME": "Compound Lens",
+    "FLAVOR": "",
+    "DESCRIPTIONS": ["At the start of each combat, gain #b12 #yArcane."]
+  },
   "EagleEye": {
     "NAME": "Eagle Eye",
     "FLAVOR": "Ironeye's character skill.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain #b4 #yArcane."
+      "At the start of each combat, gain #b6 #yArcane."
     ]
   },
   "MiniatureThunder": {

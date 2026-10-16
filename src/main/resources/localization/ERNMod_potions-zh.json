@@ -1,9 +1,24 @@
 {
+  "CaloricPotion": {
+    "NAME": "热质药水",
+    "DESCRIPTIONS": ["从手牌中选择最多 #b%d 张牌 变化 。"]
+  },
+  "PlacerGoldPotion": {
+    "NAME": "流金药水",
+    "DESCRIPTIONS": ["获得 #b%d 点 #y代币 。"]
+  },
+  "GoldenDelight": {
+    "NAME": "金美味",
+    "DESCRIPTIONS": [
+      "从 #b3 张随机稀有牌中选择 #b1 张加入你的手牌。这张牌在本回合耗能变为 #b0 。",
+      "从 #b3 张随机稀有牌中选择 #b1 张，将其加入你的手牌 #b2 次。这两张牌在本回合耗能变为 #b0 。"
+    ]
+  },
   "MushroomSoup": {
     "NAME": "菌菇汤",
     "DESCRIPTIONS": ["你每打出 #b%d 张牌，都获得 #y蘑菇 。", "居然是菇！"]
   },
-  "ERN:SkillPotion": {
+  "ArtPotion": {
     "NAME": "技艺药水",
     "DESCRIPTIONS": ["获得 #b%d 点 #y力量 和 #b%d 点 #y敏捷 。"]
   },

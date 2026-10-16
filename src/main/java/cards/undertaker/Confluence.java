@@ -73,15 +73,16 @@ public class Confluence extends CustomCard {
                 && AbstractDungeon.player.hasPower(ConfluencePower.POWER_ID)) {
             count = AbstractDungeon.player.getPower(ConfluencePower.POWER_ID).amount;
         }
-        int extra = this.upgraded ? EXTRA_DAMAGE + UPGRADE_PLUS_EXTRA_DAMAGE : EXTRA_DAMAGE;
+        int extra = getExtraDamage();
         this.baseDamage = DAMAGE + Math.max(0, count) * extra;
     }
 
+    public int getExtraDamage() {
+        return upgraded ? EXTRA_DAMAGE + UPGRADE_PLUS_EXTRA_DAMAGE : EXTRA_DAMAGE;
+    }
+
     private void refreshDescription() {
-        String description = getCardStrings().DESCRIPTION
-                .replace("!M!", Integer.toString(this.magicNumber))
-                .replace("!MD!", Integer.toString(this.upgraded
-                        ? EXTRA_DAMAGE + UPGRADE_PLUS_EXTRA_DAMAGE : EXTRA_DAMAGE));
+        String description = getCardStrings().DESCRIPTION;
         if (!description.equals(this.rawDescription)) {
             this.rawDescription = description;
             initializeDescription();

@@ -47,4 +47,18 @@ public final class PlayedCardHistory {
         manager = null;
         turn = -1;
     }
+
+    // Start-of-turn powers run before GameActionManager increments turn and clears its card history.
+    public static ArrayList<AbstractCard> lastAttacks(int amount) {
+        syncTurn();
+        ArrayList<AbstractCard> result = new ArrayList<>();
+        for (int i = snapshots.size() - 1; i >= 0 && result.size() < amount; i--) {
+            AbstractCard snapshot = snapshots.get(i);
+            if (SmithingBody.behavior(snapshot).type != AbstractCard.CardType.ATTACK) continue;
+            AbstractCard copy = SmithingBody.copy(snapshot);
+            copy.uuid = java.util.UUID.randomUUID();
+            result.add(0, copy);
+        }
+        return result;
+    }
 }

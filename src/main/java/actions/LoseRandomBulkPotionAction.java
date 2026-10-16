@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PotionSlot;
 import general.BulkPotionQueue;
+import general.PotionDiscardHelper;
 
 import java.util.ArrayList;
 
@@ -21,7 +22,7 @@ public class LoseRandomBulkPotionAction extends AbstractGameAction {
             ArrayList<AbstractPotion> potions = getAvailableBulkPotions();
             if (!potions.isEmpty()) {
                 AbstractPotion potion = potions.get(AbstractDungeon.cardRandomRng.random(potions.size() - 1));
-                AbstractDungeon.player.removePotion(potion);
+                PotionDiscardHelper.discard(AbstractDungeon.player, potion);
             }
         }
         this.isDone = true;

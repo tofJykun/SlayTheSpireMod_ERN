@@ -1,4 +1,30 @@
 {
+  "BrandNewWorld": {
+    "NAME": "新世界",
+    "DESCRIPTION": "使元素流转... NL 抽牌直到将手牌抽满。 NL 获得 !M! 点最大生命。 NL 获得 [E] [E] [E] 。 NL 获得 !MD! 金币。",
+    "EXTENDED_DESCRIPTION": ["...筑新世界"]
+  },
+  "WaterElement": {
+    "NAME": "水元素",
+    "DESCRIPTION": " 元素：水 。 NL 获得 !M! 瓶随机 散装 药水。"
+  },
+  "EarthElement": {
+    "NAME": "土元素",
+    "DESCRIPTION": " 元素：土 。 NL 获得 !B! 点 格挡 。 NL 抽 !M! 张牌。"
+  },
+  "MetalElement": {
+    "NAME": "金元素",
+    "DESCRIPTION": " 元素：金 。 NL 获得 [E] [E] [E] 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 元素：金 。 NL 获得 [E] [E] [E] 。"
+  },
+  "WoodElement": {
+    "NAME": "木元素",
+    "DESCRIPTION": " 元素：木 。 NL 增加 !M! 张随机 药材 牌到你的手牌。"
+  },
+  "FireElement": {
+    "NAME": "火元素",
+    "DESCRIPTION": " 元素：火 。 NL 造成 !D! 点伤害。 NL 消耗 一张手牌。"
+  },
   "Mischief": {
     "NAME": "恶作剧",
     "DESCRIPTION": "只有当 召唤 时才能打出。 NL 从手牌中选择最多 !M! 张牌 消耗 。 NL 将相同数量张当前 召唤 的 共击 牌加入你的手牌。",
@@ -410,14 +436,19 @@
     "NAME": "比较不会攻击自己",
     "DESCRIPTION": "如果敌人的意图是攻击，则改为获得 !M! 点 格挡 。 NL 消耗 。"
   },
+  "BlackflameShooter": {
+    "NAME": "黑焰射手",
+    "DESCRIPTION": "失去 !M! 金币。 NL 造成 !D! 点伤害 !MS! 次。 NL 给予 !MD! 层 燃命 !MS! 次。",
+    "EXTENDED_DESCRIPTION": ["金币与代币之和必须大于40。"]
+  },
   "Avelyn": {
     "NAME": "雅帆琳",
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 随机打出你抽牌堆和弃牌堆中所有“雅帆琳”。 NL 如果从手牌打出，在抽牌堆放入一张此牌的复制品。"
   },
   "NineStagesOfDecay": {
     "NAME": "九相图",
-    "DESCRIPTION": "如果当前是非Boss战斗，在九回合后杀死所有敌人。 NL 如果通过这种方式结束战斗，不获得任何奖励。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 如果当前是非Boss战斗，在九回合后杀死所有敌人。 NL 如果通过这种方式结束战斗，不获得任何奖励。"
+    "DESCRIPTION": "如果当前是非Boss战斗，在九回合后杀死所有敌人。 NL 如果通过这种方式结束战斗，不获得任何奖励。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 如果当前是非Boss战斗，在九回合后杀死所有敌人。 NL 如果通过这种方式结束战斗，不获得任何奖励。 NL 消耗 。"
   },
   "Cragblade": {
     "NAME": "岩石剑",
@@ -600,7 +631,7 @@
   "CeruleanDagger": {
     "NAME": "染蓝凶刀",
     "DESCRIPTION": "成功 弹反 时，下一回合获得 [E] [E] [E] 。",
-    "UPGRADE_DESCRIPTION": "成功 弹反 时，下一回合获得 [E] [E] [E] ，多抽3张牌。"
+    "UPGRADE_DESCRIPTION": "成功 弹反 时，下一回合获得 [E] [E] [E] ，多抽 !MD! 张牌。"
   },
   "WolfGreatshield": {
     "NAME": "狼大盾",
@@ -622,7 +653,7 @@
     "AstoraGreatsword": {
     "NAME": "亚斯特拉大剑",
     "DESCRIPTION": " 充能 。 NL 造成 !D! 点伤害X次。 NL 给予 !M! 层 削韧 X次。",
-    "UPGRADE_DESCRIPTION": " 充能 。 NL 造成 !D! 点伤害X+1次。 NL 给予 !M! 层 削韧 X+1次。"
+    "UPGRADE_DESCRIPTION": " 充能 。 NL 造成 !D! 点伤害X+ !MD! 次。 NL 给予 !M! 层 削韧 X+ !MD! 次。"
   },
     "GravelordSword": {
       "NAME": "墓王剑",
@@ -694,12 +725,13 @@
   },
   "Bonewheel": {
     "NAME": "骸骨车轮",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "造成X点伤害 !M! 次。",
+    "EXTENDED_DESCRIPTION": ["造成 !D! 点伤害 !M! 次。"]
   },
   "SplitleafGreatsword": {
     "NAME": "半叶大刀",
     "DESCRIPTION": "造成 !D! 点伤害X次。 NL 获得X层 振翼 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害X+1次。 NL 获得X+1层 振翼 。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害X+ !MD! 次。 NL 获得X+ !MD! 层 振翼 。"
   },
   "SpikedShield": {
     "NAME": "刺针盾",
@@ -848,17 +880,17 @@
   "RustedCoin": {
     "NAME": "锈斑硬币",
     "DESCRIPTION": "失去5金币。 NL 获得 !M! 点 感应 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "失去5金币。 NL 获得 !M! 点 感应 。",
+    "UPGRADE_DESCRIPTION": "失去5金币。 NL 获得 !M! 点 感应 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "金币不足。"
+      "金币与代币不足。"
     ]
   },
   "DeadOrAlive": {
     "NAME": "通缉",
-    "DESCRIPTION": "如果目标敌人的生命值小于等于你的金币数，则失去等于其生命值的金币，将其生命值变为0。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 如果目标敌人的生命值小于等于你的金币数，则失去等于其生命值的金币，将其生命值变为0。",
+    "DESCRIPTION": "如果目标敌人的生命值小于等于你的金币与 代币 之和，则失去等于其生命值的金币，将其生命值变为0。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 如果目标敌人的生命值小于等于你的金币与 代币 之和，则失去等于其生命值的金币，将其生命值变为0。",
     "EXTENDED_DESCRIPTION": [
-      "金币不足。"
+      "金币与代币不足。"
     ]
   },
   "Barter": {
@@ -877,9 +909,84 @@
     "NAME": "自动贩卖机",
     "DESCRIPTION": "失去 !M! 金币。 NL 在所有空药水栏位中获得随机药水。 NL 消耗 。"
   },
+  "AncientDeath": {
+    "NAME": "古老死亡",
+    "DESCRIPTION": " 消耗 所有手牌。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 骤死 。"
+  },
+  "TrinityStrike": {
+    "NAME": "三相打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 点 代币 。"
+  },
+  "HighFrequency": {
+    "NAME": "高频",
+    "DESCRIPTION": "获得 !MD! 点 代币 。 NL 从手牌中选择最多 !M! 张牌 变化 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 !MD! 点 代币 。 NL 从手牌中选择最多 !M! 张牌 变化 。"
+  },
+  "FortuneCookie": {
+    "NAME": "幸运饼干",
+    "DESCRIPTION": "失去 !M! 金币。 NL 获得 !B! 点 格挡 。 NL 增加 !MD! 张 *奖券 到你的手牌。",
+    "UPGRADE_DESCRIPTION": "失去 !M! 金币。 NL 获得 !B! 点 格挡 。 NL 增加 !MD! 张 *奖券+ 到你的手牌。",
+    "EXTENDED_DESCRIPTION": ["你的金币与代币不足。"]
+  },
+  "Railgun": {
+    "NAME": "电磁炮",
+    "DESCRIPTION": "失去 !M! 金币。 NL 造成 !D! 点伤害。 NL 抽 !MD! 张牌。",
+    "EXTENDED_DESCRIPTION": ["你的金币与代币不足。"]
+  },
+  "TailBiting": {
+    "NAME": "衔尾",
+    "DESCRIPTION": "你每 变化 一张牌，抽 !M! 张牌。"
+  },
+  "Blackbow": {
+    "NAME": "黑弓",
+    "DESCRIPTION": "在你的回合开始时，打出你上一回合打出的最后 !M! 张攻击牌。"
+  },
+  "ChaosShield": {
+    "NAME": "混沌之盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 变化 一张随机手牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 变化 一张手牌。"
+  },
+  "Deposit": {
+    "NAME": "储蓄",
+    "DESCRIPTION": "失去 !M! 金币。 NL 下一回合，抽 !MS! 张牌，获得 !MS! 点能量。",
+    "EXTENDED_DESCRIPTION": ["你的金币与代币不足。"]
+  },
+  "CashOnDelivery": {
+    "NAME": "到付",
+    "DESCRIPTION": "失去 !M! 金币。 NL 抽 !MD! 张牌。 NL 增加 !MS! 张 *奖券+ 到你的手牌。",
+    "EXTENDED_DESCRIPTION": ["金币和代币不足。"]
+  },
+  "ChaosRapier": {
+    "NAME": "混沌刺剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 增加 !M! 张随机牌到你的手牌。"
+  },
+  "JarCannon": {
+    "NAME": "壶大炮",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 你的下一回合开始时，对目标敌人造成 !D! 点伤害。"
+  },
+  "OnislayerBow": {
+    "NAME": "伐鬼弓",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 变化 一张随机手牌。"
+  },
+  "ProperDeath": {
+    "NAME": "纠死",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌会杀死敌人，则保持敌人的生命值为 !M! 。"
+  },
+  "DeathLightning": {
+    "NAME": "死亡雷击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌杀死了敌人，则增加 !M! 张 *奖券+ 到你的手牌。"
+  },
+  "ImmutableShield": {
+    "NAME": "不变盾牌",
+    "DESCRIPTION": "获得你当前 代币 数+ !M! 的 格挡 值。 NL （获得 !B! 点 格挡 。）"
+  },
+  "BowOfWant": {
+    "NAME": "渴望之弓",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 增加 !M! 张 *奖券 到你的手牌。"
+  },
   "Marking": {
     "NAME": "标记",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 在你的回合结束时，如果该名敌人在本回合受到大于等于 !M! 点伤害，失去 !MS! 点生命。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 在你的回合结束时，如果该名敌人在本回合受到大于等于 !M! 点伤害，失去 !MS! %当前生命值。"
   },
   "PoisonMarking": {
     "NAME": "毒性标记",
@@ -911,14 +1018,14 @@
   },
   "Plunder": {
     "NAME": "劫掠",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 增加 !M! 张 *奖券 到你的手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得与所造成的被格挡的伤害相等的 格挡 。 NL 增加 !M! 张 *奖券 到你的手牌。"
   },
   "BillPlease": {
     "NAME": "结账",
     "DESCRIPTION": "失去 !M! 金币。 NL 获得 [E] [E] 。",
     "UPGRADE_DESCRIPTION": "失去 !M! 金币。 NL 获得 [E] [E] [E] 。",
     "EXTENDED_DESCRIPTION": [
-      "金币不足。"
+      "金币与代币不足。"
     ]
   },
   "MidasTouch": {
@@ -950,9 +1057,14 @@
     "NAME": "亡灵小刀",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时，获得 !M! 点 感应 。 NL 消耗 。"
   },
+  "SingleShot": {
+    "NAME": "穿杨一箭",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 击晕 所有敌人 !M! 回合。 NL 消耗 。"
+  },
   "GoughGreatbow": {
     "NAME": "戈夫大弓",
-    "DESCRIPTION": " 击晕 所有敌人1回合。 NL 消耗 。"
+    "DESCRIPTION": "给予所有敌人 失衡 。 NL 消耗 。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 失衡 。 NL 消耗 。"
   },
   "YoungWhiteBranch": {
     "NAME": "嫩白树枝",
@@ -969,8 +1081,8 @@
   },
   "Usury": {
     "NAME": "高利贷",
-    "DESCRIPTION": "在你的回合开始时，你每有 !MD! 点 代币 ，获得1点 代币 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 点 代币 。 NL 在你的回合开始时，你每有 !MD! 点 代币 ，获得1点 代币 。"
+    "DESCRIPTION": "在你的回合开始时，增加一张 *奖券+ 到你的手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时，增加一张 *奖券+ 到你的手牌。"
   },
   "Bounty": {
     "NAME": "悬赏",
@@ -993,6 +1105,25 @@
     "DESCRIPTION": "你打出的牌将在本场战斗中 升级 。",
     "UPGRADE_DESCRIPTION": " 固有 。 NL 你打出的牌将在本场战斗中 升级 。"
   },
+  "ThroughAndThrough": {
+    "NAME": "贯穿射击",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得与所造成的未被格挡的伤害相等的 代币 。"
+  },
+  "EnchantedShot": {
+    "NAME": "宿灵射击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 你手牌中一张攻击牌，将其伤害增加到这张牌上。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 消耗 你手牌中一张攻击牌，将其伤害增加到这张牌上。"
+  },
+  "MightyShot": {
+    "NAME": "拉满弓",
+    "DESCRIPTION": "你打出的下 !M! 张攻击牌造成双倍伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "你打出的下 !M! 张攻击牌造成双倍伤害。"
+  },
+  "PowerOfLiveInDeath": {
+    "NAME": "死诞的庇佑",
+    "DESCRIPTION": "每当有一张牌被 消耗 时， 变化 所有手牌。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 每当有一张牌被 消耗 时， 变化 所有手牌。"
+  },
   "SnakeSlough": {
     "NAME": "蛇蜕",
     "DESCRIPTION": "你每 变化 一张牌，获得 !M! 点 格挡 。"
@@ -1008,12 +1139,12 @@
   },
   "Entropy": {
     "NAME": "熵",
-    "DESCRIPTION": "对所有敌人造成你在本场战斗中 变化 过的牌的总数 !M! 倍的伤害。"
+    "DESCRIPTION": "对所有敌人造成你在本场战斗中 变化 过的牌的总数 !M! 倍的伤害。 NL （造成 !D! 点伤害。）"
   },
   "FragrantBranchOfYore": {
     "NAME": "怀念香木",
     "DESCRIPTION": "战斗结束后多掉落一次卡牌奖励。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 战斗结束后多掉落一次卡牌奖励。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 战斗结束后多掉落一次卡牌奖励。 NL 消耗 。"
   },
   "Strike_Raider": {
     "NAME": "打击",
@@ -1513,7 +1644,7 @@
   },
   "Darkdrift": {
     "NAME": "暗胧",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 重放 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !MD! 点能量。 NL 重放 !M! 。"
   },
   "BlindSpot": {
     "NAME": "死角一击",
@@ -1581,7 +1712,7 @@
   "WildStrikes": {
     "NAME": "盲击",
     "DESCRIPTION": "造成 !D! 点 伤害。 NL 将这张牌打出 X 次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点 伤害。 NL 将这张牌打出 X+1 次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点 伤害。 NL 将这张牌打出 X+ !MD! 次。",
     "EXTENDED_DESCRIPTION": [
       "X为0时不能打出。"
     ]
@@ -1939,7 +2070,7 @@
   "MoonStance": {
     "NAME": "月的架式",
     "DESCRIPTION": "增加一张获得X [E] 的 *月光沉淀 到你的手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张获得X+1 [E] 的 *月光沉淀 到你的手牌。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "增加一张获得X+ !MD! [E] 的 *月光沉淀 到你的手牌。 NL 消耗 。"
   },
   "LightningRam": {
     "NAME": "雷电羊球",
@@ -2140,6 +2271,24 @@
     "DESCRIPTION": " 炼制 黄金百足 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": " 炼制 黄金百足 。"
   },
+  "OriginalSin": {
+    "NAME": "原罪",
+    "DESCRIPTION": "获得 !M! 层 脆弱 。 NL 抽 !MD! 张牌。 NL 易损 !MS! 。 NL 这张牌的效果每打出一次会变化。",
+    "EXTENDED_DESCRIPTION": [
+      "获得 !M! 层 虚弱 和 易伤 。 NL 抽 !MD! 张牌。 NL 易损 !MS! 。 NL 这张牌的效果每打出一次会变化。",
+      "你在这个回合只能打出攻击牌。 NL 抽 !MD! 张牌。 NL 易损 !MS! 。 NL 这张牌的效果每打出一次会变化。",
+      "结束你的回合。 NL 易损 !MS! 。 NL 这张牌的效果每打出一次会变化。",
+      "失去 !M! 金币。 NL 抽 !MD! 张牌。 NL 易损 !MS! 。 NL 这张牌的效果每打出一次会变化。",
+      "永久失去 !M! 点最大生命。 NL 抽 !MD! 张牌。 NL 易损 !MS! 。 NL 这张牌的效果每打出一次会变化。",
+      "你不能打出攻击牌。 NL 抽 !MD! 张牌。 NL 易损 !MS! 。 NL 这张牌的效果每打出一次会变化。",
+      "移除你身上的所有负面效果。 NL 获得 !M! 金币。 NL 永久获得33点最大生命。 NL 易损 !MS! 。"
+    ]
+  },
+  "CatState": {
+    "NAME": "猫态",
+    "DESCRIPTION": "失去所有药水。 NL 用随机 散装 药水填满你的药水栏位。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "失去所有药水。 NL 用随机 散装 药水填满你的药水栏位。"
+  },
   "EquivalentExchange": {
     "NAME": "等价代换",
     "DESCRIPTION": "失去所有 散装 药水。 NL 获得相同瓶随机 散装 药水。 NL 消耗 。",
@@ -2217,6 +2366,20 @@
     "NAME": "手杖剑",
     "DESCRIPTION": "造成你当前楼层数的伤害。 NL （造成 !D! 点伤害。） NL 易损 !M! 。"
   },
+  "CrownOfThorns": {
+    "NAME": "荆棘王冠",
+    "DESCRIPTION": " 固有 。 NL 将一张 *神化 放入你的手牌中。 NL 这张牌增加到你的牌组时，你失去 !MS! 点生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 将一张 *神化+ 放入你的手牌中。 NL 这张牌增加到你的牌组时，你失去 !MS! 点生命。 NL 消耗 。"
+  },
+  "PowerOfTwinPrinces": {
+    "NAME": "孪生王子的庇佑",
+    "DESCRIPTION": "次子保佑着你。 NL 获得 !M! 点 敏捷 。 NL 每当你受到未被格挡的攻击伤害时，获得 !MD! 点 敏捷 。",
+    "EXTENDED_DESCRIPTION": ["长子保佑着你。 NL 获得 !M! 点 力量 。 NL 阻止下 !MD! 次你受到的生命值损伤。 NL 你受到未被格挡的攻击伤害时死亡。"]
+  },
+  "Flip": {
+    "NAME": "生死逆转",
+    "DESCRIPTION": "如果战斗结束时回合数是奇数，多掉落一次卡牌奖励。 NL 虚无 。"
+  },
   "Telescope": {
     "NAME": "望远镜",
     "DESCRIPTION": "现在观看抽牌堆时，卡牌将按顺序排列。 NL 抽 !M! 张牌。",
@@ -2274,6 +2437,15 @@
   "OuterBoon": {
     "NAME": "外神恩惠",
     "DESCRIPTION": "你每随机打出或随机丢弃1张牌，获得 [E] 。"
+  },
+  "BipolarDisorder": {
+    "NAME": "双相障碍",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 进入 平静 。 NL 这张牌的效果每打出一次会变化。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 !B! 点 格挡 。 NL 进入 平静 。 NL 这张牌的效果每打出一次会变化。",
+    "EXTENDED_DESCRIPTION": [
+      "获得 !B! 点 格挡 。 NL 进入 愤怒 。 NL 这张牌的效果每打出一次会变化。",
+      " 保留 。 NL 获得 !B! 点 格挡 。 NL 进入 愤怒 。 NL 这张牌的效果每打出一次会变化。"
+    ]
   },
   "TheGreatBeyond": {
     "NAME": "无上远方",
@@ -2643,7 +2815,7 @@
   "CometAzur": {
     "NAME": "彗星亚兹勒",
     "DESCRIPTION": "只有当 智力 等于或大于3时才能打出。 NL 造成 !D! 点魔法伤害X次。",
-    "UPGRADE_DESCRIPTION": "只有当 智力 等于或大于3时才能打出。 NL 造成 !D! 点魔法伤害X+1次。",
+    "UPGRADE_DESCRIPTION": "只有当 智力 等于或大于3时才能打出。 NL 造成 !D! 点魔法伤害X+ !MD! 次。",
     "EXTENDED_DESCRIPTION": [
       "需要至少3点智力。"
     ]
@@ -2963,8 +3135,8 @@
   },
   "ImpatientBall": {
     "NAME": "魔偶，不耐烦了",
-    "DESCRIPTION": "获得 !M! 点 灵力 。 NL 在每回合开始时，失去1点 灵力 。 NL 抽2张牌。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 点 灵力 。 NL 在每回合开始时，失去1点 灵力 。 NL 抽3张牌。"
+    "DESCRIPTION": "获得 !M! 点 灵力 。 NL 在每回合开始时，失去1点 灵力 。 NL 抽 !MD! 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 灵力 。 NL 在每回合开始时，失去1点 灵力 。 NL 抽 !MD! 张牌。"
   },
   "DoggoXD": {
     "NAME": "大狗XD",
@@ -3050,12 +3222,12 @@
   "EstusFlask": {
     "NAME": "原素瓶",
     "DESCRIPTION": " 保留 。 NL 充能 。 NL 回复 !M! 生命。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 充能 。 NL 回复 !M! 生命。 NL 抽1张牌。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 充能 。 NL 回复 !M! 生命。 NL 抽 !MD! 张牌。 NL 消耗 。"
   },
   "AshenEstusFlask": {
     "NAME": "原素灰瓶",
     "DESCRIPTION": " 保留 。 NL 充能 。 NL 获得 [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 充能 。 NL 获得 [E] 。 NL 抽1张牌。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 充能 。 NL 获得 [E] 。 NL 抽 !MD! 张牌。 NL 消耗 。"
   },
   "SipAbyss": {
     "NAME": "啜饮深渊",
@@ -3221,7 +3393,7 @@
   "SerpentHunter": {
     "NAME": "大蛇狩猎矛",
     "DESCRIPTION": "选择你手牌中的一张攻击牌。 NL 将这张牌打出X次然后将其 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择你手牌中的一张攻击牌。 NL 将这张牌打出X+1次然后将其 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择你手牌中的一张攻击牌。 NL 将这张牌打出X+ !MD! 次然后将其 消耗 。",
     "EXTENDED_DESCRIPTION": ["选择一张攻击牌。"]
   },
   "SolderingIron": {

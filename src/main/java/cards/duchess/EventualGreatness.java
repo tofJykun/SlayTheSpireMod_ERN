@@ -51,8 +51,7 @@ public class EventualGreatness extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.baseMagicNumber = UPGRADED_CARD_THRESHOLD;
-            this.magicNumber = this.baseMagicNumber;
+            upgradeMagicNumber(UPGRADED_CARD_THRESHOLD - this.baseMagicNumber);
             initializeDescription();
         }
     }

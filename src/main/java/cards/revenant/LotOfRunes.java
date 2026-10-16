@@ -26,5 +26,5 @@ public class LotOfRunes extends CustomCard {
     }
     @Override public AbstractCard makeCopy(){return new LotOfRunes();}
     public int getGreyHealth() { return this.upgraded ? 1 : 2; }
-    @Override public void upgrade(){if(!upgraded){upgradeName(); baseMagicNumber=100; magicNumber=100; rawDescription=strings().UPGRADE_DESCRIPTION; initializeDescription();}}
+    @Override public void upgrade(){if(!upgraded){upgradeName(); upgradeMagicNumber(100 - baseMagicNumber); rawDescription=strings().UPGRADE_DESCRIPTION; initializeDescription();}}
 }

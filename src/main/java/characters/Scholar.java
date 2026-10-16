@@ -84,8 +84,8 @@ public class Scholar extends CustomPlayer {
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
                 Settings.language == Settings.GameLanguage.ZHS
-                        ? "参透炼金术奥义的白金之子，通晓的混沌碎片已集齐。 NL 常备各种零食在战场旁神秘观察。"
-                        : "An Albinauric who has mastered the secrets of alchemy and gathered every fragment of chaos known to him. NL Always carrying an assortment of snacks, he observes the battlefield from the sidelines with an air of mystery.",
+                        ? "参透炼金术奥义的白金之子，解读混沌碎片以获得力量。 NL 吃着小零食神秘观察中。"
+                        : "An Albinauric who has mastered the secrets of alchemy, deciphering fragments of chaos to gain power. NL Mysteriously observing while munching on snacks.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }

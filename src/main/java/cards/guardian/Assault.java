@@ -45,8 +45,7 @@ public class Assault extends CustomCard {
 
     private void refreshDescription() {
         String description = getCardStrings().DESCRIPTION
-                .replace("!M!", Integer.toString(ATTACKS_PER_TRIGGER))
-                .replace("!MD!", Integer.toString(this.magicNumber));
+                .replace("!M!", Integer.toString(ATTACKS_PER_TRIGGER));
         if (!description.equals(this.rawDescription)) {
             this.rawDescription = description;
             initializeDescription();

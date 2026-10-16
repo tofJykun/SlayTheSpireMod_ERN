@@ -1,4 +1,12 @@
 {
+  "OriginalSinAttackOnlyPower": {
+    "NAME": "原罪：强攻",
+    "DESCRIPTIONS": ["你在这个回合只能打出 #y攻击牌 。"]
+  },
+  "OriginalSinNoAttackPower": {
+    "NAME": "原罪：禁攻",
+    "DESCRIPTIONS": ["你不能打出 #y攻击牌 。"]
+  },
   "MushroomSoupPower": {
     "NAME": "菌菇汤",
     "DESCRIPTIONS": ["你每打出 #b%d 张牌，都获得 #y蘑菇 。已打出 #b%d 张牌。"]
@@ -34,6 +42,10 @@
   "VenomousFangPower": {
     "NAME": "毒蛇牙",
     "DESCRIPTIONS": ["在其每个回合结束时，获得 #b", " 层 #y中毒 。"]
+  },
+  "JarCannonPower": {
+    "NAME": "壶大炮",
+    "DESCRIPTIONS": ["在你的下一回合开始时，对%s造成 #b%d 点攻击伤害。"]
   },
   "PosionedReliefPower": {
     "NAME": "饮鸩",
@@ -160,7 +172,7 @@
   },
   "NineStagesOfDecayPower": {
     "NAME": "九相图",
-    "DESCRIPTIONS": ["在接下来的第 #b", " 个你的回合开始时，杀死所有敌人，包括其复活阶段。以此结束战斗时不获得任何奖励。"]
+    "DESCRIPTIONS": ["在 #b", " 回合后杀死所有敌人。如果通过这种方式结束战斗，不获得任何奖励。"]
   },
   "RallyingStandardPower": {
     "NAME": "归于麾下",
@@ -333,11 +345,8 @@
   "UsuryPower": {
     "NAME": "高利贷",
     "DESCRIPTIONS": [
-      "在你的回合开始时，你每有 #b",
-      " 点 #y代币 ，获得 #b1 点 #y代币 。",
-      "在你的回合开始时，每层令你每有 #b",
-      " 点 #y代币 ，获得 #b1 点 #y代币 。当前层数： #b",
-      " 。"
+      "在你的回合开始时，增加 #b",
+      " 张 #y奖券+ 到你的手牌。"
     ]
   },
   "FallControlPower": {
@@ -604,6 +613,14 @@
       "你打出的牌将在本场战斗中 升级 。"
     ]
   },
+  "MightyShotPower": {
+    "NAME": "拉满弓",
+    "DESCRIPTIONS": ["你打出的下 #b", " 张 #y攻击牌 造成双倍伤害。"]
+  },
+  "PowerOfLiveInDeathPower": {
+    "NAME": "死诞的庇佑",
+    "DESCRIPTIONS": ["每当有一张牌被 #y消耗 时， #y变化 所有手牌。"]
+  },
   "SnakeSloughPower": {
     "NAME": "蛇蜕",
     "DESCRIPTIONS": [
@@ -797,12 +814,20 @@
       " 点 #y格挡 。"
     ]
   },
+  "TailBitingPower": {
+    "NAME": "衔尾",
+    "DESCRIPTIONS": ["你每 #y变化 一张牌，抽 #b", " 张牌。"]
+  },
+  "BlackbowPower": {
+    "NAME": "黑弓",
+    "DESCRIPTIONS": ["在你的回合开始时，打出你上一回合打出的最后 #b", " 张 #y攻击牌 。需要目标时随机选择敌人。"]
+  },
   "MarkingPower": {
     "NAME": "标记",
     "DESCRIPTIONS": [
       "在你的回合结束时，如果本回合受到大于等于 #b",
       " 点伤害（包括被 #y格挡 的伤害），失去 #b",
-      " 点生命。 NL 本回合已受到 #b",
+      " %当前生命值。 NL 本回合已受到 #b",
       " 点伤害。"
     ]
   },
@@ -1488,6 +1513,18 @@
     "DESCRIPTIONS": [
       "斑斓壶不会 #y消耗 。"
     ]
+  },
+  "YoungerPrincePower": {
+    "NAME": "次子的庇佑",
+    "DESCRIPTIONS": ["每当你受到未被格挡的攻击伤害时，获得 #b", " 点 #y敏捷 。"]
+  },
+  "ElderPrincePower": {
+    "NAME": "长子的庇佑",
+    "DESCRIPTIONS": ["本场战斗中，你下次受到未被格挡的攻击伤害时死亡。"]
+  },
+  "FlipPower": {
+    "NAME": "生死逆转",
+    "DESCRIPTIONS": ["如果战斗结束时回合数是奇数，多掉落 #b", " 组卡牌奖励。"]
   },
   "TelescopePower": {
     "NAME": "望远镜",

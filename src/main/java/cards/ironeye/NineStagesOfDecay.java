@@ -20,6 +20,7 @@ public class NineStagesOfDecay extends CustomCard {
     public NineStagesOfDecay() {
         super(ID, STRINGS.NAME, "img/cards/ironeye/NineStagesOfDecay.png", 0, STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Ironeye_COLOR, CardRarity.RARE, CardTarget.SELF);
+        this.exhaust = true;
     }
 
     @Override

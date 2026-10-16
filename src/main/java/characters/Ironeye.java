@@ -2,7 +2,8 @@ package characters;
 
 import basemod.abstracts.CustomPlayer;
 import cards.ironeye.Defend_Ironeye;
-import cards.ironeye.Marking;
+import cards.ironeye.BowOfWant;
+import cards.ironeye.ImmutableShield;
 import cards.ironeye.Strike_Ironeye;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -69,7 +70,8 @@ public class Ironeye extends CustomPlayer {
         retVal.add(Defend_Ironeye.ID);
         retVal.add(Defend_Ironeye.ID);
         retVal.add(Defend_Ironeye.ID);
-        retVal.add(Marking.ID);
+        retVal.add(BowOfWant.ID);
+        retVal.add(ImmutableShield.ID);
         return retVal;
     }
 
@@ -84,8 +86,8 @@ public class Ironeye extends CustomPlayer {
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
                 Settings.language == Settings.GameLanguage.ZHS
-                        ? "以寻宝谋生的机构杀手，金钱与装备又将投入战斗。 NL 紫玉米以月光为食，因而黑夜必须留下。"
-                        : "An assassin of the Fellowship who makes a living hunting treasure and puts his earnings and equipment back into battle. NL Purple corn feeds on moonlight, so the night must remain.",
+                        ? "以寻宝谋生的机构杀手，战斗技法千变万化。 NL 绿玉米以月光为食，因而黑夜必须留下。"
+                        : "An assassin of the Fellowship who makes a living hunting treasure, with ever-changing combat techniques. NL Green corn feeds on moonlight, so the night must remain.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }

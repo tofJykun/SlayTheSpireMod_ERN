@@ -16,8 +16,8 @@ public class CeruleanwhorlBubble extends CustomCard {
     public static final String ID = "CeruleanwhorlBubble";
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/ironeye/CeruleanwhorlBubble.png";
-    private static final int COST = 2;
-    private static final int UPGRADE_COST = 1;
+    private static final int COST = 1;
+    private static final int UPGRADE_COST = 0;
     private static final int AMOUNT = 1;
 
     public CeruleanwhorlBubble() {

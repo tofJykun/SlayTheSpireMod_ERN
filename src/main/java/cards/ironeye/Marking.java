@@ -18,11 +18,11 @@ public class Marking extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String IMG_PATH = "img/cards/ironeye/Marking.png";
     private static final int COST = 1;
-    private int healthLoss = 5;
+    private int healthLoss = 10;
 
     public Marking() {
         super(ID, CARD_STRINGS.NAME, IMG_PATH, COST, CARD_STRINGS.DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.Ironeye_COLOR, CardRarity.BASIC, CardTarget.ENEMY);
+                CardType.ATTACK, AbstractCardEnum.Ironeye_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 8;
         this.baseMagicNumber = this.magicNumber = MarkingPower.DAMAGE_THRESHOLD;
     }
@@ -42,7 +42,7 @@ public class Marking extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.healthLoss += 5;
+            this.healthLoss += 10;
         }
     }
 

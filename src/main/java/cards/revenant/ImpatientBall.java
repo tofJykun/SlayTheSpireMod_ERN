@@ -39,8 +39,10 @@ public class ImpatientBall extends CustomCard {
                 new SpiritPower((AbstractCreature)p, this.magicNumber), this.magicNumber));
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p,
                 new ImpatientBallPower((AbstractCreature)p, SPIRIT_LOSS), SPIRIT_LOSS));
-        addToBot((AbstractGameAction)new DrawCardAction((AbstractCreature)p, DRAW + (this.upgraded ? 1 : 0)));
+        addToBot((AbstractGameAction)new DrawCardAction((AbstractCreature)p, getDrawAmount()));
     }
+
+    public int getDrawAmount() { return DRAW + (upgraded ? 1 : 0); }
 
     @Override
     public AbstractCard makeCopy() {

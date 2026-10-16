@@ -1,6 +1,7 @@
 package cards.guardian;
 
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import patches.AbstractCardEnum;
+import general.CombatState;
 
 public class Bonewheel extends CustomCard {
     public static final String ID = "Bonewheel";
@@ -20,6 +22,7 @@ public class Bonewheel extends CustomCard {
     private static final int COST = -1;
     private static final int HIT_COUNT = 9;
     private static final int UPGRADE_PLUS_HIT_COUNT = 3;
+    private boolean combatPreviewCopy;
 
     public Bonewheel() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
@@ -50,14 +53,57 @@ public class Bonewheel extends CustomCard {
 
     @Override
     public void applyPowers() {
-        this.baseDamage = getXValue(AbstractDungeon.player, EnergyPanel.totalCount);
-        super.applyPowers();
+        boolean combat = usesCombatPreview();
+        this.baseDamage = combat ? getXValue(AbstractDungeon.player, EnergyPanel.totalCount) : 0;
+        if (combat) super.applyPowers();
+        else { this.damage = 0; this.isDamageModified = false; }
+        refreshDescription(combat);
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
+        if (!usesCombatPreview()) {
+            applyPowers();
+            return;
+        }
         this.baseDamage = getXValue(AbstractDungeon.player, EnergyPanel.totalCount);
         super.calculateCardDamage(mo);
+        refreshDescription(true);
+    }
+
+    private boolean usesCombatPreview() {
+        if (!CombatState.isInCombat()) return false;
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p == null || p.masterDeck.contains(this)) return false;
+        return combatPreviewCopy || p.hand.contains(this) || p.drawPile.contains(this)
+                || p.discardPile.contains(this) || p.exhaustPile.contains(this)
+                || p.limbo.contains(this) || p.cardInUse == this;
+    }
+
+    private void refreshDescription(boolean combat) {
+        String description = combat ? getCardStrings().EXTENDED_DESCRIPTION[0] : getCardStrings().DESCRIPTION;
+        if (!description.equals(rawDescription)) {
+            rawDescription = description;
+            initializeDescription();
+        }
+    }
+
+    @Override
+    public void render(SpriteBatch sb, boolean selected) {
+        boolean combat = usesCombatPreview();
+        if (!combat || !AbstractDungeon.player.hand.contains(this)
+                || baseDamage != getXValue(AbstractDungeon.player, EnergyPanel.totalCount)) applyPowers();
+        refreshDescription(combat);
+        super.render(sb, selected);
+    }
+
+    @Override
+    public AbstractCard makeStatEquivalentCopy() {
+        Bonewheel copy = (Bonewheel)super.makeStatEquivalentCopy();
+        // The single-card popup uses a copy outside every combat pile.
+        copy.combatPreviewCopy = usesCombatPreview();
+        copy.applyPowers();
+        return copy;
     }
 
     @Override

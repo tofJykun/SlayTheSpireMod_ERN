@@ -85,8 +85,8 @@ public class Wylder extends CustomPlayer {
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(getLocalizedCharacterName(),
                 Settings.language == Settings.GameLanguage.ZHS
-                        ? "将思考融入战斗交互的骑士，一些力量只在解除封印时发挥。 NL 如果超绝操作被人忽略会脸色变黑。"
-                        : "A knight who brings careful thought to every exchange in battle. Some of his powers only emerge when their seals are broken. NL His expression darkens when his masterful moves go unnoticed.",
+                        ? "将思考融入战斗交互的骑士，一些力量只在解除封印时发挥。 NL 淋雨一直走的黑脸人，觉得自己很帅。"
+                        : "A knight who brings careful thought to every exchange in battle. Some of his powers only emerge when their seals are broken. NL A dark-faced man who keeps walking through the rain and thinks he looks cool.",
                 STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }

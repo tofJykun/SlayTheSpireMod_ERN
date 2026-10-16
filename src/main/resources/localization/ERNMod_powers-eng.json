@@ -1,4 +1,12 @@
 {
+  "OriginalSinAttackOnlyPower": {
+    "NAME": "Original Sin: Aggression",
+    "DESCRIPTIONS": ["You can only play #yAttacks this turn."]
+  },
+  "OriginalSinNoAttackPower": {
+    "NAME": "Original Sin: Pacifism",
+    "DESCRIPTIONS": ["You cannot play #yAttacks."]
+  },
   "MushroomSoupPower": {
     "NAME": "Mushroom Soup",
     "DESCRIPTIONS": ["Every #b%d cards you play, gain #yMushroom. Cards played: #b%d."]
@@ -34,6 +42,10 @@
   "VenomousFangPower": {
     "NAME": "Venomous Fang",
     "DESCRIPTIONS": ["At the end of its turn, gains #b", " #yPoison."]
+  },
+  "JarCannonPower": {
+    "NAME": "Jar Cannon",
+    "DESCRIPTIONS": ["At the start of your next turn, attack %s for #b%d damage."]
   },
   "PosionedReliefPower": {
     "NAME": "Poisoned Relief",
@@ -160,7 +172,7 @@
   },
   "NineStagesOfDecayPower": {
     "NAME": "Nine Stages of Decay",
-    "DESCRIPTIONS": ["At the start of your turn in #b", " turns, kill ALL enemies, including their revival phases. Receive no rewards if combat ends this way."]
+    "DESCRIPTIONS": ["In #b", " turns, kill ALL enemies. If combat ends this way, receive no rewards."]
   },
   "RallyingStandardPower": {
     "NAME": "Rallying Standard",
@@ -333,11 +345,8 @@
   "UsuryPower": {
     "NAME": "Usury",
     "DESCRIPTIONS": [
-      "At the start of your turn, for every #b",
-      " #yVirtual #yCurrency you have, gain #b1 #yVirtual #yCurrency.",
-      "At the start of your turn, each stack gains #b1 #yVirtual #yCurrency for every #b",
-      " #yVirtual #yCurrency you have. Current stacks: #b",
-      "."
+      "At the start of your turn, add #b",
+      " #yLottery #yTicket+ to your hand."
     ]
   },
   "FallControlPower": {
@@ -604,6 +613,14 @@
       "Cards you play will be Upgraded for this combat."
     ]
   },
+  "MightyShotPower": {
+    "NAME": "Mighty Shot",
+    "DESCRIPTIONS": ["Your next #b", " #yAttack(s) deal double damage."]
+  },
+  "PowerOfLiveInDeathPower": {
+    "NAME": "Power of Live in Death",
+    "DESCRIPTIONS": ["Whenever a card is #yExhausted, #yTransform all cards in your hand."]
+  },
   "SnakeSloughPower": {
     "NAME": "Snake Slough",
     "DESCRIPTIONS": [
@@ -797,12 +814,20 @@
       " Block."
     ]
   },
+  "TailBitingPower": {
+    "NAME": "Tail Biting",
+    "DESCRIPTIONS": ["Whenever you #yTransform a card, draw #b", " card(s)."]
+  },
+  "BlackbowPower": {
+    "NAME": "Blackbow",
+    "DESCRIPTIONS": ["At the start of your turn, play the last #b", " #yAttack(s) you played last turn. Choose a random enemy when a target is required."]
+  },
   "MarkingPower": {
     "NAME": "Marking",
     "DESCRIPTIONS": [
       "At the end of your turn, if this enemy has taken at least #b",
       " damage this turn (including #yBlocked damage), it loses #b",
-      " HP. NL Damage taken this turn: #b",
+      " % of its current HP. NL Damage taken this turn: #b",
       "."
     ]
   },
@@ -1488,6 +1513,18 @@
     "DESCRIPTIONS": [
       "Mottled Pot does not Exhaust."
     ]
+  },
+  "YoungerPrincePower": {
+    "NAME": "Younger Prince's Blessing",
+    "DESCRIPTIONS": ["Whenever you receive unblocked attack damage, gain #b", " #yDexterity."]
+  },
+  "ElderPrincePower": {
+    "NAME": "Elder Prince's Blessing",
+    "DESCRIPTIONS": ["Die the next time you receive unblocked attack damage this combat."]
+  },
+  "FlipPower": {
+    "NAME": "Flip",
+    "DESCRIPTIONS": ["If combat ends on an odd-numbered turn, gain #b", " additional card reward(s)."]
   },
   "TelescopePower": {
     "NAME": "Telescope",

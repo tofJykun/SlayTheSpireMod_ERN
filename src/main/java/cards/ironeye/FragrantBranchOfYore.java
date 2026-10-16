@@ -42,7 +42,7 @@ public class FragrantBranchOfYore extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.isInnate = true;
+            this.selfRetain = true;
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

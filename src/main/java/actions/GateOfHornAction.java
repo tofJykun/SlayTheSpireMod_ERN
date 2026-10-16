@@ -31,6 +31,7 @@ public class GateOfHornAction extends AbstractGameAction {
 
         ArrayList<AbstractCard> candidates = new ArrayList<>();
         for (AbstractCard prototype : CardLibrary.cards.values()) {
+            if (general.ExclusiveCardPool.isExcluded(prototype)) continue;
             if (prototype.color != AbstractDungeon.player.getCardColor()) {
                 continue;
             }

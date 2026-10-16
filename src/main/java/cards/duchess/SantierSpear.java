@@ -62,7 +62,7 @@ public class SantierSpear extends CustomCard {
         return this.upgraded ? UPGRADED_THRESHOLD : BASE_THRESHOLD;
     }
 
-    private int getRemainingPlays() {
+    public int getRemainingPlays() {
         return Math.max(0, getThreshold() - this.playsThisCombat);
     }
 
@@ -81,7 +81,7 @@ public class SantierSpear extends CustomCard {
         this.magicNumber = this.baseMagicNumber;
         this.rawDescription = this.reinforced
                 ? getCardStrings().EXTENDED_DESCRIPTION[1]
-                : getCardStrings().DESCRIPTION + getRemainingPlays() + getCardStrings().EXTENDED_DESCRIPTION[0];
+                : getCardStrings().DESCRIPTION + "!MS!" + getCardStrings().EXTENDED_DESCRIPTION[0];
         initializeDescription();
     }
 

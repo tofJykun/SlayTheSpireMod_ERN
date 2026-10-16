@@ -66,7 +66,7 @@ public class EyeOfDeath extends CustomCard {
     }
 
     private void refreshDescription() {
-        String description = STRINGS.DESCRIPTION.replace("!MS!", Integer.toString(getSummonLockTurns()));
+        String description = STRINGS.DESCRIPTION;
         if (!description.equals(rawDescription)) {
             rawDescription = description;
             initializeDescription();
