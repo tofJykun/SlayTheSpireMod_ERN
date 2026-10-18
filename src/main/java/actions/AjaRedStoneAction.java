@@ -2,7 +2,7 @@ package actions;
 
 import cards.scholar.Homunculus;
 import cards.scholar.PenglaiWorship;
-import cards.scholar.RoyalLegacy;
+import cards.scholar.KingdomLegacy;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -54,7 +54,7 @@ public class AjaRedStoneAction extends AbstractGameAction {
 
     private static ArrayList<AbstractCard> generateCardChoices() {
         ArrayList<AbstractCard> choices = new ArrayList<>();
-        addChoice(choices, new RoyalLegacy());
+        addChoice(choices, new KingdomLegacy());
         addChoice(choices, new PenglaiWorship());
         addChoice(choices, new Homunculus());
         return choices;

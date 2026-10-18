@@ -40,7 +40,9 @@ public class RandomDamageWithPowersAction extends AbstractGameAction {
         AbstractMonster monster = AbstractDungeon.getMonsters().getRandomMonster(null, true,
                 AbstractDungeon.cardRandomRng);
         if (monster != null) {
-            addToTop(new DamageAction(monster, makeDamageInfo(monster), this.attackEffect));
+            DamageInfo info = makeDamageInfo(monster);
+            general.CommunionCombat.setDamage(info, this::calculateDamage);
+            addToTop(new DamageAction(monster, info, this.attackEffect));
         }
         this.isDone = true;
     }

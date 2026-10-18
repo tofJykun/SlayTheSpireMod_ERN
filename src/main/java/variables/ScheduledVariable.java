@@ -37,11 +37,12 @@ public class ScheduledVariable extends UpgradePreviewVariable {
 
     @Override
     protected boolean isValueModified(AbstractCard card) {
+        if (card instanceof cards.scholar.DragonKingGreataxe) return false;
         if (card instanceof cards.revenant.EyeOfDeath || card instanceof cards.duchess.SantierSpear) return false;
         if (card instanceof cards.ironeye.Deposit) return false;
         if (card instanceof cards.ironeye.CashOnDelivery) return false;
         if (card instanceof cards.ironeye.BlackflameShooter) return false;
-        if (card instanceof cards.scholar.OriginalSin) return patches.FragileField.value(card) != 7;
+        if (card instanceof cards.scholar.PowerOfOriginalSin) return patches.FragileField.value(card) != 7;
         if (card instanceof cards.scholar.CrownOfThorns) return false;
         if (card instanceof cards.duchess.Unveil) return false;
         if (card instanceof cards.scholar.PenglaiWorship) return false;
@@ -120,12 +121,14 @@ public class ScheduledVariable extends UpgradePreviewVariable {
 
     @Override
     protected int currentValue(AbstractCard card) {
+        if (card instanceof cards.scholar.MajorArcana) return 2;
+        if (card instanceof cards.scholar.DragonKingGreataxe) return cards.scholar.DragonKingGreataxe.LOCK_TURNS;
         if (card instanceof cards.revenant.EyeOfDeath) return ((cards.revenant.EyeOfDeath)card).getSummonLockTurns();
         if (card instanceof cards.duchess.SantierSpear) return ((cards.duchess.SantierSpear)card).getRemainingPlays();
         if (card instanceof cards.ironeye.Deposit) return ((cards.ironeye.Deposit)card).getNextTurnAmount();
         if (card instanceof cards.ironeye.CashOnDelivery) return cards.ironeye.CashOnDelivery.TICKET_AMOUNT;
         if (card instanceof cards.ironeye.BlackflameShooter) return cards.ironeye.BlackflameShooter.HIT_COUNT;
-        if (card instanceof cards.scholar.OriginalSin) return patches.FragileField.value(card);
+        if (card instanceof cards.scholar.PowerOfOriginalSin) return patches.FragileField.value(card);
         if (card instanceof cards.scholar.CrownOfThorns) return cards.scholar.CrownOfThorns.HP_LOSS;
         if (card instanceof cards.duchess.Unveil) return patches.ReplayField.getReplay(card);
         if (card instanceof cards.scholar.PenglaiWorship) return ((cards.scholar.PenglaiWorship)card).getGoldLoss();
@@ -204,12 +207,14 @@ public class ScheduledVariable extends UpgradePreviewVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
+        if (card instanceof cards.scholar.MajorArcana) return 2;
+        if (card instanceof cards.scholar.DragonKingGreataxe) return cards.scholar.DragonKingGreataxe.LOCK_TURNS;
         if (card instanceof cards.revenant.EyeOfDeath) return ((cards.revenant.EyeOfDeath)card).getSummonLockTurns();
         if (card instanceof cards.duchess.SantierSpear) return ((cards.duchess.SantierSpear)card).getRemainingPlays();
         if (card instanceof cards.ironeye.Deposit) return ((cards.ironeye.Deposit)card).getNextTurnAmount();
         if (card instanceof cards.ironeye.CashOnDelivery) return cards.ironeye.CashOnDelivery.TICKET_AMOUNT;
         if (card instanceof cards.ironeye.BlackflameShooter) return cards.ironeye.BlackflameShooter.HIT_COUNT;
-        if (card instanceof cards.scholar.OriginalSin) return 7;
+        if (card instanceof cards.scholar.PowerOfOriginalSin) return 7;
         if (card instanceof cards.scholar.CrownOfThorns) return cards.scholar.CrownOfThorns.HP_LOSS;
         if (card instanceof cards.duchess.Unveil) return patches.ReplayField.getReplay(card);
         if (card instanceof cards.scholar.PenglaiWorship) return ((cards.scholar.PenglaiWorship)card).getGoldLoss();
@@ -294,7 +299,7 @@ public class ScheduledVariable extends UpgradePreviewVariable {
         if (card instanceof cards.ironeye.Deposit) return card.upgraded;
         if (card instanceof cards.ironeye.CashOnDelivery) return false;
         if (card instanceof cards.ironeye.BlackflameShooter) return false;
-        if (card instanceof cards.scholar.OriginalSin) return false;
+        if (card instanceof cards.scholar.PowerOfOriginalSin) return false;
         if (card instanceof cards.scholar.CrownOfThorns) return false;
         if (card instanceof cards.duchess.Unveil) return card.upgraded;
         if (card instanceof cards.scholar.PenglaiWorship) return false;

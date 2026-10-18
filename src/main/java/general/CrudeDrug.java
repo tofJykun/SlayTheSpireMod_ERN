@@ -93,7 +93,11 @@ public final class CrudeDrug {
         if (powerStrings == null || powerStrings.DESCRIPTIONS == null || powerStrings.DESCRIPTIONS.length == 0) {
             return "";
         }
-        return powerStrings.DESCRIPTIONS[0];
+        // Tooltip color prefixes are not card markup and prevent keyword lookup.
+        return powerStrings.DESCRIPTIONS[0].replaceAll("#[bgryp]", "")
+                .replace("Poise Break", "Poise_Break")
+                .replace("Grey Health", "Grey_Health")
+                .replace("Scarlet Rot", "Scarlet_Rot");
     }
 
     public static void applyDrugEffect(String powerId, AbstractPlayer player, AbstractMonster monster, AbstractCard source) {

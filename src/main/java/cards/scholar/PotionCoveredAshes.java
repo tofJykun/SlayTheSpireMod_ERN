@@ -19,6 +19,7 @@ public class PotionCoveredAshes extends CustomCard {
     public PotionCoveredAshes() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Scholar_COLOR, CardRarity.BASIC, CardTarget.SELF);
+        this.baseMagicNumber = this.magicNumber = 1;
     }
 
     private static CardStrings getCardStrings() {
@@ -27,7 +28,9 @@ public class PotionCoveredAshes extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot((AbstractGameAction)new ObtainPotionAction(BulkPotionQueue.getRandomBulkPotion()));
+        for (int i = 0; i < magicNumber; i++) {
+            addToBot(new ObtainPotionAction(BulkPotionQueue.getRandomBulkPotion()));
+        }
     }
 
     @Override

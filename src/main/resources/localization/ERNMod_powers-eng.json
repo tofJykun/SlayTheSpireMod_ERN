@@ -1,4 +1,53 @@
 {
+  "MajorArcanaTemperancePower": {
+    "NAME": "Temperance",
+    "DESCRIPTIONS": [
+      "Take #b50% less damage until the start of your next turn. Does not reduce HP loss."
+    ]
+  },
+  "MajorArcanaSunPower": {
+    "NAME": "The Sun",
+    "DESCRIPTIONS": [
+      "Your next #b",
+      " card(s) are played twice."
+    ]
+  },
+  "StickyPotionPower": {
+    "NAME": "Sticky Potion",
+    "DESCRIPTIONS": ["Whenever you use a potion, gain #b", " #yBlock."]
+  },
+  "CompanionJarPower": {
+    "NAME": "Companion Jar",
+    "DESCRIPTIONS": ["Whenever you use a potion, deal #b", " damage to ALL enemies."]
+  },
+  "ThinkingPlumPower": {
+    "NAME": "Thinking Plum",
+    "DESCRIPTIONS": ["You cannot manually play cards until you use a potion. This effect persists between turns."]
+  },
+  "CrystalDartPower": {
+    "NAME": "Crystal Dart",
+    "DESCRIPTIONS": ["Prioritizes attacking a random other enemy this turn. Selects another if that enemy dies; attacks the player if no other enemies remain. Removed at the end of the enemy turn."]
+  },
+  "EmergePower": {
+    "NAME": "Emerge",
+    "DESCRIPTIONS": ["Whenever you play a card, add #b", " random card(s) to your hand."]
+  },
+  "WhiteNightPower": {
+    "NAME": "White Night",
+    "DESCRIPTIONS": ["#yExhaust all non-Power cards when played. On victory, add #b1 #yParadise #yLost to your deck, remove all #yWhite #yNight cards from your deck, and prevent #yWhite #yNight from appearing again this run. Does not stack."]
+  },
+  "SigilOfBaphometPower": {
+    "NAME": "Sigil of Baphomet",
+    "DESCRIPTIONS": ["At the end of this combat, replace each card reward with #b1 random Common, Uncommon, or Rare relic. Does not stack."]
+  },
+  "DragonKingGreataxePower": {
+    "NAME": "Dragon King Greataxe",
+    "DESCRIPTIONS": ["You cannot obtain any potions (including #yBulk potions) or play #yCrude #yDrug cards for #b", " turns, including this turn. Removed at the end of combat."]
+  },
+  "SaltPower": {
+    "NAME": "Salt",
+    "DESCRIPTIONS": ["Whenever you play #yMottled #yPot, gain #b1 Max HP. #b", " triggers remaining. Gaining this Power again does not reset this count."]
+  },
   "OriginalSinAttackOnlyPower": {
     "NAME": "Original Sin: Aggression",
     "DESCRIPTIONS": ["You can only play #yAttacks this turn."]
@@ -58,6 +107,14 @@
   "LockoutPower": {
     "NAME": "Lockout",
     "DESCRIPTIONS": ["Reduce damage taken by #b75% . You cannot play #yAttacks ."]
+  },
+  "AnalyzingPower": {
+    "NAME": "Analyzing",
+    "DESCRIPTIONS": ["You cannot play #yAttacks. At the start of each turn, gain #b%d Energy and apply #b%d #ySleep to ALL enemies."]
+  },
+  "CommunionPower": {
+    "NAME": "Communion",
+    "DESCRIPTIONS": ["Your #yAttack cards now hit ALL enemies."]
   },
   "ConciliationPower": {
     "NAME": "Conciliation",

@@ -10,14 +10,14 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import patches.AbstractCardEnum;
 
-public class RoyalLegacy extends CustomCard {
-    public static final String ID = "RoyalLegacy";
-    private static final String IMG_PATH = "img/cards/scholar/RoyalLegacy.png";
+public class KingdomLegacy extends CustomCard {
+    public static final String ID = "KingdomLegacy";
+    private static final String IMG_PATH = "img/cards/scholar/KingdomLegacy.png";
     private static final int COST = 2;
     private static final int GOLD = 35;
     private static final int UPGRADED_GOLD = 45;
 
-    public RoyalLegacy() {
+    public KingdomLegacy() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = GOLD;
@@ -36,7 +36,7 @@ public class RoyalLegacy extends CustomCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new RoyalLegacy();
+        return new KingdomLegacy();
     }
 
     @Override

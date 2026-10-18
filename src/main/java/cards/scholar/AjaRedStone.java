@@ -21,7 +21,7 @@ public class AjaRedStone extends CustomCard {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
-        MultiCardPreview.add(this, true, new RoyalLegacy(), new PenglaiWorship(), new Homunculus());
+        MultiCardPreview.add(this, true, new KingdomLegacy(), new PenglaiWorship(), new Homunculus());
     }
 
     private static CardStrings getCardStrings() {

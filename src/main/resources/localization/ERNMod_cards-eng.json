@@ -1,4 +1,153 @@
 {
+  "MajorArcana": {
+    "NAME": "Major Arcana",
+    "DESCRIPTION": "The Fool NL Gain !B! Block. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+    "UPGRADE_DESCRIPTION": "The Fool NL Retain. NL Gain !B! Block. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+    "EXTENDED_DESCRIPTION": [
+      "The Fool NL Gain !B! Block. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Magician NL Draw !M! cards. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The High Priestess NL Apply !M! Weak and Vulnerable. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Empress NL Retain your hand this turn. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Emperor NL Next turn, NL draw !M! additional cards and NL gain [E] [E]. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Hierophant NL Choose 1 of 3 random cards to add to your hand. It costs 0 this turn. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Lovers NL Gain [E] [E] [E]. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Chariot NL At the start of your next !M! turns, Block is not removed. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "Strength NL Gain !M! Strength. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Hermit NL Gain !M! Dexterity. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "Wheel of Fortune NL Transform ALL cards in your hand. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "Justice NL Remove all your debuffs. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Hanged Man NL Gain !M! Hover. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "Death NL Apply !M! Bloodburn. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "Temperance NL Take !M! % less damage this turn. NL End your turn. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Devil NL Exhaust your entire hand. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Tower NL At the end of !MD! turns, deal !M! damage to ALL enemies. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Star NL Obtain !M! random Bulk potions. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Moon NL Lose !MS! Strength. NL ALL enemies lose !M! Strength. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Sun NL Your next !M! card is played twice. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "Judgement NL Kill ALL Minions. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The World NL Channel 1 Lightning, Frost, Dark, and Plasma. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Fool NL Retain. NL Gain !B! Block. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Magician NL Retain. NL Draw !M! cards. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The High Priestess NL Retain. NL Apply !M! Weak and Vulnerable. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Empress NL Retain. NL Retain your hand this turn. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Emperor NL Retain. NL Next turn, NL draw !M! additional cards and NL gain [E] [E]. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Hierophant NL Retain. NL Choose 1 of 3 random cards to add to your hand. It costs 0 this turn. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Lovers NL Retain. NL Gain [E] [E] [E]. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Chariot NL Retain. NL At the start of your next !M! turns, Block is not removed. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "Strength NL Retain. NL Gain !M! Strength. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Hermit NL Retain. NL Gain !M! Dexterity. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "Wheel of Fortune NL Retain. NL Transform ALL cards in your hand. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "Justice NL Retain. NL Remove all your debuffs. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Hanged Man NL Retain. NL Gain !M! Hover. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "Death NL Retain. NL Apply !M! Bloodburn. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "Temperance NL Retain. NL Take !M! % less damage this turn. NL End your turn. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Devil NL Retain. NL Exhaust your entire hand. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Tower NL Retain. NL At the end of !MD! turns, deal !M! damage to ALL enemies. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Star NL Retain. NL Obtain !M! random Bulk potions. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Moon NL Retain. NL Lose !MS! Strength. NL ALL enemies lose !M! Strength. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The Sun NL Retain. NL Your next !M! card is played twice. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "Judgement NL Retain. NL Kill ALL Minions. NL Before you play this card for the first time each combat, its effect changes each time you play a card.",
+      "The World NL Retain. NL Channel 1 Lightning, Frost, Dark, and Plasma. NL Before you play this card for the first time each combat, its effect changes each time you play a card."
+    ]
+  },
+  "Overdose": {
+    "NAME": "Overdose",
+    "DESCRIPTION": "Gain !B! Block. NL Obtain !M! random Bulk potion(s). NL Can be Upgraded any number of times. NL Fragile !ERNFragile!. NL Ethereal."
+  },
+  "SwarmPot": {
+    "NAME": "Swarm Pot",
+    "DESCRIPTION": "Apply !M! Bloodloss to ALL enemies. NL Can be Upgraded twice.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Bloodloss to ALL enemies. NL Can be Upgraded twice. NL Replay !MD!."
+  },
+  "LightningPot": {
+    "NAME": "Lightning Pot",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each potion you currently have. NL Can be Upgraded twice.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each potion you currently have. NL Can be Upgraded twice. NL Replay !MD!."
+  },
+  "FirePot": {
+    "NAME": "Fire Pot",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each potion you have used this combat. NL Can be Upgraded twice.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each potion you have used this combat. NL Can be Upgraded twice. NL Replay !MD!."
+  },
+  "AldiaShield": {
+    "NAME": "Aldia Shield",
+    "DESCRIPTION": "Gain !B! Block . NL Gain !M! additional Block for each differently named card in your deck."
+  },
+  "MidgardConstriction": {
+    "NAME": "Midgard Constriction",
+    "DESCRIPTION": "Only those who have glimpsed beyond this world may use this. NL Deal !D! damage to ALL enemies.",
+    "EXTENDED_DESCRIPTION": ["Requires Sun Stone, or Daat, Lord of Lords, Alkahest, Brand New World, Emerge, Paradise Lost, Empyrean, or Tree of Life in your permanent deck."]
+  },
+  "CompanionJar": {
+    "NAME": "Companion Jar",
+    "DESCRIPTION": "Whenever you use a potion, deal !M! damage to ALL enemies."
+  },
+  "Empyrean": {
+    "NAME": "Empyrean",
+    "DESCRIPTION": "The sun and the other stars NL Gain !M! Gold. NL Permanently gain !M! Max HP. NL Your deck can contain at most one *Empyrean."
+  },
+  "TreeOfLife": {
+    "NAME": "Tree of Life",
+    "DESCRIPTION": "Severity, Mercy, Balance NL At the start of your next combat, gain all the Powers you had at the end of this combat."
+  },
+  "Daat": {
+    "NAME": "Daat",
+    "DESCRIPTION": "Malkuth... NL Choose a card in your hand. Whenever you play it, gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Malkuth... NL Choose a card in your hand. Whenever you play it, gain [E].",
+    "EXTENDED_DESCRIPTION": ["Choose a card in your hand without Sowing.", " NL Sowing."]
+  },
+  "Sephirot": {
+    "NAME": "Sephirot",
+    "DESCRIPTION": "Gain !M! random Bulk potion(s). NL Add !M! random Crude Drug card(s) to your hand. NL Fragile !MD!."
+  },
+  "ThinkingPlum": {
+    "NAME": "Thinking Plum",
+    "DESCRIPTION": "Draw !M! cards. NL You cannot play cards this combat until you use a potion."
+  },
+  "CrystalDart": {
+    "NAME": "Crystal Dart",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, it prioritizes attacking a random other enemy this turn. NL Fragile !M!."
+  },
+  "Emerge": {
+    "NAME": "Emerge",
+    "DESCRIPTION": "More is different NL Whenever you play a card, add !M! random card to your hand.",
+    "UPGRADE_DESCRIPTION": "More is different NL Innate. NL Whenever you play a card, add !M! random card to your hand."
+  },
+  "ParadiseLost": {
+    "NAME": "Paradise Lost",
+    "DESCRIPTION": "Come from the end NL Deal !D! damage. NL The target loses !M! Strength."
+  },
+  "WhiteNight": {
+    "NAME": "White Night",
+    "DESCRIPTION": "Rise and serve... NL Innate. NL Exhaust all cards when played. NL Ethereal. NL Fragile !M!."
+  },
+  "SigilOfBaphomet": {
+    "NAME": "Sigil of Baphomet",
+    "DESCRIPTION": "At the end of this combat, replace each card reward with a random Common, Uncommon, or Rare relic.",
+    "EXTENDED_DESCRIPTION": ["What?! That's way too powerful!"]
+  },
+  "DragonKingGreataxe": {
+    "NAME": "Dragon King Greataxe",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You cannot obtain potions or play Crude Drug cards for !MS! turns."
+  },
+  "LordOfLords": {
+    "NAME": "Lord Of Lords",
+    "DESCRIPTION": "...And the heaven was open NL Deal !D! damage. NL Obtain a random Common, Uncommon, or Rare relic. NL Exhaust."
+  },
+  "SageRapier": {
+    "NAME": "Sage Rapier",
+    "DESCRIPTION": "Deal !D! damage. NL Fragile !M!."
+  },
+  "Salt": {
+    "NAME": "Salt",
+    "DESCRIPTION": "Whenever you play *Mottled *Pot, gain !M! Max HP. NL (Gain up to !MD! Max HP.)"
+  },
+  "Alkahest": {
+    "NAME": "Alkahest",
+    "DESCRIPTION": "Omniscient, omnipresent, omnipotent. NL At the start of your turn, NL discard this card, NL Exhaust your hand, NL then add a *Prakriti to your hand for each card you Exhaust.",
+    "UPGRADE_DESCRIPTION": "Omniscient, omnipresent, omnipotent. NL At the start of your turn, NL discard this card, NL Exhaust your hand, NL then add a *Prakriti+ to your hand for each card you Exhaust.",
+    "EXTENDED_DESCRIPTION": ["This card cannot be played."]
+  },
   "BrandNewWorld": {
     "NAME": "Brand New World",
     "DESCRIPTION": "Let the elements flow... NL Draw cards until your hand is full. NL Gain !M! Max HP. NL Gain [E] [E] [E]. NL Gain !MD! Gold.",
@@ -58,6 +207,19 @@
     "NAME": "Giant Door Shield",
     "DESCRIPTION": "Lockout: Lose Lockout. NL Otherwise, gain Lockout.",
     "UPGRADE_DESCRIPTION": "Retain. NL Lockout: Lose Lockout. NL Otherwise, gain Lockout."
+  },
+  "Analyze": {
+    "NAME": "Analyze",
+    "DESCRIPTION": "Analyzing: Lose Analyzing. NL Otherwise, gain Analyzing.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Analyzing: Lose Analyzing. NL Otherwise, gain Analyzing."
+  },
+  "Communion": {
+    "NAME": "Communion",
+    "DESCRIPTION": "Your Attack cards now hit ALL enemies."
+  },
+  "Prakriti": {
+    "NAME": "Prakriti",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL For each Prakriti in your draw pile, discard pile, and hand, this card's base damage and base Block increase by !M!."
   },
   "Solidify": {
     "NAME": "Solidify",
@@ -2235,7 +2397,7 @@
   },
   "PotionCoveredAshes": {
     "NAME": "Potion Covered Ashes",
-    "DESCRIPTION": "Gain a random Bulk Potion."
+    "DESCRIPTION": "Gain !M! random Bulk potion(s)."
   },
   "Bloodrose": {
     "NAME": "Bloodrose",
@@ -2271,8 +2433,8 @@
     "DESCRIPTION": " Brew Golden Centipede. NL Exhaust.",
     "UPGRADE_DESCRIPTION": " Brew Golden Centipede."
   },
-  "OriginalSin": {
-    "NAME": "Original Sin",
+  "PowerOfOriginalSin": {
+    "NAME": "Power of Original Sin",
     "DESCRIPTION": "Gain !M! Frail. NL Draw !MD! cards. NL Fragile !MS!. NL This card's effect changes each time it is played.",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! Weak and Vulnerable. NL Draw !MD! cards. NL Fragile !MS!. NL This card's effect changes each time it is played.",
@@ -2281,7 +2443,8 @@
       "Lose !M! Gold. NL Draw !MD! cards. NL Fragile !MS!. NL This card's effect changes each time it is played.",
       "Permanently lose !M! Max HP. NL Draw !MD! cards. NL Fragile !MS!. NL This card's effect changes each time it is played.",
       "You cannot play Attacks. NL Draw !MD! cards. NL Fragile !MS!. NL This card's effect changes each time it is played.",
-      "Remove all your debuffs. NL Gain !M! Gold. NL Permanently gain 33 Max HP. NL Fragile !MS!."
+      "Remove all your debuffs. NL Add an *Empyrean to your deck. NL Fragile !MS!.",
+      "Remove all your debuffs. NL Add an *Empyrean+ to your deck. NL Fragile !MS!."
     ]
   },
   "CatState": {
@@ -2371,8 +2534,8 @@
     "DESCRIPTION": "Innate. NL Add an *Apotheosis to your hand. NL When you add this card to your deck, lose !MS! HP. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Innate. NL Add an *Apotheosis+ to your hand. NL When you add this card to your deck, lose !MS! HP. NL Exhaust."
   },
-  "PowerOfTwinPrinces": {
-    "NAME": "Power of Twin Princes",
+  "TwinPrincesTalisman": {
+    "NAME": "Twin Princes Talisman",
     "DESCRIPTION": "The younger prince blesses you. NL Gain !M! Dexterity. NL Whenever you receive unblocked attack damage, gain !MD! Dexterity.",
     "EXTENDED_DESCRIPTION": ["The elder prince blesses you. NL Gain !M! Strength. NL Prevent the next !MD! time(s) you would lose HP. NL Die when you receive unblocked attack damage."]
   },
@@ -2405,8 +2568,8 @@
     "NAME": "Penglai Worship",
     "DESCRIPTION": "Gain !M! Elixir of Life potion. If this card is still in your hand at the end of your turn, lose !MS! Gold. NL Fragile !MD!."
   },
-  "RoyalLegacy": {
-    "NAME": "Royal Legacy",
+  "KingdomLegacy": {
+    "NAME": "Kingdom Legacy",
     "DESCRIPTION": "Gain !M! Gold. NL Exhaust."
   },
   "Homunculus": {
@@ -2470,8 +2633,8 @@
   },
   "BookOfGenesis": {
     "NAME": "Book of Genesis",
-    "DESCRIPTION": " Exhaust all cards in your hand. NL For each card Exhausted, choose 1 of 3 random cards to add to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": " Exhaust all cards in your hand. NL For each card Exhausted, choose 1 of 3 random upgraded cards to add to your hand. NL Exhaust."
+    "DESCRIPTION": " Exhaust all cards in your hand. NL For each card you Exhaust, choose 1 of 3 random cards to add to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " Exhaust all cards in your hand. NL For each card you Exhaust, choose 1 of 3 random upgraded cards to add to your hand. NL Exhaust."
   },
   "Sabbath": {
     "NAME": "Sabbath",

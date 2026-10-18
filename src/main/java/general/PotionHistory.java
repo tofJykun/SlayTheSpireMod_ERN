@@ -39,6 +39,8 @@ public final class PotionHistory {
         return new ArrayList<>(USED_POTION_IDS);
     }
 
+    public static int usedCount() { return USED_POTION_IDS.size(); }
+
     public static void replayPotion(String potionId, AbstractMonster preferredTarget) {
         replayPotion(potionId, preferredTarget, true);
     }

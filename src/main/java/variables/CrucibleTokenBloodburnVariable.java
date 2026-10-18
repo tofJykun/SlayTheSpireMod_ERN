@@ -47,7 +47,7 @@ public class CrucibleTokenBloodburnVariable extends UpgradePreviewVariable {
     @Override
     protected boolean isValueModified(AbstractCard card) {
         if (card instanceof cards.guardian.Assault || card instanceof cards.raider.StormRuler) return card.isMagicNumberModified;
-        if (card instanceof cards.scholar.PowerOfTwinPrinces) return false;
+        if (card instanceof cards.scholar.TwinPrincesTalisman) return false;
         if (card instanceof cards.ironeye.HighFrequency) return false;
         if (card instanceof cards.ironeye.FortuneCookie) return false;
         if (card instanceof cards.ironeye.Railgun) return false;
@@ -66,20 +66,25 @@ public class CrucibleTokenBloodburnVariable extends UpgradePreviewVariable {
 
     @Override
     protected int currentValue(AbstractCard card) {
+        if (card instanceof cards.scholar.MajorArcana) return 3;
+        if ("LightningPot".equals(card.cardID)) return ReplayField.getReplay(card);
+        if ("SwarmPot".equals(card.cardID)) return ReplayField.getReplay(card);
+        if ("FirePot".equals(card.cardID)) return ReplayField.getReplay(card);
+        if (card instanceof cards.scholar.Salt) return cards.scholar.Salt.MAX_HP_GAIN;
         if (card instanceof cards.guardian.Assault || card instanceof cards.raider.StormRuler) return card.magicNumber;
         if (card instanceof cards.undertaker.Confluence) return ((cards.undertaker.Confluence)card).getExtraDamage();
         if (card instanceof cards.raider.StormKick) return ((cards.raider.StormKick)card).getPoiseBreak();
         if (card instanceof cards.revenant.ImpatientBall) return ((cards.revenant.ImpatientBall)card).getDrawAmount();
         if (hasUpgradeOnlyNumber(card)) return "CeruleanDagger".equals(card.cardID) ? 3 : 1;
         if (card instanceof cards.scholar.BrandNewWorld) return cards.scholar.BrandNewWorld.GOLD;
-        if (card instanceof cards.scholar.PowerOfTwinPrinces) return ((cards.scholar.PowerOfTwinPrinces)card).getSecondaryAmount();
+        if (card instanceof cards.scholar.TwinPrincesTalisman) return ((cards.scholar.TwinPrincesTalisman)card).getSecondaryAmount();
         if (card instanceof cards.ironeye.HighFrequency) return cards.ironeye.HighFrequency.TOKEN_GAIN;
         if (card instanceof cards.ironeye.FortuneCookie) return cards.ironeye.FortuneCookie.TICKET_AMOUNT;
         if (card instanceof cards.ironeye.Railgun) return cards.ironeye.Railgun.DRAW_AMOUNT;
         if (card instanceof cards.ironeye.CashOnDelivery) return ((cards.ironeye.CashOnDelivery)card).getDrawAmount();
         if (card instanceof cards.duchess.Darkdrift) return cards.duchess.Darkdrift.ENERGY_LOSS;
         if (card instanceof cards.ironeye.BlackflameShooter) return cards.ironeye.BlackflameShooter.BLOODBURN;
-        if (card instanceof cards.scholar.OriginalSin) return ((cards.scholar.OriginalSin)card).getDrawAmount();
+        if (card instanceof cards.scholar.PowerOfOriginalSin) return ((cards.scholar.PowerOfOriginalSin)card).getDrawAmount();
         if (card instanceof cards.duchess.MushroomChips) return ReplayField.getReplay(card);
         if (card instanceof BastardStars) return card.magicNumber;
         if (card instanceof cards.duchess.ScavengerCurvedSword) return ReplayField.getReplay(card);
@@ -141,20 +146,25 @@ public class CrucibleTokenBloodburnVariable extends UpgradePreviewVariable {
 
     @Override
     public int baseValue(AbstractCard card) {
+        if (card instanceof cards.scholar.MajorArcana) return 3;
+        if ("LightningPot".equals(card.cardID)) return ReplayField.getReplay(card);
+        if ("SwarmPot".equals(card.cardID)) return ReplayField.getReplay(card);
+        if ("FirePot".equals(card.cardID)) return ReplayField.getReplay(card);
+        if (card instanceof cards.scholar.Salt) return cards.scholar.Salt.MAX_HP_GAIN;
         if (card instanceof cards.guardian.Assault || card instanceof cards.raider.StormRuler) return card.baseMagicNumber;
         if (card instanceof cards.undertaker.Confluence) return ((cards.undertaker.Confluence)card).getExtraDamage();
         if (card instanceof cards.raider.StormKick) return ((cards.raider.StormKick)card).getPoiseBreak();
         if (card instanceof cards.revenant.ImpatientBall) return ((cards.revenant.ImpatientBall)card).getDrawAmount();
         if (hasUpgradeOnlyNumber(card)) return "CeruleanDagger".equals(card.cardID) ? 3 : 1;
         if (card instanceof cards.scholar.BrandNewWorld) return cards.scholar.BrandNewWorld.GOLD;
-        if (card instanceof cards.scholar.PowerOfTwinPrinces) return ((cards.scholar.PowerOfTwinPrinces)card).getSecondaryAmount();
+        if (card instanceof cards.scholar.TwinPrincesTalisman) return ((cards.scholar.TwinPrincesTalisman)card).getSecondaryAmount();
         if (card instanceof cards.ironeye.HighFrequency) return cards.ironeye.HighFrequency.TOKEN_GAIN;
         if (card instanceof cards.ironeye.FortuneCookie) return cards.ironeye.FortuneCookie.TICKET_AMOUNT;
         if (card instanceof cards.ironeye.Railgun) return cards.ironeye.Railgun.DRAW_AMOUNT;
         if (card instanceof cards.ironeye.CashOnDelivery) return ((cards.ironeye.CashOnDelivery)card).getDrawAmount();
         if (card instanceof cards.duchess.Darkdrift) return cards.duchess.Darkdrift.ENERGY_LOSS;
         if (card instanceof cards.ironeye.BlackflameShooter) return cards.ironeye.BlackflameShooter.BLOODBURN;
-        if (card instanceof cards.scholar.OriginalSin) return ((cards.scholar.OriginalSin)card).getDrawAmount();
+        if (card instanceof cards.scholar.PowerOfOriginalSin) return ((cards.scholar.PowerOfOriginalSin)card).getDrawAmount();
         if (card instanceof cards.duchess.MushroomChips) return ReplayField.getReplay(card);
         if (card instanceof BastardStars) return card.baseMagicNumber;
         if (card instanceof cards.duchess.ScavengerCurvedSword) return ReplayField.getReplay(card);
@@ -216,17 +226,20 @@ public class CrucibleTokenBloodburnVariable extends UpgradePreviewVariable {
 
     @Override
     public boolean upgraded(AbstractCard card) {
+        if ("LightningPot".equals(card.cardID)) return card.timesUpgraded >= 2;
+        if ("SwarmPot".equals(card.cardID)) return card.timesUpgraded >= 2;
+        if ("FirePot".equals(card.cardID)) return card.timesUpgraded >= 2;
         if (card instanceof cards.guardian.Assault || card instanceof cards.raider.StormRuler) return card.upgradedMagicNumber;
         if (card instanceof cards.undertaker.Confluence || card instanceof cards.raider.StormKick
                 || card instanceof cards.revenant.ImpatientBall || hasUpgradeOnlyNumber(card)) return card.upgraded;
-        if (card instanceof cards.scholar.PowerOfTwinPrinces) return card.upgraded;
+        if (card instanceof cards.scholar.TwinPrincesTalisman) return card.upgraded;
         if (card instanceof cards.ironeye.HighFrequency) return false;
         if (card instanceof cards.ironeye.FortuneCookie) return false;
         if (card instanceof cards.ironeye.Railgun) return false;
         if (card instanceof cards.ironeye.CashOnDelivery) return card.upgraded;
         if (card instanceof cards.duchess.Darkdrift) return false;
         if (card instanceof cards.ironeye.BlackflameShooter) return false;
-        if (card instanceof cards.scholar.OriginalSin) return card.upgraded;
+        if (card instanceof cards.scholar.PowerOfOriginalSin) return card.upgraded;
         if (card instanceof BastardStars) return card.upgradedMagicNumber;
         if (card instanceof cards.duchess.ScavengerCurvedSword) return card.upgraded;
         if (card instanceof TheWillOfBalance) return card.upgraded;

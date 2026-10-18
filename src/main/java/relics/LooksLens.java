@@ -14,7 +14,7 @@ public class LooksLens extends CustomRelic {
     public static final String ID = "LooksLens";
     private static final String IMG = "img/relics/scholar/LooksLens.png";
     private static final String IMG_OTL = "img/relics/scholar/outline/LooksLens.png";
-    private static final int ARCANE = 1;
+    private static final int ARCANE = 2;
 
     public LooksLens() {
         super(ID, ImageMaster.loadImage(IMG), ImageMaster.loadImage(IMG_OTL),

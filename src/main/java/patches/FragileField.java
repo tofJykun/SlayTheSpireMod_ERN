@@ -52,7 +52,7 @@ public final class FragileField {
         if (value != null && !CardModifierManager.hasModifier(card, FragileModifier.ID)) {
             CardModifierManager.addModifier(card, new FragileModifier());
         }
-        if (card instanceof cards.scholar.OriginalSin) card.initializeDescription();
+        if (card instanceof cards.scholar.PowerOfOriginalSin) card.initializeDescription();
     }
 
     // Only representation changes (smithing/unforging) share ownership, never generated copies.

@@ -22,11 +22,17 @@ public class OriginalSinAction extends AbstractGameAction {
     private final AbstractPlayer player;
     private final int stage;
     private final int draw;
+    private final boolean upgraded;
 
     public OriginalSinAction(AbstractPlayer player, int stage, int draw) {
+        this(player, stage, draw, false);
+    }
+
+    public OriginalSinAction(AbstractPlayer player, int stage, int draw, boolean upgraded) {
         this.player = player;
         this.stage = stage;
         this.draw = draw;
+        this.upgraded = upgraded;
         this.actionType = ActionType.SPECIAL;
     }
 
@@ -38,11 +44,10 @@ public class OriginalSinAction extends AbstractGameAction {
         if (stage == 0) {
             addToTop(new AbstractGameAction() {
                 @Override public void update() {
-                    if (!player.isDead) player.increaseMaxHp(33, true);
+                    general.EmpyreanObtain.obtain(upgraded);
                     this.isDone = true;
                 }
             });
-            addToTop(new GainGoldWithAnimationAction(777));
             for (AbstractPower power : new ArrayList<>(player.powers)) {
                 if (power.type == AbstractPower.PowerType.DEBUFF) {
                     addToTop(new RemoveSpecificPowerAction(player, player, power));

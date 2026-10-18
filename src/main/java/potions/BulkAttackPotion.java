@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
-import general.PotionEffectHelper;
 
 public class BulkAttackPotion extends AbstractPotion {
     public static final String POTION_ID = "BulkAttackPotion";
@@ -22,7 +21,7 @@ public class BulkAttackPotion extends AbstractPotion {
     @Override
     public void initializeData() {
         this.potency = getPotency();
-        if (PotionEffectHelper.hasSacredBarkEffect()) {
+        if (this.potency > 1) {
             this.description = potionStrings.DESCRIPTIONS[1] + potionStrings.DESCRIPTIONS[2];
         } else {
             this.description = potionStrings.DESCRIPTIONS[0] + potionStrings.DESCRIPTIONS[2];

@@ -24,7 +24,7 @@ public class RandomCardsAction extends AbstractGameAction {
         for (CardGroup pool : new CardGroup[] {AbstractDungeon.srcCommonCardPool,
                 AbstractDungeon.srcUncommonCardPool, AbstractDungeon.srcRareCardPool}) {
             for (AbstractCard card : pool.group) {
-                if (!card.hasTag(AbstractCard.CardTags.HEALING)) {
+                if (!card.hasTag(AbstractCard.CardTags.HEALING) && !general.ExclusiveCardPool.isExcluded(card)) {
                     candidates.add(card);
                     UnlockTracker.markCardAsSeen(card.cardID);
                 }

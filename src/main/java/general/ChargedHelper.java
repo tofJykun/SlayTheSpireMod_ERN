@@ -4,8 +4,12 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 
+import java.util.regex.Pattern;
+
 public class ChargedHelper {
     public static final int FULL_HAND_SIZE = 10;
+    private static final Pattern CHARGED_KEYWORD = Pattern.compile(
+            "(?<![\\p{L}\\p{N}_])(?:充能|charged)(?![\\p{L}\\p{N}_])", Pattern.CASE_INSENSITIVE);
 
     private ChargedHelper() {
     }
@@ -41,7 +45,8 @@ public class ChargedHelper {
         if (text == null) {
             return false;
         }
-        String normalized = text.toLowerCase();
-        return normalized.contains("充能") || normalized.contains("charged");
+        // Match the keyword, not words such as 充能球 (Orb) or recharged.
+        String normalized = text.replaceAll("#[bgryp]", "");
+        return CHARGED_KEYWORD.matcher(normalized).find();
     }
 }

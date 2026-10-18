@@ -17,17 +17,23 @@ import patches.AbstractCardEnum;
 import powers.ElderPrincePower;
 import powers.YoungerPrincePower;
 
-public class PowerOfTwinPrinces extends CustomCard {
-    public static final String ID = "PowerOfTwinPrinces";
+public class TwinPrincesTalisman extends CustomCard {
+    public static final String ID = "TwinPrincesTalisman";
     private static final CardStrings STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public PowerOfTwinPrinces() {
-        super(ID, STRINGS.NAME, "img/cards/scholar/PowerOfTwinPrinces.png", 1, STRINGS.DESCRIPTION,
+    public TwinPrincesTalisman() {
+        super(ID, STRINGS.NAME, "img/cards/scholar/TwinPrincesTalisman.png", 1, STRINGS.DESCRIPTION,
                 CardType.POWER, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
         initializeDescription();
     }
 
     public static boolean usesTestArt() {
+        // The art preference selects gameplay, so retain the old ID's choice after renaming.
+        if (UnlockTracker.betaCardPref != null && !UnlockTracker.betaCardPref.get().containsKey(ID)
+                && UnlockTracker.betaCardPref.get().containsKey("PowerOfTwinPrinces")) {
+            UnlockTracker.betaCardPref.putBoolean(ID, UnlockTracker.betaCardPref.getBoolean("PowerOfTwinPrinces", false));
+            UnlockTracker.betaCardPref.flush();
+        }
         return Settings.PLAYTESTER_ART_MODE
                 || (UnlockTracker.betaCardPref != null && UnlockTracker.betaCardPref.getBoolean(ID, false));
     }
@@ -100,13 +106,13 @@ public class PowerOfTwinPrinces extends CustomCard {
 
     @Override
     public AbstractCard makeStatEquivalentCopy() {
-        PowerOfTwinPrinces copy = (PowerOfTwinPrinces) super.makeStatEquivalentCopy();
+        TwinPrincesTalisman copy = (TwinPrincesTalisman) super.makeStatEquivalentCopy();
         copy.initializeDescription();
         return copy;
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new PowerOfTwinPrinces();
+        return new TwinPrincesTalisman();
     }
 }

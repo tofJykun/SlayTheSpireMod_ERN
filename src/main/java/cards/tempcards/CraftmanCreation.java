@@ -72,6 +72,7 @@ public class CraftmanCreation extends AbstractScheduledCard {
         InsuranceField.inherit(this, this.bodyCard);
         patches.ShadowGuardField.inherit(this, this.bodyCard);
         patches.IgnoreField.inherit(this, this.bodyCard);
+        patches.SowingField.inherit(this, this.bodyCard);
         syncFromParts();
     }
 
@@ -317,6 +318,7 @@ public class CraftmanCreation extends AbstractScheduledCard {
         AbstractCard copy = copyCard(this.bodyCard);
         patches.FragileField.share(copy, this);
         patches.IgnoreField.inherit(copy, this);
+        patches.SowingField.inherit(copy, this);
         return copy;
     }
 

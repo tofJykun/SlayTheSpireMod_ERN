@@ -1,6 +1,6 @@
 package patches;
 
-import cards.scholar.PowerOfTwinPrinces;
+import cards.scholar.TwinPrincesTalisman;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
@@ -13,7 +13,7 @@ public class TwinPrincesArtPatch {
     public static class EnableToggle {
         @SpirePostfixPatch
         public static boolean postfix(boolean __result, SingleCardViewPopup __instance, AbstractCard ___card) {
-            return __result || ___card instanceof PowerOfTwinPrinces;
+            return __result || ___card instanceof TwinPrincesTalisman;
         }
     }
 
@@ -21,8 +21,8 @@ public class TwinPrincesArtPatch {
     public static class RefreshPreview {
         @SpirePrefixPatch
         public static void prefix(SingleCardViewPopup __instance, SpriteBatch sb, AbstractCard ___card) {
-            if (___card instanceof PowerOfTwinPrinces) {
-                ((PowerOfTwinPrinces) ___card).refreshVariant();
+            if (___card instanceof TwinPrincesTalisman) {
+                ((TwinPrincesTalisman) ___card).refreshVariant();
             }
         }
     }

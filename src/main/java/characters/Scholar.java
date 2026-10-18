@@ -3,6 +3,7 @@ package characters;
 import basemod.abstracts.CustomPlayer;
 import cards.scholar.Defend_Scholar;
 import cards.scholar.PotionCoveredAshes;
+import cards.scholar.SageRapier;
 import cards.scholar.Strike_Scholar;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -70,6 +71,7 @@ public class Scholar extends CustomPlayer {
         retVal.add(Defend_Scholar.ID);
         retVal.add(Defend_Scholar.ID);
         retVal.add(PotionCoveredAshes.ID);
+        retVal.add(SageRapier.ID);
         return retVal;
     }
 

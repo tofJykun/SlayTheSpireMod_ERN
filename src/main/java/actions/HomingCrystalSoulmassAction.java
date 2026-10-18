@@ -66,6 +66,7 @@ public class HomingCrystalSoulmassAction extends AbstractGameAction {
         DamageInfo info = new DamageInfo(this.source, this.baseDamage, this.card.damageTypeForTurn);
         info.output = calculateDamage(target);
         info.isModified = info.output != this.baseDamage;
+        general.CommunionCombat.setDamage(info, this::calculateDamage);
         return info;
     }
 

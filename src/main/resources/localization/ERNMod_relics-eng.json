@@ -445,6 +445,11 @@
       "Replaces #ySummon #ySpirit. At the start of your turn, randomly #yBasic #ySummon ."
     ]
   },
+  "LargePouch": {
+    "NAME": "Large Pouch",
+    "FLAVOR": "A few more supplies for the road ahead.",
+    "DESCRIPTIONS": ["Upon pickup, gain #b3 Potion slots containing random potions."]
+  },
   "Bagcraft": {
     "NAME": "Bagcraft",
     "FLAVOR": "Scholar's knowledge of carrying supplies.",
@@ -466,11 +471,16 @@
       "The first #yCrude #yDrug card you play each combat is played three times."
     ]
   },
+  "EnergyDrinks": {
+    "NAME": "Energy Drinks",
+    "FLAVOR": "A little refreshment for a long night of research.",
+    "DESCRIPTIONS": ["The first time you use a potion each turn, gain [E]."]
+  },
   "LooksLens": {
     "NAME": "Look's Lens",
     "FLAVOR": "Through it, the other side of the reward comes into view.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain #b1 #yArcane ."
+      "At the start of each combat, gain #b2 #yArcane ."
     ]
   },
   "AlbinauricPot": {

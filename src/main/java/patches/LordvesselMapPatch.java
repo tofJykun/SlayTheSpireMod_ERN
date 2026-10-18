@@ -20,14 +20,57 @@ import javassist.expr.MethodCall;
 import java.util.ArrayList;
 
 public class LordvesselMapPatch {
-    private static MapRoomNode renderedFrom;
-    private static boolean renderedAvailable;
-    private static final ArrayList<MapEdge> previewEdges = new ArrayList<>();
-    private static MapEdge bossEdge;
     private static ArrayList<LordvesselHistory.Jump> savedJumps;
     private static int renderedJumpCount = -1;
     private static String renderedAct;
     private static final ArrayList<MapEdge> usedEdges = new ArrayList<>();
+
+    @SpirePatch(clz = MapRoomNode.class, method = "oscillateColor")
+    public static class RevisitHighlight {
+        @SpireInstrumentPatch
+        public static ExprEditor instrument() {
+            return new ExprEditor() {
+                @Override
+                public void edit(FieldAccess field) throws CannotCompileException {
+                    if (field.isReader() && field.getClassName().equals(MapRoomNode.class.getName())
+                            && field.getFieldName().equals("taken")) {
+                        // Only opt eligible revisits into the native pulse; never change visit history.
+                        field.replace("{ $_ = $proceed() && !patches.LordvesselMapPatch.highlightVisitedNode(this); }");
+                    }
+                }
+            };
+        }
+    }
+
+    public static boolean highlightVisitedNode(MapRoomNode node) {
+        MapRoomNode from = AbstractDungeon.getCurrMapNode();
+        return node != null && node.taken && LordvesselHistory.hasBacktrackedInAct()
+                && from != null && node.y == from.y + 1
+                && from.room != null && from.room.phase == AbstractRoom.RoomPhase.COMPLETE
+                && (from.isConnectedTo(node) || from.wingedIsConnectedTo(node));
+    }
+
+    public static Color revisitColor(MapRoomNode node, Color color) {
+        return color == MapRoomNode.AVAILABLE_COLOR && highlightVisitedNode(node) ? node.color : color;
+    }
+
+    @SpirePatch(clz = MapRoomNode.class, method = "render")
+    public static class RevisitColor {
+        @SpireInstrumentPatch
+        public static ExprEditor instrument() {
+            return new ExprEditor() {
+                @Override
+                public void edit(MethodCall call) throws CannotCompileException {
+                    if (call.getClassName().equals(SpriteBatch.class.getName())
+                            && call.getMethodName().equals("setColor")
+                            && call.getSignature().equals("(Lcom/badlogic/gdx/graphics/Color;)V")) {
+                        // Preserve both taken checks and all edge drawing. Icon and circle pulse together.
+                        call.replace("{ $proceed(patches.LordvesselMapPatch.revisitColor(this, $1)); }");
+                    }
+                }
+            };
+        }
+    }
 
     @SpirePatch(clz = DungeonMap.class, method = "update")
     public static class BossSelection {
@@ -108,38 +151,6 @@ public class LordvesselMapPatch {
                 }
             }
             for (MapEdge edge : usedEdges) edge.render(sb);
-            MapRoomNode from = AbstractDungeon.getCurrMapNode();
-            boolean available = LordvesselRoutes.available() && from != null
-                    && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMPLETE;
-            if (from != renderedFrom || available != renderedAvailable) {
-                renderedFrom = from;
-                renderedAvailable = available;
-                previewEdges.clear();
-                bossEdge = null;
-                if (available && AbstractDungeon.map != null) {
-                    for (ArrayList<MapRoomNode> row : AbstractDungeon.map) {
-                        for (MapRoomNode to : row) {
-                            if (LordvesselRoutes.canReach(from, to) && !from.isConnectedTo(to)
-                                    && !(to.room instanceof MonsterRoomBoss)) {
-                                MapEdge edge = new MapEdge(from.x, from.y, from.offsetX, from.offsetY,
-                                        to.x, to.y, to.offsetX, to.offsetY, false);
-                                edge.color = new Color(0.09f, 0.13f, 0.17f, 0.22f);
-                                previewEdges.add(edge);
-                            }
-                        }
-                    }
-                }
-            }
-            for (MapEdge edge : previewEdges) edge.render(sb);
-            // The Boss uses a separate hitbox, not a normal node on Acts I-III.
-            if (available && LordvesselRoutes.canReachBoss() && !LordvesselRoutes.normalBossRoute()) {
-                if (bossEdge == null) {
-                    bossEdge = new MapEdge(from.x, from.y, from.offsetX, from.offsetY,
-                            3, 15, bossOffsetX(), bossOffsetY(), true);
-                    bossEdge.color = new Color(0.09f, 0.13f, 0.17f, 0.3f);
-                }
-                bossEdge.render(sb);
-            }
         }
     }
 

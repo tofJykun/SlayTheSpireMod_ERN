@@ -99,6 +99,7 @@ public class EuporiaAction extends AbstractGameAction {
 
         @Override
         public void update() {
+            general.CommunionCombat.areaDamage();
             ArrayList<AbstractMonster> targets = new ArrayList<>();
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if (canHit(monster)) {

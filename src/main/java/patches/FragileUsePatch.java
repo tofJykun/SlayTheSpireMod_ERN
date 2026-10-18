@@ -48,6 +48,7 @@ public class FragileUsePatch {
             AbstractCard master = Fields.master.get(__instance);
             if (master != null && AbstractDungeon.player.masterDeck.group.contains(master)) {
                 AbstractDungeon.player.masterDeck.removeCard(master);
+                general.DaatProgress.onFragileRemoval(master);
             }
             card.exhaustOnUseOnce = false;
             card.dontTriggerOnUseCard = false;

@@ -539,8 +539,24 @@ import cards.scholar.Bloodrose;
 import cards.scholar.Defend_Scholar;
 import cards.scholar.DrawstringPot;
 import cards.scholar.Telescope;
+import cards.scholar.Analyze;
+import cards.scholar.Communion;
+import cards.scholar.Prakriti;
+import cards.scholar.SageRapier;
+import cards.scholar.CrystalDart;
+import cards.scholar.ThinkingPlum;
+import cards.scholar.Daat;
+import cards.scholar.Sephirot;
+import cards.scholar.DragonKingGreataxe;
+import cards.scholar.LordOfLords;
+import cards.scholar.SigilOfBaphomet;
+import cards.scholar.ParadiseLost;
+import cards.scholar.WhiteNight;
+import cards.scholar.Emerge;
+import cards.scholar.Salt;
+import cards.scholar.Alkahest;
 import cards.scholar.Flip;
-import cards.scholar.PowerOfTwinPrinces;
+import cards.scholar.TwinPrincesTalisman;
 import cards.scholar.CrownOfThorns;
 import cards.scholar.CaneSword;
 import cards.scholar.HeavenCord;
@@ -560,14 +576,24 @@ import cards.scholar.WaterHorse;
 import cards.scholar.RollingSparks;
 import cards.scholar.EquivalentExchange;
 import cards.scholar.CatState;
-import cards.scholar.OriginalSin;
+import cards.scholar.PowerOfOriginalSin;
 import cards.scholar.PenglaiWorship;
 import cards.scholar.AjaRedStone;
 import cards.scholar.PotionAscetic;
 import cards.scholar.PotionCoveredAshes;
 import cards.scholar.PotentateCookbook;
 import cards.scholar.RiteOfKindling;
-import cards.scholar.RoyalLegacy;
+import cards.scholar.KingdomLegacy;
+import cards.scholar.TreeOfLife;
+import cards.scholar.Empyrean;
+import cards.scholar.CompanionJar;
+import cards.scholar.MidgardConstriction;
+import cards.scholar.AldiaShield;
+import cards.scholar.FirePot;
+import cards.scholar.LightningPot;
+import cards.scholar.SwarmPot;
+import cards.scholar.Overdose;
+import cards.scholar.MajorArcana;
 import cards.scholar.EmeraldTablet;
 import relics.SunStone;
 import cards.scholar.RowaFruit;
@@ -840,6 +866,8 @@ import potions.CaloricPotion;
 import potions.PearlPotion;
 import potions.DuskHerbDew;
 import potions.HaligtreeBalm;
+import potions.ExplosivePotion;
+import potions.StickyPotion;
 import potions.IntelligencePotion;
 import potions.InsightPotion;
 import potions.SpiritPotion;
@@ -850,6 +878,7 @@ import potions.SeafoodFeast;
 import relics.AlbinauricPot;
 import relics.AldiaFund;
 import relics.Bagcraft;
+import relics.LargePouch;
 import relics.BedOfChaos;
 import relics.BeverageGiveaways;
 import relics.BequestOfSeath;
@@ -878,6 +907,7 @@ import relics.OneTwoPunch;
 import relics.Bloodletting;
 import relics.LostAshesOfWar;
 import relics.LooksLens;
+import relics.EnergyDrinks;
 import relics.MagicCocktail;
 import relics.MiniatureThunder;
 import relics.EagleEye;
@@ -990,6 +1020,17 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         BaseMod.subscribe((ISubscriber)this);
         BaseMod.addSaveField(BulkPotionQueue.SAVE_KEY, BulkPotionQueue.SAVE_FIELD);
         BaseMod.addSaveField(general.BrandNewWorldProgress.SAVE_KEY, new general.BrandNewWorldProgress());
+        general.AlkahestProgress alkahestProgress = new general.AlkahestProgress();
+        BaseMod.addSaveField(general.AlkahestProgress.SAVE_KEY, alkahestProgress);
+        BaseMod.addSaveField(general.LordOfLordsProgress.SAVE_KEY, new general.LordOfLordsProgress());
+        BaseMod.addSaveField(general.SigilOfBaphometRewards.SAVE_KEY, new general.SigilOfBaphometRewards());
+        BaseMod.addSaveField(general.WhiteNightProgress.SAVE_KEY, new general.WhiteNightProgress());
+        BaseMod.addSaveField(general.DaatProgress.SAVE_KEY, new general.DaatProgress());
+        BaseMod.addSaveField(general.TreeOfLifeProgress.SAVE_KEY, new general.TreeOfLifeProgress());
+        BaseMod.subscribe(alkahestProgress);
+        general.EmergeProgress emergeProgress = new general.EmergeProgress();
+        BaseMod.addSaveField(general.EmergeProgress.SAVE_KEY, emergeProgress);
+        BaseMod.subscribe(emergeProgress);
         BaseMod.addSaveField(general.ConciliationRewards.SAVE_KEY, new general.ConciliationRewards());
         BaseMod.addSaveField(general.LordvesselHistory.SAVE_KEY, new general.LordvesselHistory());
         BaseMod.addDynamicVariable(new CrucibleTokenPoisonVariable());
@@ -1063,6 +1104,12 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         BaseMod.addPotion(HaligtreeBalm.class, SCHOLAR_COLOR.cpy(),
                 new Color(0.82F, 0.78F, 0.56F, 1.0F), Color.WHITE.cpy(),
                 HaligtreeBalm.POTION_ID, ERNModClassEnum.Scholar_CLASS);
+        BaseMod.addPotion(ExplosivePotion.class, SCHOLAR_COLOR.cpy(),
+                new Color(0.95F, 0.28F, 0.12F, 1.0F), Color.WHITE.cpy(),
+                ExplosivePotion.POTION_ID, ERNModClassEnum.Scholar_CLASS);
+        BaseMod.addPotion(StickyPotion.class, SCHOLAR_COLOR.cpy(),
+                new Color(0.64F, 0.84F, 0.72F, 1.0F), Color.WHITE.cpy(),
+                StickyPotion.POTION_ID, ERNModClassEnum.Scholar_CLASS);
         BaseMod.addPotion(InsightPotion.class, UNDERTAKER_COLOR.cpy(),
                 new Color(0.48F, 0.48F, 0.58F, 1.0F), Color.WHITE.cpy(),
                 InsightPotion.POTION_ID, ERNModClassEnum.Undertaker_CLASS);
@@ -1742,7 +1789,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new EarthElement());
         this.cardsToAdd.add(new WaterElement());
         this.cardsToAdd.add(new BrandNewWorld());
-        this.cardsToAdd.add(new OriginalSin());
+        this.cardsToAdd.add(new PowerOfOriginalSin());
         this.cardsToAdd.add(new AeonianButterfly());
         this.cardsToAdd.add(new TrinaLily());
         this.cardsToAdd.add(new MiquellaLily());
@@ -1753,8 +1800,24 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new FingerprintStoneShield());
         this.cardsToAdd.add(new DrawstringPot());
         this.cardsToAdd.add(new Telescope());
+        this.cardsToAdd.add(new Analyze());
+        this.cardsToAdd.add(new Communion());
+        this.cardsToAdd.add(new Prakriti());
+        this.cardsToAdd.add(new SageRapier());
+        this.cardsToAdd.add(new CrystalDart());
+        this.cardsToAdd.add(new ThinkingPlum());
+        this.cardsToAdd.add(new Daat());
+        this.cardsToAdd.add(new Sephirot());
+        this.cardsToAdd.add(new DragonKingGreataxe());
+        this.cardsToAdd.add(new LordOfLords());
+        this.cardsToAdd.add(new SigilOfBaphomet());
+        this.cardsToAdd.add(new ParadiseLost());
+        this.cardsToAdd.add(new WhiteNight());
+        this.cardsToAdd.add(new Emerge());
+        this.cardsToAdd.add(new Salt());
+        this.cardsToAdd.add(new Alkahest());
         this.cardsToAdd.add(new Flip());
-        this.cardsToAdd.add(new PowerOfTwinPrinces());
+        this.cardsToAdd.add(new TwinPrincesTalisman());
         this.cardsToAdd.add(new CrownOfThorns());
         this.cardsToAdd.add(new CaneSword());
         this.cardsToAdd.add(new HeavenCord());
@@ -1763,7 +1826,17 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         this.cardsToAdd.add(new AntspurRapier());
         this.cardsToAdd.add(new Tyranny());
         this.cardsToAdd.add(new PenglaiWorship());
-        this.cardsToAdd.add(new RoyalLegacy());
+        this.cardsToAdd.add(new KingdomLegacy());
+        this.cardsToAdd.add(new TreeOfLife());
+        this.cardsToAdd.add(new Empyrean());
+        this.cardsToAdd.add(new CompanionJar());
+        this.cardsToAdd.add(new MidgardConstriction());
+        this.cardsToAdd.add(new AldiaShield());
+        this.cardsToAdd.add(new FirePot());
+        this.cardsToAdd.add(new LightningPot());
+        this.cardsToAdd.add(new SwarmPot());
+        this.cardsToAdd.add(new Overdose());
+        this.cardsToAdd.add(new MajorArcana());
         this.cardsToAdd.add(new EmeraldTablet());
         this.cardsToAdd.add(new Homunculus());
         this.cardsToAdd.add(new AjaRedStone());
@@ -2013,7 +2086,9 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
         addERNRelic(new YearsEntwined(), AbstractCardEnum.Revenant_COLOR);
         addERNRelic(new SacredTimber(), AbstractCardEnum.Revenant_COLOR);
         addERNRelic(new Bagcraft(), AbstractCardEnum.Scholar_COLOR);
+        addERNRelic(new LargePouch(), AbstractCardEnum.Scholar_COLOR);
         addERNRelic(new LooksLens(), AbstractCardEnum.Scholar_COLOR);
+        addERNRelic(new EnergyDrinks(), AbstractCardEnum.Scholar_COLOR);
         addERNRelic(new AlbinauricPot(), AbstractCardEnum.Scholar_COLOR);
         addERNRelic(new BeverageGiveaways(), AbstractCardEnum.Scholar_COLOR);
         addERNRelic(new KleinBottle(), AbstractCardEnum.Scholar_COLOR);
@@ -2155,6 +2230,9 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
 
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
+        general.MajorArcanaCycle.resetCombat();
+        if (!AbstractDungeon.loading_post_combat && !room.isBattleOver) general.SigilOfBaphometRewards.reset();
+        general.LordOfLordsProgress.resetCombat();
         general.ElementHelper.startCombat();
         if (!room.isBattleOver) general.ConciliationRewards.reset();
         PlayerDebuffStats.resetCombat();
@@ -2174,6 +2252,11 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
     @Override
     public void receiveEditKeywords() {
         general.CardElement.registerKeywords();
+        if (Settings.language == Settings.GameLanguage.ZHS) {
+            BaseMod.addKeyword("播种", new String[] { "播种" }, "每当打出这张牌时，获得 #b1 点能量。");
+        } else {
+            BaseMod.addKeyword("Sowing", new String[] { "sowing" }, "Whenever you play this card, gain #b1 Energy.");
+        }
         if (Settings.language == Settings.GameLanguage.ZHS) {
             BaseMod.addKeyword("爪牙", new String[] { "爪牙" },
                     "#y爪牙 会在他们的领导者死亡时放弃战斗。");
@@ -2271,6 +2354,8 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
                     "将受到的攻击或自伤降低 #b50% 。每当你受到未被 #y格挡 的攻击或自伤时，失去 #b1 层。");
             BaseMod.addKeyword("紧闭", new String[] { "紧闭" },
                     "将所受到的伤害降低 #b75% 。你不能打出 #y攻击牌 。");
+            BaseMod.addKeyword("研究中", new String[] { "研究中" },
+                    "你不能打出 #y攻击牌 。在每回合开始时获得 #b1 点能量，给予所有敌人 #b1 层 #y睡眠 。");
             BaseMod.addKeyword("振翼", new String[] { "振翼" },
                     "将受到的攻击或自伤降低 #b50% 。每当你受到攻击或自伤时，失去 #b1 层。在层数大于等于 #b10 且小于 #b15 时，获得 #y高空 。在层数大于等于 #b15 时，获得 #y深空 。");
             BaseMod.addKeyword("高空", new String[] { "高空" },
@@ -2434,6 +2519,8 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
                     "Reduces attack damage and self-damage taken by #b50% . Lose #b1 stack whenever you take unblocked attack damage or self-damage.");
             BaseMod.addKeyword("Lockout", new String[] { "lockout" },
                     "Reduce damage taken by #b75% . You cannot play #yAttacks .");
+            BaseMod.addKeyword("Analyzing", new String[] { "analyzing" },
+                    "You cannot play #yAttacks. At the start of each turn, gain #b1 Energy and apply #b1 #ySleep to ALL enemies.");
             BaseMod.addKeyword("Hover", new String[] { "hover" },
                     "Reduces attack damage and self-damage taken by #b50% . Lose #b1 stack whenever you take attack damage or self-damage. When stacks are at least #b10 and less than #b15, gain #yLofty. When stacks are at least #b15, gain #yDeep #ySpace.");
             BaseMod.addKeyword("Lofty", new String[] { "lofty" },
@@ -2507,6 +2594,7 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
 
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
+        general.LordOfLordsProgress.onCardPlayed(abstractCard);
         GuidanceStats.recordCardUse(abstractCard);
         if (BedOfMagic.ID.equals(general.SmithingBody.behavior(abstractCard).cardID)) {
             return;
@@ -2516,6 +2604,10 @@ public class ERNMod implements RelicGetSubscriber, PostPowerApplySubscriber, Pos
 
     @Override
     public void receivePostBattle(AbstractRoom r) {
+        general.LordOfLordsProgress.resetCombat();
+        if (AbstractDungeon.player != null) {
+            AbstractDungeon.player.powers.removeIf(p -> powers.DragonKingGreataxePower.POWER_ID.equals(p.ID));
+        }
         general.ElementHelper.endCombat();
         PlayerDebuffStats.resetCombat();
         BedOfMagic.resetCombat();

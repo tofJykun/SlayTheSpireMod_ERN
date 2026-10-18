@@ -100,6 +100,14 @@ public class LordvesselHistory implements CustomSavable<LordvesselHistory.State>
 
     public static ArrayList<Jump> jumps() { return state.jumps; }
 
+    public static boolean hasBacktrackedInAct() {
+        String act = AbstractDungeon.actNum + ":" + AbstractDungeon.id;
+        for (Jump jump : state.jumps) {
+            if (act.equals(jump.act) && jump.toY < jump.fromY) return true;
+        }
+        return false;
+    }
+
     public static void prepare() {
         leavingReplay = state.activeReplay;
         MapRoomNode node = AbstractDungeon.nextRoom;

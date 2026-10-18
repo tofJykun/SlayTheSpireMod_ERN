@@ -81,8 +81,8 @@
   "BulkAttackPotion": {
     "NAME": "Bulk Attack Potion",
     "DESCRIPTIONS": [
-      "Choose 1 of 3 random Attack cards to add to your hand. It costs 0 this turn.",
-      "Choose 2 of 4 random Attack cards to add to your hand. They cost 0 this turn.",
+      "Choose #b1 of #b3 random Attack cards to add to your hand. It costs #b0 this turn.",
+      "Choose #b1 of #b3 random Attack cards and add #b2 copies to your hand. They cost #b0 this turn.",
       " NL Vanishes at the end of combat."
     ]
   },
@@ -196,6 +196,17 @@
       "When you would die, survive and heal to #b",
       "% of your Max HP, then discard this potion. At the end of your turn, lose #b",
       " Gold. If you have 0 Gold, discard this potion."
+    ]
+  },
+  "StickyPotion": {
+    "NAME": "Sticky Potion",
+    "DESCRIPTIONS": ["Whenever you use a potion, gain #b", " #yBlock."]
+  },
+  "ExplosivePotion": {
+    "NAME": "Explosive Potion",
+    "DESCRIPTIONS": [
+      "Whenever you use a potion, deal #b",
+      " damage to ALL enemies."
     ]
   },
   "HaligtreeBalm": {
