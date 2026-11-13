@@ -19,6 +19,7 @@ public class FatalAppetite extends CustomCard {
     public FatalAppetite() {
         super(ID, STRINGS.NAME, "img/cards/guardian/FatalAppetite.png", 1, STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Guardian_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
     }

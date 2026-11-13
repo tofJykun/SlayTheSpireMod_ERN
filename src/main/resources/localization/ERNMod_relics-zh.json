@@ -343,7 +343,7 @@
   },
   "IllusoryRing": {
     "NAME": "幻影戒指",
-    "FLAVOR": "“赠予永眠幻梦中的影。”——Jykun",
+    "FLAVOR": "“赠予影。”--Jykun",
     "DESCRIPTIONS": [
       "每当你重置 #y定时 大于等于 #b3 的牌，将这张牌的计数减少 #b1 。最小减少到 #b2 。"
     ]

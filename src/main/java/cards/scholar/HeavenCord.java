@@ -17,6 +17,7 @@ public class HeavenCord extends CustomCard {
                 "img/cards/scholar/HeavenCord.png", 2,
                 CardCrawlGame.languagePack.getCardStrings(ID).DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         baseMagicNumber = magicNumber = 1;
         exhaust = true;
         isEthereal = true;

@@ -20,6 +20,7 @@ public class FellowshipAtt extends CustomCard {
     public FellowshipAtt() {
         super(ID, CARD_STRINGS.NAME, IMG_PATH, COST, CARD_STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Ironeye_COLOR, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         this.exhaust = true;
     }
 

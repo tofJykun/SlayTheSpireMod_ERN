@@ -30,7 +30,11 @@ public final class BrandNewWorldPatch {
                 public void edit(FieldAccess field) throws CannotCompileException {
                     if (field.isReader() && field.getClassName().equals(CardLibrary.class.getName())
                             && field.getFieldName().equals("cards")) {
-                        field.replace("{ $_ = general.ExclusiveCardPool.candidates($proceed()); }");
+                        if (field.where().getName().equals("getAnyColorCard")) {
+                            field.replace("{ $_ = general.CombatCardGeneration.libraryCandidates($proceed()); }");
+                        } else {
+                            field.replace("{ $_ = general.ExclusiveCardPool.candidates($proceed()); }");
+                        }
                     }
                 }
             };

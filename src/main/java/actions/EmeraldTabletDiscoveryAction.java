@@ -75,6 +75,7 @@ public class EmeraldTabletDiscoveryAction extends AbstractGameAction {
                 AbstractCardEnum.Revenant_COLOR, AbstractCardEnum.Scholar_COLOR, AbstractCardEnum.Undertaker_COLOR);
         TreeMap<String, AbstractCard> pool = new TreeMap<>();
         for (AbstractCard card : CardLibrary.cards.values()) {
+            if (!general.CombatCardGeneration.isEligible(card)) continue;
             if (card.rarity == AbstractCard.CardRarity.COMMON && colors.contains(card.color)) {
                 pool.put(card.cardID, card);
             }

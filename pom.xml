@@ -44,6 +44,9 @@
                 <excludes>
                     <exclude>**/backup_pre_hsv_recolor/**</exclude>
                     <exclude>**/backup_raw_hsv_recolor/**</exclude>
+                    <exclude>**/raw*/**</exclude>
+                    <exclude>**/raw*</exclude>
+                    <exclude>**/*.sai2</exclude>
                 </excludes>
             </resource>
         </resources>

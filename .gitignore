@@ -53,5 +53,8 @@ preferences/
 ### Local asset rollback backups ###
 **/backup_pre_hsv_recolor/
 
+### Character card painting source files (keep local) ###
+/src/main/resources/img/cards/raw*/*.sai2
+
 ### Codex generated manuals ###
 codex-manual/

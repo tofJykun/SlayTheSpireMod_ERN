@@ -23,6 +23,7 @@ public class MendicantStaff extends CustomCard {
     public MendicantStaff() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.Recluse_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         this.baseDamage = ATTACK_DMG;
         this.exhaust = true;
     }

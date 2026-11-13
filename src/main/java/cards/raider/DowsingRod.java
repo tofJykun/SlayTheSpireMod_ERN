@@ -22,6 +22,7 @@ public class DowsingRod extends CustomCard {
     public DowsingRod() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Raider_COLOR, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         this.baseMagicNumber = CHANCE;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;

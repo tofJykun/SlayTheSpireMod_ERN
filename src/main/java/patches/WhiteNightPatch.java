@@ -27,6 +27,10 @@ public final class WhiteNightPatch {
     @SpirePatch(clz = AbstractDungeon.class, method = "returnTrulyRandomCardFromAvailable",
             paramtypez = {AbstractCard.class, Random.class})
     @SpirePatch(clz = AbstractDungeon.class, method = "returnTrulyRandomCard")
+    @SpirePatch(clz = AbstractDungeon.class, method = "returnTrulyRandomColorlessCardFromAvailable",
+            paramtypez = {AbstractCard.class, Random.class})
+    @SpirePatch(clz = AbstractDungeon.class, method = "returnTrulyRandomColorlessCardFromAvailable",
+            paramtypez = {String.class, Random.class})
     public static class RandomCandidates {
         @SpireInstrumentPatch
         public static ExprEditor instrument() {

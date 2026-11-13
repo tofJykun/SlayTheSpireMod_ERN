@@ -20,6 +20,7 @@ public class KingdomLegacy extends CustomCard {
     public KingdomLegacy() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         this.baseMagicNumber = GOLD;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;

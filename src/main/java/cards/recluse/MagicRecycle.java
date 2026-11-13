@@ -24,6 +24,7 @@ public class MagicRecycle extends CustomCard {
     public MagicRecycle() {
         super(ID, CARD_STRINGS.NAME, IMG_PATH, COST, CARD_STRINGS.DESCRIPTION,
                 CardType.POWER, AbstractCardEnum.Recluse_COLOR, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         this.baseMagicNumber = HEAL_AMOUNT;
         this.magicNumber = this.baseMagicNumber;
     }

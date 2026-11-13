@@ -18,6 +18,7 @@ public class CrownOfThorns extends CustomCard {
     public CrownOfThorns() {
         super(ID, STRINGS.NAME, "img/cards/scholar/CrownOfThorns.png", 0, STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         this.isInnate = true;
         this.exhaust = true;
         this.cardsToPreview = new Apotheosis();

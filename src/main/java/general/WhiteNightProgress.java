@@ -56,7 +56,12 @@ public final class WhiteNightProgress implements CustomSavable<Boolean> {
 
     public static ArrayList<AbstractCard> candidates(ArrayList<AbstractCard> source) {
         ArrayList<AbstractCard> result = new ArrayList<>();
-        for (AbstractCard card : source) if (!ExclusiveCardPool.isExcluded(card)) result.add(card);
+        boolean combat = CombatCardGeneration.isCombatActive();
+        for (AbstractCard card : source) {
+            if (combat ? CombatCardGeneration.isEligible(card) : !ExclusiveCardPool.isExcluded(card)) {
+                result.add(card);
+            }
+        }
         return result;
     }
 

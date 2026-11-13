@@ -343,7 +343,7 @@
   },
   "IllusoryRing": {
     "NAME": "Illusory Ring",
-    "FLAVOR": "\"Bestowed upon the shade in a dream of eternal slumber.\" - Jykun",
+    "FLAVOR": "\"Bestowed upon the shade.\"--Jykun",
     "DESCRIPTIONS": [
       "Whenever you reset a card with #yScheduled greater than or equal to #b3, reduce that card's counter by #b1. Minimum #b2."
     ]

@@ -50,6 +50,7 @@ public class FellowshipAttAction extends AbstractGameAction {
         ArrayList<AbstractCard> cards = new ArrayList<>();
         for (Map.Entry<String, AbstractCard> entry : CardLibrary.cards.entrySet()) {
             AbstractCard card = entry.getValue();
+            if (!general.CombatCardGeneration.isEligible(card)) continue;
             if (card.color == AbstractCardEnum.Ironeye_COLOR
                     && isEligibleRarity(card.rarity)
                     && !FellowshipAtt.ID.equals(card.cardID)) {

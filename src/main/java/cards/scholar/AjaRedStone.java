@@ -20,6 +20,7 @@ public class AjaRedStone extends CustomCard {
     public AjaRedStone() {
         super(ID, getCardStrings().NAME, IMG_PATH, COST, getCardStrings().DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         this.exhaust = true;
         MultiCardPreview.add(this, true, new KingdomLegacy(), new PenglaiWorship(), new Homunculus());
     }

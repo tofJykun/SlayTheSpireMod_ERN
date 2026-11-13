@@ -16,6 +16,7 @@ public class Lush extends CustomCard {
     public Lush() {
         super(ID, STRINGS.NAME, "img/cards/ironeye/Lush.png", 1, STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Ironeye_COLOR, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
     }
 
     @Override

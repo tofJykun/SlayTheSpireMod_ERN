@@ -17,6 +17,7 @@ public class PowerOfOriginalSin extends CustomCard {
     public PowerOfOriginalSin() {
         super(ID, STRINGS.NAME, "img/cards/scholar/PowerOfOriginalSin.png", 0, STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         FragileField.setBase(this, 7);
         initializeDescription();
     }

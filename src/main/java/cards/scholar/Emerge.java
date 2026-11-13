@@ -19,6 +19,7 @@ public class Emerge extends CustomCard {
     public Emerge() {
         super(ID, STRINGS.NAME, "img/cards/scholar/Emerge.png", 0, STRINGS.DESCRIPTION,
                 CardType.POWER, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         baseMagicNumber = magicNumber = 1;
     }
 

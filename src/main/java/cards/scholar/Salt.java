@@ -19,6 +19,7 @@ public class Salt extends CustomCard {
     public Salt() {
         super(ID, STRINGS.NAME, "img/cards/scholar/Salt.png", 1, STRINGS.DESCRIPTION,
                 CardType.POWER, AbstractCardEnum.Scholar_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         baseMagicNumber = magicNumber = 1;
         cardsToPreview = new MottledPot();
     }

@@ -17,6 +17,7 @@ public class Flip extends CustomCard {
     public Flip() {
         super(ID, STRINGS.NAME, "img/cards/scholar/Flip.png", 2, STRINGS.DESCRIPTION,
                 CardType.POWER, AbstractCardEnum.Scholar_COLOR, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         this.isEthereal = true;
     }
 

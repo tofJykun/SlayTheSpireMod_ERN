@@ -18,6 +18,7 @@ public class PowerOfTheGreaterWill extends CustomCard {
     public PowerOfTheGreaterWill() {
         super(ID, CARD_STRINGS.NAME, IMG_PATH, 0, CARD_STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.Duchess_COLOR, CardRarity.RARE, CardTarget.SELF);
+        tags.add(CardTags.HEALING); // Excluded from random in-combat generation, like Self Repair.
         this.baseMagicNumber = this.magicNumber = 1;
         this.exhaust = true;
     }
